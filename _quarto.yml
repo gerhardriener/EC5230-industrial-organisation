@@ -6,7 +6,6 @@ website:
   title: "EC5230 Industrial Organisation"
   navbar:
     title: "EC5230"
-    logo: images/st-andrews-logo.png
     left:
       - text: "Home"
         href: index.qmd
