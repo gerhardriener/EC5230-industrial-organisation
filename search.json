@@ -95,7 +95,7 @@
     "href": "lecture-slides/lecture-2-product-differentiation.html#salops-circular-market-free-entry-equilibrium-supply-side",
     "title": "EC5230 Industrial Organisation",
     "section": "Salop’s circular market: free-entry equilibrium (supply side)",
-    "text": "Salop’s circular market: free-entry equilibrium (supply side)\n\nCost structure\n\nCost function: \\(C(q) = F + m q\\) where \\(F\\) is fixed cost (entry), \\(m\\) is constant marginal cost\n\nEconomies of scale: average cost \\(AC(q) = \\frac{F}{q} + m\\) decreases in \\(q\\)\n\nFirm choice in competitive region\n\nDemand: \\(p = \\frac{c}{n} + \\tilde{p} - c q\\)\n\nMarginal revenue: \\(MR = \\frac{c}{n} + \\tilde{p} - 2cq\\)\n\nBest response: \\(MR = MC\\) ⇔ \\(\\frac{c}{n} + \\tilde{p} - 2cq = m\\) ⇔ \\(q = \\frac{\\frac{c}{n} + \\tilde{p} - m}{2c}\\)\n\nAssumption: equilibrium is in competitive region for all firms; by symmetry \\(\\tilde{p} = p\\)"
+    "text": "Salop’s circular market: free-entry equilibrium (supply side)\n\nCost structure\n\nCost function: \\(C(q) = F + m q\\) where \\(F\\) is fixed cost (entry), \\(m\\) is constant marginal cost\n\nEconomies of scale: average cost \\(AC(q) = \\frac{F}{q} + m\\) decreases in \\(q\\)\n\nFirm choice in competitive region\n\nDemand: \\(p = \\frac{c}{n} + \\tilde{p} - c q\\)\n\nMarginal revenue: \\(MR = \\frac{c}{n} + \\tilde{p} - 2cq\\)\n\nBest response: \\(MR = MC\\) ⇔ \\(q = \\frac{\\frac{c}{n} + \\tilde{p} - m}{2c}\\)\n\nAssumption: equilibrium is in competitive region for all firms; by symmetry \\(\\tilde{p} = p\\)"
   },
   {
     "objectID": "lecture-slides/lecture-2-product-differentiation.html#salops-circular-market-free-entry-equilibrium-analysis",

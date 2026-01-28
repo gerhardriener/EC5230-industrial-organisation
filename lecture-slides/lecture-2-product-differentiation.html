@@ -317,6 +317,28 @@ Figure&nbsp;5: Profit function of Firm 1 with <span class="math inline">\(\bar{p
 <li>Consumers uniformly distributed around circle; each buys 1 unit or nothing</li>
 </ul></li>
 </ul>
+<!-- ```{r}
+#| label: fig-salop-setting
+#| fig-cap: "Salop's circular market: n=8 firms equally spaced around unit circle."
+library(ggplot2)
+
+n <- 8
+theta <- seq(0, 2 * pi, length.out = 400)
+circle <- data.frame(x = cos(theta), y = sin(theta))
+
+firms <- data.frame(
+  k = 0:(n - 1),
+  ang = 2 * pi * (0:(n - 1)) / n
+)
+firms$x <- cos(firms$ang)
+firms$y <- sin(firms$ang)
+
+ggplot() +
+  geom_path(data = circle, aes(x, y), linewidth = 1) +
+  geom_point(data = firms, aes(x, y), size = 3) +
+  coord_equal() +
+  theme_void()
+``` -->
 </section>
 <section id="salops-circular-market-consumer-utility" class="slide level2">
 <h2>Salop’s circular market: consumer utility</h2>
@@ -410,7 +432,7 @@ Figure&nbsp;8: Kinked inverse demand: monopoly region (gentle slope) joins compe
 </li>
 <li>Marginal revenue: <span class="math inline">\(MR = \frac{c}{n} + \tilde{p} - 2cq\)</span><br>
 </li>
-<li>Best response: <span class="math inline">\(MR = MC\)</span> ⇔ <span class="math inline">\(\frac{c}{n} + \tilde{p} - 2cq = m\)</span> ⇔ <span class="math inline">\(q = \frac{\frac{c}{n} + \tilde{p} - m}{2c}\)</span></li>
+<li>Best response: <span class="math inline">\(MR = MC\)</span> ⇔ <span class="math inline">\(q = \frac{\frac{c}{n} + \tilde{p} - m}{2c}\)</span></li>
 </ul></li>
 <li><strong>Assumption</strong>: equilibrium is in competitive region for all firms; by symmetry <span class="math inline">\(\tilde{p} = p\)</span></li>
 </ul>
