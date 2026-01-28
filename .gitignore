@@ -28,6 +28,8 @@ _site/
 *_cache/
 *_files/
 _output
+_OLD
+
 
 # course resources
 _resources
