@@ -9,7 +9,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-ce4278342a015d016477ed09bce942c5.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.17">
 
-  <title>EC5230 Industrial Organisation – Lecture Slides</title>
+  <title>EC5230 Industrial Organisation – lecture-2-product-differentiation</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -131,72 +131,339 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Lecture Slides</h1>
-  <p class="subtitle">EC5230 Industrial Organisation</p>
 
-<div class="quarto-title-authors">
-</div>
-
-</section>
-<section id="all-lectures" class="slide level2">
-<h2>All Lectures</h2>
-<p>Below is a complete list of lecture slides for EC5230 Industrial Organisation.</p>
-<h3 id="week-1">Week 1</h3>
+<section id="product-differentiation-overview" class="slide level2">
+<h2>Product differentiation: overview</h2>
 <ul>
-<li><a href="lecture-1-oligopoly.html">Lecture 1: Competition &amp; Oligopoly Coordination</a>
+<li><strong>Horizontal v vertical differentiation</strong>
 <ul>
-<li>Market structures and the Cournot model</li>
-<li>Welfare analysis of oligopoly</li>
-<li>Strategic price and quantity competition</li>
-<li>Tacit collusion and facilitating devices</li>
+<li>What determines demand when prices are equal?<br>
+</li>
+<li>How does variety interact with quantity?</li>
+</ul></li>
+<li><strong>Focus today: horizontal product differentiation</strong>
+<ul>
+<li>Linear Hotelling model (two firms)<br>
+</li>
+<li>Salop’s circular market (free entry)</li>
 </ul></li>
 </ul>
-<h3 id="week-2">Week 2</h3>
+</section>
+<section id="linear-hotelling-model-setting" class="slide level2">
+<h2>Linear Hotelling model: setting</h2>
 <ul>
-<li><a href="lecture-2-product-differentiation.html">Lecture 2: Product Differentiation</a>
+<li><strong>Market structure</strong>
 <ul>
-<li>Horizontal vs.&nbsp;vertical differentiation</li>
-<li>Linear Hotelling model</li>
-<li>Salop’s circular market</li>
+<li>Duopoly; zero marginal cost<br>
+</li>
+<li>Linear market of length <span class="math inline">\(L\)</span>; consumers uniformly distributed<br>
+</li>
+<li>Each consumer buys either 1 unit or nothing</li>
+</ul></li>
+<li><strong>Preference parameters</strong>
+<ul>
+<li>Firm 1 located at distance <span class="math inline">\(a\)</span> from left endpoint (0)<br>
+</li>
+<li>Firm 2 located at distance <span class="math inline">\(b\)</span> from right endpoint (<span class="math inline">\(L\)</span>)<br>
+</li>
+<li>Linear transport cost: <span class="math inline">\(C(d) = cd\)</span> where <span class="math inline">\(d\)</span> is distance and <span class="math inline">\(c &gt; 0\)</span></li>
 </ul></li>
 </ul>
-<h3 id="week-3">Week 3</h3>
+
+<img data-src="lecture-2-product-differentiation_files/figure-revealjs/fig-hotelling-setting-1.png" width="960" class="r-stretch quarto-figure-center" id="fig-hotelling-setting"><p class="caption">
+Figure&nbsp;1: Linear Hotelling model: setting. Firms 1 and 2 located at a and b from endpoints; marginal consumer at distance x from Firm 1, distance y from Firm 2.
+</p></section>
+<section id="linear-hotelling-model-pricing-with-fixed-locations-firm-1" class="slide level2">
+<h2>Linear Hotelling model: pricing with fixed locations (Firm 1)</h2>
 <ul>
-<li><a href="lecture-3-innovation.html">Lecture 3: Economics of Innovation</a></li>
+<li><strong>Demand derivation</strong>
+<ul>
+<li>Marginal consumer indifferent: <span class="math inline">\(p_1 + cx = p_2 + cy\)</span><br>
+</li>
+<li>Market length: <span class="math inline">\(L = a + b + x + y\)</span><br>
+</li>
+<li>Firm 1 demand: <span class="math inline">\(q_1 = a + x = \frac{p_2 - p_1 + c(L + a - b)}{2c}\)</span></li>
+</ul></li>
+<li><strong>Profit and best response</strong>
+<ul>
+<li><span class="math inline">\(\pi_1 = p_1 q_1\)</span><br>
+</li>
+<li>Best response: <span class="math inline">\(BR_1(p_2) = \frac{p_2}{2} + \frac{c}{2}(L + a - b)\)</span></li>
+</ul></li>
 </ul>
-<h3 id="week-4">Week 4</h3>
+
+<img data-src="lecture-2-product-differentiation_files/figure-revealjs/fig-hotelling-firm1-demand-1.png" width="960" class="r-stretch quarto-figure-center" id="fig-hotelling-firm1-demand"><p class="caption">
+Figure&nbsp;2: Linear Hotelling model: Firm 1 captures customers from 0 to marginal consumer.
+</p></section>
+<section id="linear-hotelling-model-pricing-with-fixed-locations-firm-2" class="slide level2">
+<h2>Linear Hotelling model: pricing with fixed locations (Firm 2)</h2>
 <ul>
-<li><a href="lecture-4-patents.html">Lecture 4: Patents and Intellectual Property Rights</a></li>
+<li><strong>Demand derivation</strong>
+<ul>
+<li>Marginal consumer indifferent: <span class="math inline">\(p_1 + cx = p_2 + cy\)</span><br>
+</li>
+<li>Market length: <span class="math inline">\(L = a + b + x + y\)</span><br>
+</li>
+<li>Firm 2 demand: <span class="math inline">\(q_2 = b + y = \frac{p_1 - p_2 + c(L + b - a)}{2c}\)</span></li>
+</ul></li>
+<li><strong>Profit and best response</strong>
+<ul>
+<li><span class="math inline">\(\pi_2 = p_2 q_2\)</span><br>
+</li>
+<li>Best response: <span class="math inline">\(BR_2(p_1) = \frac{p_1}{2} + \frac{c}{2}(L + b - a)\)</span></li>
+</ul></li>
 </ul>
-<h3 id="week-5">Week 5</h3>
+
+<img data-src="lecture-2-product-differentiation_files/figure-revealjs/fig-hotelling-firm2-demand-1.png" width="960" class="r-stretch quarto-figure-center" id="fig-hotelling-firm2-demand"><p class="caption">
+Figure&nbsp;3: Linear Hotelling model: Firm 2 captures customers from marginal consumer to L.
+</p></section>
+<section id="linear-hotelling-model-nash-equilibrium-in-prices" class="slide level2">
+<h2>Linear Hotelling model: Nash equilibrium in prices</h2>
 <ul>
-<li><a href="lecture-5-multistage.html">Lecture 5: Multi-stage Games and Strategic Commitment</a></li>
-</ul>
-<h3 id="week-7">Week 7</h3>
+<li><strong>Best responses</strong>
 <ul>
-<li><a href="lecture-7-cooperative-rd.html">Lecture 7: Cooperative R&amp;D</a></li>
-</ul>
-<h3 id="week-8">Week 8</h3>
+<li><span class="math inline">\(BR_1(p_2) = \frac{p_2}{2} + \frac{c}{2}(L + a - b)\)</span><br>
+</li>
+<li><span class="math inline">\(BR_2(p_1) = \frac{p_1}{2} + \frac{c}{2}(L + b - a)\)</span></li>
+</ul></li>
+<li><strong>Nash equilibrium prices and profits</strong>
 <ul>
-<li><a href="lecture-8-bundling.html">Lecture 8: Bundling and Tying</a></li>
-</ul>
-<h3 id="week-9">Week 9</h3>
+<li><span class="math inline">\(p_1^* = c\left(L + \frac{a-b}{3}\right)\)</span>; <span class="math inline">\(p_2^* = c\left(L + \frac{b-a}{3}\right)\)</span><br>
+</li>
+<li><span class="math inline">\(\pi_1^* = \frac{c}{18}(3L + a - b)^2\)</span>; <span class="math inline">\(\pi_2^* = \frac{c}{18}(3L + b - a)^2\)</span></li>
+</ul></li>
+<li><strong>Comparative statics</strong>
 <ul>
-<li><a href="lecture-9-advertising.html">Lecture 9: Advertising and Brand Competition</a></li>
-</ul>
-<h3 id="week-11">Week 11</h3>
-<ul>
-<li><a href="lecture-11-mergers.html">Lecture 11: Mergers and Acquisitions</a></li>
-</ul>
-<h3 id="week-12">Week 12</h3>
-<ul>
-<li><a href="lecture-12-sustainability.html">Lecture 12: Sustainable Industrialisation</a></li>
+<li>Equilibrium profits <span class="math inline">\(\uparrow\)</span> when transport cost <span class="math inline">\(c \uparrow\)</span> (firms benefit from reduced substitutability)</li>
+</ul></li>
 </ul>
 </section>
-<section class="slide level2">
+<section id="linear-hotelling-model-incentive-to-move-co-location" class="slide level2">
+<h2>Linear Hotelling model: incentive to move (co-location)</h2>
+<ul>
+<li><strong>If firms locate at the same point</strong>: <span class="math inline">\(a + b = L\)</span> (no product differentiation)
+<ul>
+<li>Marginal consumer: <span class="math inline">\(x = y = 0\)</span><br>
+</li>
+<li>Products homogeneous → Bertrand undercutting<br>
+</li>
+<li>Unique equilibrium: <span class="math inline">\(p_1^B = p_2^B = 0\)</span>, <span class="math inline">\(\pi_1^B = \pi_2^B = 0\)</span></li>
+</ul></li>
+<li><strong>Implication</strong>: Equilibrium at the same location is unsustainable
+<ul>
+<li>Both firms have incentive to deviate and differentiate</li>
+</ul></li>
+</ul>
 
-<p>All lectures follow the <a href="../.github/copilot-instructions.md">EC5230 Copilot Instructions</a> for pedagogical consistency and exam-grade rigour.</p>
+<img data-src="lecture-2-product-differentiation_files/figure-revealjs/fig-hotelling-colocation-1.png" width="960" class="r-stretch quarto-figure-center" id="fig-hotelling-colocation"><p class="caption">
+Figure&nbsp;4: Co-location: both firms at the same location yields zero profit.
+</p></section>
+<section id="linear-hotelling-model-incentive-to-move-separated" class="slide level2">
+<h2>Linear Hotelling model: incentive to move (separated)</h2>
+<ul>
+<li><strong>Marginal incentive to increase own location parameter</strong>
+<ul>
+<li><span class="math inline">\(\frac{\partial \pi_1^*}{\partial a} = \frac{c}{9}(3L + a - b) &gt; 0\)</span><br>
+</li>
+<li><span class="math inline">\(\frac{\partial \pi_2^*}{\partial b} = \frac{c}{9}(3L + b - a) &gt; 0\)</span></li>
+</ul></li>
+<li><strong>Interpretation</strong>: Each firm profits from moving away from its competitor
+<ul>
+<li>Firms choose to <strong>differentiate</strong> products to relax price competition<br>
+</li>
+<li>This is a <strong>differentiation motive</strong> (vs.&nbsp;collision motive elsewhere)</li>
+</ul></li>
+</ul>
+</section>
+<section id="linear-hotelling-model-profit-function" class="slide level2">
+<h2>Linear Hotelling model: profit function</h2>
+<p>Profit function of Firm 1 (d’Aspremont, Gabszewicz &amp; Thisse, 1979):</p>
+<p><span class="math display">\[
+\pi_1(p_1, p_2) =
+\begin{cases}
+\frac{p_1 p_2}{2c} - \frac{p_1^2}{2c} + \frac{(L+a-b)p_1}{2}
+&amp; \text{if } |p_1 - p_2| \le c(L - a - b) \\[0.5em]
+Lp_1 &amp; \text{if } p_1 &lt; p_2 - c(L - a - b) \\[0.5em]
+0 &amp; \text{if } p_1 &gt; p_2 + c(L - a - b)
+\end{cases}
+\]</span></p>
+<ul>
+<li><strong>Region 1</strong> (interior): both marginal consumers exist; demand is linear in <span class="math inline">\(p_1\)</span><br>
+</li>
+<li><strong>Region 2</strong> (left): Firm 1 undercuts so sharply it captures entire market<br>
+</li>
+<li><strong>Region 3</strong> (right): Firm 1 prices so high it sells nothing</li>
+</ul>
+
+<img data-src="lecture-2-product-differentiation_files/figure-revealjs/fig-profit-function-1.png" width="960" class="r-stretch quarto-figure-center" id="fig-profit-function"><p class="caption">
+Figure&nbsp;5: Profit function of Firm 1 with <span class="math inline">\(\bar{p}_2\)</span> fixed: discontinuity at boundaries; interior region is smooth.
+</p></section>
+<section id="salops-circular-market-setting" class="slide level2">
+<h2>Salop’s circular market: setting</h2>
+<ul>
+<li><strong>Market structure</strong>
+<ul>
+<li>Two sectors: one with homogeneous outside good; one with differentiated goods<br>
+</li>
+<li>Differentiated goods sold in circular market (circumference = 1)<br>
+</li>
+<li><span class="math inline">\(n\)</span> firms located symmetrically; distance between adjacent firms = <span class="math inline">\(\frac{1}{n}\)</span><br>
+</li>
+<li>Consumers uniformly distributed around circle; each buys 1 unit or nothing</li>
+</ul></li>
+</ul>
+</section>
+<section id="salops-circular-market-consumer-utility" class="slide level2">
+<h2>Salop’s circular market: consumer utility</h2>
+<ul>
+<li><strong>Preference heterogeneity</strong>
+<ul>
+<li>Each consumer <span class="math inline">\(i\)</span> has ideal variety <span class="math inline">\(\ell_i^*\)</span> (location on circle)<br>
+</li>
+<li>Linear transport (mismatch) cost: <span class="math inline">\(c d\)</span> where <span class="math inline">\(d\)</span> is arc distance</li>
+</ul></li>
+<li><strong>Utility from purchase</strong>
+<ul>
+<li>Buy outside good: <span class="math inline">\(U^O = u^*\)</span><br>
+</li>
+<li>Buy from firm <span class="math inline">\(j\)</span>: <span class="math inline">\(U_j^D = u - c d_j - p_j\)</span> where <span class="math inline">\(d_j\)</span> is distance to firm <span class="math inline">\(j\)</span></li>
+</ul></li>
+<li><strong>Participation condition</strong>
+<ul>
+<li>Consumer buys from firm <span class="math inline">\(j\)</span> iff <span class="math inline">\(U_j^D \ge U^O\)</span><br>
+</li>
+<li>Let <span class="math inline">\(v = u - u^*\)</span> (net reservation value). Buy iff <span class="math inline">\(v \ge p_j + c d_j\)</span></li>
+</ul></li>
+</ul>
+</section>
+<section id="salops-circular-market-monopoly-region-no-competition" class="slide level2">
+<h2>Salop’s circular market: monopoly region (no competition)</h2>
+<ul>
+<li><p><strong>Monopoly scenario</strong>: single firm has market power if remaining consumers are too far away</p></li>
+<li><p><strong>Maximum distance</strong> at which consumer buys: <span class="math inline">\(d_m = \frac{v - p}{c}\)</span><br>
+</p></li>
+<li><p><strong>Monopoly demand</strong>: <span class="math inline">\(q^M = 2d_m = 2 \left( \frac{v-p}{c} \right)\)</span><br>
+</p></li>
+<li><p><strong>Inverse demand</strong>: <span class="math inline">\(p = v - \frac{c}{2} q^M\)</span> (slope <span class="math inline">\(= -\frac{c}{2}\)</span>)</p></li>
+<li><p><strong>Interpretation</strong>: Demand slope is shallow because the firm only competes via transport costs</p></li>
+</ul>
+
+<img data-src="lecture-2-product-differentiation_files/figure-revealjs/fig-salop-monopoly-demand-1.png" width="960" class="r-stretch quarto-figure-center" id="fig-salop-monopoly-demand"><p class="caption">
+Figure&nbsp;6: Monopoly demand in circular market: inverse demand with slope <span class="math inline">\(-c/2\)</span>.
+</p></section>
+<section id="salops-circular-market-competitive-region-with-neighbors" class="slide level2">
+<h2>Salop’s circular market: competitive region (with neighbors)</h2>
+<ul>
+<li><p><strong>Competitive scenario</strong>: marginal consumer equidistant between this firm and neighbor(s)</p></li>
+<li><p><strong>Indifference condition</strong></p>
+<ul>
+<li>Buy from main firm at distance <span class="math inline">\(x\)</span>: <span class="math inline">\(v - cx - p\)</span><br>
+</li>
+<li>Buy from neighboring firm at distance <span class="math inline">\(\frac{1}{n} - x\)</span>: <span class="math inline">\(v - c(\frac{1}{n} - x) - \tilde{p}\)</span><br>
+</li>
+<li>Indifference: <span class="math inline">\(cx - p = c(\frac{1}{n} - x) - \tilde{p}\)</span><br>
+</li>
+<li>Solve: <span class="math inline">\(x = \frac{\frac{c}{n} - p + \tilde{p}}{2c}\)</span></li>
+</ul></li>
+<li><p><strong>Competitive demand</strong>: <span class="math inline">\(q^C = 2x = \frac{\frac{c}{n} - p + \tilde{p}}{c}\)</span><br>
+</p></li>
+<li><p><strong>Inverse demand</strong>: <span class="math inline">\(p = \frac{c}{n} + \tilde{p} - c q^C\)</span> (slope <span class="math inline">\(= -c\)</span>)</p></li>
+<li><p><strong>Interpretation</strong>: Demand slope is steep because firm faces direct price competition from neighbor</p></li>
+</ul>
+
+<img data-src="lecture-2-product-differentiation_files/figure-revealjs/fig-salop-competitive-demand-1.png" width="960" class="r-stretch quarto-figure-center" id="fig-salop-competitive-demand"><p class="caption">
+Figure&nbsp;7: Competitive region in circular market: steeper inverse demand (slope <span class="math inline">\(-c\)</span>) due to neighbor.
+</p></section>
+<section id="salops-circular-market-kinked-demand" class="slide level2">
+<h2>Salop’s circular market: kinked demand</h2>
+<ul>
+<li><p><strong>Firm’s choice</strong> between two regimes</p>
+<ul>
+<li><strong>Monopoly region</strong>: low output, high margin, shallow demand<br>
+</li>
+<li><strong>Competitive region</strong>: high output, thin margin, steep demand</li>
+</ul></li>
+<li><p><strong>Optimal price</strong> lies at the kink if parameters support interior equilibrium</p></li>
+<li><p><strong>Equilibrium selection</strong> depends on whether firm prefers to monopolize its local neighborhood or compete directly</p></li>
+</ul>
+
+<img data-src="lecture-2-product-differentiation_files/figure-revealjs/fig-kinked-demand-1.png" width="960" class="r-stretch quarto-figure-center" id="fig-kinked-demand"><p class="caption">
+Figure&nbsp;8: Kinked inverse demand: monopoly region (gentle slope) joins competitive region (steep slope).
+</p></section>
+<section id="salops-circular-market-free-entry-equilibrium-supply-side" class="slide level2">
+<h2>Salop’s circular market: free-entry equilibrium (supply side)</h2>
+<ul>
+<li><strong>Cost structure</strong>
+<ul>
+<li>Cost function: <span class="math inline">\(C(q) = F + m q\)</span> where <span class="math inline">\(F\)</span> is fixed cost (entry), <span class="math inline">\(m\)</span> is constant marginal cost<br>
+</li>
+<li>Economies of scale: average cost <span class="math inline">\(AC(q) = \frac{F}{q} + m\)</span> decreases in <span class="math inline">\(q\)</span></li>
+</ul></li>
+<li><strong>Firm choice in competitive region</strong>
+<ul>
+<li>Demand: <span class="math inline">\(p = \frac{c}{n} + \tilde{p} - c q\)</span><br>
+</li>
+<li>Marginal revenue: <span class="math inline">\(MR = \frac{c}{n} + \tilde{p} - 2cq\)</span><br>
+</li>
+<li>Best response: <span class="math inline">\(MR = MC\)</span> ⇔ <span class="math inline">\(\frac{c}{n} + \tilde{p} - 2cq = m\)</span> ⇔ <span class="math inline">\(q = \frac{\frac{c}{n} + \tilde{p} - m}{2c}\)</span></li>
+</ul></li>
+<li><strong>Assumption</strong>: equilibrium is in competitive region for all firms; by symmetry <span class="math inline">\(\tilde{p} = p\)</span></li>
+</ul>
+</section>
+<section id="salops-circular-market-free-entry-equilibrium-analysis" class="slide level2">
+<h2>Salop’s circular market: free-entry equilibrium (analysis)</h2>
+<ul>
+<li><strong>Symmetric competitive equilibrium</strong>
+<ul>
+<li>All firms identical; <span class="math inline">\(p = \tilde{p}\)</span>; each firm sells <span class="math inline">\(q^C = \frac{1}{n}\)</span></li>
+</ul></li>
+<li><strong>Zero profit condition</strong> (free entry)
+<ul>
+<li><span class="math inline">\(p^C = AC = m + \frac{F}{q^C}\)</span><br>
+</li>
+<li>Substitute <span class="math inline">\(q^C = \frac{1}{n}\)</span>: <span class="math inline">\(p^C = m + nF\)</span></li>
+</ul></li>
+<li><strong>First-order condition</strong> (optimal quantity)
+<ul>
+<li><span class="math inline">\(MR = MC\)</span> ⇔ <span class="math inline">\(p^C + q^C \frac{dp^C}{dq^C} = m\)</span><br>
+</li>
+<li>Slope in competitive region: <span class="math inline">\(\frac{dp}{dq} = -c\)</span><br>
+</li>
+<li>Therefore: <span class="math inline">\(p^C - cq^C = m\)</span> ⇔ <span class="math inline">\(p^C = m + c q^C = m + \frac{c}{n}\)</span></li>
+</ul></li>
+<li><strong>Solve for equilibrium number of firms</strong>
+<ul>
+<li>Equate zero-profit and FOC: <span class="math inline">\(m + nF = m + \frac{c}{n}\)</span> ⇔ <span class="math inline">\(n^C = \sqrt{\frac{c}{F}}\)</span><br>
+</li>
+<li>Equilibrium price: <span class="math inline">\(p^C = m + \sqrt{cF}\)</span></li>
+</ul></li>
+</ul>
+</section>
+<section id="salops-circular-market-welfare-analysis-social-optimum" class="slide level2">
+<h2>Salop’s circular market: welfare analysis (social optimum)</h2>
+<ul>
+<li><strong>Consumer welfare</strong> from differentiated goods
+<ul>
+<li>Average distance traveled to nearest firm: <span class="math inline">\(\bar{d} = \frac{1}{4n}\)</span> (half the arc between adjacent firms)<br>
+</li>
+<li>Net utility per consumer: <span class="math inline">\(v - c \bar{d} - p - nF = v - \frac{c}{4n} - p - nF\)</span><br>
+</li>
+<li>Total welfare: <span class="math inline">\(W(n) = v - \frac{c}{4n} - p - nF\)</span></li>
+</ul></li>
+<li><strong>Social planner’s problem</strong>: choose <span class="math inline">\(n\)</span> to maximize <span class="math inline">\(W(n)\)</span>
+<ul>
+<li><span class="math inline">\(\frac{dW}{dn} = \frac{c}{4n^2} - F = 0\)</span> ⇔ <span class="math inline">\(n^S = \frac{1}{2}\sqrt{\frac{c}{F}} = \frac{1}{2} n^C\)</span></li>
+</ul></li>
+<li><strong>Equilibrium v social optimum</strong>
+<ul>
+<li>Free-entry equilibrium: <span class="math inline">\(n^C = \sqrt{\frac{c}{F}}\)</span><br>
+</li>
+<li>Social optimum: <span class="math inline">\(n^S = \frac{1}{2} n^C\)</span><br>
+</li>
+<li><strong>Excessive variety</strong>: firms over-enter; socially wasteful product proliferation</li>
+</ul></li>
+<li><strong>Price-variety trade-off</strong>: reducing <span class="math inline">\(n\)</span> increases price but reduces fixed costs</li>
+</ul>
 
 
 </section>
@@ -417,6 +684,82 @@
         ]
       });
     </script>
+    
+
+    <script>
+
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
+      // slide changes (different for each slide format).
+
+      (function () {
+
+        // dispatch for htmlwidgets
+
+        function fireSlideEnter() {
+
+          const event = window.document.createEvent("Event");
+
+          event.initEvent("slideenter", true, true);
+
+          window.document.dispatchEvent(event);
+
+        }
+
+    
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          fireSlideEnter();
+
+    
+
+          // dispatch for shiny
+
+          if (window.jQuery) {
+
+            if (previousSlide) {
+
+              window.jQuery(previousSlide).trigger("hidden");
+
+            }
+
+            if (currentSlide) {
+
+              window.jQuery(currentSlide).trigger("shown");
+
+            }
+
+          }
+
+        }
+
+    
+
+        // hookup for slidy
+
+        if (window.w3c_slidy) {
+
+          window.w3c_slidy.add_observer(function (slide_num) {
+
+            // slide_num starts at position 1
+
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
+          });
+
+        }
+
+    
+
+      })();
+
+    </script>
+
+    
+
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

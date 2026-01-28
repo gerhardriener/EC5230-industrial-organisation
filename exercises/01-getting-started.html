@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Gerhard Riener">
 
-<title>Exercise 1: Getting started – Industrial Organisation</title>
+<title>Exercise 1: Getting started – EC5230 Industrial Organisation</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -74,6 +73,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -84,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Industrial Organisation</span>
+    <span class="navbar-title">EC5230</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -106,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Exercises</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../apps/index.html"> 
+    <a class="nav-link" href="../apps/index.qmd"> 
 <span class="menu-text">Apps</span></a>
   </li>  
 </ul>
@@ -141,12 +141,6 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Gerhard Riener </p>
-          </div>
-  </div>
     
   
     
@@ -163,9 +157,9 @@ ul.task-list li input[type="checkbox"] {
 <p>Explain why…</p>
 <div class="proof solution">
 <p><span class="proof-title"><em>Solution</em>. </span>#| echo: false #| eval: params$solutions # solution text or code here</p>
-
-
 </div>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -242,7 +236,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/gerhardriener\.github\.io\/EC5230-industrial-organisation\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
