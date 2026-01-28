@@ -3,8 +3,8 @@ title: "Lecture Slides"
 subtitle: "EC5230 Industrial Organisation"
 format:
   html:
-    metadata:
-      credits: 15
+    theme: cosmo
+    toc: false
 ---
 
 ## All Lectures

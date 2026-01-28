@@ -2,6 +2,12 @@ project:
   type: website
   output-dir: _site
 
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
 website:
   title: "EC5230 Industrial Organisation"
   navbar:
@@ -13,8 +19,6 @@ website:
         href: lecture-slides/index.qmd
       - text: "Exercises"
         href: exercises/index.qmd
-      - text: "Apps"
-        href: apps/index.qmd
 
   sidebar:
     - id: lectures
@@ -22,17 +26,4 @@ website:
       contents:
         - lecture-slides/lecture-1-oligopoly.qmd
         - lecture-slides/lecture-2-product-differentiation.qmd
-        - lecture-slides/lecture-3-innovation.qmd
-        - lecture-slides/lecture-4-patents.qmd
-        - lecture-slides/lecture-5-multistage.qmd
-        - lecture-slides/lecture-7-cooperative-rd.qmd
-        - lecture-slides/lecture-8-bundling.qmd
-        - lecture-slides/lecture-9-advertising.qmd
-        - lecture-slides/lecture-11-mergers.qmd
-        - lecture-slides/lecture-12-sustainability.qmd
 
-format:
-  html:
-    theme: cosmo
-    css: styles.css
-    toc: true
