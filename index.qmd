@@ -65,7 +65,7 @@ Comprehensive lecture notes covering key topics in industrial organisation:
 ### [Exercises](exercises/)
 
 Problem sets with and without solutions to help you practice the concepts covered in lectures. Tutorials focus on live problem-solving (numerical and discussion/interpretation questions).
-
+<!-- 
 ### [Interactive Apps](apps/)
 
 Interactive visualisations to explore key economic models:
@@ -74,7 +74,7 @@ Interactive visualisations to explore key economic models:
 - Monopolist profit maximisation
 - Profit possibility frontiers
 - Salop circular city model
-
+ -->
 ## Textbooks and Readings
 
 There is no single prescribed textbook. The course draws on chapters from:
