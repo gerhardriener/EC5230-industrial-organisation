@@ -1,5 +1,5 @@
 ---
-subtitle: "Lecture 1 – Competition & Oligopoly Coordination"
+title: "Oligopoly"
 ---
 
 # Part I. Market Structures {background-color="#00539b"}

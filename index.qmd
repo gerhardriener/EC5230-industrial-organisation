@@ -45,26 +45,38 @@ By the end of the module, you will be able to:
 
 This module contributes to UN Sustainable Development Goals:
 
-- **Goal 9: Industry, Innovation, and Infrastructure** - Examining how patents and IPRs impact innovation disclosure and cooperative R&D
-- **Goal 12: Responsible Consumption and Production** - Analysing network effects in technology adoption and sustainable industrialisation
+- **Goal 9: Industry, Innovation, and Infrastructure** — Examining how patents and IPRs impact innovation disclosure and cooperative R&D
+- **Goal 12: Responsible Consumption and Production** — Analysing network effects in technology adoption and sustainable industrialisation
 
 ## Course Materials
 
 ::: {.callout-note}
 ## Navigation
-Use the navigation bar above to access different sections of the course.
+
+Use the links below to access lectures, exercises, and interactive applications.
 :::
 
-### [Lectures](lecture-slides/index.qmd)
+### [Lecture Slides](lecture-slides/)
 
-Lecture slides covering key topics in industrial organisation, including market structure, firm behaviour, oligopoly theory (Cournot, Bertrand, Stackelberg), product differentiation, innovation, and mergers.
+Comprehensive lecture notes covering key topics in industrial organisation:
 
-### [Exercises](exercises/index.qmd)
+- [Lecture 1: Competition & Oligopoly Coordination](lecture-slides/lecture-1-oligopoly.html)
+- [Lecture 2: Product Differentiation](lecture-slides/lecture-2-product-differentiation.html)
+- [Lecture 3: Economics of Innovation](lecture-slides/lecture-3-innovation.html)
+- [Lecture 4: Patents and Intellectual Property Rights](lecture-slides/lecture-4-patents.html)
+- [Lecture 5: Multi-stage Games and Strategic Commitment](lecture-slides/lecture-5-multistage.html)
+- [Lecture 7: Cooperative R&D](lecture-slides/lecture-7-cooperative-rd.html)
+- [Lecture 8: Bundling and Tying](lecture-slides/lecture-8-bundling.html)
+- [Lecture 9: Advertising and Brand Competition](lecture-slides/lecture-9-advertising.html)
+- [Lecture 11: Mergers and Acquisitions](lecture-slides/lecture-11-mergers.html)
+- [Lecture 12: Sustainable Industrialisation](lecture-slides/lecture-12-sustainability.html)
+
+### [Exercises](exercises/)
 
 Problem sets with and without solutions to help you practice the concepts covered in lectures. Tutorials focus on live problem-solving (numerical and discussion/interpretation questions).
 
-### [Interactive Apps](apps/index.qmd)
-  
+### [Interactive Apps](apps/)
+
 Interactive visualisations to explore key economic models:
 
 - Cournot duopoly best responses
@@ -76,10 +88,10 @@ Interactive visualisations to explore key economic models:
 
 There is no single prescribed textbook. The course draws on chapters from:
 
-- **Belleflamme, P. & Peitz, M. (2015).** *Industrial Organisation: Markets and Strategies* (2nd ed.)
-- **Shy, O. (1996).** *Industrial Organisation: Theory and Applications*
-- **Scotchmer, S. (2004).** *Innovation and Incentives*
-- **Church, J. & Ware, R. (2000).** *Industrial Organization: A Strategic Approach*
+- **Belleflamme, P. & Peitz, M. (2015).** *Industrial Organisation: Markets and Strategies* (2nd ed.). Cambridge University Press.
+- **Shy, O. (1996).** *Industrial Organisation: Theory and Applications*. MIT Press.
+- **Scotchmer, S. (2004).** *Innovation and Incentives*. Princeton University Press.
+- **Church, J. & Ware, R. (2000).** *Industrial Organization: A Strategic Approach*. Irwin McGraw-Hill.
 
 Journal articles are available through the online reading list and cited at the end of each lecture.
 
@@ -88,7 +100,7 @@ Journal articles are available through the online reading list and cited at the 
 | Component | Weight | Timing |
 |-----------|--------|--------|
 | Class Test | 20% | Week 6 |
-| Policy recommendation | 5% | Week 11  |
+| Policy Recommendation | 5% | Week 11 |
 | Final Examination | 75% | May |
 
 - **Class Test:** 50-minute in-person test covering Weeks 1–5, including a problem-solving question and a discussion-based question (Week 6, during lecture slot)

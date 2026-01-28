@@ -1,17 +1,12 @@
 project:
   type: website
-  output-dir: docs        # all website pages go here
-  render:
-    - index.qmd            # course homepage at root
-    - lecture-slides/index.qmd
-    - exercises/index.qmd
-    - exercises/01-getting-started.qmd
-    - apps/index.qmd
-  #  - resources/**/*.qmd   # e.g. extra material if you add it later
-author: "Gerhard Riener"
+  output-dir: _site
+
 website:
-  title: "Industrial Organisation"
+  title: "EC5230 Industrial Organisation"
   navbar:
+    title: "EC5230"
+    logo: images/st-andrews-logo.png
     left:
       - text: "Home"
         href: index.qmd
@@ -22,8 +17,23 @@ website:
       - text: "Apps"
         href: apps/index.qmd
 
+  sidebar:
+    - id: lectures
+      title: "Lecture Slides"
+      contents:
+        - lecture-slides/lecture-1-oligopoly.qmd
+        - lecture-slides/lecture-2-product-differentiation.qmd
+        - lecture-slides/lecture-3-innovation.qmd
+        - lecture-slides/lecture-4-patents.qmd
+        - lecture-slides/lecture-5-multistage.qmd
+        - lecture-slides/lecture-7-cooperative-rd.qmd
+        - lecture-slides/lecture-8-bundling.qmd
+        - lecture-slides/lecture-9-advertising.qmd
+        - lecture-slides/lecture-11-mergers.qmd
+        - lecture-slides/lecture-12-sustainability.qmd
+
 format:
   html:
     theme: cosmo
+    css: styles.css
     toc: true
-    code-fold: true
