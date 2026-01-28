@@ -1,5 +1,17 @@
 ---
 subtitle: "Lecture 2 – Product Differentiation"
+format:
+  revealjs:
+    slide-number: true
+    css: lecture-slides/theme/st-andrews.scss
+    theme: default
+    chalkboard: true
+    preview-links: auto
+    transition: slide
+    background-transition: fade
+    width: 1600
+    height: 900
+    margin: 0.1
 ---
 
 ## Product differentiation: overview
