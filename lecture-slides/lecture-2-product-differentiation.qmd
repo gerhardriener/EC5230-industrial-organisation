@@ -323,28 +323,6 @@ ggplot(df, aes(p1, pi)) +
   - $n$ firms located symmetrically; distance between adjacent firms = $\frac{1}{n}$  
   - Consumers uniformly distributed around circle; each buys 1 unit or nothing  
 
-```{r}
-#| label: fig-salop-setting
-#| fig-cap: "Salop's circular market: n=8 firms equally spaced around unit circle."
-library(ggplot2)
-
-n <- 8
-theta <- seq(0, 2 * pi, length.out = 400)
-circle <- data.frame(x = cos(theta), y = sin(theta))
-
-firms <- data.frame(
-  k = 0:(n - 1),
-  ang = 2 * pi * (0:(n - 1)) / n
-)
-firms$x <- cos(firms$ang)
-firms$y <- sin(firms$ang)
-
-ggplot() +
-  geom_path(data = circle, aes(x, y), linewidth = 1) +
-  geom_point(data = firms, aes(x, y), size = 3) +
-  coord_equal() +
-  theme_void()
-```
 
 ## Salop's circular market: consumer utility
 
@@ -514,5 +492,5 @@ ggplot(df_combined, aes(q, p, color = region, linetype = region)) +
   - Social optimum: $n^S = \frac{1}{2} n^C$  
   - **Excessive variety**: firms over-enter; socially wasteful product proliferation  
 
-- **Price-variety trade-off**: reducing $n$ increases price but reduces fixed costs  
+- **Price-variety trade-off**: reducing $n$ increases price but reduces fixed costs
 
