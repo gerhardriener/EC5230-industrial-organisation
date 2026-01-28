@@ -1,0 +1,497 @@
+---
+title: "EC5223 – Industrial Economics"
+subtitle: "Lecture 3: Economics of Innovation"
+format:
+  revealjs:
+    slide-number: true
+    css: lecture-slides/theme/st-andrews.scss
+    theme: default
+    chalkboard: true
+    preview-links: auto
+    transition: none
+    background-transition: fade
+    width: 1600
+    height: 900
+    margin: 0.1
+---
+
+```{r}
+#| label: setup
+library(ggplot2)
+library(dplyr)
+```
+
+## Innovation: overview
+
+Why study innovation?
+
+* Innovation is a **stochastic** process.
+* The **probability of success** depends on resources allocated.
+
+Types:
+
+* **Process innovation**: shifts the cost function (typically lowers marginal cost).
+* **Product innovation**: shifts the demand function.
+
+Stages:
+
+* Research
+* Development
+* Adoption
+
+## Innovation and competition: two-way relation
+
+Two-way relationship:
+
+* How **market structure** affects incentives to innovate
+
+* How **innovation** affects market structure
+
+## Market structure affects incentives to innovate
+
+Compare maximum willingness to pay (WTP) for an innovation across:
+
+1. Monopoly (before and after)
+2. Perfect competition (before; monopoly rights after)
+3. Social planner
+
+Interpretation:
+
+* Max WTP = **increase in profit** (firm) or **increase in welfare** (planner) from acquiring the innovation.
+
+## Example setup
+
+Market demand (inverse):
+
+$$
+P(Q) = A - Q
+$$
+
+Process innovation:
+
+* Marginal cost falls from $c_0$ to $c_1$
+* Parameters satisfy $c_1 < c_0 < A$
+
+## Example: monopoly (before vs after)
+
+Monopoly chooses $Q$ to maximize
+$$
+\pi(Q) = (A - Q - c)Q.
+$$
+
+FOC:
+$$
+A - 2Q - c = 0 \quad \Rightarrow \quad Q^m(c) = \frac{A-c}{2}.
+$$
+
+Price:
+$$
+P^m(c) = A - Q^m(c) = \frac{A+c}{2}.
+$$
+
+Profit:
+$$
+\pi^m(c) = (P^m(c) - c)Q^m(c) = \frac{(A-c)^2}{4}.
+$$
+
+So the monopolist’s max WTP for the innovation is:
+$$
+\Delta \pi^m = \pi^m(c_1) - \pi^m(c_0).
+$$
+
+## Example: perfect competition (before; monopoly rights after)
+
+Before innovation (all firms at MC $c_0$):
+
+* Competitive price: $P^{pc}_0 = c_0$
+* Representative firm earns (approximately) zero economic profit.
+
+After innovation (innovator has exclusive use; rivals remain at $c_0$):
+
+* If innovation is **drastic**, innovator can price like a monopolist at cost $c_1$ without being constrained by rivals.
+* If **non-drastic**, innovator is constrained by the competitive fringe at $c_0$.
+
+Key comparison (from the lecture logic):
+
+* A competitive firm can be willing to pay **more** than a monopolist because it is “creating” profit rather than replacing an existing one.
+
+## Size of (process) innovation
+
+Definitions:
+
+* **Drastic (major) innovation**: innovator can behave as an unconstrained monopolist.
+* **Non-drastic (minor) innovation**: innovator has a cost advantage but remains constrained by rivals.
+
+Criterion (as stated in the lecture):
+
+* Drastic if the monopoly price at cost $c_1$ falls below rivals’ cost $c_0$:
+  $$
+  P^m(c_1) < c_0.
+  $$
+
+Using $P^m(c) = (A+c)/2$:
+$$
+\frac{A+c_1}{2} < c_0.
+$$
+
+## Figure: Drastic vs non-drastic process innovation (recreated)
+
+<!-- ```{r}
+#| label: fig-drastic-nondrastic
+#| fig-cap: "Size of (process) innovation: drastic vs non-drastic (recreation of lecture diagram)."
+# Parameters (choose values consistent with the lecture inequalities)
+A <- 10
+
+# Left panel: drastic example
+c0_L <- 6
+c1_L <- 1
+
+# Right panel: non-drastic example
+c0_R <- 6
+c1_R <- 4.5
+
+make_panel <- function(c0, c1, title) {
+  Qmax <- A
+  df <- tibble(Q = seq(0, Qmax, length.out = 400)) |>
+    mutate(
+      P = A - Q,
+      MR = A - 2 * Q
+    )
+
+  # Monopoly with cost c1
+  Qm1 <- (A - c1) / 2
+  Pm1 <- (A + c1) / 2
+
+  ggplot(df, aes(x = Q)) +
+    geom_line(aes(y = P), linewidth = 1) +
+    geom_line(aes(y = MR), linewidth = 0.9, linetype = "dashed") +
+    geom_hline(yintercept = c0, linewidth = 0.8) +
+    geom_hline(yintercept = c1, linewidth = 0.8) +
+    geom_vline(xintercept = Qm1, linetype = "dotted") +
+    geom_hline(yintercept = Pm1, linetype = "dotted") +
+    annotate("text", x = Qmax * 0.72, y = A - Qmax * 0.72 + 0.4, label = "D") +
+    annotate(
+      "text",
+      x = Qmax * 0.72,
+      y = A - 2 * (Qmax * 0.72) - 0.4,
+      label = "MR"
+    ) +
+    annotate(
+      "text",
+      x = 0.2,
+      y = c0 + 0.35,
+      label = expression(c[0]),
+      hjust = 0
+    ) +
+    annotate(
+      "text",
+      x = 0.2,
+      y = c1 + 0.35,
+      label = expression(c[1]),
+      hjust = 0
+    ) +
+    labs(title = title, x = "Q", y = "p") +
+    coord_cartesian(xlim = c(0, Qmax), ylim = c(0, A)) +
+    theme_minimal(base_size = 12)
+}
+
+pL <- make_panel(c0_L, c1_L, "Drastic process innovation (illustration)")
+pR <- make_panel(c0_R, c1_R, "Non-drastic process innovation (illustration)")
+
+# Print sequentially (Reveal will show them one after another on the slide)
+pL
+pR
+``` -->
+
+## Example: social planner (welfare comparison)
+
+For linear demand $P(Q)=A-Q$ and marginal cost $c$:
+
+Efficient output solves $P(Q)=c$:
+$$
+A - Q = c \quad \Rightarrow \quad Q^{sp}(c) = A - c.
+$$
+
+Total surplus (welfare) is the area under demand above cost:
+$$
+W(c) = \int_0^{A-c} (A - Q - c), dQ = \frac{(A-c)^2}{2}.
+$$
+
+Max WTP for the innovation (planner):
+$$
+\Delta W = W(c_1) - W(c_0) = \int_{c_1}^{c_0} (A-c), dc.
+$$
+
+## Replacement effect (intuition)
+
+Key lecture point:
+
+* A **monopolist** has positive pre-innovation profits, so innovation partly **replaces** existing profits.
+* A **competitive firm** earns (near) zero pre-innovation profits, so innovation **creates** new profits.
+
+Therefore, a competitive firm may be willing to pay more than a monopolist for the same innovation.
+
+<!--
+## Figure: Replacement effect (recreated)
+ 
+```{r}
+#| label: fig-replacement
+#| fig-cap: "Replacement effect (recreation of lecture diagram; areas are illustrative)."
+
+A <- 10
+c0 <- 6
+c1 <- 2
+
+df <- tibble(Q = seq(0, A, length.out = 400)) |>
+  mutate(P = A - Q, MR = A - 2 * Q)
+
+# Monopoly outcomes before and after
+Qm0 <- (A - c0) / 2
+Pm0 <- (A + c0) / 2
+
+Qm1 <- (A - c1) / 2
+Pm1 <- (A + c1) / 2
+
+# Demand-quantity at price=c0 (where competitive fringe would supply at cost)
+Qc0 <- A - c0
+Qc1 <- A - c1
+
+# Construct illustrative rectangles/areas similar to the lecture shading
+areas <- bind_rows(
+  tibble(xmin = 0, xmax = Qm0, ymin = c0, ymax = Pm0, area = "1"),
+  tibble(xmin = Qm0, xmax = Qc0, ymin = c0, ymax = Pm0, area = "2"),
+  tibble(xmin = Qc0, xmax = Qm1, ymin = c1, ymax = Pm1, area = "3")
+)
+
+ggplot(df, aes(x = Q)) +
+  geom_rect(
+    data = areas,
+    aes(xmin = xmin, xmax = xmax, ymin = ymin, ymax = ymax),
+    inherit.aes = FALSE,
+    alpha = 0.25
+  ) +
+  geom_line(aes(y = P), linewidth = 1) +
+  geom_line(aes(y = MR), linewidth = 0.9, linetype = "dashed") +
+  geom_hline(yintercept = c0, linewidth = 0.8) +
+  geom_hline(yintercept = c1, linewidth = 0.8) +
+  geom_vline(xintercept = Qm0, linetype = "dotted") +
+  geom_vline(xintercept = Qc0, linetype = "dotted") +
+  geom_vline(xintercept = Qm1, linetype = "dotted") +
+  geom_hline(yintercept = Pm0, linetype = "dotted") +
+  geom_hline(yintercept = Pm1, linetype = "dotted") +
+  annotate("text", x = Qm0 / 2, y = (c0 + Pm0) / 2, label = "1") +
+  annotate("text", x = (Qm0 + Qc0) / 2, y = (c0 + Pm0) / 2, label = "2") +
+  annotate("text", x = (Qc0 + Qm1) / 2, y = (c1 + Pm1) / 2, label = "3") +
+  annotate(
+    "text",
+    x = 0.2,
+    y = c0 + 0.35,
+    label = expression(c[0]),
+    hjust = 0
+  ) +
+  annotate(
+    "text",
+    x = 0.2,
+    y = c1 + 0.35,
+    label = expression(c[1]),
+    hjust = 0
+  ) +
+  annotate("text", x = A * 0.78, y = A - A * 0.78 + 0.4, label = "Demand") +
+  annotate("text", x = A * 0.78, y = A - 2 * (A * 0.78) - 0.4, label = "MR") +
+  labs(
+    x = "Quantity",
+    y = "Price",
+    title = "Replacement effect (illustration)"
+  ) +
+  coord_cartesian(xlim = c(0, A), ylim = c(0, A)) +
+  theme_minimal(base_size = 12)
+```
+ -->
+## Exercise (Bertrand / process innovation)
+
+Market:
+
+* Inverse demand $P(Q) = 15 - Q$
+* Bertrand competition
+* Process innovation lowers MC from $c_0 = 3$ to $c_1 = 0$
+
+Compare two market structures:
+
+* Monopoly (before and after innovation)
+* Perfect competition (before; monopoly rights/use after innovation)
+
+Compute and compare:
+
+* Maximum WTP for the innovation
+* Change in total welfare (PS + CS) from innovation
+
+## Incentives to innovate in oligopoly
+
+Earlier ranking (under Bertrand framing in the lecture narrative):
+
+* Max WTP: **Social planner > Perfect competition firm > Monopoly**
+
+But in oligopoly:
+
+* Incentives need not be monotone in “competition intensity”
+* Key drivers:
+
+  * number of firms
+  * product differentiation
+  * type of competition (price vs quantity)
+
+## Impact of number of firms (Cournot intuition)
+
+Linear Cournot with $n$ firms:
+
+* Innovation incentives can follow an **inverse-U** as $n$ increases.
+
+Two opposing effects as $n \uparrow$:
+
+* **Competition effect**: profits for all firms fall
+* **Competitive advantage effect**: a cost advantage becomes more valuable when there are more inefficient rivals
+
+## Innovation affects market structure
+
+Previously considered cases where:
+
+* Monopoly remains monopoly even without innovation (no entry threat), or
+* Innovation lets a non-monopolist become a monopolist.
+
+Now: **incumbent monopoly threatened by entry**.
+
+Innovation can change structure from monopoly to duopoly/oligopoly if the entrant acquires it.
+
+## Monopoly threatened by entry: setup and payoffs
+
+Setup:
+
+* Incumbent and entrant can acquire a (minor) innovation reducing MC from $c_0$ to $c_1 < c_0$.
+* Entrant can enter profitably **only if** it gets the innovation.
+
+Payoffs:
+
+* If incumbent gets innovation: entrant stays out
+
+  * incumbent: $\pi^m(c_1)$
+  * entrant: $0$
+
+* If entrant gets innovation: entrant enters
+
+  * incumbent: $\pi^d(c_0, c_1)$
+  * entrant: $\pi^d(c_1, c_0)$
+
+## Efficiency effect
+
+Per-period value of innovation:
+
+$$
+V_I = \pi^m(c_1) - \pi^d(c_0, c_1), \qquad
+V_E = \pi^d(c_1, c_0) - 0.
+$$
+
+Incumbent has higher incentives if:
+
+$$
+V_I > V_E
+\iff
+\pi^m(c_1) > \pi^d(c_1, c_0) + \pi^d(c_0, c_1),
+$$
+
+typically when products are **close substitutes**.
+
+Interpretation (lecture):
+
+* Fear of losing monopoly position strengthens incumbent’s incentive.
+* Innovation may **prolong monopoly**.
+
+## Seminal paper: Dasgupta & Stiglitz (1980)
+
+Question: Does more firms imply more innovation?
+
+Primitives:
+
+* $U(Q)$ gross social benefit
+* constant marginal cost $c$
+* R&D expenditure $x$
+* cost depends on R&D: $c=c(x)$ with $c'(x) < 0$
+
+Social optimum:
+$$
+\max_{x,Q} V(x,Q) = U(Q) - c(x)Q - x
+$$
+
+FOC in $x$:
+$$
+-c'(x)Q = 1.
+$$
+
+## Free-entry oligopoly equilibrium conditions (DS 1980)
+
+Firm problem (symmetric firms):
+$$
+\max_{x_i,q_i} \ \pi(x_i,q_i) = [P(q_i + q_{-i}) - c(x_i)]q_i - x_i
+$$
+
+FOC in $q_i$:
+$$
+\frac{\partial P}{\partial Q}q_i + P = c(x_i).
+$$
+
+Symmetric equilibrium: $q_1^*=\dots=q_N^* = Q^*/N$ and $x_1^*=\dots=x_N^* = x^*$, with
+$$
+P(Q^*)\left(1-\frac{\varepsilon}{N}\right) = c(x^*),
+\qquad
+\frac{1}{\varepsilon} = -\frac{\partial Q}{\partial P}\frac{P}{Q}.
+$$
+
+Free entry: $\pi=0$, implying
+$$
+(P-c)\frac{Q^*}{N^*} - x^* = 0
+\quad\Rightarrow\quad
+(P-c) = N^*\frac{x^*}{Q^*}.
+$$
+
+## Key implication: concentration and research intensity
+
+Combining equilibrium conditions yields (lecture statement):
+
+* No causal link: both are jointly determined.
+
+Define “innovative potential”
+$$
+\alpha = -\frac{dc(x)}{dx}\frac{x}{c}.
+$$
+
+Then equilibrium concentration satisfies:
+$$
+\frac{1}{N^*} = \frac{1}{\varepsilon}\cdot \frac{\alpha}{1+\alpha}.
+$$
+
+## Dasgupta (1986): additional results (high level)
+
+With $P(Q)=\sigma Q^{-\varepsilon}$ and $c(x)=\beta x^{-\alpha}$:
+
+* Dynamic vs static efficiency trade-off:
+
+  * $x^*(N+1) < x^*(N)$ but $Q^*(N+1) > Q^*(N)$
+* Research intensity often maximized at moderate concentration (Scherer-style inverse-U)
+* Greater innovative opportunities can be associated with higher concentration:
+  $$
+  \frac{\partial (1/N^*)}{\partial \alpha} > 0
+  $$
+* Demand growth ($\sigma$) stimulates R&D:
+  $$
+  \frac{\partial x^*}{\partial \sigma} > 0
+  $$
+
+## References & next week
+
+References (as in the lecture):
+
+* Belleflamme & Peitz (2015), *Industrial Organization: Markets and Strategies*, Ch. 18.1–18.2
+* Dasgupta (1986), “The Theory of Technological Competition”
+* Dasgupta & Stiglitz (1980), *Economic Journal* 90(358), 266–293
+* Scotchmer (2004), *Innovation and Incentives*, Ch. 2–4
+
+Next week: **Economics of patents and IPRs**
