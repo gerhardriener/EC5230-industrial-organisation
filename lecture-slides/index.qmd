@@ -1,10 +1,6 @@
 ---
 title: "Lecture Slides"
 subtitle: "EC5230 Industrial Organisation"
-format:
-  html:
-    theme: cosmo
-    toc: false
 ---
 
 ## All Lectures
