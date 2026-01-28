@@ -50,9 +50,9 @@ Use the links below to access lectures, exercises, and interactive applications.
 ### [Lecture Slides](lecture-slides/)
 
 Comprehensive lecture notes covering key topics in industrial organisation:
-
+<!-- -
 - [Lecture 1: Competition & Oligopoly Coordination](lecture-slides/lecture-1-oligopoly.html)
-<!-- - [Lecture 2: Product Differentiation](lecture-slides/lecture-2-product-differentiation.html)
+ [Lecture 2: Product Differentiation](lecture-slides/lecture-2-product-differentiation.html)
 - [Lecture 3: Economics of Innovation](lecture-slides/lecture-3-innovation.html)
 - [Lecture 4: Patents and Intellectual Property Rights](lecture-slides/lecture-4-patents.html)
 - [Lecture 5: Multi-stage Games and Strategic Commitment](lecture-slides/lecture-5-multistage.html)
