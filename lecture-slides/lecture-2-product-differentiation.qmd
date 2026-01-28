@@ -1,0 +1,518 @@
+---
+subtitle: "Lecture 2 – Product Differentiation"
+---
+
+## Product differentiation: overview
+
+- **Horizontal v vertical differentiation**  
+  - What determines demand when prices are equal?  
+  - How does variety interact with quantity?  
+
+- **Focus today: horizontal product differentiation**  
+  - Linear Hotelling model (two firms)  
+  - Salop's circular market (free entry)  
+
+## Linear Hotelling model: setting
+
+- **Market structure**  
+  - Duopoly; zero marginal cost  
+  - Linear market of length $L$; consumers uniformly distributed  
+  - Each consumer buys either 1 unit or nothing  
+
+- **Preference parameters**  
+  - Firm 1 located at distance $a$ from left endpoint (0)  
+  - Firm 2 located at distance $b$ from right endpoint ($L$)  
+  - Linear transport cost: $C(d) = cd$ where $d$ is distance and $c > 0$  
+
+```{r}
+#| label: fig-hotelling-setting
+#| fig-cap: "Linear Hotelling model: setting. Firms 1 and 2 located at a and b from endpoints; marginal consumer at distance x from Firm 1, distance y from Firm 2."
+library(ggplot2)
+
+L <- 1
+a <- 0.25
+b <- 0.25
+firm1 <- a
+firm2 <- L - b
+x <- 0.20
+marg <- firm1 + x
+
+df <- data.frame(
+  name = c("0", "Firm 1", "Marginal\nconsumer", "Firm 2", "L"),
+  xpos = c(0, firm1, marg, firm2, L),
+  ypos = 0
+)
+
+ggplot() +
+  geom_segment(aes(x = 0, xend = L, y = 0, yend = 0), linewidth = 1) +
+  geom_point(data = df, aes(x = xpos, y = ypos), size = 3) +
+  geom_text(
+    data = df,
+    aes(x = xpos, y = 0.08, label = name),
+    lineheight = 0.9
+  ) +
+  annotate(
+    "segment",
+    x = firm1,
+    xend = marg,
+    y = -0.06,
+    yend = -0.06,
+    linewidth = 1
+  ) +
+  annotate("text", x = (firm1 + marg) / 2, y = -0.12, label = "x") +
+  annotate(
+    "segment",
+    x = marg,
+    xend = firm2,
+    y = -0.06,
+    yend = -0.06,
+    linewidth = 1
+  ) +
+  annotate("text", x = (marg + firm2) / 2, y = -0.12, label = "y") +
+  annotate("text", x = firm1 - 0.08, y = -0.02, label = "a") +
+  annotate("text", x = firm2 + 0.08, y = -0.02, label = "b") +
+  coord_cartesian(ylim = c(-0.2, 0.2)) +
+  theme_void()
+```
+
+## Linear Hotelling model: pricing with fixed locations (Firm 1)
+
+- **Demand derivation**  
+  - Marginal consumer indifferent: $p_1 + cx = p_2 + cy$  
+  - Market length: $L = a + b + x + y$  
+  - Firm 1 demand: $q_1 = a + x = \frac{p_2 - p_1 + c(L + a - b)}{2c}$  
+
+- **Profit and best response**  
+  - $\pi_1 = p_1 q_1$  
+  - Best response: $BR_1(p_2) = \frac{p_2}{2} + \frac{c}{2}(L + a - b)$  
+
+```{r}
+#| label: fig-hotelling-firm1-demand
+#| fig-cap: "Linear Hotelling model: Firm 1 captures customers from 0 to marginal consumer."
+library(ggplot2)
+
+L <- 1
+a <- 0.25
+b <- 0.25
+firm1 <- a
+firm2 <- L - b
+x <- 0.20
+marg <- firm1 + x
+
+df <- data.frame(
+  name = c("0", "Firm 1", "Marginal\nconsumer", "Firm 2", "L"),
+  xpos = c(0, firm1, marg, firm2, L),
+  ypos = 0
+)
+
+ggplot() +
+  geom_segment(aes(x = 0, xend = L, y = 0, yend = 0), linewidth = 1) +
+  geom_point(data = df, aes(x = xpos, y = ypos), size = 3) +
+  geom_text(
+    data = df,
+    aes(x = xpos, y = 0.08, label = name),
+    lineheight = 0.9
+  ) +
+  annotate(
+    "segment",
+    x = firm1,
+    xend = marg,
+    y = -0.06,
+    yend = -0.06,
+    linewidth = 1,
+    color = "#007dc5"
+  ) +
+  annotate(
+    "text",
+    x = (firm1 + marg) / 2,
+    y = -0.12,
+    label = "q1",
+    color = "#007dc5"
+  ) +
+  coord_cartesian(ylim = c(-0.2, 0.2)) +
+  theme_void()
+```
+
+## Linear Hotelling model: pricing with fixed locations (Firm 2)
+
+- **Demand derivation**  
+  - Marginal consumer indifferent: $p_1 + cx = p_2 + cy$  
+  - Market length: $L = a + b + x + y$  
+  - Firm 2 demand: $q_2 = b + y = \frac{p_1 - p_2 + c(L + b - a)}{2c}$  
+
+- **Profit and best response**  
+  - $\pi_2 = p_2 q_2$  
+  - Best response: $BR_2(p_1) = \frac{p_1}{2} + \frac{c}{2}(L + b - a)$  
+
+```{r}
+#| label: fig-hotelling-firm2-demand
+#| fig-cap: "Linear Hotelling model: Firm 2 captures customers from marginal consumer to L."
+library(ggplot2)
+
+L <- 1
+a <- 0.25
+b <- 0.25
+firm1 <- a
+firm2 <- L - b
+x <- 0.20
+marg <- firm1 + x
+
+df <- data.frame(
+  name = c("0", "Firm 1", "Marginal\nconsumer", "Firm 2", "L"),
+  xpos = c(0, firm1, marg, firm2, L),
+  ypos = 0
+)
+
+ggplot() +
+  geom_segment(aes(x = 0, xend = L, y = 0, yend = 0), linewidth = 1) +
+  geom_point(data = df, aes(x = xpos, y = ypos), size = 3) +
+  geom_text(
+    data = df,
+    aes(x = xpos, y = 0.08, label = name),
+    lineheight = 0.9
+  ) +
+  annotate(
+    "segment",
+    x = marg,
+    xend = firm2,
+    y = -0.06,
+    yend = -0.06,
+    linewidth = 1,
+    color = "#c60c46"
+  ) +
+  annotate(
+    "text",
+    x = (marg + firm2) / 2,
+    y = -0.12,
+    label = "q2",
+    color = "#c60c46"
+  ) +
+  coord_cartesian(ylim = c(-0.2, 0.2)) +
+  theme_void()
+```
+
+## Linear Hotelling model: Nash equilibrium in prices
+
+- **Best responses**  
+  - $BR_1(p_2) = \frac{p_2}{2} + \frac{c}{2}(L + a - b)$  
+  - $BR_2(p_1) = \frac{p_1}{2} + \frac{c}{2}(L + b - a)$  
+
+- **Nash equilibrium prices and profits**  
+  - $p_1^* = c\left(L + \frac{a-b}{3}\right)$; $p_2^* = c\left(L + \frac{b-a}{3}\right)$  
+  - $\pi_1^* = \frac{c}{18}(3L + a - b)^2$; $\pi_2^* = \frac{c}{18}(3L + b - a)^2$  
+
+- **Comparative statics**  
+  - Equilibrium profits $\uparrow$ when transport cost $c \uparrow$ (firms benefit from reduced substitutability)  
+
+## Linear Hotelling model: incentive to move (co-location)
+
+- **If firms locate at the same point**: $a + b = L$ (no product differentiation)  
+  - Marginal consumer: $x = y = 0$  
+  - Products homogeneous → Bertrand undercutting  
+  - Unique equilibrium: $p_1^B = p_2^B = 0$, $\pi_1^B = \pi_2^B = 0$  
+
+- **Implication**: Equilibrium at the same location is unsustainable  
+  - Both firms have incentive to deviate and differentiate  
+
+```{r}
+#| label: fig-hotelling-colocation
+#| fig-cap: "Co-location: both firms at the same location yields zero profit."
+library(ggplot2)
+
+L <- 1
+loc <- 0.5
+
+df <- data.frame(
+  name = c("0", "Firms 1 and 2", "L"),
+  xpos = c(0, loc, L),
+  ypos = 0
+)
+
+ggplot() +
+  geom_segment(aes(x = 0, xend = L, y = 0, yend = 0), linewidth = 1) +
+  geom_point(data = df, aes(x = xpos, y = ypos), size = 3) +
+  geom_text(
+    data = df,
+    aes(x = xpos, y = 0.08, label = name),
+    lineheight = 0.9
+  ) +
+  coord_cartesian(ylim = c(-0.15, 0.2)) +
+  theme_void()
+```
+
+## Linear Hotelling model: incentive to move (separated)
+
+- **Marginal incentive to increase own location parameter**  
+  - $\frac{\partial \pi_1^*}{\partial a} = \frac{c}{9}(3L + a - b) > 0$  
+  - $\frac{\partial \pi_2^*}{\partial b} = \frac{c}{9}(3L + b - a) > 0$  
+
+- **Interpretation**: Each firm profits from moving away from its competitor  
+  - Firms choose to **differentiate** products to relax price competition  
+  - This is a **differentiation motive** (vs. collision motive elsewhere)  
+
+## Linear Hotelling model: profit function
+
+Profit function of Firm 1 (d'Aspremont, Gabszewicz & Thisse, 1979):
+
+$$
+\pi_1(p_1, p_2) =
+\begin{cases}
+\frac{p_1 p_2}{2c} - \frac{p_1^2}{2c} + \frac{(L+a-b)p_1}{2}
+& \text{if } |p_1 - p_2| \le c(L - a - b) \\[0.5em]
+Lp_1 & \text{if } p_1 < p_2 - c(L - a - b) \\[0.5em]
+0 & \text{if } p_1 > p_2 + c(L - a - b)
+\end{cases}
+$$
+
+- **Region 1** (interior): both marginal consumers exist; demand is linear in $p_1$  
+- **Region 2** (left): Firm 1 undercuts so sharply it captures entire market  
+- **Region 3** (right): Firm 1 prices so high it sells nothing  
+
+```{r}
+#| label: fig-profit-function
+#| fig-cap: "Profit function of Firm 1 with $\\bar{p}_2$ fixed: discontinuity at boundaries; interior region is smooth."
+library(ggplot2)
+
+p2bar <- 1.0
+cut <- 0.35
+p1 <- seq(0, 1.8, length.out = 400)
+
+pi_mid <- 0.55 + 0.6 * p1 - 0.7 * (p1 - 0.9)^2
+pi_left <- 0.9 * p1
+pi_right <- rep(0, length(p1))
+
+pi <- ifelse(
+  p1 < p2bar - cut,
+  pi_left,
+  ifelse(p1 <= p2bar + cut, pi_mid, pi_right)
+)
+df <- data.frame(p1 = p1, pi = pmax(pi, 0))
+
+ggplot(df, aes(p1, pi)) +
+  geom_line(linewidth = 1) +
+  geom_vline(
+    xintercept = c(p2bar - cut, p2bar + cut),
+    linetype = 2,
+    color = "gray50"
+  ) +
+  annotate(
+    "text",
+    x = p2bar - cut,
+    y = 0.5,
+    label = "Lower kink",
+    hjust = 1.1,
+    size = 3
+  ) +
+  annotate(
+    "text",
+    x = p2bar + cut,
+    y = 0.5,
+    label = "Upper kink",
+    hjust = -0.1,
+    size = 3
+  ) +
+  labs(x = expression(p[1]), y = expression(pi[1](p[1], bar(p)[2]))) +
+  theme_minimal()
+```
+
+## Salop's circular market: setting
+
+- **Market structure**  
+  - Two sectors: one with homogeneous outside good; one with differentiated goods  
+  - Differentiated goods sold in circular market (circumference = 1)  
+  - $n$ firms located symmetrically; distance between adjacent firms = $\frac{1}{n}$  
+  - Consumers uniformly distributed around circle; each buys 1 unit or nothing  
+
+```{r}
+#| label: fig-salop-setting
+#| fig-cap: "Salop's circular market: n=8 firms equally spaced around unit circle."
+library(ggplot2)
+
+n <- 8
+theta <- seq(0, 2 * pi, length.out = 400)
+circle <- data.frame(x = cos(theta), y = sin(theta))
+
+firms <- data.frame(
+  k = 0:(n - 1),
+  ang = 2 * pi * (0:(n - 1)) / n
+)
+firms$x <- cos(firms$ang)
+firms$y <- sin(firms$ang)
+
+ggplot() +
+  geom_path(data = circle, aes(x, y), linewidth = 1) +
+  geom_point(data = firms, aes(x, y), size = 3) +
+  coord_equal() +
+  theme_void()
+```
+
+## Salop's circular market: consumer utility
+
+- **Preference heterogeneity**  
+  - Each consumer $i$ has ideal variety $\ell_i^*$ (location on circle)  
+  - Linear transport (mismatch) cost: $c d$ where $d$ is arc distance  
+
+- **Utility from purchase**  
+  - Buy outside good: $U^O = u^*$  
+  - Buy from firm $j$: $U_j^D = u - c d_j - p_j$ where $d_j$ is distance to firm $j$  
+
+- **Participation condition**  
+  - Consumer buys from firm $j$ iff $U_j^D \ge U^O$  
+  - Let $v = u - u^*$ (net reservation value). Buy iff $v \ge p_j + c d_j$  
+
+## Salop's circular market: monopoly region (no competition)
+
+- **Monopoly scenario**: single firm has market power if remaining consumers are too far away  
+
+- **Maximum distance** at which consumer buys: $d_m = \frac{v - p}{c}$  
+- **Monopoly demand**: $q^M = 2d_m = 2 \left( \frac{v-p}{c} \right)$  
+- **Inverse demand**: $p = v - \frac{c}{2} q^M$ (slope $= -\frac{c}{2}$)  
+
+- **Interpretation**: Demand slope is shallow because the firm only competes via transport costs  
+
+```{r}
+#| label: fig-salop-monopoly-demand
+#| fig-cap: "Monopoly demand in circular market: inverse demand with slope $-c/2$."
+library(ggplot2)
+
+q <- seq(0, 1, length.out = 200)
+v <- 1
+c <- 1
+p <- v - (c / 2) * q
+df <- data.frame(q = q, p = p)
+
+ggplot(df, aes(q, p)) +
+  geom_line(linewidth = 1) +
+  labs(x = "q", y = "p", title = "Monopoly region") +
+  theme_minimal()
+```
+
+## Salop's circular market: competitive region (with neighbors)
+
+- **Competitive scenario**: marginal consumer equidistant between this firm and neighbor(s)  
+
+- **Indifference condition**  
+  - Buy from main firm at distance $x$: $v - cx - p$  
+  - Buy from neighboring firm at distance $\frac{1}{n} - x$: $v - c(\frac{1}{n} - x) - \tilde{p}$  
+  - Indifference: $cx - p = c(\frac{1}{n} - x) - \tilde{p}$  
+  - Solve: $x = \frac{\frac{c}{n} - p + \tilde{p}}{2c}$  
+
+- **Competitive demand**: $q^C = 2x = \frac{\frac{c}{n} - p + \tilde{p}}{c}$  
+- **Inverse demand**: $p = \frac{c}{n} + \tilde{p} - c q^C$ (slope $= -c$)  
+
+- **Interpretation**: Demand slope is steep because firm faces direct price competition from neighbor  
+
+```{r}
+#| label: fig-salop-competitive-demand
+#| fig-cap: "Competitive region in circular market: steeper inverse demand (slope $-c$) due to neighbor."
+library(ggplot2)
+
+q <- seq(0, 0.5, length.out = 200)
+c <- 1
+n <- 4
+ptilde <- 0.5
+p <- (c / n) + ptilde - c * q
+df <- data.frame(q = q, p = p)
+
+ggplot(df, aes(q, p)) +
+  geom_line(linewidth = 1) +
+  labs(x = "q", y = "p", title = "Competitive region") +
+  theme_minimal()
+```
+
+## Salop's circular market: kinked demand
+
+- **Firm's choice** between two regimes  
+  - **Monopoly region**: low output, high margin, shallow demand  
+  - **Competitive region**: high output, thin margin, steep demand  
+
+- **Optimal price** lies at the kink if parameters support interior equilibrium  
+
+- **Equilibrium selection** depends on whether firm prefers to monopolize its local neighborhood or compete directly  
+
+```{r}
+#| label: fig-kinked-demand
+#| fig-cap: "Kinked inverse demand: monopoly region (gentle slope) joins competitive region (steep slope)."
+library(ggplot2)
+
+q <- seq(0, 1.2, length.out = 300)
+v <- 1.4
+c <- 1
+n <- 6
+ptilde <- 0.6
+
+# Monopoly: p = v - (c/2)q
+pM_threshold <- 0.5
+qM <- seq(0, pM_threshold / (c / 2), length.out = 100)
+pM <- v - (c / 2) * qM
+
+# Competitive: p = (c/n) + ptilde - c*q
+qC <- seq(pM_threshold / (c / 2), 1.0, length.out = 100)
+pC <- (c / n) + ptilde - c * qC
+
+df_combined <- rbind(
+  data.frame(q = qM, p = pM, region = "Monopoly"),
+  data.frame(q = qC, p = pC, region = "Competitive")
+)
+
+ggplot(df_combined, aes(q, p, color = region, linetype = region)) +
+  geom_line(linewidth = 1) +
+  scale_color_manual(
+    values = c("Monopoly" = "#007dc5", "Competitive" = "#c60c46")
+  ) +
+  scale_linetype_manual(
+    values = c("Monopoly" = "solid", "Competitive" = "solid")
+  ) +
+  labs(x = "q", y = "p", title = "Demand regimes: kinked at boundary") +
+  theme_minimal() +
+  theme(legend.position = "top")
+```
+
+## Salop's circular market: free-entry equilibrium (supply side)
+
+- **Cost structure**  
+  - Cost function: $C(q) = F + m q$ where $F$ is fixed cost (entry), $m$ is constant marginal cost  
+  - Economies of scale: average cost $AC(q) = \frac{F}{q} + m$ decreases in $q$  
+
+- **Firm choice in competitive region**  
+  - Demand: $p = \frac{c}{n} + \tilde{p} - c q$  
+  - Marginal revenue: $MR = \frac{c}{n} + \tilde{p} - 2cq$  
+  - Best response: $MR = MC$ ⇔ $\frac{c}{n} + \tilde{p} - 2cq = m$ ⇔ $q = \frac{\frac{c}{n} + \tilde{p} - m}{2c}$  
+
+- **Assumption**: equilibrium is in competitive region for all firms; by symmetry $\tilde{p} = p$  
+
+## Salop's circular market: free-entry equilibrium (analysis)
+
+- **Symmetric competitive equilibrium**  
+  - All firms identical; $p = \tilde{p}$; each firm sells $q^C = \frac{1}{n}$  
+
+- **Zero profit condition** (free entry)  
+  - $p^C = AC = m + \frac{F}{q^C}$  
+  - Substitute $q^C = \frac{1}{n}$: $p^C = m + nF$  
+
+- **First-order condition** (optimal quantity)  
+  - $MR = MC$ ⇔ $p^C + q^C \frac{dp^C}{dq^C} = m$  
+  - Slope in competitive region: $\frac{dp}{dq} = -c$  
+  - Therefore: $p^C - cq^C = m$ ⇔ $p^C = m + c q^C = m + \frac{c}{n}$  
+
+- **Solve for equilibrium number of firms**  
+  - Equate zero-profit and FOC: $m + nF = m + \frac{c}{n}$ ⇔ $n^C = \sqrt{\frac{c}{F}}$  
+  - Equilibrium price: $p^C = m + \sqrt{cF}$  
+
+## Salop's circular market: welfare analysis (social optimum)
+
+- **Consumer welfare** from differentiated goods  
+  - Average distance traveled to nearest firm: $\bar{d} = \frac{1}{4n}$ (half the arc between adjacent firms)  
+  - Net utility per consumer: $v - c \bar{d} - p - nF = v - \frac{c}{4n} - p - nF$  
+  - Total welfare: $W(n) = v - \frac{c}{4n} - p - nF$  
+
+- **Social planner's problem**: choose $n$ to maximize $W(n)$  
+  - $\frac{dW}{dn} = \frac{c}{4n^2} - F = 0$ ⇔ $n^S = \frac{1}{2}\sqrt{\frac{c}{F}} = \frac{1}{2} n^C$  
+
+- **Equilibrium v social optimum**  
+  - Free-entry equilibrium: $n^C = \sqrt{\frac{c}{F}}$  
+  - Social optimum: $n^S = \frac{1}{2} n^C$  
+  - **Excessive variety**: firms over-enter; socially wasteful product proliferation  
+
+- **Price-variety trade-off**: reducing $n$ increases price but reduces fixed costs  
+

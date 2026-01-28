@@ -1,0 +1,617 @@
+---
+title: "EC5230 – Industrial Organisation"
+subtitle: "Lecture 1 – Competition & Oligopoly Coordination"
+author: "Gerhard Riener"
+format:
+  revealjs:
+    slide-number: true
+    width: 1600
+    height: 900
+    transition: slide
+    theme:
+      - st-andrews.scss
+execute:
+  echo: false
+---
+
+# Part I. Market Structures {background-color="#00539b"}
+
+## Perfect Competition Benchmark
+
+**Under perfect competition:**
+
+- Price equals marginal cost: $P = MC$
+- Markets are allocatively efficient
+- Zero economic profit in long run
+- Homogeneous products
+- Many buyers and sellers
+
+
+
+## Imperfect Competition: Strategic Behavior
+
+**Under imperfect competition:**
+
+- Price exceeds marginal cost: $P > MC$
+- Markets generate welfare losses
+- Strategic firm behavior matters
+- Product differentiation possible
+- Few firms with market power
+
+
+# Market Structures {background-color="#2c3e50"}
+
+## Market Structure Typology
+
+Three key competitive regimes:
+
+| Structure | # Firms | Price Setting | Output |
+|-----------|---------|---------------|--------|
+| **Perfect Competition** | Many | Price-taker | Competitive |
+| **Monopoly** | 1 | Demand curve | Lower |
+| **Cournot Oligopoly** | Few | Strategic | Intermediate |
+
+
+## Cournot Quantity Competition: Model
+
+**Firm $i$'s maximization problem:**
+
+$$\max_{q_i} \left[q_i \left(P(q_i + q_{-i}) - c(q_i)\right)\right]$$
+
+**Variables:**
+- $q_i$: firm $i$'s quantity (choice variable)
+- $q_{-i}$: rivals' total quantity (parameter from firm $i$'s perspective)
+- $P(\cdot)$: inverse demand function (parameter)
+- $c(\cdot)$: cost function (parameter)
+
+
+## Cournot Pricing Formula
+
+**Equilibrium condition:**
+
+$$\frac{P - c'(q_i)}{P} = \frac{\alpha_i}{\eta}$$
+
+**Where:**
+- $\alpha_i = \frac{q_i}{Q}$ is firm $i$'s market share
+- $\eta = -\frac{dQ/Q}{dP/P}$ is the price elasticity of demand
+- LHS is the Lerner index (mark-up rate)
+
+---
+
+## Cournot Pricing Formula: Interpretation
+
+::: {.callout-note}
+## Key Insight
+The mark-up is directly proportional to market share and inversely related to demand elasticity.
+
+- Larger market share → higher mark-up
+- More elastic demand → lower mark-up
+:::
+
+---
+
+# Welfare Analysis {background-color="#2c3e50"}
+
+## Welfare Measures in Equilibrium
+
+**Three welfare concepts:**
+
+- **Consumer Surplus (CS):** $u(Q) - P(Q)Q$
+- **Producer Surplus (PS):** $P(Q)Q - C(Q)$
+- **Welfare Loss (WL):** Deadweight loss from inefficiency
+
+All measured relative to competitive benchmark.
+
+---
+
+## Welfare Comparison Across Market Structures
+
+| Market Structure | Consumer Surplus | Producer Surplus | Welfare Loss |
+|------------------|------------------|------------------|--------------|
+| **Perfect Competition** | Max | 0 | 0 |
+| **Monopoly** | Low | Max | High |
+| **Cournot Oligopoly** | Intermediate | Intermediate | Intermediate |
+
+---
+
+## Cournot Efficiency: Interpretation
+
+::: {.callout-important}
+## Key Finding
+Cournot oligopoly equilibrium is constrained efficient: it maximizes a weighted combination of consumer and producer surplus—the outcome reflects strategic interdependence without coordination.
+:::
+
+**Implication:** Oligopoly output lies strictly between monopoly and perfect competition.
+
+---
+
+## Three-Firm Market: Setup
+
+**Parameters:**
+
+- Demand: $P = 20 - Q$
+- Marginal costs: $c_1 = 0$, $c_2 = 5$, $c_3 = 7$
+
+---
+
+## Three-Firm Market: Perfect Competition vs. Monopoly
+
+**Perfect Competition** (firm 1 at $p = MC = 0$):
+
+$$\text{CS} = 200, \quad \text{PS} = 0, \quad \text{WL} = 0$$
+
+**Monopoly** (firm 1 alone):
+
+$$\text{CS} = 50, \quad \text{PS} = 100, \quad \text{WL} = 50$$
+
+---
+
+## Three-Firm Market: Cournot Triopoly
+
+**Cournot Triopoly:**
+
+$$\text{CS} = 72, \quad \text{PS} < 96, \quad \text{WL} > 32$$
+
+**Result:** Oligopoly equilibrium output lies strictly between monopoly and perfect competition; price and profits are correspondingly intermediate.
+
+---
+
+## Cournot Welfare Maximand
+
+**Equilibrium maximizes a weighted combination:**
+
+$$
+\max_Q \left\{ (n-1)[u(Q) - P(Q)Q] + n[P(Q)Q - nc(Q/n)] \right\}
+$$
+
+**Components:**
+- $(n-1)[u(Q) - P(Q)Q]$: weight on consumer surplus
+- $n[P(Q)Q - nc(Q/n)]$: weight on producer surplus
+- $n$ identical firms, $u'(Q) = P(Q)$
+
+---
+
+## Welfare Weights: Perfect Competition
+
+**As $n \to \infty$:**
+
+$$\text{Weight on CS} = (n-1) \to \infty$$
+$$\text{Weight on PS} = n \to \infty$$
+
+---
+
+## Perfect Competition: Interpretation
+
+**Result:** The welfare function places infinite weight on consumer surplus relative to individual firm profits. 
+
+**Equilibrium:** Maximizes CS subject to firms earning zero economic profit.
+
+---
+
+## Welfare Weights: Monopoly
+
+**When $n = 1$:**
+
+$$\text{Weight on CS} = (n-1) = 0$$
+$$\text{Weight on PS} = n = 1$$
+
+---
+
+## Monopoly: Interpretation
+
+**Result:** The monopolist ignores consumer surplus entirely and maximizes its own profit alone. 
+
+**Equilibrium:** Unconstrained monopoly outcome.
+
+---
+
+## Welfare Weights: Cournot Oligopoly
+
+**When $1 < n < \infty$:**
+
+$$\text{Weight on CS} = (n-1) \in (0, \infty)$$
+$$\text{Weight on PS} = n \in (1, \infty)$$
+
+---
+
+## Cournot Oligopoly: Interpretation
+
+**Result:** Oligopoly equilibrium balances consumer and producer surplus with intermediate weights.
+
+**The outcome reflects tension between:**
+- Individual firm profit incentives (weight $n$)
+- Aggregate demand response to total output (weight $n-1$)
+
+---
+
+## Welfare Weights: Comparative Statics
+
+::: {.callout-note}
+## Convergence to Competition
+As $n$ increases from 1 to $\infty$, the weight on consumer surplus grows relative to producer surplus, driving equilibrium output toward the competitive level and price toward marginal cost.
+:::
+
+---
+
+# Differentiated Products {background-color="#2c3e50"}
+
+## Cournot Model with Differentiated Products
+
+**Inverse demand functions:**
+
+$$P_1 = a - bq_1 - dq_2$$
+$$P_2 = a - dq_1 - bq_2$$
+
+**Parameters:**
+- $b > |d|$ (own effect > cross effect)
+- $d \in (-b, b)$ measures product differentiation
+
+---
+
+## Product Differentiation Parameter: Interpretation
+
+**Interpretation of $d$:**
+
+- $d < 0$: Goods are complements
+- $d = 0$: Goods are independent
+- $d > 0$: Goods are substitutes
+
+---
+
+## Cournot Best Response with Substitutes
+
+**For substitute goods ($d > 0$):**
+
+$$BR_i(q_j) = \frac{a - dq_j - c_i}{2b}$$
+
+**Property:** Downward-sloping best response.
+
+---
+
+## Strategic Substitutes: Interpretation
+
+**Quantities are strategic substitutes:**
+
+If competitor increases output, my optimal response is to decrease output.
+
+**Economic mechanism:** Output expansion by rival reduces residual demand; optimal response is to contract.
+
+---
+
+## Bertrand Model with Differentiated Products
+
+**Demand functions:**
+
+$$Q_1 = \tilde{a} - \tilde{b}p_1 + \tilde{d}p_2$$
+$$Q_2 = \tilde{a} + \tilde{d}p_1 - \tilde{b}p_2$$
+
+**Transformed parameters:**
+- $\tilde{a} = \frac{a}{b+d}$
+- $\tilde{b} = \frac{b}{b^2 - d^2}$
+- $\tilde{d} = \frac{d}{b^2 - d^2}$
+
+---
+
+## Bertrand Best Response with Substitutes
+
+**For substitute goods ($d > 0$):**
+
+$$BR_i(p_j) = \frac{\tilde{a} + \tilde{d}p_j + \tilde{b}c_i}{2\tilde{b}}$$
+
+**Property:** Upward-sloping best response.
+
+---
+
+## Strategic Complements: Interpretation
+
+**Prices are strategic complements:**
+
+If competitor raises price, my optimal response is to raise price.
+
+**Economic mechanism:** Price increase by rival softens competition; optimal response is to maintain price alignment.
+
+---
+
+## Equilibrium Prices: Cournot vs. Bertrand
+
+**Cournot equilibrium** ($c_i = 0$):
+
+$$p_i^C = \frac{ab}{2b + d}$$
+
+**Bertrand equilibrium** ($c_i = 0$):
+
+$$p_i^B = \frac{a(b-d)}{2b - d}$$
+
+---
+
+## Price Comparison: Cournot vs. Bertrand
+
+**Price difference:**
+
+$$p_i^C - p_i^B = \frac{ad^2}{4b^2 - d^2} > 0$$
+
+**Result:** Bertrand prices are strictly lower than Cournot prices.
+
+---
+
+## Competition Intensity: Interpretation
+
+::: {.callout-note}
+## Key Finding
+Price competition (Bertrand) leads to lower prices and larger quantities than quantity competition (Cournot).
+
+The strategic variable selection determines equilibrium price, output, and total welfare.
+:::
+
+---
+
+# Oligopoly Coordination {background-color="#2c3e50"}
+
+## Tacit Collusion Problem
+
+**Can competing firms coordinate pricing without explicit contracts?**
+
+**Obstacles:**
+- Individual profit motives conflict with group interest
+- No legal mechanism to enforce agreements
+- Constant temptation to cheat on agreements
+
+---
+
+## Coordination Failure in Oligopoly
+
+**Result:** The non-cooperative (Nash) equilibrium is Pareto-dominated by coordinated outcomes.
+
+**Implication:** Firms would jointly profit from coordination but cannot achieve it without commitment devices.
+
+---
+
+## Facilitating Devices: Definition
+
+**Facilitating devices** are contractual mechanisms that:
+
+- Increase incentives to cooperate
+- Decrease incentives to cheat
+
+**Legal examples:**
+- Most-Favoured-Nation (MFN) clauses
+- Most-Favoured-Customer (MFC) clauses
+
+---
+
+## Facilitating Devices: Competition Policy
+
+::: {.callout-warning}
+## Policy Scrutiny
+These devices alter payoff structures in ways that enable tacit collusion; competition authorities scrutinize them accordingly.
+:::
+
+---
+
+## The Prisoner's Dilemma: Payoff Matrix
+
+**Two firms, one period:**
+
+|      | High Price | Low Price |
+|------|-----------|-----------|
+| **High Price** | 100, 100 | -10, 140 |
+| **Low Price** | 140, -10 | 70, 70 |
+
+---
+
+## Prisoner's Dilemma: Nash Equilibrium
+
+**Nash equilibrium:** $(p_L, p_L)$ with payoffs 70, 70
+
+**Cooperative outcome:** $(p_H, p_H)$ with payoffs 100, 100
+
+**Problem:** Cooperation is not a Nash equilibrium without commitment or repeated-game structure.
+
+---
+
+## Incentive Incompatibility: Sequential Logic
+
+**Starting from $(p_L, p_L)$, why cannot both firms coordinate on $(p_H, p_H)$?**
+
+1. **First-mover disadvantage:** Leader gets payoff $-10$ while follower earns $140$
+2. **Incentive to delay:** Follower waits to capture the $140$
+3. **Leader's temptation to revert:** Seeing no response, leader drops back to $p_L$
+
+---
+
+## Coordination Failure: Equilibrium Characterization
+
+::: {.callout-important}
+## Unique Nash Equilibrium
+Unilateral deviation is profitable from any proposed high-price agreement; hence the prisoner's dilemma equilibrium $(p_L, p_L)$ is the unique Nash equilibrium of the simultaneous-move game.
+:::
+
+---
+
+## Adjusted Payoff Matrix: Coordination Solution
+
+**Reduce follower's transitional gain:**
+
+|      | High Price | Low Price |
+|------|-----------|-----------|
+| **High Price** | 100, 100 | -10, 90 |
+| **Low Price** | 90, -10 | 70, 70 |
+
+**Result:** $(p_H, p_H)$ is now a Nash equilibrium.
+
+---
+
+## Adjusted Equilibrium: Interpretation
+
+**If firm moves to $p_H$:**
+- Earns $-10$ in the transition
+- Given opponent is at $p_H$, best response is also $p_H$, earning $100$
+
+**Both firms converge to $(p_H, p_H)$ with payoffs 100, 100** (symmetric equilibrium).
+
+---
+
+## Most-Favoured-Nation (MFN) Clause
+
+**Definition:**
+
+A seller commits to:
+- Charge a specified minimum price
+- Refund buyers if a lower price is offered later
+- Pay penalties equivalent to price differences
+
+---
+
+## MFN Effect on Deviation Incentives
+
+**Effect on deviation cost:**
+
+| Action | Without MFN | With MFN |
+|--------|------------|----------|
+| **Price cut benefit** | Capture all new buyers | Lose many to refunds |
+| **Price cut cost** | Minimal | Refund obligations + penalties |
+
+**Result:** MFN raises the cost of deviation from high price.
+
+---
+
+## MFN Self-Enforcement Condition
+
+**For MFN to work, it must be self-enforcing:**
+
+$$\text{Gross profit from deviation} - \text{Refunds} < \text{Profit under MFN}$$
+
+**Implication:** Deviation becomes unprofitable.
+
+---
+
+## MFN Welfare Effect
+
+::: {.callout-note}
+## Free Rider Effect in Reverse (Salop 1986)
+Individual buyers value MFN protection, but collectively it harms them by preventing sellers from offering discounts to future customers.
+:::
+
+---
+
+## Numerical Example: Bertrand Duopoly Setup
+
+**Model:**
+
+Demand:
+$$Q_1 = 3 - 2p_1 + p_2$$
+$$Q_2 = 3 + p_1 - 2p_2$$
+
+Costs: $c_1 = c_2 = 1$
+
+---
+
+## Baseline Bertrand Equilibrium
+
+**Best response functions:**
+
+$$BR_i(p_j) = \frac{5 + p_j}{4}$$
+
+**Equilibrium:**
+
+$$p_1^B = p_2^B = \frac{5}{3} \approx 1.667$$
+$$\pi_i^B = \frac{8}{9} \approx 0.889$$
+
+---
+
+## MFN Adoption: Firm 1's Commitment
+
+**Firm 1 commits to price:**
+
+$$p_1^* = \frac{12}{7} \approx 1.714$$
+
+**Firm 2's best response:**
+
+$$p_2^* = BR_2(p_1^*) = \frac{47}{28} \approx 1.678$$
+
+---
+
+## MFN Outcome: Firm 1's Profit
+
+**Outcomes:**
+
+$$Q_1^* = \frac{5}{4}$$
+$$\pi_1^* = \frac{25}{28} \approx 0.893 > 0.889$$
+
+::: {.callout-note}
+Firm 1's profits rise to $\approx 0.893$ from the Bertrand equilibrium level of $0.889$ by committing to a higher price via the MFN clause.
+:::
+
+---
+
+## Deviation from MFN: Gross Profit
+
+**Firm 1 considers deviating to:**
+
+$$\tilde{p}_1 = BR_1(p_2^*) = \frac{187}{112} \approx 1.669$$
+
+**Gross profit from deviation:**
+
+$$\tilde{Q}_1 = \frac{75}{56}$$
+$$\tilde{\pi}_1 = \frac{5625}{6272} \approx 0.897$$
+
+---
+
+## Deviation from MFN: Refund Obligation
+
+**MFN requires refunds:**
+
+$$\text{Refunds} = Q_1^* (p_1^* - \tilde{p}_1) = \frac{25}{448} \approx 0.056$$
+
+**Net profit after refunds:**
+
+$$\tilde{\pi}_1 - \text{Refunds} = \frac{5275}{6272} \approx 0.841$$
+
+---
+
+## MFN Self-Enforcement: Verification
+
+::: {.callout-important}
+## No Profitable Deviation
+Net profit from deviation ($0.841$) is strictly less than profit under MFN commitment ($0.893$). 
+
+The MFN clause is thus self-enforcing: no firm has incentive to deviate unilaterally.
+:::
+
+---
+
+## Summary: Tacit Collusion
+
+**Key takeaways:**
+
+1. **Coordination problem:** Joint profit maximization yields higher payoffs than Nash equilibrium
+2. **Single-period dilemma:** The Nash equilibrium is Pareto-inefficient
+3. **Facilitating devices:** MFN clauses alter the payoff structure to align individual and collective incentives
+4. **Self-enforcement:** Properly structured MFN clauses render deviation less profitable than compliance
+
+---
+
+## References
+
+**Core readings:**
+
+- Belleflamme, P., & Peitz, M. (2015). *Industrial Organization: Markets and Strategies* (2nd ed.). Cambridge University Press. Chapters 2.1–2.3, 3.2–3.3.
+- Shy, O. (1996). *Industrial Organization: Theory and Applications*. MIT Press. Chapters 3.2, 6.1
+
+**Advanced references:**
+
+- Cooper, T. E. (1986). Most-Favored-Customer Pricing and Tacit Collusion. *The RAND Journal of Economics*, 17(3), 377–388.
+- Salop, S. C. (1986). Practices that (Credibly) Facilitate Oligopoly Co-ordination. In: Stiglitz, J. E., Mathewson, G. F. (eds) *New Developments in the Analysis of Market Structure*. Palgrave Macmillan.
+
+---
+
+## Next Lecture: Product Differentiation
+
+**Topic:** How does differentiation affect competition and welfare?
+
+**Preview:**
+
+- Spatial models (Hotelling)
+- Vertical differentiation
+- Endogenous product choice
+- Welfare implications

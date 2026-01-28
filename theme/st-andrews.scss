@@ -1,0 +1,218 @@
+/* lecture-slides/theme/st-andrews.scss
+   EC5230 Reveal.js theme (Quarto) aligned with University of St Andrews web brand.
+   Brand colours + fonts: see UoStA brand guidelines. */
+
+/* --- Brand tokens (official) --- */
+$sta-blue: #00539b;
+/* St Andrews Blue */
+/* cite: brand colours */
+$sta-red: #ee312a;
+/* St Andrews Red */
+$sta-yellow: #ffdf00;
+/* St Andrews Yellow */
+$sta-black: #231f20;
+/* St Andrews Black */
+
+/* --- Neutral palette (spacious, low-ink background) --- */
+$bg: #ffffff;
+$ink: #111827;
+/* near-black, softer than pure black */
+$muted: #4b5563;
+/* secondary text */
+$rule: #e5e7eb;
+/* light divider */
+$panel: #f8fafc;
+/* subtle panel background */
+
+/* --- Reveal theme variables --- */
+$backgroundColor: $bg;
+$mainColor: $ink;
+$headingColor: $ink;
+
+$mainFont: "PT Sans", Helvetica, Arial, sans-serif;
+$headingFont: "PT Sans", Helvetica, Arial, sans-serif;
+$headingTextTransform: none;
+$headingFontWeight: 700;
+
+$linkColor: $sta-blue;
+$linkColorHover: darken($sta-blue, 10%);
+
+/* Comfortable line length and vertical rhythm */
+$mainFontSize: 34px;
+/* default Reveal is often larger; this helps avoid crowding */
+$headingLineHeight: 1.15;
+$mainLineHeight: 1.35;
+
+/* Code */
+$codeFont: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+/* --- Import Reveal base --- */
+@import "reveal.js/dist/theme/template/mixins";
+@import "reveal.js/dist/theme/template/settings";
+
+/* --- Optional: slightly tighter headings, more whitespace around content --- */
+.reveal .slides {
+    text-align: left;
+}
+
+.reveal section {
+    padding: 24px 36px;
+    /* adds air without shrinking content too much */
+}
+
+/* Headings */
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+    letter-spacing: 0;
+    margin: 0 0 18px 0;
+}
+
+.reveal h1 {
+    font-size: 1.9em;
+}
+
+.reveal h2 {
+    font-size: 1.35em;
+    border-bottom: 2px solid $rule;
+    padding-bottom: 10px;
+}
+
+.reveal h3 {
+    font-size: 1.05em;
+    color: $muted;
+}
+
+/* Paragraphs and lists: prevent “dense” look */
+.reveal p {
+    margin: 0 0 14px 0;
+}
+
+.reveal ul,
+.reveal ol {
+    margin: 0 0 14px 1.1em;
+}
+
+.reveal li {
+    margin: 8px 0;
+}
+
+.reveal li>ul,
+.reveal li>ol {
+    margin-top: 8px;
+}
+
+/* Strong emphasis: use brand blue sparingly */
+.reveal strong {
+    color: $sta-blue;
+    font-weight: 700;
+}
+
+/* Tables: clean, readable */
+.reveal table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.85em;
+}
+
+.reveal table th {
+    text-align: left;
+    border-bottom: 2px solid $rule;
+    padding: 10px 12px;
+}
+
+.reveal table td {
+    border-bottom: 1px solid $rule;
+    padding: 10px 12px;
+}
+
+.reveal table tr:last-child td {
+    border-bottom: 0;
+}
+
+/* Math: keep consistent ink colour */
+.reveal .katex,
+.reveal .math {
+    color: $ink;
+}
+
+/* Code blocks: subtle panel, not heavy */
+.reveal pre {
+    background: $panel;
+    border: 1px solid $rule;
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-size: 0.75em;
+    line-height: 1.35;
+    box-shadow: none;
+}
+
+.reveal code {
+    font-family: $codeFont;
+}
+
+/* Blockquotes: understated */
+.reveal blockquote {
+    background: $panel;
+    border-left: 6px solid $sta-blue;
+    padding: 10px 16px;
+    margin: 14px 0;
+    border-radius: 8px;
+}
+
+/* Callouts (Quarto) – match “textbook” feel */
+.reveal .callout {
+    border-radius: 12px;
+    border: 1px solid $rule;
+    background: $panel;
+    padding: 12px 16px;
+    margin: 14px 0;
+}
+
+.reveal .callout.callout-note {
+    border-left: 6px solid $sta-blue;
+}
+
+.reveal .callout.callout-important {
+    border-left: 6px solid $sta-red;
+}
+
+.reveal .callout.callout-warning {
+    border-left: 6px solid $sta-yellow;
+}
+
+/* Section divider slides: if you use background-color on H1 slides, ensure contrast */
+.reveal section[data-background-color="#2c3e50"],
+.reveal section[data-background-color="#00539b"] {
+    color: #ffffff;
+}
+
+.reveal section[data-background-color="#2c3e50"] h1,
+.reveal section[data-background-color="#00539b"] h1 {
+    color: #ffffff;
+    border: 0;
+}
+
+.reveal section[data-background-color="#2c3e50"] strong,
+.reveal section[data-background-color="#00539b"] strong {
+    color: #ffffff;
+}
+
+/* Slide number: subtle */
+.reveal .slide-number {
+    background: transparent;
+    color: $muted;
+    font-size: 14px;
+}
+
+/* Footer (if you use it via include-after-body etc.) */
+.reveal .footer {
+    position: absolute;
+    left: 36px;
+    bottom: 18px;
+    font-size: 16px;
+    color: $muted;
+}
+
+/* Finish with Reveal defaults */
+@import "reveal.js/dist/theme/template/theme";

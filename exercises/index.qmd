@@ -1,0 +1,38 @@
+---
+title: "Exercises"
+---
+
+## Problem Sets
+
+Practice exercises for EC5230 Industrial Organisation. Each part includes a version without solutions for self-study and a version with solutions for checking your work.
+
+### Exercise Sets
+
+| Part | Problems | Solutions |
+|------|----------|-----------|
+| Part 1 | [Problems](ExercisesPart1_nosol.pdf) | [Solutions](ExercisesPart1_sol.pdf) |
+| Part 2 | [Problems](ExercisesPart2_nosol.pdf) | [Solutions](ExercisesPart2_sol.pdf) |
+| Part 3 | [Problems](ExercisesPart3_nosol.pdf) | [Solutions](ExercisesPart3_sol.pdf) |
+| Part 4 | [Problems](ExercisesPart4_nosol.pdf) | [Solutions](ExercisesPart4_sol.pdf) |
+| Part 5 | [Problems](ExercisesPart5_nosol.pdf) | [Solutions](ExercisesPart5_sol.pdf) |
+| Part 6 | [Problems](ExercisesPart6_nosol.pdf) | [Solutions](ExercisesPart6_sol.pdf) |
+| Part 7 | [Problems](ExercisesPart7_nosol.pdf) | [Solutions](ExercisesPart7_sol.pdf) |
+| Part 8 | [Problems](ExercisesPart8_nosol.pdf) | [Solutions](ExercisesPart8_sol.pdf) |
+| Part 9 | [Problems](ExercisesPart9_nosol.pdf) | [Solutions](ExercisesPart9_sol.pdf) |
+
+: {.striped .hover}
+
+---
+
+::: {.callout-warning}
+## Study Advice
+Try to complete the problems on your own before consulting the solutions. Active problem-solving is essential for mastering industrial organisation concepts.
+:::
+
+### How to Use These Exercises
+
+1. **Review the relevant lecture material** before attempting each problem set
+2. **Attempt all problems** without looking at solutions
+3. **Check your answers** against the solutions
+4. **Identify gaps** in your understanding and revisit lecture notes
+5. **Use the [Interactive Apps](../apps/index.qmd)** to visualise concepts you find challenging

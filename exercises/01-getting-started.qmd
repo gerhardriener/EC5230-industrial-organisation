@@ -1,0 +1,17 @@
+---
+title: "Exercise 1: Getting started"
+params:
+  solutions: false
+format: html
+---
+This is a template to integrate questions and solutions into a Quarto document. You can toggle the visibility of solutions using the `solutions` parameter.
+
+## Question 1
+
+Explain why...
+
+::: {.solution}
+```{r}
+#| echo: false
+#| eval: params$solutions
+# solution text or code here

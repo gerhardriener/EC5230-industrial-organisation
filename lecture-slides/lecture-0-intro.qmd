@@ -1,0 +1,142 @@
+---
+title: "EC5230 – Industrial Organisation"
+subtitle: "Lecture 0 – Introduction"
+author: "Gerhard Riener"
+format:
+  revealjs:
+    slide-number: true
+execute:
+  echo: false
+---
+
+## Course Overview
+
+**EC5230 Industrial Organisation**
+
+- **Credits:** 15 (Semester 2, Optional)
+- **Instructor:** Prof Gerhard Riener
+- **Email:** gr97@st-andrews.ac.uk
+- **Office:** G14 Castlecliffe
+- **Office Hours:** Wednesday 12–1pm, 2–3pm
+
+## What is Industrial Organisation?
+
+Industrial Organisation studies:
+
+- Structure of firms and markets
+- Strategic interactions between firms
+- Effects of market power on economic outcomes
+- How firms behave in imperfectly competitive markets
+
+## Prerequisites & Expectations
+
+Prerequisites  
+
+- You should remind yourself of basic algebra, calculus (optimisation).  
+- A good understanding of intermediate microeconomics concepts  
+(market structures, competition, welfare analysis, game  
+theory) is essential.  
+- Econometric or statistical knowledge is not required.  
+
+Expectations  
+
+- Attend the lectures and tutorials – ask and answer questions.  
+- Go through the required readings carefully.  
+- Derive (again) the results from lectures, tutorials, readings  
+– and reflect on them.  
+- Attempt problem set questions before attending the tutorials.
+
+## Learning Outcomes
+
+By the end of this module, you will be able to:
+
+- Understand how Industrial Organisation deepens the analysis of firm behaviour in imperfectly competitive markets
+- Select and apply appropriate models to analyse various issues in industrial economics
+- Develop skills in analysing economic behaviour through game theory
+- Identify and critically evaluate relevant research papers and real-world examples
+
+## Course Structure
+
+- **Lectures:** 10 × 2 hours (Weeks 1–5, 7–9, 11–12; no lecture during Spring Break)
+- **Tutorials:** 5 × 1 hour (Weeks 3, 5, 7, 9, 12)
+- **Independent Learning Week:** Week 10
+
+::: {.callout-important}
+**Attendance during tutorials will be taken electronically**
+:::
+
+
+## Assessment and Examination
+
+| Component | Weight | When | Details |
+|-----------|--------|------|---------|
+| **Class Test** | 20% | Week 6 | 50 minutes, in-person. Problem-solving and discussion-based questions on Weeks 1–5 |
+| **Policy Recommendation** | 5% | 15 Apr 2026, 17:00 | Report (max 1,000 words) on a real-world IO issue. Submit via MMS |
+| **Final Examination** | 75% | May | Three hours, in-person. All module content (Weeks 1–5, 7–9, 11–12). Guidelines provided closer to exam |
+
+## Prerequisites
+
+- Good understanding of intermediate microeconomics
+  - Market structures, competition, welfare analysis
+  - Game theory
+- Basic algebra and calculus (optimisation)
+- **No econometric or statistical knowledge required**
+
+## Textbooks and Readings
+
+No single prescribed textbook. The course draws on:
+
+- **Belleflamme, P. & Peitz, M. (2015).** *Industrial Organisation: Markets and Strategies* (2nd ed.)
+- **Shy, O. (1996).** *Industrial Organisation: Theory and Applications*
+- **Scotchmer, S. (2004).** *Innovation and Incentives*
+- **Church, J. & Ware, R. (2000).** *Industrial Organization: A Strategic Approach*
+
+Journal articles available through online reading list.
+
+## Course Website
+
+**All materials available online:**
+
+- Lecture slides
+- Exercise sets (with/without solutions)
+- Interactive apps for key economic models
+- Reading lists
+
+Use the navigation bar to access different sections.
+
+## Interactive Apps
+
+Explore key economic models through visualisations:
+
+- Cournot duopoly best responses
+- Monopolist profit maximisation
+- Profit possibility frontiers
+- Salop circular city model
+
+## Administrative Procedures
+
+For the following, we follow **standard Department of Economics / Business School / University of St Andrews procedures**:
+
+- **Late submission policy** — Policy briefs submitted after the deadline incur penalties per university regulations
+- **Absence & extenuating circumstances** — Contact the School immediately; documented evidence required (illness, personal crisis, etc.)
+- **Feedback on assessment** — Results released within standard university timescales; feedback available during office hours or by email
+- **Communication & support** — Email gr97@st-andrews.ac.uk for queries; response within 2 working days. Office hours: Wednesday 12–1pm, 2–3pm
+- **Exam accommodation** — Register with Student Services well in advance for access arrangements, extensions, or reasonable adjustments
+
+Full details available on the **Business School and University websites**. https://www.st-andrews.ac.uk/pgstudents/
+
+## Weekly Schedule
+
+**Week 1** Competition and oligopoly coordination  
+**Week 2** Product differentiation  
+**Week 3** Economics of innovation  
+**Week 4** Economics of patents and IPRs  
+**Week 5** Multi-stage games  
+**Spring Vacation**  
+**Week 6** CLASS TEST (20% Final Grade)  
+**Week 7** Cooperative R&D  
+**Week 8** Bundling  
+**Week 9** Advertising  
+**Week 10** Independent Learning Week  
+**Week 11** Mergers  
+**Week 12** Sustainable industrialisation  

@@ -1,0 +1,29 @@
+project:
+  type: website
+  output-dir: docs        # all website pages go here
+  render:
+    - index.qmd            # course homepage at root
+    - lecture-slides/index.qmd
+    - exercises/index.qmd
+    - exercises/01-getting-started.qmd
+    - apps/index.qmd
+  #  - resources/**/*.qmd   # e.g. extra material if you add it later
+author: "Gerhard Riener"
+website:
+  title: "Industrial Organisation"
+  navbar:
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Lectures"
+        href: lecture-slides/index.qmd
+      - text: "Exercises"
+        href: exercises/index.qmd
+      - text: "Apps"
+        href: apps/index.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-fold: true

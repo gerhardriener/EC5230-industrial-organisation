@@ -1,0 +1,122 @@
+---
+title: "EC5230 Industrial Organisation"
+subtitle: "University of St Andrews"
+format:
+  html:
+    metadata:
+      credits: 15
+---
+
+## Welcome
+
+This is the course website for **EC5230 Industrial Organisation** at the University of St Andrews.
+
+Industrial Organisation studies the structure of firms and markets, strategic interactions between firms, and the effects of market power on economic outcomes. This course covers both theoretical foundations and practical applications, examining how firms behave in imperfectly competitive markets.
+
+## Course Overview
+
+**Module Credits:** 15 (Semester 2, Optional)
+
+### Topics Covered
+
+This module explores key concepts in industrial economics across twelve weeks:
+
+- **Competition and Oligopoly Coordination** (Week 1)
+- **Product Differentiation** (Week 2)
+- **Economics of Innovation** (Week 3)
+- **Economics of Patents and IPRs** (Week 4)
+- **Multi-stage Games** (Week 5)
+- **Cooperative R&D** (Week 7)
+- **Bundling** (Week 8)
+- **Advertising** (Week 9)
+- **Mergers** (Week 11)
+- **Sustainable Industrialisation** (Week 12)
+
+### Intended Learning Outcomes
+
+By the end of the module, you will be able to:
+
+- Understand how Industrial Organisation deepens the analysis of firm behaviour in imperfectly competitive markets
+- Select and apply appropriate models to analyse various issues in industrial economics
+- Develop skills in analysing economic behaviour through game theory
+- Identify and critically evaluate relevant research papers and real-world examples
+
+### Sustainability in the Curriculum
+
+This module contributes to UN Sustainable Development Goals:
+
+- **Goal 9: Industry, Innovation, and Infrastructure** - Examining how patents and IPRs impact innovation disclosure and cooperative R&D
+- **Goal 12: Responsible Consumption and Production** - Analysing network effects in technology adoption and sustainable industrialisation
+
+## Course Materials
+
+::: {.callout-note}
+## Navigation
+Use the navigation bar above to access different sections of the course.
+:::
+
+### [Lectures](lecture-slides/index.qmd)
+
+Lecture slides covering key topics in industrial organisation, including market structure, firm behaviour, oligopoly theory (Cournot, Bertrand, Stackelberg), product differentiation, innovation, and mergers.
+
+### [Exercises](exercises/index.qmd)
+
+Problem sets with and without solutions to help you practice the concepts covered in lectures. Tutorials focus on live problem-solving (numerical and discussion/interpretation questions).
+
+### [Interactive Apps](apps/index.qmd)
+  
+Interactive visualisations to explore key economic models:
+
+- Cournot duopoly best responses
+- Monopolist profit maximisation
+- Profit possibility frontiers
+- Salop circular city model
+
+## Textbooks and Readings
+
+There is no single prescribed textbook. The course draws on chapters from:
+
+- **Belleflamme, P. & Peitz, M. (2015).** *Industrial Organisation: Markets and Strategies* (2nd ed.)
+- **Shy, O. (1996).** *Industrial Organisation: Theory and Applications*
+- **Scotchmer, S. (2004).** *Innovation and Incentives*
+- **Church, J. & Ware, R. (2000).** *Industrial Organization: A Strategic Approach*
+
+Journal articles are available through the online reading list and cited at the end of each lecture.
+
+## Assessment
+
+| Component | Weight | Timing |
+|-----------|--------|--------|
+| Class Test | 20% | Week 6 |
+| Policy recommendation | 5% | Week 11  |
+| Final Examination | 75% | May |
+
+- **Class Test:** 50-minute in-person test covering Weeks 1–5, including a problem-solving question and a discussion-based question (Week 6, during lecture slot)
+- **Policy Recommendation:** Written report (max 1,000 words) analysing a real-world industrial organisation issue of your choice, submitted via MMS by **15 April 2026, 17:00**
+- **Final Examination:** Three-hour in-person exam covering all module content (Weeks 1–5, 7–9, 11–12)
+
+## Prerequisites
+
+- Good understanding of intermediate microeconomics (market structures, competition, welfare analysis, game theory)
+- Basic algebra and calculus (optimisation)
+- No econometric or statistical knowledge required
+
+## Course Structure
+
+- **Lectures:** 10 × 2 hours (Weeks 1–5, 7–9, 11–12; no lecture during Spring Break)
+- **Tutorials:** 5 × 1 hour (Weeks 3, 5, 7, 9, 12)
+- **Independent Learning Week:** Week 10
+
+## Contact
+
+**Instructor:** Prof Gerhard Riener
+
+- **Email:** gr97@st-andrews.ac.uk
+- **Office:** G14 Castlecliffe
+- **Office Hours:** Wednesday 12–1pm, 2–3pm
+
+For questions about the course, please feel free to reach out via email or visit during office hours.
+
+---
+
+*Course materials developed at the University of St Andrews. Interactive apps based on concepts by Flavio Toxvaerd (University of Cambridge).*

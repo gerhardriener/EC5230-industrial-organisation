@@ -1,0 +1,55 @@
+# R and renv
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+renv/
+renv.lock
+
+# Python and venv
+venv/
+.venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+.ipynb_checkpoints
+
+# Quarto
+/.quarto/
+_site/
+.quarto_cache/
+*_cache/
+*_files/
+_output
+
+# course resources
+_resources
+resources
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.bak
+*.log
+
+# Shiny
+rsconnect/
+EOF
+**/*.quarto_ipynb

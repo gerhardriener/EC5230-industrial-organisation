@@ -1,0 +1,114 @@
+[
+  {
+    "objectID": "apps/index.html",
+    "href": "apps/index.html",
+    "title": "Interactive Apps",
+    "section": "",
+    "text": "Explore key industrial organisation models with these interactive Shiny applications. Each app allows you to adjust parameters and observe how equilibrium outcomes change.\n\n\n\n\n\n\nNoteRunning the Apps\n\n\n\nThese apps require R and Shiny. You can run them locally by opening the .R file in RStudio or Positron and clicking “Run App”.\n\n\n\n\n\nFile: cournot-duopoly/cournot-duopoly-app.R\nVisualise the best response functions (reaction curves) in a Cournot duopoly with homogeneous goods.\nKey concepts:\n\nBest response functions: \\(R_i(q_j)\\) and \\(R_j(q_i)\\)\nCournot-Nash equilibrium as the intersection of reaction curves\nEffect of cost asymmetries on equilibrium quantities\nIso-profit contours\n\nParameters you can adjust:\n\nDemand intercept (\\(a\\)) and slope (\\(b\\))\nMarginal costs for each firm (\\(c_i\\), \\(c_j\\))\nIso-profit curve levels\n\n\n\n\n\nFile: monopolist-profits/monopolist-best-response-app.R\nExplore the residual demand problem facing a Cournot firm, showing how a firm’s optimal output depends on rival production.\nKey concepts:\n\nResidual demand function\nProfit maximisation given rival output\nDerivation of the best response function\nShift in profit curves as rival output changes\n\nParameters you can adjust:\n\nDemand intercept (\\(a\\)) and slope (\\(b\\))\nMarginal cost (\\(c\\))\nRival output level (\\(q_j\\))\n\n\n\n\n\nFile: profit-possibility-cournot/profit-possibility-frontier-app.R\nVisualise the profit possibility frontier showing all Pareto-efficient profit combinations for two Cournot firms.\nKey concepts:\n\nCournot equilibrium profits (\\(\\pi_i^C\\), \\(\\pi_j^C\\))\nMonopoly profits (\\(\\pi_i^M\\), \\(\\pi_j^M\\))\nCollusion profits and the contract curve\nStackelberg leader/follower profits\nInefficiency of non-cooperative equilibrium\n\nParameters you can adjust:\n\nDemand intercept (\\(a\\)) and slope (\\(b\\))\nMarginal costs for each firm (\\(c_i\\), \\(c_j\\))\nMinimum profit constraints\n\n\n\n\n\nFile: salop-circle/salop-circular-city-app.R\nVisualise the Salop circular city model of spatial/horizontal product differentiation with 3 firms.\nKey concepts:\n\nSpatial competition on a circular market\nTransportation costs and consumer choice\nMarket boundaries between firms\nEffect of pricing on market shares\nHorizontal product differentiation\n\nParameters you can adjust:\n\nConsumer location on the circle\nEach firm’s price towards neighbouring firms\nMarket boundary positions"
+  },
+  {
+    "objectID": "apps/index.html#interactive-visualisations",
+    "href": "apps/index.html#interactive-visualisations",
+    "title": "Interactive Apps",
+    "section": "",
+    "text": "Explore key industrial organisation models with these interactive Shiny applications. Each app allows you to adjust parameters and observe how equilibrium outcomes change.\n\n\n\n\n\n\nNoteRunning the Apps\n\n\n\nThese apps require R and Shiny. You can run them locally by opening the .R file in RStudio or Positron and clicking “Run App”.\n\n\n\n\n\nFile: cournot-duopoly/cournot-duopoly-app.R\nVisualise the best response functions (reaction curves) in a Cournot duopoly with homogeneous goods.\nKey concepts:\n\nBest response functions: \\(R_i(q_j)\\) and \\(R_j(q_i)\\)\nCournot-Nash equilibrium as the intersection of reaction curves\nEffect of cost asymmetries on equilibrium quantities\nIso-profit contours\n\nParameters you can adjust:\n\nDemand intercept (\\(a\\)) and slope (\\(b\\))\nMarginal costs for each firm (\\(c_i\\), \\(c_j\\))\nIso-profit curve levels\n\n\n\n\n\nFile: monopolist-profits/monopolist-best-response-app.R\nExplore the residual demand problem facing a Cournot firm, showing how a firm’s optimal output depends on rival production.\nKey concepts:\n\nResidual demand function\nProfit maximisation given rival output\nDerivation of the best response function\nShift in profit curves as rival output changes\n\nParameters you can adjust:\n\nDemand intercept (\\(a\\)) and slope (\\(b\\))\nMarginal cost (\\(c\\))\nRival output level (\\(q_j\\))\n\n\n\n\n\nFile: profit-possibility-cournot/profit-possibility-frontier-app.R\nVisualise the profit possibility frontier showing all Pareto-efficient profit combinations for two Cournot firms.\nKey concepts:\n\nCournot equilibrium profits (\\(\\pi_i^C\\), \\(\\pi_j^C\\))\nMonopoly profits (\\(\\pi_i^M\\), \\(\\pi_j^M\\))\nCollusion profits and the contract curve\nStackelberg leader/follower profits\nInefficiency of non-cooperative equilibrium\n\nParameters you can adjust:\n\nDemand intercept (\\(a\\)) and slope (\\(b\\))\nMarginal costs for each firm (\\(c_i\\), \\(c_j\\))\nMinimum profit constraints\n\n\n\n\n\nFile: salop-circle/salop-circular-city-app.R\nVisualise the Salop circular city model of spatial/horizontal product differentiation with 3 firms.\nKey concepts:\n\nSpatial competition on a circular market\nTransportation costs and consumer choice\nMarket boundaries between firms\nEffect of pricing on market shares\nHorizontal product differentiation\n\nParameters you can adjust:\n\nConsumer location on the circle\nEach firm’s price towards neighbouring firms\nMarket boundary positions"
+  },
+  {
+    "objectID": "apps/index.html#getting-started",
+    "href": "apps/index.html#getting-started",
+    "title": "Interactive Apps",
+    "section": "Getting Started",
+    "text": "Getting Started\nTo run any app:\n\nEnsure you have R installed with the shiny and ggplot2 packages\nOpen the .R file in RStudio or Positron\nClick the “Run App” button or run shiny::runApp(\"path/to/app.R\")\n\n# Install required packages if needed\ninstall.packages(c(\"shiny\", \"ggplot2\"))\n\nInteractive apps based on original Mathematica demonstrations by Flavio Toxvaerd (University of Cambridge), reimplemented in R Shiny."
+  },
+  {
+    "objectID": "exercises/index.html",
+    "href": "exercises/index.html",
+    "title": "Exercises",
+    "section": "",
+    "text": "Practice exercises for EC5230 Industrial Organisation. Each part includes a version without solutions for self-study and a version with solutions for checking your work.\n\n\n\n\n\nPart\nProblems\nSolutions\n\n\n\n\nPart 1\nProblems\nSolutions\n\n\nPart 2\nProblems\nSolutions\n\n\nPart 3\nProblems\nSolutions\n\n\nPart 4\nProblems\nSolutions\n\n\nPart 5\nProblems\nSolutions\n\n\nPart 6\nProblems\nSolutions\n\n\nPart 7\nProblems\nSolutions\n\n\nPart 8\nProblems\nSolutions\n\n\nPart 9\nProblems\nSolutions\n\n\n\n\n\n\n\n\n\n\nWarningStudy Advice\n\n\n\nTry to complete the problems on your own before consulting the solutions. Active problem-solving is essential for mastering industrial organisation concepts.\n\n\n\n\n\n\nReview the relevant lecture material before attempting each problem set\nAttempt all problems without looking at solutions\nCheck your answers against the solutions\nIdentify gaps in your understanding and revisit lecture notes\nUse the Interactive Apps to visualise concepts you find challenging"
+  },
+  {
+    "objectID": "exercises/index.html#problem-sets",
+    "href": "exercises/index.html#problem-sets",
+    "title": "Exercises",
+    "section": "",
+    "text": "Practice exercises for EC5230 Industrial Organisation. Each part includes a version without solutions for self-study and a version with solutions for checking your work.\n\n\n\n\n\nPart\nProblems\nSolutions\n\n\n\n\nPart 1\nProblems\nSolutions\n\n\nPart 2\nProblems\nSolutions\n\n\nPart 3\nProblems\nSolutions\n\n\nPart 4\nProblems\nSolutions\n\n\nPart 5\nProblems\nSolutions\n\n\nPart 6\nProblems\nSolutions\n\n\nPart 7\nProblems\nSolutions\n\n\nPart 8\nProblems\nSolutions\n\n\nPart 9\nProblems\nSolutions\n\n\n\n\n\n\n\n\n\n\nWarningStudy Advice\n\n\n\nTry to complete the problems on your own before consulting the solutions. Active problem-solving is essential for mastering industrial organisation concepts.\n\n\n\n\n\n\nReview the relevant lecture material before attempting each problem set\nAttempt all problems without looking at solutions\nCheck your answers against the solutions\nIdentify gaps in your understanding and revisit lecture notes\nUse the Interactive Apps to visualise concepts you find challenging"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "EC5230 Industrial Organisation",
+    "section": "",
+    "text": "This is the course website for EC5230 Industrial Organisation at the University of St Andrews.\nIndustrial Organisation studies the structure of firms and markets, strategic interactions between firms, and the effects of market power on economic outcomes. This course covers both theoretical foundations and practical applications, examining how firms behave in imperfectly competitive markets."
+  },
+  {
+    "objectID": "index.html#welcome",
+    "href": "index.html#welcome",
+    "title": "EC5230 Industrial Organisation",
+    "section": "",
+    "text": "This is the course website for EC5230 Industrial Organisation at the University of St Andrews.\nIndustrial Organisation studies the structure of firms and markets, strategic interactions between firms, and the effects of market power on economic outcomes. This course covers both theoretical foundations and practical applications, examining how firms behave in imperfectly competitive markets."
+  },
+  {
+    "objectID": "index.html#course-overview",
+    "href": "index.html#course-overview",
+    "title": "EC5230 Industrial Organisation",
+    "section": "Course Overview",
+    "text": "Course Overview\nModule Credits: 15 (Semester 2, Optional)\n\nTopics Covered\nThis module explores key concepts in industrial economics across twelve weeks:\n\nCompetition and Oligopoly Coordination (Week 1)\nProduct Differentiation (Week 2)\nEconomics of Innovation (Week 3)\nEconomics of Patents and IPRs (Week 4)\nMulti-stage Games (Week 5)\nCooperative R&D (Week 7)\nBundling (Week 8)\nAdvertising (Week 9)\nMergers (Week 11)\nSustainable Industrialisation (Week 12)\n\n\n\nIntended Learning Outcomes\nBy the end of the module, you will be able to:\n\nUnderstand how Industrial Organisation deepens the analysis of firm behaviour in imperfectly competitive markets\nSelect and apply appropriate models to analyse various issues in industrial economics\nDevelop skills in analysing economic behaviour through game theory\nIdentify and critically evaluate relevant research papers and real-world examples\n\n\n\nSustainability in the Curriculum\nThis module contributes to UN Sustainable Development Goals:\n\nGoal 9: Industry, Innovation, and Infrastructure - Examining how patents and IPRs impact innovation disclosure and cooperative R&D\nGoal 12: Responsible Consumption and Production - Analysing network effects in technology adoption and sustainable industrialisation"
+  },
+  {
+    "objectID": "index.html#course-materials",
+    "href": "index.html#course-materials",
+    "title": "EC5230 Industrial Organisation",
+    "section": "Course Materials",
+    "text": "Course Materials\n\n\n\n\n\n\nNoteNavigation\n\n\n\nUse the navigation bar above to access different sections of the course.\n\n\n\nLectures\nLecture slides covering key topics in industrial organisation, including market structure, firm behaviour, oligopoly theory (Cournot, Bertrand, Stackelberg), product differentiation, innovation, and mergers.\n\n\nExercises\nProblem sets with and without solutions to help you practice the concepts covered in lectures. Tutorials focus on live problem-solving (numerical and discussion/interpretation questions).\n\n\nInteractive Apps\nInteractive visualisations to explore key economic models:\n\nCournot duopoly best responses\nMonopolist profit maximisation\nProfit possibility frontiers\nSalop circular city model"
+  },
+  {
+    "objectID": "index.html#textbooks-and-readings",
+    "href": "index.html#textbooks-and-readings",
+    "title": "EC5230 Industrial Organisation",
+    "section": "Textbooks and Readings",
+    "text": "Textbooks and Readings\nThere is no single prescribed textbook. The course draws on chapters from:\n\nBelleflamme, P. & Peitz, M. (2015). Industrial Organisation: Markets and Strategies (2nd ed.)\nShy, O. (1996). Industrial Organisation: Theory and Applications\nScotchmer, S. (2004). Innovation and Incentives\nChurch, J. & Ware, R. (2000). Industrial Organization: A Strategic Approach\n\nJournal articles are available through the online reading list and cited at the end of each lecture."
+  },
+  {
+    "objectID": "index.html#assessment",
+    "href": "index.html#assessment",
+    "title": "EC5230 Industrial Organisation",
+    "section": "Assessment",
+    "text": "Assessment\n\n\n\nComponent\nWeight\nTiming\n\n\n\n\nClass Test\n20%\nWeek 6\n\n\nPolicy recommendation\n5%\nWeek 11\n\n\nFinal Examination\n75%\nMay\n\n\n\n\nClass Test: 50-minute in-person test covering Weeks 1–5, including a problem-solving question and a discussion-based question (Week 6, during lecture slot)\nPolicy Recommendation: Written report (max 1,000 words) analysing a real-world industrial organisation issue of your choice, submitted via MMS by 15 April 2026, 17:00\nFinal Examination: Three-hour in-person exam covering all module content (Weeks 1–5, 7–9, 11–12)"
+  },
+  {
+    "objectID": "index.html#prerequisites",
+    "href": "index.html#prerequisites",
+    "title": "EC5230 Industrial Organisation",
+    "section": "Prerequisites",
+    "text": "Prerequisites\n\nGood understanding of intermediate microeconomics (market structures, competition, welfare analysis, game theory)\nBasic algebra and calculus (optimisation)\nNo econometric or statistical knowledge required"
+  },
+  {
+    "objectID": "index.html#course-structure",
+    "href": "index.html#course-structure",
+    "title": "EC5230 Industrial Organisation",
+    "section": "Course Structure",
+    "text": "Course Structure\n\nLectures: 10 × 2 hours (Weeks 1–5, 7–9, 11–12; no lecture during Spring Break)\nTutorials: 5 × 1 hour (Weeks 3, 5, 7, 9, 12)\nIndependent Learning Week: Week 10"
+  },
+  {
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "EC5230 Industrial Organisation",
+    "section": "Contact",
+    "text": "Contact\nInstructor: Prof Gerhard Riener\n\nEmail: gr97@st-andrews.ac.uk\nOffice: G14 Castlecliffe\nOffice Hours: Wednesday 12–1pm, 2–3pm\n\nFor questions about the course, please feel free to reach out via email or visit during office hours.\n\nCourse materials developed at the University of St Andrews. Interactive apps based on concepts by Flavio Toxvaerd (University of Cambridge)."
+  },
+  {
+    "objectID": "exercises/01-getting-started.html",
+    "href": "exercises/01-getting-started.html",
+    "title": "Exercise 1: Getting started",
+    "section": "",
+    "text": "This is a template to integrate questions and solutions into a Quarto document. You can toggle the visibility of solutions using the solutions parameter."
+  },
+  {
+    "objectID": "exercises/01-getting-started.html#question-1",
+    "href": "exercises/01-getting-started.html#question-1",
+    "title": "Exercise 1: Getting started",
+    "section": "Question 1",
+    "text": "Question 1\nExplain why…\n\nSolution. #| echo: false #| eval: params$solutions # solution text or code here"
+  }
+]
