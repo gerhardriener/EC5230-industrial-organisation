@@ -56,3 +56,5 @@ Desktop.ini
 
 # Shiny
 rsconnect/
+
+**/*.quarto_ipynb
