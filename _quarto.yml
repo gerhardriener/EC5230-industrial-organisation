@@ -2,28 +2,26 @@ project:
   type: website
   output-dir: _site
 
-format:
-  html:
-    theme: cosmo
-    css: styles.css
-    toc: true
-
 website:
   title: "EC5230 Industrial Organisation"
   navbar:
-    title: "EC5230"
     left:
       - text: "Home"
-        href: index.qmd
+        file: index.qmd
       - text: "Lectures"
-        href: lecture-slides/index.qmd
+        file: lecture-slides/index.qmd
       - text: "Exercises"
-        href: exercises/index.qmd
+        href: exercises/
+      - text: "Apps"
+        href: apps/
 
-  sidebar:
-    - id: lectures
-      title: "Lecture Slides"
-      contents:
-        - lecture-slides/lecture-1-oligopoly.qmd
-        - lecture-slides/lecture-2-product-differentiation.qmd
+execute:
+  freeze: false
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    number-sections: false
+
 
