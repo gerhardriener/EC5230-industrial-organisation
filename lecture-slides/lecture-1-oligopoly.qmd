@@ -14,7 +14,7 @@ format:
     margin: 0.1
 ---
 
-# Part I. Market Structures {background-color="#00539b"}
+# Market Structures {background-color="#00539b"}
 
 ## Industrial Organisation: Overview
 

@@ -27,15 +27,16 @@ _site/
 .quarto_cache/
 *_cache/
 *_files/
-_output
-_OLD
+_output/
+_OLD/
 docs/
 site_libs/
+*.quarto_ipynb
 
+# Course resources
+_resources/
+resources/
 
-# course resources
-_resources
-resources
 # IDE
 .vscode/
 .idea/
@@ -55,5 +56,3 @@ Desktop.ini
 
 # Shiny
 rsconnect/
-EOF
-**/*.quarto_ipynb
