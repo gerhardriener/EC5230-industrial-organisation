@@ -30,6 +30,7 @@ _site/
 _output
 _OLD
 docs/
+site_libs/
 
 
 # course resources
