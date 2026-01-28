@@ -2,114 +2,178 @@
   {
     "objectID": "lecture-slides/lecture-2-product-differentiation.html#product-differentiation-overview",
     "href": "lecture-slides/lecture-2-product-differentiation.html#product-differentiation-overview",
-    "title": "EC5230 Industrial Organisation",
+    "title": "Lecture 2 – Product Differentiation",
     "section": "Product differentiation: overview",
-    "text": "Product differentiation: overview\n\nHorizontal v vertical differentiation\n\nWhat determines demand when prices are equal?\n\nHow does variety interact with quantity?\n\nFocus today: horizontal product differentiation\n\nLinear Hotelling model (two firms)\n\nSalop’s circular market (free entry)"
+    "text": "Product differentiation: overview\n\nHorizontal v vertical differentiation\n\nWhat determines demand when prices are equal?\n\nHow does variety interact with quantity?\n\nFocus today: horizontal product differentiation\n\nLinear Hotelling model (two firms)\n\nSalop’s circular market (free entry)",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 2 – Product Differentiation"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-2-product-differentiation.html#linear-hotelling-model-setting",
     "href": "lecture-slides/lecture-2-product-differentiation.html#linear-hotelling-model-setting",
-    "title": "EC5230 Industrial Organisation",
+    "title": "Lecture 2 – Product Differentiation",
     "section": "Linear Hotelling model: setting",
-    "text": "Linear Hotelling model: setting\n\nMarket structure\n\nDuopoly; zero marginal cost\n\nLinear market of length \\(L\\); consumers uniformly distributed\n\nEach consumer buys either 1 unit or nothing\n\nPreference parameters\n\nFirm 1 located at distance \\(a\\) from left endpoint (0)\n\nFirm 2 located at distance \\(b\\) from right endpoint (\\(L\\))\n\nLinear transport cost: \\(C(d) = cd\\) where \\(d\\) is distance and \\(c &gt; 0\\)\n\n\n\n\nFigure 1: Linear Hotelling model: setting. Firms 1 and 2 located at a and b from endpoints; marginal consumer at distance x from Firm 1, distance y from Firm 2."
+    "text": "Linear Hotelling model: setting\n\nMarket structure\n\nDuopoly; zero marginal cost\n\nLinear market of length \\(L\\); consumers uniformly distributed\n\nEach consumer buys either 1 unit or nothing\n\nPreference parameters\n\nFirm 1 located at distance \\(a\\) from left endpoint (0)\n\nFirm 2 located at distance \\(b\\) from right endpoint (\\(L\\))\n\nLinear transport cost: \\(C(d) = cd\\) where \\(d\\) is distance and \\(c &gt; 0\\)\n\n\n\n\nFigure 1: Linear Hotelling model: setting. Firms 1 and 2 located at a and b from endpoints; marginal consumer at distance x from Firm 1, distance y from Firm 2.",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 2 – Product Differentiation"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-2-product-differentiation.html#linear-hotelling-model-pricing-with-fixed-locations-firm-1",
     "href": "lecture-slides/lecture-2-product-differentiation.html#linear-hotelling-model-pricing-with-fixed-locations-firm-1",
-    "title": "EC5230 Industrial Organisation",
+    "title": "Lecture 2 – Product Differentiation",
     "section": "Linear Hotelling model: pricing with fixed locations (Firm 1)",
-    "text": "Linear Hotelling model: pricing with fixed locations (Firm 1)\n\nDemand derivation\n\nMarginal consumer indifferent: \\(p_1 + cx = p_2 + cy\\)\n\nMarket length: \\(L = a + b + x + y\\)\n\nFirm 1 demand: \\(q_1 = a + x = \\frac{p_2 - p_1 + c(L + a - b)}{2c}\\)\n\nProfit and best response\n\n\\(\\pi_1 = p_1 q_1\\)\n\nBest response: \\(BR_1(p_2) = \\frac{p_2}{2} + \\frac{c}{2}(L + a - b)\\)\n\n\n\n\nFigure 2: Linear Hotelling model: Firm 1 captures customers from 0 to marginal consumer."
+    "text": "Linear Hotelling model: pricing with fixed locations (Firm 1)\n\nDemand derivation\n\nMarginal consumer indifferent: \\(p_1 + cx = p_2 + cy\\)\n\nMarket length: \\(L = a + b + x + y\\)\n\nFirm 1 demand: \\(q_1 = a + x = \\frac{p_2 - p_1 + c(L + a - b)}{2c}\\)\n\nProfit and best response\n\n\\(\\pi_1 = p_1 q_1\\)\n\nBest response: \\(BR_1(p_2) = \\frac{p_2}{2} + \\frac{c}{2}(L + a - b)\\)\n\n\n\n\nFigure 2: Linear Hotelling model: Firm 1 captures customers from 0 to marginal consumer.",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 2 – Product Differentiation"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-2-product-differentiation.html#linear-hotelling-model-pricing-with-fixed-locations-firm-2",
     "href": "lecture-slides/lecture-2-product-differentiation.html#linear-hotelling-model-pricing-with-fixed-locations-firm-2",
-    "title": "EC5230 Industrial Organisation",
+    "title": "Lecture 2 – Product Differentiation",
     "section": "Linear Hotelling model: pricing with fixed locations (Firm 2)",
-    "text": "Linear Hotelling model: pricing with fixed locations (Firm 2)\n\nDemand derivation\n\nMarginal consumer indifferent: \\(p_1 + cx = p_2 + cy\\)\n\nMarket length: \\(L = a + b + x + y\\)\n\nFirm 2 demand: \\(q_2 = b + y = \\frac{p_1 - p_2 + c(L + b - a)}{2c}\\)\n\nProfit and best response\n\n\\(\\pi_2 = p_2 q_2\\)\n\nBest response: \\(BR_2(p_1) = \\frac{p_1}{2} + \\frac{c}{2}(L + b - a)\\)\n\n\n\n\nFigure 3: Linear Hotelling model: Firm 2 captures customers from marginal consumer to L."
+    "text": "Linear Hotelling model: pricing with fixed locations (Firm 2)\n\nDemand derivation\n\nMarginal consumer indifferent: \\(p_1 + cx = p_2 + cy\\)\n\nMarket length: \\(L = a + b + x + y\\)\n\nFirm 2 demand: \\(q_2 = b + y = \\frac{p_1 - p_2 + c(L + b - a)}{2c}\\)\n\nProfit and best response\n\n\\(\\pi_2 = p_2 q_2\\)\n\nBest response: \\(BR_2(p_1) = \\frac{p_1}{2} + \\frac{c}{2}(L + b - a)\\)\n\n\n\n\nFigure 3: Linear Hotelling model: Firm 2 captures customers from marginal consumer to L.",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 2 – Product Differentiation"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-2-product-differentiation.html#linear-hotelling-model-nash-equilibrium-in-prices",
     "href": "lecture-slides/lecture-2-product-differentiation.html#linear-hotelling-model-nash-equilibrium-in-prices",
-    "title": "EC5230 Industrial Organisation",
+    "title": "Lecture 2 – Product Differentiation",
     "section": "Linear Hotelling model: Nash equilibrium in prices",
-    "text": "Linear Hotelling model: Nash equilibrium in prices\n\nBest responses\n\n\\(BR_1(p_2) = \\frac{p_2}{2} + \\frac{c}{2}(L + a - b)\\)\n\n\\(BR_2(p_1) = \\frac{p_1}{2} + \\frac{c}{2}(L + b - a)\\)\n\nNash equilibrium prices and profits\n\n\\(p_1^* = c\\left(L + \\frac{a-b}{3}\\right)\\); \\(p_2^* = c\\left(L + \\frac{b-a}{3}\\right)\\)\n\n\\(\\pi_1^* = \\frac{c}{18}(3L + a - b)^2\\); \\(\\pi_2^* = \\frac{c}{18}(3L + b - a)^2\\)\n\nComparative statics\n\nEquilibrium profits \\(\\uparrow\\) when transport cost \\(c \\uparrow\\) (firms benefit from reduced substitutability)"
+    "text": "Linear Hotelling model: Nash equilibrium in prices\n\nBest responses\n\n\\(BR_1(p_2) = \\frac{p_2}{2} + \\frac{c}{2}(L + a - b)\\)\n\n\\(BR_2(p_1) = \\frac{p_1}{2} + \\frac{c}{2}(L + b - a)\\)\n\nNash equilibrium prices and profits\n\n\\(p_1^* = c\\left(L + \\frac{a-b}{3}\\right)\\); \\(p_2^* = c\\left(L + \\frac{b-a}{3}\\right)\\)\n\n\\(\\pi_1^* = \\frac{c}{18}(3L + a - b)^2\\); \\(\\pi_2^* = \\frac{c}{18}(3L + b - a)^2\\)\n\nComparative statics\n\nEquilibrium profits \\(\\uparrow\\) when transport cost \\(c \\uparrow\\) (firms benefit from reduced substitutability)",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 2 – Product Differentiation"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-2-product-differentiation.html#linear-hotelling-model-incentive-to-move-co-location",
     "href": "lecture-slides/lecture-2-product-differentiation.html#linear-hotelling-model-incentive-to-move-co-location",
-    "title": "EC5230 Industrial Organisation",
+    "title": "Lecture 2 – Product Differentiation",
     "section": "Linear Hotelling model: incentive to move (co-location)",
-    "text": "Linear Hotelling model: incentive to move (co-location)\n\nIf firms locate at the same point: \\(a + b = L\\) (no product differentiation)\n\nMarginal consumer: \\(x = y = 0\\)\n\nProducts homogeneous → Bertrand undercutting\n\nUnique equilibrium: \\(p_1^B = p_2^B = 0\\), \\(\\pi_1^B = \\pi_2^B = 0\\)\n\nImplication: Equilibrium at the same location is unsustainable\n\nBoth firms have incentive to deviate and differentiate\n\n\n\n\nFigure 4: Co-location: both firms at the same location yields zero profit."
+    "text": "Linear Hotelling model: incentive to move (co-location)\n\nIf firms locate at the same point: \\(a + b = L\\) (no product differentiation)\n\nMarginal consumer: \\(x = y = 0\\)\n\nProducts homogeneous → Bertrand undercutting\n\nUnique equilibrium: \\(p_1^B = p_2^B = 0\\), \\(\\pi_1^B = \\pi_2^B = 0\\)\n\nImplication: Equilibrium at the same location is unsustainable\n\nBoth firms have incentive to deviate and differentiate\n\n\n\n\nFigure 4: Co-location: both firms at the same location yields zero profit.",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 2 – Product Differentiation"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-2-product-differentiation.html#linear-hotelling-model-incentive-to-move-separated",
     "href": "lecture-slides/lecture-2-product-differentiation.html#linear-hotelling-model-incentive-to-move-separated",
-    "title": "EC5230 Industrial Organisation",
+    "title": "Lecture 2 – Product Differentiation",
     "section": "Linear Hotelling model: incentive to move (separated)",
-    "text": "Linear Hotelling model: incentive to move (separated)\n\nMarginal incentive to increase own location parameter\n\n\\(\\frac{\\partial \\pi_1^*}{\\partial a} = \\frac{c}{9}(3L + a - b) &gt; 0\\)\n\n\\(\\frac{\\partial \\pi_2^*}{\\partial b} = \\frac{c}{9}(3L + b - a) &gt; 0\\)\n\nInterpretation: Each firm profits from moving away from its competitor\n\nFirms choose to differentiate products to relax price competition\n\nThis is a differentiation motive (vs. collision motive elsewhere)"
+    "text": "Linear Hotelling model: incentive to move (separated)\n\nMarginal incentive to increase own location parameter\n\n\\(\\frac{\\partial \\pi_1^*}{\\partial a} = \\frac{c}{9}(3L + a - b) &gt; 0\\)\n\n\\(\\frac{\\partial \\pi_2^*}{\\partial b} = \\frac{c}{9}(3L + b - a) &gt; 0\\)\n\nInterpretation: Each firm profits from moving away from its competitor\n\nFirms choose to differentiate products to relax price competition\n\nThis is a differentiation motive (vs. collision motive elsewhere)",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 2 – Product Differentiation"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-2-product-differentiation.html#linear-hotelling-model-profit-function",
     "href": "lecture-slides/lecture-2-product-differentiation.html#linear-hotelling-model-profit-function",
-    "title": "EC5230 Industrial Organisation",
+    "title": "Lecture 2 – Product Differentiation",
     "section": "Linear Hotelling model: profit function",
-    "text": "Linear Hotelling model: profit function\nProfit function of Firm 1 (d’Aspremont, Gabszewicz & Thisse, 1979):\n\\[\n\\pi_1(p_1, p_2) =\n\\begin{cases}\n\\frac{p_1 p_2}{2c} - \\frac{p_1^2}{2c} + \\frac{(L+a-b)p_1}{2}\n& \\text{if } |p_1 - p_2| \\le c(L - a - b) \\\\[0.5em]\nLp_1 & \\text{if } p_1 &lt; p_2 - c(L - a - b) \\\\[0.5em]\n0 & \\text{if } p_1 &gt; p_2 + c(L - a - b)\n\\end{cases}\n\\]\n\nRegion 1 (interior): both marginal consumers exist; demand is linear in \\(p_1\\)\n\nRegion 2 (left): Firm 1 undercuts so sharply it captures entire market\n\nRegion 3 (right): Firm 1 prices so high it sells nothing\n\n\n\nFigure 5: Profit function of Firm 1 with \\(\\bar{p}_2\\) fixed: discontinuity at boundaries; interior region is smooth."
+    "text": "Linear Hotelling model: profit function\nProfit function of Firm 1 (d’Aspremont, Gabszewicz & Thisse, 1979):\n\\[\n\\pi_1(p_1, p_2) =\n\\begin{cases}\n\\frac{p_1 p_2}{2c} - \\frac{p_1^2}{2c} + \\frac{(L+a-b)p_1}{2}\n& \\text{if } |p_1 - p_2| \\le c(L - a - b) \\\\[0.5em]\nLp_1 & \\text{if } p_1 &lt; p_2 - c(L - a - b) \\\\[0.5em]\n0 & \\text{if } p_1 &gt; p_2 + c(L - a - b)\n\\end{cases}\n\\]\n\nRegion 1 (interior): both marginal consumers exist; demand is linear in \\(p_1\\)\n\nRegion 2 (left): Firm 1 undercuts so sharply it captures entire market\n\nRegion 3 (right): Firm 1 prices so high it sells nothing\n\n\n\nFigure 5: Profit function of Firm 1 with \\(\\bar{p}_2\\) fixed: discontinuity at boundaries; interior region is smooth.",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 2 – Product Differentiation"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-2-product-differentiation.html#salops-circular-market-setting",
     "href": "lecture-slides/lecture-2-product-differentiation.html#salops-circular-market-setting",
-    "title": "EC5230 Industrial Organisation",
+    "title": "Lecture 2 – Product Differentiation",
     "section": "Salop’s circular market: setting",
-    "text": "Salop’s circular market: setting\n\nMarket structure\n\nTwo sectors: one with homogeneous outside good; one with differentiated goods\n\nDifferentiated goods sold in circular market (circumference = 1)\n\n\\(n\\) firms located symmetrically; distance between adjacent firms = \\(\\frac{1}{n}\\)\n\nConsumers uniformly distributed around circle; each buys 1 unit or nothing"
+    "text": "Salop’s circular market: setting\n\nMarket structure\n\nTwo sectors: one with homogeneous outside good; one with differentiated goods\n\nDifferentiated goods sold in circular market (circumference = 1)\n\n\\(n\\) firms located symmetrically; distance between adjacent firms = \\(\\frac{1}{n}\\)\n\nConsumers uniformly distributed around circle; each buys 1 unit or nothing",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 2 – Product Differentiation"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-2-product-differentiation.html#salops-circular-market-consumer-utility",
     "href": "lecture-slides/lecture-2-product-differentiation.html#salops-circular-market-consumer-utility",
-    "title": "EC5230 Industrial Organisation",
+    "title": "Lecture 2 – Product Differentiation",
     "section": "Salop’s circular market: consumer utility",
-    "text": "Salop’s circular market: consumer utility\n\nPreference heterogeneity\n\nEach consumer \\(i\\) has ideal variety \\(\\ell_i^*\\) (location on circle)\n\nLinear transport (mismatch) cost: \\(c d\\) where \\(d\\) is arc distance\n\nUtility from purchase\n\nBuy outside good: \\(U^O = u^*\\)\n\nBuy from firm \\(j\\): \\(U_j^D = u - c d_j - p_j\\) where \\(d_j\\) is distance to firm \\(j\\)\n\nParticipation condition\n\nConsumer buys from firm \\(j\\) iff \\(U_j^D \\ge U^O\\)\n\nLet \\(v = u - u^*\\) (net reservation value). Buy iff \\(v \\ge p_j + c d_j\\)"
+    "text": "Salop’s circular market: consumer utility\n\nPreference heterogeneity\n\nEach consumer \\(i\\) has ideal variety \\(\\ell_i^*\\) (location on circle)\n\nLinear transport (mismatch) cost: \\(c d\\) where \\(d\\) is arc distance\n\nUtility from purchase\n\nBuy outside good: \\(U^O = u^*\\)\n\nBuy from firm \\(j\\): \\(U_j^D = u - c d_j - p_j\\) where \\(d_j\\) is distance to firm \\(j\\)\n\nParticipation condition\n\nConsumer buys from firm \\(j\\) iff \\(U_j^D \\ge U^O\\)\n\nLet \\(v = u - u^*\\) (net reservation value). Buy iff \\(v \\ge p_j + c d_j\\)",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 2 – Product Differentiation"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-2-product-differentiation.html#salops-circular-market-monopoly-region-no-competition",
     "href": "lecture-slides/lecture-2-product-differentiation.html#salops-circular-market-monopoly-region-no-competition",
-    "title": "EC5230 Industrial Organisation",
+    "title": "Lecture 2 – Product Differentiation",
     "section": "Salop’s circular market: monopoly region (no competition)",
-    "text": "Salop’s circular market: monopoly region (no competition)\n\nMonopoly scenario: single firm has market power if remaining consumers are too far away\nMaximum distance at which consumer buys: \\(d_m = \\frac{v - p}{c}\\)\n\nMonopoly demand: \\(q^M = 2d_m = 2 \\left( \\frac{v-p}{c} \\right)\\)\n\nInverse demand: \\(p = v - \\frac{c}{2} q^M\\) (slope \\(= -\\frac{c}{2}\\))\nInterpretation: Demand slope is shallow because the firm only competes via transport costs\n\n\n\nFigure 6: Monopoly demand in circular market: inverse demand with slope \\(-c/2\\)."
+    "text": "Salop’s circular market: monopoly region (no competition)\n\nMonopoly scenario: single firm has market power if remaining consumers are too far away\nMaximum distance at which consumer buys: \\(d_m = \\frac{v - p}{c}\\)\n\nMonopoly demand: \\(q^M = 2d_m = 2 \\left( \\frac{v-p}{c} \\right)\\)\n\nInverse demand: \\(p = v - \\frac{c}{2} q^M\\) (slope \\(= -\\frac{c}{2}\\))\nInterpretation: Demand slope is shallow because the firm only competes via transport costs\n\n\n\nFigure 6: Monopoly demand in circular market: inverse demand with slope \\(-c/2\\).",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 2 – Product Differentiation"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-2-product-differentiation.html#salops-circular-market-competitive-region-with-neighbors",
     "href": "lecture-slides/lecture-2-product-differentiation.html#salops-circular-market-competitive-region-with-neighbors",
-    "title": "EC5230 Industrial Organisation",
+    "title": "Lecture 2 – Product Differentiation",
     "section": "Salop’s circular market: competitive region (with neighbors)",
-    "text": "Salop’s circular market: competitive region (with neighbors)\n\nCompetitive scenario: marginal consumer equidistant between this firm and neighbor(s)\nIndifference condition\n\nBuy from main firm at distance \\(x\\): \\(v - cx - p\\)\n\nBuy from neighboring firm at distance \\(\\frac{1}{n} - x\\): \\(v - c(\\frac{1}{n} - x) - \\tilde{p}\\)\n\nIndifference: \\(cx - p = c(\\frac{1}{n} - x) - \\tilde{p}\\)\n\nSolve: \\(x = \\frac{\\frac{c}{n} - p + \\tilde{p}}{2c}\\)\n\nCompetitive demand: \\(q^C = 2x = \\frac{\\frac{c}{n} - p + \\tilde{p}}{c}\\)\n\nInverse demand: \\(p = \\frac{c}{n} + \\tilde{p} - c q^C\\) (slope \\(= -c\\))\nInterpretation: Demand slope is steep because firm faces direct price competition from neighbor\n\n\n\nFigure 7: Competitive region in circular market: steeper inverse demand (slope \\(-c\\)) due to neighbor."
+    "text": "Salop’s circular market: competitive region (with neighbors)\n\nCompetitive scenario: marginal consumer equidistant between this firm and neighbor(s)\nIndifference condition\n\nBuy from main firm at distance \\(x\\): \\(v - cx - p\\)\n\nBuy from neighboring firm at distance \\(\\frac{1}{n} - x\\): \\(v - c(\\frac{1}{n} - x) - \\tilde{p}\\)\n\nIndifference: \\(cx - p = c(\\frac{1}{n} - x) - \\tilde{p}\\)\n\nSolve: \\(x = \\frac{\\frac{c}{n} - p + \\tilde{p}}{2c}\\)\n\nCompetitive demand: \\(q^C = 2x = \\frac{\\frac{c}{n} - p + \\tilde{p}}{c}\\)\n\nInverse demand: \\(p = \\frac{c}{n} + \\tilde{p} - c q^C\\) (slope \\(= -c\\))\nInterpretation: Demand slope is steep because firm faces direct price competition from neighbor\n\n\n\nFigure 7: Competitive region in circular market: steeper inverse demand (slope \\(-c\\)) due to neighbor.",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 2 – Product Differentiation"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-2-product-differentiation.html#salops-circular-market-kinked-demand",
     "href": "lecture-slides/lecture-2-product-differentiation.html#salops-circular-market-kinked-demand",
-    "title": "EC5230 Industrial Organisation",
+    "title": "Lecture 2 – Product Differentiation",
     "section": "Salop’s circular market: kinked demand",
-    "text": "Salop’s circular market: kinked demand\n\nFirm’s choice between two regimes\n\nMonopoly region: low output, high margin, shallow demand\n\nCompetitive region: high output, thin margin, steep demand\n\nOptimal price lies at the kink if parameters support interior equilibrium\nEquilibrium selection depends on whether firm prefers to monopolize its local neighborhood or compete directly\n\n\n\nFigure 8: Kinked inverse demand: monopoly region (gentle slope) joins competitive region (steep slope)."
+    "text": "Salop’s circular market: kinked demand\n\nFirm’s choice between two regimes\n\nMonopoly region: low output, high margin, shallow demand\n\nCompetitive region: high output, thin margin, steep demand\n\nOptimal price lies at the kink if parameters support interior equilibrium\nEquilibrium selection depends on whether firm prefers to monopolize its local neighborhood or compete directly\n\n\n\nFigure 8: Kinked inverse demand: monopoly region (gentle slope) joins competitive region (steep slope).",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 2 – Product Differentiation"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-2-product-differentiation.html#salops-circular-market-free-entry-equilibrium-supply-side",
     "href": "lecture-slides/lecture-2-product-differentiation.html#salops-circular-market-free-entry-equilibrium-supply-side",
-    "title": "EC5230 Industrial Organisation",
+    "title": "Lecture 2 – Product Differentiation",
     "section": "Salop’s circular market: free-entry equilibrium (supply side)",
-    "text": "Salop’s circular market: free-entry equilibrium (supply side)\n\nCost structure\n\nCost function: \\(C(q) = F + m q\\) where \\(F\\) is fixed cost (entry), \\(m\\) is constant marginal cost\n\nEconomies of scale: average cost \\(AC(q) = \\frac{F}{q} + m\\) decreases in \\(q\\)\n\nFirm choice in competitive region\n\nDemand: \\(p = \\frac{c}{n} + \\tilde{p} - c q\\)\n\nMarginal revenue: \\(MR = \\frac{c}{n} + \\tilde{p} - 2cq\\)\n\nBest response: \\(MR = MC\\) ⇔ \\(q = \\frac{\\frac{c}{n} + \\tilde{p} - m}{2c}\\)\n\nAssumption: equilibrium is in competitive region for all firms; by symmetry \\(\\tilde{p} = p\\)"
+    "text": "Salop’s circular market: free-entry equilibrium (supply side)\n\nCost structure\n\nCost function: \\(C(q) = F + m q\\) where \\(F\\) is fixed cost (entry), \\(m\\) is constant marginal cost\n\nEconomies of scale: average cost \\(AC(q) = \\frac{F}{q} + m\\) decreases in \\(q\\)\n\nFirm choice in competitive region\n\nDemand: \\(p = \\frac{c}{n} + \\tilde{p} - c q\\)\n\nMarginal revenue: \\(MR = \\frac{c}{n} + \\tilde{p} - 2cq\\)\n\nBest response: \\(MR = MC\\) ⇔ \\(q = \\frac{\\frac{c}{n} + \\tilde{p} - m}{2c}\\)\n\nAssumption: equilibrium is in competitive region for all firms; by symmetry \\(\\tilde{p} = p\\)",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 2 – Product Differentiation"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-2-product-differentiation.html#salops-circular-market-free-entry-equilibrium-analysis",
     "href": "lecture-slides/lecture-2-product-differentiation.html#salops-circular-market-free-entry-equilibrium-analysis",
-    "title": "EC5230 Industrial Organisation",
+    "title": "Lecture 2 – Product Differentiation",
     "section": "Salop’s circular market: free-entry equilibrium (analysis)",
-    "text": "Salop’s circular market: free-entry equilibrium (analysis)\n\nSymmetric competitive equilibrium\n\nAll firms identical; \\(p = \\tilde{p}\\); each firm sells \\(q^C = \\frac{1}{n}\\)\n\nZero profit condition (free entry)\n\n\\(p^C = AC = m + \\frac{F}{q^C}\\)\n\nSubstitute \\(q^C = \\frac{1}{n}\\): \\(p^C = m + nF\\)\n\nFirst-order condition (optimal quantity)\n\n\\(MR = MC\\) ⇔ \\(p^C + q^C \\frac{dp^C}{dq^C} = m\\)\n\nSlope in competitive region: \\(\\frac{dp}{dq} = -c\\)\n\nTherefore: \\(p^C - cq^C = m\\) ⇔ \\(p^C = m + c q^C = m + \\frac{c}{n}\\)\n\nSolve for equilibrium number of firms\n\nEquate zero-profit and FOC: \\(m + nF = m + \\frac{c}{n}\\) ⇔ \\(n^C = \\sqrt{\\frac{c}{F}}\\)\n\nEquilibrium price: \\(p^C = m + \\sqrt{cF}\\)"
+    "text": "Salop’s circular market: free-entry equilibrium (analysis)\n\nSymmetric competitive equilibrium\n\nAll firms identical; \\(p = \\tilde{p}\\); each firm sells \\(q^C = \\frac{1}{n}\\)\n\nZero profit condition (free entry)\n\n\\(p^C = AC = m + \\frac{F}{q^C}\\)\n\nSubstitute \\(q^C = \\frac{1}{n}\\): \\(p^C = m + nF\\)\n\nFirst-order condition (optimal quantity)\n\n\\(MR = MC\\) ⇔ \\(p^C + q^C \\frac{dp^C}{dq^C} = m\\)\n\nSlope in competitive region: \\(\\frac{dp}{dq} = -c\\)\n\nTherefore: \\(p^C - cq^C = m\\) ⇔ \\(p^C = m + c q^C = m + \\frac{c}{n}\\)\n\nSolve for equilibrium number of firms\n\nEquate zero-profit and FOC: \\(m + nF = m + \\frac{c}{n}\\) ⇔ \\(n^C = \\sqrt{\\frac{c}{F}}\\)\n\nEquilibrium price: \\(p^C = m + \\sqrt{cF}\\)",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 2 – Product Differentiation"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-2-product-differentiation.html#salops-circular-market-welfare-analysis-social-optimum",
     "href": "lecture-slides/lecture-2-product-differentiation.html#salops-circular-market-welfare-analysis-social-optimum",
-    "title": "EC5230 Industrial Organisation",
+    "title": "Lecture 2 – Product Differentiation",
     "section": "Salop’s circular market: welfare analysis (social optimum)",
-    "text": "Salop’s circular market: welfare analysis (social optimum)\n\nConsumer welfare from differentiated goods\n\nAverage distance traveled to nearest firm: \\(\\bar{d} = \\frac{1}{4n}\\) (half the arc between adjacent firms)\n\nNet utility per consumer: \\(v - c \\bar{d} - p - nF = v - \\frac{c}{4n} - p - nF\\)\n\nTotal welfare: \\(W(n) = v - \\frac{c}{4n} - p - nF\\)\n\nSocial planner’s problem: choose \\(n\\) to maximize \\(W(n)\\)\n\n\\(\\frac{dW}{dn} = \\frac{c}{4n^2} - F = 0\\) ⇔ \\(n^S = \\frac{1}{2}\\sqrt{\\frac{c}{F}} = \\frac{1}{2} n^C\\)\n\nEquilibrium v social optimum\n\nFree-entry equilibrium: \\(n^C = \\sqrt{\\frac{c}{F}}\\)\n\nSocial optimum: \\(n^S = \\frac{1}{2} n^C\\)\n\nExcessive variety: firms over-enter; socially wasteful product proliferation\n\nPrice-variety trade-off: reducing \\(n\\) increases price but reduces fixed costs"
+    "text": "Salop’s circular market: welfare analysis (social optimum)\n\nConsumer welfare from differentiated goods\n\nAverage distance traveled to nearest firm: \\(\\bar{d} = \\frac{1}{4n}\\) (half the arc between adjacent firms)\n\nNet utility per consumer: \\(v - c \\bar{d} - p - nF = v - \\frac{c}{4n} - p - nF\\)\n\nTotal welfare: \\(W(n) = v - \\frac{c}{4n} - p - nF\\)\n\nSocial planner’s problem: choose \\(n\\) to maximize \\(W(n)\\)\n\n\\(\\frac{dW}{dn} = \\frac{c}{4n^2} - F = 0\\) ⇔ \\(n^S = \\frac{1}{2}\\sqrt{\\frac{c}{F}} = \\frac{1}{2} n^C\\)\n\nEquilibrium v social optimum\n\nFree-entry equilibrium: \\(n^C = \\sqrt{\\frac{c}{F}}\\)\n\nSocial optimum: \\(n^S = \\frac{1}{2} n^C\\)\n\nExcessive variety: firms over-enter; socially wasteful product proliferation\n\nPrice-variety trade-off: reducing \\(n\\) increases price but reduces fixed costs",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 2 – Product Differentiation"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-0-intro.html#course-overview",
@@ -303,246 +367,386 @@
   {
     "objectID": "lecture-slides/lecture-1-oligopoly.html#industrial-organisation-overview",
     "href": "lecture-slides/lecture-1-oligopoly.html#industrial-organisation-overview",
-    "title": "Oligopoly",
+    "title": "Lecture 1 - Oligopoly",
     "section": "Industrial Organisation: Overview",
-    "text": "Industrial Organisation: Overview\nEconomic models rest on key assumptions about market structure and firm behaviour.\nUnder perfect competition:\n\nMarkets are efficient\nPrice equals marginal cost\n\nUnder imperfect competition:\n\nMarkets generate welfare losses\nStrategic firm behaviour matters"
+    "text": "Industrial Organisation: Overview\nEconomic models rest on key assumptions about market structure and firm behaviour.\nUnder perfect competition:\n\nMarkets are efficient\nPrice equals marginal cost\n\nUnder imperfect competition:\n\nMarkets generate welfare losses\nStrategic firm behaviour matters",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 1 - Oligopoly"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-1-oligopoly.html#beyond-static-models",
     "href": "lecture-slides/lecture-1-oligopoly.html#beyond-static-models",
-    "title": "Oligopoly",
+    "title": "Lecture 1 - Oligopoly",
     "section": "Beyond Static Models",
-    "text": "Beyond Static Models\nIn reality, many markets feature:\n\nDynamic entry/exit: Number of firms changes over time\nProduct differentiation: Firms compete on product variety\nTechnological change: Innovation and R&D investment\nDemand shifts: Advertising and marketing effects\n\n\\(\\rightarrow\\) Static models provide a foundation, but IO studies these dynamic elements."
+    "text": "Beyond Static Models\nIn reality, many markets feature:\n\nDynamic entry/exit: Number of firms changes over time\nProduct differentiation: Firms compete on product variety\nTechnological change: Innovation and R&D investment\nDemand shifts: Advertising and marketing effects\n\n\\(\\rightarrow\\) Static models provide a foundation, but IO studies these dynamic elements.",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 1 - Oligopoly"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-1-oligopoly.html#alcoa-natural-monopoly",
     "href": "lecture-slides/lecture-1-oligopoly.html#alcoa-natural-monopoly",
-    "title": "Oligopoly",
+    "title": "Lecture 1 - Oligopoly",
     "section": "Case: Alcoa as a Natural Monopoly",
-    "text": "Case: Alcoa as a Natural Monopoly\n\n\n\n\n\n\nNote\n\n\nSources of market power in early aluminium production (c. 1886–1914).\n\n\n\n\nPatent advantage (1886): Smelting process patented; only a small number of firms can produce at scale initially.\nEconomies of scale: Alcoa expands output and develops downstream markets (intermediate and final aluminium products).\nInput foreclosure (energy): In 1893, Alcoa contracts in advance for hydroelectric power from Niagara Falls.\nInput foreclosure (bauxite): Alcoa secures major North American bauxite sources.\nDynamic efficiency and entry deterrence: Cost reductions make entry difficult even after patent expiration.\nInstitutional environment: Public policy, tariff protection, and limited antitrust enforcement before 1914."
+    "text": "Case: Alcoa as a Natural Monopoly\n\n\n\n\n\n\nNote\n\n\nSources of market power in early aluminium production (c. 1886–1914).\n\n\n\n\nPatent advantage (1886): Smelting process patented; only a small number of firms can produce at scale initially.\nEconomies of scale: Alcoa expands output and develops downstream markets (intermediate and final aluminium products).\nInput foreclosure (energy): In 1893, Alcoa contracts in advance for hydroelectric power from Niagara Falls.\nInput foreclosure (bauxite): Alcoa secures major North American bauxite sources.\nDynamic efficiency and entry deterrence: Cost reductions make entry difficult even after patent expiration.\nInstitutional environment: Public policy, tariff protection, and limited antitrust enforcement before 1914.",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 1 - Oligopoly"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-1-oligopoly.html#market-structure-typology",
     "href": "lecture-slides/lecture-1-oligopoly.html#market-structure-typology",
-    "title": "Oligopoly",
+    "title": "Lecture 1 - Oligopoly",
     "section": "Market Structure Typology",
-    "text": "Market Structure Typology\nThree key competitive regimes:\n\n\n\nStructure\n# Firms\nPrice Setting\nOutput\n\n\n\n\nPerfect Competition\nMany\nPrice-taker\nCompetitive\n\n\nMonopoly\n1\nMonopolist\nRestricted\n\n\nCournot Oligopoly\nFew\nStrategic\nIntermediate"
+    "text": "Market Structure Typology\nThree key competitive regimes:\n\n\n\nStructure\n# Firms\nPrice Setting\nOutput\n\n\n\n\nPerfect Competition\nMany\nPrice-taker\nCompetitive\n\n\nMonopoly\n1\nMonopolist\nRestricted\n\n\nCournot Oligopoly\nFew\nStrategic\nIntermediate",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 1 - Oligopoly"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-1-oligopoly.html#cournot-quantity-competition",
     "href": "lecture-slides/lecture-1-oligopoly.html#cournot-quantity-competition",
-    "title": "Oligopoly",
+    "title": "Lecture 1 - Oligopoly",
     "section": "Cournot Quantity Competition",
-    "text": "Cournot Quantity Competition\nFirm \\(i\\)’s maximisation problem:\n\\[\n\\max_{q_i}\\; q_i\\left(P(q_i + q_{-i}) - c(q_i)\\right)\n\\]\nCournot Pricing Formula:\n\\[\n\\frac{P - c'(q_i)}{P} = \\frac{\\alpha_i}{\\eta}\n\\]\nWhere:\n\n\\(\\alpha_i = \\frac{q_i}{Q}\\) is firm \\(i\\)’s market share\n\\(\\eta = -\\frac{dQ/Q}{dP/P}\\) is the price elasticity of demand\nLHS is the Lerner index (mark-up rate)"
+    "text": "Cournot Quantity Competition\nFirm \\(i\\)’s maximisation problem:\n\\[\n\\max_{q_i}\\; q_i\\left(P(q_i + q_{-i}) - c(q_i)\\right)\n\\]\nCournot Pricing Formula:\n\\[\n\\frac{P - c'(q_i)}{P} = \\frac{\\alpha_i}{\\eta}\n\\]\nWhere:\n\n\\(\\alpha_i = \\frac{q_i}{Q}\\) is firm \\(i\\)’s market share\n\\(\\eta = -\\frac{dQ/Q}{dP/P}\\) is the price elasticity of demand\nLHS is the Lerner index (mark-up rate)",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 1 - Oligopoly"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-1-oligopoly.html#cournot-pricing-formula-interpretation",
     "href": "lecture-slides/lecture-1-oligopoly.html#cournot-pricing-formula-interpretation",
-    "title": "Oligopoly",
+    "title": "Lecture 1 - Oligopoly",
     "section": "Cournot Pricing Formula: Interpretation",
-    "text": "Cournot Pricing Formula: Interpretation\n\n\n\n\n\n\nKey Insight\n\n\nThe mark-up is directly proportional to market share and inversely related to demand elasticity.\n\nLarger market share → higher mark-up\nMore elastic demand → lower mark-up\n\n\n\n\nThis formula shows how market power arises from market concentration."
+    "text": "Cournot Pricing Formula: Interpretation\n\n\n\n\n\n\nKey Insight\n\n\nThe mark-up is directly proportional to market share and inversely related to demand elasticity.\n\nLarger market share → higher mark-up\nMore elastic demand → lower mark-up\n\n\n\n\nThis formula shows how market power arises from market concentration.",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 1 - Oligopoly"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-1-oligopoly.html#welfare-measures-in-equilibrium",
     "href": "lecture-slides/lecture-1-oligopoly.html#welfare-measures-in-equilibrium",
-    "title": "Oligopoly",
+    "title": "Lecture 1 - Oligopoly",
     "section": "Welfare Measures in Equilibrium",
-    "text": "Welfare Measures in Equilibrium\nThree welfare concepts:\n\nConsumer Surplus (CS): Benefit to buyers\nProducer Surplus (PS): Profit to firms\nWelfare Loss (WL): Deadweight loss from inefficiency"
+    "text": "Welfare Measures in Equilibrium\nThree welfare concepts:\n\nConsumer Surplus (CS): Benefit to buyers\nProducer Surplus (PS): Profit to firms\nWelfare Loss (WL): Deadweight loss from inefficiency",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 1 - Oligopoly"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-1-oligopoly.html#equilibrium-welfare-comparison",
     "href": "lecture-slides/lecture-1-oligopoly.html#equilibrium-welfare-comparison",
-    "title": "Oligopoly",
+    "title": "Lecture 1 - Oligopoly",
     "section": "Equilibrium Welfare Comparison",
-    "text": "Equilibrium Welfare Comparison\n\n\n\n\n\n\n\n\n\nMarket Structure\nConsumer Surplus\nProducer Surplus\nWelfare Loss\n\n\n\n\nPerfect Competition\nMax\n0\n0\n\n\nMonopoly\nLow\nHigh\nHigh\n\n\nCournot Oligopoly\nMedium\nMedium\nMedium\n\n\n\n\n\n\n\n\n\nKey Finding\n\n\nCournot oligopoly equilibrium is constrained efficient: it maximises neither consumer surplus nor aggregate surplus—the outcome reflects strategic interdependence without coordination."
+    "text": "Equilibrium Welfare Comparison\n\n\n\n\n\n\n\n\n\nMarket Structure\nConsumer Surplus\nProducer Surplus\nWelfare Loss\n\n\n\n\nPerfect Competition\nMax\n0\n0\n\n\nMonopoly\nLow\nHigh\nHigh\n\n\nCournot Oligopoly\nMedium\nMedium\nMedium\n\n\n\n\n\n\n\n\n\nKey Finding\n\n\nCournot oligopoly equilibrium is constrained efficient: it maximises neither consumer surplus nor aggregate surplus—the outcome reflects strategic interdependence without coordination.",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 1 - Oligopoly"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-1-oligopoly.html#example-three-firm-market",
     "href": "lecture-slides/lecture-1-oligopoly.html#example-three-firm-market",
-    "title": "Oligopoly",
+    "title": "Lecture 1 - Oligopoly",
     "section": "Example: Three-Firm Market",
-    "text": "Example: Three-Firm Market\nSetup:\n\nDemand: \\(P = 20 - Q\\)\nMarginal costs: \\(c_1 = 0\\), \\(c_2 = 5\\), \\(c_3 = 7\\)\n\nPerfect Competition (firm 1 at \\(p = MC = 0\\)):\n\n\\(\\text{CS} = 200, \\quad \\text{PS} = 0, \\quad \\text{WL} = 0\\)\n\nMonopoly (firm 1 alone):\n\n\\(\\text{CS} = 50, \\quad \\text{PS} = 100, \\quad \\text{WL} = 50\\)"
+    "text": "Example: Three-Firm Market\nSetup:\n\nDemand: \\(P = 20 - Q\\)\nMarginal costs: \\(c_1 = 0\\), \\(c_2 = 5\\), \\(c_3 = 7\\)\n\nPerfect Competition (firm 1 at \\(p = MC = 0\\)):\n\n\\(\\text{CS} = 200, \\quad \\text{PS} = 0, \\quad \\text{WL} = 0\\)\n\nMonopoly (firm 1 alone):\n\n\\(\\text{CS} = 50, \\quad \\text{PS} = 100, \\quad \\text{WL} = 50\\)",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 1 - Oligopoly"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-1-oligopoly.html#derivation-of-cournot-triopoly",
     "href": "lecture-slides/lecture-1-oligopoly.html#derivation-of-cournot-triopoly",
-    "title": "Oligopoly",
+    "title": "Lecture 1 - Oligopoly",
     "section": "Derivation of Cournot Triopoly",
-    "text": "Derivation of Cournot Triopoly\nCournot Triopoly:\n\n\\(\\text{CS} = 72, \\quad \\text{PS} &lt; 96, \\quad \\text{WL} &gt; 32\\)\n\n\\(\\rightarrow\\) Oligopoly equilibrium output lies strictly between monopoly and perfect competition; price and profits are correspondingly intermediate."
+    "text": "Derivation of Cournot Triopoly\nCournot Triopoly:\n\n\\(\\text{CS} = 72, \\quad \\text{PS} &lt; 96, \\quad \\text{WL} &gt; 32\\)\n\n\\(\\rightarrow\\) Oligopoly equilibrium output lies strictly between monopoly and perfect competition; price and profits are correspondingly intermediate.",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 1 - Oligopoly"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-1-oligopoly.html#cournot-welfare-maximand",
     "href": "lecture-slides/lecture-1-oligopoly.html#cournot-welfare-maximand",
-    "title": "Oligopoly",
+    "title": "Lecture 1 - Oligopoly",
     "section": "Cournot Welfare Maximand",
-    "text": "Cournot Welfare Maximand\nEquilibrium maximises a weighted combination:\n\\[\n\\max_Q \\left\\{ (n-1)\\big[u(Q) - P(Q)Q\\big] + n\\big[P(Q)Q - nc(Q/n)\\big] \\right\\}\n\\]\nWith \\(u'(Q) = P(Q)\\) and \\(n\\) identical firms.\nInterpretation:\n\nWeight on PS is too high vs. social optimum (full competition)\nWeight on PS is too low vs. monopoly outcome (full collusion)\n\n\n\n\n\n\n\nNote\n\n\nOligopoly equilibrium reflects the tension between individual profit maximisation and the aggregate effect of firms’ choices on market price and quantity."
+    "text": "Cournot Welfare Maximand\nEquilibrium maximises a weighted combination:\n\\[\n\\max_Q \\left\\{ (n-1)\\big[u(Q) - P(Q)Q\\big] + n\\big[P(Q)Q - nc(Q/n)\\big] \\right\\}\n\\]\nWith \\(u'(Q) = P(Q)\\) and \\(n\\) identical firms.\nInterpretation:\n\nWeight on PS is too high vs. social optimum (full competition)\nWeight on PS is too low vs. monopoly outcome (full collusion)\n\n\n\n\n\n\n\nNote\n\n\nOligopoly equilibrium reflects the tension between individual profit maximisation and the aggregate effect of firms’ choices on market price and quantity.",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 1 - Oligopoly"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-1-oligopoly.html#welfare-weights-across-market-structures",
     "href": "lecture-slides/lecture-1-oligopoly.html#welfare-weights-across-market-structures",
-    "title": "Oligopoly",
+    "title": "Lecture 1 - Oligopoly",
     "section": "Welfare Weights Across Market Structures",
-    "text": "Welfare Weights Across Market Structures\nRecall the Cournot welfare maximand:\n\\[\n\\max_Q \\left\\{ (n-1)\\big[u(Q) - P(Q)Q\\big] + n\\big[P(Q)Q - nc(Q/n)\\big] \\right\\}\n\\]\nInterpreting the weights \\((n-1)\\) and \\(n\\) at extreme cases:\nPerfect Competition: \\(n \\to \\infty\\)\n\\[\\text{Weight on CS} = (n-1) \\to \\infty\\] \\[\\text{Weight on PS} = n \\to \\infty \\quad \\text{(but each firm gets } \\pi_i = \\tfrac{n \\cdot \\pi}{n} \\approx 0\\text{)}\\]\nResult: The welfare function places infinite weight on consumer surplus relative to individual firm profits. The equilibrium maximises CS subject to firms earning zero economic profit."
+    "text": "Welfare Weights Across Market Structures\nRecall the Cournot welfare maximand:\n\\[\n\\max_Q \\left\\{ (n-1)\\big[u(Q) - P(Q)Q\\big] + n\\big[P(Q)Q - nc(Q/n)\\big] \\right\\}\n\\]\nInterpreting the weights \\((n-1)\\) and \\(n\\) at extreme cases:\nPerfect Competition: \\(n \\to \\infty\\)\n\\[\\text{Weight on CS} = (n-1) \\to \\infty\\] \\[\\text{Weight on PS} = n \\to \\infty \\quad \\text{(but each firm gets } \\pi_i = \\tfrac{n \\cdot \\pi}{n} \\approx 0\\text{)}\\]\nResult: The welfare function places infinite weight on consumer surplus relative to individual firm profits. The equilibrium maximises CS subject to firms earning zero economic profit.",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 1 - Oligopoly"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-1-oligopoly.html#welfare-weights-across-market-structures-1",
     "href": "lecture-slides/lecture-1-oligopoly.html#welfare-weights-across-market-structures-1",
-    "title": "Oligopoly",
+    "title": "Lecture 1 - Oligopoly",
     "section": "Welfare Weights Across Market Structures",
-    "text": "Welfare Weights Across Market Structures\nMonopoly: \\(n = 1\\)\n\\[\\text{Weight on CS} = (n-1) = 0\\] \\[\\text{Weight on PS} = n = 1\\]\nResult: The monopolist ignores consumer surplus entirely and maximises its own profit alone. The equilibrium is the unconstrained monopoly outcome."
+    "text": "Welfare Weights Across Market Structures\nMonopoly: \\(n = 1\\)\n\\[\\text{Weight on CS} = (n-1) = 0\\] \\[\\text{Weight on PS} = n = 1\\]\nResult: The monopolist ignores consumer surplus entirely and maximises its own profit alone. The equilibrium is the unconstrained monopoly outcome.",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 1 - Oligopoly"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-1-oligopoly.html#welfare-weights-across-market-structures-2",
     "href": "lecture-slides/lecture-1-oligopoly.html#welfare-weights-across-market-structures-2",
-    "title": "Oligopoly",
+    "title": "Lecture 1 - Oligopoly",
     "section": "Welfare Weights Across Market Structures",
-    "text": "Welfare Weights Across Market Structures\nCournot Oligopoly: \\(1 &lt; n &lt; \\infty\\)\n\\[\\text{Weight on CS} = (n-1) \\in (0, \\infty)\\] \\[\\text{Weight on PS} = n \\in (1, \\infty)\\]\nResult: Oligopoly equilibrium balances consumer and producer surplus with intermediate weights. The outcome reflects the tension between:\n\nIndividual firm profit incentives (weight \\(n\\))\nAggregate demand response to total output (weight \\(n-1\\))\n\n\n\n\n\n\n\nInterpretation\n\n\nAs \\(n\\) increases from 1 to \\(\\infty\\), the weight on consumer surplus grows relative to producer surplus, driving equilibrium output toward the competitive level and price toward marginal cost."
+    "text": "Welfare Weights Across Market Structures\nCournot Oligopoly: \\(1 &lt; n &lt; \\infty\\)\n\\[\\text{Weight on CS} = (n-1) \\in (0, \\infty)\\] \\[\\text{Weight on PS} = n \\in (1, \\infty)\\]\nResult: Oligopoly equilibrium balances consumer and producer surplus with intermediate weights. The outcome reflects the tension between:\n\nIndividual firm profit incentives (weight \\(n\\))\nAggregate demand response to total output (weight \\(n-1\\))\n\n\n\n\n\n\n\nInterpretation\n\n\nAs \\(n\\) increases from 1 to \\(\\infty\\), the weight on consumer surplus grows relative to producer surplus, driving equilibrium output toward the competitive level and price toward marginal cost.",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 1 - Oligopoly"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-1-oligopoly.html#cournot-vs.-bertrand-strategic-variables-matter",
     "href": "lecture-slides/lecture-1-oligopoly.html#cournot-vs.-bertrand-strategic-variables-matter",
-    "title": "Oligopoly",
+    "title": "Lecture 1 - Oligopoly",
     "section": "Cournot vs. Bertrand: Strategic Variables Matter",
-    "text": "Cournot vs. Bertrand: Strategic Variables Matter\nCore question: Do firms compete on quantity or price?\n\n\n\n\n\n\n\n\n\nModel\nStrategic Variable\nBest Response\nCompetitiveness\n\n\n\n\nCournot\nQuantity\nDownward-sloping\nLess competitive\n\n\nBertrand\nPrice\nUpward-sloping\nMore competitive\n\n\n\nKey insight: The choice of strategic variable fundamentally affects market outcomes."
+    "text": "Cournot vs. Bertrand: Strategic Variables Matter\nCore question: Do firms compete on quantity or price?\n\n\n\n\n\n\n\n\n\nModel\nStrategic Variable\nBest Response\nCompetitiveness\n\n\n\n\nCournot\nQuantity\nDownward-sloping\nLess competitive\n\n\nBertrand\nPrice\nUpward-sloping\nMore competitive\n\n\n\nKey insight: The choice of strategic variable fundamentally affects market outcomes.",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 1 - Oligopoly"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-1-oligopoly.html#cournot-with-differentiated-products",
     "href": "lecture-slides/lecture-1-oligopoly.html#cournot-with-differentiated-products",
-    "title": "Oligopoly",
+    "title": "Lecture 1 - Oligopoly",
     "section": "Cournot with Differentiated Products",
-    "text": "Cournot with Differentiated Products\nInverse demand functions:\n\\[P_1 = a - bq_1 - dq_2\\] \\[P_2 = a - dq_1 - bq_2\\]\nParameters:\n\n\\(b &gt; |d|\\) (own effect &gt; cross effect)\n\\(d \\in (-b, b)\\) measures product differentiation\n\nInterpretation of \\(d\\):\n\n\\(d &lt; 0\\): Goods are complements\n\\(d = 0\\): Goods are independent\n\\(d &gt; 0\\): Goods are substitutes"
+    "text": "Cournot with Differentiated Products\nInverse demand functions:\n\\[P_1 = a - bq_1 - dq_2\\] \\[P_2 = a - dq_1 - bq_2\\]\nParameters:\n\n\\(b &gt; |d|\\) (own effect &gt; cross effect)\n\\(d \\in (-b, b)\\) measures product differentiation\n\nInterpretation of \\(d\\):\n\n\\(d &lt; 0\\): Goods are complements\n\\(d = 0\\): Goods are independent\n\\(d &gt; 0\\): Goods are substitutes",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 1 - Oligopoly"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-1-oligopoly.html#cournot-with-substitutes-best-response",
     "href": "lecture-slides/lecture-1-oligopoly.html#cournot-with-substitutes-best-response",
-    "title": "Oligopoly",
+    "title": "Lecture 1 - Oligopoly",
     "section": "Cournot with Substitutes: Best Response",
-    "text": "Cournot with Substitutes: Best Response\nFor substitute goods (\\(d &gt; 0\\)):\n\\[\nBR_i(q_j) = \\frac{a - dq_j - c_i}{2b}\n\\]\nKey feature: Downward-sloping best response\n\\(\\rightarrow\\) Quantities are strategic substitutes\n\nIf competitor increases output, my optimal response is to decrease output\nThis dampening of quantities is characteristic of strategic substitutes"
+    "text": "Cournot with Substitutes: Best Response\nFor substitute goods (\\(d &gt; 0\\)):\n\\[\nBR_i(q_j) = \\frac{a - dq_j - c_i}{2b}\n\\]\nKey feature: Downward-sloping best response\n\\(\\rightarrow\\) Quantities are strategic substitutes\n\nIf competitor increases output, my optimal response is to decrease output\nThis dampening of quantities is characteristic of strategic substitutes",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 1 - Oligopoly"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-1-oligopoly.html#bertrand-with-differentiated-products",
     "href": "lecture-slides/lecture-1-oligopoly.html#bertrand-with-differentiated-products",
-    "title": "Oligopoly",
+    "title": "Lecture 1 - Oligopoly",
     "section": "Bertrand with Differentiated Products",
-    "text": "Bertrand with Differentiated Products\nDemand functions:\n\\[Q_1 = \\tilde{a} - \\tilde{b}p_1 + \\tilde{d}p_2\\] \\[Q_2 = \\tilde{a} + \\tilde{d}p_1 - \\tilde{b}p_2\\]\nParameters transform the problem:\n\n\\(\\tilde{a} = \\frac{a}{b+d}\\)\n\\(\\tilde{b} = \\frac{b}{b^2 - d^2}\\)\n\\(\\tilde{d} = \\frac{d}{b^2 - d^2}\\)"
+    "text": "Bertrand with Differentiated Products\nDemand functions:\n\\[Q_1 = \\tilde{a} - \\tilde{b}p_1 + \\tilde{d}p_2\\] \\[Q_2 = \\tilde{a} + \\tilde{d}p_1 - \\tilde{b}p_2\\]\nParameters transform the problem:\n\n\\(\\tilde{a} = \\frac{a}{b+d}\\)\n\\(\\tilde{b} = \\frac{b}{b^2 - d^2}\\)\n\\(\\tilde{d} = \\frac{d}{b^2 - d^2}\\)",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 1 - Oligopoly"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-1-oligopoly.html#bertrand-with-substitutes-best-response",
     "href": "lecture-slides/lecture-1-oligopoly.html#bertrand-with-substitutes-best-response",
-    "title": "Oligopoly",
+    "title": "Lecture 1 - Oligopoly",
     "section": "Bertrand with Substitutes: Best Response",
-    "text": "Bertrand with Substitutes: Best Response\nFor substitute goods (\\(d &gt; 0\\)):\n\\[\nBR_i(p_j) = \\frac{\\tilde{a} + \\tilde{d}p_j + \\tilde{b}c_i}{2\\tilde{b}}\n\\]\nKey feature: Upward-sloping best response\n\\(\\rightarrow\\) Prices are strategic complements\n\nIf competitor raises price, my optimal response is to raise price\nThis price complementarity reflects firms’ incentive to maintain price alignment"
+    "text": "Bertrand with Substitutes: Best Response\nFor substitute goods (\\(d &gt; 0\\)):\n\\[\nBR_i(p_j) = \\frac{\\tilde{a} + \\tilde{d}p_j + \\tilde{b}c_i}{2\\tilde{b}}\n\\]\nKey feature: Upward-sloping best response\n\\(\\rightarrow\\) Prices are strategic complements\n\nIf competitor raises price, my optimal response is to raise price\nThis price complementarity reflects firms’ incentive to maintain price alignment",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 1 - Oligopoly"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-1-oligopoly.html#cournot-vs.-bertrand-equilibrium-prices",
     "href": "lecture-slides/lecture-1-oligopoly.html#cournot-vs.-bertrand-equilibrium-prices",
-    "title": "Oligopoly",
+    "title": "Lecture 1 - Oligopoly",
     "section": "Cournot vs. Bertrand: Equilibrium Prices",
-    "text": "Cournot vs. Bertrand: Equilibrium Prices\nCournot equilibrium (\\(c_i = 0\\)):\n\\[p_i^C = \\frac{ab}{2b + d}\\]\nBertrand equilibrium (\\(c_i = 0\\)):\n\\[p_i^B = \\frac{a(b-d)}{2b - d}\\]\nPrice comparison:\n\\[p_i^C - p_i^B = \\frac{ad^2}{4b^2 - d^2} &gt; 0\\]\n\n\n\n\n\n\nCompetition Intensity\n\n\nPrice competition (Bertrand) leads to lower prices and larger quantities than quantity competition (Cournot).\nThe strategic variable selection determines equilibrium price, output, and total welfare."
+    "text": "Cournot vs. Bertrand: Equilibrium Prices\nCournot equilibrium (\\(c_i = 0\\)):\n\\[p_i^C = \\frac{ab}{2b + d}\\]\nBertrand equilibrium (\\(c_i = 0\\)):\n\\[p_i^B = \\frac{a(b-d)}{2b - d}\\]\nPrice comparison:\n\\[p_i^C - p_i^B = \\frac{ad^2}{4b^2 - d^2} &gt; 0\\]\n\n\n\n\n\n\nCompetition Intensity\n\n\nPrice competition (Bertrand) leads to lower prices and larger quantities than quantity competition (Cournot).\nThe strategic variable selection determines equilibrium price, output, and total welfare.",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 1 - Oligopoly"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-1-oligopoly.html#the-coordination-challenge",
     "href": "lecture-slides/lecture-1-oligopoly.html#the-coordination-challenge",
-    "title": "Oligopoly",
+    "title": "Lecture 1 - Oligopoly",
     "section": "The Coordination Challenge",
-    "text": "The Coordination Challenge\nCan competing firms coordinate pricing without explicit contracts?\nObstacles:\n\nIndividual profit motives conflict with group interest\nNo legal mechanism to enforce agreements\nConstant temptation to cheat on “deals”\n\nResult: The non-cooperative (Nash) equilibrium is Pareto-dominated by coordinated outcomes."
+    "text": "The Coordination Challenge\nCan competing firms coordinate pricing without explicit contracts?\nObstacles:\n\nIndividual profit motives conflict with group interest\nNo legal mechanism to enforce agreements\nConstant temptation to cheat on “deals”\n\nResult: The non-cooperative (Nash) equilibrium is Pareto-dominated by coordinated outcomes.",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 1 - Oligopoly"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-1-oligopoly.html#facilitating-devices",
     "href": "lecture-slides/lecture-1-oligopoly.html#facilitating-devices",
-    "title": "Oligopoly",
+    "title": "Lecture 1 - Oligopoly",
     "section": "Facilitating Devices",
-    "text": "Facilitating Devices\nFirms use facilitating devices to overcome coordination problems:\n\nIncrease incentives to cooperate — benefit from higher prices\nDecrease incentives to cheat — punishment for deviation\n\nLegal examples:\n\nMost-Favoured-Nation (MFN) clauses\nMost-Favoured-Customer (MFC) clauses\n\n\n\n\n\n\n\nPolicy Scrutiny\n\n\nThese devices alter payoff structures in ways that enable tacit collusion; competition authorities scrutinise them accordingly."
+    "text": "Facilitating Devices\nFirms use facilitating devices to overcome coordination problems:\n\nIncrease incentives to cooperate — benefit from higher prices\nDecrease incentives to cheat — punishment for deviation\n\nLegal examples:\n\nMost-Favoured-Nation (MFN) clauses\nMost-Favoured-Customer (MFC) clauses\n\n\n\n\n\n\n\nPolicy Scrutiny\n\n\nThese devices alter payoff structures in ways that enable tacit collusion; competition authorities scrutinise them accordingly.",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 1 - Oligopoly"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-1-oligopoly.html#the-prisoners-dilemma-setup",
     "href": "lecture-slides/lecture-1-oligopoly.html#the-prisoners-dilemma-setup",
-    "title": "Oligopoly",
+    "title": "Lecture 1 - Oligopoly",
     "section": "The Prisoner’s Dilemma: Setup",
-    "text": "The Prisoner’s Dilemma: Setup\nTwo firms, one period. Payoff matrix:\n\n\n\n\nHigh Price\nLow Price\n\n\n\n\nHigh Price\n100, 100\n-10, 140\n\n\nLow Price\n140, -10\n70, 70\n\n\n\nNash equilibrium: \\((p_L, p_L)\\) with payoffs 70, 70\nCooperative outcome: \\((p_H, p_H)\\) with payoffs 100, 100\nProblem: Cooperation is not a Nash equilibrium without commitment or repeated-game structure."
+    "text": "The Prisoner’s Dilemma: Setup\nTwo firms, one period. Payoff matrix:\n\n\n\n\nHigh Price\nLow Price\n\n\n\n\nHigh Price\n100, 100\n-10, 140\n\n\nLow Price\n140, -10\n70, 70\n\n\n\nNash equilibrium: \\((p_L, p_L)\\) with payoffs 70, 70\nCooperative outcome: \\((p_H, p_H)\\) with payoffs 100, 100\nProblem: Cooperation is not a Nash equilibrium without commitment or repeated-game structure.",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 1 - Oligopoly"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-1-oligopoly.html#why-coordination-fails-incentive-incompatibility",
     "href": "lecture-slides/lecture-1-oligopoly.html#why-coordination-fails-incentive-incompatibility",
-    "title": "Oligopoly",
+    "title": "Lecture 1 - Oligopoly",
     "section": "Why Coordination Fails: Incentive Incompatibility",
-    "text": "Why Coordination Fails: Incentive Incompatibility\nStarting from \\((p_L, p_L)\\), why cannot both firms coordinate on \\((p_H, p_H)\\)?\nSequential move problem:\n\nFirst-mover disadvantage: Leader gets payoff \\(-10\\) while follower earns \\(140\\)\nIncentive to delay: Follower waits to capture the \\(140\\)\nLeader’s temptation to revert: Seeing no response, leader drops back to \\(p_L\\)\n\n\n\n\n\n\n\nCoordination Failure\n\n\nUnilateral deviation is profitable from any proposed high-price agreement; hence the prisoner’s dilemma equilibrium is the unique Nash equilibrium of the simultaneous-move game."
+    "text": "Why Coordination Fails: Incentive Incompatibility\nStarting from \\((p_L, p_L)\\), why cannot both firms coordinate on \\((p_H, p_H)\\)?\nSequential move problem:\n\nFirst-mover disadvantage: Leader gets payoff \\(-10\\) while follower earns \\(140\\)\nIncentive to delay: Follower waits to capture the \\(140\\)\nLeader’s temptation to revert: Seeing no response, leader drops back to \\(p_L\\)\n\n\n\n\n\n\n\nCoordination Failure\n\n\nUnilateral deviation is profitable from any proposed high-price agreement; hence the prisoner’s dilemma equilibrium is the unique Nash equilibrium of the simultaneous-move game.",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 1 - Oligopoly"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-1-oligopoly.html#solving-coordination-the-adjusted-payoff-matrix",
     "href": "lecture-slides/lecture-1-oligopoly.html#solving-coordination-the-adjusted-payoff-matrix",
-    "title": "Oligopoly",
+    "title": "Lecture 1 - Oligopoly",
     "section": "Solving Coordination: The Adjusted Payoff Matrix",
-    "text": "Solving Coordination: The Adjusted Payoff Matrix\nReduce follower’s transitional gain:\n\n\n\n\nHigh Price\nLow Price\n\n\n\n\nHigh Price\n100, 100\n-10, 90\n\n\nLow Price\n90, -10\n70, 70\n\n\n\nThen \\((p_H, p_H)\\) is a Nash equilibrium in the single-period game.\nEquilibrium characterisation:\n\nIf firm moves to \\(p_H\\), it earns \\(-10\\) in the transition\nGiven the opponent is at \\(p_H\\), best response is also \\(p_H\\), earning \\(100\\)\nBoth firms converge to \\((p_H, p_H)\\) with payoffs 100, 100 (symmetric equilibrium)"
+    "text": "Solving Coordination: The Adjusted Payoff Matrix\nReduce follower’s transitional gain:\n\n\n\n\nHigh Price\nLow Price\n\n\n\n\nHigh Price\n100, 100\n-10, 90\n\n\nLow Price\n90, -10\n70, 70\n\n\n\nThen \\((p_H, p_H)\\) is a Nash equilibrium in the single-period game.\nEquilibrium characterisation:\n\nIf firm moves to \\(p_H\\), it earns \\(-10\\) in the transition\nGiven the opponent is at \\(p_H\\), best response is also \\(p_H\\), earning \\(100\\)\nBoth firms converge to \\((p_H, p_H)\\) with payoffs 100, 100 (symmetric equilibrium)",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 1 - Oligopoly"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-1-oligopoly.html#most-favoured-nation-mfn-clause-explained",
     "href": "lecture-slides/lecture-1-oligopoly.html#most-favoured-nation-mfn-clause-explained",
-    "title": "Oligopoly",
+    "title": "Lecture 1 - Oligopoly",
     "section": "Most-Favoured-Nation (MFN) Clause Explained",
-    "text": "Most-Favoured-Nation (MFN) Clause Explained\nWhat is an MFN clause?\nA seller commits to:\n\nCharge a specified minimum price\nRefund buyers if a lower price is offered later\nPay penalties equivalent to price differences\n\nEffect:\n\n\n\n\n\n\n\n\nAction\nWithout MFN\nWith MFN\n\n\n\n\nPrice cut benefit\nCapture all new buyers\nLose many to refunds\n\n\nPrice cut cost\nMinimal\nRefund obligations + penalties\n\n\n\n\\(\\rightarrow\\) MFN raises the cost of deviation from high price."
+    "text": "Most-Favoured-Nation (MFN) Clause Explained\nWhat is an MFN clause?\nA seller commits to:\n\nCharge a specified minimum price\nRefund buyers if a lower price is offered later\nPay penalties equivalent to price differences\n\nEffect:\n\n\n\n\n\n\n\n\nAction\nWithout MFN\nWith MFN\n\n\n\n\nPrice cut benefit\nCapture all new buyers\nLose many to refunds\n\n\nPrice cut cost\nMinimal\nRefund obligations + penalties\n\n\n\n\\(\\rightarrow\\) MFN raises the cost of deviation from high price.",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 1 - Oligopoly"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-1-oligopoly.html#mfn-as-self-enforcement",
     "href": "lecture-slides/lecture-1-oligopoly.html#mfn-as-self-enforcement",
-    "title": "Oligopoly",
+    "title": "Lecture 1 - Oligopoly",
     "section": "MFN as Self-Enforcement",
-    "text": "MFN as Self-Enforcement\nFor MFN to work, it must be self-enforcing:\n\\[\n\\text{Gross profit from deviation} - \\text{Refunds} &lt; \\text{Profit under MFN}\n\\]\nExample:\n\nGross profit gain from cutting price: \\(0.897\\)\nRefunds owed to existing customers: \\(0.056\\)\nNet gain: \\(0.841\\) (which is less than staying at MFN price)\n\n\\(\\rightarrow\\) Deviation becomes unprofitable.\n\n\n\n\n\n\nFree Rider Effect in Reverse (Salop 1985)\n\n\nIndividual buyers value MFN protection, but collectively it harms them by preventing sellers from offering discounts to future customers."
+    "text": "MFN as Self-Enforcement\nFor MFN to work, it must be self-enforcing:\n\\[\n\\text{Gross profit from deviation} - \\text{Refunds} &lt; \\text{Profit under MFN}\n\\]\nExample:\n\nGross profit gain from cutting price: \\(0.897\\)\nRefunds owed to existing customers: \\(0.056\\)\nNet gain: \\(0.841\\) (which is less than staying at MFN price)\n\n\\(\\rightarrow\\) Deviation becomes unprofitable.\n\n\n\n\n\n\nFree Rider Effect in Reverse (Salop 1985)\n\n\nIndividual buyers value MFN protection, but collectively it harms them by preventing sellers from offering discounts to future customers.",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 1 - Oligopoly"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-1-oligopoly.html#numerical-example-setup",
     "href": "lecture-slides/lecture-1-oligopoly.html#numerical-example-setup",
-    "title": "Oligopoly",
+    "title": "Lecture 1 - Oligopoly",
     "section": "Numerical Example: Setup",
-    "text": "Numerical Example: Setup\nBertrand duopoly with differentiated products:\nDemand:\n\\[Q_1 = 3 - 2p_1 + p_2\\] \\[Q_2 = 3 + p_1 - 2p_2\\]\nCosts: \\(c_1 = c_2 = 1\\)"
+    "text": "Numerical Example: Setup\nBertrand duopoly with differentiated products:\nDemand:\n\\[Q_1 = 3 - 2p_1 + p_2\\] \\[Q_2 = 3 + p_1 - 2p_2\\]\nCosts: \\(c_1 = c_2 = 1\\)",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 1 - Oligopoly"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-1-oligopoly.html#baseline-bertrand-equilibrium",
     "href": "lecture-slides/lecture-1-oligopoly.html#baseline-bertrand-equilibrium",
-    "title": "Oligopoly",
+    "title": "Lecture 1 - Oligopoly",
     "section": "Baseline Bertrand Equilibrium",
-    "text": "Baseline Bertrand Equilibrium\nBest response functions:\n\\[\nBR_i(p_j) = \\frac{5 + p_j}{4}\n\\]\nEquilibrium:\n\n\\(p_1^B = p_2^B = \\frac{5}{3} \\approx 1.667\\)\n\\(\\pi_i^B = \\frac{8}{9} \\approx 0.889\\)\n\nQuestion: Can Firm 1 increase profits by adopting an MFN clause?"
+    "text": "Baseline Bertrand Equilibrium\nBest response functions:\n\\[\nBR_i(p_j) = \\frac{5 + p_j}{4}\n\\]\nEquilibrium:\n\n\\(p_1^B = p_2^B = \\frac{5}{3} \\approx 1.667\\)\n\\(\\pi_i^B = \\frac{8}{9} \\approx 0.889\\)\n\nQuestion: Can Firm 1 increase profits by adopting an MFN clause?",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 1 - Oligopoly"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-1-oligopoly.html#firm-1-adopts-mfn-clause",
     "href": "lecture-slides/lecture-1-oligopoly.html#firm-1-adopts-mfn-clause",
-    "title": "Oligopoly",
+    "title": "Lecture 1 - Oligopoly",
     "section": "Firm 1 Adopts MFN Clause",
-    "text": "Firm 1 Adopts MFN Clause\nFirm 1 commits to price \\(p_1^* = \\frac{12}{7} \\approx 1.714\\)\nFirm 2’s best response:\n\\[\np_2^* = BR_2(p_1^*) = \\frac{47}{28} \\approx 1.678\n\\]\nOutcomes:\n\n\\(Q_1^* = \\frac{5}{4}\\)\n\\(\\pi_1^* = \\frac{25}{28} \\approx 0.893 &gt; 0.889\\)\n\n\n\n\n\n\n\nNote\n\n\nFirm 1’s profits rise to \\(\\approx 0.893\\) from the Bertrand equilibrium level of \\(0.889\\) by committing to a higher price via the MFN clause."
+    "text": "Firm 1 Adopts MFN Clause\nFirm 1 commits to price \\(p_1^* = \\frac{12}{7} \\approx 1.714\\)\nFirm 2’s best response:\n\\[\np_2^* = BR_2(p_1^*) = \\frac{47}{28} \\approx 1.678\n\\]\nOutcomes:\n\n\\(Q_1^* = \\frac{5}{4}\\)\n\\(\\pi_1^* = \\frac{25}{28} \\approx 0.893 &gt; 0.889\\)\n\n\n\n\n\n\n\nNote\n\n\nFirm 1’s profits rise to \\(\\approx 0.893\\) from the Bertrand equilibrium level of \\(0.889\\) by committing to a higher price via the MFN clause.",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 1 - Oligopoly"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-1-oligopoly.html#can-firm-1-deviate-from-mfn",
     "href": "lecture-slides/lecture-1-oligopoly.html#can-firm-1-deviate-from-mfn",
-    "title": "Oligopoly",
+    "title": "Lecture 1 - Oligopoly",
     "section": "Can Firm 1 Deviate from MFN?",
-    "text": "Can Firm 1 Deviate from MFN?\nFirm 1 considers deviating to \\(\\tilde{p}_1 = BR_1(p_2^*) = \\frac{187}{112} \\approx 1.669\\)\nGross profit from deviation:\n\n\\(\\tilde{Q}_1 = \\frac{75}{56}\\)\n\\(\\tilde{\\pi}_1 = \\frac{5625}{6272} \\approx 0.897\\)\n\nBut MFN requires refunds:\n\\[\n\\text{Refunds} = Q_1^* (p_1^* - \\tilde{p}_1) = \\frac{25}{448} \\approx 0.056\n\\]\nNet profit after refunds:\n\\[\n\\tilde{\\pi}_1 - \\text{Refunds} = \\frac{5275}{6272} \\approx 0.841\n\\]\n\n\n\n\n\n\nImportant\n\n\nNet profit from deviation (\\(0.841\\)) is strictly less than profit under MFN commitment (\\(0.893\\)). The MFN clause is thus self-enforcing: no firm has incentive to deviate unilaterally."
+    "text": "Can Firm 1 Deviate from MFN?\nFirm 1 considers deviating to \\(\\tilde{p}_1 = BR_1(p_2^*) = \\frac{187}{112} \\approx 1.669\\)\nGross profit from deviation:\n\n\\(\\tilde{Q}_1 = \\frac{75}{56}\\)\n\\(\\tilde{\\pi}_1 = \\frac{5625}{6272} \\approx 0.897\\)\n\nBut MFN requires refunds:\n\\[\n\\text{Refunds} = Q_1^* (p_1^* - \\tilde{p}_1) = \\frac{25}{448} \\approx 0.056\n\\]\nNet profit after refunds:\n\\[\n\\tilde{\\pi}_1 - \\text{Refunds} = \\frac{5275}{6272} \\approx 0.841\n\\]\n\n\n\n\n\n\nImportant\n\n\nNet profit from deviation (\\(0.841\\)) is strictly less than profit under MFN commitment (\\(0.893\\)). The MFN clause is thus self-enforcing: no firm has incentive to deviate unilaterally.",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 1 - Oligopoly"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-1-oligopoly.html#mfn-exercise",
     "href": "lecture-slides/lecture-1-oligopoly.html#mfn-exercise",
-    "title": "Oligopoly",
+    "title": "Lecture 1 - Oligopoly",
     "section": "MFN Exercise",
-    "text": "MFN Exercise\nWhat if Firm 1 commits to an even higher MFN price of \\(p_1^* = 2\\)?\nCalculate:\n\nFirm 2’s best response: \\(p_2^* = BR_2(2) = ?\\)\nFirm 1’s quantity: \\(Q_1^* = ?\\)\nFirm 1’s profit: \\(\\pi_1^* = ?\\)\n\nDiscussion:\n\nDoes the higher MFN price further increase Firm 1’s profits?\nAt what price do incentives to deviate become compelling?\nCan the MFN clause be too restrictive?"
+    "text": "MFN Exercise\nWhat if Firm 1 commits to an even higher MFN price of \\(p_1^* = 2\\)?\nCalculate:\n\nFirm 2’s best response: \\(p_2^* = BR_2(2) = ?\\)\nFirm 1’s quantity: \\(Q_1^* = ?\\)\nFirm 1’s profit: \\(\\pi_1^* = ?\\)\n\nDiscussion:\n\nDoes the higher MFN price further increase Firm 1’s profits?\nAt what price do incentives to deviate become compelling?\nCan the MFN clause be too restrictive?",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 1 - Oligopoly"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-1-oligopoly.html#summary-oligopoly-coordination",
     "href": "lecture-slides/lecture-1-oligopoly.html#summary-oligopoly-coordination",
-    "title": "Oligopoly",
+    "title": "Lecture 1 - Oligopoly",
     "section": "Summary: Oligopoly Coordination",
-    "text": "Summary: Oligopoly Coordination\nKey takeaways:\n\nCoordination problem: Joint profit maximisation yields higher payoffs than Nash equilibrium, but the cooperative outcome is not self-enforcing in simultaneous-move games\nSingle-period dilemma: The Nash equilibrium is Pareto-inefficient\nFacilitating devices: MFN clauses alter the payoff structure to align individual and collective incentives\nSelf-enforcement: Properly structured MFN clauses render deviation less profitable than compliance, inducing equilibrium behaviour"
+    "text": "Summary: Oligopoly Coordination\nKey takeaways:\n\nCoordination problem: Joint profit maximisation yields higher payoffs than Nash equilibrium, but the cooperative outcome is not self-enforcing in simultaneous-move games\nSingle-period dilemma: The Nash equilibrium is Pareto-inefficient\nFacilitating devices: MFN clauses alter the payoff structure to align individual and collective incentives\nSelf-enforcement: Properly structured MFN clauses render deviation less profitable than compliance, inducing equilibrium behaviour",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 1 - Oligopoly"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-1-oligopoly.html#references-next-week",
     "href": "lecture-slides/lecture-1-oligopoly.html#references-next-week",
-    "title": "Oligopoly",
+    "title": "Lecture 1 - Oligopoly",
     "section": "References & Next Week",
-    "text": "References & Next Week\nReferences:\n\nBelleflamme, P., & Peitz, M. (2015). Industrial Organization: Markets and Strategies (2nd ed.). Cambridge University Press. Chapters 2.1–2.3, 3.2–3.3.\nCooper, T. E. (1986). Most-Favored-Customer Pricing and Tacit Collusion. The RAND Journal of Economics, 17(3), 377–388.\nSalop, S. C. (1986). Practices that (Credibly) Facilitate Oligopoly Co-ordination. In: Stiglitz, J. E., Mathewson, G. F. (eds) New Developments in the Analysis of Market Structure. International Economic Association Series, vol 77. Palgrave Macmillan.\nShy, O. (1996). Industrial Organization: Theory and Applications. MIT Press. Chapters 3.2, 6.1"
+    "text": "References & Next Week\nReferences:\n\nBelleflamme, P., & Peitz, M. (2015). Industrial Organization: Markets and Strategies (2nd ed.). Cambridge University Press. Chapters 2.1–2.3, 3.2–3.3.\nCooper, T. E. (1986). Most-Favored-Customer Pricing and Tacit Collusion. The RAND Journal of Economics, 17(3), 377–388.\nSalop, S. C. (1986). Practices that (Credibly) Facilitate Oligopoly Co-ordination. In: Stiglitz, J. E., Mathewson, G. F. (eds) New Developments in the Analysis of Market Structure. International Economic Association Series, vol 77. Palgrave Macmillan.\nShy, O. (1996). Industrial Organization: Theory and Applications. MIT Press. Chapters 3.2, 6.1",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 1 - Oligopoly"
+    ]
   },
   {
     "objectID": "lecture-slides/lecture-1-oligopoly.html#preview-lecture-2",
     "href": "lecture-slides/lecture-1-oligopoly.html#preview-lecture-2",
-    "title": "Oligopoly",
+    "title": "Lecture 1 - Oligopoly",
     "section": "Preview: Lecture 2",
-    "text": "Preview: Lecture 2\nProduct Differentiation\nNot all products are the same. Firms strategically differentiate their offerings to:\n\nReduce direct price competition\nCreate brand loyalty\nCapture different market segments\n\nNext lecture: How does differentiation affect competition and welfare?"
+    "text": "Preview: Lecture 2\nProduct Differentiation\nNot all products are the same. Firms strategically differentiate their offerings to:\n\nReduce direct price competition\nCreate brand loyalty\nCapture different market segments\n\nNext lecture: How does differentiation affect competition and welfare?",
+    "crumbs": [
+      "Weeks 1-5",
+      "Lecture 1 - Oligopoly"
+    ]
   }
 ]

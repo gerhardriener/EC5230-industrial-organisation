@@ -1,0 +1,168 @@
+/* lecture-slides/theme/st-andrews-serif.scss */
+/* Quarto Reveal.js theme layer (St Andrews palette + Serif typography) */
+
+/*-- scss:defaults --*/
+
+/* Brand colours (University of St Andrews web palette) */
+$sta-blue: #00539b;
+$sta-red: #ee312a;
+$sta-yellow: #ffdf00;
+$sta-black: #231f20;
+
+/* Neutral palette (keep St Andrews defaults) */
+$body-bg: #ffffff !default;
+$body-color: #111827 !default;
+$link-color: $sta-blue !default;
+$selection-bg: rgba(0, 83, 155, 0.2) !default;
+
+/* --- Typography: serif blend --- */
+/* Serif stack from your "serif" theme (robust cross-platform) */
+$sta-serif-stack: "Palatino Linotype", "Book Antiqua", Palatino, FreeSerif, serif;
+
+/* Set presentation typography */
+$font-family-sans-serif: $sta-serif-stack !default;
+$presentation-heading-font: $sta-serif-stack !default;
+
+/* If you prefer serif body + sans headings, use this instead:
+$font-family-sans-serif: $sta-serif-stack !default;
+$presentation-heading-font: "PT Sans", Helvetica, Arial, sans-serif !default;
+*/
+
+/* Sizes / rhythm (keep St Andrews tuning; adjust weights for serif) */
+$presentation-font-size-root: 34px !default;
+$presentation-line-height: 1.35 !default;
+
+$presentation-heading-text-transform: none !default;
+/* Serif faces can look overly heavy at 700; 600 is often cleaner */
+$presentation-heading-font-weight: 600 !default;
+$presentation-heading-line-height: 1.15 !default;
+
+/* Spacing / layout */
+$presentation-block-margin: 14px !default;
+
+/* Code blocks */
+$code-block-font-size: 0.75em !default;
+$code-color: #0f172a !default;
+
+/* Optional: keep a slightly warmer link colour like the serif theme (comment out if unwanted) */
+/* $link-color: #51483d !default; */
+
+/*-- scss:rules --*/
+
+.reveal .slides {
+    text-align: left;
+}
+
+.reveal section {
+    padding: 24px 36px;
+}
+
+/* Headings */
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+    letter-spacing: 0;
+    margin: 0 0 18px 0;
+}
+
+.reveal h2 {
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 10px;
+}
+
+/* Links: keep line-height tweak from serif theme */
+.reveal a {
+    line-height: 1.3em;
+}
+
+/* Lists */
+.reveal li {
+    margin: 8px 0;
+}
+
+.reveal li>ul,
+.reveal li>ol {
+    margin-top: 8px;
+}
+
+/* Emphasis */
+.reveal strong {
+    color: $sta-blue;
+    font-weight: 700;
+}
+
+/* Tables */
+.reveal table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.85em;
+}
+
+.reveal table th {
+    text-align: left;
+    border-bottom: 2px solid #e5e7eb;
+    padding: 10px 12px;
+}
+
+.reveal table td {
+    border-bottom: 1px solid #e5e7eb;
+    padding: 10px 12px;
+}
+
+.reveal table tr:last-child td {
+    border-bottom: 0;
+}
+
+/* Code blocks */
+.reveal pre {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 14px 16px;
+    box-shadow: none;
+}
+
+/* Callouts (Quarto) */
+.reveal .callout {
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    background: #f8fafc;
+    padding: 12px 16px;
+    margin: 14px 0;
+}
+
+.reveal .callout.callout-note {
+    border-left: 6px solid $sta-blue;
+}
+
+.reveal .callout.callout-important {
+    border-left: 6px solid $sta-red;
+}
+
+.reveal .callout.callout-warning {
+    border-left: 6px solid $sta-yellow;
+}
+
+/* Section divider slides */
+.reveal section[data-background-color="#2c3e50"],
+.reveal section[data-background-color="#00539b"] {
+    color: #ffffff;
+}
+
+.reveal section[data-background-color="#2c3e50"] h1,
+.reveal section[data-background-color="#00539b"] h1 {
+    color: #ffffff;
+    border: 0;
+}
+
+.reveal section[data-background-color="#2c3e50"] strong,
+.reveal section[data-background-color="#00539b"] strong {
+    color: #ffffff;
+}
+
+/* Slide number */
+.reveal .slide-number {
+    background: transparent;
+    color: #4b5563;
+    font-size: 14px;
+}
