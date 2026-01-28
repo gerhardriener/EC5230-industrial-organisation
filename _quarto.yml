@@ -1,11 +1,6 @@
 project:
   type: website
   output-dir: _site
-  render:
-    - index.qmd
-    - lecture-slides/index.qmd
-    - lecture-slides/lecture-1-oligopoly.qmd
-    - lecture-slides/lecture-2-product-differentiation.qmd
 
 metadata:
   author: "Gerhard Riener"
