@@ -1,5 +1,5 @@
 ---
-subtitle: "Lecture 2 – Product Differentiation"
+title: "Lecture 2 – Product Differentiation"
 format:
   revealjs:
     slide-number: true

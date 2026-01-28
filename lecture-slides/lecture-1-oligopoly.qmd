@@ -1,5 +1,5 @@
 ---
-title: "Oligopoly"
+title: "Lecture 1 - Oligopoly"
 format:
   revealjs:
     slide-number: true

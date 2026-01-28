@@ -2,10 +2,9 @@ project:
   type: website
   output-dir: _site
 
-metadata:
-  author: "Gerhard Riener"
-  lang: en-GB
-  description: "MSc-level Industrial Organisation course at the University of St Andrews"
+author: "Gerhard Riener"
+lang: en-GB
+description: "MSc-level Industrial Organisation course at the University of St Andrews"
 
 website:
   title: "EC5230 Industrial Organisation"
@@ -22,8 +21,6 @@ website:
         file: lecture-slides/index.qmd
       - text: "Exercises"
         href: exercises/
-      - text: "Apps"
-        href: apps/
   sidebar:
     - title: "Lecture Slides"
       style: "docked"
@@ -33,23 +30,8 @@ website:
           contents:
             - lecture-slides/lecture-1-oligopoly.qmd
             - lecture-slides/lecture-2-product-differentiation.qmd
-        - section: "Weeks 7-9"
-          contents:
-            - text: "Lecture 7: Cooperative R&D"
-              file: lecture-slides/lecture-7-cooperative-rd.qmd
-            - text: "Lecture 8: Bundling"
-              file: lecture-slides/lecture-8-bundling.qmd
-            - text: "Lecture 9: Advertising"
-              file: lecture-slides/lecture-9-advertising.qmd
-        - section: "Weeks 11-12"
-          contents:
-            - text: "Lecture 11: Mergers"
-              file: lecture-slides/lecture-11-mergers.qmd
-            - text: "Lecture 12: Sustainability"
-              file: lecture-slides/lecture-12-sustainability.qmd
 
 execute:
-  freeze: auto
   echo: false
   warning: false
   message: false
@@ -62,18 +44,5 @@ format:
     toc-depth: 3
     number-sections: false
     link-external-newwindow: true
-    
-  revealjs:
-    theme: default
-    css: lecture-slides/theme/st-andrews.scss
-    slide-number: true
-    chalkboard: true
-    preview-links: auto
-    transition: none
-    background-transition: fade
-    width: 1600
-    height: 900
-    margin: 0.1
-    footer: "EC5230 Industrial Organisation | University of St Andrews"
 
 
