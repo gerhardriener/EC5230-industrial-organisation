@@ -31,4 +31,4 @@ Try to complete the problems on your own before consulting the solutions. Active
 2. **Attempt all problems** without looking at solutions
 3. **Check your answers** against the solutions
 4. **Identify gaps** in your understanding and revisit lecture notes
-5. **Use the [Interactive Apps](../apps/index.qmd)** to visualise concepts you find challenging
+
