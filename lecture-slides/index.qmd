@@ -9,7 +9,7 @@ Below is a complete list of lecture slides for EC5230 Industrial Organisation.
 
 ### Week 1
 
-- [Lecture 1: Competition & Oligopoly Coordination](lecture-1-oligopoly.html)
+- [Lecture 1: Competition & Oligopoly Coordination](lecture-1-oligopoly.html){target="_blank"}
   - Market structures and the Cournot model
   - Welfare analysis of oligopoly
   - Strategic price and quantity competition
@@ -17,43 +17,39 @@ Below is a complete list of lecture slides for EC5230 Industrial Organisation.
 
 ### Week 2
 
-- [Lecture 2: Product Differentiation](lecture-2-product-differentiation.html)
+- [Lecture 2: Product Differentiation](lecture-2-product-differentiation.html){target="_blank"}
   - Horizontal vs. vertical differentiation
   - Linear Hotelling model
   - Salop's circular market
 
 ### Week 3
 
-- [Lecture 3: Economics of Innovation](lecture-3-innovation.html)
+- [Lecture 3: Economics of Innovation](lecture-3-innovation.html){target="_blank"}
 
 ### Week 4
 
-- [Lecture 4: Patents and Intellectual Property Rights](lecture-4-patents.html)
+- [Lecture 4: Patents and Intellectual Property Rights](lecture-4-patents.html){target="_blank"}
 
 ### Week 5
 
-- [Lecture 5: Multi-stage Games and Strategic Commitment](lecture-5-multistage.html)
+- [Lecture 5: Multi-stage Games and Strategic Commitment](lecture-5-multistage.html){target="_blank"}
 
 ### Week 7
 
-- [Lecture 7: Cooperative R&D](lecture-7-cooperative-rd.html)
+- [Lecture 7: Cooperative R&D](lecture-7-cooperative-rd.html){target="_blank"}
 
 ### Week 8
 
-- [Lecture 8: Bundling and Tying](lecture-8-bundling.html)
+- [Lecture 8: Bundling and Tying](lecture-8-bundling.html){target="_blank"}
 
 ### Week 9
 
-- [Lecture 9: Advertising and Brand Competition](lecture-9-advertising.html)
+- [Lecture 9: Advertising and Brand Competition](lecture-9-advertising.html){target="_blank"}
 
 ### Week 11
 
-- [Lecture 11: Mergers and Acquisitions](lecture-11-mergers.html)
+- [Lecture 11: Mergers and Acquisitions](lecture-11-mergers.html){target="_blank"}
 
 ### Week 12
 
-- [Lecture 12: Sustainable Industrialisation](lecture-12-sustainability.html)
-
----
-
-All lectures follow the [EC5230 Copilot Instructions](../.github/copilot-instructions.md) for pedagogical consistency and exam-grade rigour.
+- [Lecture 12: Sustainable Industrialisation](lecture-12-sustainability.html){target="_blank"}
