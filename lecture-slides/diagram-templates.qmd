@@ -1,0 +1,116 @@
+---
+title: "IO Diagrams (TikZ embedded)"
+format:
+  revealjs:
+    slide-number: true
+execute:
+  echo: false
+  warning: false
+  message: false
+  cache: true
+---
+
+```{r}
+#| label: tikz-helper
+#| include: false
+library(here)
+library(knitr)
+
+dir.create("figs", showWarnings = FALSE)
+tex_file <- file.path("figs", paste0(name, ".tex"))
+pdf_file <- file.path("figs", paste0(name, ".pdf"))
+svg_file <- file.path("figs", paste0(name, ".svg"))
+
+
+# Render TikZ -> PDF via pdflatex, then PDF -> SVG via Inkscape, then return an <img> tag
+render_tikz_svg <- function(
+  tikz_picture,
+  name,
+  width = "70%",
+  engine = "pdflatex"
+) {
+  tex_file <- paste0(name, ".tex")
+  pdf_file <- paste0(name, ".pdf")
+  svg_file <- paste0(name, ".svg")
+
+  # Standalone doc for tight cropping
+  tex <- paste0(
+    "\\documentclass[tikz,border=2pt]{standalone}
+\\usepackage{pgfplots}
+\\pgfplotsset{compat=1.18}
+\\begin{document}
+",
+    tikz_picture,
+    "
+\\end{document}
+"
+  )
+  writeLines(tex, tex_file)
+
+  # Compile to PDF
+  if (Sys.which(engine) == "") {
+    stop("LaTeX engine not found on PATH: ", engine)
+  }
+  res <- system2(
+    engine,
+    c("-interaction=nonstopmode", tex_file),
+    stdout = TRUE,
+    stderr = TRUE
+  )
+  if (!file.exists(pdf_file)) {
+    stop("PDF not produced. LaTeX output:\n", paste(res, collapse = "\n"))
+  }
+
+  # Convert PDF -> SVG using Inkscape
+  inkscape <- Sys.which("inkscape")
+  if (inkscape == "") {
+    stop("Inkscape not found on PATH.")
+  }
+
+  # Inkscape CLI (1.x): inkscape input.pdf --export-type=svg --export-filename=output.svg
+  system2(
+    inkscape,
+    c(pdf_file, "--export-type=svg", paste0("--export-filename=", svg_file))
+  )
+
+  if (!file.exists(svg_file)) {
+    stop("SVG not produced by Inkscape.")
+  }
+
+  # Embed as HTML
+  knitr::asis_output(sprintf(
+    '<img src="%s" style="width:%s; height:auto;">',
+    svg_file,
+    width
+  ))
+}
+```
+
+```{r}
+render_tikz_svg(
+  tikz_picture = "
+\\begin{tikzpicture}
+\\begin{axis}[
+  axis lines=left,
+  xlabel={$Q$},
+  ylabel={$P$},
+  xmin=0, xmax=10,
+  ymin=0, ymax=10,
+  ticks=none,
+  width=10cm,
+  height=6cm
+]
+\\addplot[thick, domain=0:10] {10-x};        % Demand
+\\addplot[thick, dashed, domain=0:5] {10-2*x}; % MR
+\\addplot[thick] {3};                         % MC
+\\node at (axis cs:8,2.5) {$D$};
+\\node at (axis cs:4,2) {$MR$};
+\\node at (axis cs:0.7,3.3) {$MC$};
+\\end{axis}
+\\end{tikzpicture}
+",
+  name = "demand-mr-mc",
+  width = "70%"
+)
+```
+
