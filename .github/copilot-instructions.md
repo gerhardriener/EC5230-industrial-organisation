@@ -16,15 +16,15 @@ It is a **theory-first course** designed for **exam-grade economic reasoning**.
 
 Never invent:
 
-* equilibrium concepts
-* welfare criteria
-* strategic effects
-* terminology
+- equilibrium concepts
+- welfare criteria
+- strategic effects
+- terminology
 
 Every concept must be:
 
-* **standard** (Nash equilibrium, best response, residual demand, elasticity, etc.), or
-* **explicitly defined** on the slide.
+- **standard** (Nash equilibrium, best response, residual demand, elasticity, etc.), or
+- **explicitly defined** on the slide.
 
 ---
 
@@ -32,12 +32,12 @@ Every concept must be:
 
 Each slide must have **one primary object**:
 
-* model
-* equilibrium
-* intuition
-* comparative statics
-* evidence
-* policy implication
+- model
+- equilibrium
+- intuition
+- comparative statics
+- evidence
+- policy implication
 
 Other content may support this object but not replace it.
 
@@ -51,11 +51,11 @@ Each slide has:
 
 Then one of:
 
-* Definition
-* Model
-* Result
-* Intuition
-* Implication
+- Definition
+- Model
+- Result
+- Intuition
+- Implication
 
 No rhetorical titles.
 
@@ -65,10 +65,10 @@ No rhetorical titles.
 
 All equations:
 
-* use `$` and `$$`
-* are standard or derived later
-* define all variables
-* classify variables as choice, parameter, or equilibrium outcome
+- use `$` and `$$`
+- are standard or derived later
+- define all variables
+- classify variables as choice, parameter, or equilibrium outcome
 
 ---
 
@@ -114,9 +114,9 @@ Preserve notation and canonical order.
 
 Each slide is one of:
 
-* **MODEL**
-* **NARRATIVE**
-* **HYBRID** (≥80% one purpose + ≤20% anchor)
+- **MODEL**
+- **NARRATIVE**
+- **HYBRID** (≥80% one purpose + ≤20% anchor)
 
 ---
 
@@ -124,15 +124,15 @@ Each slide is one of:
 
 Target per slide:
 
-* 4–10 bullets
-* or 1–2 equations + 2–5 bullets
-* or 1 figure + 3–6 bullets
+- 4–10 bullets
+- or 1–2 equations + 2–5 bullets
+- or 1 figure + 3–6 bullets
 
 Hard limits:
 
-* max 12 bullets
-* max 2 equations
-* max 1 figure
+- max 12 bullets
+- max 2 equations
+- max 1 figure
 
 MODEL and HYBRID slides should include **equation + interpretation**.
 
@@ -148,13 +148,13 @@ Always leave a blank line **before and after lists**.
 
 Slides must satisfy:
 
-* clear type
-* correct title
-* correct density
-* symbols defined
-* narrative not introducing theory
-* forward logical flow
-* exam usability
+- clear type
+- correct title
+- correct density
+- symbols defined
+- narrative not introducing theory
+- forward logical flow
+- exam usability
 
 ---
 
@@ -164,9 +164,9 @@ Slides must satisfy:
 
 Use official University fonts:
 
-* **Primary:** PT Sans
+- **Primary:** PT Sans
   `font-family: 'PT Sans', Helvetica, Arial, sans-serif;`
-* **Secondary (long text only):** PT Serif
+- **Secondary (long text only):** PT Serif
   `font-family: 'PT Serif', Georgia, 'Times New Roman', serif;`
 
 Slides must use **PT Sans** for all headings and body text.
@@ -216,10 +216,16 @@ theme_econ <- theme_minimal() + theme(
 
 ### Colour rules
 
-* Use only St Andrews palette
-* Never more than **4 colours**
-* Never rely on colour alone — always also use linetype, shape, or labels
-* Must remain interpretable in grayscale
+- Use only St Andrews palette
+- Never more than **4 colours**
+- Never rely on colour alone — always also use linetype, shape, or labels
+- Must remain interpretable in grayscale
+
+---
+
+# Tikz diagrams
+
+The tikz diagrams use a function to integrate them into quarto workflow. Use the template in `lecture-slides\diagram-templates.qmd` for consistency.
 
 ---
 
@@ -227,11 +233,11 @@ theme_econ <- theme_minimal() + theme(
 
 Each app must:
 
-* illustrate one model
-* show equilibrium
-* show formulas
-* label all curves and equilibria
-* use theme_econ
+- illustrate one model
+- show equilibrium
+- show formulas
+- label all curves and equilibria
+- use theme_econ
 
 ---
 
@@ -261,17 +267,16 @@ All `.qmd` must be listed in `_quarto.yml`.
 
 Before accepting output:
 
-* no hallucinated theory
-* equations standard or derived
-* variables defined
-* examples consistent
-* density correct
-* hybrid obeys 80/20
-* St Andrews colours only
-* grayscale-safe plots
-* blank lines around lists
+- no hallucinated theory
+- equations standard or derived
+- variables defined
+- examples consistent
+- density correct
+- hybrid obeys 80/20
+- St Andrews colours only
+- grayscale-safe plots
+- blank lines around lists
 
 ---
 
 **End of EC5230 Copilot Instructions**
-

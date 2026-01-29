@@ -1,168 +1,460 @@
-/* lecture-slides/theme/st-andrews-serif.scss */
-/* Quarto Reveal.js theme layer (St Andrews palette + Serif typography) */
-
 /*-- scss:defaults --*/
 
-/* Brand colours (University of St Andrews web palette) */
+// ============================================================================
+// SOLARIZED PALETTE
+// ============================================================================
+$solarized-base03: #002b36;
+$solarized-base02: #073642;
+$solarized-base01: #586e75;
+$solarized-base00: #657b83;
+$solarized-base0: #839496;
+$solarized-base1: #93a1a1;
+$solarized-base2: #eee8d5;
+$solarized-base3: #fdf6e3;
+
+// ============================================================================
+// ST ANDREWS BRAND COLORS
+// ============================================================================
 $sta-blue: #00539b;
 $sta-red: #ee312a;
 $sta-yellow: #ffdf00;
-$sta-black: #231f20;
 
-/* Neutral palette (keep St Andrews defaults) */
-$body-bg: #ffffff !default;
-$body-color: #111827 !default;
-$link-color: $sta-blue !default;
-$selection-bg: rgba(0, 83, 155, 0.2) !default;
+// ============================================================================
+// THEME VARIABLES (Reveal.js specific)
+// ============================================================================
 
-/* --- Typography: serif blend --- */
-/* Serif stack from your "serif" theme (robust cross-platform) */
-$sta-serif-stack: "Palatino Linotype", "Book Antiqua", Palatino, FreeSerif, serif;
+// Background and text
+$backgroundColor: $solarized-base3;
+$mainColor: $solarized-base02;
 
-/* Set presentation typography */
-$font-family-sans-serif: $sta-serif-stack !default;
-$presentation-heading-font: $sta-serif-stack !default;
+// Headings
+$headingColor: $solarized-base02;
+$headingTextTransform: none;
+$headingFontWeight: 600;
+$headingLineHeight: 1.2;
 
-/* If you prefer serif body + sans headings, use this instead:
-$font-family-sans-serif: $sta-serif-stack !default;
-$presentation-heading-font: "PT Sans", Helvetica, Arial, sans-serif !default;
-*/
+// Links
+$linkColor: $sta-blue;
+$linkColorHover: darken($sta-blue, 10%);
 
-/* Sizes / rhythm (keep St Andrews tuning; adjust weights for serif) */
-$presentation-font-size-root: 34px !default;
-$presentation-line-height: 1.35 !default;
+// Typography - serif stack
+$mainFont: 'Palatino Linotype', 'Book Antiqua', Palatino, 'Hoefler Text', Garamond, 'Times New Roman', serif;
+$headingFont: 'Palatino Linotype', 'Book Antiqua', Palatino, 'Hoefler Text', Garamond, 'Times New Roman', serif;
+$mainFontSize: 36px;
+$headingLetterSpacing: -0.01em;
 
-$presentation-heading-text-transform: none !default;
-/* Serif faces can look overly heavy at 700; 600 is often cleaner */
-$presentation-heading-font-weight: 600 !default;
-$presentation-heading-line-height: 1.15 !default;
+// Code
+$codeFont: Monaco, Menlo, Consolas, 'Courier New', monospace;
 
-/* Spacing / layout */
-$presentation-block-margin: 14px !default;
+// Block spacing
+$blockMargin: 16px;
 
-/* Code blocks */
-$code-block-font-size: 0.75em !default;
-$code-color: #0f172a !default;
-
-/* Optional: keep a slightly warmer link colour like the serif theme (comment out if unwanted) */
-/* $link-color: #51483d !default; */
+// Selection
+$selectionBackgroundColor: rgba(0, 83, 155, 0.25);
+$selectionColor: $mainColor;
 
 /*-- scss:rules --*/
 
+// ============================================================================
+// GLOBAL SLIDE LAYOUT
+// ============================================================================
 .reveal .slides {
     text-align: left;
 }
 
 .reveal section {
-    padding: 24px 36px;
+    padding: 28px 42px;
 }
 
-/* Headings */
-.reveal h1,
-.reveal h2,
-.reveal h3 {
-    letter-spacing: 0;
-    margin: 0 0 18px 0;
+// ============================================================================
+// HEADINGS
+// ============================================================================
+.reveal h1 {
+    font-size: 2.2em;
+    margin-bottom: 24px;
+    font-weight: 700;
 }
 
 .reveal h2 {
-    border-bottom: 2px solid #e5e7eb;
-    padding-bottom: 10px;
+    font-size: 1.6em;
+    border-bottom: 2px solid $solarized-base1;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
 }
 
-/* Links: keep line-height tweak from serif theme */
-.reveal a {
-    line-height: 1.3em;
+.reveal h3 {
+    font-size: 1.3em;
+    color: $solarized-base01;
+    margin-bottom: 16px;
 }
 
-/* Lists */
-.reveal li {
-    margin: 8px 0;
+// ============================================================================
+// TITLE SLIDE (St Andrews branding)
+// ============================================================================
+
+// Target the actual slide background
+.reveal .slide-background.title-slide {
+    background: linear-gradient(135deg, $sta-blue 0%, darken($sta-blue, 8%) 100%) !important;
+}
+
+// Alternative: if using data attribute
+.reveal .slides section.title-slide {
+    background: linear-gradient(135deg, $sta-blue 0%, darken($sta-blue, 8%) 100%);
+}
+
+// Title slide content styling
+.reveal section.title-slide,
+.reveal .slides section:first-child {
+    color: white !important;
+
+    h1,
+    h1.title {
+        color: white !important;
+        font-size: 2.8em;
+        font-weight: 700;
+        border: none;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        margin-bottom: 16px;
+        padding-bottom: 0;
+    }
+
+    h2,
+    h2.subtitle,
+    .subtitle {
+        color: rgba(255, 255, 255, 0.9) !important;
+        font-weight: 400;
+        border: none;
+        padding-bottom: 0;
+    }
+
+    p,
+    p.author,
+    p.date,
+    .quarto-title-meta,
+    .quarto-title-meta-contents {
+        color: rgba(255, 255, 255, 0.85) !important;
+        font-size: 0.9em;
+    }
+}
+
+// ============================================================================
+// SECTION DIVIDERS
+// ============================================================================
+.reveal section[data-background-color="#00539b"],
+.reveal section[data-background-color="#{$sta-blue}"] {
+    color: white;
+
+    h1,
+    h2,
+    h3 {
+        color: white;
+        border: none;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    strong {
+        color: white;
+    }
+}
+
+// ============================================================================
+// LISTS
+// ============================================================================
+.reveal ul {
+    list-style: none;
+
+    >li {
+        margin: 10px 0;
+        line-height: 1.4;
+
+        &::before {
+            content: "▸";
+            color: $sta-blue;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+    }
+}
+
+.reveal ol {
+    >li {
+        margin: 10px 0;
+        line-height: 1.4;
+    }
 }
 
 .reveal li>ul,
 .reveal li>ol {
-    margin-top: 8px;
+    margin-top: 10px;
+    margin-bottom: 6px;
 }
 
-/* Emphasis */
-.reveal strong {
+// ============================================================================
+// EMPHASIS
+// ============================================================================
+.reveal strong,
+.reveal b {
     color: $sta-blue;
     font-weight: 700;
 }
 
-/* Tables */
+.reveal em,
+.reveal i {
+    font-style: italic;
+    color: $solarized-base01;
+}
+
+// ============================================================================
+// LINKS
+// ============================================================================
+.reveal a {
+    line-height: 1.3em;
+    transition: color 0.2s ease;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+// ============================================================================
+// TABLES
+// ============================================================================
 .reveal table {
     border-collapse: collapse;
     width: 100%;
-    font-size: 0.85em;
+    font-size: 0.82em;
+    margin: 16px auto;
+    background: rgba(253, 246, 227, 0.5);
+    border-radius: 8px;
+    overflow: hidden;
+
+    th {
+        text-align: left;
+        background: $solarized-base2;
+        color: $solarized-base02;
+        font-weight: 600;
+        border-bottom: 2px solid $sta-blue;
+        padding: 12px 14px;
+    }
+
+    td {
+        border-bottom: 1px solid $solarized-base1;
+        padding: 10px 14px;
+    }
+
+    tr:last-child td {
+        border-bottom: none;
+    }
+
+    tr:hover {
+        background: rgba(0, 83, 155, 0.05);
+    }
 }
 
-.reveal table th {
-    text-align: left;
-    border-bottom: 2px solid #e5e7eb;
-    padding: 10px 12px;
-}
-
-.reveal table td {
-    border-bottom: 1px solid #e5e7eb;
-    padding: 10px 12px;
-}
-
-.reveal table tr:last-child td {
-    border-bottom: 0;
-}
-
-/* Code blocks */
+// ============================================================================
+// CODE BLOCKS
+// ============================================================================
 .reveal pre {
-    background: #f8fafc;
-    border: 1px solid #e5e7eb;
-    border-radius: 10px;
-    padding: 14px 16px;
+    background: $solarized-base2;
+    border: 1px solid $solarized-base1;
+    border-radius: 8px;
+    padding: 16px 18px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin: 16px 0;
+    width: 100%;
+
+    code {
+        background: transparent;
+        padding: 0;
+        color: $solarized-base02;
+        max-height: none;
+    }
+}
+
+.reveal code {
+    font-family: $codeFont;
+    color: $solarized-base01;
+    background: rgba(0, 43, 54, 0.05);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.reveal p code,
+.reveal li code {
+    background: rgba(0, 43, 54, 0.08);
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+// ============================================================================
+// BLOCKQUOTES
+// ============================================================================
+.reveal blockquote {
+    background: rgba(253, 246, 227, 0.5);
+    border-left: 5px solid $sta-blue;
+    padding: 16px 20px;
+    margin: 20px 0;
+    font-style: italic;
+    color: $solarized-base01;
+    border-radius: 4px;
     box-shadow: none;
+    width: 90%;
 }
 
-/* Callouts (Quarto) */
-.reveal .callout {
-    border-radius: 12px;
-    border: 1px solid #e5e7eb;
-    background: #f8fafc;
-    padding: 12px 16px;
-    margin: 14px 0;
+// ============================================================================
+// CALLOUTS (Quarto)
+// ============================================================================
+.reveal div.callout {
+    border-radius: 10px;
+    border: 1px solid $solarized-base1;
+    background: rgba(253, 246, 227, 0.6);
+    padding: 14px 18px;
+    margin: 18px 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+
+    &.callout-note {
+        border-left: 5px solid $sta-blue;
+
+        .callout-title {
+            color: $sta-blue;
+        }
+    }
+
+    &.callout-important {
+        border-left: 5px solid $sta-red;
+
+        .callout-title {
+            color: $sta-red;
+        }
+    }
+
+    &.callout-warning {
+        border-left: 5px solid #cb4b16;
+
+        .callout-title {
+            color: #cb4b16;
+        }
+    }
+
+    &.callout-tip {
+        border-left: 5px solid #859900;
+
+        .callout-title {
+            color: #859900;
+        }
+    }
+
+    .callout-title {
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
 }
 
-.reveal .callout.callout-note {
-    border-left: 6px solid $sta-blue;
+// ============================================================================
+// IMAGES
+// ============================================================================
+.reveal img,
+.reveal figure img {
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    max-width: 100%;
+    height: auto;
 }
 
-.reveal .callout.callout-important {
-    border-left: 6px solid $sta-red;
+.reveal figure {
+    margin: 20px 0;
 }
 
-.reveal .callout.callout-warning {
-    border-left: 6px solid $sta-yellow;
+.reveal figcaption {
+    font-size: 0.75em;
+    color: $solarized-base01;
+    font-style: italic;
+    margin-top: 8px;
+    text-align: center;
 }
 
-/* Section divider slides */
-.reveal section[data-background-color="#2c3e50"],
-.reveal section[data-background-color="#00539b"] {
-    color: #ffffff;
-}
-
-.reveal section[data-background-color="#2c3e50"] h1,
-.reveal section[data-background-color="#00539b"] h1 {
-    color: #ffffff;
-    border: 0;
-}
-
-.reveal section[data-background-color="#2c3e50"] strong,
-.reveal section[data-background-color="#00539b"] strong {
-    color: #ffffff;
-}
-
-/* Slide number */
+// ============================================================================
+// SLIDE NUMBERS
+// ============================================================================
 .reveal .slide-number {
     background: transparent;
-    color: #4b5563;
-    font-size: 14px;
+    color: $solarized-base1;
+    font-size: 13px;
+    font-family: $mainFont;
+    opacity: 0.7;
+}
+
+// ============================================================================
+// PROGRESS BAR
+// ============================================================================
+.reveal .progress {
+    background: rgba(0, 0, 0, 0.1);
+    height: 3px;
+
+    span {
+        background: $sta-blue;
+        transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+    }
+}
+
+// ============================================================================
+// CONTROLS
+// ============================================================================
+.reveal .controls {
+    color: $sta-blue;
+}
+
+// ============================================================================
+// FRAGMENTS
+// ============================================================================
+.reveal .fragment {
+    transition: all 0.3s ease;
+}
+
+// ============================================================================
+// FOOTER
+// ============================================================================
+.reveal .footer {
+    font-size: 0.65em;
+    color: $solarized-base1;
+}
+
+// ============================================================================
+// MATH
+// ============================================================================
+.reveal .MathJax,
+.reveal .katex {
+    color: $solarized-base02;
+}
+
+// ============================================================================
+// ACCESSIBILITY
+// ============================================================================
+.reveal :focus {
+    outline: 2px solid $sta-blue;
+    outline-offset: 2px;
+}
+
+// ============================================================================
+// PRINT STYLES
+// ============================================================================
+@media print {
+    .reveal section {
+        background: white !important;
+        color: black !important;
+    }
+
+    .reveal h1,
+    .reveal h2,
+    .reveal h3 {
+        color: black !important;
+    }
+
+    .reveal a {
+        color: black !important;
+    }
 }
