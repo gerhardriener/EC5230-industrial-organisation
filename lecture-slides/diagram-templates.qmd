@@ -17,9 +17,6 @@ library(here)
 library(knitr)
 
 dir.create("figs", showWarnings = FALSE)
-tex_file <- file.path("figs", paste0(name, ".tex"))
-pdf_file <- file.path("figs", paste0(name, ".pdf"))
-svg_file <- file.path("figs", paste0(name, ".svg"))
 
 
 # Render TikZ -> PDF via pdflatex, then PDF -> SVG via Inkscape, then return an <img> tag
@@ -29,21 +26,16 @@ render_tikz_svg <- function(
   width = "70%",
   engine = "pdflatex"
 ) {
-  tex_file <- paste0(name, ".tex")
-  pdf_file <- paste0(name, ".pdf")
-  svg_file <- paste0(name, ".svg")
+  tex_file <- file.path(here("lecture-slides", "figs"), paste0(name, ".tex"))
+  pdf_file <- file.path(here("lecture-slides", "figs"), paste0(name, ".pdf"))
+  svg_file <- file.path(here("lecture-slides", "figs"), paste0(name, ".svg"))
+  figs_dir <- here("lecture-slides", "figs")
 
   # Standalone doc for tight cropping
   tex <- paste0(
-    "\\documentclass[tikz,border=2pt]{standalone}
-\\usepackage{pgfplots}
-\\pgfplotsset{compat=1.18}
-\\begin{document}
-",
+    "\\documentclass[tikz,border=2pt]{standalone}\n\\usepackage{pgfplots}\n\\pgfplotsset{compat=1.18}\n\\begin{document}\n",
     tikz_picture,
-    "
-\\end{document}
-"
+    "\n\\end{document}\n"
   )
   writeLines(tex, tex_file)
 
@@ -53,7 +45,11 @@ render_tikz_svg <- function(
   }
   res <- system2(
     engine,
-    c("-interaction=nonstopmode", tex_file),
+    c(
+      "-interaction=nonstopmode",
+      paste0("--output-directory=", shQuote(figs_dir)),
+      shQuote(tex_file)
+    ),
     stdout = TRUE,
     stderr = TRUE
   )
@@ -67,10 +63,13 @@ render_tikz_svg <- function(
     stop("Inkscape not found on PATH.")
   }
 
-  # Inkscape CLI (1.x): inkscape input.pdf --export-type=svg --export-filename=output.svg
   system2(
     inkscape,
-    c(pdf_file, "--export-type=svg", paste0("--export-filename=", svg_file))
+    c(
+      shQuote(pdf_file),
+      "--export-type=svg",
+      paste0("--export-filename=", shQuote(svg_file))
+    )
   )
 
   if (!file.exists(svg_file)) {
@@ -102,10 +101,10 @@ render_tikz_svg(
 ]
 \\addplot[thick, domain=0:10] {10-x};        % Demand
 \\addplot[thick, dashed, domain=0:5] {10-2*x}; % MR
-\\addplot[thick] {3};                         % MC
+\\addplot[thick, domain=0:8] {3};                         % MC
 \\node at (axis cs:8,2.5) {$D$};
-\\node at (axis cs:4,2) {$MR$};
-\\node at (axis cs:0.7,3.3) {$MC$};
+\\node at (axis cs:3,2) {$MR$};
+\\node at (axis cs:0.7,6) {$MC$};
 \\end{axis}
 \\end{tikzpicture}
 ",
