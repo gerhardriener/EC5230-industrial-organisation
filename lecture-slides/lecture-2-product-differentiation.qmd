@@ -22,6 +22,12 @@ execute:
 
 ## Product differentiation: overview
 
+::: {.callout-note}
+## Object of analysis
+
+Horizontal differentiation: products differ in *characteristics*; consumers incur mismatch costs.
+:::
+
 - **Horizontal v vertical differentiation**
   - What determines demand when prices are equal?
   - How does variety interact with quantity?
@@ -40,7 +46,7 @@ execute:
 - **Preference parameters**
   - Firm 1 located at distance $a$ from left endpoint (0)
   - Firm 2 located at distance $b$ from right endpoint ($L$)
-  - Linear transport cost: $C(d) = cd$ where $d$ is distance and $c > 0$
+  - Linear transport cost: $C(d)=cd$ where $d$ is distance and $c>0$
 
 - **Objects**
   - Choice variables: $p_1, p_2$
@@ -58,11 +64,14 @@ execute:
 
 - **Profit and best response**
   - $\pi_1 = p_1 q_1$
-  - Best response: $BR_1(p_2) = \frac{p_2}{2} + \frac{c}{2}(L + a - b)$
+  - $BR_1(p_2)=\frac{p_2}{2}+\frac{c}{2}(L+a-b)$
 
-- **Interpretation**
-  - Higher rival price ($p_2 \uparrow$) shifts customers to Firm 1, so $BR_1$ is increasing in $p_2$
-  - Higher transport cost ($c \uparrow$) softens competition, raising the intercept of $BR_1$
+::: {.callout-note}
+## Interpretation (best response)
+
+- $BR_1$ is increasing in $p_2$ (prices are strategic complements here)
+- Larger $c$ softens competition, shifting best responses upward
+:::
 
 ## Linear Hotelling: pricing with fixed locations (Firm 2)
 
@@ -73,11 +82,13 @@ execute:
 
 - **Profit and best response**
   - $\pi_2 = p_2 q_2$
-  - Best response: $BR_2(p_1) = \frac{p_1}{2} + \frac{c}{2}(L + b - a)$
+  - $BR_2(p_1)=\frac{p_1}{2}+\frac{c}{2}(L+b-a)$
 
-- **Interpretation**
-  - Symmetry: the slope $\frac{1}{2}$ reflects the linear “location advantage” structure
-  - As $b$ increases (Firm 2 moves inward from the right), its captive segment expands, raising $BR_2$'s intercept
+::: {.callout-note}
+## Interpretation (symmetry)
+
+- If $a=b$, best responses are symmetric and yield $p_1^*=p_2^*$
+:::
 
 ![](figs/fig-hotelling-fixed-location.svg){fig-align="center"}
 
@@ -91,19 +102,24 @@ execute:
   - $p_1^* = c\left(L + \frac{a-b}{3}\right)$; $p_2^* = c\left(L + \frac{b-a}{3}\right)$
   - $\pi_1^* = \frac{c}{18}(3L + a - b)^2$; $\pi_2^* = \frac{c}{18}(3L + b - a)^2$
 
-- **Interpretation**
-  - If locations are symmetric ($a=b$), then $p_1^* = p_2^* = cL$
-  - Larger mismatch cost ($c$) relaxes price competition and increases equilibrium profits
+::: {.callout-important}
+## Key comparative static
+
+Higher mismatch cost $c$ lowers substitutability and raises equilibrium markups and profits.
+:::
 
 ## Linear Hotelling model: incentive to move (co-location)
 
 - **If firms locate at the same point**
   - Then $a + b = L$ and the marginal consumer collapses to the location point: $x=y=0$
-  - Products become homogeneous \(\Rightarrow\) Bertrand undercutting
-  - Unique equilibrium: $p_1^B = p_2^B = 0$ and $\pi_1^B = \pi_2^B = 0$
+  - Products become homogeneous $\Rightarrow$ Bertrand undercutting
+  - Unique equilibrium: $p_1^B=p_2^B=0$ and $\pi_1^B=\pi_2^B=0$
 
-- **Implication**
-  - With co-location, there are no “captive” consumers; any positive price can be profitably undercut
+::: {.callout-warning}
+## Co-location and price competition
+
+Co-location removes captive consumers; any $p>0$ can be profitably undercut.
+:::
 
 ![](figs/fig-hotelling-movement-location.svg){fig-align="center"}
 
@@ -114,23 +130,22 @@ execute:
   - $\frac{\partial \pi_2^*}{\partial b} = \frac{c}{9}(3L + b - a) > 0$
 
 - **Interpretation (pricing subgame only)**
-  - Increasing $a$ (resp. $b$) moves Firm 1 (resp. Firm 2) **inward** (toward the centre), expanding its captive segment on the nearby endpoint side
-  - These derivatives are **comparative statics of equilibrium profit in the pricing subgame**, holding the rival location fixed
-
-- **Implication for the full two-stage game**
-  - Both firms have incentives to move inward, which pushes toward **minimum differentiation**
-  - Co-location restores Bertrand forces (previous slide), so location incentives reflect a tension between *capturing consumers* and *softening price competition*
+  - Increasing $a$ (resp. $b$) moves Firm 1 (resp. Firm 2) inward (toward the centre)
+  - These are comparative statics of equilibrium profits in the pricing subgame, holding the rival location fixed
 
 ## Linear Hotelling model: location equilibrium (linear v quadratic transport)
 
 - **Result (standard)**
-  - With **linear** transport costs ($C(d)=cd$), the full two-stage Hotelling location game may fail to have a **pure-strategy** equilibrium in locations (firms want to move inward, but co-location intensifies price competition)
+  - With linear transport costs ($C(d)=cd$), the full two-stage location game may fail to have a pure-strategy equilibrium in locations
 
 - **Resolution**
-  - d’Aspremont, Gabszewicz & Thisse (1979): with **quadratic** transport costs ($C(d)=td^2$), a pure-strategy location equilibrium exists (principle of **maximum differentiation** in their baseline)
+  - d’Aspremont, Gabszewicz & Thisse (1979): with quadratic transport costs ($C(d)=td^2$), a pure-strategy location equilibrium exists (maximum differentiation in their baseline)
 
-- **Interpretation**
-  - Changing the convexity of mismatch costs changes how sharply price competition responds to small location changes
+::: {.callout-note}
+## Why convexity matters
+
+More convex mismatch costs make small location changes less effective at stealing marginal consumers through pricing.
+:::
 
 ## Linear Hotelling model: profit function
 
@@ -172,6 +187,12 @@ $$
 ![](figs/fig-salop-cycle.svg){fig-align="center"}
 
 ## Salop's circular market: consumer utility
+
+::: {.callout-note}
+## Participation constraint
+
+Let $v=u-u^*$. A consumer participates in the differentiated sector iff $v \ge p_j + cd_j$.
+:::
 
 - **Preference heterogeneity**
   - Each consumer $i$ has ideal variety $\ell_i^*$ (location on the circle)
@@ -226,10 +247,11 @@ $$
 
 - **Inverse demand**: $p = \frac{c}{n} + \tilde{p} - c q^C$
 
-- **Interpretation**
-  - Demand slope is $-c$: market expansion is governed by competition with neighbours (not participation)
-  - Intercept increases with local market length $\frac{1}{n}$ and with neighbour price $\tilde p$
-  - Slope is steeper than monopoly region ($-c$ vs $-\frac{c}{2}$) because expansion only captures from one neighbour
+::: {.callout-important}
+## Slope comparison
+
+Competitive-region inverse demand is steeper than monopoly-region inverse demand: $-c$ vs $-\frac{c}{2}$.
+:::
 
 ## Salop's circular market: kinked demand
 
@@ -316,6 +338,31 @@ $$
   - Free-entry equilibrium: $n^C = \sqrt{\frac{c}{F}}$
   - Social optimum: $n^S = \frac{1}{2}n^C$
 
-- **Interpretation**
-  - Free entry delivers too many firms (excessive variety)
-  - Firms do not internalise the fixed-cost effect of additional varieties (business-stealing externality)
+::: {.callout-important}
+## Excess entry
+
+In this benchmark, free entry implies $n^C = 2n^S$.
+:::
+
+## Summary & references
+
+**Summary**
+
+- Horizontal differentiation relaxes price competition via consumer mismatch costs
+- Hotelling (fixed locations): equilibrium prices increase in transport cost $c$
+- Location incentives under linear transport can push toward minimum differentiation; quadratic costs restore a pure-strategy location equilibrium
+- Salop (circle): free entry implies $n^C=\sqrt{\frac{c}{F}}$ and excessive entry relative to the social optimum $n^S=\frac{1}{2}n^C$
+
+**References**
+
+- Hotelling, H. (1929). Stability in Competition. *Economic Journal*.
+- d’Aspremont, C., Gabszewicz, J. J., & Thisse, J.-F. (1979). On Hotelling’s “Stability in Competition”. *Econometrica*.
+- Salop, S. C. (1979). Monopolistic Competition with Outside Goods. *Bell Journal of Economics*.
+- Belleflamme, P., & Peitz, M. (2015). *Industrial Organization: Markets and Strategies*. Cambridge University Press.
+
+## Next week: innovation
+
+- Innovation as a choice under uncertainty
+- Market structure and incentives to innovate (replacement effect and entry threat)
+- Drastic vs non-drastic innovations
+- R&D incentives in oligopoly

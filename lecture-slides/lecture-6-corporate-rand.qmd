@@ -1,0 +1,311 @@
+---
+title: "Lecture 6 – Cooperative R&D"
+format:
+  revealjs:
+    slide-number: true
+    theme: [default, theme/st-andrews.scss]
+    title-slide-attributes:
+      data-background-color: "#00539b"
+    chalkboard: true
+    preview-links: auto
+    transition: none
+    background-transition: fade
+    width: 1600
+    height: 900
+    margin: 0.1
+execute:
+  echo: false
+  warning: false
+  message: false
+  cache: true
+---
+
+# Cooperative R&D {background-color="#00539b"}
+
+## Cooperative R&D: overview
+
+::: {.callout-note}
+## Object of analysis
+
+R&D cooperation when R&D creates spillovers ($\beta>0$) or allows cost sharing (RJV).
+:::
+
+- Baseline: each firm chooses R&D privately and internalises only its own costs/benefits
+
+- This lecture:
+  - R&D spillovers and the incentive to coordinate R&D
+  - Research joint ventures (RJVs) as cost-sharing arrangements
+
+- Core question:
+  - When does cooperation increase welfare relative to non-cooperative R&D?
+
+## Multi-stage games: reminder
+
+- Two-stage structure:
+  1. Stage 1: choose $x_i$ (R&D)
+  2. Stage 2: choose $q_i$ (product-market competition)
+
+::: {.callout-important}
+## Backward induction
+
+Solve Stage 2 for $q_i^*(x)$, substitute into Stage 1 payoffs, then solve for $x^*$.
+:::
+
+# R&D spillovers (d’Aspremont–Jacquemin) {background-color="#00539b"}
+
+## Spillovers model: primitives
+
+- Duopoly with inverse demand:
+
+$$
+p(Q) = A - Q,\quad Q=q_1+q_2
+$$
+
+- Cost and spillovers:
+  - Marginal cost of firm $i$: $c_i = c - x_i - \beta x_j$ with $\beta\in(0,1)$
+  - Feasibility: $x_i + \beta x_j \le c$
+
+- R&D cost:
+  - Firm $i$ pays $\frac{x_i^2}{2}$
+
+- Objects:
+  - Choice variables: $x_i$ (stage 1), $q_i$ (stage 2)
+  - Parameters: $A, c, \beta$
+
+::: {.callout-note}
+## Spillover parameter
+
+$\beta\in(0,1)$ measures how much of firm $j$'s R&D reduces firm $i$'s marginal cost.
+:::
+
+## Spillovers model: stage-2 profit
+
+- Given $(x_1,x_2)$, firm $i$ chooses $q_i$ to maximise:
+
+$$
+\pi_i(q_i;q_j,x_i,x_j)=[A-(q_i+q_j)-c_i]q_i-\frac{x_i^2}{2}
+$$
+
+- Interpretation:
+  - R&D shifts marginal cost; output competition determines how much cost reduction is monetised
+
+## Product-market equilibrium (Cournot): quantities
+
+- Cournot–Nash equilibrium quantities (given $x_1,x_2$):
+
+$$
+q_i^*=\frac{1}{3}\Big[(A-c)+(2-\beta)x_i+(2\beta-1)x_j\Big]
+$$
+
+- Interpretation:
+  - Own R&D raises own output; rival R&D can raise or lower own output depending on spillover strength
+
+::: {.callout-note}
+## Strategic effect of spillovers
+
+The term $(2\beta-1)x_j$ implies rival R&D can be output-increasing or output-reducing depending on whether $\beta$ is above or below $\tfrac{1}{2}$.
+:::
+
+# R&D regimes {background-color="#00539b"}
+
+## Regimes: definition
+
+- We compare three institutional regimes:
+
+- Game I:
+  - Non-cooperative R&D and non-cooperative output (Cournot)
+
+- Game II:
+  - Cooperative R&D, non-cooperative output (Cournot)
+
+- Game III:
+  - Cooperative R&D and cooperative output (joint profit maximisation)
+
+## Game I: stage-1 problem (non-cooperative R&D)
+
+- Stage 1 objective for firm $i$:
+
+$$
+\max_{x_i}\ \pi_i^*(x_i,x_j)=[q_i^*(x_i,x_j)]^2-\frac{x_i^2}{2}
+$$
+
+- Symmetric equilibrium ($x_1=x_2=x^*$):
+
+$$
+x^*=\frac{(A-c)(2-\beta)}{4.5-(2-\beta)(1+\beta)}
+$$
+
+- Interpretation:
+  - Each firm invests less when spillovers are high because part of the benefit accrues to the rival
+
+## Game II: stage-1 problem (cooperative R&D)
+
+- Firms choose $(x_1,x_2)$ to maximise joint profit given Cournot output:
+
+$$
+\max_{x_1,x_2}\ \hat{\pi}=\pi_1^*+\pi_2^*
+$$
+
+- Symmetric solution ($x_1=x_2=\hat{x}$):
+
+$$
+\hat{x}=\frac{(A-c)(1+\beta)}{4.5-(1+\beta)^2}
+$$
+
+- Interpretation:
+  - Internalising spillovers increases R&D relative to Game I (for intermediate $\beta$)
+
+## Game III: cooperative R&D and output
+
+- With full cooperation, firms maximise joint profit over $(q_1,q_2,x_1,x_2)$
+
+- Under symmetry ($x_1=x_2=x$, $q_1=q_2$), aggregate output in stage 2 is:
+
+$$
+\tilde{Q}=\frac{(A-c)+(1+\beta)x}{2}
+$$
+
+- Stage 1 chooses $x$ to maximise joint profit; solution:
+
+$$
+\tilde{x}=\frac{(A-c)(1+\beta)}{4-(1+\beta)^2}
+$$
+
+- Interpretation:
+  - Output coordination reduces product-market competition; R&D incentives differ because they are evaluated at monopoly output
+
+# Welfare {background-color="#00539b"}
+
+## Welfare benchmark: social planner
+
+Assume symmetry $x_1=x_2=x$.
+
+- Welfare function (as stated in the lecture):
+
+$$
+W(Q)=V(Q)+R(Q)-[c-(1+\beta)x]Q-x^2
+$$
+
+- Stage 2 FOC w.r.t. $Q$:
+
+$$
+Q=A-c+(1+\beta)x
+$$
+
+- Interpretation:
+  - Planner expands output to the efficient level given the cost reduction from total effective R&D
+
+## Social optimum: R&D and output
+
+- Socially optimal R&D:
+
+$$
+x^{**}=\frac{(A-c)(1+\beta)}{2-(1+\beta)^2}
+$$
+
+- Socially optimal output:
+
+$$
+Q^{**}=(A-c)\left[\frac{2}{2-(1+\beta)^2}\right]
+$$
+
+- Interpretation:
+  - Relative to market outcomes, the planner internalises both spillovers and the consumer-surplus gain from lower prices
+
+## Comparing regimes: R&D and output rankings
+
+- R&D expenditure comparison (from the lecture):
+  - Large spillovers: $x^{**}>\tilde{x}>\hat{x}>x^*$
+  - Small spillovers: $x^{**}>\tilde{x}\ge x^*>\hat{x}$
+
+- Output comparison (from the lecture):
+  - Large spillovers: $Q^{**}>\hat{Q}>Q^*>\tilde{Q}$
+  - Small spillovers: $Q^{**}>Q^*>\hat{Q}>\tilde{Q}$
+
+::: {.callout-important}
+## Reading the rankings
+
+Higher $x$ need not imply higher $Q$ when cooperation also changes the intensity of product-market competition.
+:::
+
+# Research joint ventures (Combs) {background-color="#00539b"}
+
+## RJV model: primitives
+
+- Probability a single lab succeeds: $p$
+- Product-market profits:
+  - Monopoly: $\pi^m$
+  - Duopoly: $\pi^d$
+- Fixed cost of a lab: $F$
+
+- Assumptions:
+  - If both succeed, firms compete in the product market (profits $\pi^d$ each)
+  - If only one succeeds (non-cooperative setting), the innovator earns $\pi^m$
+
+## RJV: cost-sharing (single lab)
+
+- Each cooperating firm’s expected payoff:
+
+$$
+V_C=p\pi^d-\frac{F}{2}
+$$
+
+- Non-cooperating firm’s expected payoff:
+
+$$
+V_N=p(1-p)\pi^m+p^2\pi^d-F
+$$
+
+- Cooperation condition:
+
+$$
+V_C\ge V_N \quad\Leftrightarrow\quad \frac{F}{2}\ge p(1-p)(\pi^m-\pi^d)
+$$
+
+- Interpretation:
+  - Cooperation is more attractive when the “winner-takes-all” component $p(1-p)$ is small
+
+## RJV: duplication (two labs)
+
+- If the RJV runs two labs (duplication), payoff of each cooperating firm:
+
+$$
+\tilde{V}_C=2p\pi^d-F
+$$
+
+- Non-cooperating payoff remains $V_N$
+
+- Cooperation condition:
+
+$$
+\tilde{V}_C\ge \tilde{V}_N \quad\Leftrightarrow\quad p\ge \frac{\pi^m-2\pi^d}{\pi^m-\pi^d}\equiv K
+$$
+
+- Interpretation:
+  - With duplication, cooperation depends mainly on success probability $p$ (not on $F$)
+
+# Summary and references {background-color="#00539b"}
+
+## Summary & references
+
+**Summary**
+
+- Spillovers $\beta>0$ create an externality in R&D, so non-cooperative R&D can be inefficiently low
+- Cooperative R&D internalises spillovers and can increase R&D relative to non-cooperative choices
+- Full cooperation may reduce product-market competition, affecting output and welfare
+- RJVs trade off cost sharing against strategic effects from duplication and winning probabilities
+
+**References**
+
+- d’Aspremont, C., & Jacquemin, A. (1988). Cooperative and Noncooperative R&D in Duopoly with Spillovers. *American Economic Review*, 78(5), 1133–1137.
+- Combs, K. L. (1992). Cost sharing vs. multiple research projects in cooperative R&D. *Economics Letters*, 39(3), 353–357.
+- Belleflamme, P., & Peitz, M. (2015). *Industrial Organization: Markets and Strategies* (2nd ed.). Cambridge University Press. Chapter 18.3.
+- Shy, O. (1996). *Industrial Organization: Theory and Applications*. MIT Press. Chapter 9.
+
+## Next week: assessment and feedback
+
+- Online class test (timing and format)
+- Tutorial: class test feedback and problem solving
+- Transition to subsequent lecture topics as scheduled
+
+

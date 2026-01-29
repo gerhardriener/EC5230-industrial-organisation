@@ -3,8 +3,9 @@ title: "Lecture 1 - Oligopoly"
 format:
   revealjs:
     slide-number: true
-    css: lecture-slides/theme/st-andrews.scss
-    theme: default
+    theme:  [default, theme/st-andrews.scss]
+    title-slide-attributes:
+      data-background-color: "#00539b"
     chalkboard: true
     preview-links: auto
     transition: none
@@ -12,6 +13,11 @@ format:
     width: 1600
     height: 900
     margin: 0.1
+execute:
+  echo: false
+  warning: false
+  message: false
+  cache: true
 ---
 
 # Market Structures {background-color="#00539b"}
@@ -544,9 +550,9 @@ Calculate:
 4. **Self-enforcement:** Properly structured MFN clauses render deviation less profitable than compliance, inducing equilibrium behaviour
 
 
-## References & Next Week
+## References 
 
-**References:**
+[@belleflammeIndustrialOrganizationMarkets2015]
 
 - Belleflamme, P., & Peitz, M. (2015). *Industrial Organization: Markets and Strategies* (2nd ed.). Cambridge University Press. Chapters 2.1–2.3, 3.2–3.3.
 - Cooper, T. E. (1986). Most-Favored-Customer Pricing and Tacit Collusion. *The RAND Journal of Economics*, 17(3), 377–388.

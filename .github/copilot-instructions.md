@@ -96,6 +96,9 @@ All curves and objects must be named.
 
 Readable, exam-usable, minimal but complete.
 
+pre but last slide: summary and next week’s topics.
+last slide: references, just with ## so that bibliography tool picks them up.
+
 ---
 
 ## **9. Exams Are the Target**

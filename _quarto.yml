@@ -10,7 +10,7 @@ website:
   title: "EC5230 Industrial Organisation"
   site-url: "https://gerhardriener.github.io/EC5230-industrial-organisation/"
   description: "MSc-level Industrial Organisation course at the University of St Andrews"
-  
+
   navbar:
     background: "#00539b"
     foreground: "#ffffff"
@@ -31,6 +31,8 @@ website:
             - lecture-slides/lecture-1-oligopoly.qmd
             - lecture-slides/lecture-2-product-differentiation.qmd
 
+bibliography: references.bib
+csl: csl/ec5230-doi-url.csl
 execute:
   echo: false
   warning: false
@@ -44,5 +46,3 @@ format:
     toc-depth: 3
     number-sections: false
     link-external-newwindow: true
-
-

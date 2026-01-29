@@ -1,0 +1,357 @@
+---
+title: "Lecture 5 – Multi-stage Games"
+format:
+  revealjs:
+    slide-number: true
+    theme: [default, theme/st-andrews.scss]
+    title-slide-attributes:
+      data-background-color: "#00539b"
+    chalkboard: true
+    preview-links: auto
+    transition: none
+    background-transition: fade
+    width: 1600
+    height: 900
+    margin: 0.1
+execute:
+  echo: false
+  warning: false
+  message: false
+  cache: true
+---
+
+# Multi-stage Games {background-color="#00539b"}
+
+## Multi-stage games: overview
+
+::: {.callout-note}
+## Object of analysis
+
+How commitment in earlier stages changes equilibrium behaviour in later stages.
+:::
+
+- So far:
+  - Mostly simultaneous-move games
+  - Briefly: two-stage game (@shyIndustrialOrganizationTheory1995 model in Lecture 4)
+
+- Today:
+  - Stackelberg quantity leadership
+  - Strategic delegation [@vickersDelegationTheoryFirm1985]
+
+## Solution concept: subgame perfect equilibrium
+
+- A strategy profile is a **subgame perfect Nash equilibrium (SPNE)** if it induces a Nash equilibrium in every subgame
+
+- Operationally (finite horizon):
+  - Solve from the last stage backward (backward induction)
+
+::: {.callout-important}
+## Commitment logic
+
+A first-stage action changes the feasible set faced by later movers (via best responses), not the payoff function.
+:::
+
+# Stackelberg competition {background-color="#00539b"}
+
+## Stackelberg model: structure
+
+- Two stages, two firms:
+
+  1. Leader chooses $q_1$
+  2. Follower observes $q_1$ and chooses $q_2$
+
+- Demand and costs:
+  - Inverse demand: $p(Q)=A-Q$ with $Q=q_1+q_2$
+  - Marginal cost: $c$ (parameter)
+
+## Stackelberg model: follower best response
+
+- Follower profit given $q_1$:
+
+$$
+\pi_2(q_2;q_1) = (A-q_1-q_2-c)q_2
+$$
+
+- Best response:
+
+$$
+BR_2(q_1)=\frac{A-c-q_1}{2}
+$$
+
+::: {.callout-note}
+## Strategic substitutes (quantities)
+
+Quantities are strategic substitutes: when the rival increases output, my best-response output decreases (downward-sloping best response).
+:::
+
+# Stackelberg model: leader choice
+
+- Substitute follower response into leader profit:
+
+$$
+\pi_1(q_1) = (A-q_1-BR_2(q_1)-c)q_1
+$$
+
+- Equilibrium (identical costs):
+  - $q_1^S=\frac{A-c}{2}$
+  - $q_2^S=\frac{A-c}{4}$
+
+::: {.callout-important}
+## First-mover advantage
+
+The leader commits to a higher $q_1$, anticipating that the follower reduces $q_2$.
+:::
+
+## Stackelberg v Cournot: equilibrium outcomes
+
+- Identical marginal costs ($c$) imply:
+
+| Outcome | Stackelberg | Cournot |
+|---|---:|---:|
+| Firm 1 output | $q_1^S=\frac{A-c}{2}$ | $q_1^C=\frac{A-c}{3}$ |
+| Firm 2 output | $q_2^S=\frac{A-c}{4}$ | $q_2^C=\frac{A-c}{3}$ |
+| Aggregate output | $Q^S=\frac{3(A-c)}{4}$ | $Q^C=\frac{2(A-c)}{3}$ |
+| Price | $p^S=\frac{A+3c}{4}$ | $p^C=\frac{A+2c}{3}$ |
+| Firm 1 profit | $\pi_1^S=\frac{(A-c)^2}{8}$ | $\pi_1^C=\frac{(A-c)^2}{9}$ |
+| Firm 2 profit | $\pi_2^S=\frac{(A-c)^2}{16}$ | $\pi_2^C=\frac{(A-c)^2}{9}$ |
+
+## Stackelberg model: remarks
+
+- Comparative statics questions:
+
+  - What changes when marginal costs are asymmetric?
+  - What changes if the timing is endogenous (announcement/commitment issues)?
+
+## Stackelberg: numerical example ($A=10$, $c=1$)
+
+- Parameters: $A=10$ (demand intercept), $c=1$ (marginal cost)
+
+- Stackelberg outcomes:
+  - $q_1^S=\frac{A-c}{2}=4.5$; $q_2^S=\frac{A-c}{4}=2.25$
+  - $Q^S=6.75$; $p^S=A-Q^S=3.25$
+  - $\pi_1^S=(p^S-c)q_1^S=10.125$
+
+- Cournot benchmark:
+  - $\pi_1^C=\frac{(A-c)^2}{9}=9$
+
+::: {.callout-important}
+## Concrete comparison
+
+With $A=10$, $c=1$: $\pi_1^S=10.125 > \pi_1^C=9$ (first-mover advantage).
+:::
+
+## Stackelberg: welfare comparison (to Cournot)
+
+- With linear demand $p=A-Q$ and constant marginal cost $c$:
+
+  - Higher total output implies lower price $\Rightarrow$ higher consumer surplus (CS)
+  - Stackelberg yields $Q^S>\,Q^C$ (hence $CS^S>CS^C$)
+
+- Total surplus changes because:
+  - CS rises with $Q$
+  - profits can rise for the leader and fall for the follower relative to Cournot
+
+::: {.callout-note}
+## Exam-useful statement
+
+Stackelberg leadership typically increases output relative to Cournot, so it is (weakly) better for consumers.
+:::
+
+# Strategic delegation (Vickers) {background-color="#00539b"}
+
+## Delegation: economic idea
+
+- Firms may delegate output choice to managers with objectives that differ from pure profit maximisation
+
+- Delegation instrument:
+  - an incentive parameter $\theta_i$ written into the manager’s contract
+
+## Delegation (Vickers): model
+
+- Cournot oligopoly with $n$ firms: $i=1,\dots,n$
+
+- Manager of firm $i$ maximises:
+
+$$
+M_i=\pi_i+\theta_i q_i
+$$
+
+where $\pi_i=p(Q)q_i-cq_i$ and $Q=\sum_i q_i$
+
+::: {.callout-note}
+## Equivalent formulation
+
+$M_i = p(Q)q_i - (c-\theta_i)q_i$ so $\theta_i$ shifts the manager’s objective like a reduction in marginal cost.
+:::
+
+::: {.callout-note}
+## Commitment assumption
+
+For delegation to affect rivals’ behaviour, contracts must be:
+
+- observable (rivals see $\theta_i$)
+- binding (owners cannot override managers after $\theta_i$ is set)
+:::
+
+## Delegation: triopoly exercise (setup)
+
+- Cournot triopoly: $i=1,2,3$
+- Demand: $p(Q)=A-Q$
+- Identical marginal costs: $c$
+- Managers: $\theta_i \ge 0$
+
+- Task:
+  - Solve the $\theta$-setting game given the induced Cournot equilibrium in $(q_1,q_2,q_3)$
+
+## Delegation: triopoly solution steps
+
+- **Step 1 (product-market subgame)**: given $(\theta_1,\theta_2,\theta_3)$, managers play Cournot and determine $q_i^*(\theta)$
+
+- **Step 2 (contract stage)**: each owner chooses $\theta_i$ to maximise own profit $\pi_i(\theta_i;\theta_{-i})$
+
+- **Step 3 (equilibrium incentives)**: solve the system of best responses in $\theta$
+  - in symmetry: $\theta_1=\theta_2=\theta_3=\hat{\theta}$
+
+::: {.callout-important}
+## Exam template
+
+Two-stage delegation problems are solved exactly like Stackelberg: solve the quantity subgame first, then solve the incentive-setting stage.
+:::
+
+## Delegation: triopoly equilibrium (given)
+
+Cournot–Nash equilibrium outcomes (given incentives $\theta_i$):
+
+$$
+q_i^*=\frac{1}{4}\left(A-c+3\theta_i-\sum_{j\ne i}\theta_j\right)
+$$
+
+$$
+p^*=\frac{1}{4}\left(A+3c-\sum_i \theta_i\right)
+$$
+
+- Interpretation:
+  - Increasing $\theta_i$ shifts $q_i^*$ up; rivals’ incentives are strategic substitutes in outputs through $Q$
+
+## Delegation: solving for equilibrium incentives
+
+**Owner’s problem** (taking rivals’ incentives as given):
+
+- Owner maximises profit (not managerial utility):
+
+$$
+\max_{\theta_i \ge 0}\ \pi_i^*(\theta_i;\theta_{-i})=\big(p^*(\theta)-c\big)\,q_i^*(\theta)
+$$
+
+**First-order condition**:
+
+$$
+\frac{\partial \pi_i^*(\theta_i;\theta_{-i})}{\partial \theta_i}=0
+$$
+
+- Solving the three FOCs gives a best-response system in $(\theta_1,\theta_2,\theta_3)$
+- In symmetry, $\theta_i=\hat{\theta}$ for all $i$, implying $\hat{\theta}=\frac{1}{5}(A-c)$
+
+## Delegation: best response in incentives (triopoly)
+
+Define the rivals’ average incentive:
+
+$$
+\bar{\theta}_{-i}=\frac{1}{n-1}\sum_{j\ne i}\theta_j \quad (n=3)
+$$
+
+A reduced-form best response for the owner’s incentive choice can be written as:
+
+$$
+\theta_i = BR(\theta_{-i})=\frac{1}{3}(A-c)-\frac{2}{3}\bar{\theta}_{-i}
+$$
+
+- Interpretation:
+  - Higher rival incentives make rivals more aggressive, reducing the marginal gain from raising $\theta_i$
+
+## Delegation: symmetric equilibrium (fixed point)
+
+In symmetry, $\theta_i=\bar{\theta}_{-i}=\hat{\theta}$ for all $i$.
+
+$$
+\hat{\theta}=\frac{1}{3}(A-c)-\frac{2}{3}\hat{\theta}
+\quad \Rightarrow \quad
+\hat{\theta}=\frac{1}{5}(A-c)
+$$
+
+::: {.callout-note}
+## What this is doing
+
+This is the standard “best-response fixed point” method: compute $BR(\cdot)$, then impose symmetry.
+:::
+
+## Delegation: strategic logic
+
+::: {.callout-warning}
+## Prisoners’ dilemma
+
+- **Unilateral incentive**: if rivals set $\theta=0$, I benefit from choosing $\theta_i>0$
+  - Positive $\theta_i$ commits my manager to higher output
+  - Rivals reduce output (quantities are strategic substitutes)
+
+- **Equilibrium outcome**: all firms choose $\hat{\theta}>0$
+  - The strategic advantage disappears when everyone delegates
+  - Profits fall: $\hat{\pi}<\pi^C$ (overproduction lowers price for all)
+
+Each owner chooses $\theta_i$ optimally given rivals’ choices, but the collective outcome is worse than $\theta=0$.
+:::
+
+## Delegation: comparison table (triopoly)
+
+| Scenario | Incentives | Per-firm output | Per-firm profit |
+|---|---:|---:|---:|
+| All delegate | $\hat{\theta}=\frac{A-c}{5}$ | $\hat{q}=\frac{3(A-c)}{10}$ | $\hat{\pi}=\frac{3(A-c)^2}{100}$ |
+| None delegate | $\theta=0$ | $q^C=\frac{A-c}{4}$ | $\pi^C=\frac{(A-c)^2}{16}$ |
+
+With $A=10$, $c=1$:
+
+- $\hat{\pi}=2.43$
+- $\pi^C=5.0625$
+
+::: {.callout-important}
+## Takeaway
+
+Delegation is individually rational in the incentive-setting game but reduces profits in equilibrium.
+:::
+
+## Delegation: numerical example ($A=10$, $c=1$)
+
+- Parameters: $A=10$, $c=1$
+
+- Delegation equilibrium:
+  - $\hat{\theta}=\frac{A-c}{5}=1.8$
+  - Per-firm profit: $\hat{\pi}=\frac{3(A-c)^2}{100}=2.43$
+
+- Cournot triopoly benchmark ($\theta_i=0$):
+  - Per-firm profit: $\pi^C=\frac{(A-c)^2}{16}=5.0625$
+
+::: {.callout-warning}
+## Concrete comparison
+
+With $A=10$, $c=1$: $\hat{\pi}=2.43 < \pi^C=5.0625$ (delegation intensifies competition and lowers profits).
+:::
+
+## Delegation: welfare comparison (to Cournot triopoly)
+
+- Delegation increases effective aggressiveness in output:
+  - equilibrium price is lower than in standard Cournot triopoly
+  - therefore consumer surplus is higher under delegation than under $\theta_i=0$
+
+- Total surplus effect:
+  - CS rises due to lower price
+  - profits fall due to overproduction relative to joint-profit motives
+
+::: {.callout-note}
+## Exam-useful statement
+
+Delegation can be privately attractive ex ante (as a commitment device) but can reduce profits in equilibrium while benefiting consumers.
+:::
+
+## References
+
+
