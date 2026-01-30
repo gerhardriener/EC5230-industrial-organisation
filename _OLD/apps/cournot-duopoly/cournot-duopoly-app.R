@@ -1,0 +1,281 @@
+library(shiny)
+library(ggplot2)
+
+# Define plotting theme
+theme_econ <- theme_minimal() +
+  theme(
+    plot.title = element_text(face = "bold", hjust = 0.5),
+    axis.title = element_text(face = "italic"),
+    panel.grid.minor = element_blank()
+  )
+
+# UI Definition
+ui <- fluidPage(
+  titlePanel("Homogeneous Goods Cournot Duopoly"),
+
+  sidebarLayout(
+    sidebarPanel(
+      sliderInput(
+        "a",
+        label = "Demand Intercept (a):",
+        min = 12,
+        max = 15,
+        value = 12,
+        step = 0.5
+      ),
+      sliderInput(
+        "b",
+        label = "Demand Slope (b):",
+        min = 1,
+        max = 5,
+        value = 1,
+        step = 0.5
+      ),
+      sliderInput(
+        "ci",
+        label = "Marginal Cost Firm i (ci):",
+        min = 0,
+        max = 5,
+        value = 0,
+        step = 0.5
+      ),
+      sliderInput(
+        "cj",
+        label = "Marginal Cost Firm j (cj):",
+        min = 0,
+        max = 5,
+        value = 0,
+        step = 0.5
+      ),
+      hr(),
+      h4("Iso-profit Controls"),
+      helpText(
+        "Weights on monopoly points (0 = Cournot level, 1 = Monopoly level)"
+      ),
+      sliderInput(
+        "ki",
+        label = "Weight Firm i (ki):",
+        min = 0,
+        max = 1,
+        value = 0,
+        step = 0.1
+      ),
+      sliderInput(
+        "kj",
+        label = "Weight Firm j (kj):",
+        min = 0,
+        max = 1,
+        value = 0,
+        step = 0.1
+      ),
+      hr(),
+      helpText("Original concept by Flavio Toxvaerd (University of Cambridge).")
+    ),
+
+    mainPanel(
+      tabsetPanel(
+        tabPanel(
+          "Interactive Graph",
+          br(),
+          plotOutput("cournotPlot", height = "550px")
+        ),
+        tabPanel(
+          "Mathematical Details",
+          withMathJax(),
+          h3("The Model"),
+          p("The inverse demand function is given by:"),
+          p("$$p = a - b(q_i + q_j)$$"),
+          p(
+            "The Best Response (Reaction) functions are derived from profit maximization:"
+          ),
+          p("$$R_i(q_j): q_i = \\frac{a - c_i - b q_j}{2b}$$"),
+          p("$$R_j(q_i): q_j = \\frac{a - c_j - b q_i}{2b}$$"),
+          h4("Key Points"),
+          tags$ul(
+            tags$li(
+              "The ",
+              strong("Cournot Equilibrium"),
+              " (Green Dot) is the intersection of the two reaction curves."
+            ),
+            tags$li(
+              "The ",
+              strong("Monopoly Points"),
+              " represent where a firm would produce if the rival produced 0."
+            )
+          ),
+          h4("Equilibrium Quantities"),
+          p("Solving the system yields the Cournot quantities:"),
+          p(
+            "$$q_i^C = \\frac{a - 2c_i + c_j}{3b}, \\quad q_j^C = \\frac{a - 2c_j + c_i}{3b}$$"
+          )
+        )
+      )
+    )
+  )
+)
+
+# Server Definition
+server <- function(input, output, session) {
+  # Reactive Data Calculation
+  model_data <- reactive({
+    a <- input$a
+    b <- input$b
+    ci <- input$ci
+    cj <- input$cj
+
+    # 1. Cournot Equilibrium quantities (Intersection of reaction functions)
+    # Derived from solving the system of FOCs
+    qi_cournot <- (a - 2 * ci + cj) / (3 * b)
+    qj_cournot <- (a - 2 * cj + ci) / (3 * b)
+
+    # Clamp negative equilibrium quantities to 0
+    qi_cournot <- max(0, qi_cournot)
+    qj_cournot <- max(0, qj_cournot)
+
+    # 2. Monopoly Quantities (if the other firm produces 0)
+    qi_mon <- (a - ci) / (2 * b)
+    qj_mon <- (a - cj) / (2 * b)
+
+    list(
+      qi_c = qi_cournot,
+      qj_c = qj_cournot,
+      qi_m = qi_mon,
+      qj_m = qj_mon
+    )
+  })
+
+  # Plot Rendering
+  output$cournotPlot <- renderPlot({
+    a <- input$a
+    b <- input$b
+    ci <- input$ci
+    cj <- input$cj
+    ki <- input$ki
+    kj <- input$kj
+
+    vals <- model_data()
+
+    # Grid setup for Iso-profit contours
+    # We create a grid of (qi, qj) to calculate profit surfaces
+    grid_lim <- 10 # Matches the PlotRange in original
+    grid_step <- 0.1
+    qi_vec <- seq(0, grid_lim, by = grid_step)
+    qj_vec <- seq(0, grid_lim, by = grid_step)
+    grid <- expand.grid(qi = qi_vec, qj = qj_vec)
+
+    # Calculate Profits for the grid
+    # Profit_i = qi * (a - b(qi + qj) - ci)
+    grid$pi_i <- grid$qi * (a - b * (grid$qi + grid$qj) - ci)
+    grid$pi_j <- grid$qj * (a - b * (grid$qi + grid$qj) - cj)
+
+    # Calculate Target Profit Levels based on k sliders
+    # Profit at Cournot Equilibrium
+    pi_i_cournot <- vals$qi_c * (a - b * (vals$qi_c + vals$qj_c) - ci)
+    pi_j_cournot <- vals$qj_c * (a - b * (vals$qi_c + vals$qj_c) - cj)
+
+    # Profit at Monopoly Point (Best possible case for the firm alone)
+    # For Firm i: at (qi_m, 0)
+    pi_i_mon <- vals$qi_m * (a - b * vals$qi_m - ci)
+    # For Firm j: at (0, qj_m)
+    pi_j_mon <- vals$qj_m * (a - b * vals$qj_m - cj)
+
+    # Interpolate target profit based on k (linear interpolation between Cournot profit and Monopoly profit)
+    target_pi_i <- (1 - ki) * pi_i_cournot + ki * pi_i_mon
+    target_pi_j <- (1 - kj) * pi_j_cournot + kj * pi_j_mon
+
+    # Data for Reaction Functions (Best Response Lines)
+    # Ri: qi = (a - ci - b*qj) / 2b  =>  qj = (a - ci)/b - 2qi
+    # Rj: qj = (a - cj - b*qi) / 2b
+
+    # Plotting
+    ggplot() +
+      # 45-degree line (Diagonal)
+      geom_abline(
+        slope = 1,
+        intercept = 0,
+        linetype = "dashed",
+        color = "gray50"
+      ) +
+
+      # Iso-profit Contours
+      geom_contour(
+        data = grid,
+        aes(x = qi, y = qj, z = pi_i),
+        breaks = target_pi_i,
+        color = "blue",
+        linetype = "dotted",
+        linewidth = 0.8
+      ) +
+      geom_contour(
+        data = grid,
+        aes(x = qi, y = qj, z = pi_j),
+        breaks = target_pi_j,
+        color = "red",
+        linetype = "dotted",
+        linewidth = 0.8
+      ) +
+
+      # Reaction Functions
+      # Firm i Best Response: Ri(qj) expressed as qj = (a-ci)/b - 2*qi
+      stat_function(
+        fun = function(qi) (a - ci) / b - 2 * qi,
+        xlim = c(0, min(10, (a - ci) / (2 * b))),
+        color = "blue",
+        linewidth = 1.2
+      ) +
+
+      # Firm j Best Response: Rj(qi) expressed as qj = (a - cj - b*qi) / (2b)
+      stat_function(
+        fun = function(qi) (a - cj - b * qi) / (2 * b),
+        xlim = c(0, min(10, (a - cj) / b)),
+        color = "red",
+        linewidth = 1.2
+      ) +
+
+      # Points of Interest
+      # Cournot Equilibrium (Green Dot)
+      annotate(
+        "point",
+        x = vals$qi_c,
+        y = vals$qj_c,
+        color = "green",
+        size = 5
+      ) +
+
+      # Monopoly Points (Black Dots)
+      annotate("point", x = vals$qi_m, y = 0, color = "black", size = 3) +
+      annotate("point", x = 0, y = vals$qj_m, color = "black", size = 3) +
+
+      # Labels for reaction functions
+      annotate(
+        "text",
+        x = 8,
+        y = max(0.5, (a - ci) / b - 16),
+        label = "R[i](q[j])",
+        parse = TRUE,
+        color = "blue",
+        size = 5
+      ) +
+      annotate(
+        "text",
+        x = 8,
+        y = (a - cj - b * 8) / (2 * b) + 0.8,
+        label = "R[j](q[i])",
+        parse = TRUE,
+        color = "red",
+        size = 5
+      ) +
+
+      # Formatting
+      coord_cartesian(xlim = c(0, 10), ylim = c(0, 10)) +
+      labs(
+        title = "Homogeneous Goods Cournot Best Responses",
+        x = expression(paste("Firm i Quantity (", q[i], ")")),
+        y = expression(paste("Firm j Quantity (", q[j], ")"))
+      ) +
+      theme_econ
+  })
+}
+
+# Run the app
+shinyApp(ui = ui, server = server)

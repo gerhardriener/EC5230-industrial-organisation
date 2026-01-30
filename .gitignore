@@ -1,5 +1,23 @@
-# R and renv
-.Rproj.user
+# -----------------------------
+# OS junk
+# -----------------------------
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# -----------------------------
+# Editor / IDE
+# -----------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# -----------------------------
+# R / RStudio
+# -----------------------------
+.Rproj.user/
 .Rhistory
 .RData
 .Ruserdata
@@ -7,11 +25,9 @@
 renv/
 renv.lock
 
-# Python and venv
-venv/
-.venv/
-env/
-ENV/
+# -----------------------------
+# Python
+# -----------------------------
 __pycache__/
 *.py[cod]
 *$py.class
@@ -19,45 +35,53 @@ __pycache__/
 .Python
 pip-log.txt
 pip-delete-this-directory.txt
-.ipynb_checkpoints
-_freeze/
 
-# Quarto
-/.quarto/
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# -----------------------------
+# Jupyter / notebooks
+# -----------------------------
+.ipynb_checkpoints/
+
+# -----------------------------
+# Quarto / rendering artefacts
+# -----------------------------
+.quarto/
 _site/
 .quarto_cache/
 *_cache/
 *_files/
-_output/
-_OLD/
-docs/
-site_libs/
 *.quarto_ipynb
-apps/
-.github/copilot-instructions.md
+_freeze/
+site_libs/
 
-# Course resources
+# If you intentionally generate to a custom folder, add it explicitly:
+# _output/
+
+# -----------------------------
+# Shiny deployment
+# -----------------------------
+rsconnect/
+
+# -----------------------------
+# Course resources (generated)
+# -----------------------------
 _resources/
 resources/
 
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# OS
-.DS_Store
-Thumbs.db
-Desktop.ini
-
-# Temporary files
+# -----------------------------
+# Misc / temporary
+# -----------------------------
 *.tmp
 *.bak
 *.log
 
-# Shiny
-rsconnect/
-
-**/*.quarto_ipynb
+# NOTE:
+# - Removed `apps/` (likely should be versioned for your Shiny apps / materials)
+# - Removed `.github/copilot-instructions.md` (you are actively maintaining it)
+# - Removed duplicate `**/*.quarto_ipynb` (already covered by `*.quarto_ipynb`)
+# - Consider whether you really want to ignore `_OLD/` and `docs/`; add back if needed
