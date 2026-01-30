@@ -85,3 +85,6 @@ resources/
 # - Removed `.github/copilot-instructions.md` (you are actively maintaining it)
 # - Removed duplicate `**/*.quarto_ipynb` (already covered by `*.quarto_ipynb`)
 # - Consider whether you really want to ignore `_OLD/` and `docs/`; add back if needed
+
+/.quarto/
+**/*.quarto_ipynb

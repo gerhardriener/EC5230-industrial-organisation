@@ -1,10 +1,18 @@
 ---
 title: "Exercise 1: Oligopoly and Product Differentiation"
 params:
-    solution: false
+  solution: false
 format:
-    html: default
-    pdf: default
+  html:
+    toc: false
+    embed-resources: true
+  pdf:
+    documentclass: article
+    fontsize: 11pt
+    geometry: margin=1in
+    colorlinks: true
+    linkcolor: blue
+    urlcolor: blue
 ---
 
 **Instructions**
@@ -15,31 +23,32 @@ format:
 
 ## Problem 1: Welfare analysis
 
-Consider the example exercise in Lecture 1, where  
+Consider the example exercise in Lecture 1, where
 
-$P = 20 - Q$  
+$P = 20 - Q$
 
-and there are three firms with cost function $c_i(q_i) = c_i q_i$ with  
+and there are three firms with cost function $c_i(q_i) = c_i q_i$ with
 
 $c_1 = 0$, $c_2 = 5$, and $c_3 = 7$.
 
-#### (a)
+### (a)
 
 Compute the Nash equilibrium of the Cournot duopoly game between firm 1 and firm 2.
 
-#### (b)
+### (b)
 
 Given your answer to (a), compute the equilibrium profits, consumer surplus, and welfare loss.
 
-#### (c)
+### (c)
 
-Compare the values in (b) to those of the other three market structures (“perfect competition”, “monopoly”, Cournot triopoly) in Lecture 1. Discuss any policy implications for a social planner who maximises total welfare.
+Compare the values in (b) to those of the other three market structures (perfect competition, monopoly, Cournot triopoly) in Lecture 1. Discuss any policy implications for a social planner who maximises total welfare.
 
+{{< if params.solution >}}
 ::: {.solution}
 
 ## Solution
 
-#### (a)
+### (a)
 
 The best response functions are
 
@@ -57,7 +66,7 @@ q_1^D = \frac{25}{3},
 q_2^D = \frac{10}{3}.
 $$
 
-#### (b)
+### (b)
 
 The equilibrium price is
 
@@ -68,14 +77,14 @@ $$
 Consumer surplus is therefore
 
 $$
-CS^D = \frac{1}{2} \left( \frac{35}{3} \right)^2 = \frac{1225}{18},
+CS^D = \frac{1}{2}\left(\frac{35}{3}\right)^2 = \frac{1225}{18},
 $$
 
 and producer surplus is
 
 $$
 PS^D = \Pi_1 + \Pi_2
-= \left( \frac{25}{3} \right)^2 + \left( \frac{10}{3} \right)^2
+= \left(\frac{25}{3}\right)^2 + \left(\frac{10}{3}\right)^2
 = \frac{725}{9}.
 $$
 
@@ -86,11 +95,9 @@ WL^D = 200 - \frac{1225}{18} - \frac{725}{9}
 = \frac{925}{18}.
 $$
 
-#### (c)
+### (c)
 
-Similar to the Cournot triopoly, the Cournot duopoly maximises neither consumer surplus nor producer surplus.
-
-The values for all three welfare components are between those of monopoly and Cournot triopoly:
+The values for all three welfare components fall between those of monopoly and Cournot triopoly:
 
 $$
 CS^M < CS^D < CS^T,
@@ -100,11 +107,11 @@ PS^M > PS^D > PS^T,
 WL^M < WL^D < WL^T.
 $$
 
-As the number of producing firms increases (monopoly $\to$ Cournot duopoly $\to$ Cournot triopoly), prices fall, consumer surplus increases, producer surplus decreases, and the deadweight loss triangle becomes smaller.
-
-However, total welfare $(CS + PS)$ decreases because welfare loss increases. This reflects a growing inefficiency in the allocation of output across firms: a larger share of production is carried out by less efficient firms.
-
+As the number of producing firms increases (monopoly $\to$ Cournot duopoly $\to$ Cournot triopoly), prices fall and consumer surplus increases, but production is reallocated toward higher-cost firms (reducing productive efficiency).
 :::
+{{< endif >}}
+
+\newpage
 
 ## Problem 2: Linear Hotelling model with monopoly
 
@@ -118,7 +125,7 @@ $$
 U = B - a - p,
 $$
 
-where $p$ is the price of a meal and $B$ is a constant.  
+where $p$ is the price of a meal and $B$ is a constant.
 
 If the consumer does not eat at the restaurant, utility is
 
@@ -126,88 +133,55 @@ $$
 U^* = 0.
 $$
 
-#### (a)
+### (a)
 
 Suppose $0 < B < 1$. Find the number of consumers eating at the restaurant. Calculate the monopoly price and profit.
 
-#### (b)
+### (b)
 
 Answer the previous question assuming $B > 1$.
 
+{{< if params.solution >}}
 ::: {.solution}
-
 
 ## Solution
 
-#### (a)
+### (a)
 
-Let $d_m$ denote the distance of the marginal consumer from the restaurant. This consumer is indifferent between eating and not eating:
-
-$$
-U = U^*
-\quad \Longleftrightarrow \quad
-B - d_m - p = 0,
-$$
-
-which implies
+Let $d_m$ denote the distance of the marginal consumer from the restaurant. Indifference implies
 
 $$
+B - d_m - p = 0
+\quad \Rightarrow \quad
 d_m = B - p.
-$$
-
-Total demand is therefore
-
-$$
-q = 2 d_m = 2(B - p).
-$$
-
-As a monopolist, the restaurant solves
-
-$$
-\max_p \ \Pi(p) = p \cdot 2(B - p) = 2(Bp - p^2).
-$$
-
-The first-order condition is
-
-$$
-2(B - 2p) = 0
-\quad \Longrightarrow \quad
-p^M = \frac{B}{2}.
 $$
 
 Demand is
 
 $$
-q^M = 2\left(B - \frac{B}{2}\right) = B,
+q = 2 d_m = 2(B - p).
 $$
 
-and profit is
+The monopolist solves
 
 $$
-\Pi^M = \frac{B}{2} \cdot B = \frac{B^2}{2}.
+\max_p \ \Pi(p) = p \cdot 2(B - p).
 $$
 
-#### (b)
+FOC implies $p^M=\frac{B}{2}$, hence $q^M=B$ and $\Pi^M=\frac{B^2}{2}$.
 
-The solution in part (a) assumes $d_m = B - p < \tfrac{1}{2}$, i.e. that both marginal consumers are located inside the interval $[0,1]$.
+### (b)
 
-At the price $p^M=\frac{B}{2}$, the implied marginal consumers are at distance $d_m=\frac{B}{2}$ from the restaurant.
+For $B>1$, the unconstrained solution implies $d_m=\frac{B}{2}>\frac{1}{2}$, but demand cannot exceed 1, so $q=1$.
 
-For $B>1$, we have $d_m>\tfrac{1}{2}$, so demand is capped at $q=1$.
-
-Thus, the restaurant sets the price such that the marginal consumers are exactly at the two ends of the interval. Indifference at distance $\tfrac{1}{2}$ gives
+The monopolist sets price so the marginal consumers are exactly at the endpoints ($d=\frac{1}{2}$):
 
 $$
 B - \frac{1}{2} - p = 0
-\quad \Longrightarrow \quad
+\quad \Rightarrow \quad
 p^* = B - \frac{1}{2}.
 $$
 
-Since $q^* = 1$, profit is
-
-$$
-\Pi^* = B - \frac{1}{2}.
-$$
-
-
+Then $\Pi^*=p^*\cdot 1 = B - \frac{1}{2}$.
 :::
+{{< endif >}}

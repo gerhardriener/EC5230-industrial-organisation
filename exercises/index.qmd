@@ -8,13 +8,9 @@ Practice exercises for EC5230 Industrial Organisation. Each part includes a vers
 
 ### Exercise Sets
 
-| Part | Problems | Solutions |
-|------|----------|-----------|
-| Part 1 | [Problems](ExercisesPart1_nosol.pdf) | [Solutions](ExercisesPart1_sol.pdf) |
-| Part 2 | [Problems](ExercisesPart2_nosol.pdf) | [Solutions](ExercisesPart2_sol.pdf) |
-| Part 3 | [Problems](ExercisesPart3_nosol.pdf) | [Solutions](ExercisesPart3_sol.pdf) |
-| Part 4 | [Problems](ExercisesPart4_nosol.pdf) | [Solutions](ExercisesPart4_sol.pdf) |
-| Part 5 | [Problems](ExercisesPart5_nosol.pdf) | [Solutions](ExercisesPart5_sol.pdf) |
+| Set | Problems (HTML) | Problems (PDF) | Solutions (HTML) | Solutions (PDF) |
+|---|---|---|---|---|
+| Exercise 1 | [Problems](exercises-1.html) | [Problems](exercises-1.pdf) | [Solutions](exercises-1-solutions.html) | [Solutions](exercises-1-solutions.pdf) |
 
 : {.striped .hover}
 
