@@ -166,7 +166,7 @@ $selectionColor: $mainColor;
     >li {
         margin: 10px 0;
         line-height: 1.4;
-        padding-left: 1em;  // Add padding so wrapped text aligns
+        padding-left: 1em;  // Space for wrapped text
 
         &::before {
             content: "▸";
@@ -190,6 +190,7 @@ $selectionColor: $mainColor;
 .reveal li>ol {
     margin-top: 10px;
     margin-bottom: 6px;
+    padding-left: 1.5em;  // Add left padding for nested lists
 }
 
 // ============================================================================
