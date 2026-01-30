@@ -161,36 +161,52 @@ $selectionColor: $mainColor;
 // LISTS
 // ============================================================================
 .reveal ul {
-    list-style: none;
+    list-style: disc;
+    list-style-position: outside;
+    padding-left: 1.2em;
 
     >li {
         margin: 10px 0;
         line-height: 1.4;
-        padding-left: 1em;  // Space for wrapped text
-
-        &::before {
-            content: "▸";
-            color: $sta-blue;
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em;
-        }
+        padding-left: 0;
     }
 }
 
 .reveal ol {
+    list-style-position: outside;
+    padding-left: 1.4em;
+
     >li {
         margin: 10px 0;
         line-height: 1.4;
+        padding-left: 0;
     }
 }
 
-.reveal li>ul,
-.reveal li>ol {
-    margin-top: 10px;
+// Nested lists
+.reveal ul ul {
+    list-style: circle;
+    margin-top: 8px;
     margin-bottom: 6px;
-    padding-left: 1.5em;  // Add left padding for nested lists
+    padding-left: 1.2em;
+}
+
+.reveal ul ul ul {
+    list-style: square;
+}
+
+// Disable any custom bullets
+.reveal ul > li::before,
+.reveal li > ul > li::before {
+    content: none !important;
+}
+
+// Fix lists inside callouts or after paragraphs
+.reveal .callout ul,
+.reveal p + ul,
+.reveal div + ul {
+    margin-left: 0;  // Reset any inherited margin
+    padding-left: 0; // Reset any inherited padding
 }
 
 // ============================================================================
@@ -316,6 +332,7 @@ $selectionColor: $mainColor;
     padding: 14px 18px;
     margin: 18px 0;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    font-size: 1em;
 
     &.callout-note {
         border-left: 5px solid $sta-blue;
@@ -347,6 +364,11 @@ $selectionColor: $mainColor;
         .callout-title {
             color: #859900;
         }
+    }
+
+    .callout-title,
+    .callout-content {
+        font-size: 1em;
     }
 
     .callout-title {
