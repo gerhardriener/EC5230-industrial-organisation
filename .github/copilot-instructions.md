@@ -1,212 +1,135 @@
-# **Copilot Instructions for EC5230 – Industrial Organisation**
+# Copilot Instructions for EC5230 – Industrial Organisation
 
-## **Course Context**
-
-This is a **formal MSc-level Industrial Organisation course** at the **University of St Andrews**.
-All content must follow **textbook microeconomic standards** (Tirole, Vives, Shy, Cabral, Belleflamme & Peitz).
-
-This is **not** a blog, not a policy site, and not popular economics.
-It is a **theory-first course** designed for **exam-grade economic reasoning**.
+These are **course-authoring rules** for EC5230 (MSc-level Industrial Organisation, University of St Andrews).
+Output must be **exam-usable lecture notes**: theory-first, canonical notation, minimal but complete.
 
 ---
 
-# **I. Pedagogical and Epistemic Discipline**
+## 0. Non-negotiables (always)
 
-## **1. No Hallucinated Theory**
-
-Never invent:
-
-- equilibrium concepts
-- welfare criteria
-- strategic effects
-- terminology
-
-Every concept must be:
-
-- **standard** (Nash equilibrium, best response, residual demand, elasticity, etc.), or
-- **explicitly defined** on the slide.
+- **No hallucinated theory**: do **not** invent equilibrium concepts, welfare criteria, strategic effects, or non-standard terminology.
+- **Textbook IO standards** only (Tirole, Vives, Shy, Cabral, Belleflamme & Peitz).
+- **One primary object per slide** (model / equilibrium / intuition / comparative statics / evidence / implication).
+- **Math hygiene**
+  - Inline math uses `$...$`
+  - Display math uses `$$ ... $$`
+  - Define all symbols when first introduced
+  - Classify variables: **choice**, **parameter**, **equilibrium outcome**
+- **No narrative fluff**: no anecdotes; no untethered policy commentary.
+- **Model-consistent examples** only (numerical examples must satisfy the model logic).
 
 ---
 
-## **2. One Core Economic Object per Slide**
+## 1. Slide grammar (required structure)
 
-Each slide must have **one primary object**:
+Each slide must follow:
 
-- model
-- equilibrium
-- intuition
-- comparative statics
-- evidence
-- policy implication
+- Slide title uses `##` and **names the economic object**
+- Slide body is one of: **Definition / Model / Result / Intuition / Implication**
 
-Other content may support this object but not replace it.
+**Do not** use rhetorical titles (“Why this matters”, “A surprising fact”, etc.).
 
 ---
 
-## **3. Slide Grammar**
+## 2. Density limits (hard)
 
-Each slide has:
+Choose exactly one of the following patterns:
 
-**Title (`##`)** → names an **economic object**
+- **Bullets**: 4–10 bullets (max 12)
+- **Equations**: 1–2 equations + 2–5 bullets
+- **Figure**: 1-2 figure + 3–5 bullets
 
-Then one of:
-
-- Definition
-- Model
-- Result
-- Intuition
-- Implication
-
-No rhetorical titles.
-
----
-
-## **4. Mathematical Hygiene**
-
-All equations:
-
-- use `$` and `$$`
-- are standard or derived later
-- define all variables
-- classify variables as choice, parameter, or equilibrium outcome
-
----
-
-## **5. No Narrative Fluff**
-
-No anecdotes.
-No filler.
-No untethered policy talk.
-
----
-
-## **6. Model-Consistent Examples**
-
-All examples must satisfy equilibrium logic.
-
----
-
-## **7. Visuals Encode Theory**
-
-All curves and objects must be named.
-
----
-
-## **8. Slides Are Lecture Notes**
-
-Readable, exam-usable, minimal but complete.
-
-pre but last slide: summary and next week’s topics.
-last slide: references, just with ## so that bibliography tool picks them up.
-
----
-
-## **9. Exams Are the Target**
-
-Every slide must support at least one exam-type question.
-
----
-
-## **10. Stability Over Creativity**
-
-Preserve notation and canonical order.
-
----
-
-# **II. Slide Types**
-
-Each slide is one of:
-
-- **MODEL**
-- **NARRATIVE**
-- **HYBRID** (≥80% one purpose + ≤20% anchor)
-
----
-
-# **III. Density and Interpretation**
-
-Target per slide:
-
-- 4–10 bullets
-- or 1–2 equations + 2–5 bullets
-- or 1 figure + 3–6 bullets
-
-Hard limits:
+Hard limits per slide:
 
 - max 12 bullets
 - max 2 equations
-- max 1 figure
+- max 2 figure
 
-MODEL and HYBRID slides should include **equation + interpretation**.
-
----
-
-# **IV. Formatting**
-
-Always leave a blank line **before and after lists**.
+If you exceed limits, split into multiple slides.
 
 ---
 
-# **V. Slide Linting**
+## 3. Formatting rules (Markdown/Quarto)
 
-Slides must satisfy:
-
-- clear type
-- correct title
-- correct density
-- symbols defined
-- narrative not introducing theory
-- forward logical flow
-- exam usability
+- Always leave a blank line **before and after lists**.
+- Keep paragraphs short; prefer bullets.
+- Use consistent notation across slides; do not rename objects mid-lecture.
 
 ---
 
-# **VI. University of St Andrews Visual Identity**
+## 4. Callout boxes (allowed, but controlled)
 
-## **Typefaces**
+Callouts are permitted when they **reduce clutter** and highlight one key point.
 
-Use official University fonts:
+Recommended callouts:
 
-- **Primary:** PT Sans
-  `font-family: 'PT Sans', Helvetica, Arial, sans-serif;`
-- **Secondary (long text only):** PT Serif
-  `font-family: 'PT Serif', Georgia, 'Times New Roman', serif;`
+- `::: {.callout-note}` for definitions/assumptions
+- `::: {.callout-important}` for key results/comparative statics
+- `::: {.callout-warning}` for caveats (e.g., existence, knife-edge assumptions)
 
-Slides must use **PT Sans** for all headings and body text.
+Rules:
 
----
-
-## **Colour System**
-
-Use only official University colours.
-
-### **Primary**
-
-| Meaning              | Colour                          |
-| -------------------- | ------------------------------- |
-| Institutional anchor | **St Andrews Blue** `#00539b`   |
-| Critical / warning   | **St Andrews Red** `#ee312a`    |
-| Highlight / key      | **St Andrews Yellow** `#ffdf00` |
-| Text                 | **St Andrews Black** `#231f20`  |
-
-### **Secondary (plots only)**
-
-| Use         | Colour               |
-| ----------- | -------------------- |
-| Firm 1      | Mid Blue `#007dc5`   |
-| Firm 2      | Burgundy `#c60c46`   |
-| Efficient   | Green `#54b948`      |
-| Inefficient | Dark Green `#005953` |
-| Optional    | Purple `#7b439a`     |
-| Optional    | Orange `#f5842b`     |
-
-White must be used generously.
+- Max **one** callout per slide (exception: a second _very short_ callout if it replaces ≥2 bullets).
+- Callouts must not introduce new theory: only restate/interpret what is already on the slide.
 
 ---
 
-# **VII. ggplot2 Standards**
+## 5. Lecture endings (required)
 
-Use:
+For every **lecture slide deck**:
+
+- **Pre-but-last slide**: `## Summary and next week`
+  - Include `**Summary**` (3–6 bullets)
+  - Include `**Next week:**` (3–6 bullets)
+
+- **Last slide**: `## References`
+  - Use only references / citations.
+  - Keep the heading exactly `## References` so the bibliography tool can detect it.
+
+---
+
+## 6. Citations, bibliography, and clickable links
+
+- Use Pandoc citekeys in text: `[@key]` (or `Following @key` when appropriate).
+- Ensure bibliographic entries include **DOI or URL when available** so students can click.
+- If a CSL style is used, prefer one that prints `https://doi.org/...` when `DOI` exists, otherwise prints `URL`.
+
+---
+
+## 7. University of St Andrews visual identity
+
+### Typefaces
+
+- Use **PT Sans** for all headings and body text.
+- Secondary serif fonts only for long text blocks (avoid in slides).
+
+### Colour palette (restricted)
+
+Use only official colours:
+
+**Primary**
+
+- St Andrews Blue `#00539b`
+- St Andrews Red `#ee312a`
+- St Andrews Yellow `#ffdf00`
+- St Andrews Black `#231f20`
+
+**Secondary (plots only)**
+
+- Mid Blue `#007dc5`
+- Burgundy `#c60c46`
+- Green `#54b948`
+- Dark Green `#005953`
+- Optional Purple `#7b439a`
+- Optional Orange `#f5842b`
+
+Use white generously.
+
+---
+
+## 8. ggplot2 standards (R)
+
+Use the course theme:
 
 ```r
 theme_econ <- theme_minimal() + theme(
@@ -217,43 +140,41 @@ theme_econ <- theme_minimal() + theme(
 )
 ```
 
-### Colour rules
+Rules:
 
-- Use only St Andrews palette
-- Never more than **4 colours**
-- Never rely on colour alone — always also use linetype, shape, or labels
+- Use only St Andrews palette (≤4 colours)
+- Do **not** rely on colour alone: also use linetype/shape/labels
 - Must remain interpretable in grayscale
 
 ---
 
-# Tikz diagrams
+## 9. TikZ diagrams
 
-The tikz diagrams use a function to integrate them into quarto workflow. Use the template in `lecture-slides\diagram-templates.qmd` for consistency.
+Use the template in `lecture-slides/diagram-templates.qmd` for consistency.
 
 ---
 
-# **VIII. Shiny Apps**
+## 10. Shiny apps (if requested)
 
 Each app must:
 
 - illustrate one model
-- show equilibrium
-- show formulas
+- show equilibrium and formulas
 - label all curves and equilibria
-- use theme_econ
+- use `theme_econ`
 
 ---
 
-# **IX. File Structure**
+## 11. File structure (conventions)
 
-Slides → `lecture-slides/markdown/`
-Theme → `lecture-slides/theme/`
-Apps → `shiny-apps/`
-Exercises → `exercises/`
+- Slides: `lecture-slides/`
+- Theme: `lecture-slides/theme/`
+- Apps: `shiny-apps/`
+- Exercises: `exercises/`
 
 ---
 
-# **X. Rendering**
+## 12. Quarto rendering
 
 Use:
 
@@ -266,20 +187,35 @@ All `.qmd` must be listed in `_quarto.yml`.
 
 ---
 
-# **XI. Final Integrity Check**
+## 13. Exercises (tutorial handouts)
 
-Before accepting output:
+Use the template: `exercises/exercise-template.qmd`.
 
-- no hallucinated theory
-- equations standard or derived
-- variables defined
-- examples consistent
-- density correct
-- hybrid obeys 80/20
-- St Andrews colours only
-- grayscale-safe plots
-- blank lines around lists
+Requirements:
+
+- Provide **both** HTML and PDF outputs.
+- Math delimiters must be `$` and `$$`.
+- Set the **solution toggle in YAML** to `false`.
+- Exercises must align with the lecture’s learning objectives.
+- Include a mix of:
+  - a short derivation/check question
+  - a numerical computation question
+  - an interpretation/comparative statics question
+- Keep instructions concise and error-free.
 
 ---
+
+## 14. Final integrity checklist (must pass)
+
+Before accepting output, verify:
+
+- no hallucinated theory
+- equations standard or derived later
+- all symbols defined and classified
+- examples consistent with equilibrium logic
+- slide density and structure correct
+- colours/typography compliant
+- blank lines around lists
+- ending slides: `## Summary and next week` then `## References`
 
 **End of EC5230 Copilot Instructions**
