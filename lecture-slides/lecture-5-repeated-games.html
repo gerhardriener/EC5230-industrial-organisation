@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.9.17">
 
   <meta name="author" content="Gerhard Riener">
-  <title>EC5230 Industrial Organisation – Lecture 2 – Product Differentiation</title>
+  <title>EC5230 Industrial Organisation – Lecture 5 – Multi-stage Games</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -31,7 +31,26 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-c8f7d67119958a5f3562ddf0dfec595e.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -132,7 +151,7 @@
     <div class="slides">
 
 <section id="title-slide" data-background-color="#00539b" class="quarto-title-block center">
-  <h1 class="title">Lecture 2 – Product Differentiation</h1>
+  <h1 class="title">Lecture 5 – Multi-stage Games</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -143,8 +162,13 @@ Gerhard Riener
 </div>
 
 </section>
-<section id="product-differentiation-overview" class="slide level2">
-<h2>Product differentiation: overview</h2>
+<section>
+<section id="multi-stage-games" class="title-slide slide level1 center" data-background-color="#00539b">
+<h1>Multi-stage Games</h1>
+
+</section>
+<section id="multi-stage-games-overview" class="slide level2">
+<h2>Multi-stage games: overview</h2>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -154,123 +178,30 @@ Gerhard Riener
 <p><strong>Object of analysis</strong></p>
 </div>
 <div class="callout-content">
-<p>Horizontal differentiation: products differ in <em>characteristics</em>; consumers incur mismatch costs.</p>
+<p>How commitment in earlier stages changes equilibrium behaviour in later stages.</p>
 </div>
 </div>
 </div>
 <ul>
-<li><strong>Horizontal v vertical differentiation</strong>
+<li>So far:
 <ul>
-<li>What determines demand when prices are equal?</li>
-<li>How does variety interact with quantity?</li>
+<li>Mostly simultaneous-move games</li>
+<li>Briefly: two-stage game (<span class="citation" data-cites="shyIndustrialOrganizationTheory1995">Shy (<a href="#/references" role="doc-biblioref" onclick="">1995</a>)</span> model in Lecture 4)</li>
 </ul></li>
-<li><strong>Focus today: horizontal product differentiation</strong>
+<li>Today:
 <ul>
-<li>Linear Hotelling model (two firms)</li>
-<li>Salop’s circular market (free entry)</li>
+<li>Stackelberg quantity leadership</li>
+<li>Strategic delegation <span class="citation" data-cites="vickersDelegationTheoryFirm1985">(<a href="#/references" role="doc-biblioref" onclick="">Vickers, 1985</a>)</span></li>
 </ul></li>
 </ul>
 </section>
-<section id="linear-hotelling-model-setting" class="slide level2">
-<h2>Linear Hotelling model: setting</h2>
+<section id="solution-concept-subgame-perfect-equilibrium" class="slide level2">
+<h2>Solution concept: subgame perfect equilibrium</h2>
 <ul>
-<li><strong>Market structure</strong>
+<li><p>A strategy profile is a <strong>subgame perfect Nash equilibrium (SPNE)</strong> if it induces a Nash equilibrium in every subgame</p></li>
+<li><p>Operationally (finite horizon):</p>
 <ul>
-<li>Duopoly; zero marginal cost</li>
-<li>Linear market of length <span class="math inline">\(L\)</span>; consumers uniformly distributed</li>
-<li>Each consumer buys either 1 unit or nothing</li>
-</ul></li>
-<li><strong>Preference parameters</strong>
-<ul>
-<li>Firm 1 located at distance <span class="math inline">\(a\)</span> from left endpoint (0)</li>
-<li>Firm 2 located at distance <span class="math inline">\(b\)</span> from right endpoint (<span class="math inline">\(L\)</span>)</li>
-<li>Linear transport cost: <span class="math inline">\(C(d)=cd\)</span> where <span class="math inline">\(d\)</span> is distance and <span class="math inline">\(c&gt;0\)</span></li>
-</ul></li>
-<li><strong>Objects</strong>
-<ul>
-<li>Choice variables: <span class="math inline">\(p_1, p_2\)</span></li>
-<li>Parameters: <span class="math inline">\(L, a, b, c\)</span></li>
-<li>Equilibrium outcomes: <span class="math inline">\(x, y, q_1, q_2\)</span></li>
-</ul></li>
-</ul>
-
-<img data-src="figs/fig-hotelling-fixed-location.svg" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="linear-hotelling-pricing-with-fixed-locations-firm-1" class="slide level2">
-<h2>Linear Hotelling: pricing with fixed locations (Firm 1)</h2>
-<ul>
-<li><strong>Demand derivation</strong>
-<ul>
-<li>Marginal consumer indifferent: <span class="math inline">\(p_1 + cx = p_2 + cy\)</span></li>
-<li>Market length: <span class="math inline">\(L = a + b + x + y\)</span></li>
-<li>Firm 1 demand: <span class="math inline">\(q_1 = a + x = \frac{p_2 - p_1 + c(L + a - b)}{2c}\)</span></li>
-</ul></li>
-<li><strong>Profit and best response</strong>
-<ul>
-<li><span class="math inline">\(\pi_1 = p_1 q_1\)</span></li>
-<li><span class="math inline">\(BR_1(p_2)=\frac{p_2}{2}+\frac{c}{2}(L+a-b)\)</span></li>
-</ul></li>
-</ul>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Interpretation (best response)</strong></p>
-</div>
-<div class="callout-content">
-<ul>
-<li><span class="math inline">\(BR_1\)</span> is increasing in <span class="math inline">\(p_2\)</span> (prices are strategic complements here)</li>
-<li>Larger <span class="math inline">\(c\)</span> softens competition, shifting best responses upward</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section id="linear-hotelling-pricing-with-fixed-locations-firm-2" class="slide level2">
-<h2>Linear Hotelling: pricing with fixed locations (Firm 2)</h2>
-<ul>
-<li><strong>Demand derivation</strong>
-<ul>
-<li>Marginal consumer indifferent: <span class="math inline">\(p_1 + cx = p_2 + cy\)</span></li>
-<li>Market length: <span class="math inline">\(L = a + b + x + y\)</span></li>
-<li>Firm 2 demand: <span class="math inline">\(q_2 = b + y = \frac{p_1 - p_2 + c(L + b - a)}{2c}\)</span></li>
-</ul></li>
-<li><strong>Profit and best response</strong>
-<ul>
-<li><span class="math inline">\(\pi_2 = p_2 q_2\)</span></li>
-<li><span class="math inline">\(BR_2(p_1)=\frac{p_1}{2}+\frac{c}{2}(L+b-a)\)</span></li>
-</ul></li>
-</ul>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Interpretation (symmetry)</strong></p>
-</div>
-<div class="callout-content">
-<ul>
-<li>If <span class="math inline">\(a=b\)</span>, best responses are symmetric and yield <span class="math inline">\(p_1^*=p_2^*\)</span></li>
-</ul>
-</div>
-</div>
-</div>
-
-<img data-src="figs/fig-hotelling-fixed-location.svg" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="linear-hotelling-model-nash-equilibrium-in-prices" class="slide level2">
-<h2>Linear Hotelling model: Nash equilibrium in prices</h2>
-<ul>
-<li><strong>Best responses</strong>
-<ul>
-<li><span class="math inline">\(BR_1(p_2) = \frac{p_2}{2} + \frac{c}{2}(L + a - b)\)</span></li>
-<li><span class="math inline">\(BR_2(p_1) = \frac{p_1}{2} + \frac{c}{2}(L + b - a)\)</span></li>
-</ul></li>
-<li><strong>Nash equilibrium prices and profits</strong>
-<ul>
-<li><span class="math inline">\(p_1^* = c\left(L + \frac{a-b}{3}\right)\)</span>; <span class="math inline">\(p_2^* = c\left(L + \frac{b-a}{3}\right)\)</span></li>
-<li><span class="math inline">\(\pi_1^* = \frac{c}{18}(3L + a - b)^2\)</span>; <span class="math inline">\(\pi_2^* = \frac{c}{18}(3L + b - a)^2\)</span></li>
+<li>Solve from the last stage backward (backward induction)</li>
 </ul></li>
 </ul>
 <div class="callout callout-important callout-titled callout-style-default">
@@ -279,22 +210,468 @@ Gerhard Riener
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Key comparative static</strong></p>
+<p><strong>Commitment logic</strong></p>
 </div>
 <div class="callout-content">
-<p>Higher mismatch cost <span class="math inline">\(c\)</span> lowers substitutability and raises equilibrium markups and profits.</p>
+<p>A first-stage action changes the feasible set faced by later movers (via best responses), not the payoff function.</p>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="stackelberg-competition" class="title-slide slide level1 center" data-background-color="#00539b">
+<h1>Stackelberg competition</h1>
+
+</section>
+<section id="stackelberg-model-structure" class="slide level2">
+<h2>Stackelberg model: structure</h2>
+<ul>
+<li><p>Two stages, two firms:</p>
+<ol type="1">
+<li>Leader chooses <span class="math inline">\(q_1\)</span></li>
+<li>Follower observes <span class="math inline">\(q_1\)</span> and chooses <span class="math inline">\(q_2\)</span></li>
+</ol></li>
+<li><p>Demand and costs:</p>
+<ul>
+<li>Inverse demand: <span class="math inline">\(p(Q)=A-Q\)</span> with <span class="math inline">\(Q=q_1+q_2\)</span></li>
+<li>Marginal cost: <span class="math inline">\(c\)</span> (parameter)</li>
+</ul></li>
+</ul>
+</section>
+<section id="stackelberg-model-follower-best-response" class="slide level2">
+<h2>Stackelberg model: follower best response</h2>
+<ul>
+<li>Follower profit given <span class="math inline">\(q_1\)</span>:</li>
+</ul>
+<p><span class="math display">\[
+\pi_2(q_2;q_1) = (A-q_1-q_2-c)q_2
+\]</span></p>
+<ul>
+<li>Best response:</li>
+</ul>
+<p><span class="math display">\[
+BR_2(q_1)=\frac{A-c-q_1}{2}
+\]</span></p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Strategic substitutes (quantities)</strong></p>
+</div>
+<div class="callout-content">
+<p>Quantities are strategic substitutes: when the rival increases output, my best-response output decreases (downward-sloping best response).</p>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="stackelberg-model-leader-choice" class="title-slide slide level1 center">
+<h1>Stackelberg model: leader choice</h1>
+<ul>
+<li>Substitute follower response into leader profit:</li>
+</ul>
+<p><span class="math display">\[
+\pi_1(q_1) = (A-q_1-BR_2(q_1)-c)q_1
+\]</span></p>
+<ul>
+<li>Equilibrium (identical costs):
+<ul>
+<li><span class="math inline">\(q_1^S=\frac{A-c}{2}\)</span></li>
+<li><span class="math inline">\(q_2^S=\frac{A-c}{4}\)</span></li>
+</ul></li>
+</ul>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>First-mover advantage</strong></p>
+</div>
+<div class="callout-content">
+<p>The leader commits to a higher <span class="math inline">\(q_1\)</span>, anticipating that the follower reduces <span class="math inline">\(q_2\)</span>.</p>
 </div>
 </div>
 </div>
 </section>
-<section id="linear-hotelling-model-incentive-to-move-co-location" class="slide level2">
-<h2>Linear Hotelling model: incentive to move (co-location)</h2>
+<section id="stackelberg-v-cournot-equilibrium-outcomes" class="slide level2">
+<h2>Stackelberg v Cournot: equilibrium outcomes</h2>
 <ul>
-<li><strong>If firms locate at the same point</strong>
+<li>Identical marginal costs (<span class="math inline">\(c\)</span>) imply:</li>
+</ul>
+<table class="caption-top">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 36%">
+<col style="width: 36%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Outcome</th>
+<th style="text-align: right;">Stackelberg</th>
+<th style="text-align: right;">Cournot</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Firm 1 output</td>
+<td style="text-align: right;"><span class="math inline">\(q_1^S=\frac{A-c}{2}\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(q_1^C=\frac{A-c}{3}\)</span></td>
+</tr>
+<tr class="even">
+<td>Firm 2 output</td>
+<td style="text-align: right;"><span class="math inline">\(q_2^S=\frac{A-c}{4}\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(q_2^C=\frac{A-c}{3}\)</span></td>
+</tr>
+<tr class="odd">
+<td>Aggregate output</td>
+<td style="text-align: right;"><span class="math inline">\(Q^S=\frac{3(A-c)}{4}\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(Q^C=\frac{2(A-c)}{3}\)</span></td>
+</tr>
+<tr class="even">
+<td>Price</td>
+<td style="text-align: right;"><span class="math inline">\(p^S=\frac{A+3c}{4}\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(p^C=\frac{A+2c}{3}\)</span></td>
+</tr>
+<tr class="odd">
+<td>Firm 1 profit</td>
+<td style="text-align: right;"><span class="math inline">\(\pi_1^S=\frac{(A-c)^2}{8}\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(\pi_1^C=\frac{(A-c)^2}{9}\)</span></td>
+</tr>
+<tr class="even">
+<td>Firm 2 profit</td>
+<td style="text-align: right;"><span class="math inline">\(\pi_2^S=\frac{(A-c)^2}{16}\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(\pi_2^C=\frac{(A-c)^2}{9}\)</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="stackelberg-model-remarks" class="slide level2">
+<h2>Stackelberg model: remarks</h2>
 <ul>
-<li>Then <span class="math inline">\(a + b = L\)</span> and the marginal consumer collapses to the location point: <span class="math inline">\(x=y=0\)</span></li>
-<li>Products become homogeneous <span class="math inline">\(\Rightarrow\)</span> Bertrand undercutting</li>
-<li>Unique equilibrium: <span class="math inline">\(p_1^B=p_2^B=0\)</span> and <span class="math inline">\(\pi_1^B=\pi_2^B=0\)</span></li>
+<li><p>Comparative statics questions:</p>
+<ul>
+<li>What changes when marginal costs are asymmetric?</li>
+<li>What changes if the timing is endogenous (announcement/commitment issues)?</li>
+</ul></li>
+</ul>
+</section>
+<section id="stackelberg-numerical-example-a10-c1" class="slide level2">
+<h2>Stackelberg: numerical example (<span class="math inline">\(A=10\)</span>, <span class="math inline">\(c=1\)</span>)</h2>
+<ul>
+<li><p>Parameters: <span class="math inline">\(A=10\)</span> (demand intercept), <span class="math inline">\(c=1\)</span> (marginal cost)</p></li>
+<li><p>Stackelberg outcomes:</p>
+<ul>
+<li><span class="math inline">\(q_1^S=\frac{A-c}{2}=4.5\)</span>; <span class="math inline">\(q_2^S=\frac{A-c}{4}=2.25\)</span></li>
+<li><span class="math inline">\(Q^S=6.75\)</span>; <span class="math inline">\(p^S=A-Q^S=3.25\)</span></li>
+<li><span class="math inline">\(\pi_1^S=(p^S-c)q_1^S=10.125\)</span></li>
+</ul></li>
+<li><p>Cournot benchmark:</p>
+<ul>
+<li><span class="math inline">\(\pi_1^C=\frac{(A-c)^2}{9}=9\)</span></li>
+</ul></li>
+</ul>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Concrete comparison</strong></p>
+</div>
+<div class="callout-content">
+<p>With <span class="math inline">\(A=10\)</span>, <span class="math inline">\(c=1\)</span>: <span class="math inline">\(\pi_1^S=10.125 &gt; \pi_1^C=9\)</span> (first-mover advantage).</p>
+</div>
+</div>
+</div>
+</section>
+<section id="stackelberg-welfare-comparison-to-cournot" class="slide level2">
+<h2>Stackelberg: welfare comparison (to Cournot)</h2>
+<ul>
+<li><p>With linear demand <span class="math inline">\(p=A-Q\)</span> and constant marginal cost <span class="math inline">\(c\)</span>:</p>
+<ul>
+<li>Higher total output implies lower price <span class="math inline">\(\Rightarrow\)</span> higher consumer surplus (CS)</li>
+<li>Stackelberg yields <span class="math inline">\(Q^S&gt;\,Q^C\)</span> (hence <span class="math inline">\(CS^S&gt;CS^C\)</span>)</li>
+</ul></li>
+<li><p>Total surplus changes because:</p>
+<ul>
+<li>CS rises with <span class="math inline">\(Q\)</span></li>
+<li>profits can rise for the leader and fall for the follower relative to Cournot</li>
+</ul></li>
+</ul>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Exam-useful statement</strong></p>
+</div>
+<div class="callout-content">
+<p>Stackelberg leadership typically increases output relative to Cournot, so it is (weakly) better for consumers.</p>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="strategic-delegation-vickers" class="title-slide slide level1 center" data-background-color="#00539b">
+<h1>Strategic delegation (Vickers)</h1>
+
+</section>
+<section id="delegation-economic-idea" class="slide level2">
+<h2>Delegation: economic idea</h2>
+<ul>
+<li><p>Firms may delegate output choice to managers with objectives that differ from pure profit maximisation</p></li>
+<li><p>Delegation instrument:</p>
+<ul>
+<li>an incentive parameter <span class="math inline">\(\theta_i\)</span> written into the manager’s contract</li>
+</ul></li>
+</ul>
+</section>
+<section id="delegation-vickers-model" class="slide level2">
+<h2>Delegation (Vickers): model</h2>
+<ul>
+<li><p>Cournot oligopoly with <span class="math inline">\(n\)</span> firms: <span class="math inline">\(i=1,\dots,n\)</span></p></li>
+<li><p>Manager of firm <span class="math inline">\(i\)</span> maximises:</p></li>
+</ul>
+<p><span class="math display">\[
+M_i=\pi_i+\theta_i q_i
+\]</span></p>
+<p>where <span class="math inline">\(\pi_i=p(Q)q_i-cq_i\)</span> and <span class="math inline">\(Q=\sum_i q_i\)</span></p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Equivalent formulation</strong></p>
+</div>
+<div class="callout-content">
+<p><span class="math inline">\(M_i = p(Q)q_i - (c-\theta_i)q_i\)</span> so <span class="math inline">\(\theta_i\)</span> shifts the manager’s objective like a reduction in marginal cost.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Commitment assumption</strong></p>
+</div>
+<div class="callout-content">
+<p>For delegation to affect rivals’ behaviour, contracts must be:</p>
+<ul>
+<li>observable (rivals see <span class="math inline">\(\theta_i\)</span>)</li>
+<li>binding (owners cannot override managers after <span class="math inline">\(\theta_i\)</span> is set)</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="delegation-triopoly-exercise-setup" class="slide level2">
+<h2>Delegation: triopoly exercise (setup)</h2>
+<ul>
+<li><p>Cournot triopoly: <span class="math inline">\(i=1,2,3\)</span></p></li>
+<li><p>Demand: <span class="math inline">\(p(Q)=A-Q\)</span></p></li>
+<li><p>Identical marginal costs: <span class="math inline">\(c\)</span></p></li>
+<li><p>Managers: <span class="math inline">\(\theta_i \ge 0\)</span></p></li>
+<li><p>Task:</p>
+<ul>
+<li>Solve the <span class="math inline">\(\theta\)</span>-setting game given the induced Cournot equilibrium in <span class="math inline">\((q_1,q_2,q_3)\)</span></li>
+</ul></li>
+</ul>
+</section>
+<section id="delegation-triopoly-solution-steps" class="slide level2">
+<h2>Delegation: triopoly solution steps</h2>
+<ul>
+<li><p><strong>Step 1 (product-market subgame)</strong>: given <span class="math inline">\((\theta_1,\theta_2,\theta_3)\)</span>, managers play Cournot and determine <span class="math inline">\(q_i^*(\theta)\)</span></p></li>
+<li><p><strong>Step 2 (contract stage)</strong>: each owner chooses <span class="math inline">\(\theta_i\)</span> to maximise own profit <span class="math inline">\(\pi_i(\theta_i;\theta_{-i})\)</span></p></li>
+<li><p><strong>Step 3 (equilibrium incentives)</strong>: solve the system of best responses in <span class="math inline">\(\theta\)</span></p>
+<ul>
+<li>in symmetry: <span class="math inline">\(\theta_1=\theta_2=\theta_3=\hat{\theta}\)</span></li>
+</ul></li>
+</ul>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Exam template</strong></p>
+</div>
+<div class="callout-content">
+<p>Two-stage delegation problems are solved exactly like Stackelberg: solve the quantity subgame first, then solve the incentive-setting stage.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="delegation-triopoly-equilibrium-given" class="slide level2">
+<h2>Delegation: triopoly equilibrium (given)</h2>
+<p>Cournot–Nash equilibrium outcomes (given incentives <span class="math inline">\(\theta_i\)</span>):</p>
+<p><span class="math display">\[
+q_i^*=\frac{1}{4}\left(A-c+3\theta_i-\sum_{j\ne i}\theta_j\right)
+\]</span></p>
+<p><span class="math display">\[
+p^*=\frac{1}{4}\left(A+3c-\sum_i \theta_i\right)
+\]</span></p>
+<ul>
+<li>Interpretation:
+<ul>
+<li>Increasing <span class="math inline">\(\theta_i\)</span> shifts <span class="math inline">\(q_i^*\)</span> up; rivals’ incentives are strategic substitutes in outputs through <span class="math inline">\(Q\)</span></li>
+</ul></li>
+</ul>
+</section>
+<section id="delegation-solving-for-equilibrium-incentives" class="slide level2">
+<h2>Delegation: solving for equilibrium incentives</h2>
+<p><strong>Owner’s problem</strong> (taking rivals’ incentives as given):</p>
+<ul>
+<li>Owner maximises profit (not managerial utility):</li>
+</ul>
+<p><span class="math display">\[
+\max_{\theta_i \ge 0}\ \pi_i^*(\theta_i;\theta_{-i})=\big(p^*(\theta)-c\big)\,q_i^*(\theta)
+\]</span></p>
+<p><strong>First-order condition</strong>:</p>
+<p><span class="math display">\[
+\frac{\partial \pi_i^*(\theta_i;\theta_{-i})}{\partial \theta_i}=0
+\]</span></p>
+<ul>
+<li>Solving the three FOCs gives a best-response system in <span class="math inline">\((\theta_1,\theta_2,\theta_3)\)</span></li>
+<li>In symmetry, <span class="math inline">\(\theta_i=\hat{\theta}\)</span> for all <span class="math inline">\(i\)</span>, implying <span class="math inline">\(\hat{\theta}=\frac{1}{5}(A-c)\)</span></li>
+</ul>
+</section>
+<section id="delegation-best-response-in-incentives-triopoly" class="slide level2">
+<h2>Delegation: best response in incentives (triopoly)</h2>
+<p>Define the rivals’ average incentive:</p>
+<p><span class="math display">\[
+\bar{\theta}_{-i}=\frac{1}{n-1}\sum_{j\ne i}\theta_j \quad (n=3)
+\]</span></p>
+<p>A reduced-form best response for the owner’s incentive choice can be written as:</p>
+<p><span class="math display">\[
+\theta_i = BR(\theta_{-i})=\frac{1}{3}(A-c)-\frac{2}{3}\bar{\theta}_{-i}
+\]</span></p>
+<ul>
+<li>Interpretation:
+<ul>
+<li>Higher rival incentives make rivals more aggressive, reducing the marginal gain from raising <span class="math inline">\(\theta_i\)</span></li>
+</ul></li>
+</ul>
+</section>
+<section id="delegation-symmetric-equilibrium-fixed-point" class="slide level2">
+<h2>Delegation: symmetric equilibrium (fixed point)</h2>
+<p>In symmetry, <span class="math inline">\(\theta_i=\bar{\theta}_{-i}=\hat{\theta}\)</span> for all <span class="math inline">\(i\)</span>.</p>
+<p><span class="math display">\[
+\hat{\theta}=\frac{1}{3}(A-c)-\frac{2}{3}\hat{\theta}
+\quad \Rightarrow \quad
+\hat{\theta}=\frac{1}{5}(A-c)
+\]</span></p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>What this is doing</strong></p>
+</div>
+<div class="callout-content">
+<p>This is the standard “best-response fixed point” method: compute <span class="math inline">\(BR(\cdot)\)</span>, then impose symmetry.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="delegation-strategic-logic" class="slide level2">
+<h2>Delegation: strategic logic</h2>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Prisoners’ dilemma</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li><strong>Unilateral incentive</strong>: if rivals set <span class="math inline">\(\theta=0\)</span>, I benefit from choosing <span class="math inline">\(\theta_i&gt;0\)</span>
+<ul>
+<li>Positive <span class="math inline">\(\theta_i\)</span> commits my manager to higher output</li>
+<li>Rivals reduce output (quantities are strategic substitutes)</li>
+</ul></li>
+<li><strong>Equilibrium outcome</strong>: all firms choose <span class="math inline">\(\hat{\theta}&gt;0\)</span>
+<ul>
+<li>The strategic advantage disappears when everyone delegates</li>
+<li>Profits fall: <span class="math inline">\(\hat{\pi}&lt;\pi^C\)</span> (overproduction lowers price for all)</li>
+</ul></li>
+</ul>
+<p>Each owner chooses <span class="math inline">\(\theta_i\)</span> optimally given rivals’ choices, but the collective outcome is worse than <span class="math inline">\(\theta=0\)</span>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="delegation-comparison-table-triopoly" class="slide level2">
+<h2>Delegation: comparison table (triopoly)</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 26%">
+<col style="width: 26%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Scenario</th>
+<th style="text-align: right;">Incentives</th>
+<th style="text-align: right;">Per-firm output</th>
+<th style="text-align: right;">Per-firm profit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>All delegate</td>
+<td style="text-align: right;"><span class="math inline">\(\hat{\theta}=\frac{A-c}{5}\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(\hat{q}=\frac{3(A-c)}{10}\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(\hat{\pi}=\frac{3(A-c)^2}{100}\)</span></td>
+</tr>
+<tr class="even">
+<td>None delegate</td>
+<td style="text-align: right;"><span class="math inline">\(\theta=0\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(q^C=\frac{A-c}{4}\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(\pi^C=\frac{(A-c)^2}{16}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>With <span class="math inline">\(A=10\)</span>, <span class="math inline">\(c=1\)</span>:</p>
+<ul>
+<li><span class="math inline">\(\hat{\pi}=2.43\)</span></li>
+<li><span class="math inline">\(\pi^C=5.0625\)</span></li>
+</ul>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Takeaway</strong></p>
+</div>
+<div class="callout-content">
+<p>Delegation is individually rational in the incentive-setting game but reduces profits in equilibrium.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="delegation-numerical-example-a10-c1" class="slide level2">
+<h2>Delegation: numerical example (<span class="math inline">\(A=10\)</span>, <span class="math inline">\(c=1\)</span>)</h2>
+<ul>
+<li><p>Parameters: <span class="math inline">\(A=10\)</span>, <span class="math inline">\(c=1\)</span></p></li>
+<li><p>Delegation equilibrium:</p>
+<ul>
+<li><span class="math inline">\(\hat{\theta}=\frac{A-c}{5}=1.8\)</span></li>
+<li>Per-firm profit: <span class="math inline">\(\hat{\pi}=\frac{3(A-c)^2}{100}=2.43\)</span></li>
+</ul></li>
+<li><p>Cournot triopoly benchmark (<span class="math inline">\(\theta_i=0\)</span>):</p>
+<ul>
+<li>Per-firm profit: <span class="math inline">\(\pi^C=\frac{(A-c)^2}{16}=5.0625\)</span></li>
 </ul></li>
 </ul>
 <div class="callout callout-warning callout-titled callout-style-default">
@@ -303,40 +680,26 @@ Gerhard Riener
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Co-location and price competition</strong></p>
+<p><strong>Concrete comparison</strong></p>
 </div>
 <div class="callout-content">
-<p>Co-location removes captive consumers; any <span class="math inline">\(p&gt;0\)</span> can be profitably undercut.</p>
+<p>With <span class="math inline">\(A=10\)</span>, <span class="math inline">\(c=1\)</span>: <span class="math inline">\(\hat{\pi}=2.43 &lt; \pi^C=5.0625\)</span> (delegation intensifies competition and lowers profits).</p>
 </div>
 </div>
 </div>
-
-<img data-src="figs/fig-hotelling-movement-location.svg" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="linear-hotelling-model-incentive-to-move-separated" class="slide level2">
-<h2>Linear Hotelling model: incentive to move (separated)</h2>
-<ul>
-<li><strong>Marginal incentive to increase own location parameter</strong>
-<ul>
-<li><span class="math inline">\(\frac{\partial \pi_1^*}{\partial a} = \frac{c}{9}(3L + a - b) &gt; 0\)</span></li>
-<li><span class="math inline">\(\frac{\partial \pi_2^*}{\partial b} = \frac{c}{9}(3L + b - a) &gt; 0\)</span></li>
-</ul></li>
-<li><strong>Interpretation (pricing subgame only)</strong>
-<ul>
-<li>Increasing <span class="math inline">\(a\)</span> (resp. <span class="math inline">\(b\)</span>) moves Firm 1 (resp. Firm 2) inward (toward the centre)</li>
-<li>These are comparative statics of equilibrium profits in the pricing subgame, holding the rival location fixed</li>
-</ul></li>
-</ul>
 </section>
-<section id="linear-hotelling-model-location-equilibrium-linear-v-quadratic-transport" class="slide level2">
-<h2>Linear Hotelling model: location equilibrium (linear v quadratic transport)</h2>
+<section id="delegation-welfare-comparison-to-cournot-triopoly" class="slide level2">
+<h2>Delegation: welfare comparison (to Cournot triopoly)</h2>
 <ul>
-<li><strong>Result (standard)</strong>
+<li>Delegation increases effective aggressiveness in output:
 <ul>
-<li>With linear transport costs (<span class="math inline">\(C(d)=cd\)</span>), the full two-stage location game may fail to have a pure-strategy equilibrium in locations</li>
+<li>equilibrium price is lower than in standard Cournot triopoly</li>
+<li>therefore consumer surplus is higher under delegation than under <span class="math inline">\(\theta_i=0\)</span></li>
 </ul></li>
-<li><strong>Resolution</strong>
+<li>Total surplus effect:
 <ul>
-<li>d’Aspremont, Gabszewicz &amp; Thisse (1979): with quadratic transport costs (<span class="math inline">\(C(d)=td^2\)</span>), a pure-strategy location equilibrium exists (maximum differentiation in their baseline)</li>
+<li>CS rises due to lower price</li>
+<li>profits fall due to overproduction relative to joint-profit motives</li>
 </ul></li>
 </ul>
 <div class="callout callout-note callout-titled callout-style-default">
@@ -345,317 +708,27 @@ Gerhard Riener
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Why convexity matters</strong></p>
+<p><strong>Exam-useful statement</strong></p>
 </div>
 <div class="callout-content">
-<p>More convex mismatch costs make small location changes less effective at stealing marginal consumers through pricing.</p>
+<p>Delegation can be privately attractive ex ante (as a commitment device) but can reduce profits in equilibrium while benefiting consumers.</p>
 </div>
 </div>
 </div>
 </section>
-<section id="linear-hotelling-model-profit-function" class="slide level2">
-<h2>Linear Hotelling model: profit function</h2>
-<p>Profit function of Firm 1 (d’Aspremont, Gabszewicz &amp; Thisse, 1979):</p>
-<p><span class="math display">\[
-\pi_1(p_1, p_2) =
-\begin{cases}
-\frac{p_1 p_2}{2c} - \frac{p_1^2}{2c} + \frac{(L+a-b)p_1}{2}
-&amp; \text{if } |p_1 - p_2| \le c(L - a - b) \\[0.5em]
-Lp_1 &amp; \text{if } p_1 &lt; p_2 - c(L - a - b) \\[0.5em]
-0 &amp; \text{if } p_1 &gt; p_2 + c(L - a - b)
-\end{cases}
-\]</span></p>
-<ul>
-<li><p><strong>Region 1 (interior)</strong>: both firms serve positive mass of consumers; demand is linear in <span class="math inline">\(p_1\)</span></p></li>
-<li><p><strong>Region 2 (market capture)</strong>: Firm 1 undercuts enough to serve the whole line segment</p></li>
-<li><p><strong>Region 3 (no demand)</strong>: Firm 1 sets too high a price; demand is zero</p></li>
-<li><p><strong>Interpretation</strong></p>
-<ul>
-<li>Kinks occur at the thresholds where a marginal consumer hits an endpoint of the market</li>
-<li>Piecewise structure clarifies why global profit maximisation can differ from the interior FOC</li>
-</ul></li>
-</ul>
-
-<img data-src="figs/fig-hotelling-profit-function.svg" class="r-stretch"></section>
-<section id="salops-circular-market-setting" class="slide level2">
-<h2>Salop’s circular market: setting</h2>
-<ul>
-<li><strong>Market structure</strong>
-<ul>
-<li>Two sectors: one with homogeneous outside good; one with differentiated goods</li>
-<li>Circular market circumference normalised to 1; consumers uniformly distributed</li>
-<li><span class="math inline">\(n\)</span> firms symmetrically located; distance between adjacent firms is <span class="math inline">\(\frac{1}{n}\)</span></li>
-<li>Each consumer buys either one unit (from some firm) or the outside good</li>
-</ul></li>
-<li><strong>Objects</strong>
-<ul>
-<li>Choice variable: <span class="math inline">\(p_i\)</span></li>
-<li>Parameters: <span class="math inline">\(n, c, u, u^*\)</span></li>
-<li>Outcomes: market boundary/location cutoffs, quantity per firm</li>
-</ul></li>
-</ul>
-
-<img data-src="figs/fig-salop-cycle.svg" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="salops-circular-market-consumer-utility" class="slide level2">
-<h2>Salop’s circular market: consumer utility</h2>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Participation constraint</strong></p>
-</div>
-<div class="callout-content">
-<p>Let <span class="math inline">\(v=u-u^*\)</span>. A consumer participates in the differentiated sector iff <span class="math inline">\(v \ge p_j + cd_j\)</span>.</p>
-</div>
-</div>
-</div>
-<ul>
-<li><strong>Preference heterogeneity</strong>
-<ul>
-<li>Each consumer <span class="math inline">\(i\)</span> has ideal variety <span class="math inline">\(\ell_i^*\)</span> (location on the circle)</li>
-<li>Linear transport (mismatch) cost: <span class="math inline">\(cd\)</span> where <span class="math inline">\(d\)</span> is arc distance</li>
-</ul></li>
-<li><strong>Utility from purchase</strong>
-<ul>
-<li>Buy outside good: <span class="math inline">\(U^O = u^*\)</span></li>
-<li>Buy from firm <span class="math inline">\(j\)</span>: <span class="math inline">\(U_j^D = u - c d_j - p_j\)</span></li>
-</ul></li>
-<li><strong>Participation condition</strong>
-<ul>
-<li>Consumer buys from firm <span class="math inline">\(j\)</span> iff <span class="math inline">\(U_j^D \ge U^O\)</span></li>
-<li>Let <span class="math inline">\(v = u - u^*\)</span>, so participation is <span class="math inline">\(v \ge p_j + c d_j\)</span></li>
-</ul></li>
-<li><strong>Interpretation</strong>
-<ul>
-<li><span class="math inline">\(v\)</span> is the net gross surplus from consuming a perfectly matched differentiated variety rather than the outside good</li>
-<li>Transport costs convert “distance in product space” into a monetary disutility</li>
-</ul></li>
-</ul>
-</section>
-<section id="salops-circular-market-monopoly-region-no-competition" class="slide level2">
-<h2>Salop’s circular market: monopoly region (no competition)</h2>
-<ul>
-<li><p><strong>Monopoly scenario</strong></p>
-<ul>
-<li>Firm’s market is truncated by the outside option (participation), not by neighbouring firms</li>
-</ul></li>
-<li><p><strong>Maximum distance</strong>: <span class="math inline">\(d_m = \frac{v - p}{c}\)</span></p></li>
-<li><p><strong>Monopoly demand</strong>: <span class="math inline">\(q^M = 2 d_m = 2\left(\frac{v-p}{c}\right)\)</span></p></li>
-<li><p><strong>Inverse demand</strong>: <span class="math inline">\(p = v - \frac{c}{2} q^M\)</span></p></li>
-<li><p><strong>Interpretation</strong></p>
-<ul>
-<li>Demand slope is <span class="math inline">\(-\frac{c}{2}\)</span> because increasing quantity expands the served interval on <strong>both sides</strong> of the firm</li>
-<li>Participation binds at the marginal consumer: <span class="math inline">\(v = p + cd_m\)</span></li>
-</ul></li>
-</ul>
-</section>
-<section id="salops-circular-market-competitive-region-with-neighbors" class="slide level2">
-<h2>Salop’s circular market: competitive region (with neighbors)</h2>
-<ul>
-<li><strong>Competitive scenario</strong>
-<ul>
-<li>Market boundary determined by indifference between this firm and neighbour(s)</li>
-</ul></li>
-<li><strong>Indifference condition</strong>
-<ul>
-<li>Main firm: <span class="math inline">\(v - cx - p\)</span></li>
-<li>Neighbour: <span class="math inline">\(v - c\left(\frac{1}{n} - x\right) - \tilde{p}\)</span></li>
-</ul></li>
-<li><strong>Solve for boundary</strong>
-<ul>
-<li><span class="math inline">\(cx - p = c\left(\frac{1}{n} - x\right) - \tilde{p}\)</span></li>
-<li><span class="math inline">\(x = \frac{\frac{c}{n} - p + \tilde{p}}{2c}\)</span></li>
-</ul></li>
-<li><strong>Interpretation</strong>
-<ul>
-<li>The boundary <span class="math inline">\(x\)</span> depends on both own price <span class="math inline">\(p\)</span> and neighbour price <span class="math inline">\(\tilde p\)</span></li>
-</ul></li>
-</ul>
-</section>
-<section id="salops-circular-market-competitive-demand-and-inverse-demand" class="slide level2">
-<h2>Salop’s circular market: competitive demand and inverse demand</h2>
-<ul>
-<li><p><strong>Competitive demand</strong>: <span class="math inline">\(q^C = 2x = \frac{\frac{c}{n} - p + \tilde{p}}{c}\)</span></p></li>
-<li><p><strong>Inverse demand</strong>: <span class="math inline">\(p = \frac{c}{n} + \tilde{p} - c q^C\)</span></p></li>
-</ul>
-<div class="callout callout-important callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Slope comparison</strong></p>
-</div>
-<div class="callout-content">
-<p>Competitive-region inverse demand is steeper than monopoly-region inverse demand: <span class="math inline">\(-c\)</span> vs <span class="math inline">\(-\frac{c}{2}\)</span>.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="salops-circular-market-kinked-demand" class="slide level2">
-<h2>Salop’s circular market: kinked demand</h2>
-<ul>
-<li><strong>Firm’s choice between regimes</strong>
-<ul>
-<li><strong>Monopoly region</strong>: constrained by participation (outside option)</li>
-<li><strong>Competitive region</strong>: constrained by neighbours (local oligopoly)</li>
-</ul></li>
-<li><strong>Interpretation</strong>
-<ul>
-<li>As parameters change (e.g.&nbsp;<span class="math inline">\(v, c, n\)</span>), the relevant constraint switches, generating a kink in the inverse demand</li>
-<li>This matters for pricing incentives because marginal revenue changes discretely at the regime boundary</li>
-</ul></li>
-</ul>
-</section>
-<section id="salops-circular-market-kinked-demand-location-of-kink" class="slide level2">
-<h2>Salop’s circular market: kinked demand (location of kink)</h2>
-<ul>
-<li><strong>Two candidate constraints</strong>
-<ul>
-<li><strong>Participation</strong> binds when the marginal consumer is indifferent between firm <span class="math inline">\(i\)</span> and the outside good: <span class="math inline">\(v = p + cd\)</span></li>
-<li><strong>Neighbour</strong> competition binds when the marginal consumer is indifferent between firm <span class="math inline">\(i\)</span> and neighbour: <span class="math inline">\(v - cx - p = v - c(\frac{1}{n}-x) - \tilde p\)</span></li>
-</ul></li>
-<li><strong>Kink</strong>
-<ul>
-<li>The relevant constraint switches at the quantity where the two implied boundaries coincide</li>
-</ul></li>
-</ul>
-
-<img data-src="figs/fig-salop-demand-comp-mon.svg" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="salops-circular-market-free-entry-equilibrium-supply-side" class="slide level2">
-<h2>Salop’s circular market: free-entry equilibrium (supply side)</h2>
-<ul>
-<li><strong>Cost structure</strong>
-<ul>
-<li><span class="math inline">\(C(q)=F + mq\)</span> with fixed cost <span class="math inline">\(F\)</span> and constant marginal cost <span class="math inline">\(m\)</span></li>
-<li>Average cost: <span class="math inline">\(AC(q)=m+\frac{F}{q}\)</span> is decreasing in <span class="math inline">\(q\)</span></li>
-</ul></li>
-<li><strong>Firm choice in competitive region</strong>
-<ul>
-<li>Demand: <span class="math inline">\(p = \frac{c}{n} + \tilde{p} - cq\)</span></li>
-<li>Best response: <span class="math inline">\(MR = MC\)</span> where <span class="math inline">\(MR = \frac{c}{n} + \tilde{p} - 2cq\)</span></li>
-</ul></li>
-<li><strong>Assumption</strong>: equilibrium is in competitive region for all firms; by symmetry <span class="math inline">\(\tilde{p} = p\)</span></li>
-</ul>
-</section>
-<section id="salops-circular-market-free-entry-equilibrium-zero-profit-condition" class="slide level2">
-<h2>Salop’s circular market: free-entry equilibrium (zero-profit condition)</h2>
-<ul>
-<li><strong>Symmetric competitive equilibrium</strong>
-<ul>
-<li>In symmetry: <span class="math inline">\(p=\tilde{p}\)</span> and <span class="math inline">\(q^C=\frac{1}{n}\)</span></li>
-</ul></li>
-<li><strong>Zero profit condition (free entry)</strong>
-<ul>
-<li><span class="math inline">\(p^C = AC = m + \frac{F}{q^C}\)</span></li>
-<li>Substitute <span class="math inline">\(q^C = \frac{1}{n}\)</span>: <span class="math inline">\(p^C = m + nF\)</span></li>
-</ul></li>
-<li><strong>Interpretation</strong>
-<ul>
-<li>Free entry drives firms to earn zero economic profit</li>
-<li>Entry cost <span class="math inline">\(F\)</span> creates a trade-off: more firms means lower profit per firm</li>
-</ul></li>
-</ul>
-</section>
-<section id="salops-circular-market-free-entry-equilibrium-first-order-condition" class="slide level2">
-<h2>Salop’s circular market: free-entry equilibrium (first-order condition)</h2>
-<ul>
-<li><strong>First-order condition (optimal quantity)</strong>
-<ul>
-<li><span class="math inline">\(MR = MC\)</span> ⇔ <span class="math inline">\(p^C + q^C \frac{dp^C}{dq^C} = m\)</span></li>
-<li>Slope in competitive region: <span class="math inline">\(\frac{dp}{dq} = -c\)</span></li>
-<li>Therefore: <span class="math inline">\(p^C - cq^C = m\)</span> ⇔ <span class="math inline">\(p^C = m + \frac{c}{n}\)</span></li>
-</ul></li>
-<li><strong>Solve for equilibrium</strong>
-<ul>
-<li>Equate zero-profit and FOC: <span class="math inline">\(m + nF = m + \frac{c}{n}\)</span></li>
-<li><span class="math inline">\(n^C = \sqrt{\frac{c}{F}}\)</span>; <span class="math inline">\(p^C = m + \sqrt{cF}\)</span></li>
-</ul></li>
-<li><strong>Interpretation</strong>
-<ul>
-<li><span class="math inline">\(n^C\)</span> increases with mismatch intensity <span class="math inline">\(c\)</span> (more differentiation supports more firms)</li>
-<li><span class="math inline">\(n^C\)</span> decreases with fixed cost <span class="math inline">\(F\)</span> (entry becomes less profitable)</li>
-</ul></li>
-</ul>
-</section>
-<section id="salops-circular-market-welfare-analysis-consumer-cost" class="slide level2">
-<h2>Salop’s circular market: welfare analysis (consumer cost)</h2>
-<ul>
-<li><strong>Welfare object</strong>
-<ul>
-<li>Consumers’ average distance to nearest firm: <span class="math inline">\(\bar d = \frac{1}{4n}\)</span> (half the arc between adjacent firms)</li>
-<li>Resource cost of variety: <span class="math inline">\(nF\)</span></li>
-</ul></li>
-<li><strong>Per-consumer utilitarian welfare</strong>
-<ul>
-<li>With quasilinear utility, prices are transfers</li>
-<li><span class="math inline">\(W(n) = v - \frac{c}{4n} - nF\)</span>, where <span class="math inline">\(v = u - u^*\)</span></li>
-</ul></li>
-<li><strong>Interpretation</strong>
-<ul>
-<li>Welfare depends on mismatch costs (↓ in <span class="math inline">\(n\)</span>) and fixed entry costs (↑ in <span class="math inline">\(n\)</span>)</li>
-<li>Social planner internalizes both effects; firms do not</li>
-</ul></li>
-</ul>
-</section>
-<section id="salops-circular-market-welfare-analysis-social-optimum" class="slide level2">
-<h2>Salop’s circular market: welfare analysis (social optimum)</h2>
-<ul>
-<li><strong>Social planner’s problem</strong>: choose <span class="math inline">\(n\)</span> to maximize <span class="math inline">\(W(n)\)</span>
-<ul>
-<li><span class="math inline">\(\frac{dW}{dn} = \frac{c}{4n^2} - F = 0\)</span></li>
-<li><span class="math inline">\(n^S = \frac{1}{2}\sqrt{\frac{c}{F}} = \frac{1}{2} n^C\)</span></li>
-</ul></li>
-<li><strong>Equilibrium v optimum</strong>
-<ul>
-<li>Free-entry equilibrium: <span class="math inline">\(n^C = \sqrt{\frac{c}{F}}\)</span></li>
-<li>Social optimum: <span class="math inline">\(n^S = \frac{1}{2}n^C\)</span></li>
-</ul></li>
-</ul>
-<div class="callout callout-important callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Excess entry</strong></p>
-</div>
-<div class="callout-content">
-<p>In this benchmark, free entry implies <span class="math inline">\(n^C = 2n^S\)</span>.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="summary-references" class="slide level2">
-<h2>Summary &amp; references</h2>
-<p><strong>Summary</strong></p>
-<ul>
-<li>Horizontal differentiation relaxes price competition via consumer mismatch costs</li>
-<li>Hotelling (fixed locations): equilibrium prices increase in transport cost <span class="math inline">\(c\)</span></li>
-<li>Location incentives under linear transport can push toward minimum differentiation; quadratic costs restore a pure-strategy location equilibrium</li>
-<li>Salop (circle): free entry implies <span class="math inline">\(n^C=\sqrt{\frac{c}{F}}\)</span> and excessive entry relative to the social optimum <span class="math inline">\(n^S=\frac{1}{2}n^C\)</span></li>
-</ul>
-<p><strong>References</strong></p>
-<ul>
-<li>Hotelling, H. (1929). Stability in Competition. <em>Economic Journal</em>.</li>
-<li>d’Aspremont, C., Gabszewicz, J. J., &amp; Thisse, J.-F. (1979). On Hotelling’s “Stability in Competition”. <em>Econometrica</em>.</li>
-<li>Salop, S. C. (1979). Monopolistic Competition with Outside Goods. <em>Bell Journal of Economics</em>.</li>
-<li>Belleflamme, P., &amp; Peitz, M. (2015). <em>Industrial Organization: Markets and Strategies</em>. Cambridge University Press.</li>
-</ul>
-</section>
-<section id="next-week-innovation" class="slide level2">
-<h2>Next week: innovation</h2>
-<ul>
-<li>Innovation as a choice under uncertainty</li>
-<li>Market structure and incentives to innovate (replacement effect and entry threat)</li>
-<li>Drastic vs non-drastic innovations</li>
-<li>R&amp;D incentives in oligopoly</li>
-</ul>
+<section id="references" class="slide level2 smaller scrollable">
+<h2>References</h2>
 
 
-</section>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-shyIndustrialOrganizationTheory1995" class="csl-entry" role="listitem">
+<strong>• </strong>Shy, Oz (1995). <em>Industrial organization: Theory and applications</em>. MIT Press, Cambridge, Mass.
+</div>
+<div id="ref-vickersDelegationTheoryFirm1985" class="csl-entry" role="listitem">
+<strong>• </strong>Vickers, John (1985). Delegation and the theory of the firm. <em>The Economic Journal</em>, 95, (Supplement), 138–147 https://doi.org/<a href="https://doi.org/10.2307/2232877">10.2307/2232877</a>.
+</div>
+</div>
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
