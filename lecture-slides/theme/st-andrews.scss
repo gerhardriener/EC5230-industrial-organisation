@@ -193,6 +193,16 @@ $selectionColor: $mainColor;
     padding-left: 1.5em;  // Add left padding for nested lists
 }
 
+// Remove custom bullet from nested list items
+.reveal li>ul>li {
+    &::before {
+        content: none;
+    }
+    padding-left: 0;  // Reset padding to avoid double-indentation
+    list-style-type: disc;  // Use default browser bullet
+    list-style-position: outside;  // Bullet sits outside the text block
+}
+
 // ============================================================================
 // EMPHASIS
 // ============================================================================
