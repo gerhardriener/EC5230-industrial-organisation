@@ -166,6 +166,7 @@ $selectionColor: $mainColor;
     >li {
         margin: 10px 0;
         line-height: 1.4;
+        padding-left: 1em;  // Add padding so wrapped text aligns
 
         &::before {
             content: "▸";
