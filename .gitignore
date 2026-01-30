@@ -33,7 +33,7 @@ _OLD/
 docs/
 site_libs/
 *.quarto_ipynb
-/apps/
+apps/
 
 # Course resources
 _resources/
