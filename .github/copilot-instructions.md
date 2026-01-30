@@ -5,7 +5,7 @@ Output must be **exam-usable lecture notes**: theory-first, canonical notation, 
 
 ---
 
-## 0. Non-negotiables (always)
+## Non-negotiables (always)
 
 - **No hallucinated theory**: do **not** invent equilibrium concepts, welfare criteria, strategic effects, or non-standard terminology.
 - **Textbook IO standards** only (Tirole, Vives, Shy, Cabral, Belleflamme & Peitz).
@@ -20,7 +20,7 @@ Output must be **exam-usable lecture notes**: theory-first, canonical notation, 
 
 ---
 
-## 1. Slide grammar (required structure)
+## Slide grammar (required structure)
 
 Each slide must follow:
 
@@ -31,7 +31,7 @@ Each slide must follow:
 
 ---
 
-## 2. Density limits (hard)
+## Density limits (hard)
 
 Choose exactly one of the following patterns:
 
@@ -49,7 +49,7 @@ If you exceed limits, split into multiple slides.
 
 ---
 
-## 3. Formatting rules (Markdown/Quarto)
+## Formatting rules (Markdown/Quarto)
 
 - Always leave a blank line **before and after lists**.
 - Keep paragraphs short; prefer bullets.
@@ -57,7 +57,7 @@ If you exceed limits, split into multiple slides.
 
 ---
 
-## 4. Callout boxes (allowed, but controlled)
+## Callout boxes (allowed, but controlled)
 
 Callouts are permitted when they **reduce clutter** and highlight one key point.
 
@@ -74,7 +74,7 @@ Rules:
 
 ---
 
-## 5. Lecture endings (required)
+## Lecture endings (required)
 
 For every **lecture slide deck**:
 
@@ -88,7 +88,7 @@ For every **lecture slide deck**:
 
 ---
 
-## 6. Citations, bibliography, and clickable links
+## Citations, bibliography, and clickable links
 
 - Use Pandoc citekeys in text: `[@key]` (or `Following @key` when appropriate).
 - Ensure bibliographic entries include **DOI or URL when available** so students can click.
@@ -96,7 +96,7 @@ For every **lecture slide deck**:
 
 ---
 
-## 7. University of St Andrews visual identity
+## University of St Andrews visual identity
 
 ### Typefaces
 
@@ -127,7 +127,7 @@ Use white generously.
 
 ---
 
-## 8. ggplot2 standards (R)
+## ggplot2 standards (R)
 
 Use the course theme:
 
@@ -148,13 +148,13 @@ Rules:
 
 ---
 
-## 9. TikZ diagrams
+## TikZ diagrams
 
 Use the template in `lecture-slides/diagram-templates.qmd` for consistency.
 
 ---
 
-## 10. Shiny apps (if requested)
+## Shiny apps (if requested)
 
 Each app must:
 
@@ -165,7 +165,7 @@ Each app must:
 
 ---
 
-## 11. File structure (conventions)
+## File structure (conventions)
 
 - Slides: `lecture-slides/`
 - Theme: `lecture-slides/theme/`
@@ -174,7 +174,7 @@ Each app must:
 
 ---
 
-## 12. Quarto rendering
+## Quarto rendering
 
 Use:
 
@@ -187,7 +187,7 @@ All `.qmd` must be listed in `_quarto.yml`.
 
 ---
 
-## 13. Exercises (tutorial handouts)
+## Exercises (tutorial handouts)
 
 Use the template: `exercises/exercise-template.qmd`.
 
@@ -205,7 +205,7 @@ Requirements:
 
 ---
 
-## 14. Final integrity checklist (must pass)
+## Final integrity checklist (must pass)
 
 Before accepting output, verify:
 
