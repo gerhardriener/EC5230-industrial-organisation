@@ -4352,11 +4352,9 @@ $selectionColor: $mainColor;
         font-size: 1em;
     }
 
-    p,
-    ul,
-    ol,
-    li {
-        font-size: 1em;
+    .callout-title {
+        font-weight: 600;
+        margin-bottom: 8px;
     }
 }
 
@@ -4565,7 +4563,7 @@ $selectionColor: $mainColor;
 <section id="c" class="level3">
 <h3 class="anchored" data-anchor-id="c">(c)</h3>
 <p>Compare the values in (b) to those of the other three market structures (perfect competition, monopoly, Cournot triopoly) in Lecture 1. Discuss any policy implications for a social planner who maximises total welfare.</p>
-<p>{{&lt; if params.solution &gt;}} ::: {.solution}</p>
+{{&lt; if params.solution &gt;}}
 </section>
 </section>
 <section id="solution" class="level2">
@@ -4617,7 +4615,8 @@ PS^M &gt; PS^D &gt; PS^T,
 \qquad
 WL^M &lt; WL^D &lt; WL^T.
 \]</span></p>
-<p>As the number of producing firms increases (monopoly <span class="math inline">\(\to\)</span> Cournot duopoly <span class="math inline">\(\to\)</span> Cournot triopoly), prices fall and consumer surplus increases, but production is reallocated toward higher-cost firms (reducing productive efficiency). ::: {{&lt; endif &gt;}}</p>
+<p>As the number of producing firms increases (monopoly <span class="math inline">\(\to\)</span> Cournot duopoly <span class="math inline">\(\to\)</span> Cournot triopoly), prices fall and consumer surplus increases, but production is reallocated toward higher-cost firms (reducing productive efficiency).</p>
+{{&lt; endif &gt;}}
 </section>
 </section>
 <section id="problem-2-linear-hotelling-model-with-monopoly" class="level2">
@@ -4640,7 +4639,7 @@ U^* = 0.
 <section id="b-2" class="level3">
 <h3 class="anchored" data-anchor-id="b-2">(b)</h3>
 <p>Answer the previous question assuming <span class="math inline">\(B &gt; 1\)</span>.</p>
-<p>{{&lt; if params.solution &gt;}} ::: {.solution}</p>
+{{&lt; if params.solution &gt;}}
 </section>
 </section>
 <section id="solution-1" class="level2">
@@ -4672,7 +4671,8 @@ B - \frac{1}{2} - p = 0
 \quad \Rightarrow \quad
 p^* = B - \frac{1}{2}.
 \]</span></p>
-<p>Then <span class="math inline">\(\Pi^*=p^*\cdot 1 = B - \frac{1}{2}\)</span>. ::: {{&lt; endif &gt;}}</p>
+<p>Then <span class="math inline">\(\Pi^*=p^*\cdot 1 = B - \frac{1}{2}\)</span>.</p>
+{{&lt; endif &gt;}}
 
 
 </section>
