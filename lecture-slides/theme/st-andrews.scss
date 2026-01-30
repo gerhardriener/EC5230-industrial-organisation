@@ -332,6 +332,7 @@ $selectionColor: $mainColor;
     padding: 14px 18px;
     margin: 18px 0;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    font-size: 1em;
 
     &.callout-note {
         border-left: 5px solid $sta-blue;
@@ -363,6 +364,11 @@ $selectionColor: $mainColor;
         .callout-title {
             color: #859900;
         }
+    }
+
+    .callout-title,
+    .callout-content {
+        font-size: 1em;
     }
 
     .callout-title {
