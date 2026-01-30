@@ -23,23 +23,23 @@ and there are three firms with cost function $c_i(q_i) = c_i q_i$ with
 
 $c_1 = 0$, $c_2 = 5$, and $c_3 = 7$.
 
-### (a)
+#### (a)
 
 Compute the Nash equilibrium of the Cournot duopoly game between firm 1 and firm 2.
 
-### (b)
+#### (b)
 
 Given your answer to (a), compute the equilibrium profits, consumer surplus, and welfare loss.
 
-### (c)
+#### (c)
 
 Compare the values in (b) to those of the other three market structures (“perfect competition”, “monopoly”, Cournot triopoly) in Lecture 1. Discuss any policy implications for a social planner who maximises total welfare.
 
 ::: {.solution}
 
-# Solution
+## Solution
 
-## (a)
+#### (a)
 
 The best response functions are
 
@@ -57,7 +57,7 @@ q_1^D = \frac{25}{3},
 q_2^D = \frac{10}{3}.
 $$
 
-## (b)
+#### (b)
 
 The equilibrium price is
 
@@ -86,7 +86,7 @@ WL^D = 200 - \frac{1225}{18} - \frac{725}{9}
 = \frac{925}{18}.
 $$
 
-## (c)
+#### (c)
 
 Similar to the Cournot triopoly, the Cournot duopoly maximises neither consumer surplus nor producer surplus.
 
@@ -126,20 +126,20 @@ $$
 U^* = 0.
 $$
 
-### (a)
+#### (a)
 
 Suppose $0 < B < 1$. Find the number of consumers eating at the restaurant. Calculate the monopoly price and profit.
 
-### (b)
+#### (b)
 
 Answer the previous question assuming $B > 1$.
 
 ::: {.solution}
 
 
-# Solution
+## Solution
 
-## (a)
+#### (a)
 
 Let $d_m$ denote the distance of the marginal consumer from the restaurant. This consumer is indifferent between eating and not eating:
 
@@ -187,7 +187,7 @@ $$
 \Pi^M = \frac{B}{2} \cdot B = \frac{B^2}{2}.
 $$
 
-## (b)
+#### (b)
 
 The solution in part (a) assumes $d_m = B - p < \tfrac{1}{2}$, i.e. that both marginal consumers are located inside the interval $[0,1]$.
 
