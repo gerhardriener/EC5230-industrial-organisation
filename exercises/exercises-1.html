@@ -4142,46 +4142,44 @@ $selectionColor: $mainColor;
 // LISTS
 // ============================================================================
 .reveal ul {
-    list-style: none;
+    list-style: disc;
+    list-style-position: outside;
+    padding-left: 1.2em;
 
     >li {
         margin: 10px 0;
         line-height: 1.4;
-        padding-left: 1em;  // Space for wrapped text
-
-        &::before {
-            content: "▸";
-            color: $sta-blue;
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em;
-        }
+        padding-left: 0;
     }
 }
 
 .reveal ol {
+    list-style-position: outside;
+    padding-left: 1.4em;
+
     >li {
         margin: 10px 0;
         line-height: 1.4;
+        padding-left: 0;
     }
 }
 
-.reveal li>ul,
-.reveal li>ol {
-    margin-top: 10px;
+// Nested lists
+.reveal ul ul {
+    list-style: circle;
+    margin-top: 8px;
     margin-bottom: 6px;
-    padding-left: 1.5em;  // Add left padding for nested lists
+    padding-left: 1.2em;
 }
 
-// Remove custom bullet from nested list items
-.reveal li>ul>li {
-    &::before {
-        content: none;
-    }
-    padding-left: 0;  // Reset padding to avoid double-indentation
-    list-style-type: disc;  // Use default browser bullet
-    list-style-position: outside;  // Bullet sits outside the text block
+.reveal ul ul ul {
+    list-style: square;
+}
+
+// Disable any custom bullets
+.reveal ul > li::before,
+.reveal li > ul > li::before {
+    content: none !important;
 }
 
 // Fix lists inside callouts or after paragraphs
