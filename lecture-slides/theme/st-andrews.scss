@@ -371,9 +371,11 @@ $selectionColor: $mainColor;
         font-size: 1em;
     }
 
-    .callout-title {
-        font-weight: 600;
-        margin-bottom: 8px;
+    p,
+    ul,
+    ol,
+    li {
+        font-size: 1em;
     }
 }
 
