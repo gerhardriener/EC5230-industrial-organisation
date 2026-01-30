@@ -44,7 +44,7 @@ Given your answer to (a), compute the equilibrium profits, consumer surplus, and
 Compare the values in (b) to those of the other three market structures (perfect competition, monopoly, Cournot triopoly) in Lecture 1. Discuss any policy implications for a social planner who maximises total welfare.
 
 {{< if params.solution >}}
-::: {.solution}
+
 
 ## Solution
 
@@ -108,7 +108,7 @@ WL^M < WL^D < WL^T.
 $$
 
 As the number of producing firms increases (monopoly $\to$ Cournot duopoly $\to$ Cournot triopoly), prices fall and consumer surplus increases, but production is reallocated toward higher-cost firms (reducing productive efficiency).
-:::
+
 {{< endif >}}
 
 \newpage
@@ -142,7 +142,7 @@ Suppose $0 < B < 1$. Find the number of consumers eating at the restaurant. Calc
 Answer the previous question assuming $B > 1$.
 
 {{< if params.solution >}}
-::: {.solution}
+
 
 ## Solution
 
@@ -183,5 +183,5 @@ p^* = B - \frac{1}{2}.
 $$
 
 Then $\Pi^*=p^*\cdot 1 = B - \frac{1}{2}$.
-:::
+
 {{< endif >}}
