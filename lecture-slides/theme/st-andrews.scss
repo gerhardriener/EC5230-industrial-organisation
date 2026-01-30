@@ -203,6 +203,14 @@ $selectionColor: $mainColor;
     list-style-position: outside;  // Bullet sits outside the text block
 }
 
+// Fix lists inside callouts or after paragraphs
+.reveal .callout ul,
+.reveal p + ul,
+.reveal div + ul {
+    margin-left: 0;  // Reset any inherited margin
+    padding-left: 0; // Reset any inherited padding
+}
+
 // ============================================================================
 // EMPHASIS
 // ============================================================================
