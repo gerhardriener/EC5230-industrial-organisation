@@ -1,0 +1,189 @@
+---
+title: "Exercise 1: Oligopoly and Product Differentiation"
+params:
+  solution: false
+format:
+  html:
+    toc: false
+    embed-resources: true
+    number-sections: false
+  pdf:
+    documentclass: article
+    fontsize: 11pt
+    geometry: margin=1in
+    colorlinks: true
+    linkcolor: blue
+    urlcolor: blue
+    number-sections: false
+---
+
+**Instructions**
+
+- Answer all questions.
+- Show intermediate steps.
+- Solutions are included only when `params.solution: true`.
+
+## Problem 1: Welfare analysis
+
+Consider the example exercise in Lecture 1, where
+
+$P = 20 - Q$
+
+and there are three firms with cost function $c_i(q_i) = c_i q_i$ with
+
+$c_1 = 0$, $c_2 = 5$, and $c_3 = 7$.
+
+### (a)
+
+Compute the Nash equilibrium of the Cournot duopoly game between firm 1 and firm 2.
+
+### (b)
+
+Given your answer to (a), compute the equilibrium profits, consumer surplus, and welfare loss.
+
+### (c)
+
+Compare the values in (b) to those of the other three market structures (perfect competition, monopoly, Cournot triopoly) in Lecture 1. Discuss any policy implications for a social planner who maximises total welfare.
+
+{{< if params.solution >}}
+
+
+## Solution
+
+### (a)
+
+The best response functions are
+
+$$
+q_1 = \frac{20 - q_2}{2}
+\qquad \text{and} \qquad
+q_2 = \frac{15 - q_1}{2}.
+$$
+
+Solving this system yields the equilibrium quantities
+
+$$
+q_1^D = \frac{25}{3},
+\qquad
+q_2^D = \frac{10}{3}.
+$$
+
+### (b)
+
+The equilibrium price is
+
+$$
+P(Q^D) = 20 - \frac{35}{3} = \frac{25}{3}.
+$$
+
+Consumer surplus is therefore
+
+$$
+CS^D = \frac{1}{2}\left(\frac{35}{3}\right)^2 = \frac{1225}{18},
+$$
+
+and producer surplus is
+
+$$
+PS^D = \Pi_1 + \Pi_2
+= \left(\frac{25}{3}\right)^2 + \left(\frac{10}{3}\right)^2
+= \frac{725}{9}.
+$$
+
+The welfare loss is
+
+$$
+WL^D = 200 - \frac{1225}{18} - \frac{725}{9}
+= \frac{925}{18}.
+$$
+
+### (c)
+
+The values for all three welfare components fall between those of monopoly and Cournot triopoly:
+
+$$
+CS^M < CS^D < CS^T,
+\qquad
+PS^M > PS^D > PS^T,
+\qquad
+WL^M < WL^D < WL^T.
+$$
+
+As the number of producing firms increases (monopoly $\to$ Cournot duopoly $\to$ Cournot triopoly), prices fall and consumer surplus increases, but production is reallocated toward higher-cost firms (reducing productive efficiency).
+
+{{< endif >}}
+
+\newpage
+
+## Problem 2: Linear Hotelling model with monopoly
+
+Consider the Hotelling linear-city model. Suppose there is only one restaurant, located at the centre of a street of length 1 km. The restaurant’s cost is zero.
+
+Consumers are uniformly distributed on the interval $[0,1]$, with one consumer at each point. Transportation cost is £1 per kilometre.
+
+The utility of a consumer located at distance $a$ from the restaurant is
+
+$$
+U = B - a - p,
+$$
+
+where $p$ is the price of a meal and $B$ is a constant.
+
+If the consumer does not eat at the restaurant, utility is
+
+$$
+U^* = 0.
+$$
+
+### (a)
+
+Suppose $0 < B < 1$. Find the number of consumers eating at the restaurant. Calculate the monopoly price and profit.
+
+### (b)
+
+Answer the previous question assuming $B > 1$.
+
+{{< if params.solution >}}
+
+
+## Solution
+
+### (a)
+
+Let $d_m$ denote the distance of the marginal consumer from the restaurant. Indifference implies
+
+$$
+B - d_m - p = 0
+\quad \Rightarrow \quad
+d_m = B - p.
+$$
+
+Demand is
+
+$$
+q = 2 d_m = 2(B - p).
+$$
+
+The monopolist solves
+
+$$
+\max_p \ \Pi(p) = p \cdot 2(B - p).
+$$
+
+FOC implies $p^M=\frac{B}{2}$, hence $q^M=B$ and $\Pi^M=\frac{B^2}{2}$.
+
+### (b)
+
+For $B>1$, the unconstrained solution implies $d_m=\frac{B}{2}>\frac{1}{2}$, but demand cannot exceed 1, so $q=1$.
+
+The monopolist sets price so the marginal consumers are exactly at the endpoints ($d=\frac{1}{2}$):
+
+$$
+B - \frac{1}{2} - p = 0
+\quad \Rightarrow \quad
+p^* = B - \frac{1}{2}.
+$$
+
+Then $\Pi^*=p^*\cdot 1 = B - \frac{1}{2}$.
+
+{{< endif >}}
