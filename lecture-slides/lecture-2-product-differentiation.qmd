@@ -22,15 +22,12 @@ execute:
 
 ## Product differentiation: overview
 
-::: {.callout-note}
-## Object of analysis
-
-Horizontal differentiation: products differ in *characteristics*; consumers incur mismatch costs.
-:::
-
 - **Horizontal v vertical differentiation**
-  - What determines demand when prices are equal?
-  - How does variety interact with quantity?
+  - **Horizontal**: consumers disagree on which variety is best
+  - **Verticalunr**: products differ in quality; all consumers (weakly) prefer the higher-quality product at equal prices.
+
+- What determines demand when prices are equal?
+- How does variety interact with quantity?
 
 - **Focus today: horizontal product differentiation**
   - Linear Hotelling model (two firms)

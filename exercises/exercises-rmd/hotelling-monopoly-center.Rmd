@@ -1,4 +1,3 @@
-````markdown
 ---
 title: "Hotelling Linear City: Monopoly at the Center"
 extype: cloze

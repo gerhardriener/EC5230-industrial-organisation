@@ -1,61 +1,25 @@
 ---
-title: "Exercise Set 1: Market Power and Welfare"
-format: html
-execute:
-  echo: false
-  warning: false
-  message: false
-  freeze: auto
+title: "R/exams quiz"
+output: exams2forms::webquiz
 ---
 
-This exercise set covers two core models from **Lecture 1**:
-
-- Cournot competition and welfare
-- Hotelling linear city with a monopolist
-
-These exercises are intended for **practice**. You can retry them and refresh the page to work through the logic again.
-
----
-
-## Problem 1: Cournot duopoly and welfare
-
-```{r}
-#| results: asis
+```{r setup, include = FALSE}
+#| label: setup
+#| include: false
+library(here)
 library(exams2forms)
 
-cat(
-  exams2forms(
-    "exercises/exercises-rmd/cournot_duopoly_welfare.Rmd",
-    n = 1
-  ),
-  sep = "\n"
+exm <- list(
+  here("exercises/exercises-rmd/cournot-duopoly-welfare.Rmd")
+  # Add additional rexams files here
 )
 ```
 
----
-
-## Problem 2: Hotelling linear city with monopoly
-
 ```{r}
+#| label: quiz
+#| echo: false
+#| message: false
 #| results: asis
-library(exams2forms)
 
-cat(
-  exams2forms(
-    "exercises/exercises-rmd/hotelling_monopoly.Rmd",
-    n = 1
-  ),
-  sep = "\n"
-)
+exams2webquiz(exm, n = 1)
 ```
-
----
-
-### How to use these exercises
-
-* Enter your answers directly into the fields.
-* Click **“Check”** to see whether your answers are correct.
-* Use the feedback to understand where mistakes come from.
-* These pages are **not graded** and are meant to support exam preparation.
-
-If you want additional practice, the same models will reappear later in more general settings.

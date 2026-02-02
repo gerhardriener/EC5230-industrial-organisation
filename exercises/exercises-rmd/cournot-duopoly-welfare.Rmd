@@ -1,10 +1,4 @@
----
-title: "Cournot Duopoly: Welfare Analysis"
-extype: cloze
-expoints: 6
-exsolution: 25/3|10/3|25/3|1225/18|725/9|925/18|between monopoly and triopoly
----
-
+<!-- filepath: c:\Users\gr97\OneDrive - University of St Andrews\Documents\teaching\EC5230-industrial-organisation\exercises\exercises-rmd\cournot-duopoly-welfare.Rmd -->
 ```{r, echo=FALSE}
 # Parameters
 a  <- 20
@@ -20,95 +14,59 @@ P  <- a - Q
 CS <- (1/2) * Q^2
 PS <- q1^2 + q2^2
 WL <- 200 - CS - PS
-````
+```
 
 ### Problem 1: Welfare analysis
 
 Consider a market with inverse demand
-[
-P = 20 - Q,
-]
-and three firms with cost functions ( c_i(q_i) = c_i q_i ), where
-( c_1 = 0 ), ( c_2 = 5 ), and ( c_3 = 7 ).
+
+$$
+P = 20 - Q
+$$
+
+and three firms with cost functions $c_i(q_i) = c_i q_i$, where
+
+$$
+c_1 = 0,\quad c_2 = 5,\quad c_3 = 7.
+$$
 
 ---
 
-### (a) Cournot duopoly
+### Cournot duopoly
 
 Compute the Nash equilibrium quantities in the Cournot duopoly between firm 1 and firm 2.
 
-* Firm 1 equilibrium output:
-  ( q_1^D = ) ##{num}##
-
-* Firm 2 equilibrium output:
-  ( q_2^D = ) ##{num}##
+* Firm 1 equilibrium output: $q_1^D =$ ##{num}##
+* Firm 2 equilibrium output: $q_2^D =$ ##{num}##
 
 ---
 
-### (b) Welfare components
+### Welfare components
 
 Given your answer in (a), compute:
 
-* Equilibrium price:
-  ( P^D = ) ##{num}##
-
-* Consumer surplus:
-  ( CS^D = ) ##{num}##
-
-* Producer surplus:
-  ( PS^D = ) ##{num}##
-
-* Welfare loss:
-  ( WL^D = ) ##{num}##
+* Equilibrium price: $P^D =$ ##{num}##
+* Consumer surplus: $CS^D =$ ##{num}##
+* Producer surplus: $PS^D =$ ##{num}##
+* Welfare loss: $WL^D =$ ##{num}##
 
 ---
 
-### (c) Comparison and policy intuition
+### Comparison and policy intuition
 
 Compare consumer surplus, producer surplus, and welfare loss to those under monopoly and Cournot triopoly.
 
 Briefly describe where the duopoly outcomes lie relative to monopoly and triopoly:
+
 ##{string}##
 
-````
-
 ---
 
-## How this maps to your original exercise
-
-### (a)
-- Two **numeric cloze fields**
-- Exact fractions allowed (R/exams handles rational numbers cleanly)
-
-### (b)
-- Four **numeric cloze fields**
-- No tolerance issues (exact values)
-
-### (c)
-- **String answer**, suitable for:
-  - ungraded feedback
-  - or light grading (e.g. accept `"between monopoly and triopoly"`, `"intermediate"`, regex, etc.)
-
-If you want (c) **ungraded**, you can set:
-```yaml
-expoints: 5
-````
-
-and keep the string field informational.
+## Meta-information
 
 ---
-
-## Ready for `exams2forms`
-
-In `exercises-1.qmd`:
-
-```r
-#| results: asis
-#| echo: false
-library(exams2forms)
-
-cat(
-  exams2forms("exercises-rmd/cournot_duopoly_welfare.Rmd", n = 1),
-  sep = "\n"
-)
-```
+exname: cournot_duopoly_welfare
+extype: cloze
+expoints: 6
+exsolution: 25/3|10/3|25/3|1225/18|725/9|925/18|between monopoly and triopoly
+---

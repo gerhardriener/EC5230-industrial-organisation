@@ -333,7 +333,7 @@ The strategic variable selection determines equilibrium price, output, and total
 
 **Obstacles:**
 
-- Individual profit motives conflict with group interest
+- Individual profit motives conflict with group interest (monopoly profit)
 - No legal mechanism to enforce agreements
 - Constant temptation to cheat on “deals”
 
@@ -366,9 +366,9 @@ These devices alter payoff structures in ways that enable tacit collusion; compe
 | **High Price** | 100, 100 | -10, 140 |
 | **Low Price**  | 140, -10 | 70, 70   |
 
-**Nash equilibrium:** $(p_L, p_L)$ with payoffs 70, 70
+**Nash equilibrium:** $(p_L, p_L)$ with payoffs $70,\, 70$
 
-**Cooperative outcome:** $(p_H, p_H)$ with payoffs 100, 100
+**Cooperative outcome:** $(p_H, p_H)$ with payoffs $100,\, 100$
 
 **Problem:** Cooperation is not a Nash equilibrium without commitment or repeated-game structure.
 
