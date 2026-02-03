@@ -51,7 +51,7 @@
     div.csl-indent {
       margin-left: 2em;
     }  </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-5ec76919b38acefb739b9cebcb5a8661.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-b2736e9fcda83c748fd63b6e579550ef.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -147,6 +147,7 @@
   </style>
 </head>
 <body class="quarto-light">
+<script src="mathjax-config.js"></script>
   <div class="reveal">
     <div class="slides">
 
@@ -575,7 +576,7 @@ BR_i(p_j) = \frac{\tilde{a} + \tilde{d}p_j + \tilde{b}c_i}{2\tilde{b}}
 <p><strong>Can competing firms coordinate pricing without explicit contracts?</strong></p>
 <p><strong>Obstacles:</strong></p>
 <ul>
-<li>Individual profit motives conflict with group interest</li>
+<li>Individual profit motives conflict with group interest (monopoly profit)</li>
 <li>No legal mechanism to enforce agreements</li>
 <li>Constant temptation to cheat on “deals”</li>
 </ul>
@@ -631,8 +632,8 @@ BR_i(p_j) = \frac{\tilde{a} + \tilde{d}p_j + \tilde{b}c_i}{2\tilde{b}}
 </tr>
 </tbody>
 </table>
-<p><strong>Nash equilibrium:</strong> <span class="math inline">\((p_L, p_L)\)</span> with payoffs 70, 70</p>
-<p><strong>Cooperative outcome:</strong> <span class="math inline">\((p_H, p_H)\)</span> with payoffs 100, 100</p>
+<p><strong>Nash equilibrium:</strong> <span class="math inline">\((p_L, p_L)\)</span> with payoffs <span class="math inline">\(70,\, 70\)</span></p>
+<p><strong>Cooperative outcome:</strong> <span class="math inline">\((p_H, p_H)\)</span> with payoffs <span class="math inline">\(100,\, 100\)</span></p>
 <p><strong>Problem:</strong> Cooperation is not a Nash equilibrium without commitment or repeated-game structure.</p>
 </section>
 <section id="why-coordination-fails-incentive-incompatibility" class="slide level2">
@@ -1068,15 +1069,15 @@ p_2^* = BR_2(p_1^*) = \frac{47}{28} \approx 1.678
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1600,
+        width: 1050,
 
-        height: 900,
+        height: 700,
 
         // Factor of the display size that should remain empty around the content
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],

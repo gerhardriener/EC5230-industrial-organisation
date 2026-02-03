@@ -31,8 +31,27 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-5ec76919b38acefb739b9cebcb5a8661.css">
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-b2736e9fcda83c748fd63b6e579550ef.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -128,6 +147,7 @@
   </style>
 </head>
 <body class="quarto-light">
+<script src="mathjax-config.js"></script>
   <div class="reveal">
     <div class="slides">
 
@@ -143,159 +163,77 @@ Gerhard Riener
 </div>
 
 </section>
-<section id="product-differentiation-overview" class="slide level2">
-<h2>Product differentiation: overview</h2>
+<section id="differentiation-types" class="slide level2">
+<h2>Differentiation types</h2>
+<ul>
+<li>Horizontal: consumers disagree on which variety is best (ideal-point / mismatch preferences)</li>
+<li>Vertical: products differ in quality; at equal prices all consumers (weakly) prefer the higher-quality good</li>
+</ul>
+<p><strong>Today: roadmap</strong></p>
+<ul>
+<li>Focus: horizontal differentiation</li>
+<li>Hotelling line: 2 firms, pricing with fixed locations</li>
+<li>Salop circular city: free entry and welfare</li>
+</ul>
+</section>
+<section>
+<section id="hotelling-model" class="title-slide slide level1 center">
+<h1>Hotelling Model</h1>
+
+</section>
+<section id="setup-fixed-locations-price-competition" class="slide level2">
+<h2>Setup: Fixed locations, price competition</h2>
+<ul>
+<li>Duopoly, marginal cost <span class="math inline">\(0\)</span></li>
+<li>Consumers (<span class="math inline">\(\ell\)</span>) uniformly distributed on <span class="math inline">\([0,L]\)</span> (<span class="citation" data-cites="hotellingStabilityCompetition1929">Hotelling (<a href="#/references" role="doc-biblioref" onclick="">1929</a>)</span> line)</li>
+<li>Firm 1 at <span class="math inline">\(a\)</span> and Firm 2 at <span class="math inline">\(L-b\)</span></li>
+<li>Mismatch (transport) cost <span class="math inline">\(C(d)=cd\)</span> with <span class="math inline">\(c&gt;0\)</span>, <span class="math inline">\(d\)</span> extent of mismatch</li>
+<li>Unit demand; assume full market coverage in equilibrium</li>
+</ul>
+<div title="Utility (full coverage)">
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Object of analysis</strong></p>
+<p><strong>Utility (full coverage)</strong></p>
 </div>
 <div class="callout-content">
-<p>Horizontal differentiation: products differ in <em>characteristics</em>; consumers incur mismatch costs.</p>
+<p><span class="math inline">\(U_1(\ell)=\bar u - p_1 - c|\ell-a|\)</span>, <span class="math inline">\(U_2(\ell)=\bar u - p_2 - c|\ell-(L-b)|\)</span>, outside option <span class="math inline">\(0\)</span>; assume <span class="math inline">\(\bar u\)</span> is large enough that all consumers buy.</p>
 </div>
 </div>
 </div>
-<ul>
-<li><strong>Horizontal v vertical differentiation</strong>
-<ul>
-<li>What determines demand when prices are equal?</li>
-<li>How does variety interact with quantity?</li>
-</ul></li>
-<li><strong>Focus today: horizontal product differentiation</strong>
-<ul>
-<li>Linear Hotelling model (two firms)</li>
-<li>Salop’s circular market (free entry)</li>
-</ul></li>
-</ul>
+</div>
 </section>
-<section id="linear-hotelling-model-setting" class="slide level2">
-<h2>Linear Hotelling model: setting</h2>
-<ul>
-<li><strong>Market structure</strong>
-<ul>
-<li>Duopoly; zero marginal cost</li>
-<li>Linear market of length <span class="math inline">\(L\)</span>; consumers uniformly distributed</li>
-<li>Each consumer buys either 1 unit or nothing</li>
-</ul></li>
-<li><strong>Preference parameters</strong>
-<ul>
-<li>Firm 1 located at distance <span class="math inline">\(a\)</span> from left endpoint (0)</li>
-<li>Firm 2 located at distance <span class="math inline">\(b\)</span> from right endpoint (<span class="math inline">\(L\)</span>)</li>
-<li>Linear transport cost: <span class="math inline">\(C(d)=cd\)</span> where <span class="math inline">\(d\)</span> is distance and <span class="math inline">\(c&gt;0\)</span></li>
-</ul></li>
-<li><strong>Objects</strong>
-<ul>
+<section id="geometry" class="slide level2">
+<h2>Geometry</h2>
+
+<img data-src="figs/fig-hotelling-fixed-location.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:14cm" alt="Hotelling line with fixed locations"><ul>
 <li>Choice variables: <span class="math inline">\(p_1, p_2\)</span></li>
 <li>Parameters: <span class="math inline">\(L, a, b, c\)</span></li>
-<li>Equilibrium outcomes: <span class="math inline">\(x, y, q_1, q_2\)</span></li>
-</ul></li>
+<li>Distance between firms: <span class="math inline">\(L-a-b\)</span></li>
+<li>Marginal consumer distances: <span class="math inline">\(x+y=L-a-b\)</span></li>
+<li>Demands: <span class="math inline">\(q_1=a+x\)</span> and <span class="math inline">\(q_2=b+y\)</span></li>
 </ul>
-
-<img data-src="figs/fig-hotelling-fixed-location.svg" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="linear-hotelling-pricing-with-fixed-locations-firm-1" class="slide level2">
-<h2>Linear Hotelling: pricing with fixed locations (Firm 1)</h2>
+</section>
+<section id="marginal-consumer-and-demands" class="slide level2">
+<h2>Marginal consumer and demands</h2>
 <ul>
-<li><strong>Demand derivation</strong>
+<li>Indifference of the marginal consumer: <span class="math inline">\(p_1 + cx = p_2 + cy\)</span></li>
+<li>Geometry: <span class="math inline">\(x+y=L-a-b\)</span></li>
+</ul>
+<p><strong>Demands by firm</strong></p>
 <ul>
-<li>Marginal consumer indifferent: <span class="math inline">\(p_1 + cx = p_2 + cy\)</span></li>
-<li>Market length: <span class="math inline">\(L = a + b + x + y\)</span></li>
-<li>Firm 1 demand: <span class="math inline">\(q_1 = a + x = \frac{p_2 - p_1 + c(L + a - b)}{2c}\)</span></li>
-</ul></li>
-<li><strong>Profit and best response</strong>
+<li><span class="math inline">\(q_1 = a + x = \frac{p_2 - p_1 + c(L + a - b)}{2c}\)</span></li>
+<li><span class="math inline">\(q_2 = b + y = \frac{p_1 - p_2 + c(L + b - a)}{2c}\)</span></li>
+</ul>
+</section>
+<section id="best-responses" class="slide level2">
+<h2>Best responses</h2>
 <ul>
-<li><span class="math inline">\(\pi_1 = p_1 q_1\)</span></li>
 <li><span class="math inline">\(BR_1(p_2)=\frac{p_2}{2}+\frac{c}{2}(L+a-b)\)</span></li>
-</ul></li>
-</ul>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Interpretation (best response)</strong></p>
-</div>
-<div class="callout-content">
-<ul>
-<li><span class="math inline">\(BR_1\)</span> is increasing in <span class="math inline">\(p_2\)</span> (prices are strategic complements here)</li>
-<li>Larger <span class="math inline">\(c\)</span> softens competition, shifting best responses upward</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section id="linear-hotelling-pricing-with-fixed-locations-firm-2" class="slide level2">
-<h2>Linear Hotelling: pricing with fixed locations (Firm 2)</h2>
-<ul>
-<li><strong>Demand derivation</strong>
-<ul>
-<li>Marginal consumer indifferent: <span class="math inline">\(p_1 + cx = p_2 + cy\)</span></li>
-<li>Market length: <span class="math inline">\(L = a + b + x + y\)</span></li>
-<li>Firm 2 demand: <span class="math inline">\(q_2 = b + y = \frac{p_1 - p_2 + c(L + b - a)}{2c}\)</span></li>
-</ul></li>
-<li><strong>Profit and best response</strong>
-<ul>
-<li><span class="math inline">\(\pi_2 = p_2 q_2\)</span></li>
 <li><span class="math inline">\(BR_2(p_1)=\frac{p_1}{2}+\frac{c}{2}(L+b-a)\)</span></li>
-</ul></li>
-</ul>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Interpretation (symmetry)</strong></p>
-</div>
-<div class="callout-content">
-<ul>
-<li>If <span class="math inline">\(a=b\)</span>, best responses are symmetric and yield <span class="math inline">\(p_1^*=p_2^*\)</span></li>
-</ul>
-</div>
-</div>
-</div>
-
-<img data-src="figs/fig-hotelling-fixed-location.svg" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="linear-hotelling-model-nash-equilibrium-in-prices" class="slide level2">
-<h2>Linear Hotelling model: Nash equilibrium in prices</h2>
-<ul>
-<li><strong>Best responses</strong>
-<ul>
-<li><span class="math inline">\(BR_1(p_2) = \frac{p_2}{2} + \frac{c}{2}(L + a - b)\)</span></li>
-<li><span class="math inline">\(BR_2(p_1) = \frac{p_1}{2} + \frac{c}{2}(L + b - a)\)</span></li>
-</ul></li>
-<li><strong>Nash equilibrium prices and profits</strong>
-<ul>
-<li><span class="math inline">\(p_1^* = c\left(L + \frac{a-b}{3}\right)\)</span>; <span class="math inline">\(p_2^* = c\left(L + \frac{b-a}{3}\right)\)</span></li>
-<li><span class="math inline">\(\pi_1^* = \frac{c}{18}(3L + a - b)^2\)</span>; <span class="math inline">\(\pi_2^* = \frac{c}{18}(3L + b - a)^2\)</span></li>
-</ul></li>
-</ul>
-<div class="callout callout-important callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Key comparative static</strong></p>
-</div>
-<div class="callout-content">
-<p>Higher mismatch cost <span class="math inline">\(c\)</span> lowers substitutability and raises equilibrium markups and profits.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="linear-hotelling-model-incentive-to-move-co-location" class="slide level2">
-<h2>Linear Hotelling model: incentive to move (co-location)</h2>
-<ul>
-<li><strong>If firms locate at the same point</strong>
-<ul>
-<li>Then <span class="math inline">\(a + b = L\)</span> and the marginal consumer collapses to the location point: <span class="math inline">\(x=y=0\)</span></li>
-<li>Products become homogeneous <span class="math inline">\(\Rightarrow\)</span> Bertrand undercutting</li>
-<li>Unique equilibrium: <span class="math inline">\(p_1^B=p_2^B=0\)</span> and <span class="math inline">\(\pi_1^B=\pi_2^B=0\)</span></li>
-</ul></li>
 </ul>
 <div class="callout callout-warning callout-titled callout-style-default">
 <div class="callout-body">
@@ -303,41 +241,70 @@ Gerhard Riener
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Co-location and price competition</strong></p>
+<p><strong>Warning</strong></p>
 </div>
 <div class="callout-content">
+<p>Prices are strategic complements; if <span class="math inline">\(a=b\)</span> then <span class="math inline">\(p_1^*=p_2^*\)</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="price-equilibrium-fixed-locations" class="slide level2">
+<h2>Price equilibrium fixed locations</h2>
+<ul>
+<li>Prices: <span class="math inline">\(p_1^* = c\left(L + \frac{a-b}{3}\right)\)</span> and <span class="math inline">\(p_2^* = c\left(L + \frac{b-a}{3}\right)\)</span></li>
+<li>Profits: <span class="math inline">\(\pi_1^* = \frac{c}{18}(3L + a - b)^2\)</span> and <span class="math inline">\(\pi_2^* = \frac{c}{18}(3L + b - a)^2\)</span></li>
+<li>If <span class="math inline">\(a=b\)</span>, symmetry implies <span class="math inline">\(p_1^*=p_2^*\)</span></li>
+<li>Higher <span class="math inline">\(c\)</span> lowers substitutability and raises equilibrium markups and profits</li>
+</ul>
+</section>
+<section id="hotelling-co-location" class="slide level2">
+<h2>Hotelling: co-location</h2>
+<ul>
+<li>Co-location implies <span class="math inline">\(a+b=L\)</span> and <span class="math inline">\(x=y=0\)</span></li>
+<li>Products become homogeneous <span class="math inline">\(\Rightarrow\)</span> Bertrand undercutting</li>
+<li>Equilibrium: <span class="math inline">\(p_1^B=p_2^B=0\)</span> and <span class="math inline">\(\pi_1^B=\pi_2^B=0\)</span></li>
+</ul>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Warning</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Co-location and price competition</strong></p>
 <p>Co-location removes captive consumers; any <span class="math inline">\(p&gt;0\)</span> can be profitably undercut.</p>
 </div>
 </div>
 </div>
 
 <img data-src="figs/fig-hotelling-movement-location.svg" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="linear-hotelling-model-incentive-to-move-separated" class="slide level2">
-<h2>Linear Hotelling model: incentive to move (separated)</h2>
+<section id="move-incentives-at-fixed-prices" class="slide level2">
+<h2>Move incentives at fixed prices</h2>
 <ul>
-<li><strong>Marginal incentive to increase own location parameter</strong>
-<ul>
-<li><span class="math inline">\(\frac{\partial \pi_1^*}{\partial a} = \frac{c}{9}(3L + a - b) &gt; 0\)</span></li>
-<li><span class="math inline">\(\frac{\partial \pi_2^*}{\partial b} = \frac{c}{9}(3L + b - a) &gt; 0\)</span></li>
-</ul></li>
-<li><strong>Interpretation (pricing subgame only)</strong>
-<ul>
-<li>Increasing <span class="math inline">\(a\)</span> (resp. <span class="math inline">\(b\)</span>) moves Firm 1 (resp. Firm 2) inward (toward the centre)</li>
-<li>These are comparative statics of equilibrium profits in the pricing subgame, holding the rival location fixed</li>
-</ul></li>
+<li><span class="math inline">\(\frac{\partial \pi_1^*}{\partial a} = \frac{c}{9}(3L + a - b) &gt; 0\)</span> and <span class="math inline">\(\frac{\partial \pi_2^*}{\partial b} = \frac{c}{9}(3L + b - a) &gt; 0\)</span></li>
+<li>In the pricing subgame, increasing <span class="math inline">\(a\)</span> (resp. <span class="math inline">\(b\)</span>) moves Firm 1 (resp. Firm 2) inward (toward the centre)</li>
+<li>These are comparative statics holding the rival location fixed</li>
+<li>Under linear transport costs, pricing incentives can pull locations toward the centre firms will “go where the demand is”</li>
 </ul>
 </section>
-<section id="linear-hotelling-model-location-equilibrium-linear-v-quadratic-transport" class="slide level2">
-<h2>Linear Hotelling model: location equilibrium (linear v quadratic transport)</h2>
+<section id="identifying-clustering-motives" class="slide level2">
+<h2>Identifying clustering motives</h2>
+<p><strong>Question</strong> Why are so many businesses clustered together?</p>
 <ul>
-<li><strong>Result (standard)</strong>
+<li><p>Going where the demand is?</p></li>
+<li><p>Possible collusion story? Being next to the competitor facilitates monitoring?</p></li>
+</ul>
+</section>
+<section id="location-game-daspremonthotellingsstabilitycompetition1979" class="slide level2">
+<h2>Location game <span class="citation" data-cites="daspremontHotellingsStabilityCompetition1979">(<a href="#/references" role="doc-biblioref" onclick=""><span class="nocase">d’Aspremont et al.</span>, 1979</a>)</span></h2>
 <ul>
-<li>With linear transport costs (<span class="math inline">\(C(d)=cd\)</span>), the full two-stage location game may fail to have a pure-strategy equilibrium in locations</li>
-</ul></li>
-<li><strong>Resolution</strong>
-<ul>
-<li>d’Aspremont, Gabszewicz &amp; Thisse (1979): with quadratic transport costs (<span class="math inline">\(C(d)=td^2\)</span>), a pure-strategy location equilibrium exists (maximum differentiation in their baseline)</li>
-</ul></li>
+<li><strong>Two-stage game:</strong> choose locations, then prices</li>
+<li>Linear transport costs (<span class="math inline">\(C(d)=cd\)</span>): pure-strategy location equilibrium may fail to exist (market-capture regions; non-concavity)</li>
+<li>Quadratic transport costs (<span class="math inline">\(C(d)=td^2\)</span>): pure-strategy location equilibrium exists (baseline: maximum differentiation)</li>
+<li>Principle of minimum differentiation need not hold</li>
 </ul>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
@@ -345,137 +312,98 @@ Gerhard Riener
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Why convexity matters</strong></p>
+<p><strong>Note</strong></p>
 </div>
 <div class="callout-content">
+<p><strong>Why convexity matters</strong></p>
 <p>More convex mismatch costs make small location changes less effective at stealing marginal consumers through pricing.</p>
 </div>
 </div>
 </div>
 </section>
-<section id="linear-hotelling-model-profit-function" class="slide level2">
-<h2>Linear Hotelling model: profit function</h2>
-<p>Profit function of Firm 1 (d’Aspremont, Gabszewicz &amp; Thisse, 1979):</p>
-<p><span class="math display">\[
-\pi_1(p_1, p_2) =
+<section id="profit-function" class="slide level2">
+<h2>Profit function</h2>
+<ul>
+<li>Let <span class="math inline">\(\Delta \equiv L-a-b\)</span> denote the distance between firms</li>
+<li>In the price subgame (locations fixed), Firm 1’s profit is piecewise in <span class="math inline">\((p_1,p_2)\)</span> <span class="citation" data-cites="daspremontHotellingsStabilityCompetition1979">(<a href="#/references" role="doc-biblioref" onclick=""><span class="nocase">d’Aspremont et al.</span>, 1979</a>)</span></li>
+</ul>
+<p><span class="math display">\[\pi_1(p_1, p_2) =
 \begin{cases}
 \frac{p_1 p_2}{2c} - \frac{p_1^2}{2c} + \frac{(L+a-b)p_1}{2}
 &amp; \text{if } |p_1 - p_2| \le c(L - a - b) \\[0.5em]
 Lp_1 &amp; \text{if } p_1 &lt; p_2 - c(L - a - b) \\[0.5em]
 0 &amp; \text{if } p_1 &gt; p_2 + c(L - a - b)
-\end{cases}
-\]</span></p>
+\end{cases}\]</span></p>
+</section>
+<section id="profit-regions" class="slide level2">
+<h2>Profit regions</h2>
 <ul>
 <li><p><strong>Region 1 (interior)</strong>: both firms serve positive mass of consumers; demand is linear in <span class="math inline">\(p_1\)</span></p></li>
 <li><p><strong>Region 2 (market capture)</strong>: Firm 1 undercuts enough to serve the whole line segment</p></li>
 <li><p><strong>Region 3 (no demand)</strong>: Firm 1 sets too high a price; demand is zero</p></li>
-<li><p><strong>Interpretation</strong></p>
-<ul>
-<li>Kinks occur at the thresholds where a marginal consumer hits an endpoint of the market</li>
-<li>Piecewise structure clarifies why global profit maximisation can differ from the interior FOC</li>
-</ul></li>
 </ul>
 
-<img data-src="figs/fig-hotelling-profit-function.svg" class="r-stretch"></section>
-<section id="salops-circular-market-setting" class="slide level2">
-<h2>Salop’s circular market: setting</h2>
+<img data-src="figs/fig-hotelling-profit-function.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:14cm" alt="Hotelling price subgame: payoff regions"></section></section>
+<section>
+<section id="salop-circular-city" class="title-slide slide level1 center">
+<h1>Salop Circular City</h1>
+
+</section>
+<section id="setup" class="slide level2">
+<h2>Setup</h2>
 <ul>
-<li><strong>Market structure</strong>
-<ul>
-<li>Two sectors: one with homogeneous outside good; one with differentiated goods</li>
-<li>Circular market circumference normalised to 1; consumers uniformly distributed</li>
-<li><span class="math inline">\(n\)</span> firms symmetrically located; distance between adjacent firms is <span class="math inline">\(\frac{1}{n}\)</span></li>
-<li>Each consumer buys either one unit (from some firm) or the outside good</li>
-</ul></li>
-<li><strong>Objects</strong>
+<li>Outside good yields utility <span class="math inline">\(u^*\)</span></li>
+<li>Differentiated varieties lie on a circle of circumference 1; consumers are uniformly distributed <span class="citation" data-cites="salopMonopolisticCompetitionOutside1979">(<a href="#/references" role="doc-biblioref" onclick="">Salop, 1979</a>)</span></li>
+<li><span class="math inline">\(n\)</span> firms are symmetrically located; adjacent distance is <span class="math inline">\(\frac{1}{n}\)</span></li>
+<li>Each consumer buys at most one unit: from some firm or the outside good</li>
+</ul>
+
+<img data-src="figs/fig-salop-cycle.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:16cm"></section>
+<section id="objects" class="slide level2">
+<h2>Objects</h2>
 <ul>
 <li>Choice variable: <span class="math inline">\(p_i\)</span></li>
 <li>Parameters: <span class="math inline">\(n, c, u, u^*\)</span></li>
-<li>Outcomes: market boundary/location cutoffs, quantity per firm</li>
-</ul></li>
+<li>Outcomes: market boundaries / cutoffs, quantities</li>
 </ul>
 
-<img data-src="figs/fig-salop-cycle.svg" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="salops-circular-market-consumer-utility" class="slide level2">
-<h2>Salop’s circular market: consumer utility</h2>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Participation constraint</strong></p>
-</div>
-<div class="callout-content">
-<p>Let <span class="math inline">\(v=u-u^*\)</span>. A consumer participates in the differentiated sector iff <span class="math inline">\(v \ge p_j + cd_j\)</span>.</p>
-</div>
-</div>
-</div>
+<img data-src="figs/fig-salop-cycle.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:16cm"></section>
+<section id="consumers" class="slide level2">
+<h2>Consumers</h2>
 <ul>
-<li><strong>Preference heterogeneity</strong>
-<ul>
-<li>Each consumer <span class="math inline">\(i\)</span> has ideal variety <span class="math inline">\(\ell_i^*\)</span> (location on the circle)</li>
-<li>Linear transport (mismatch) cost: <span class="math inline">\(cd\)</span> where <span class="math inline">\(d\)</span> is arc distance</li>
-</ul></li>
-<li><strong>Utility from purchase</strong>
-<ul>
-<li>Buy outside good: <span class="math inline">\(U^O = u^*\)</span></li>
-<li>Buy from firm <span class="math inline">\(j\)</span>: <span class="math inline">\(U_j^D = u - c d_j - p_j\)</span></li>
-</ul></li>
-<li><strong>Participation condition</strong>
-<ul>
-<li>Consumer buys from firm <span class="math inline">\(j\)</span> iff <span class="math inline">\(U_j^D \ge U^O\)</span></li>
-<li>Let <span class="math inline">\(v = u - u^*\)</span>, so participation is <span class="math inline">\(v \ge p_j + c d_j\)</span></li>
-</ul></li>
-<li><strong>Interpretation</strong>
-<ul>
-<li><span class="math inline">\(v\)</span> is the net gross surplus from consuming a perfectly matched differentiated variety rather than the outside good</li>
-<li>Transport costs convert “distance in product space” into a monetary disutility</li>
-</ul></li>
+<li>Each consumer has an ideal variety <span class="math inline">\(\ell^*\)</span> (location on the circle)</li>
+<li>Arc distance <span class="math inline">\(d\)</span> generates mismatch cost <span class="math inline">\(cd\)</span></li>
+<li>Utility from firm <span class="math inline">\(j\)</span>: <span class="math inline">\(U_j = u - cd_j - p_j\)</span></li>
+<li>Outside option: <span class="math inline">\(U^O=u^*\)</span></li>
+<li>Let <span class="math inline">\(v=u-u^*\)</span>; participation requires <span class="math inline">\(v \ge p_j + cd_j\)</span></li>
 </ul>
 </section>
-<section id="salops-circular-market-monopoly-region-no-competition" class="slide level2">
-<h2>Salop’s circular market: monopoly region (no competition)</h2>
+<section id="monopoly-region" class="slide level2">
+<h2>Monopoly region</h2>
 <ul>
-<li><p><strong>Monopoly scenario</strong></p>
+<li>Outside option truncates the market (participation binds), not neighbours</li>
+<li>Farthest served consumer: <span class="math inline">\(d_m=\frac{v-p}{c}\)</span></li>
+<li>Monopoly demand: <span class="math inline">\(q^M = 2d_m = 2\left(\frac{v-p}{c}\right)\)</span></li>
+</ul>
+</section>
+<section id="monopoly-inverse-demand" class="slide level2">
+<h2>Monopoly inverse demand</h2>
 <ul>
-<li>Firm’s market is truncated by the outside option (participation), not by neighbouring firms</li>
-</ul></li>
-<li><p><strong>Maximum distance</strong>: <span class="math inline">\(d_m = \frac{v - p}{c}\)</span></p></li>
-<li><p><strong>Monopoly demand</strong>: <span class="math inline">\(q^M = 2 d_m = 2\left(\frac{v-p}{c}\right)\)</span></p></li>
-<li><p><strong>Inverse demand</strong>: <span class="math inline">\(p = v - \frac{c}{2} q^M\)</span></p></li>
-<li><p><strong>Interpretation</strong></p>
-<ul>
-<li>Demand slope is <span class="math inline">\(-\frac{c}{2}\)</span> because increasing quantity expands the served interval on <strong>both sides</strong> of the firm</li>
+<li>Inverse demand: <span class="math inline">\(p = v - \frac{c}{2} q^M\)</span></li>
+<li>Slope is <span class="math inline">\(-\frac{c}{2}\)</span> because expanding quantity extends the served interval on both sides</li>
 <li>Participation binds at the marginal consumer: <span class="math inline">\(v = p + cd_m\)</span></li>
-</ul></li>
 </ul>
 </section>
-<section id="salops-circular-market-competitive-region-with-neighbors" class="slide level2">
-<h2>Salop’s circular market: competitive region (with neighbors)</h2>
+<section id="competitive-region" class="slide level2">
+<h2>Competitive region</h2>
 <ul>
-<li><strong>Competitive scenario</strong>
-<ul>
-<li>Market boundary determined by indifference between this firm and neighbour(s)</li>
-</ul></li>
-<li><strong>Indifference condition</strong>
-<ul>
-<li>Main firm: <span class="math inline">\(v - cx - p\)</span></li>
-<li>Neighbour: <span class="math inline">\(v - c\left(\frac{1}{n} - x\right) - \tilde{p}\)</span></li>
-</ul></li>
-<li><strong>Solve for boundary</strong>
-<ul>
-<li><span class="math inline">\(cx - p = c\left(\frac{1}{n} - x\right) - \tilde{p}\)</span></li>
-<li><span class="math inline">\(x = \frac{\frac{c}{n} - p + \tilde{p}}{2c}\)</span></li>
-</ul></li>
-<li><strong>Interpretation</strong>
-<ul>
-<li>The boundary <span class="math inline">\(x\)</span> depends on both own price <span class="math inline">\(p\)</span> and neighbour price <span class="math inline">\(\tilde p\)</span></li>
-</ul></li>
+<li>Boundary consumer (indifference): <span class="math inline">\(v - cx - p = v - c\left(\frac{1}{n} - x\right) - \tilde{p}\)</span></li>
+<li>Boundary location: <span class="math inline">\(x = \frac{\frac{c}{n} - p + \tilde{p}}{2c}\)</span></li>
+<li>Competitive quantity: <span class="math inline">\(q^C = 2x\)</span></li>
 </ul>
 </section>
-<section id="salops-circular-market-competitive-demand-and-inverse-demand" class="slide level2">
-<h2>Salop’s circular market: competitive demand and inverse demand</h2>
+<section id="competitive-demand" class="slide level2">
+<h2>Competitive demand</h2>
 <ul>
 <li><p><strong>Competitive demand</strong>: <span class="math inline">\(q^C = 2x = \frac{\frac{c}{n} - p + \tilde{p}}{c}\)</span></p></li>
 <li><p><strong>Inverse demand</strong>: <span class="math inline">\(p = \frac{c}{n} + \tilde{p} - c q^C\)</span></p></li>
@@ -486,176 +414,130 @@ Lp_1 &amp; \text{if } p_1 &lt; p_2 - c(L - a - b) \\[0.5em]
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Slope comparison</strong></p>
+<p><strong>Important</strong></p>
 </div>
 <div class="callout-content">
+<p><strong>Slope comparison</strong></p>
 <p>Competitive-region inverse demand is steeper than monopoly-region inverse demand: <span class="math inline">\(-c\)</span> vs <span class="math inline">\(-\frac{c}{2}\)</span>.</p>
 </div>
 </div>
 </div>
 </section>
-<section id="salops-circular-market-kinked-demand" class="slide level2">
-<h2>Salop’s circular market: kinked demand</h2>
+<section id="kinked-demand" class="slide level2">
+<h2>Kinked demand</h2>
 <ul>
-<li><strong>Firm’s choice between regimes</strong>
+<li>Demand is limited either by the outside option (participation) or by neighbours (local competition)</li>
+<li>Effective demand is <span class="math inline">\(q(p)=\min\{q^M(p),q^C(p)\}\)</span>
 <ul>
-<li><strong>Monopoly region</strong>: constrained by participation (outside option)</li>
-<li><strong>Competitive region</strong>: constrained by neighbours (local oligopoly)</li>
+<li><strong>Participation-boundary (monopoly region)</strong>: <span class="math inline">\(q^M = 2\left(\frac{v-p}{c}\right)\)</span></li>
+<li><strong>Neighbour-boundary (competitive region)</strong>: <span class="math inline">\(q^C = \frac{\frac{c}{n} - p + \tilde{p}}{c}\)</span></li>
 </ul></li>
-<li><strong>Interpretation</strong>
-<ul>
-<li>As parameters change (e.g.&nbsp;<span class="math inline">\(v, c, n\)</span>), the relevant constraint switches, generating a kink in the inverse demand</li>
-<li>This matters for pricing incentives because marginal revenue changes discretely at the regime boundary</li>
-</ul></li>
-</ul>
-</section>
-<section id="salops-circular-market-kinked-demand-location-of-kink" class="slide level2">
-<h2>Salop’s circular market: kinked demand (location of kink)</h2>
-<ul>
-<li><strong>Two candidate constraints</strong>
-<ul>
-<li><strong>Participation</strong> binds when the marginal consumer is indifferent between firm <span class="math inline">\(i\)</span> and the outside good: <span class="math inline">\(v = p + cd\)</span></li>
-<li><strong>Neighbour</strong> competition binds when the marginal consumer is indifferent between firm <span class="math inline">\(i\)</span> and neighbour: <span class="math inline">\(v - cx - p = v - c(\frac{1}{n}-x) - \tilde p\)</span></li>
-</ul></li>
-<li><strong>Kink</strong>
-<ul>
-<li>The relevant constraint switches at the quantity where the two implied boundaries coincide</li>
-</ul></li>
+<li>The switch in the binding constraint creates a kink in inverse demand and a discrete change in marginal revenue</li>
 </ul>
 
-<img data-src="figs/fig-salop-demand-comp-mon.svg" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="salops-circular-market-free-entry-equilibrium-supply-side" class="slide level2">
-<h2>Salop’s circular market: free-entry equilibrium (supply side)</h2>
+<img data-src="figs/fig-salop-demand-comp-mon.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:16cm" alt="Salop demand: monopoly vs competitive regimes"></section>
+<section id="cost-functions" class="slide level2">
+<h2>Cost functions</h2>
 <ul>
-<li><strong>Cost structure</strong>
-<ul>
-<li><span class="math inline">\(C(q)=F + mq\)</span> with fixed cost <span class="math inline">\(F\)</span> and constant marginal cost <span class="math inline">\(m\)</span></li>
-<li>Average cost: <span class="math inline">\(AC(q)=m+\frac{F}{q}\)</span> is decreasing in <span class="math inline">\(q\)</span></li>
-</ul></li>
-<li><strong>Firm choice in competitive region</strong>
-<ul>
-<li>Demand: <span class="math inline">\(p = \frac{c}{n} + \tilde{p} - cq\)</span></li>
-<li>Best response: <span class="math inline">\(MR = MC\)</span> where <span class="math inline">\(MR = \frac{c}{n} + \tilde{p} - 2cq\)</span></li>
-</ul></li>
-<li><strong>Assumption</strong>: equilibrium is in competitive region for all firms; by symmetry <span class="math inline">\(\tilde{p} = p\)</span></li>
+<li>Cost function: <span class="math inline">\(C(q)=F + mq\)</span> (fixed cost <span class="math inline">\(F\)</span>, marginal cost <span class="math inline">\(m\)</span>)</li>
+<li>Average cost: <span class="math inline">\(AC(q)=m+\frac{F}{q}\)</span> (decreasing in <span class="math inline">\(q\)</span>)</li>
 </ul>
 </section>
-<section id="salops-circular-market-free-entry-equilibrium-zero-profit-condition" class="slide level2">
-<h2>Salop’s circular market: free-entry equilibrium (zero-profit condition)</h2>
+<section id="pricing-competitive-region" class="slide level2">
+<h2>Pricing (competitive region)</h2>
 <ul>
-<li><strong>Symmetric competitive equilibrium</strong>
-<ul>
-<li>In symmetry: <span class="math inline">\(p=\tilde{p}\)</span> and <span class="math inline">\(q^C=\frac{1}{n}\)</span></li>
-</ul></li>
-<li><strong>Zero profit condition (free entry)</strong>
-<ul>
-<li><span class="math inline">\(p^C = AC = m + \frac{F}{q^C}\)</span></li>
-<li>Substitute <span class="math inline">\(q^C = \frac{1}{n}\)</span>: <span class="math inline">\(p^C = m + nF\)</span></li>
-</ul></li>
-<li><strong>Interpretation</strong>
-<ul>
-<li>Free entry drives firms to earn zero economic profit</li>
-<li>Entry cost <span class="math inline">\(F\)</span> creates a trade-off: more firms means lower profit per firm</li>
-</ul></li>
+<li>Inverse demand: <span class="math inline">\(p = \frac{c}{n} + \tilde{p} - cq\)</span></li>
+<li>Marginal revenue: <span class="math inline">\(MR = \frac{c}{n} + \tilde{p} - 2cq\)</span></li>
+<li>Symmetry: <span class="math inline">\(\tilde{p}=p\)</span></li>
 </ul>
-</section>
-<section id="salops-circular-market-free-entry-equilibrium-first-order-condition" class="slide level2">
-<h2>Salop’s circular market: free-entry equilibrium (first-order condition)</h2>
-<ul>
-<li><strong>First-order condition (optimal quantity)</strong>
-<ul>
-<li><span class="math inline">\(MR = MC\)</span> ⇔ <span class="math inline">\(p^C + q^C \frac{dp^C}{dq^C} = m\)</span></li>
-<li>Slope in competitive region: <span class="math inline">\(\frac{dp}{dq} = -c\)</span></li>
-<li>Therefore: <span class="math inline">\(p^C - cq^C = m\)</span> ⇔ <span class="math inline">\(p^C = m + \frac{c}{n}\)</span></li>
-</ul></li>
-<li><strong>Solve for equilibrium</strong>
-<ul>
-<li>Equate zero-profit and FOC: <span class="math inline">\(m + nF = m + \frac{c}{n}\)</span></li>
-<li><span class="math inline">\(n^C = \sqrt{\frac{c}{F}}\)</span>; <span class="math inline">\(p^C = m + \sqrt{cF}\)</span></li>
-</ul></li>
-<li><strong>Interpretation</strong>
-<ul>
-<li><span class="math inline">\(n^C\)</span> increases with mismatch intensity <span class="math inline">\(c\)</span> (more differentiation supports more firms)</li>
-<li><span class="math inline">\(n^C\)</span> decreases with fixed cost <span class="math inline">\(F\)</span> (entry becomes less profitable)</li>
-</ul></li>
-</ul>
-</section>
-<section id="salops-circular-market-welfare-analysis-consumer-cost" class="slide level2">
-<h2>Salop’s circular market: welfare analysis (consumer cost)</h2>
-<ul>
-<li><strong>Welfare object</strong>
-<ul>
-<li>Consumers’ average distance to nearest firm: <span class="math inline">\(\bar d = \frac{1}{4n}\)</span> (half the arc between adjacent firms)</li>
-<li>Resource cost of variety: <span class="math inline">\(nF\)</span></li>
-</ul></li>
-<li><strong>Per-consumer utilitarian welfare</strong>
-<ul>
-<li>With quasilinear utility, prices are transfers</li>
-<li><span class="math inline">\(W(n) = v - \frac{c}{4n} - nF\)</span>, where <span class="math inline">\(v = u - u^*\)</span></li>
-</ul></li>
-<li><strong>Interpretation</strong>
-<ul>
-<li>Welfare depends on mismatch costs (↓ in <span class="math inline">\(n\)</span>) and fixed entry costs (↑ in <span class="math inline">\(n\)</span>)</li>
-<li>Social planner internalizes both effects; firms do not</li>
-</ul></li>
-</ul>
-</section>
-<section id="salops-circular-market-welfare-analysis-social-optimum" class="slide level2">
-<h2>Salop’s circular market: welfare analysis (social optimum)</h2>
-<ul>
-<li><strong>Social planner’s problem</strong>: choose <span class="math inline">\(n\)</span> to maximize <span class="math inline">\(W(n)\)</span>
-<ul>
-<li><span class="math inline">\(\frac{dW}{dn} = \frac{c}{4n^2} - F = 0\)</span></li>
-<li><span class="math inline">\(n^S = \frac{1}{2}\sqrt{\frac{c}{F}} = \frac{1}{2} n^C\)</span></li>
-</ul></li>
-<li><strong>Equilibrium v optimum</strong>
-<ul>
-<li>Free-entry equilibrium: <span class="math inline">\(n^C = \sqrt{\frac{c}{F}}\)</span></li>
-<li>Social optimum: <span class="math inline">\(n^S = \frac{1}{2}n^C\)</span></li>
-</ul></li>
-</ul>
-<div class="callout callout-important callout-titled callout-style-default">
+<div title="Competitive-region condition (outside option not binding)">
+<div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Excess entry</strong></p>
+<p><strong>Competitive-region condition (outside option not binding)</strong></p>
 </div>
 <div class="callout-content">
-<p>In this benchmark, free entry implies <span class="math inline">\(n^C = 2n^S\)</span>.</p>
+<p>In a symmetric profile, the farthest consumer from a firm is at distance <span class="math inline">\(\frac{1}{2n}\)</span>. A sufficient condition for the competitive region to apply at the symmetric equilibrium is <span class="math inline">\(v \ge p^C + \frac{c}{2n}\)</span>.</p>
+</div>
 </div>
 </div>
 </div>
 </section>
-<section id="summary-references" class="slide level2">
-<h2>Summary &amp; references</h2>
-<p><strong>Summary</strong></p>
+<section id="zero-profit" class="slide level2">
+<h2>Zero profit</h2>
 <ul>
-<li>Horizontal differentiation relaxes price competition via consumer mismatch costs</li>
-<li>Hotelling (fixed locations): equilibrium prices increase in transport cost <span class="math inline">\(c\)</span></li>
-<li>Location incentives under linear transport can push toward minimum differentiation; quadratic costs restore a pure-strategy location equilibrium</li>
-<li>Salop (circle): free entry implies <span class="math inline">\(n^C=\sqrt{\frac{c}{F}}\)</span> and excessive entry relative to the social optimum <span class="math inline">\(n^S=\frac{1}{2}n^C\)</span></li>
-</ul>
-<p><strong>References</strong></p>
-<ul>
-<li>Hotelling, H. (1929). Stability in Competition. <em>Economic Journal</em>.</li>
-<li>d’Aspremont, C., Gabszewicz, J. J., &amp; Thisse, J.-F. (1979). On Hotelling’s “Stability in Competition”. <em>Econometrica</em>.</li>
-<li>Salop, S. C. (1979). Monopolistic Competition with Outside Goods. <em>Bell Journal of Economics</em>.</li>
-<li>Belleflamme, P., &amp; Peitz, M. (2015). <em>Industrial Organization: Markets and Strategies</em>. Cambridge University Press.</li>
+<li>Symmetry implies <span class="math inline">\(q^C=\frac{1}{n}\)</span></li>
+<li>Zero profit requires <span class="math inline">\(p^C = AC = m + \frac{F}{q^C}\)</span></li>
+<li>Therefore <span class="math inline">\(p^C = m + nF\)</span></li>
 </ul>
 </section>
-<section id="next-week-innovation" class="slide level2">
-<h2>Next week: innovation</h2>
+<section id="pricing-condition" class="slide level2">
+<h2>Pricing condition</h2>
 <ul>
-<li>Innovation as a choice under uncertainty</li>
-<li>Market structure and incentives to innovate (replacement effect and entry threat)</li>
-<li>Drastic vs non-drastic innovations</li>
-<li>R&amp;D incentives in oligopoly</li>
+<li><strong>Competitive-region inverse demand</strong>: <span class="math inline">\(p = \frac{c}{n} + \tilde{p} - cq\)</span></li>
+<li><strong>First-order condition</strong>: <span class="math inline">\(MR=MC\)</span> with <span class="math inline">\(MR = \frac{c}{n} + \tilde{p} - 2cq\)</span> and <span class="math inline">\(MC=m\)</span></li>
+<li><strong>Symmetric equilibrium implication</strong>: with <span class="math inline">\(\tilde{p}=p\)</span> and <span class="math inline">\(q^C=\frac{1}{n}\)</span>, we get <span class="math inline">\(p^C = m + \frac{c}{n}\)</span></li>
 </ul>
+</section>
+<section id="free-entry-equilibrium" class="slide level2">
+<h2>Free-entry equilibrium</h2>
+<ul>
+<li><strong>Zero profit condition</strong>: <span class="math inline">\(p^C = m + nF\)</span></li>
+<li><strong>Solve</strong>: <span class="math inline">\(m+nF = m+\frac{c}{n}\)</span> so <span class="math inline">\(n^C = \sqrt{\frac{c}{F}}\)</span> and <span class="math inline">\(p^C = m + \sqrt{cF}\)</span></li>
+<li><strong>Comparative statics</strong>: <span class="math inline">\(n^C\)</span> increases in <span class="math inline">\(c\)</span> and decreases in <span class="math inline">\(F\)</span></li>
+</ul>
+</section>
+<section id="welfare" class="slide level2">
+<h2>Welfare</h2>
+<ul>
+<li>Average distance to the nearest firm: <span class="math inline">\(\bar d = \frac{1}{4n}\)</span></li>
+<li>Resource cost of variety: <span class="math inline">\(nF\)</span></li>
+<li>With quasilinear utility, prices are transfers</li>
+<li>Per-consumer welfare: <span class="math inline">\(W(n) = v - \frac{c}{4n} - nF\)</span> (where <span class="math inline">\(v=u-u^*\)</span>)</li>
+</ul>
+</section>
+<section id="social-planner-solution" class="slide level2">
+<h2>Social planner solution</h2>
+<p>Planner problem: Choose <span class="math inline">\(n\)</span> to maximise <span class="math inline">\(W(n)\)</span></p>
+<ul>
+<li>FOC: <span class="math inline">\(\frac{dW}{dn}=\frac{c}{4n^2}-F=0\)</span></li>
+<li>Social optimum: <span class="math inline">\(n^S=\frac{1}{2}\sqrt{\frac{c}{F}}\)</span></li>
+<li>Free entry: <span class="math inline">\(n^C=\sqrt{\frac{c}{F}}\)</span> so <span class="math inline">\(n^C=2n^S\)</span></li>
+</ul>
+<p>Excess entry due to business stealing externality</p>
+</section>
+<section id="summary-and-next-week" class="slide level2">
+<h2>Summary and next week</h2>
+<ul>
+<li>Mismatch costs soften price competition (markups increase in <span class="math inline">\(c\)</span>)</li>
+<li>Hotelling: demand, best responses, and equilibrium prices with fixed locations</li>
+<li>Salop: free entry gives <span class="math inline">\(n^C=\sqrt{\frac{c}{F}}\)</span> and implies excess entry relative to the planner</li>
+</ul>
+<p><strong>Next week:</strong></p>
+<ul>
+<li>Innovation under uncertainty</li>
+<li>Oligopoly incentives to innovate (replacement effect, entry threat)</li>
+</ul>
+</section>
+<section id="references" class="slide level2 smaller scrollable">
+<h2>References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-daspremontHotellingsStabilityCompetition1979" class="csl-entry" role="listitem">
+<strong>• </strong><span class="nocase">d’Aspremont, C., Gabszewicz, J. Jaskold, and Thisse, J.-F.</span> (1979). On hotelling’s "stability in competition". <em>Econometrica</em>, 47, (5), 1145–1150 https://doi.org/<a href="https://doi.org/10.2307/1911955">10.2307/1911955</a>.
+</div>
+<div id="ref-hotellingStabilityCompetition1929" class="csl-entry" role="listitem">
+<strong>• </strong>Hotelling, Harold (1929). Stability in <span>Competition</span>. <em>The Economic Journal</em>, 39, (153), 41–57 https://doi.org/<a href="https://doi.org/10.2307/2224214">10.2307/2224214</a>.
+</div>
+<div id="ref-salopMonopolisticCompetitionOutside1979" class="csl-entry" role="listitem">
+<strong>• </strong>Salop, Steven C. (1979). Monopolistic competition with outside goods. <em>The Bell Journal of Economics</em>, 10, (1), 141 https://doi.org/<a href="https://doi.org/10.2307/3003323">10.2307/3003323</a>.
+</div>
+</div>
 
 
-</section>
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
@@ -839,15 +721,15 @@ Lp_1 &amp; \text{if } p_1 &lt; p_2 - c(L - a - b) \\[0.5em]
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1600,
+        width: 1050,
 
-        height: 900,
+        height: 700,
 
         // Factor of the display size that should remain empty around the content
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],

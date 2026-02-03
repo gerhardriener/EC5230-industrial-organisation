@@ -9,8 +9,9 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-ce4278342a015d016477ed09bce942c5.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.17">
 
-  <meta name="author" content="Gerhard Riener">
-  <title>EC5230 Industrial Organisation – Lecture 6 – Cooperative R&amp;D</title>
+  <meta name="author" content="Your Name">
+  <meta name="dcterms.date" content="2025-10-09">
+  <title>EC5230 Industrial Organisation – A title</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -31,13 +32,77 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-b2736e9fcda83c748fd63b6e579550ef.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
@@ -132,426 +197,77 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-color="#00539b" class="quarto-title-block center">
-  <h1 class="title">Lecture 6 – Cooperative R&amp;D</h1>
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">A title</h1>
+  <p class="subtitle">A subtitle</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Gerhard Riener 
+Your Name <a href="https://orcid.org/0000-0000-0000-0000" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a>
 </div>
+<div class="quarto-title-author-email">
+<a href="mailto:alias@email.com">alias@email.com</a>
 </div>
+        <p class="quarto-title-affiliation">
+            Your Institution
+          </p>
+    </div>
 </div>
 
+  <p class="date">9 October 2025</p>
 </section>
-<section>
-<section id="cooperative-rd" class="title-slide slide level1 center" data-background-color="#00539b">
-<h1>Cooperative R&amp;D</h1>
-
-</section>
-<section id="cooperative-rd-overview" class="slide level2">
-<h2>Cooperative R&amp;D: overview</h2>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Object of analysis</strong></p>
-</div>
-<div class="callout-content">
-<p>R&amp;D cooperation when R&amp;D creates spillovers (<span class="math inline">\(\beta&gt;0\)</span>) or allows cost sharing (RJV).</p>
-</div>
-</div>
-</div>
+<section id="example-slide" class="slide level2">
+<h2>Example slide</h2>
+<h3 id="this-is-a-subtitle">This is a subtitle</h3>
+<p>Here we have some text that may run over several lines of the slide frame, depending on how long it is.</p>
 <ul>
-<li><p>Baseline: each firm chooses R&amp;D privately and internalises only its own costs/benefits</p></li>
-<li><p>This lecture:</p>
+<li>first item
 <ul>
-<li>R&amp;D spillovers and the incentive to coordinate R&amp;D</li>
-<li>Research joint ventures (RJVs) as cost-sharing arrangements</li>
+<li>A sub item</li>
 </ul></li>
-<li><p>Core question:</p>
+</ul>
+<p>Next, we’ll brief review some theme-specific components.</p>
 <ul>
-<li>When does cooperation increase welfare relative to non-cooperative R&amp;D?</li>
-</ul></li>
+<li>Note that <em>all</em> of the standard Reveal.js <a href="https://quarto.org/docs/presentations/revealjs/">features</a> can be used with this theme, even if we don’t highlight them here.</li>
 </ul>
 </section>
-<section id="multi-stage-games-reminder" class="slide level2">
-<h2>Multi-stage games: reminder</h2>
+<section id="additional-theme-classes" class="slide level2">
+<h2>Additional theme classes</h2>
+<h3 id="some-extra-things-you-can-do-with-the-clean-theme">Some extra things you can do with the clean theme</h3>
+<p>Special classes for emphasis</p>
 <ul>
-<li>Two-stage structure:
-<ol type="1">
-<li>Stage 1: choose <span class="math inline">\(x_i\)</span> (R&amp;D)</li>
-<li>Stage 2: choose <span class="math inline">\(q_i\)</span> (product-market competition)</li>
-</ol></li>
+<li><code>.alert</code> class for default emphasis, e.g.&nbsp;<span class="alert">important note</span>.</li>
+<li><code>.fg</code> class for custom colour, e.g.&nbsp;<span class="fg" style="--col: #e64173">important note</span>.</li>
+<li><code>.bg</code> class for custom background, e.g.&nbsp;<span class="bg" style="--col: #e64173">important note</span>.</li>
 </ul>
-<div class="callout callout-important callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Backward induction</strong></p>
-</div>
-<div class="callout-content">
-<p>Solve Stage 2 for <span class="math inline">\(q_i^*(x)\)</span>, substitute into Stage 1 payoffs, then solve for <span class="math inline">\(x^*\)</span>.</p>
-</div>
-</div>
-</div>
-</section></section>
-<section>
-<section id="rd-spillovers-daspremontjacquemin" class="title-slide slide level1 center" data-background-color="#00539b">
-<h1>R&amp;D spillovers (d’Aspremont–Jacquemin)</h1>
-
-</section>
-<section id="spillovers-model-primitives" class="slide level2">
-<h2>Spillovers model: primitives</h2>
+<p>Cross-references</p>
 <ul>
-<li>Duopoly with inverse demand:</li>
-</ul>
-<p><span class="math display">\[
-p(Q) = A - Q,\quad Q=q_1+q_2
-\]</span></p>
-<ul>
-<li>Cost and spillovers:
-<ul>
-<li>Marginal cost of firm <span class="math inline">\(i\)</span>: <span class="math inline">\(c_i = c - x_i - \beta x_j\)</span> with <span class="math inline">\(\beta\in(0,1)\)</span></li>
-<li>Feasibility: <span class="math inline">\(x_i + \beta x_j \le c\)</span></li>
-</ul></li>
-<li>R&amp;D cost:
-<ul>
-<li>Firm <span class="math inline">\(i\)</span> pays <span class="math inline">\(\frac{x_i^2}{2}\)</span></li>
-</ul></li>
-<li>Objects:
-<ul>
-<li>Choice variables: <span class="math inline">\(x_i\)</span> (stage 1), <span class="math inline">\(q_i\)</span> (stage 2)</li>
-<li>Parameters: <span class="math inline">\(A, c, \beta\)</span></li>
-</ul></li>
-</ul>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Spillover parameter</strong></p>
-</div>
-<div class="callout-content">
-<p><span class="math inline">\(\beta\in(0,1)\)</span> measures how much of firm <span class="math inline">\(j\)</span>’s R&amp;D reduces firm <span class="math inline">\(i\)</span>’s marginal cost.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="spillovers-model-stage-2-profit" class="slide level2">
-<h2>Spillovers model: stage-2 profit</h2>
-<ul>
-<li>Given <span class="math inline">\((x_1,x_2)\)</span>, firm <span class="math inline">\(i\)</span> chooses <span class="math inline">\(q_i\)</span> to maximise:</li>
-</ul>
-<p><span class="math display">\[
-\pi_i(q_i;q_j,x_i,x_j)=[A-(q_i+q_j)-c_i]q_i-\frac{x_i^2}{2}
-\]</span></p>
-<ul>
-<li>Interpretation:
-<ul>
-<li>R&amp;D shifts marginal cost; output competition determines how much cost reduction is monetised</li>
-</ul></li>
+<li><code>.button</code> class provides a Beamer-like button, e.g. <a href="#/sec-summary"><span class="button">Summary</span></a></li>
 </ul>
 </section>
-<section id="product-market-equilibrium-cournot-quantities" class="slide level2">
-<h2>Product-market equilibrium (Cournot): quantities</h2>
+<section id="want-more" class="slide level2">
+<h2>Want more?</h2>
+<h3 id="see-our-longer-demo-slides">See our longer demo slides</h3>
+<p>We’ve deliberarely kept this template lean, to get you up and running as fast as possible.</p>
+<p>We provide a separate <a href="https://github.com/grantmcdermott/quarto-revealjs-clean-demo">demo template</a>, with more examples for integrating code, tables, figures, etc.</p>
 <ul>
-<li>Cournot–Nash equilibrium quantities (given <span class="math inline">\(x_1,x_2\)</span>):</li>
-</ul>
-<p><span class="math display">\[
-q_i^*=\frac{1}{3}\Big[(A-c)+(2-\beta)x_i+(2\beta-1)x_j\Big]
-\]</span></p>
-<ul>
-<li>Interpretation:
-<ul>
-<li>Own R&amp;D raises own output; rival R&amp;D can raise or lower own output depending on spillover strength</li>
-</ul></li>
-</ul>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Strategic effect of spillovers</strong></p>
-</div>
-<div class="callout-content">
-<p>The term <span class="math inline">\((2\beta-1)x_j\)</span> implies rival R&amp;D can be output-increasing or output-reducing depending on whether <span class="math inline">\(\beta\)</span> is above or below <span class="math inline">\(\tfrac{1}{2}\)</span>.</p>
-</div>
-</div>
-</div>
-</section></section>
-<section>
-<section id="rd-regimes" class="title-slide slide level1 center" data-background-color="#00539b">
-<h1>R&amp;D regimes</h1>
-
-</section>
-<section id="regimes-definition" class="slide level2">
-<h2>Regimes: definition</h2>
-<ul>
-<li><p>We compare three institutional regimes:</p></li>
-<li><p>Game I:</p>
-<ul>
-<li>Non-cooperative R&amp;D and non-cooperative output (Cournot)</li>
-</ul></li>
-<li><p>Game II:</p>
-<ul>
-<li>Cooperative R&amp;D, non-cooperative output (Cournot)</li>
-</ul></li>
-<li><p>Game III:</p>
-<ul>
-<li>Cooperative R&amp;D and cooperative output (joint profit maximisation)</li>
-</ul></li>
+<li>See the live demo slides <a href="https://grantmcdermott.com/quarto-revealjs-clean-demo/template.html">here</a>.</li>
 </ul>
 </section>
-<section id="game-i-stage-1-problem-non-cooperative-rd" class="slide level2">
-<h2>Game I: stage-1 problem (non-cooperative R&amp;D)</h2>
-<ul>
-<li>Stage 1 objective for firm <span class="math inline">\(i\)</span>:</li>
-</ul>
-<p><span class="math display">\[
-\max_{x_i}\ \pi_i^*(x_i,x_j)=[q_i^*(x_i,x_j)]^2-\frac{x_i^2}{2}
-\]</span></p>
-<ul>
-<li>Symmetric equilibrium (<span class="math inline">\(x_1=x_2=x^*\)</span>):</li>
-</ul>
-<p><span class="math display">\[
-x^*=\frac{(A-c)(2-\beta)}{4.5-(2-\beta)(1+\beta)}
-\]</span></p>
-<ul>
-<li>Interpretation:
-<ul>
-<li>Each firm invests less when spillovers are high because part of the benefit accrues to the rival</li>
-</ul></li>
-</ul>
-</section>
-<section id="game-ii-stage-1-problem-cooperative-rd" class="slide level2">
-<h2>Game II: stage-1 problem (cooperative R&amp;D)</h2>
-<ul>
-<li>Firms choose <span class="math inline">\((x_1,x_2)\)</span> to maximise joint profit given Cournot output:</li>
-</ul>
-<p><span class="math display">\[
-\max_{x_1,x_2}\ \hat{\pi}=\pi_1^*+\pi_2^*
-\]</span></p>
-<ul>
-<li>Symmetric solution (<span class="math inline">\(x_1=x_2=\hat{x}\)</span>):</li>
-</ul>
-<p><span class="math display">\[
-\hat{x}=\frac{(A-c)(1+\beta)}{4.5-(1+\beta)^2}
-\]</span></p>
-<ul>
-<li>Interpretation:
-<ul>
-<li>Internalising spillovers increases R&amp;D relative to Game I (for intermediate <span class="math inline">\(\beta\)</span>)</li>
-</ul></li>
-</ul>
-</section>
-<section id="game-iii-cooperative-rd-and-output" class="slide level2">
-<h2>Game III: cooperative R&amp;D and output</h2>
-<ul>
-<li><p>With full cooperation, firms maximise joint profit over <span class="math inline">\((q_1,q_2,x_1,x_2)\)</span></p></li>
-<li><p>Under symmetry (<span class="math inline">\(x_1=x_2=x\)</span>, <span class="math inline">\(q_1=q_2\)</span>), aggregate output in stage 2 is:</p></li>
-</ul>
-<p><span class="math display">\[
-\tilde{Q}=\frac{(A-c)+(1+\beta)x}{2}
-\]</span></p>
-<ul>
-<li>Stage 1 chooses <span class="math inline">\(x\)</span> to maximise joint profit; solution:</li>
-</ul>
-<p><span class="math display">\[
-\tilde{x}=\frac{(A-c)(1+\beta)}{4-(1+\beta)^2}
-\]</span></p>
-<ul>
-<li>Interpretation:
-<ul>
-<li>Output coordination reduces product-market competition; R&amp;D incentives differ because they are evaluated at monopoly output</li>
-</ul></li>
-</ul>
-</section></section>
-<section>
-<section id="welfare" class="title-slide slide level1 center" data-background-color="#00539b">
-<h1>Welfare</h1>
-
-</section>
-<section id="welfare-benchmark-social-planner" class="slide level2">
-<h2>Welfare benchmark: social planner</h2>
-<p>Assume symmetry <span class="math inline">\(x_1=x_2=x\)</span>.</p>
-<ul>
-<li>Welfare function (as stated in the lecture):</li>
-</ul>
-<p><span class="math display">\[
-W(Q)=V(Q)+R(Q)-[c-(1+\beta)x]Q-x^2
-\]</span></p>
-<ul>
-<li>Stage 2 FOC w.r.t. <span class="math inline">\(Q\)</span>:</li>
-</ul>
-<p><span class="math display">\[
-Q=A-c+(1+\beta)x
-\]</span></p>
-<ul>
-<li>Interpretation:
-<ul>
-<li>Planner expands output to the efficient level given the cost reduction from total effective R&amp;D</li>
-</ul></li>
-</ul>
-</section>
-<section id="social-optimum-rd-and-output" class="slide level2">
-<h2>Social optimum: R&amp;D and output</h2>
-<ul>
-<li>Socially optimal R&amp;D:</li>
-</ul>
-<p><span class="math display">\[
-x^{**}=\frac{(A-c)(1+\beta)}{2-(1+\beta)^2}
-\]</span></p>
-<ul>
-<li>Socially optimal output:</li>
-</ul>
-<p><span class="math display">\[
-Q^{**}=(A-c)\left[\frac{2}{2-(1+\beta)^2}\right]
-\]</span></p>
-<ul>
-<li>Interpretation:
-<ul>
-<li>Relative to market outcomes, the planner internalises both spillovers and the consumer-surplus gain from lower prices</li>
-</ul></li>
-</ul>
-</section>
-<section id="comparing-regimes-rd-and-output-rankings" class="slide level2">
-<h2>Comparing regimes: R&amp;D and output rankings</h2>
-<ul>
-<li>R&amp;D expenditure comparison (from the lecture):
-<ul>
-<li>Large spillovers: <span class="math inline">\(x^{**}&gt;\tilde{x}&gt;\hat{x}&gt;x^*\)</span></li>
-<li>Small spillovers: <span class="math inline">\(x^{**}&gt;\tilde{x}\ge x^*&gt;\hat{x}\)</span></li>
-</ul></li>
-<li>Output comparison (from the lecture):
-<ul>
-<li>Large spillovers: <span class="math inline">\(Q^{**}&gt;\hat{Q}&gt;Q^*&gt;\tilde{Q}\)</span></li>
-<li>Small spillovers: <span class="math inline">\(Q^{**}&gt;Q^*&gt;\hat{Q}&gt;\tilde{Q}\)</span></li>
-</ul></li>
-</ul>
-<div class="callout callout-important callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Reading the rankings</strong></p>
-</div>
-<div class="callout-content">
-<p>Higher <span class="math inline">\(x\)</span> need not imply higher <span class="math inline">\(Q\)</span> when cooperation also changes the intensity of product-market competition.</p>
-</div>
-</div>
-</div>
-</section></section>
-<section>
-<section id="research-joint-ventures-combs" class="title-slide slide level1 center" data-background-color="#00539b">
-<h1>Research joint ventures (Combs)</h1>
-
-</section>
-<section id="rjv-model-primitives" class="slide level2">
-<h2>RJV model: primitives</h2>
-<ul>
-<li><p>Probability a single lab succeeds: <span class="math inline">\(p\)</span></p></li>
-<li><p>Product-market profits:</p>
-<ul>
-<li>Monopoly: <span class="math inline">\(\pi^m\)</span></li>
-<li>Duopoly: <span class="math inline">\(\pi^d\)</span></li>
-</ul></li>
-<li><p>Fixed cost of a lab: <span class="math inline">\(F\)</span></p></li>
-<li><p>Assumptions:</p>
-<ul>
-<li>If both succeed, firms compete in the product market (profits <span class="math inline">\(\pi^d\)</span> each)</li>
-<li>If only one succeeds (non-cooperative setting), the innovator earns <span class="math inline">\(\pi^m\)</span></li>
-</ul></li>
-</ul>
-</section>
-<section id="rjv-cost-sharing-single-lab" class="slide level2">
-<h2>RJV: cost-sharing (single lab)</h2>
-<ul>
-<li>Each cooperating firm’s expected payoff:</li>
-</ul>
-<p><span class="math display">\[
-V_C=p\pi^d-\frac{F}{2}
-\]</span></p>
-<ul>
-<li>Non-cooperating firm’s expected payoff:</li>
-</ul>
-<p><span class="math display">\[
-V_N=p(1-p)\pi^m+p^2\pi^d-F
-\]</span></p>
-<ul>
-<li>Cooperation condition:</li>
-</ul>
-<p><span class="math display">\[
-V_C\ge V_N \quad\Leftrightarrow\quad \frac{F}{2}\ge p(1-p)(\pi^m-\pi^d)
-\]</span></p>
-<ul>
-<li>Interpretation:
-<ul>
-<li>Cooperation is more attractive when the “winner-takes-all” component <span class="math inline">\(p(1-p)\)</span> is small</li>
-</ul></li>
-</ul>
-</section>
-<section id="rjv-duplication-two-labs" class="slide level2">
-<h2>RJV: duplication (two labs)</h2>
-<ul>
-<li>If the RJV runs two labs (duplication), payoff of each cooperating firm:</li>
-</ul>
-<p><span class="math display">\[
-\tilde{V}_C=2p\pi^d-F
-\]</span></p>
-<ul>
-<li><p>Non-cooperating payoff remains <span class="math inline">\(V_N\)</span></p></li>
-<li><p>Cooperation condition:</p></li>
-</ul>
-<p><span class="math display">\[
-\tilde{V}_C\ge \tilde{V}_N \quad\Leftrightarrow\quad p\ge \frac{\pi^m-2\pi^d}{\pi^m-\pi^d}\equiv K
-\]</span></p>
-<ul>
-<li>Interpretation:
-<ul>
-<li>With duplication, cooperation depends mainly on success probability <span class="math inline">\(p\)</span> (not on <span class="math inline">\(F\)</span>)</li>
-</ul></li>
-</ul>
-</section></section>
-<section>
-<section id="summary-and-references" class="title-slide slide level1 center" data-background-color="#00539b">
-<h1>Summary and references</h1>
-
-</section>
-<section id="summary-references" class="slide level2">
-<h2>Summary &amp; references</h2>
-<p><strong>Summary</strong></p>
-<ul>
-<li>Spillovers <span class="math inline">\(\beta&gt;0\)</span> create an externality in R&amp;D, so non-cooperative R&amp;D can be inefficiently low</li>
-<li>Cooperative R&amp;D internalises spillovers and can increase R&amp;D relative to non-cooperative choices</li>
-<li>Full cooperation may reduce product-market competition, affecting output and welfare</li>
-<li>RJVs trade off cost sharing against strategic effects from duplication and winning probabilities</li>
-</ul>
-<p><strong>References</strong></p>
-<ul>
-<li>d’Aspremont, C., &amp; Jacquemin, A. (1988). Cooperative and Noncooperative R&amp;D in Duopoly with Spillovers. <em>American Economic Review</em>, 78(5), 1133–1137.</li>
-<li>Combs, K. L. (1992). Cost sharing vs.&nbsp;multiple research projects in cooperative R&amp;D. <em>Economics Letters</em>, 39(3), 353–357.</li>
-<li>Belleflamme, P., &amp; Peitz, M. (2015). <em>Industrial Organization: Markets and Strategies</em> (2nd ed.). Cambridge University Press. Chapter 18.3.</li>
-<li>Shy, O. (1996). <em>Industrial Organization: Theory and Applications</em>. MIT Press. Chapter 9.</li>
-</ul>
-</section>
-<section id="next-week-assessment-and-feedback" class="slide level2">
-<h2>Next week: assessment and feedback</h2>
-<ul>
-<li>Online class test (timing and format)</li>
-<li>Tutorial: class test feedback and problem solving</li>
-<li>Transition to subsequent lecture topics as scheduled</li>
-</ul>
+<section id="sec-summary" class="slide level2">
+<h2>Summary</h2>
+<h3 id="a-minimalist-and-elegant-presentation-theme">A minimalist and elegant presentation theme</h3>
+<p>The Quarto reveal.js clean theme aims to be a minimalist and elegant presention theme. Here are some options to get you started:</p>
+<p>Add the theme to an existing project.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a></a><span class="ex">quarto</span> install extension grantmcdermott/quarto-revealjs-clean</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>… or, create a new project using this slide deck as a lean template.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a></a><span class="ex">quarto</span> use template grantmcdermott/quarto-revealjs-clean</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>… or, create a new project using the demo slide deck as a full template.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a></a><span class="ex">quarto</span> use template grantmcdermott/quarto-revealjs-clean-demo</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 
-</section></section>
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
@@ -566,7 +282,6 @@ V_C\ge V_N \quad\Leftrightarrow\quad \frac{F}{2}\ge p(1-p)(\pi^m-\pi^d)
   <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
   <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -582,14 +297,13 @@ V_C\ge V_N \quad\Leftrightarrow\quad \frac{F}{2}\ge p(1-p)(\pi^m-\pi^d)
       // https://revealjs.com/config/
       Reveal.initialize({
 'controlsAuto': true,
-'previewLinksAuto': true,
+'previewLinksAuto': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'chalkboard': {"buttons":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -722,7 +436,7 @@ V_C\ge V_N \quad\Leftrightarrow\quad \frac{F}{2}\ge p(1-p)(\pi^m-\pi^d)
 
         // Transition style for full page slide backgrounds
         // (none/fade/slide/convex/concave/zoom)
-        backgroundTransition: 'fade',
+        backgroundTransition: 'none',
 
         // Number of slides away from the current that are visible
         viewDistance: 3,
@@ -760,7 +474,7 @@ V_C\ge V_N \quad\Leftrightarrow\quad \frac{F}{2}\ge p(1-p)(\pi^m-\pi^d)
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
 
           RevealMath,
           RevealNotes,
