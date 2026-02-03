@@ -1,18 +1,14 @@
 ---
 title: "Lecture 2 – Product Differentiation"
 format:
-  revealjs:
+  clean-revealjs:
     slide-number: true
-    theme:  [default, theme/st-andrews.scss]
     title-slide-attributes:
       data-background-color: "#00539b"
     chalkboard: true
     preview-links: auto
     transition: none
     background-transition: fade
-    width: 1600
-    height: 900
-    margin: 0.1
 execute:
   echo: false
   warning: false
@@ -20,346 +16,256 @@ execute:
   cache: true
 ---
 
-## Product differentiation: overview
+## Differentiation types
 
-- **Horizontal v vertical differentiation**
-  - **Horizontal**: consumers disagree on which variety is best
-  - **Verticalunr**: products differ in quality; all consumers (weakly) prefer the higher-quality product at equal prices.
+- Horizontal: consumers disagree on which variety is best (ideal-point / mismatch preferences)
+- Vertical: products differ in quality; at equal prices all consumers (weakly) prefer the higher-quality good
 
-- What determines demand when prices are equal?
-- How does variety interact with quantity?
+**Today: roadmap**
 
-- **Focus today: horizontal product differentiation**
-  - Linear Hotelling model (two firms)
-  - Salop's circular market (free entry)
+- Focus: horizontal differentiation
+- Hotelling line: 2 firms, pricing with fixed locations
+- Salop circular city: free entry and welfare
 
-## Linear Hotelling model: setting
+# Hotelling Model
 
-- **Market structure**
-  - Duopoly; zero marginal cost
-  - Linear market of length $L$; consumers uniformly distributed
-  - Each consumer buys either 1 unit or nothing
+## Setup (fixed locations)
 
-- **Preference parameters**
-  - Firm 1 located at distance $a$ from left endpoint (0)
-  - Firm 2 located at distance $b$ from right endpoint ($L$)
-  - Linear transport cost: $C(d)=cd$ where $d$ is distance and $c>0$
+- Duopoly, marginal cost $0$
+- Consumers ($\ell$) uniformly distributed on $[0,L]$ (@hotellingStabilityCompetition1929 line)
+- Firm 1 at $a$ and Firm 2 at $L-b$
+- Mismatch (transport) cost $C(d)=cd$ with $c>0$, $d$ extent of mismatch
+- Unit demand; assume full market coverage in equilibrium
 
-- **Objects**
-  - Choice variables: $p_1, p_2$
-  - Parameters: $L, a, b, c$
-  - Equilibrium outcomes: $x, y, q_1, q_2$
-
-![](figs/fig-hotelling-fixed-location.svg){fig-align="center"}
-
-## Linear Hotelling: pricing with fixed locations (Firm 1)
-
-- **Demand derivation**
-  - Marginal consumer indifferent: $p_1 + cx = p_2 + cy$
-  - Market length: $L = a + b + x + y$
-  - Firm 1 demand: $q_1 = a + x = \frac{p_2 - p_1 + c(L + a - b)}{2c}$
-
-- **Profit and best response**
-  - $\pi_1 = p_1 q_1$
-  - $BR_1(p_2)=\frac{p_2}{2}+\frac{c}{2}(L+a-b)$
-
-::: {.callout-note}
-## Interpretation (best response)
-
-- $BR_1$ is increasing in $p_2$ (prices are strategic complements here)
-- Larger $c$ softens competition, shifting best responses upward
+::: {.callout-note title="Utility (full coverage)"}
+$U_1(\ell)=\bar u - p_1 - c|\ell-a|$, $U_2(\ell)=\bar u - p_2 - c|\ell-(L-b)|$, outside option $0$; assume $\bar u$ is large enough that all consumers buy.
 :::
 
-## Linear Hotelling: pricing with fixed locations (Firm 2)
+## Geometry
 
-- **Demand derivation**
-  - Marginal consumer indifferent: $p_1 + cx = p_2 + cy$
-  - Market length: $L = a + b + x + y$
-  - Firm 2 demand: $q_2 = b + y = \frac{p_1 - p_2 + c(L + b - a)}{2c}$
+![](figs/fig-hotelling-fixed-location.svg){fig-alt="Hotelling line with fixed locations" fig-align="center" width="14cm"}
 
-- **Profit and best response**
-  - $\pi_2 = p_2 q_2$
-  - $BR_2(p_1)=\frac{p_1}{2}+\frac{c}{2}(L+b-a)$
+- Choice variables: $p_1, p_2$
+- Parameters: $L, a, b, c$
+- Distance between firms: $L-a-b$
+- Marginal consumer distances: $x+y=L-a-b$
+- Demands: $q_1=a+x$ and $q_2=b+y$
 
-::: {.callout-note}
-## Interpretation (symmetry)
+## Marginal consumer and demands
 
-- If $a=b$, best responses are symmetric and yield $p_1^*=p_2^*$
+- Indifference of the marginal consumer: $p_1 + cx = p_2 + cy$
+- Geometry: $x+y=L-a-b$
+
+**Demands by firm**
+
+- $q_1 = a + x = \frac{p_2 - p_1 + c(L + a - b)}{2c}$
+- $q_2 = b + y = \frac{p_1 - p_2 + c(L + b - a)}{2c}$
+
+## Best responses
+
+- $BR_1(p_2)=\frac{p_2}{2}+\frac{c}{2}(L+a-b)$
+- $BR_2(p_1)=\frac{p_1}{2}+\frac{c}{2}(L+b-a)$
+
+::: callout-warning
+Prices are strategic complements; if $a=b$ then $p_1^*=p_2^*$
 :::
 
-![](figs/fig-hotelling-fixed-location.svg){fig-align="center"}
+## Price equilibrium fixed locations
 
-## Linear Hotelling model: Nash equilibrium in prices
+- Prices: $p_1^* = c\left(L + \frac{a-b}{3}\right)$ and $p_2^* = c\left(L + \frac{b-a}{3}\right)$
+- Profits: $\pi_1^* = \frac{c}{18}(3L + a - b)^2$ and $\pi_2^* = \frac{c}{18}(3L + b - a)^2$
+- If $a=b$, symmetry implies $p_1^*=p_2^*$
+- Higher $c$ lowers substitutability and raises equilibrium markups and profits
 
-- **Best responses**
-  - $BR_1(p_2) = \frac{p_2}{2} + \frac{c}{2}(L + a - b)$
-  - $BR_2(p_1) = \frac{p_1}{2} + \frac{c}{2}(L + b - a)$
+## Hotelling: co-location
 
-- **Nash equilibrium prices and profits**
-  - $p_1^* = c\left(L + \frac{a-b}{3}\right)$; $p_2^* = c\left(L + \frac{b-a}{3}\right)$
-  - $\pi_1^* = \frac{c}{18}(3L + a - b)^2$; $\pi_2^* = \frac{c}{18}(3L + b - a)^2$
+- Co-location implies $a+b=L$ and $x=y=0$
+- Products become homogeneous $\Rightarrow$ Bertrand undercutting
+- Equilibrium: $p_1^B=p_2^B=0$ and $\pi_1^B=\pi_2^B=0$
 
-::: {.callout-important}
-## Key comparative static
-
-Higher mismatch cost $c$ lowers substitutability and raises equilibrium markups and profits.
-:::
-
-## Linear Hotelling model: incentive to move (co-location)
-
-- **If firms locate at the same point**
-  - Then $a + b = L$ and the marginal consumer collapses to the location point: $x=y=0$
-  - Products become homogeneous $\Rightarrow$ Bertrand undercutting
-  - Unique equilibrium: $p_1^B=p_2^B=0$ and $\pi_1^B=\pi_2^B=0$
-
-::: {.callout-warning}
-## Co-location and price competition
+::: callout-warning
+**Co-location and price competition**
 
 Co-location removes captive consumers; any $p>0$ can be profitably undercut.
 :::
 
 ![](figs/fig-hotelling-movement-location.svg){fig-align="center"}
 
-## Linear Hotelling model: incentive to move (separated)
+## Move incentives
 
-- **Marginal incentive to increase own location parameter**
-  - $\frac{\partial \pi_1^*}{\partial a} = \frac{c}{9}(3L + a - b) > 0$
-  - $\frac{\partial \pi_2^*}{\partial b} = \frac{c}{9}(3L + b - a) > 0$
+- $\frac{\partial \pi_1^*}{\partial a} = \frac{c}{9}(3L + a - b) > 0$ and $\frac{\partial \pi_2^*}{\partial b} = \frac{c}{9}(3L + b - a) > 0$
+- In the pricing subgame, increasing $a$ (resp. $b$) moves Firm 1 (resp. Firm 2) inward (toward the centre)
+- These are comparative statics holding the rival location fixed
+- Under linear transport costs, pricing incentives can pull locations toward the centre
 
-- **Interpretation (pricing subgame only)**
-  - Increasing $a$ (resp. $b$) moves Firm 1 (resp. Firm 2) inward (toward the centre)
-  - These are comparative statics of equilibrium profits in the pricing subgame, holding the rival location fixed
+## Location game [@daspremontHotellingsStabilityCompetition1979]
 
-## Linear Hotelling model: location equilibrium (linear v quadratic transport)
+- Two-stage game: choose locations, then prices
+- Linear transport costs ($C(d)=cd$): pure-strategy location equilibrium may fail to exist (market-capture regions; non-concavity) 
+- Quadratic transport costs ($C(d)=td^2$): pure-strategy location equilibrium exists (baseline: maximum differentiation) 
+- Principle of minimum differentiation need not hold
 
-- **Result (standard)**
-  - With linear transport costs ($C(d)=cd$), the full two-stage location game may fail to have a pure-strategy equilibrium in locations
-
-- **Resolution**
-  - d’Aspremont, Gabszewicz & Thisse (1979): with quadratic transport costs ($C(d)=td^2$), a pure-strategy location equilibrium exists (maximum differentiation in their baseline)
-
-::: {.callout-note}
-## Why convexity matters
+::: callout-note
+**Why convexity matters**
 
 More convex mismatch costs make small location changes less effective at stealing marginal consumers through pricing.
 :::
 
-## Linear Hotelling model: profit function
+## Profit function
 
-Profit function of Firm 1 (d'Aspremont, Gabszewicz & Thisse, 1979):
+- Let $\Delta \equiv L-a-b$ denote the distance between firms
+- In the price subgame (locations fixed), Firm 1’s profit is piecewise in $(p_1,p_2)$ [@daspremontHotellingsStabilityCompetition1979]
 
-$$
-\pi_1(p_1, p_2) =
+$$\pi_1(p_1, p_2) =
 \begin{cases}
 \frac{p_1 p_2}{2c} - \frac{p_1^2}{2c} + \frac{(L+a-b)p_1}{2}
 & \text{if } |p_1 - p_2| \le c(L - a - b) \\[0.5em]
 Lp_1 & \text{if } p_1 < p_2 - c(L - a - b) \\[0.5em]
 0 & \text{if } p_1 > p_2 + c(L - a - b)
-\end{cases}
-$$
+\end{cases}$$
+
+## Profit regions
 
 - **Region 1 (interior)**: both firms serve positive mass of consumers; demand is linear in $p_1$
+
 - **Region 2 (market capture)**: Firm 1 undercuts enough to serve the whole line segment
+
 - **Region 3 (no demand)**: Firm 1 sets too high a price; demand is zero
 
-- **Interpretation**
-  - Kinks occur at the thresholds where a marginal consumer hits an endpoint of the market
-  - Piecewise structure clarifies why global profit maximisation can differ from the interior FOC
+![](figs/fig-hotelling-profit-function.svg){fig-alt="Hotelling price subgame: payoff regions" fig-align="center" width="14cm"}
 
-![](figs/fig-hotelling-profit-function.svg)
 
-## Salop's circular market: setting
+# Salop Circular City
 
-- **Market structure**
-  - Two sectors: one with homogeneous outside good; one with differentiated goods
-  - Circular market circumference normalised to 1; consumers uniformly distributed
-  - $n$ firms symmetrically located; distance between adjacent firms is $\frac{1}{n}$
-  - Each consumer buys either one unit (from some firm) or the outside good
+## Setup
 
-- **Objects**
-  - Choice variable: $p_i$
-  - Parameters: $n, c, u, u^*$
-  - Outcomes: market boundary/location cutoffs, quantity per firm
+- Outside good yields utility $u^*$
+- Differentiated varieties lie on a circle of circumference 1; consumers are uniformly distributed [@salopMonopolisticCompetitionOutside1979]
+- $n$ firms are symmetrically located; adjacent distance is $\frac{1}{n}$
+- Each consumer buys at most one unit: from some firm or the outside good
 
-![](figs/fig-salop-cycle.svg){fig-align="center"}
+![](figs/fig-salop-cycle.svg){fig-align="center" width="16cm"}
 
-## Salop's circular market: consumer utility
 
-::: {.callout-note}
-## Participation constraint
+## Objects
 
-Let $v=u-u^*$. A consumer participates in the differentiated sector iff $v \ge p_j + cd_j$.
-:::
+- Choice variable: $p_i$
+- Parameters: $n, c, u, u^*$
+- Outcomes: market boundaries / cutoffs, quantities
 
-- **Preference heterogeneity**
-  - Each consumer $i$ has ideal variety $\ell_i^*$ (location on the circle)
-  - Linear transport (mismatch) cost: $cd$ where $d$ is arc distance
+![](figs/fig-salop-cycle.svg){fig-align="center" width="16cm"}
 
-- **Utility from purchase**
-  - Buy outside good: $U^O = u^*$
-  - Buy from firm $j$: $U_j^D = u - c d_j - p_j$
 
-- **Participation condition**
-  - Consumer buys from firm $j$ iff $U_j^D \ge U^O$
-  - Let $v = u - u^*$, so participation is $v \ge p_j + c d_j$
 
-- **Interpretation**
-  - $v$ is the net gross surplus from consuming a perfectly matched differentiated variety rather than the outside good
-  - Transport costs convert “distance in product space” into a monetary disutility
+## Consumers
 
-## Salop's circular market: monopoly region (no competition)
+- Each consumer has an ideal variety $\ell^*$ (location on the circle)
+- Arc distance $d$ generates mismatch cost $cd$
+- Utility from firm $j$: $U_j = u - cd_j - p_j$
+- Outside option: $U^O=u^*$
+- Let $v=u-u^*$; participation requires $v \ge p_j + cd_j$
 
-- **Monopoly scenario**
-  - Firm's market is truncated by the outside option (participation), not by neighbouring firms
+## Monopoly region
 
-- **Maximum distance**: $d_m = \frac{v - p}{c}$
+- Outside option truncates the market (participation binds), not neighbours
+- Farthest served consumer: $d_m=\frac{v-p}{c}$
+- Monopoly demand: $q^M = 2d_m = 2\left(\frac{v-p}{c}\right)$
 
-- **Monopoly demand**: $q^M = 2 d_m = 2\left(\frac{v-p}{c}\right)$
+## Monopoly inverse demand
 
-- **Inverse demand**: $p = v - \frac{c}{2} q^M$
+- Inverse demand: $p = v - \frac{c}{2} q^M$
+- Slope is $-\frac{c}{2}$ because expanding quantity extends the served interval on both sides
+- Participation binds at the marginal consumer: $v = p + cd_m$
 
-- **Interpretation**
-  - Demand slope is $-\frac{c}{2}$ because increasing quantity expands the served interval on **both sides** of the firm
-  - Participation binds at the marginal consumer: $v = p + cd_m$
+## Competitive region
 
-## Salop's circular market: competitive region (with neighbors)
+- Boundary consumer (indifference): $v - cx - p = v - c\left(\frac{1}{n} - x\right) - \tilde{p}$
+- Boundary location: $x = \frac{\frac{c}{n} - p + \tilde{p}}{2c}$
+- Competitive quantity: $q^C = 2x$
 
-- **Competitive scenario**
-  - Market boundary determined by indifference between this firm and neighbour(s)
-
-- **Indifference condition**
-  - Main firm: $v - cx - p$
-  - Neighbour: $v - c\left(\frac{1}{n} - x\right) - \tilde{p}$
-
-- **Solve for boundary**
-  - $cx - p = c\left(\frac{1}{n} - x\right) - \tilde{p}$
-  - $x = \frac{\frac{c}{n} - p + \tilde{p}}{2c}$
-
-- **Interpretation**
-  - The boundary $x$ depends on both own price $p$ and neighbour price $\tilde p$
-
-## Salop's circular market: competitive demand and inverse demand
+## Competitive demand
 
 - **Competitive demand**: $q^C = 2x = \frac{\frac{c}{n} - p + \tilde{p}}{c}$
 
 - **Inverse demand**: $p = \frac{c}{n} + \tilde{p} - c q^C$
 
-::: {.callout-important}
-## Slope comparison
+::: callout-important
+**Slope comparison**
 
 Competitive-region inverse demand is steeper than monopoly-region inverse demand: $-c$ vs $-\frac{c}{2}$.
 :::
 
-## Salop's circular market: kinked demand
+## Kinked demand
 
-- **Firm's choice between regimes**
-  - **Monopoly region**: constrained by participation (outside option)
-  - **Competitive region**: constrained by neighbours (local oligopoly)
+- Demand is limited either by the outside option (participation) or by neighbours (local competition)
+- Effective demand is $q(p)=\min\{q^M(p),q^C(p)\}$
+  - **Participation-boundary (monopoly region)**: $q^M = 2\left(\frac{v-p}{c}\right)$
+  - **Neighbour-boundary (competitive region)**: $q^C = \frac{\frac{c}{n} - p + \tilde{p}}{c}$
+- The switch in the binding constraint creates a kink in inverse demand and a discrete change in marginal revenue
 
-- **Interpretation**
-  - As parameters change (e.g. $v, c, n$), the relevant constraint switches, generating a kink in the inverse demand
-  - This matters for pricing incentives because marginal revenue changes discretely at the regime boundary
+![](figs/fig-salop-demand-comp-mon.svg){fig-alt="Salop demand: monopoly vs competitive regimes" fig-align="center" width="16cm"}
 
-## Salop's circular market: kinked demand (location of kink)
+## Cost functions
 
-- **Two candidate constraints**
-  - **Participation** binds when the marginal consumer is indifferent between firm $i$ and the outside good: $v = p + cd$
-  - **Neighbour** competition binds when the marginal consumer is indifferent between firm $i$ and neighbour: $v - cx - p = v - c(\frac{1}{n}-x) - \tilde p$
+- Cost function: $C(q)=F + mq$ (fixed cost $F$, marginal cost $m$)
+- Average cost: $AC(q)=m+\frac{F}{q}$ (decreasing in $q$)
 
-- **Kink**
-  - The relevant constraint switches at the quantity where the two implied boundaries coincide
+## Pricing (competitive region)
 
-![](figs/fig-salop-demand-comp-mon.svg){fig-align="center"}
+- Inverse demand: $p = \frac{c}{n} + \tilde{p} - cq$
+- Marginal revenue: $MR = \frac{c}{n} + \tilde{p} - 2cq$
+- Symmetry: $\tilde{p}=p$
 
-## Salop's circular market: free-entry equilibrium (supply side)
+::: {.callout-note title="Competitive-region condition (outside option not binding)"}
 
-- **Cost structure**
-  - $C(q)=F + mq$ with fixed cost $F$ and constant marginal cost $m$
-  - Average cost: $AC(q)=m+\frac{F}{q}$ is decreasing in $q$
+In a symmetric profile, the farthest consumer from a firm is at distance $\frac{1}{2n}$. A sufficient condition for the competitive region to apply at the symmetric equilibrium is $v \ge p^C + \frac{c}{2n}$.
 
-- **Firm choice in competitive region**
-  - Demand: $p = \frac{c}{n} + \tilde{p} - cq$
-  - Best response: $MR = MC$ where $MR = \frac{c}{n} + \tilde{p} - 2cq$
-
-- **Assumption**: equilibrium is in competitive region for all firms; by symmetry $\tilde{p} = p$
-
-## Salop's circular market: free-entry equilibrium (zero-profit condition)
-
-- **Symmetric competitive equilibrium**
-  - In symmetry: $p=\tilde{p}$ and $q^C=\frac{1}{n}$
-
-- **Zero profit condition (free entry)**
-  - $p^C = AC = m + \frac{F}{q^C}$
-  - Substitute $q^C = \frac{1}{n}$: $p^C = m + nF$
-
-- **Interpretation**
-  - Free entry drives firms to earn zero economic profit
-  - Entry cost $F$ creates a trade-off: more firms means lower profit per firm
-
-## Salop's circular market: free-entry equilibrium (first-order condition)
-
-- **First-order condition (optimal quantity)**
-  - $MR = MC$ ⇔ $p^C + q^C \frac{dp^C}{dq^C} = m$
-  - Slope in competitive region: $\frac{dp}{dq} = -c$
-  - Therefore: $p^C - cq^C = m$ ⇔ $p^C = m + \frac{c}{n}$
-
-- **Solve for equilibrium**
-  - Equate zero-profit and FOC: $m + nF = m + \frac{c}{n}$
-  - $n^C = \sqrt{\frac{c}{F}}$; $p^C = m + \sqrt{cF}$
-
-- **Interpretation**
-  - $n^C$ increases with mismatch intensity $c$ (more differentiation supports more firms)
-  - $n^C$ decreases with fixed cost $F$ (entry becomes less profitable)
-
-## Salop's circular market: welfare analysis (consumer cost)
-
-- **Welfare object**
-  - Consumers' average distance to nearest firm: $\bar d = \frac{1}{4n}$ (half the arc between adjacent firms)
-  - Resource cost of variety: $nF$
-
-- **Per-consumer utilitarian welfare**
-  - With quasilinear utility, prices are transfers
-  - $W(n) = v - \frac{c}{4n} - nF$, where $v = u - u^*$
-
-- **Interpretation**
-  - Welfare depends on mismatch costs (↓ in $n$) and fixed entry costs (↑ in $n$)
-  - Social planner internalizes both effects; firms do not
-
-## Salop's circular market: welfare analysis (social optimum)
-
-- **Social planner's problem**: choose $n$ to maximize $W(n)$
-  - $\frac{dW}{dn} = \frac{c}{4n^2} - F = 0$
-  - $n^S = \frac{1}{2}\sqrt{\frac{c}{F}} = \frac{1}{2} n^C$
-
-- **Equilibrium v optimum**
-  - Free-entry equilibrium: $n^C = \sqrt{\frac{c}{F}}$
-  - Social optimum: $n^S = \frac{1}{2}n^C$
-
-::: {.callout-important}
-## Excess entry
-
-In this benchmark, free entry implies $n^C = 2n^S$.
 :::
 
-## Summary & references
+## Zero profit
 
-**Summary**
+- Symmetry implies $q^C=\frac{1}{n}$
+- Zero profit requires $p^C = AC = m + \frac{F}{q^C}$
+- Therefore $p^C = m + nF$
 
-- Horizontal differentiation relaxes price competition via consumer mismatch costs
-- Hotelling (fixed locations): equilibrium prices increase in transport cost $c$
-- Location incentives under linear transport can push toward minimum differentiation; quadratic costs restore a pure-strategy location equilibrium
-- Salop (circle): free entry implies $n^C=\sqrt{\frac{c}{F}}$ and excessive entry relative to the social optimum $n^S=\frac{1}{2}n^C$
+## Pricing condition
 
-**References**
+- **Competitive-region inverse demand**: $p = \frac{c}{n} + \tilde{p} - cq$
+- **First-order condition**: $MR=MC$ with $MR = \frac{c}{n} + \tilde{p} - 2cq$ and $MC=m$
+- **Symmetric equilibrium implication**: with $\tilde{p}=p$ and $q^C=\frac{1}{n}$, we get $p^C = m + \frac{c}{n}$
 
-- Hotelling, H. (1929). Stability in Competition. *Economic Journal*.
-- d’Aspremont, C., Gabszewicz, J. J., & Thisse, J.-F. (1979). On Hotelling’s “Stability in Competition”. *Econometrica*.
-- Salop, S. C. (1979). Monopolistic Competition with Outside Goods. *Bell Journal of Economics*.
-- Belleflamme, P., & Peitz, M. (2015). *Industrial Organization: Markets and Strategies*. Cambridge University Press.
+## Free-entry equilibrium
 
-## Next week: innovation
+- **Zero profit condition**: $p^C = m + nF$
+- **Solve**: $m+nF = m+\frac{c}{n}$ so $n^C = \sqrt{\frac{c}{F}}$ and $p^C = m + \sqrt{cF}$
+- **Comparative statics**: $n^C$ increases in $c$ and decreases in $F$
 
-- Innovation as a choice under uncertainty
-- Market structure and incentives to innovate (replacement effect and entry threat)
-- Drastic vs non-drastic innovations
-- R&D incentives in oligopoly
+## Welfare
+
+- Average distance to the nearest firm: $\bar d = \frac{1}{4n}$
+- Resource cost of variety: $nF$
+- With quasilinear utility, prices are transfers
+- Per-consumer welfare: $W(n) = v - \frac{c}{4n} - nF$ (where $v=u-u^*$)
+
+## Salop: planner
+
+- Planner chooses $n$ to maximise $W(n)$
+- FOC: $\frac{dW}{dn}=\frac{c}{4n^2}-F=0$
+- Social optimum: $n^S=\frac{1}{2}\sqrt{\frac{c}{F}}$
+- Free entry: $n^C=\sqrt{\frac{c}{F}}$ so $n^C=2n^S$ (excess entry)
+
+## Summary and next week
+
+- Mismatch costs soften price competition (markups increase in $c$)
+- Hotelling: demand, best responses, and equilibrium prices with fixed locations
+- Salop: free entry gives $n^C=\sqrt{\frac{c}{F}}$ and implies excess entry relative to the planner
+
+**Next week:**
+
+- Innovation under uncertainty
+- Oligopoly incentives to innovate (replacement effect, entry threat)
+
+## References
+
+::: {#refs}
+:::

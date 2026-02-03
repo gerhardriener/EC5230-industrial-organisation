@@ -3,7 +3,7 @@ title: "Lecture 1 - Oligopoly"
 format:
   revealjs:
     slide-number: true
-    theme:  [default, theme/st-andrews.scss]
+    theme:  [default]
     title-slide-attributes:
       data-background-color: "#00539b"
     chalkboard: true
