@@ -2,19 +2,19 @@
 title: "EC5230 – Industrial Organisation"
 subtitle: "Lecture 0 – Introduction"
 format:
-  revealjs:
+  clean-revealjs:
     slide-number: true
-    css: lecture-slides/theme/st-andrews.scss
-    theme: default
+    title-slide-attributes:
+      data-background-color: "#00539b"
     chalkboard: true
     preview-links: auto
-    transition: slide
+    transition: none
     background-transition: fade
-    width: 1600
-    height: 900
-    margin: 0.1
 execute:
   echo: false
+  warning: false
+  message: false
+  cache: true
 ---
 
 ## Course Overview

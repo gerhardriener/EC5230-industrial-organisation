@@ -1,18 +1,14 @@
 ---
 title: "Lecture 6 – Cooperative R&D"
 format:
-  revealjs:
+  clean-revealjs:
     slide-number: true
-    theme: [default, theme/st-andrews.scss]
     title-slide-attributes:
       data-background-color: "#00539b"
     chalkboard: true
     preview-links: auto
     transition: none
     background-transition: fade
-    width: 1600
-    height: 900
-    margin: 0.1
 execute:
   echo: false
   warning: false
