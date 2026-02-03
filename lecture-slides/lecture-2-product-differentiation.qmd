@@ -29,7 +29,7 @@ execute:
 
 # Hotelling Model
 
-## Setup (fixed locations)
+## Setup: Fixed locations, price competition
 
 - Duopoly, marginal cost $0$
 - Consumers ($\ell$) uniformly distributed on $[0,L]$ (@hotellingStabilityCompetition1929 line)
@@ -91,16 +91,26 @@ Co-location removes captive consumers; any $p>0$ can be profitably undercut.
 
 ![](figs/fig-hotelling-movement-location.svg){fig-align="center"}
 
-## Move incentives
+## Move incentives at fixed prices
 
 - $\frac{\partial \pi_1^*}{\partial a} = \frac{c}{9}(3L + a - b) > 0$ and $\frac{\partial \pi_2^*}{\partial b} = \frac{c}{9}(3L + b - a) > 0$
 - In the pricing subgame, increasing $a$ (resp. $b$) moves Firm 1 (resp. Firm 2) inward (toward the centre)
 - These are comparative statics holding the rival location fixed
-- Under linear transport costs, pricing incentives can pull locations toward the centre
+- Under linear transport costs, pricing incentives can pull locations toward the centre firms will “go where the demand is”
+
+## Identifying clustering motives
+
+**Question** Why are so many businesses clustered together?
+
+- Going where the demand is?
+
+- Possible collusion story? Being next to the competitor facilitates
+monitoring?
+
 
 ## Location game [@daspremontHotellingsStabilityCompetition1979]
 
-- Two-stage game: choose locations, then prices
+- **Two-stage game:** choose locations, then prices
 - Linear transport costs ($C(d)=cd$): pure-strategy location equilibrium may fail to exist (market-capture regions; non-concavity) 
 - Quadratic transport costs ($C(d)=td^2$): pure-strategy location equilibrium exists (baseline: maximum differentiation) 
 - Principle of minimum differentiation need not hold
@@ -247,12 +257,15 @@ In a symmetric profile, the farthest consumer from a firm is at distance $\frac{
 - With quasilinear utility, prices are transfers
 - Per-consumer welfare: $W(n) = v - \frac{c}{4n} - nF$ (where $v=u-u^*$)
 
-## Salop: planner
+## Social planner solution
 
-- Planner chooses $n$ to maximise $W(n)$
+Planner problem: Choose $n$ to maximise $W(n)$
+
 - FOC: $\frac{dW}{dn}=\frac{c}{4n^2}-F=0$
 - Social optimum: $n^S=\frac{1}{2}\sqrt{\frac{c}{F}}$
-- Free entry: $n^C=\sqrt{\frac{c}{F}}$ so $n^C=2n^S$ (excess entry)
+- Free entry: $n^C=\sqrt{\frac{c}{F}}$ so $n^C=2n^S$ 
+
+Excess entry due to business stealing externality
 
 ## Summary and next week
 

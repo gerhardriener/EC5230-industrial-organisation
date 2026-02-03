@@ -4,7 +4,7 @@ title: "Exercises"
 
 ## Problem Sets
 
-Practice exercises for EC5230 Industrial Organisation. Each part includes a version without solutions for self-study and a version with solutions for checking your work.
+Practice exercises for EC5230 Industrial Organisation. Each part includes a version without solutions and a version with solutions for checking your work, published after discussion in class
 
 ### Exercise Sets
 
@@ -18,7 +18,7 @@ Practice exercises for EC5230 Industrial Organisation. Each part includes a vers
 
 ::: {.callout-warning}
 ## Study Advice
-Try to complete the problems on your own before consulting the solutions. Active problem-solving is essential for mastering industrial organisation concepts.
+Try to complete the problems on your own before going to class. Active problem-solving is essential for mastering industrial organisation concepts.
 :::
 
 ### How to Use These Exercises
