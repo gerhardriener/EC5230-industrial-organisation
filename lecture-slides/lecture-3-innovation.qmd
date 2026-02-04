@@ -179,6 +179,12 @@ $$
 Holding everything else fixed, an incumbent monopolist has **weaker** incentives to innovate than a competitive industry because it is “replacing” its own pre-innovation rents.
 :::
 
+## Empirical example: competition and innovation
+
+::: {.callout-note title="Inverted-U evidence (QJE)"}
+Aghion et al. (2005) document an **inverted-U** relationship between product-market competition and innovation (patents/citations) in UK firms, consistent with “escape competition” incentives for neck-and-neck firms and a **replacement effect** for laggards. DOI: 10.1162/0033553053970214. [@aghionCompetitionInnovationInvertedU2005]
+:::
+
 ## Social planner: value of a cost reduction
 
 **Efficient output** (price equals marginal cost)
@@ -213,6 +219,12 @@ In this linear example, $\Delta W = 2\,\Delta \pi^m$: the planner values the out
 
 ::: {.callout-important title="Policy interpretation"}
 Private incentives and social value need not align: **$\Delta W$ can exceed $\Delta\pi$**, but market power created by IPRs also generates static distortions. This is the basic patents trade-off.
+:::
+
+## Empirical example: private vs social returns
+
+::: {.callout-note title="Welfare gains from product innovation (JPE)"}
+Trajtenberg (1989) estimates consumer and producer surplus gains from quality improvements in computed tomography (CT) scanners, illustrating that the **social value** of innovation can greatly exceed the innovator’s private returns. DOI: 10.1086/261611. [@trajtenbergWelfareAnalysisProduct1989]
 :::
 
 ## Quick numeric check (optional)
@@ -295,6 +307,12 @@ Typically when products are close substitutes (entry is very harmful).
 Here the incumbent may innovate **more** than an entrant because innovation does two things at once: it lowers cost *and* it keeps the market in the monopoly regime (entry deterrence / pre-emption).
 :::
 
+## Empirical example: strategic incentives and market share
+
+::: {.callout-note title="Pre-emptive innovation patterns (ReStud)"}
+Blundell, Griffith, and Van Reenen (1999) find that higher market share and market value predict more patenting/innovations in UK manufacturing firms, consistent with **strategic** incentives (including pre-emptive innovation) in oligopolistic industries. DOI: 10.1111/1467-937X.00097. [@blundellMarketShareMarket1999]
+:::
+
 # Seminal Contributions {background-color="#00539b"}
 
 ## Why Dasgupta–Stiglitz matters [@dasguptaIndustrialStructureNature1980]
@@ -332,6 +350,12 @@ $$
 **Interpretation:**
 
 - Optimal R&D increases with scale $Q$: a larger market makes cost reduction more valuable
+
+## Empirical example: market size and innovation
+
+::: {.callout-note title="Pharmaceutical innovation responds to demand (QJE)"}
+Acemoglu and Linn (2004) show that larger potential markets lead to more pharmaceutical innovation (new drugs/new molecular entities), consistent with models where the return to innovation rises with **scale**. DOI: 10.1162/0033553041502144. [@acemogluMarketSizeInnovation2004]
+:::
 
 ## Dasgupta–Stiglitz (1980): symmetric oligopoly [@dasguptaIndustrialStructureNature1980]
 
@@ -440,3 +464,5 @@ $$
 
 ## References
 
+::: {#refs}
+:::
