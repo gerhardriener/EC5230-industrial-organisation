@@ -16,178 +16,176 @@ execute:
   cache: true
 ---
 
-
-```{r}
-#| label: setup
-library(ggplot2)
-library(dplyr)
-```
-
 # Innovation and Market Structure {background-color="#00539b"}
 
-## Innovation: types and stages
+## Why innovation is central in IO
 
-**Why study innovation?**
+Innovation is the **dynamic** margin of competition: firms try to change the game by shifting **costs** and **demand**.
 
-- Innovation is a **stochastic** process
-- **Probability of success** depends on resources allocated
+**Why IO cares**
 
-**Types:**
+- Innovation changes **prices, mark-ups, and welfare** today
+- Innovation changes **market structure** tomorrow (entry/exit, dominance, concentration)
+- Policy trade-off: **static efficiency** (low prices) vs **dynamic efficiency** (strong incentives)
 
-- **Process innovation**: shifts cost function (typically lowers marginal cost)
-- **Product innovation**: shifts demand function
+## Types of innovation (and what we model today)
 
-**Stages:**
+**Process innovation** (this lecture’s workhorse case)
 
-- Research → Development → Adoption
+- Lowers marginal (or average) cost, e.g. a better production method
+- Think: a shift from $c_0$ to $c_1<c_0$
 
-## Innovation and competition: two-way relation
+**Product innovation**
 
-**Two-way relationship:**
+- Raises willingness to pay, expands demand, or creates new varieties
+- Often analysed with differentiated products and quality ladders (later in the course)
 
-- How **market structure** affects incentives to innovate
-- How **innovation** affects market structure
+**Stages (high level):** Research → Development → Adoption
 
-**Key question:**
+## Learning objectives
 
-- Compare maximum willingness to pay (WTP) for innovation across market structures:
-  1. Monopoly (before and after innovation)
-  2. Perfect competition (before; monopoly rights after)
-  3. Social planner
+- Compute the **private value** of a process innovation under different market structures
+- Define **drastic vs non-drastic** innovations and explain the **replacement effect** (Arrow)
+- Understand why innovation can have **strategic value** when it affects **entry** and market structure
+- See how models with **free entry + endogenous R&D** link innovation to **concentration** (Dasgupta–Stiglitz)
 
-**Interpretation:**
+::: {.callout-note title="Today: roadmap"}
+1. Benchmark model: value of a process innovation under **monopoly**, **perfect competition**, and the **social planner**
+2. **Drastic vs non-drastic** innovations and the **replacement effect**
+3. Innovation incentives in **oligopoly** and under **entry threat**
+4. Seminal results on **concentration** and **R&D** (Dasgupta–Stiglitz)
+:::
 
-- Firm WTP: maximum lump-sum payment that leaves profit unchanged, i.e. $\text{WTP} = \Delta \pi$
-- Planner WTP: maximum lump-sum payment that leaves welfare unchanged, i.e. $\text{WTP} = \Delta W$
+## Two-way relationship to keep in mind
 
-# Market Structure and Innovation Incentives {background-color="#00539b"}
+**Market structure → innovation**
 
-## Example: linear demand and process innovation
+- Competition affects profits, appropriability, and the gain from becoming “better” than rivals
 
-**Market demand (inverse):**
+**Innovation → market structure**
+
+- Cost/demand shifts affect entry, market shares, and concentration (and can create dominance)
+
+## Measuring incentives: willingness to pay (WTP)
+
+- **Firm WTP**: the max lump-sum payment that leaves profits unchanged  
+  $\Rightarrow \ \text{WTP} = \Delta \pi$
+- **Planner WTP**: the max lump-sum payment that leaves welfare unchanged  
+  $\Rightarrow \ \text{WTP} = \Delta W$
+
+In what follows we compute WTP for:
+**Monopoly** (before/after), **perfect competition** (before; exclusive rights after), and the **social planner**.
+
+# Benchmarks: Value of a Process Innovation {background-color="#00539b"}
+
+## Setup: linear demand + cost-reducing innovation
+
+**Inverse demand**
 
 $$
 P(Q) = A - Q
 $$
 
-**Process innovation:**
+**Technology**
 
-- Marginal cost falls from $c_0$ to $c_1$ where $c_1 < c_0 < A$
+- Constant marginal cost $c$
+- Process innovation reduces marginal cost from $c_0$ to $c_1$ with $c_1 < c_0 < A$
 
-**Variables:**
+::: {.callout-note title="Goal"}
+Compute the value of moving from $c_0$ to $c_1$ under different market structures.
+:::
 
-- Parameters: $A, c_0, c_1$
-- Choice variables: $Q$ (monopoly / planner), and later $p$ in price competition
-- Outcomes: $Q^m(c)$, $P^m(c)$, $\pi^m(c)$
+## Monopoly benchmark (exclusive access before and after)
 
-## Monopoly (before and after innovation): problem and FOC
-
-**Monopoly problem:**
+**Problem**
 
 $$
 \max_Q \ (A - Q - c)Q
 $$
 
-**First-order condition:**
+**Solution**
 
 $$
-A - 2Q - c = 0 \quad \Rightarrow \quad Q^m(c) = \frac{A-c}{2}
+Q^m(c) = \frac{A-c}{2}, \qquad P^m(c) = \frac{A+c}{2}, \qquad \pi^m(c) = \frac{(A-c)^2}{4}
 $$
 
-**Interpretation:**
-
-- $Q$ is the choice variable; $A$ and $c$ are parameters
-- Lower $c$ increases the monopoly’s optimal output
-
-## Monopoly (before and after innovation): outcomes and WTP
-
-**Equilibrium outcomes:**
-
-- Price: $P^m(c) = \frac{A+c}{2}$
-- Profit: $\pi^m(c) = \frac{(A-c)^2}{4}$
-
-**Max WTP for innovation:**
+**WTP for the innovation**
 
 $$
 \Delta \pi^m = \pi^m(c_1) - \pi^m(c_0) = \frac{(A-c_1)^2 - (A-c_0)^2}{4}
 $$
 
-**Interpretation:**
+::: {.callout-note title="Interpretation"}
+$\Delta \pi^m$ is the monopolist’s value of *exclusive* access to the lower cost $c_1$ (it is incremental because the firm already earns rents at $c_0$).
+:::
 
-- $\Delta \pi^m$ is the monopoly’s value of *exclusive* access to the lower cost $c_1$
-
-## Perfect competition (before; monopoly rights after)
+## Perfect competition benchmark (innovation creates rents)
 
 **Before innovation (all firms at MC $c_0$):**
 
 - Competitive price: $P^{pc}_0 = c_0$
 - Firm profit: $\pi = 0$
 
-**After innovation (innovator has exclusive use):**
+**After innovation (innovator has exclusive use / patent):**
 
-- If innovation is **drastic**: innovator behaves as monopolist at cost $c_1$
-- If **non-drastic**: innovator constrained by competitive fringe at $c_0$
+- **Drastic**: innovator behaves as a monopolist with cost $c_1$
+- **Non-drastic**: innovator is constrained by the competitive fringe at cost $c_0$ (limit pricing)
 
-**Key insight:**
-
-- Competitive firm can be willing to pay **more** than monopolist
-- Creates profit rather than replacing existing profit
-
-**Interpretation:**
-
-- Under perfect competition pre-innovation, rents are (approximately) zero, so innovation primarily *creates* rents for the innovator
-- Under monopoly pre-innovation, some rents already exist, so innovation partly *replaces* them
-
-## Size of process innovation: drastic v non-drastic
-
-**Definitions:**
-
-- **Drastic (major) innovation**: innovator behaves as unconstrained monopolist
-- **Non-drastic (minor) innovation**: innovator has cost advantage but remains constrained by rivals
-
-**Criterion:**
-
-Innovation is drastic if monopoly price at cost $c_1$ falls below rivals' cost $c_0$:
+**Innovator profit / WTP**
 
 $$
-P^m(c_1) < c_0 \quad \Leftrightarrow \quad \frac{A+c_1}{2} < c_0 \quad \Leftrightarrow \quad A + c_1 < 2c_0
+\Delta \pi^{pc} =
+\begin{cases}
+\pi^m(c_1) & \text{(drastic)}\\
+(c_0 - c_1)(A - c_0) & \text{(non-drastic, } p=c_0 \text{)}
+\end{cases}
 $$
 
-**Interpretation:**
+**Why the non-drastic formula?** If the innovator sets $p=c_0$, quantity is $Q=A-c_0$, so profits are $(p-c_1)Q=(c_0-c_1)(A-c_0)$.
 
-- If $P^m(c_1) \ge c_0$, the fringe constrains price (limit pricing), so monopoly pricing at cost $c_1$ is not feasible
-- “Drastic” is a statement about whether rivals are binding constraints on the innovator’s pricing
-
-## Replacement effect [@arrowEconomicWelfareAllocation1972]
-
-**Key result:**
-
-- **Monopolist** has positive pre-innovation profits → innovation partly **replaces** existing profits
-- **Competitive firm** earns (near) zero pre-innovation profits → innovation **creates** new profits
-
-**Implication:**
-
-- Competitive firm may be willing to pay more than monopolist for same innovation
-- Pre-existing market power can reduce innovation incentives (ceteris paribus)
-
-**Caveat:**
-
-- With entry threat, incumbents may value innovation for **pre-emption** (later section)
-
-## Social planner: efficient output
-
-**Efficient output** for demand $P(Q)=A-Q$ and marginal cost $c$:
+**Drastic innovation condition**
 
 $$
-P(Q) = c \quad \Rightarrow \quad Q^{sp}(c) = A - c
+P^m(c_1) < c_0
+\quad \Leftrightarrow \quad
+\frac{A+c_1}{2} < c_0
+\quad \Leftrightarrow \quad
+A + c_1 < 2c_0
 $$
 
-**Interpretation:**
+::: {.callout-note title="Key idea (replacement effect)"}
+Under perfect competition, pre-innovation profits are zero, so innovation mainly **creates** rents. Under monopoly, innovation partly **replaces** existing rents. [@arrowEconomicWelfareAllocation1972]
+:::
 
-- Efficiency sets price equal to marginal cost (allocative efficiency)
-- Lower $c$ increases the efficient quantity one-for-one
+::: {.callout-note title="Appropriability (important!)"}
+If the innovation cannot be protected (instant diffusion / perfect imitation), competition drives price to $c_1$ and the innovator’s WTP is **zero**. Most IO policy questions start from the fact that appropriability is **imperfect but positive** (patents, secrecy, lead time).
+:::
 
-## Social planner: welfare and WTP
+## Replacement effect: a one-line comparison (drastic case)
+
+If the innovation is drastic and grants exclusive rights:
+
+$$
+\Delta \pi^{pc} = \pi^m(c_1), \qquad \Delta \pi^m = \pi^m(c_1) - \pi^m(c_0)
+$$
+
+So
+
+$$
+\Delta \pi^{pc} - \Delta \pi^m = \pi^m(c_0) > 0
+$$
+
+::: {.callout-important title="Takeaway"}
+Holding everything else fixed, an incumbent monopolist has **weaker** incentives to innovate than a competitive industry because it is “replacing” its own pre-innovation rents.
+:::
+
+## Social planner: value of a cost reduction
+
+**Efficient output** (price equals marginal cost)
+
+$$
+Q^{sp}(c) = A - c
+$$
 
 **Total surplus (welfare):**
 
@@ -201,44 +199,58 @@ $$
 \Delta W = W(c_1) - W(c_0) = \frac{(A-c_1)^2 - (A-c_0)^2}{2}
 $$
 
-**Interpretation:**
+::: {.callout-note title="Interpretation"}
+In this linear example, $\Delta W = 2\,\Delta \pi^m$: the planner values the output expansion that the monopolist does not internalise.
+:::
 
-- The planner values innovation more than a monopolist because it internalises the output expansion effect
+## Putting the benchmarks side-by-side
 
-# Oligopoly and Innovation {background-color="#00539b"}
+| Environment | What the innovator captures | WTP / value |
+|---|---|---|
+| Monopoly (incumbent) | Incremental rents | $\Delta\pi^m=\pi^m(c_1)-\pi^m(c_0)$ |
+| Perfect competition (pre) + exclusive rights (post) | Mostly created rents | $\Delta\pi^{pc}=\pi^m(c_1)$ if drastic; otherwise limit pricing profit |
+| Social planner | Full surplus gain | $\Delta W=W(c_1)-W(c_0)$ |
+
+::: {.callout-important title="Policy interpretation"}
+Private incentives and social value need not align: **$\Delta W$ can exceed $\Delta\pi$**, but market power created by IPRs also generates static distortions. This is the basic patents trade-off.
+:::
+
+## Quick numeric check (optional)
+
+Take $A=20$, $c_0=10$, $c_1=6$.
+
+- Monopoly: $\pi^m(c_0)=25$, $\pi^m(c_1)=49$, so $\Delta\pi^m=24$
+- Planner: $W(c_0)=50$, $W(c_1)=98$, so $\Delta W=48$ (twice the monopoly gain)
+
+::: {.callout-note title="Discussion question"}
+In what sense is this “too little” innovation from a welfare perspective? What policy instruments could close the gap?
+:::
+
+# Innovation with Rivals and Entry {background-color="#00539b"}
 
 ## Incentives to innovate in oligopoly
 
-**Earlier ranking (under specific assumptions):**
+**Takeaway**
 
-- Max WTP: **Social planner > Competitive firm > Monopoly**
-
-**But in oligopoly:**
-
-- Incentives need not be monotone in competition intensity
-- Key drivers:
+- Innovation incentives need not be monotone in “competition intensity”
+- They depend on:
   - Number of firms ($n$)
   - Product differentiation
-  - Type of competition (price vs quantity)
+  - Mode of competition (price vs quantity)
+  - Whether innovation is **protectable** (patents/lead time) and whether there are **spillovers**
 
-**Interpretation:**
-
-- Innovation changes relative costs or demands; its payoff depends on how strongly rivals’ actions respond (strategic interaction)
+::: {.callout-note title="Rule of thumb"}
+More rivals reduces baseline profits (hurting incentives), but can increase the value of being the low-cost firm (helping incentives).
+:::
 
 ## Impact of number of firms (Cournot intuition)
 
-**Linear Cournot with $n$ firms:**
-
-- Innovation incentives can follow **inverse-U** as $n$ increases
+**Linear Cournot with $n$ firms**: incentives can follow an **inverse-U** as $n$ increases.
 
 **Two opposing effects as $n \uparrow$:**
 
 - **Competition effect**: profits for all firms fall (discourages innovation)
 - **Competitive advantage effect**: cost advantage becomes more valuable when there are more inefficient rivals (encourages innovation)
-
-**Interpretation:**
-
-- “More rivals” reduces the baseline profit level, but increases the value of being the low-cost firm relative to the rest
 
 ## Monopoly threatened by entry: setup
 
@@ -246,6 +258,7 @@ $$
 
 - Both can acquire innovation reducing MC from $c_0$ to $c_1 < c_0$
 - Entrant can enter profitably **only if** it gets innovation
+- Let $\pi^d(c_i,c_j)$ denote firm $i$’s profit in the post-entry **duopoly** when costs are $(c_i,c_j)$
 
 **Payoffs:**
 
@@ -254,13 +267,13 @@ $$
 - **If entrant gets innovation**: entrant enters
   - Incumbent: $\pi^d(c_0, c_1)$; Entrant: $\pi^d(c_1, c_0)$
 
-**Interpretation:**
+::: {.callout-note title="Strategic value"}
+Innovation can change market structure (monopoly vs duopoly), so incentives are not only about production efficiency.
+:::
 
-- Innovation has a *strategic* value by changing market structure (monopoly vs duopoly)
+## Entry threat: pre-emption incentives [@gilbertPreemptivePatentingPersistence1982]
 
-## Efficiency effect [@gilbertPreemptivePatentingPersistence1982]: values
-
-**Per-period value of innovation:**
+**Per-period value of innovation**
 
 $$
 V_I = \pi^m(c_1) - \pi^d(c_0, c_1)
@@ -270,28 +283,31 @@ $$
 V_E = \pi^d(c_1, c_0)
 $$
 
-**Interpretation:**
-
-- Incumbent value $V_I$ measures the loss avoided by preventing entry (monopoly preserved)
-- Entrant value $V_E$ is the profit created by entering with the cost advantage
-
-## Efficiency effect [@gilbertPreemptivePatentingPersistence1982]: condition
-
-**Incumbent has higher incentives if:**
+**Incumbent has stronger incentives if**
 
 $$
 V_I > V_E \quad \Leftrightarrow \quad \pi^m(c_1) > \pi^d(c_1, c_0) + \pi^d(c_0, c_1)
 $$
 
-**Holds typically when** products are close substitutes
+Typically when products are close substitutes (entry is very harmful).
 
-**Interpretation:**
-
-- The incumbent internalises the effect of innovation on market structure (monopoly vs duopoly)
+::: {.callout-important title="Interpretation"}
+Here the incumbent may innovate **more** than an entrant because innovation does two things at once: it lowers cost *and* it keeps the market in the monopoly regime (entry deterrence / pre-emption).
+:::
 
 # Seminal Contributions {background-color="#00539b"}
 
-## @dasguptaIndustrialStructureNature1980: setup
+## Why Dasgupta–Stiglitz matters [@dasguptaIndustrialStructureNature1980]
+
+They model R&D as an **endogenous sunk cost**: firms spend on R&D to reduce marginal cost, and entry adjusts endogenously.
+
+The punchline is a clean link between:
+
+- **Demand conditions** (elasticity, market size)
+- **Innovative opportunities** (how effective R&D is at lowering costs)
+- **Equilibrium concentration** (how many firms survive under free entry)
+
+## Dasgupta–Stiglitz (1980): planner benchmark [@dasguptaIndustrialStructureNature1980]
 
 **Question**: Does more firms imply more innovation?
 
@@ -317,7 +333,7 @@ $$
 
 - Optimal R&D increases with scale $Q$: a larger market makes cost reduction more valuable
 
-## @dasguptaIndustrialStructureNature1980: firm problem
+## Dasgupta–Stiglitz (1980): symmetric oligopoly [@dasguptaIndustrialStructureNature1980]
 
 **Firm $i$'s problem (symmetric firms):**
 
@@ -332,16 +348,17 @@ $$
 **First-order condition in $q_i$:**
 
 $$
-P(Q^*)\left(1 - \frac{\varepsilon}{N}\right) = c(x^*)
+P(Q^*)\left(1 - \frac{1}{N\varepsilon}\right) = c(x^*)
 $$
 
 where $\varepsilon = -\frac{\partial Q}{\partial P}\frac{P}{Q}$ is demand elasticity
 
 **Interpretation:**
 
-- The term $\left(1-\frac{\varepsilon}{N}\right)$ captures market power via the perceived demand elasticity under Cournot
+- The term $\left(1-\frac{1}{N\varepsilon}\right)$ captures market power via the perceived demand elasticity under Cournot
+  - More firms ($N\uparrow$) → perceived demand becomes more elastic → mark-ups fall
 
-## @dasguptaIndustrialStructureNature1980: free entry (zero profit)
+## Free entry and concentration [@dasguptaIndustrialStructureNature1980]
 
 **Zero profit condition** (free entry):
 
@@ -355,16 +372,6 @@ $$
 P - c = N^* \frac{x^*}{Q^*}
 $$
 
-## @dasguptaIndustrialStructureNature1980: free entry (implication)
-
-**Key implication**: Concentration and research intensity are **jointly determined** (no simple causal link)
-
-**Interpretation:**
-
-- Entry expands $N$ until operating surplus covers R&D outlays $x^*$
-
-## @dasguptaIndustrialStructureNature1980: equilibrium concentration
-
 **Define innovative potential:**
 
 $$
@@ -377,12 +384,11 @@ $$
 \frac{1}{N^*} = \frac{1}{\varepsilon} \cdot \frac{\alpha}{1+\alpha}
 $$
 
-**Interpretation:**
+::: {.callout-note title="Interpretation"}
+Concentration and research intensity are jointly determined: entry expands $N$ until operating surplus covers R&D outlays $x^*$. Higher innovative potential ($\alpha$) supports higher concentration; more elastic demand lowers concentration.
+:::
 
-- Higher $\alpha$ (greater innovative potential) → higher concentration
-- More elastic demand → lower concentration
-
-## @dasguptaTheoryTechnologicalCompetition1986: additional results (part 1)
+## Dasgupta (1986): key comparative statics (I) [@dasguptaTheoryTechnologicalCompetition1986]
 
 **With $P(Q) = \sigma Q^{-\varepsilon}$ and $c(x) = \beta x^{-\alpha}$:**
 
@@ -399,7 +405,7 @@ $$
 
 - Market structure affects both static outcomes ($Q$) and dynamic investment incentives ($x$)
 
-## @dasguptaTheoryTechnologicalCompetition1986: additional results (part 2)
+## Dasgupta (1986): key comparative statics (II) [@dasguptaTheoryTechnologicalCompetition1986]
 
 **Greater innovative opportunities** associated with higher concentration:
 
@@ -420,10 +426,10 @@ $$
 
 ## Summary
 
-- Innovation value depends on the objective: $\Delta \pi$ (firm) versus $\Delta W$ (planner)
-- Replacement effect: pre-innovation rents reduce the monopolist’s incremental gain from innovation
-- With entry threat, innovation has strategic value via market structure (monopoly vs duopoly)
-- In oligopoly, incentives reflect competing forces (competition effect vs advantage effect)
+- Innovation value depends on the objective: **$\Delta \pi$ (private)** versus **$\Delta W$ (social)**
+- Replacement effect: pre-innovation rents reduce the incumbent’s incremental gain from innovation
+- With entry threat, innovation can be worth more because it changes **market structure** (monopoly vs duopoly)
+- In oligopoly, incentives reflect competing forces (competition effect vs competitive advantage effect)
 
 ## Next week: patents and IPRs
 
