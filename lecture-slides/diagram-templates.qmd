@@ -601,3 +601,5 @@ render_tikz_svg(
   name = "fig-stackelberg-br",
   width = "70%"
 )
+```
+
