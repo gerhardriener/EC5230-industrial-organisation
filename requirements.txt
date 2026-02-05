@@ -11,6 +11,7 @@ cobble==0.1.4
 colorama==0.4.6
 coloredlogs==15.0.1
 cryptography==46.0.3
+cairosvg
 defusedxml==0.7.1
 et_xmlfile==2.0.0
 flatbuffers==25.9.23
@@ -57,3 +58,6 @@ uv==0.9.30
 xlrd==2.0.2
 xlsxwriter==3.2.9
 youtube-transcript-api==1.0.3
+jupyterlab==3.0.14
+jupyterlab-git==0.30.0
+ipython
