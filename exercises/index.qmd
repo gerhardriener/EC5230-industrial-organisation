@@ -1,10 +1,5 @@
 ---
 title: "Exercises"
-format:
-  html:
-    toc: false
-    embed-resources: true
-    number-sections: false
 ---
 
 ## Problem Sets
@@ -13,9 +8,9 @@ Practice exercises for EC5230 Industrial Organisation. Each part includes a vers
 
 ### Exercise Sets
 
-| Set | Problems with solutions (HTML) | 
-|---|---|
-| Exercise 1 | [Problems](exercises-1.html) |
+| Set | html | pdf |
+|---|---|---|
+| Exercises 1 | [](sheets/exercises-1.html) |[](sheets/exercises-1.pdf) |
 
 : {.striped .hover}
 

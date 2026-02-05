@@ -1,8 +1,5 @@
 ---
 title: "Lecture Slides"
-format:
-  html:
-    toc: false
 ---
 
 ## All Lectures
