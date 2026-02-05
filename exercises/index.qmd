@@ -1,5 +1,10 @@
 ---
 title: "Exercises"
+format:
+  html:
+    toc: false
+    embed-resources: true
+    number-sections: false
 ---
 
 ## Problem Sets

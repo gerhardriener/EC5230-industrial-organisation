@@ -34,7 +34,6 @@ website:
 format:
   html:
     theme: cosmo
-    css: lecture-slides/theme/st-andrews.scss
     toc: true
     toc-depth: 3
     number-sections: false

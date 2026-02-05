@@ -46,12 +46,12 @@ $U_1(\ell)=\bar u - p_1 - c|\ell-a|$, $U_2(\ell)=\bar u - p_2 - c|\ell-(L-b)|$, 
 
 ::: {.content-visible when-format="beamer"}
 ```{=latex}
-\resizebox{0.8\textwidth}{!}{\includestandalone{figs/source/fig-hotelling-fixed-location}}
+\resizebox{0.8\textwidth}{!}{\includestandalone{../figs/source/fig-hotelling-fixed-location}}
 ```
 :::
 
 ::: {.content-visible when-format="revealjs"}
-![](figs/fig-hotelling-fixed-location.svg){fig-alt="Hotelling line with fixed locations" fig-align="center" width="70%"}
+![](../figs/fig-hotelling-fixed-location.svg){fig-alt="Hotelling line with fixed locations" fig-align="center" width="70%"}
 :::
 
 - Choice variables: $p_1, p_2$
@@ -100,12 +100,12 @@ Co-location removes captive consumers; any $p>0$ can be profitably undercut.
 
 ::: {.content-visible when-format="beamer"}
 ```{=latex}
-\resizebox{0.6\textwidth}{!}{\includestandalone{figs/source/fig-hotelling-movement-location}}
+\resizebox{0.6\textwidth}{!}{\includestandalone{../figs/source/fig-hotelling-movement-location}}
 ```
 :::
 
 ::: {.content-visible when-format="revealjs"}
-![](figs/fig-hotelling-movement-location.svg){fig-align="center" width="60%"}
+![](../figs/fig-hotelling-movement-location.svg){fig-align="center" width="60%"}
 :::
 
 ## Move incentives at fixed prices
@@ -161,12 +161,12 @@ Lp_1 & \text{if } p_1 < p_2 - c(L - a - b) \\[0.5em]
 
 ::: {.content-visible when-format="beamer"}
 ```{=latex}
-\resizebox{0.9\textwidth}{!}{\includestandalone{figs/source/fig-hotelling-profit-function}}
+\resizebox{0.9\textwidth}{!}{\includestandalone{../figs/source/fig-hotelling-profit-function}}
 ```
 :::
 
 ::: {.content-visible when-format="revealjs"}
-![](figs/fig-hotelling-profit-function.svg){fig-alt="Hotelling price subgame: payoff regions" fig-align="center" width="80%"}
+![](../figs/fig-hotelling-profit-function.svg){fig-alt="Hotelling price subgame: payoff regions" fig-align="center" width="80%"}
 :::
 
 
@@ -181,12 +181,12 @@ Lp_1 & \text{if } p_1 < p_2 - c(L - a - b) \\[0.5em]
 
 ::: {.content-visible when-format="beamer"}
 ```{=latex}
-\resizebox{0.5\textwidth}{!}{\includestandalone{figs/source/fig-salop-cycle}}
+\resizebox{0.5\textwidth}{!}{\includestandalone{../figs/source/fig-salop-cycle}}
 ```
 :::
 
 ::: {.content-visible when-format="revealjs"}
-![](figs/fig-salop-cycle.svg){fig-align="center" width="50%"}
+![](../figs/fig-salop-cycle.svg){fig-align="center" width="50%"}
 :::
 
 ## Objects
@@ -197,12 +197,12 @@ Lp_1 & \text{if } p_1 < p_2 - c(L - a - b) \\[0.5em]
 
 ::: {.content-visible when-format="beamer"}
 ```{=latex}
-\resizebox{0.5\textwidth}{!}{\includestandalone{figs/source/fig-salop-cycle}}
+\resizebox{0.5\textwidth}{!}{\includestandalone{../figs/source/fig-salop-cycle}}
 ```
 :::
 
 ::: {.content-visible when-format="revealjs"}
-![](figs/fig-salop-cycle.svg){fig-align="center" width="50%"}
+![](../figs/fig-salop-cycle.svg){fig-align="center" width="50%"}
 :::
 
 ## Consumers
@@ -253,12 +253,12 @@ Competitive-region inverse demand is steeper than monopoly-region inverse demand
 
 ::: {.content-visible when-format="beamer"}
 ```{=latex}
-\resizebox{0.7\textwidth}{!}{\includestandalone{figs/source/fig-salop-demand-comp-mon}}
+\resizebox{0.7\textwidth}{!}{\includestandalone{../figs/source/fig-salop-demand-comp-mon}}
 ```
 :::
 
 ::: {.content-visible when-format="revealjs"}
-![](figs/fig-salop-demand-comp-mon.svg){fig-alt="Salop demand: monopoly vs competitive regimes" fig-align="center" width="70%"}
+![](../figs/fig-salop-demand-comp-mon.svg){fig-alt="Salop demand: monopoly vs competitive regimes" fig-align="center" width="70%"}
 :::
 
 ## Cost functions

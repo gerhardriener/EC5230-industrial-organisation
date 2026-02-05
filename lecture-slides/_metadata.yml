@@ -1,0 +1,19 @@
+format:
+  clean-revealjs:
+    slide-number: true
+    title-slide-attributes:
+      data-background-color: "#00539b"
+    chalkboard: true
+    preview-links: auto
+    transition: none
+    background-transition: fade
+
+  beamer:
+    keep-tex: false
+    header-includes: |
+      \usepackage{standalone}
+      \usepackage{tikz}
+      \usepackage{pgfplots}
+      \usetikzlibrary{decorations.pathreplacing}
+      \usetikzlibrary{arrows.meta}
+      \pgfplotsset{compat=1.18}

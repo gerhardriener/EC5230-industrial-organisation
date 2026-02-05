@@ -1,55 +1,81 @@
 ---
 title: "Lecture Slides"
 subtitle: "EC5230 Industrial Organisation"
+format:
+  html:
+    toc: false
 ---
 
 ## All Lectures
 
-Below is a complete list of lecture slides for EC5230 Industrial Organisation.
+Choose your preferred format: **HTML** (interactive slides) or **PDF** (printable).
 
 ### Week 1
 
-- [Lecture 1: Competition & Oligopoly Coordination](lecture-1-oligopoly.html){target="_blank"}
-  - Market structures and the Cournot model
-  - Welfare analysis of oligopoly
-  - Strategic price and quantity competition
-  - Tacit collusion and facilitating devices
+**Lecture 1: Competition & Oligopoly Coordination**
+
+- [HTML slides](slides/lecture-1-oligopoly.html){target="_blank"}
+- [PDF slides](slides/lecture-1-oligopoly.pdf){target="_blank"}
 
 ### Week 2
 
-- [Lecture 2: Product Differentiation](lecture-2-product-differentiation.html){target="_blank"}
-  - Horizontal vs. vertical differentiation
-  - Linear Hotelling model
-  - Salop's circular market
+**Lecture 2: Product Differentiation**
+
+- [HTML slides](slides/lecture-2-product-differentiation.html){target="_blank"}
+- [PDF slides](slides/lecture-2-product-differentiation.pdf){target="_blank"}
 
 ### Week 3
 
-- [Lecture 3: Economics of Innovation](lecture-3-innovation.html){target="_blank"}
+**Lecture 3: Economics of Innovation**
+
+- [HTML slides](slides/lecture-3-innovation.html){target="_blank"}
+- [PDF slides](slides/lecture-3-innovation.pdf){target="_blank"}
 
 ### Week 4
 
-- [Lecture 4: Patents and Intellectual Property Rights](lecture-4-patents.html){target="_blank"}
+**Lecture 4: Patents and Intellectual Property Rights**
+
+- [HTML slides](slides/lecture-4-patents.html){target="_blank"}
+- [PDF slides](slides/lecture-4-patents.pdf){target="_blank"}
 
 ### Week 5
 
-- [Lecture 5: Multi-stage Games and Strategic Commitment](lecture-5-multistage.html){target="_blank"}
+**Lecture 5: Multi-stage Games and Strategic Commitment**
+
+- [HTML slides](slides/lecture-5-multistage.html){target="_blank"}
+- [PDF slides](slides/lecture-5-multistage.pdf){target="_blank"}
 
 ### Week 7
 
-- [Lecture 7: Cooperative R&D](lecture-7-cooperative-rd.html){target="_blank"}
+**Lecture 7: Cooperative R&D**
+
+- [HTML slides](slides/lecture-7-cooperative-rd.html){target="_blank"}
+- [PDF slides](slides/lecture-7-cooperative-rd.pdf){target="_blank"}
 
 ### Week 8
 
-- [Lecture 8: Bundling and Tying](lecture-8-bundling.html){target="_blank"}
+**Lecture 8: Bundling and Tying**
+
+- [HTML slides](slides/lecture-8-bundling.html){target="_blank"}
+- [PDF slides](slides/lecture-8-bundling.pdf){target="_blank"}
 
 ### Week 9
 
-- [Lecture 9: Advertising and Brand Competition](lecture-9-advertising.html){target="_blank"}
+**Lecture 9: Advertising and Brand Competition**
+
+- [HTML slides](slides/lecture-9-advertising.html){target="_blank"}
+- [PDF slides](slides/lecture-9-advertising.pdf){target="_blank"}
 
 ### Week 11
 
-- [Lecture 11: Mergers and Acquisitions](lecture-11-mergers.html){target="_blank"}
+**Lecture 11: Mergers and Acquisitions**
+
+- [HTML slides](slides/lecture-11-mergers.html){target="_blank"}
+- [PDF slides](slides/lecture-11-mergers.pdf){target="_blank"}
 
 ### Week 12
 
-- [Lecture 12: Sustainable Industrialisation](lecture-12-sustainability.html){target="_blank"}
+**Lecture 12: Sustainable Industrialisation**
+
+- [HTML slides](slides/lecture-12-sustainability.html){target="_blank"}
+- [PDF slides](slides/lecture-12-sustainability.pdf){target="_blank"}
