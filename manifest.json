@@ -11,7 +11,7 @@
   },
   "quarto": {
     "version": "1.9.17",
-    "engines": ["markdown", "knitr"]
+    "engines": ["knitr", "markdown", "jupyter"]
   },
   "packages": {
     "DBI": {
@@ -317,34 +317,6 @@
         "Repository": "CRAN",
         "Date/Publication": "2023-03-17 12:00:06 UTC",
         "Built": "R 4.5.1; ; 2025-10-06 02:11:54 UTC; windows"
-      }
-    },
-    "brio": {
-      "Source": "CRAN",
-      "Repository": "https://packagemanager.posit.co/cran/latest",
-      "description": {
-        "Package": "brio",
-        "Title": "Basic R Input Output",
-        "Version": "1.1.5",
-        "Authors@R": "c(\n    person(\"Jim\", \"Hester\", role = \"aut\",\n           comment = c(ORCID = \"0000-0002-2739-7082\")),\n    person(\"Gábor\", \"Csárdi\", , \"csardi.gabor@gmail.com\", role = c(\"aut\", \"cre\")),\n    person(given = \"Posit Software, PBC\", role = c(\"cph\", \"fnd\"))\n  )",
-        "Description": "Functions to handle basic input output, these functions\n    always read and write UTF-8 (8-bit Unicode Transformation Format)\n    files and provide more explicit control over line endings.",
-        "License": "MIT + file LICENSE",
-        "URL": "https://brio.r-lib.org, https://github.com/r-lib/brio",
-        "BugReports": "https://github.com/r-lib/brio/issues",
-        "Depends": "R (>= 3.6)",
-        "Suggests": "covr, testthat (>= 3.0.0)",
-        "Config/Needs/website": "tidyverse/tidytemplate",
-        "Config/testthat/edition": "3",
-        "Encoding": "UTF-8",
-        "RoxygenNote": "7.2.3",
-        "NeedsCompilation": "yes",
-        "Packaged": "2024-04-24 18:51:29 UTC; gaborcsardi",
-        "Author": "Jim Hester [aut] (<https://orcid.org/0000-0002-2739-7082>),\n  Gábor Csárdi [aut, cre],\n  Posit Software, PBC [cph, fnd]",
-        "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
-        "Repository": "CRAN",
-        "Date/Publication": "2024-04-24 19:20:07 UTC",
-        "Built": "R 4.5.1; x86_64-w64-mingw32; 2025-10-06 00:50:00 UTC; windows",
-        "Archs": "x64"
       }
     },
     "broom": {
@@ -755,66 +727,6 @@
         "Repository": "CRAN",
         "Date/Publication": "2025-09-10 07:51:05 UTC",
         "Built": "R 4.5.1; ; 2025-10-06 03:18:48 UTC; windows"
-      }
-    },
-    "desc": {
-      "Source": "CRAN",
-      "Repository": "https://packagemanager.posit.co/cran/latest",
-      "description": {
-        "Package": "desc",
-        "Title": "Manipulate DESCRIPTION Files",
-        "Version": "1.4.3",
-        "Authors@R": "c(\n    person(\"Gábor\", \"Csárdi\", , \"csardi.gabor@gmail.com\", role = c(\"aut\", \"cre\")),\n    person(\"Kirill\", \"Müller\", role = \"aut\"),\n    person(\"Jim\", \"Hester\", , \"james.f.hester@gmail.com\", role = \"aut\"),\n    person(\"Maëlle\", \"Salmon\", role = \"ctb\",\n           comment = c(ORCID = \"0000-0002-2815-0399\")),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"))\n  )",
-        "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
-        "Description": "Tools to read, write, create, and manipulate DESCRIPTION\n    files.  It is intended for packages that create or manipulate other\n    packages.",
-        "License": "MIT + file LICENSE",
-        "URL": "https://desc.r-lib.org/, https://github.com/r-lib/desc",
-        "BugReports": "https://github.com/r-lib/desc/issues",
-        "Depends": "R (>= 3.4)",
-        "Imports": "cli, R6, utils",
-        "Suggests": "callr, covr, gh, spelling, testthat, whoami, withr",
-        "Config/Needs/website": "tidyverse/tidytemplate",
-        "Config/testthat/edition": "3",
-        "Encoding": "UTF-8",
-        "Language": "en-US",
-        "RoxygenNote": "7.2.3",
-        "Collate": "'assertions.R' 'authors-at-r.R' 'built.R' 'classes.R'\n'collate.R' 'constants.R' 'deps.R' 'desc-package.R'\n'description.R' 'encoding.R' 'find-package-root.R' 'latex.R'\n'non-oo-api.R' 'package-archives.R' 'read.R' 'remotes.R'\n'str.R' 'syntax_checks.R' 'urls.R' 'utils.R' 'validate.R'\n'version.R'",
-        "NeedsCompilation": "no",
-        "Packaged": "2023-12-10 11:07:50 UTC; gaborcsardi",
-        "Author": "Gábor Csárdi [aut, cre],\n  Kirill Müller [aut],\n  Jim Hester [aut],\n  Maëlle Salmon [ctb] (<https://orcid.org/0000-0002-2815-0399>),\n  Posit Software, PBC [cph, fnd]",
-        "Repository": "CRAN",
-        "Date/Publication": "2023-12-10 11:40:08 UTC",
-        "Built": "R 4.5.1; ; 2025-10-06 01:37:12 UTC; windows"
-      }
-    },
-    "diffobj": {
-      "Source": "CRAN",
-      "Repository": "https://packagemanager.posit.co/cran/latest",
-      "description": {
-        "Package": "diffobj",
-        "Type": "Package",
-        "Title": "Diffs for R Objects",
-        "Description": "Generate a colorized diff of two R objects for an intuitive\n    visualization of their differences.",
-        "Version": "0.3.6",
-        "Authors@R": "c(\n    person(\n    \"Brodie\", \"Gaslam\", email=\"brodie.gaslam@yahoo.com\",\n    role=c(\"aut\", \"cre\")),\n    person(\n    \"Michael B.\", \"Allen\", email=\"ioplex@gmail.com\",\n    role=c(\"ctb\", \"cph\"),\n    comment=\"Original C implementation of Myers Diff Algorithm\"))",
-        "Depends": "R (>= 3.1.0)",
-        "License": "GPL-2 | GPL-3",
-        "URL": "https://github.com/brodieG/diffobj",
-        "BugReports": "https://github.com/brodieG/diffobj/issues",
-        "RoxygenNote": "7.2.3",
-        "VignetteBuilder": "knitr",
-        "Encoding": "UTF-8",
-        "Suggests": "knitr, rmarkdown",
-        "Collate": "'capt.R' 'options.R' 'pager.R' 'check.R' 'finalizer.R'\n'misc.R' 'html.R' 'styles.R' 's4.R' 'core.R' 'diff.R' 'get.R'\n'guides.R' 'hunks.R' 'layout.R' 'myerssimple.R' 'rdiff.R'\n'rds.R' 'set.R' 'subset.R' 'summmary.R' 'system.R' 'text.R'\n'tochar.R' 'trim.R' 'word.R'",
-        "Imports": "crayon (>= 1.3.2), tools, methods, utils, stats",
-        "NeedsCompilation": "yes",
-        "Packaged": "2025-04-21 00:11:01 UTC; brodie",
-        "Author": "Brodie Gaslam [aut, cre],\n  Michael B. Allen [ctb, cph] (Original C implementation of Myers Diff\n    Algorithm)",
-        "Maintainer": "Brodie Gaslam <brodie.gaslam@yahoo.com>",
-        "Repository": "CRAN",
-        "Date/Publication": "2025-04-21 08:30:02 UTC",
-        "Built": "R 4.5.1; x86_64-w64-mingw32; 2025-10-06 01:37:13 UTC; windows",
-        "Archs": "x64"
       }
     },
     "digest": {
@@ -2010,35 +1922,6 @@
         "Built": "R 4.5.1; ; 2025-10-06 02:11:49 UTC; windows"
       }
     },
-    "pkgbuild": {
-      "Source": "CRAN",
-      "Repository": "https://packagemanager.posit.co/cran/latest",
-      "description": {
-        "Package": "pkgbuild",
-        "Title": "Find Tools Needed to Build R Packages",
-        "Version": "1.4.8",
-        "Authors@R": "c(\n    person(\"Hadley\", \"Wickham\", role = \"aut\"),\n    person(\"Jim\", \"Hester\", role = \"aut\"),\n    person(\"Gábor\", \"Csárdi\", , \"csardi.gabor@gmail.com\", role = c(\"aut\", \"cre\")),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"),\n           comment = c(ROR = \"03wc8by49\"))\n  )",
-        "Description": "Provides functions used to build R packages. Locates\n    compilers needed to build R packages on various platforms and ensures\n    the PATH is configured appropriately so R can use them.",
-        "License": "MIT + file LICENSE",
-        "URL": "https://github.com/r-lib/pkgbuild, https://pkgbuild.r-lib.org",
-        "BugReports": "https://github.com/r-lib/pkgbuild/issues",
-        "Depends": "R (>= 3.5)",
-        "Imports": "callr (>= 3.2.0), cli (>= 3.4.0), desc, processx, R6",
-        "Suggests": "covr, cpp11, knitr, Rcpp, rmarkdown, testthat (>= 3.2.0),\nwithr (>= 2.3.0)",
-        "Config/Needs/website": "tidyverse/tidytemplate",
-        "Config/testthat/edition": "3",
-        "Config/usethis/last-upkeep": "2025-04-30",
-        "Encoding": "UTF-8",
-        "RoxygenNote": "7.3.2",
-        "NeedsCompilation": "no",
-        "Packaged": "2025-05-26 10:36:48 UTC; gaborcsardi",
-        "Author": "Hadley Wickham [aut],\n  Jim Hester [aut],\n  Gábor Csárdi [aut, cre],\n  Posit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
-        "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
-        "Repository": "CRAN",
-        "Date/Publication": "2025-05-26 14:10:06 UTC",
-        "Built": "R 4.5.1; ; 2025-10-06 02:11:51 UTC; windows"
-      }
-    },
     "pkgconfig": {
       "Source": "CRAN",
       "Repository": "https://packagemanager.posit.co/cran/latest",
@@ -2061,59 +1944,6 @@
         "Repository": "CRAN",
         "Date/Publication": "2019-09-22 09:20:02 UTC",
         "Built": "R 4.5.1; ; 2025-10-06 00:49:59 UTC; windows"
-      }
-    },
-    "pkgload": {
-      "Source": "CRAN",
-      "Repository": "https://packagemanager.posit.co/cran/latest",
-      "description": {
-        "Package": "pkgload",
-        "Title": "Simulate Package Installation and Attach",
-        "Version": "1.4.1",
-        "Authors@R": "c(\n    person(\"Hadley\", \"Wickham\", role = \"aut\"),\n    person(\"Winston\", \"Chang\", role = \"aut\"),\n    person(\"Jim\", \"Hester\", role = \"aut\"),\n    person(\"Lionel\", \"Henry\", , \"lionel@posit.co\", role = c(\"aut\", \"cre\")),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")),\n    person(\"R Core team\", role = \"ctb\",\n           comment = \"Some namespace and vignette code extracted from base R\")\n  )",
-        "Description": "Simulates the process of installing a package and then\n    attaching it. This is a key part of the 'devtools' package as it\n    allows you to rapidly iterate while developing a package.",
-        "License": "MIT + file LICENSE",
-        "URL": "https://github.com/r-lib/pkgload, https://pkgload.r-lib.org",
-        "BugReports": "https://github.com/r-lib/pkgload/issues",
-        "Depends": "R (>= 3.4.0)",
-        "Imports": "cli (>= 3.3.0), desc, fs, glue, lifecycle, methods, pkgbuild,\nprocessx, rlang (>= 1.1.1), rprojroot, utils",
-        "Suggests": "bitops, jsonlite, mathjaxr, pak, Rcpp, remotes, rstudioapi,\ntestthat (>= 3.2.1.1), usethis, withr",
-        "Config/Needs/website": "tidyverse/tidytemplate, ggplot2",
-        "Config/testthat/edition": "3",
-        "Config/testthat/parallel": "TRUE",
-        "Config/testthat/start-first": "dll",
-        "Encoding": "UTF-8",
-        "RoxygenNote": "7.3.2",
-        "NeedsCompilation": "no",
-        "Packaged": "2025-09-23 09:15:44 UTC; lionel",
-        "Author": "Hadley Wickham [aut],\n  Winston Chang [aut],\n  Jim Hester [aut],\n  Lionel Henry [aut, cre],\n  Posit Software, PBC [cph, fnd],\n  R Core team [ctb] (Some namespace and vignette code extracted from base\n    R)",
-        "Maintainer": "Lionel Henry <lionel@posit.co>",
-        "Repository": "CRAN",
-        "Date/Publication": "2025-09-23 10:20:02 UTC",
-        "Built": "R 4.5.1; ; 2025-10-06 02:29:54 UTC; windows"
-      }
-    },
-    "praise": {
-      "Source": "CRAN",
-      "Repository": "https://packagemanager.posit.co/cran/latest",
-      "description": {
-        "Package": "praise",
-        "Title": "Praise Users",
-        "Version": "1.0.0",
-        "Author": "Gabor Csardi, Sindre Sorhus",
-        "Maintainer": "Gabor Csardi <csardi.gabor@gmail.com>",
-        "Description": "Build friendly R packages that\n    praise their users if they have done something\n    good, or they just need it to feel better.",
-        "License": "MIT + file LICENSE",
-        "LazyData": "true",
-        "URL": "https://github.com/gaborcsardi/praise",
-        "BugReports": "https://github.com/gaborcsardi/praise/issues",
-        "Suggests": "testthat",
-        "Collate": "'adjective.R' 'adverb.R' 'exclamation.R' 'verb.R' 'rpackage.R'\n'package.R'",
-        "NeedsCompilation": "no",
-        "Packaged": "2015-08-11 02:01:43 UTC; gaborcsardi",
-        "Repository": "CRAN",
-        "Date/Publication": "2015-08-11 08:22:28",
-        "Built": "R 4.5.1; ; 2025-10-06 00:49:58 UTC; windows"
       }
     },
     "prettyunits": {
@@ -2917,38 +2747,6 @@
         "Archs": "x64"
       }
     },
-    "testthat": {
-      "Source": "CRAN",
-      "Repository": "https://packagemanager.posit.co/cran/latest",
-      "description": {
-        "Package": "testthat",
-        "Title": "Unit Testing for R",
-        "Version": "3.2.3",
-        "Authors@R": "c(\n    person(\"Hadley\", \"Wickham\", , \"hadley@posit.co\", role = c(\"aut\", \"cre\")),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")),\n    person(\"R Core team\", role = \"ctb\",\n           comment = \"Implementation of utils::recover()\")\n  )",
-        "Description": "Software testing is important, but, in part because it is\n    frustrating and boring, many of us avoid it. 'testthat' is a testing\n    framework for R that is easy to learn and use, and integrates with\n    your existing 'workflow'.",
-        "License": "MIT + file LICENSE",
-        "URL": "https://testthat.r-lib.org, https://github.com/r-lib/testthat",
-        "BugReports": "https://github.com/r-lib/testthat/issues",
-        "Depends": "R (>= 3.6.0)",
-        "Imports": "brio (>= 1.1.3), callr (>= 3.7.3), cli (>= 3.6.1), desc (>=\n1.4.2), digest (>= 0.6.33), evaluate (>= 1.0.1), jsonlite (>=\n1.8.7), lifecycle (>= 1.0.3), magrittr (>= 2.0.3), methods,\npkgload (>= 1.3.2.1), praise (>= 1.0.0), processx (>= 3.8.2),\nps (>= 1.7.5), R6 (>= 2.5.1), rlang (>= 1.1.1), utils, waldo\n(>= 0.6.0), withr (>= 3.0.2)",
-        "Suggests": "covr, curl (>= 0.9.5), diffviewer (>= 0.1.0), knitr,\nrmarkdown, rstudioapi, S7, shiny, usethis, vctrs (>= 0.1.0),\nxml2",
-        "VignetteBuilder": "knitr",
-        "Config/Needs/website": "tidyverse/tidytemplate",
-        "Config/testthat/edition": "3",
-        "Config/testthat/parallel": "true",
-        "Config/testthat/start-first": "watcher, parallel*",
-        "Encoding": "UTF-8",
-        "RoxygenNote": "7.3.2",
-        "NeedsCompilation": "yes",
-        "Packaged": "2025-01-11 00:11:30 UTC; hadleywickham",
-        "Author": "Hadley Wickham [aut, cre],\n  Posit Software, PBC [cph, fnd],\n  R Core team [ctb] (Implementation of utils::recover())",
-        "Maintainer": "Hadley Wickham <hadley@posit.co>",
-        "Repository": "CRAN",
-        "Date/Publication": "2025-01-13 11:20:03 UTC",
-        "Built": "R 4.5.1; x86_64-w64-mingw32; 2025-10-06 02:44:20 UTC; windows",
-        "Archs": "x64"
-      }
-    },
     "textshaping": {
       "Source": "P3M",
       "Repository": "https://packagemanager.posit.co/cran/latest",
@@ -3335,34 +3133,6 @@
         "Archs": "x64"
       }
     },
-    "waldo": {
-      "Source": "CRAN",
-      "Repository": "https://packagemanager.posit.co/cran/latest",
-      "description": {
-        "Package": "waldo",
-        "Title": "Find Differences Between R Objects",
-        "Version": "0.6.2",
-        "Authors@R": "c(\n    person(\"Hadley\", \"Wickham\", , \"hadley@posit.co\", role = c(\"aut\", \"cre\")),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"))\n  )",
-        "Description": "Compare complex R objects and reveal the key differences.\n    Designed particularly for use in testing packages where being able to\n    quickly isolate key differences makes understanding test failures much\n    easier.",
-        "License": "MIT + file LICENSE",
-        "URL": "https://waldo.r-lib.org, https://github.com/r-lib/waldo",
-        "BugReports": "https://github.com/r-lib/waldo/issues",
-        "Depends": "R (>= 4.0)",
-        "Imports": "cli, diffobj (>= 0.3.4), glue, methods, rlang (>= 1.1.0)",
-        "Suggests": "bit64, R6, S7, testthat (>= 3.0.0), withr, xml2",
-        "Config/Needs/website": "tidyverse/tidytemplate",
-        "Config/testthat/edition": "3",
-        "Encoding": "UTF-8",
-        "RoxygenNote": "7.3.2",
-        "NeedsCompilation": "no",
-        "Packaged": "2025-07-11 13:27:03 UTC; hadleywickham",
-        "Author": "Hadley Wickham [aut, cre],\n  Posit Software, PBC [cph, fnd]",
-        "Maintainer": "Hadley Wickham <hadley@posit.co>",
-        "Repository": "CRAN",
-        "Date/Publication": "2025-07-11 15:20:02 UTC",
-        "Built": "R 4.5.1; ; 2025-10-06 01:53:15 UTC; windows"
-      }
-    },
     "withr": {
       "Source": "CRAN",
       "Repository": "https://packagemanager.posit.co/cran/latest",
@@ -3511,9 +3281,6 @@
     ".here": {
       "checksum": "d41d8cd98f00b204e9800998ecf8427e"
     },
-    ".quartoignore": {
-      "checksum": "fceda87f29aaa9b6d447d7675a55e291"
-    },
     ".vscode/settings.json": {
       "checksum": "8b4164575cecaeff0c769df518fbb544"
     },
@@ -3525,6 +3292,12 @@
     },
     "_extensions/grantmcdermott/clean/mathjax-config.js": {
       "checksum": "713f60977e54bc0f5a12855392feb53f"
+    },
+    "_extensions/pandoc-ext/diagram/_extension.yaml": {
+      "checksum": "dfdb1e26a31264749036985d62031400"
+    },
+    "_extensions/pandoc-ext/diagram/diagram.lua": {
+      "checksum": "31b284577834510029ef1c3eb28c0beb"
     },
     "_freeze/site_libs/clipboard/clipboard.min.js": {
       "checksum": "15f52a1ee547f2bdd46e56747332ca2d"
@@ -3913,27 +3686,6 @@
     "_OLD/_original/CournotDuopolyProfitPossibilityFrontier.nb": {
       "checksum": "e60c63a89a046aa184ed04c628e6c8b5"
     },
-    "_OLD/apps/cournot-duopoly/cournot-duopoly-app.R": {
-      "checksum": "3f3d9b56f9609bf57a7cdc29c4cdc652"
-    },
-    "_OLD/apps/cournot-duopoly/index.qmd": {
-      "checksum": "32e1d3c7f2d2826511956ea63d545c77"
-    },
-    "_OLD/apps/index.qmd": {
-      "checksum": "f3baa66dc21c626b6a63a4f4ffa0c871"
-    },
-    "_OLD/apps/monopolist-profits/index.qmd": {
-      "checksum": "8e60609b3495163e9b25dee7dcfe659a"
-    },
-    "_OLD/apps/monopolist-profits/monopolist-best-response-app.R": {
-      "checksum": "22d0734ec0aac6fe186168f9fc7abf7a"
-    },
-    "_OLD/apps/profit-possibility-cournot/profit-possibility-frontier-app.R": {
-      "checksum": "dac02c4b118d6330c648bfa48fef480e"
-    },
-    "_OLD/apps/salop-circle/salop-circular-city-app.R": {
-      "checksum": "2fe93c42047f5736716a193b616d23fc"
-    },
     "_OLD/bertrand-duopoly/_original/BertrandDuopolyBestResponses.cdf": {
       "checksum": "be06a02ba1e9e4b62bc6143294f9f058"
     },
@@ -3956,301 +3708,7 @@
       "checksum": "a79ed802ad5c11ea418e62899271033d"
     },
     "_quarto.yml": {
-      "checksum": "eb9f1b13caac2301a27c6b99be13f6ed"
-    },
-    "_render_tmp/site_libs/revealjs/dist/reset.css": {
-      "checksum": "4042c1a43777d540673cabc97cec67b2"
-    },
-    "_render_tmp/site_libs/revealjs/dist/reveal.css": {
-      "checksum": "63603931663126b2803c8d50c5ec50a5"
-    },
-    "_render_tmp/site_libs/revealjs/dist/reveal.esm.js": {
-      "checksum": "5d1b951e8804804eea44b7a50cf46be6"
-    },
-    "_render_tmp/site_libs/revealjs/dist/reveal.esm.js.map": {
-      "checksum": "9d584b1cffa4cd297219f11a3b41baa4"
-    },
-    "_render_tmp/site_libs/revealjs/dist/reveal.js": {
-      "checksum": "eca5d46a877fcf34cdad307d63755cc2"
-    },
-    "_render_tmp/site_libs/revealjs/dist/reveal.js.map": {
-      "checksum": "dfd3ae7706b60dd68619d7415c5bb47c"
-    },
-    "_render_tmp/site_libs/revealjs/dist/theme/fonts/league-gothic/league-gothic.css": {
-      "checksum": "488966d15e97f072801d7e348f4b5141"
-    },
-    "_render_tmp/site_libs/revealjs/dist/theme/fonts/league-gothic/league-gothic.eot": {
-      "checksum": "9900a4643cc63c5d8f969d2196f72572"
-    },
-    "_render_tmp/site_libs/revealjs/dist/theme/fonts/league-gothic/league-gothic.ttf": {
-      "checksum": "91295fa87df918411b49b7531da5d558"
-    },
-    "_render_tmp/site_libs/revealjs/dist/theme/fonts/league-gothic/league-gothic.woff": {
-      "checksum": "cd382dc8a9d6317864b5810a320effc5"
-    },
-    "_render_tmp/site_libs/revealjs/dist/theme/fonts/league-gothic/LICENSE": {
-      "checksum": "8fac5842e2f5a2e6bc067f5beb5035c9"
-    },
-    "_render_tmp/site_libs/revealjs/dist/theme/fonts/source-sans-pro/LICENSE": {
-      "checksum": "8ea3e41b02e9f465515dad7c89459c5b"
-    },
-    "_render_tmp/site_libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-italic.eot": {
-      "checksum": "72217712eb8d28872e7069322f3fda23"
-    },
-    "_render_tmp/site_libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-italic.ttf": {
-      "checksum": "8256cfd7e4017a7690814879409212cd"
-    },
-    "_render_tmp/site_libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-italic.woff": {
-      "checksum": "e74f0128884561828ce8c9cf5c284ab8"
-    },
-    "_render_tmp/site_libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-regular.eot": {
-      "checksum": "1d71438462d532b62b05cdd7e6d7197d"
-    },
-    "_render_tmp/site_libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-regular.ttf": {
-      "checksum": "2da39ecf9246383937da11b44b7bd9b4"
-    },
-    "_render_tmp/site_libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-regular.woff": {
-      "checksum": "e7acc589bb558fe58936a853f570193c"
-    },
-    "_render_tmp/site_libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-semibold.eot": {
-      "checksum": "0f3da1edf1b5c6a94a6ad948a7664451"
-    },
-    "_render_tmp/site_libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-semibold.ttf": {
-      "checksum": "f3565095e6c9158140444970f5a2c5ed"
-    },
-    "_render_tmp/site_libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-semibold.woff": {
-      "checksum": "1cb8e94f1185f1131a0c895165998f2b"
-    },
-    "_render_tmp/site_libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-semibolditalic.eot": {
-      "checksum": "58153ac7194e141d1e73ea88c6b63861"
-    },
-    "_render_tmp/site_libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-semibolditalic.ttf": {
-      "checksum": "c7e698a4d0956f4a939f42a05685bbf5"
-    },
-    "_render_tmp/site_libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-semibolditalic.woff": {
-      "checksum": "6b058fc2634b01d837c3432316c3141f"
-    },
-    "_render_tmp/site_libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro.css": {
-      "checksum": "b4b58710f05264a4011912211d0a9eed"
-    },
-    "_render_tmp/site_libs/revealjs/plugin/highlight/highlight.esm.js": {
-      "checksum": "19a0f6f1a902d2ef9aaefa1e046b3b2e"
-    },
-    "_render_tmp/site_libs/revealjs/plugin/highlight/highlight.js": {
-      "checksum": "bebce5c694268a3f8dff84a58b270ba3"
-    },
-    "_render_tmp/site_libs/revealjs/plugin/highlight/monokai.css": {
-      "checksum": "8c43a819e1268fc57605f500adff816b"
-    },
-    "_render_tmp/site_libs/revealjs/plugin/highlight/plugin.js": {
-      "checksum": "df2b6cec81d1c3d9730ef2b9421f62a1"
-    },
-    "_render_tmp/site_libs/revealjs/plugin/highlight/zenburn.css": {
-      "checksum": "28d5b9497037a12cb5a15644fea2f1c3"
-    },
-    "_render_tmp/site_libs/revealjs/plugin/markdown/markdown.esm.js": {
-      "checksum": "51cf543919182a054e69a3d632356296"
-    },
-    "_render_tmp/site_libs/revealjs/plugin/markdown/markdown.js": {
-      "checksum": "e19760d2cc93d38d5df00081a1893828"
-    },
-    "_render_tmp/site_libs/revealjs/plugin/markdown/plugin.js": {
-      "checksum": "a1da0411f474b5bc82d1cc79faf4d0c1"
-    },
-    "_render_tmp/site_libs/revealjs/plugin/math/katex.js": {
-      "checksum": "2a22abd1eb5a1c923f2d41178427715a"
-    },
-    "_render_tmp/site_libs/revealjs/plugin/math/math.esm.js": {
-      "checksum": "51b0b5e4a4dd80029ab90fb9ded6b67c"
-    },
-    "_render_tmp/site_libs/revealjs/plugin/math/math.js": {
-      "checksum": "744ade9a5dacddb69f35ee96cfd6f74a"
-    },
-    "_render_tmp/site_libs/revealjs/plugin/math/mathjax2.js": {
-      "checksum": "c1ea64afa05c3677d2c404755193b2be"
-    },
-    "_render_tmp/site_libs/revealjs/plugin/math/mathjax3.js": {
-      "checksum": "57d54e9c4fb748505b3709484593834a"
-    },
-    "_render_tmp/site_libs/revealjs/plugin/math/plugin.js": {
-      "checksum": "ec9cb99b85a8026d24b26526f6effe0d"
-    },
-    "_render_tmp/site_libs/revealjs/plugin/notes/notes.esm.js": {
-      "checksum": "e1d960e6895a06986c9509c30ba784b2"
-    },
-    "_render_tmp/site_libs/revealjs/plugin/notes/notes.js": {
-      "checksum": "db8fab48fe15b175ca69e99f8af2fdfc"
-    },
-    "_render_tmp/site_libs/revealjs/plugin/notes/plugin.js": {
-      "checksum": "9e52c9625a2f659373cc6e4c5ccf5b80"
-    },
-    "_render_tmp/site_libs/revealjs/plugin/notes/speaker-view.html": {
-      "checksum": "3e84d135161198849174057abe95b91c"
-    },
-    "_render_tmp/site_libs/revealjs/plugin/search/plugin.js": {
-      "checksum": "e39d5a868aff604a4bec144ae7a43c5b"
-    },
-    "_render_tmp/site_libs/revealjs/plugin/search/search.esm.js": {
-      "checksum": "1ff0e5fd23d9e0790498078f4acd37e8"
-    },
-    "_render_tmp/site_libs/revealjs/plugin/search/search.js": {
-      "checksum": "e265925ae6ee6ec778ed10ecba3c3da0"
-    },
-    "_render_tmp/site_libs/revealjs/plugin/zoom/plugin.js": {
-      "checksum": "75d50a8cac0d19f0824a1c5876d36673"
-    },
-    "_render_tmp/site_libs/revealjs/plugin/zoom/zoom.esm.js": {
-      "checksum": "c0a980f05da4f0bdd2ef6c8227fce9d3"
-    },
-    "_render_tmp/site_libs/revealjs/plugin/zoom/zoom.js": {
-      "checksum": "9c28a4d1f1502771665328f6abb091c0"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/dist/reset.css": {
-      "checksum": "4042c1a43777d540673cabc97cec67b2"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/dist/reveal.css": {
-      "checksum": "63603931663126b2803c8d50c5ec50a5"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/dist/reveal.esm.js": {
-      "checksum": "5d1b951e8804804eea44b7a50cf46be6"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/dist/reveal.esm.js.map": {
-      "checksum": "9d584b1cffa4cd297219f11a3b41baa4"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/dist/reveal.js": {
-      "checksum": "eca5d46a877fcf34cdad307d63755cc2"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/dist/reveal.js.map": {
-      "checksum": "dfd3ae7706b60dd68619d7415c5bb47c"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/dist/theme/fonts/league-gothic/league-gothic.css": {
-      "checksum": "488966d15e97f072801d7e348f4b5141"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/dist/theme/fonts/league-gothic/league-gothic.eot": {
-      "checksum": "9900a4643cc63c5d8f969d2196f72572"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/dist/theme/fonts/league-gothic/league-gothic.ttf": {
-      "checksum": "91295fa87df918411b49b7531da5d558"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/dist/theme/fonts/league-gothic/league-gothic.woff": {
-      "checksum": "cd382dc8a9d6317864b5810a320effc5"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/dist/theme/fonts/league-gothic/LICENSE": {
-      "checksum": "8fac5842e2f5a2e6bc067f5beb5035c9"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/dist/theme/fonts/source-sans-pro/LICENSE": {
-      "checksum": "8ea3e41b02e9f465515dad7c89459c5b"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-italic.eot": {
-      "checksum": "72217712eb8d28872e7069322f3fda23"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-italic.ttf": {
-      "checksum": "8256cfd7e4017a7690814879409212cd"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-italic.woff": {
-      "checksum": "e74f0128884561828ce8c9cf5c284ab8"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-regular.eot": {
-      "checksum": "1d71438462d532b62b05cdd7e6d7197d"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-regular.ttf": {
-      "checksum": "2da39ecf9246383937da11b44b7bd9b4"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-regular.woff": {
-      "checksum": "e7acc589bb558fe58936a853f570193c"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-semibold.eot": {
-      "checksum": "0f3da1edf1b5c6a94a6ad948a7664451"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-semibold.ttf": {
-      "checksum": "f3565095e6c9158140444970f5a2c5ed"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-semibold.woff": {
-      "checksum": "1cb8e94f1185f1131a0c895165998f2b"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-semibolditalic.eot": {
-      "checksum": "58153ac7194e141d1e73ea88c6b63861"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-semibolditalic.ttf": {
-      "checksum": "c7e698a4d0956f4a939f42a05685bbf5"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-semibolditalic.woff": {
-      "checksum": "6b058fc2634b01d837c3432316c3141f"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro.css": {
-      "checksum": "b4b58710f05264a4011912211d0a9eed"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/plugin/highlight/highlight.esm.js": {
-      "checksum": "19a0f6f1a902d2ef9aaefa1e046b3b2e"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/plugin/highlight/highlight.js": {
-      "checksum": "bebce5c694268a3f8dff84a58b270ba3"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/plugin/highlight/monokai.css": {
-      "checksum": "8c43a819e1268fc57605f500adff816b"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/plugin/highlight/plugin.js": {
-      "checksum": "df2b6cec81d1c3d9730ef2b9421f62a1"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/plugin/highlight/zenburn.css": {
-      "checksum": "28d5b9497037a12cb5a15644fea2f1c3"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/plugin/markdown/markdown.esm.js": {
-      "checksum": "51cf543919182a054e69a3d632356296"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/plugin/markdown/markdown.js": {
-      "checksum": "e19760d2cc93d38d5df00081a1893828"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/plugin/markdown/plugin.js": {
-      "checksum": "a1da0411f474b5bc82d1cc79faf4d0c1"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/plugin/math/katex.js": {
-      "checksum": "2a22abd1eb5a1c923f2d41178427715a"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/plugin/math/math.esm.js": {
-      "checksum": "51b0b5e4a4dd80029ab90fb9ded6b67c"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/plugin/math/math.js": {
-      "checksum": "744ade9a5dacddb69f35ee96cfd6f74a"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/plugin/math/mathjax2.js": {
-      "checksum": "c1ea64afa05c3677d2c404755193b2be"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/plugin/math/mathjax3.js": {
-      "checksum": "57d54e9c4fb748505b3709484593834a"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/plugin/math/plugin.js": {
-      "checksum": "ec9cb99b85a8026d24b26526f6effe0d"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/plugin/notes/notes.esm.js": {
-      "checksum": "e1d960e6895a06986c9509c30ba784b2"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/plugin/notes/notes.js": {
-      "checksum": "db8fab48fe15b175ca69e99f8af2fdfc"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/plugin/notes/plugin.js": {
-      "checksum": "9e52c9625a2f659373cc6e4c5ccf5b80"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/plugin/notes/speaker-view.html": {
-      "checksum": "3e84d135161198849174057abe95b91c"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/plugin/search/plugin.js": {
-      "checksum": "e39d5a868aff604a4bec144ae7a43c5b"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/plugin/search/search.esm.js": {
-      "checksum": "1ff0e5fd23d9e0790498078f4acd37e8"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/plugin/search/search.js": {
-      "checksum": "e265925ae6ee6ec778ed10ecba3c3da0"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/plugin/zoom/plugin.js": {
-      "checksum": "75d50a8cac0d19f0824a1c5876d36673"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/plugin/zoom/zoom.esm.js": {
-      "checksum": "c0a980f05da4f0bdd2ef6c8227fce9d3"
-    },
-    "_render_tmp_gfm/site_libs/revealjs/plugin/zoom/zoom.js": {
-      "checksum": "9c28a4d1f1502771665328f6abb091c0"
+      "checksum": "df83901da5a2914ab8cac417914ce572"
     },
     "_site/exercises/exercises-1.html": {
       "checksum": "8b4766b5700ed7dd64a3e37b9193f667"
@@ -4306,6 +3764,9 @@
     "_site/lecture-slides/lecture-6-corporate-rand.html": {
       "checksum": "6b496af180b8046477c0e3b80a462262"
     },
+    "_site/lecture-slides/lecture-test.html": {
+      "checksum": "ca3cb28786131b8e42944dca0bec1c8d"
+    },
     "_site/lecture-slides/mathjax-config.js": {
       "checksum": "713f60977e54bc0f5a12855392feb53f"
     },
@@ -4313,7 +3774,7 @@
       "checksum": "0c6d282b6af10a7ad9c6491127583428"
     },
     "_site/search.json": {
-      "checksum": "e8aa14ffdd6c2bc48a4b83cda2726c4f"
+      "checksum": "c8bdb897b97380a0ab2b1bfdc76328d2"
     },
     "_site/site_libs/bootstrap/bootstrap-da3805a3419a5cda4b8ab6b18e8fe390.min.css": {
       "checksum": "da3805a3419a5cda4b8ab6b18e8fe390"
@@ -4703,7 +4164,7 @@
       "checksum": "9c28a4d1f1502771665328f6abb091c0"
     },
     "_site/sitemap.xml": {
-      "checksum": "ffdbcf7c758a2668524b600101b1abfd"
+      "checksum": "56d5b2316c559c2e232c04c67f32893e"
     },
     "_site/template/mathjax-config.js": {
       "checksum": "713f60977e54bc0f5a12855392feb53f"
@@ -4711,188 +4172,41 @@
     "_site/template/template.html": {
       "checksum": "6909626f5b33e6654e6779dd2a378853"
     },
-    "csl/ec5230-doi-url.csl": {
-      "checksum": "fc57369cfa8f1644b8c0da82225913fc"
+    "apps/cournot-duopoly/cournot-duopoly-app.R": {
+      "checksum": "3f3d9b56f9609bf57a7cdc29c4cdc652"
     },
-    "exercises/exercises-1.qmd": {
-      "checksum": "db3977139d0e5d19ba93a9af4136b987"
+    "apps/cournot-duopoly/index.qmd": {
+      "checksum": "32e1d3c7f2d2826511956ea63d545c77"
+    },
+    "apps/index.qmd": {
+      "checksum": "f3baa66dc21c626b6a63a4f4ffa0c871"
+    },
+    "apps/monopolist-profits/index.qmd": {
+      "checksum": "8e60609b3495163e9b25dee7dcfe659a"
+    },
+    "apps/monopolist-profits/monopolist-best-response-app.R": {
+      "checksum": "22d0734ec0aac6fe186168f9fc7abf7a"
+    },
+    "apps/profit-possibility-cournot/profit-possibility-frontier-app.R": {
+      "checksum": "dac02c4b118d6330c648bfa48fef480e"
+    },
+    "apps/salop-circle/salop-circular-city-app.R": {
+      "checksum": "2fe93c42047f5736716a193b616d23fc"
+    },
+    "exercises/exercises-1-solutions.qmd": {
+      "checksum": "44f7798618152759ca8043463fe6e0ce"
     },
     "exercises/index.qmd": {
-      "checksum": "53c2376066b7cb69554e6e121ab296c1"
+      "checksum": "d0ec9d48156aea6838b3c67b671bfdd7"
     },
     "index.qmd": {
       "checksum": "67ff9b2c6e006773c84af013c0363907"
     },
     "lecture-slides/diagram-templates.qmd": {
-      "checksum": "63d1b5b0ec34bc8f0b38ca8ad6ca15fc"
+      "checksum": "28c90ef2389f56467e77ccfe899364a9"
     },
-    "lecture-slides/diagram-templates_cache/html/__packages": {
-      "checksum": "236b4baf811fe361edf2cadf4467e086"
-    },
-    "lecture-slides/diagram-templates_cache/html/fig-hotelling-fixed-location_43db8226584c7e916387afa5c1b7cb8a.RData": {
-      "checksum": "0b1b7e9cf77fe0799f6fcad24f8592e0"
-    },
-    "lecture-slides/diagram-templates_cache/html/fig-hotelling-fixed-location_43db8226584c7e916387afa5c1b7cb8a.rdb": {
-      "checksum": "d41d8cd98f00b204e9800998ecf8427e"
-    },
-    "lecture-slides/diagram-templates_cache/html/fig-hotelling-fixed-location_43db8226584c7e916387afa5c1b7cb8a.rdx": {
-      "checksum": "02e147bfbdf57d1e1c97f2b58fa42801"
-    },
-    "lecture-slides/diagram-templates_cache/html/fig-hotelling-movement-location_d64c2a675f60f80edf02ecdd07f52e57.RData": {
-      "checksum": "9dcc81e1e73816f0dca1b5d1cd213bd7"
-    },
-    "lecture-slides/diagram-templates_cache/html/fig-hotelling-movement-location_d64c2a675f60f80edf02ecdd07f52e57.rdb": {
-      "checksum": "d41d8cd98f00b204e9800998ecf8427e"
-    },
-    "lecture-slides/diagram-templates_cache/html/fig-hotelling-movement-location_d64c2a675f60f80edf02ecdd07f52e57.rdx": {
-      "checksum": "02e147bfbdf57d1e1c97f2b58fa42801"
-    },
-    "lecture-slides/diagram-templates_cache/html/fig-hotelling-profit-function_169926581b41c779a44baebe3e1a86c4.RData": {
-      "checksum": "e09916081b9b39a8ad1356f21bbeac3a"
-    },
-    "lecture-slides/diagram-templates_cache/html/fig-hotelling-profit-function_169926581b41c779a44baebe3e1a86c4.rdb": {
-      "checksum": "d41d8cd98f00b204e9800998ecf8427e"
-    },
-    "lecture-slides/diagram-templates_cache/html/fig-hotelling-profit-function_169926581b41c779a44baebe3e1a86c4.rdx": {
-      "checksum": "02e147bfbdf57d1e1c97f2b58fa42801"
-    },
-    "lecture-slides/diagram-templates_cache/html/fig-salop-cycle_41cc45e37da0e25fdcc4a7670ae4fc42.RData": {
-      "checksum": "3dab2b04f156d1767747c002c3570f62"
-    },
-    "lecture-slides/diagram-templates_cache/html/fig-salop-cycle_41cc45e37da0e25fdcc4a7670ae4fc42.rdb": {
-      "checksum": "d41d8cd98f00b204e9800998ecf8427e"
-    },
-    "lecture-slides/diagram-templates_cache/html/fig-salop-cycle_41cc45e37da0e25fdcc4a7670ae4fc42.rdx": {
-      "checksum": "02e147bfbdf57d1e1c97f2b58fa42801"
-    },
-    "lecture-slides/diagram-templates_cache/html/fig-salop-demand-comp-mon_abef0938edfb792ddd5403db5f9539bf.RData": {
-      "checksum": "2c93727cf05725e5959b6846831c7212"
-    },
-    "lecture-slides/diagram-templates_cache/html/fig-salop-demand-comp-mon_abef0938edfb792ddd5403db5f9539bf.rdb": {
-      "checksum": "d41d8cd98f00b204e9800998ecf8427e"
-    },
-    "lecture-slides/diagram-templates_cache/html/fig-salop-demand-comp-mon_abef0938edfb792ddd5403db5f9539bf.rdx": {
-      "checksum": "02e147bfbdf57d1e1c97f2b58fa42801"
-    },
-    "lecture-slides/diagram-templates_cache/html/fig-salop-line-comp-region_fa47e3f3903663c4916c16f9244728fa.RData": {
-      "checksum": "e2b61a50dc1d4bd94f38ca1c5fcdb258"
-    },
-    "lecture-slides/diagram-templates_cache/html/fig-salop-line-comp-region_fa47e3f3903663c4916c16f9244728fa.rdb": {
-      "checksum": "d41d8cd98f00b204e9800998ecf8427e"
-    },
-    "lecture-slides/diagram-templates_cache/html/fig-salop-line-comp-region_fa47e3f3903663c4916c16f9244728fa.rdx": {
-      "checksum": "02e147bfbdf57d1e1c97f2b58fa42801"
-    },
-    "lecture-slides/diagram-templates_cache/html/fig-salop-line_cd193815c38cce1beea8791a2c0613fd.RData": {
-      "checksum": "e2321bf6862773a4122390c1932532fd"
-    },
-    "lecture-slides/diagram-templates_cache/html/fig-salop-line_cd193815c38cce1beea8791a2c0613fd.rdb": {
-      "checksum": "d41d8cd98f00b204e9800998ecf8427e"
-    },
-    "lecture-slides/diagram-templates_cache/html/fig-salop-line_cd193815c38cce1beea8791a2c0613fd.rdx": {
-      "checksum": "02e147bfbdf57d1e1c97f2b58fa42801"
-    },
-    "lecture-slides/diagram-templates_cache/html/salop-line-mod_741988ba7a44c9003abc9beed3ee4a53.RData": {
-      "checksum": "2fac93366b130acf5c5b701c8bc404b5"
-    },
-    "lecture-slides/diagram-templates_cache/html/salop-line-mod_741988ba7a44c9003abc9beed3ee4a53.rdb": {
-      "checksum": "d41d8cd98f00b204e9800998ecf8427e"
-    },
-    "lecture-slides/diagram-templates_cache/html/salop-line-mod_741988ba7a44c9003abc9beed3ee4a53.rdx": {
-      "checksum": "02e147bfbdf57d1e1c97f2b58fa42801"
-    },
-    "lecture-slides/diagram-templates_cache/html/tikz-helper_b9cafbedb909be94077bfe59c12784b2.RData": {
-      "checksum": "4bba5a4191c066752778a49f31e1ecb4"
-    },
-    "lecture-slides/diagram-templates_cache/html/tikz-helper_b9cafbedb909be94077bfe59c12784b2.rdb": {
-      "checksum": "7403e7a7bfc084914a6c927d3d53afc9"
-    },
-    "lecture-slides/diagram-templates_cache/html/tikz-helper_b9cafbedb909be94077bfe59c12784b2.rdx": {
-      "checksum": "d21a4da131985c3a8a66f66690a306e4"
-    },
-    "lecture-slides/diagram-templates_cache/revealjs/__packages": {
-      "checksum": "236b4baf811fe361edf2cadf4467e086"
-    },
-    "lecture-slides/diagram-templates_cache/revealjs/fig-hotelling-fixed-location_a423a102d2f820ba1d4855c1759deafd.RData": {
-      "checksum": "c4d1f30a018b2404948001a73e54986d"
-    },
-    "lecture-slides/diagram-templates_cache/revealjs/fig-hotelling-fixed-location_a423a102d2f820ba1d4855c1759deafd.rdb": {
-      "checksum": "d41d8cd98f00b204e9800998ecf8427e"
-    },
-    "lecture-slides/diagram-templates_cache/revealjs/fig-hotelling-fixed-location_a423a102d2f820ba1d4855c1759deafd.rdx": {
-      "checksum": "02e147bfbdf57d1e1c97f2b58fa42801"
-    },
-    "lecture-slides/diagram-templates_cache/revealjs/fig-hotelling-movement-location_4e357443f9b23a33316e895dca93e39b.RData": {
-      "checksum": "fc9d36ebccb7cd965ba987fb104bd9cf"
-    },
-    "lecture-slides/diagram-templates_cache/revealjs/fig-hotelling-movement-location_4e357443f9b23a33316e895dca93e39b.rdb": {
-      "checksum": "d41d8cd98f00b204e9800998ecf8427e"
-    },
-    "lecture-slides/diagram-templates_cache/revealjs/fig-hotelling-movement-location_4e357443f9b23a33316e895dca93e39b.rdx": {
-      "checksum": "02e147bfbdf57d1e1c97f2b58fa42801"
-    },
-    "lecture-slides/diagram-templates_cache/revealjs/fig-hotelling-profit-function_3bc32b2bd2eabc37d6b2b6c98863735c.RData": {
-      "checksum": "4f0f51aa2f2d01c35b52767770fc0e22"
-    },
-    "lecture-slides/diagram-templates_cache/revealjs/fig-hotelling-profit-function_3bc32b2bd2eabc37d6b2b6c98863735c.rdb": {
-      "checksum": "d41d8cd98f00b204e9800998ecf8427e"
-    },
-    "lecture-slides/diagram-templates_cache/revealjs/fig-hotelling-profit-function_3bc32b2bd2eabc37d6b2b6c98863735c.rdx": {
-      "checksum": "02e147bfbdf57d1e1c97f2b58fa42801"
-    },
-    "lecture-slides/diagram-templates_cache/revealjs/fig-salop-cycle_0ef5f3a9901f1ae7bb7fb8302aa4c841.RData": {
-      "checksum": "913fca5ca771dbc4338eaed0a403d613"
-    },
-    "lecture-slides/diagram-templates_cache/revealjs/fig-salop-cycle_0ef5f3a9901f1ae7bb7fb8302aa4c841.rdb": {
-      "checksum": "d41d8cd98f00b204e9800998ecf8427e"
-    },
-    "lecture-slides/diagram-templates_cache/revealjs/fig-salop-cycle_0ef5f3a9901f1ae7bb7fb8302aa4c841.rdx": {
-      "checksum": "02e147bfbdf57d1e1c97f2b58fa42801"
-    },
-    "lecture-slides/diagram-templates_cache/revealjs/fig-salop-demand-comp-mon_efe6d2db725f8a3ac2477c03c489942d.RData": {
-      "checksum": "09e345cf06d154fdb784e2e272f27914"
-    },
-    "lecture-slides/diagram-templates_cache/revealjs/fig-salop-demand-comp-mon_efe6d2db725f8a3ac2477c03c489942d.rdb": {
-      "checksum": "d41d8cd98f00b204e9800998ecf8427e"
-    },
-    "lecture-slides/diagram-templates_cache/revealjs/fig-salop-demand-comp-mon_efe6d2db725f8a3ac2477c03c489942d.rdx": {
-      "checksum": "02e147bfbdf57d1e1c97f2b58fa42801"
-    },
-    "lecture-slides/diagram-templates_cache/revealjs/fig-salop-line-comp-region_568dbb92d8c5fa387cbac6764ae02218.RData": {
-      "checksum": "c4984850b38ba4ac25bb519d6f92ce40"
-    },
-    "lecture-slides/diagram-templates_cache/revealjs/fig-salop-line-comp-region_568dbb92d8c5fa387cbac6764ae02218.rdb": {
-      "checksum": "d41d8cd98f00b204e9800998ecf8427e"
-    },
-    "lecture-slides/diagram-templates_cache/revealjs/fig-salop-line-comp-region_568dbb92d8c5fa387cbac6764ae02218.rdx": {
-      "checksum": "02e147bfbdf57d1e1c97f2b58fa42801"
-    },
-    "lecture-slides/diagram-templates_cache/revealjs/fig-salop-line_9f1a0f2746ff23082999755d25c6998a.RData": {
-      "checksum": "e120ab944fc1684613d6c274b97d6c79"
-    },
-    "lecture-slides/diagram-templates_cache/revealjs/fig-salop-line_9f1a0f2746ff23082999755d25c6998a.rdb": {
-      "checksum": "d41d8cd98f00b204e9800998ecf8427e"
-    },
-    "lecture-slides/diagram-templates_cache/revealjs/fig-salop-line_9f1a0f2746ff23082999755d25c6998a.rdx": {
-      "checksum": "02e147bfbdf57d1e1c97f2b58fa42801"
-    },
-    "lecture-slides/diagram-templates_cache/revealjs/salop-line-mod_5565f6cb2a34360de5133250b1aab600.RData": {
-      "checksum": "db4f488245caf260b58d1a23a47b7fa4"
-    },
-    "lecture-slides/diagram-templates_cache/revealjs/salop-line-mod_5565f6cb2a34360de5133250b1aab600.rdb": {
-      "checksum": "d41d8cd98f00b204e9800998ecf8427e"
-    },
-    "lecture-slides/diagram-templates_cache/revealjs/salop-line-mod_5565f6cb2a34360de5133250b1aab600.rdx": {
-      "checksum": "02e147bfbdf57d1e1c97f2b58fa42801"
-    },
-    "lecture-slides/diagram-templates_cache/revealjs/tikz-helper_c9e39de1156d97af4af5fac24b8fd6cf.RData": {
-      "checksum": "959f84d4dd4ca520c4beb840d6ddf613"
-    },
-    "lecture-slides/diagram-templates_cache/revealjs/tikz-helper_c9e39de1156d97af4af5fac24b8fd6cf.rdb": {
-      "checksum": "7403e7a7bfc084914a6c927d3d53afc9"
-    },
-    "lecture-slides/diagram-templates_cache/revealjs/tikz-helper_c9e39de1156d97af4af5fac24b8fd6cf.rdx": {
-      "checksum": "d21a4da131985c3a8a66f66690a306e4"
+    "lecture-slides/fig-hotelling-fixed-location.tex": {
+      "checksum": "313c50c7c29184a23844b35740e17887"
     },
     "lecture-slides/figs/fig-hotelling-fixed-location.svg": {
       "checksum": "ba8ea071e6db7c2ae189e4762b455256"
@@ -4918,15 +4232,6 @@
     "lecture-slides/figs/fig-salop-line.svg": {
       "checksum": "06e73147eb833986b27757cff08cbd60"
     },
-    "lecture-slides/figs/fig-stackelberg-br.aux": {
-      "checksum": "a94a2480d3289e625eea47cd1b285758"
-    },
-    "lecture-slides/figs/fig-stackelberg-br.log": {
-      "checksum": "da227d2c9da551afc576d8c88b74ced5"
-    },
-    "lecture-slides/figs/fig-stackelberg-br.tex": {
-      "checksum": "74263eef60b4a00c888f3c96abb1adad"
-    },
     "lecture-slides/index.qmd": {
       "checksum": "6465c077f629a07d80d6ec9838bb0720"
     },
@@ -4939,125 +4244,8 @@
     "lecture-slides/lecture-2-product-differentiation.qmd": {
       "checksum": "8460e204a8efcf1c6095e5ab9a8d3a67"
     },
-    "lecture-slides/lecture-2-product-differentiation_cache/revealjs/__packages": {
-      "checksum": "80c870dd3d8cb575b8b034f222b0fd50"
-    },
-    "lecture-slides/lecture-2-product-differentiation_cache/revealjs/fig-hotelling-colocation_05e842d4359ee2a3c269046e73611bad.RData": {
-      "checksum": "85f2e2af646c91c6cbea7629cfc0db03"
-    },
-    "lecture-slides/lecture-2-product-differentiation_cache/revealjs/fig-hotelling-colocation_05e842d4359ee2a3c269046e73611bad.rdb": {
-      "checksum": "69fc15626fae42a1d6cfa211d9fb6594"
-    },
-    "lecture-slides/lecture-2-product-differentiation_cache/revealjs/fig-hotelling-colocation_05e842d4359ee2a3c269046e73611bad.rdx": {
-      "checksum": "17fbb37c269719cbe44267a9e5ef3ab0"
-    },
-    "lecture-slides/lecture-2-product-differentiation_cache/revealjs/fig-hotelling-firm1-demand_2166bc4c725db13faad0a8ef6ffb62f7.RData": {
-      "checksum": "1d6cd38c178b8842905484da768d7be1"
-    },
-    "lecture-slides/lecture-2-product-differentiation_cache/revealjs/fig-hotelling-firm1-demand_2166bc4c725db13faad0a8ef6ffb62f7.rdb": {
-      "checksum": "2120c142764d806f8e4100a1b637486f"
-    },
-    "lecture-slides/lecture-2-product-differentiation_cache/revealjs/fig-hotelling-firm1-demand_2166bc4c725db13faad0a8ef6ffb62f7.rdx": {
-      "checksum": "90425763141a9bf3dbb041289b5d825b"
-    },
-    "lecture-slides/lecture-2-product-differentiation_cache/revealjs/fig-hotelling-firm2-demand_a8b344b2ae4846ba53f2ee24895f0693.RData": {
-      "checksum": "4087a332d23e5baa5fa50767c13afb7d"
-    },
-    "lecture-slides/lecture-2-product-differentiation_cache/revealjs/fig-hotelling-firm2-demand_a8b344b2ae4846ba53f2ee24895f0693.rdb": {
-      "checksum": "2120c142764d806f8e4100a1b637486f"
-    },
-    "lecture-slides/lecture-2-product-differentiation_cache/revealjs/fig-hotelling-firm2-demand_a8b344b2ae4846ba53f2ee24895f0693.rdx": {
-      "checksum": "90425763141a9bf3dbb041289b5d825b"
-    },
-    "lecture-slides/lecture-2-product-differentiation_cache/revealjs/fig-kinked-demand_c15bdcb9011fa87d53648d8627da808a.RData": {
-      "checksum": "a52b62ba9a61556dd2b488ad3487e66f"
-    },
-    "lecture-slides/lecture-2-product-differentiation_cache/revealjs/fig-kinked-demand_c15bdcb9011fa87d53648d8627da808a.rdb": {
-      "checksum": "5a1a85e3c02e4602683cd08d24acb153"
-    },
-    "lecture-slides/lecture-2-product-differentiation_cache/revealjs/fig-kinked-demand_c15bdcb9011fa87d53648d8627da808a.rdx": {
-      "checksum": "ee039ff510d5b5e61b9de7a1a9acb032"
-    },
-    "lecture-slides/lecture-2-product-differentiation_cache/revealjs/fig-profit-function_46755207946702dd6ab683f21ee0c708.RData": {
-      "checksum": "a9c241cabaafa2e170455b6111306fd9"
-    },
-    "lecture-slides/lecture-2-product-differentiation_cache/revealjs/fig-profit-function_46755207946702dd6ab683f21ee0c708.rdb": {
-      "checksum": "1125de53c4644e7bcccc3df69d270e72"
-    },
-    "lecture-slides/lecture-2-product-differentiation_cache/revealjs/fig-profit-function_46755207946702dd6ab683f21ee0c708.rdx": {
-      "checksum": "91a4015fe5444a088118cb5cd489868f"
-    },
-    "lecture-slides/lecture-2-product-differentiation_cache/revealjs/fig-salop-competitive-demand_5ca197da6e87f312491e65be17ad9ee4.RData": {
-      "checksum": "9eb430241c44d8b751ea801b6c228cbb"
-    },
-    "lecture-slides/lecture-2-product-differentiation_cache/revealjs/fig-salop-competitive-demand_5ca197da6e87f312491e65be17ad9ee4.rdb": {
-      "checksum": "a3b94d4b7df18d2b49b603c44636b384"
-    },
-    "lecture-slides/lecture-2-product-differentiation_cache/revealjs/fig-salop-competitive-demand_5ca197da6e87f312491e65be17ad9ee4.rdx": {
-      "checksum": "18ae92d394210c6c67ab3036de3be9ab"
-    },
-    "lecture-slides/lecture-2-product-differentiation_cache/revealjs/fig-salop-monopoly-demand_90c8b5961218f1f9233bcf71d4053355.RData": {
-      "checksum": "51b079955b0d5989113a4630ac1e0c3e"
-    },
-    "lecture-slides/lecture-2-product-differentiation_cache/revealjs/fig-salop-monopoly-demand_90c8b5961218f1f9233bcf71d4053355.rdb": {
-      "checksum": "fe252f2bdfe2ad4fc5ba027f4492f2e7"
-    },
-    "lecture-slides/lecture-2-product-differentiation_cache/revealjs/fig-salop-monopoly-demand_90c8b5961218f1f9233bcf71d4053355.rdx": {
-      "checksum": "8c2a34e084880d7828621925c1587d0a"
-    },
-    "lecture-slides/lecture-2-product-differentiation_cache/revealjs/tikz-helper_ca7387b32be0c999782b4d47a16d25a1.RData": {
-      "checksum": "2f9af275d44bccd02730cc1567226827"
-    },
-    "lecture-slides/lecture-2-product-differentiation_cache/revealjs/tikz-helper_ca7387b32be0c999782b4d47a16d25a1.rdb": {
-      "checksum": "3f9840797e7a14ad49821881af77349c"
-    },
-    "lecture-slides/lecture-2-product-differentiation_cache/revealjs/tikz-helper_ca7387b32be0c999782b4d47a16d25a1.rdx": {
-      "checksum": "9613ddc79211442e40dae976e688c399"
-    },
-    "lecture-slides/lecture-2-product-differentiation_cache/revealjs/unnamed-chunk-1_effbe3686741585c5cb006102870feed.RData": {
-      "checksum": "0cbd46cd2e6b0088474e2e87de6fad32"
-    },
-    "lecture-slides/lecture-2-product-differentiation_cache/revealjs/unnamed-chunk-1_effbe3686741585c5cb006102870feed.rdb": {
-      "checksum": "d41d8cd98f00b204e9800998ecf8427e"
-    },
-    "lecture-slides/lecture-2-product-differentiation_cache/revealjs/unnamed-chunk-1_effbe3686741585c5cb006102870feed.rdx": {
-      "checksum": "02e147bfbdf57d1e1c97f2b58fa42801"
-    },
-    "lecture-slides/lecture-2-product-differentiation_files/figure-revealjs/fig-hotelling-colocation-1.png": {
-      "checksum": "5738c938e95648cf00b2b815101844d5"
-    },
-    "lecture-slides/lecture-2-product-differentiation_files/figure-revealjs/fig-hotelling-firm1-demand-1.png": {
-      "checksum": "da270e27f98eb414493269d880e82df3"
-    },
-    "lecture-slides/lecture-2-product-differentiation_files/figure-revealjs/fig-hotelling-firm2-demand-1.png": {
-      "checksum": "c823af34008d24c411bee9f6482aeb79"
-    },
-    "lecture-slides/lecture-2-product-differentiation_files/figure-revealjs/fig-kinked-demand-1.png": {
-      "checksum": "7413b1b41b1d5ee8fcef7bc294a14297"
-    },
-    "lecture-slides/lecture-2-product-differentiation_files/figure-revealjs/fig-profit-function-1.png": {
-      "checksum": "9c3417d382a778f05fff8f71e8d56a5d"
-    },
-    "lecture-slides/lecture-2-product-differentiation_files/figure-revealjs/fig-salop-competitive-demand-1.png": {
-      "checksum": "95d790cdeccee913380bb129c60d51da"
-    },
-    "lecture-slides/lecture-2-product-differentiation_files/figure-revealjs/fig-salop-monopoly-demand-1.png": {
-      "checksum": "973d34c037ad064caf7aaa2ea3488676"
-    },
     "lecture-slides/lecture-3-innovation.qmd": {
       "checksum": "70d3b671b65d0ac899341c3232942ad3"
-    },
-    "lecture-slides/lecture-3-innovation_cache/revealjs/__packages": {
-      "checksum": "3804024d36c0baed9ea47f9d2edb7883"
-    },
-    "lecture-slides/lecture-3-innovation_cache/revealjs/setup_f54b8b49e5a23ce7600f938ec1838a54.RData": {
-      "checksum": "124f4c5c0c870e5dea5e9f4c322115b2"
-    },
-    "lecture-slides/lecture-3-innovation_cache/revealjs/setup_f54b8b49e5a23ce7600f938ec1838a54.rdb": {
-      "checksum": "d41d8cd98f00b204e9800998ecf8427e"
-    },
-    "lecture-slides/lecture-3-innovation_cache/revealjs/setup_f54b8b49e5a23ce7600f938ec1838a54.rdx": {
-      "checksum": "02e147bfbdf57d1e1c97f2b58fa42801"
     },
     "lecture-slides/lecture-4-patents.qmd": {
       "checksum": "82bca9acbeb781c59ddc6c6d8fc09c67"
@@ -5068,8 +4256,8 @@
     "lecture-slides/lecture-6-corporate-rand.qmd": {
       "checksum": "3397d2a0613ec9aeeb029ff7f7e1818c"
     },
-    "lecture-slides/mathjax-config.js": {
-      "checksum": "713f60977e54bc0f5a12855392feb53f"
+    "lecture-slides/lecture-test.qmd": {
+      "checksum": "a7008f044c1a6c0eeb926192fd50ef3e"
     },
     "README": {
       "checksum": "df71c09aa6ba806ac3b38724efe948a6"
@@ -5550,12 +4738,6 @@
     },
     "template/template.qmd": {
       "checksum": "621b45449fe9b707c5041ca04b0406f2"
-    },
-    "tests/testthat.R": {
-      "checksum": "426592f516ac9b315373e2c7ec748867"
-    },
-    "tests/testthat/test-hello.R": {
-      "checksum": "5907a5b7bf77e9a58ba481d6fa180bff"
     }
   },
   "users": null
