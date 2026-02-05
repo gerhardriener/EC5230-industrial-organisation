@@ -73,6 +73,7 @@ rsconnect/
 # -----------------------------
 _resources/
 resources/
+apps/ 
 
 # -----------------------------
 # Misc / temporary

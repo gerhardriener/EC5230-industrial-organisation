@@ -31,13 +31,6 @@ website:
             - lecture-slides/lecture-1-oligopoly.qmd
             - lecture-slides/lecture-2-product-differentiation.qmd
 
-bibliography: references.bib
-csl: csl/ec5230-doi-url.csl
-execute:
-  echo: false
-  warning: false
-  message: false
-
 format:
   html:
     theme: cosmo
@@ -46,3 +39,13 @@ format:
     toc-depth: 3
     number-sections: false
     link-external-newwindow: true
+
+bibliography: references.bib
+biblio-style: chicago-author-date
+
+execute:
+  echo: false
+  warning: false
+  message: false
+
+jupyter: false
