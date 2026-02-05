@@ -10,231 +10,182 @@ execute:
   cache: true
 ---
 
-```{r}
-#| label: tikz-helper
-#| include: false
+```{python}
+# | label: tikz-helper
+# | include: false
 
-library(here)
-library(knitr)
+import subprocess
+import shutil
+from pathlib import Path
 
-dir.create(
-  here("lecture-slides", "figs"),
-  showWarnings = FALSE,
-  recursive = TRUE
-)
 
-# Render TikZ -> PDF via pdflatex, then PDF -> SVG via Inkscape,
-# optionally clean auxiliary files, then return an <img> tag
-render_tikz_svg <- function(
-  tikz_picture,
-  name,
-  width = "70%",
-  engine = "pdflatex",
-  cleanup = TRUE,
-  keep_pdf = FALSE
-) {
-  figs_dir <- here("lecture-slides", "figs")
+def render_tikz_svg(
+    tikz_picture: str,
+    name: str,
+    width: str = "70%",
+    engine: str = "pdflatex",
+    cleanup: bool = True,
+    keep_pdf: bool = False,
+) -> str:
+    """
+    Render TikZ code to SVG via pdflatex + pdftocairo (Positron Cloud compatible).
 
-  tex_file <- file.path(figs_dir, paste0(name, ".tex"))
-  pdf_file <- file.path(figs_dir, paste0(name, ".pdf"))
-  svg_file <- file.path(figs_dir, paste0(name, ".svg"))
+    Returns: HTML <img> tag for embedding.
+    """
+    figs_dir = Path("lecture-slides/figs")
+    figs_dir.mkdir(parents=True, exist_ok=True)
 
-  # Standalone doc for tight cropping
-  tex <- paste0(
-    "\\documentclass[tikz,border=2pt]{standalone}\n",
-    "\\usepackage{pgfplots}\n",
-    "\\pgfplotsset{compat=1.18}\n",
-    "\\begin{document}\n",
-    tikz_picture,
-    "\n\\end{document}\n"
-  )
-  writeLines(tex, tex_file)
+    tex_file = figs_dir / f"{name}.tex"
+    pdf_file = figs_dir / f"{name}.pdf"
+    svg_file = figs_dir / f"{name}.svg"
 
-  # Compile to PDF
-  if (Sys.which(engine) == "") {
-    stop("LaTeX engine not found on PATH: ", engine)
-  }
+    # Create standalone LaTeX document
+    tex_content = f"""\documentclass[tikz,border=2pt]{{standalone}}
+\usepackage{{pgfplots}}
+\usetikzlibrary{{decorations.pathreplacing}}
+\pgfplotsset{{compat=1.18}}
+\begin{{document}}
+{tikz_picture}
+\end{{document}}
+"""
+    tex_file.write_text(tex_content, encoding="utf-8")
 
-  res <- system2(
-    engine,
-    c(
-      "-interaction=nonstopmode",
-      paste0("--output-directory=", shQuote(figs_dir)),
-      shQuote(tex_file)
-    ),
-    stdout = TRUE,
-    stderr = TRUE
-  )
+    # Compile to PDF
+    if not shutil.which(engine):
+        raise RuntimeError(f"LaTeX engine not found: {engine}")
 
-  if (!file.exists(pdf_file)) {
-    stop("PDF not produced. LaTeX output:\n", paste(res, collapse = "\n"))
-  }
-
-  # Convert PDF -> SVG using Inkscape
-  inkscape <- Sys.which("inkscape")
-  if (inkscape == "") {
-    stop("Inkscape not found on PATH.")
-  }
-
-  system2(
-    inkscape,
-    c(
-      shQuote(pdf_file),
-      "--export-type=svg",
-      paste0("--export-filename=", shQuote(svg_file))
-    )
-  )
-
-  if (!file.exists(svg_file)) {
-    stop("SVG not produced by Inkscape.")
-  }
-
-  # ---- Cleanup (only after success) ----
-  if (cleanup) {
-    aux_ext <- c(
-      ".aux",
-      ".log",
-      ".out",
-      ".toc",
-      ".synctex.gz",
-      ".fls",
-      ".fdb_latexmk",
-      ".tex"
+    result = subprocess.run(
+        [
+            engine,
+            "-interaction=nonstopmode",
+            f"-output-directory={figs_dir}",
+            str(tex_file),
+        ],
+        capture_output=True,
+        text=True,
     )
 
-    aux_files <- file.path(figs_dir, paste0(name, aux_ext))
-    aux_files <- aux_files[file.exists(aux_files)]
+    if not pdf_file.exists():
+        raise RuntimeError(f"PDF not produced.\n{result.stdout}\n{result.stderr}")
 
-    if (length(aux_files) > 0) {
-      unlink(aux_files)
-    }
+    # Convert PDF → SVG using pdftocairo (from poppler-utils)
+    if not shutil.which("pdftocairo"):
+        raise RuntimeError(
+            "pdftocairo not found. Install poppler-utils: "
+            "sudo apt-get install poppler-utils (Linux) or brew install poppler (macOS)"
+        )
 
-    if (!keep_pdf && file.exists(pdf_file)) {
-      unlink(pdf_file)
-    }
-  }
+    result = subprocess.run(
+        ["pdftocairo", "-svg", str(pdf_file), str(svg_file)],
+        capture_output=True,
+        text=True,
+    )
 
-  # Embed as HTML
-  knitr::asis_output(sprintf(
-    '<img src="%s" style="width:%s; height:auto;">',
-    svg_file,
-    width
-  ))
-}
+    if result.returncode != 0:
+        raise RuntimeError(f"pdftocairo failed:\n{result.stdout}\n{result.stderr}")
 
+    if not svg_file.exists():
+        raise RuntimeError("SVG not produced by pdftocairo.")
+
+    # Cleanup
+    if cleanup:
+        for ext in [
+            ".aux",
+            ".log",
+            ".out",
+            ".synctex.gz",
+            ".fls",
+            ".fdb_latexmk",
+            ".tex",
+        ]:
+            aux_file = figs_dir / f"{name}{ext}"
+            if aux_file.exists():
+                aux_file.unlink()
+
+        if not keep_pdf and pdf_file.exists():
+            pdf_file.unlink()
+
+    # Return HTML img tag
+    from IPython.display import HTML
+
+    return HTML(f'<img src="{svg_file}" style="width:{width}; height:auto;">')
 ```
 
-
-```{r}
+```{python}
 #| label: fig-hotelling-fixed-location
 render_tikz_svg(
-  tikz_picture = "
-\\begin{tikzpicture}[>=stealth, line cap=round]
-
-% --- Key x-positions (edit these to change spacing) ---
-\\def\\xO{0}
-\\def\\xFone{3}
-\\def\\xMC{6}
-\\def\\xFtwo{9}
-\\def\\xL{12}
-
-% --- Baseline ---
-\\draw[thick] (\\xO,0) -- (\\xL,0);
-
-% --- Points ---
-\\fill (\\xO,0) circle (2pt);
-\\fill (\\xFone,0) circle (2pt);
-\\fill (\\xMC,0) circle (2pt);
-\\fill (\\xFtwo,0) circle (2pt);
-\\fill (\\xL,0) circle (2pt);
-
-% --- End labels ---
-\\node[left]  at (\\xO,0) {$0$};
-\\node[right] at (\\xL,0) {$L$};
-
-% --- Braces above segments: a, x, y, b ---
-\\draw[decorate, decoration={brace, amplitude=4pt}]
-  (\\xO,0.55) -- (\\xFone,0.55) node[midway, yshift=10pt] {$a$};
-
-\\draw[decorate, decoration={brace, amplitude=4pt}]
-  (\\xFone,0.55) -- (\\xMC,0.55) node[midway, yshift=10pt] {$x$};
-
-\\draw[decorate, decoration={brace, amplitude=4pt}]
-  (\\xMC,0.55) -- (\\xFtwo,0.55) node[midway, yshift=10pt] {$y$};
-
-\\draw[decorate, decoration={brace, amplitude=4pt}]
-  (\\xFtwo,0.55) -- (\\xL,0.55) node[midway, yshift=10pt] {$b$};
-
-% --- Firm labels with downward arrows ---
-\\node at (\\xFone,1.45) {Firm 1};
-\\draw[->] (\\xFone,1.20) -- (\\xFone,0.12);
-
-\\node at (\\xFtwo,1.45) {Firm 2};
-\\draw[->] (\\xFtwo,1.20) -- (\\xFtwo,0.12);
-
-% --- Marginal consumer label with upward arrow from text to point ---
-\\node[align=center] at (\\xMC,-1.15) {Marginal\\\\consumer};
-\\draw[->] (\\xMC,-0.75) -- (\\xMC,-0.08);
-
-\\end{tikzpicture}",
-  name = "fig-hotelling-fixed-location",
-  width = "70%"
+    tikz_picture=r"""
+\begin{tikzpicture}[>=stealth, line cap=round]
+\def\xO{0}
+\def\xFone{3}
+\def\xMC{6}
+\def\xFtwo{9}
+\def\xL{12}
+\draw[thick] (\xO,0) -- (\xL,0);
+\fill (\xO,0) circle (2pt);
+\fill (\xFone,0) circle (2pt);
+\fill (\xMC,0) circle (2pt);
+\fill (\xFtwo,0) circle (2pt);
+\fill (\xL,0) circle (2pt);
+\node[left]  at (\xO,0) {$0$};
+\node[right] at (\xL,0) {$L$};
+\draw[decorate, decoration={brace, amplitude=4pt}]
+  (\xO,0.55) -- (\xFone,0.55) node[midway, yshift=10pt] {$a$};
+\draw[decorate, decoration={brace, amplitude=4pt}]
+  (\xFone,0.55) -- (\xMC,0.55) node[midway, yshift=10pt] {$x$};
+\draw[decorate, decoration={brace, amplitude=4pt}]
+  (\xMC,0.55) -- (\xFtwo,0.55) node[midway, yshift=10pt] {$y$};
+\draw[decorate, decoration={brace, amplitude=4pt}]
+  (\xFtwo,0.55) -- (\xL,0.55) node[midway, yshift=10pt] {$b$};
+\node at (\xFone,1.45) {Firm 1};
+\draw[->] (\xFone,1.20) -- (\xFone,0.12);
+\node at (\xFtwo,1.45) {Firm 2};
+\draw[->] (\xFtwo,1.20) -- (\xFtwo,0.12);
+\node[align=center] at (\xMC,-1.15) {Marginal\consumer};
+\draw[->] (\xMC,-0.75) -- (\xMC,-0.08);
+\end{tikzpicture}
+""",
+    name="fig-hotelling-fixed-location",
+    width="70%"
 )
 ```
 
-```{r}
+```{python}
 #| label: fig-hotelling-movement-location
 render_tikz_svg(
-  tikz_picture = "
-\\begin{tikzpicture}[>=stealth, line cap=round]
-
-% --- Key x-positions (edit to change spacing) ---
-\\def\\xO{0}
-\\def\\xM{6}   % marginal consumer / co-location point of firms 1 and 2
-\\def\\xL{12}
-
-% --- Baseline ---
-\\draw[thick] (\\xO,0) -- (\\xL,0);
-
-% --- Endpoints and midpoint ---
-\\fill (\\xO,0) circle (2pt);
-\\fill (\\xM,0) circle (2pt);
-\\fill (\\xL,0) circle (2pt);
-
-% --- End labels ---
-\\node[left]  at (\\xO,0) {$0$};
-\\node[right] at (\\xL,0) {$L$};
-
-% --- Braces above segments: a and b ---
-\\draw[decorate, decoration={brace, amplitude=4pt}]
-  (\\xO,0.55) -- (\\xM,0.55) node[midway, yshift=10pt] {$a$};
-
-\\draw[decorate, decoration={brace, amplitude=4pt}]
-  (\\xM,0.55) -- (\\xL,0.55) node[midway, yshift=10pt] {$b$};
-
-% --- Firms label with downward arrow to midpoint ---
-\\node at (\\xM,1.45) {Firms 1 and 2};
-\\draw[->] (\\xM,1.20) -- (\\xM,0.12);
-
-% --- Marginal consumer label with upward arrow to midpoint ---
-\\node[align=center] at (\\xM,-1.15) {Marginal consumer};
-\\draw[->] (\\xM,-0.75) -- (\\xM,-0.08);
-
-\\end{tikzpicture}
-",
-  name = "fig-hotelling-movement-location",
-  width = "70%"
+    tikz_picture=r"""
+\begin{tikzpicture}[>=stealth, line cap=round]
+\def\xO{0}
+\def\xM{6}   % marginal consumer / co-location point of firms 1 and 2
+\def\xL{12}
+\draw[thick] (\xO,0) -- (\xL,0);
+\fill (\xO,0) circle (2pt);
+\fill (\xM,0) circle (2pt);
+\fill (\xL,0) circle (2pt);
+\node[left]  at (\xO,0) {$0$};
+\node[right] at (\xL,0) {$L$};
+\draw[decorate, decoration={brace, amplitude=4pt}]
+  (\xO,0.55) -- (\xM,0.55) node[midway, yshift=10pt] {$a$};
+\draw[decorate, decoration={brace, amplitude=4pt}]
+  (\xM,0.55) -- (\xL,0.55) node[midway, yshift=10pt] {$b$};
+\node at (\xM,1.45) {Firms 1 and 2};
+\draw[->] (\xM,1.20) -- (\xM,0.12);
+\node[align=center] at (\xM,-1.15) {Marginal consumer};
+\draw[->] (\xM,-0.75) -- (\xM,-0.08);
+\end{tikzpicture}
+""",
+    name="fig-hotelling-movement-location",
+    width="70%"
 )
 ```
 
-
-```{r}
-#| label: fig-hotelling-profit-function
+```{python}
+# | label: fig-hotelling-profit-function
 
 render_tikz_svg(
-  tikz_picture = "
-\\begin{tikzpicture}
-\\begin{axis}[
+    tikz_picture=r"""
+\begin{tikzpicture}
+\begin{axis}[
   width=12.8cm, height=6.0cm,
   xmin=0, xmax=10.6,
   ymin=0, ymax=5.2,
@@ -243,362 +194,388 @@ render_tikz_svg(
   ticks=none,
   clip=false,
   xlabel={$p_1$},
-  ylabel={$\\pi_1(p_1,\\bar p_2)$},
+  ylabel={$\pi_1(p_1,\bar p_2)$},
   xlabel style={at={(axis description cs:1.02,0.02)}, anchor=west},
   ylabel style={at={(axis description cs:0.02,1.02)}, anchor=south},
 ]
 
 % --- Key x locations (chosen to match the screenshot spacing) ---
-\\pgfmathsetmacro{\\xL}{3.25}  % left cutoff: \\bar p_2 - c(L-a-b)
-\\pgfmathsetmacro{\\xM}{6.20}  % middle cutoff: \\bar p_1
-\\pgfmathsetmacro{\\xR}{8.35}  % right cutoff: \\bar p_2 + c(L-a-b)
+\pgfmathsetmacro{\xL}{3.25}  % left cutoff: \bar p_2 - c(L-a-b)
+\pgfmathsetmacro{\xM}{6.20}  % middle cutoff: \bar p_1
+\pgfmathsetmacro{\xR}{8.35}  % right cutoff: \bar p_2 + c(L-a-b)
 
 % --- Key y levels (enforce: yTop > yPeak) ---
-\\pgfmathsetmacro{\\yTop}{4.70}  % highest point (end of linear segment)
-\\pgfmathsetmacro{\\yDrop}{2.55} % value after discrete drop
-\\pgfmathsetmacro{\\yPeak}{3.85} % peak of middle segment (STRICTLY below yTop)
+\pgfmathsetmacro{\yTop}{4.70}  % highest point (end of linear segment)
+\pgfmathsetmacro{\yDrop}{2.55} % value after discrete drop
+\pgfmathsetmacro{\yPeak}{3.85} % peak of middle segment (STRICTLY below yTop)
 
 % --- Curvature parameter k from vertex form so that parabola passes through (xL,yDrop) ---
 % y(x) = yPeak - k (x-xM)^2, with y(xL)=yDrop => k=(yPeak-yDrop)/(xL-xM)^2
-\\pgfmathsetmacro{\\k}{(\\yPeak-\\yDrop)/((\\xL-\\xM)^2)}
+\pgfmathsetmacro{\k}{(\yPeak-\yDrop)/((\xL-\xM)^2)}
 
 % --- Implied right-end y-value (consistent with the same parabola) ---
-\\pgfmathsetmacro{\\yR}{\\yPeak - \\k*(\\xR-\\xM)^2}
+\pgfmathsetmacro{\yR}{\yPeak - \k*(\xR-\xM)^2}
 
 % 1) Left linear segment (formula): line from (0,0) to (xL,yTop)
-\\addplot[thick, domain=0:\\xL, samples=2] ({x},{(\\yTop/\\xL)*x});
+\addplot[thick, domain=0:\xL, samples=2] ({x},{(\yTop/\xL)*x});
 
 % 2) Discrete drop at xL
-\\addplot[thick] coordinates {(\\xL,\\yTop) (\\xL,\\yDrop)};
+\addplot[thick] coordinates {(\xL,\yTop) (\xL,\yDrop)};
 
 % 3) Middle segment (formula): concave parabola in vertex form
-\\addplot[thick, domain=\\xL:\\xR, samples=200] ({x},{\\yPeak - \\k*(x-\\xM)^2});
+\addplot[thick, domain=\xL:\xR, samples=200] ({x},{\yPeak - \k*(x-\xM)^2});
 
 % --- Dashed vertical cutoffs (match slide: extend to each segment’s value) ---
-\\addplot[densely dashed, thick, gray] coordinates {(\\xL,0) (\\xL,\\yTop)};
-\\addplot[densely dashed, thick, gray] coordinates {(\\xM,0) (\\xM,\\yPeak)};
-\\addplot[densely dashed, thick, gray] coordinates {(\\xR,0) (\\xR,\\yR)};
+\addplot[densely dashed, thick, gray] coordinates {(\xL,0) (\xL,\yTop)};
+\addplot[densely dashed, thick, gray] coordinates {(\xM,0) (\xM,\yPeak)};
+\addplot[densely dashed, thick, gray] coordinates {(\xR,0) (\xR,\yR)};
 
 % --- x-axis labels ---
-\\node[anchor=north] at (axis cs:\\xL,0) {$\\bar p_2-c(L-a-b)$};
-\\node[anchor=north] at (axis cs:\\xM,0) {$\\bar p_1$};
-\\node[anchor=north] at (axis cs:\\xR,0) {$\\bar p_2+c(L-a-b)$};
+\node[anchor=north] at (axis cs:\xL,0) {$\bar p_2-c(L-a-b)$};
+\node[anchor=north] at (axis cs:\xM,0) {$\bar p_1$};
+\node[anchor=north] at (axis cs:\xR,0) {$\bar p_2+c(L-a-b)$};
 
-\\end{axis}
-\\end{tikzpicture}
-",
-  name = "fig-hotelling-profit-function",
-  width = "70%"
+\end{axis}
+\end{tikzpicture}
+""",
+    name="fig-hotelling-profit-function",
+    width="70%",
 )
-
 ```
 
-
-```{r}
+```{python}
 #| label: fig-salop-cycle
 
 render_tikz_svg(
-  tikz_picture = "
-\\begin{tikzpicture}[x=1cm,y=1cm, line cap=round, line join=round]
-
-% --- Parameters ---
-\\def\\R{2.2} % radius
-
-% --- Circle ---
-\\draw[thick] (0,0) circle (\\R);
-
-% --- Four points on the circle (N, E, S, W) ---
-\\fill (0,\\R) circle (1.6pt);
-\\fill (\\R,0) circle (1.6pt);
-\\fill (0,-\\R) circle (1.6pt);
-\\fill (-\\R,0) circle (1.6pt);
-
-% --- Labels at points ---
-\\node[above] at (0,\\R) {$\\bar p$};
-\\node[right] at (\\R,0) {$\\bar p$};
-\\node[below] at (0,-\\R) {$p$};
-\\node[left]  at (-\\R,0) {$\\bar p$};
-
-% --- Quarter-arc labels (placed in each quadrant) ---
-\\node at (-1.75,  1.75) {$\\frac{1}{4}$};
-\\node at ( 1.75,  1.75) {$\\frac{1}{4}$};
-\\node at (-1.75, -1.75) {$\\frac{1}{4}$};
-\\node at ( 1.75, -1.75) {$\\frac{1}{4}$};
-
-\\end{tikzpicture}
-",
+  tikz_picture=r"""
+\begin{tikzpicture}[x=1cm,y=1cm, line cap=round, line join=round]
+\def\R{2.2} % radius
+\draw[thick] (0,0) circle (\R);
+\fill (0,\R) circle (1.6pt);
+\fill (\R,0) circle (1.6pt);
+\fill (0,-\R) circle (1.6pt);
+\fill (-\R,0) circle (1.6pt);
+\node[above] at (0,\R) {$\bar p$};
+\node[right] at (\R,0) {$\bar p$};
+\node[below] at (0,-\R) {$p$};
+\node[left]  at (-\R,0) {$\bar p$};
+\node at (-1.75,  1.75) {$\frac{1}{4}$};
+\node at ( 1.75,  1.75) {$\frac{1}{4}$};
+\node at (-1.75, -1.75) {$\frac{1}{4}$};
+\node at ( 1.75, -1.75) {$\frac{1}{4}$};
+\end{tikzpicture}
+""",
   name = "fig-salop-cycle",
   width = "70%"
 )
-
 ```
 
-
-
-```{r}
+```{python}
 #| label: fig-salop-line
 render_tikz_svg(
-  tikz_picture = "
-\\begin{tikzpicture}[>=stealth, line cap=round]
-
-% --- Key positions ---
-\\def\\xL{-4.5}
-\\def\\xC{0}
-\\def\\xR{4.5}
-
-% --- Baseline with arrows ---
-\\draw[thick, <->] (-5.5,0) -- (5.5,0);
-
-% --- Points ---
-\\fill (\\xL,0) circle (2pt);
-\\fill (\\xC,0) circle (2pt);
-\\fill (\\xR,0) circle (2pt);
-
-% --- Point labels ---
-\\node[below] at (\\xL,0) {$\\bar p$};
-\\node[below] at (\\xC,0) {$p$};
-\\node[below] at (\\xR,0) {$\\bar p$};
-
-% --- Braces for distances ---
-\\draw[decorate, decoration={brace, amplitude=4pt}]
-  (\\xL,0.6) -- (\\xC,0.6)
-  node[midway, yshift=10pt] {$\\frac{1}{n}$};
-
-\\draw[decorate, decoration={brace, amplitude=4pt}]
-  (\\xC,0.6) -- (\\xR,0.6)
-  node[midway, yshift=10pt] {$\\frac{1}{n}$};
-
-\\end{tikzpicture}",
+  tikz_picture=r"""
+\begin{tikzpicture}[>=stealth, line cap=round]
+\def\xL{-4.5}
+\def\xC{0}
+\def\xR{4.5}
+\draw[thick, <->] (-5.5,0) -- (5.5,0);
+\fill (\xL,0) circle (2pt);
+\fill (\xC,0) circle (2pt);
+\fill (\xR,0) circle (2pt);
+\node[below] at (\xL,0) {$\bar p$};
+\node[below] at (\xC,0) {$p$};
+\node[below] at (\xR,0) {$\bar p$};
+\draw[decorate, decoration={brace, amplitude=4pt}]
+  (\xL,0.6) -- (\xC,0.6)
+  node[midway, yshift=10pt] {$\frac{1}{n}$};
+\draw[decorate, decoration={brace, amplitude=4pt}]
+  (\xC,0.6) -- (\xR,0.6)
+  node[midway, yshift=10pt] {$\frac{1}{n}$};
+\end{tikzpicture}
+""",
   name = "fig-salop-line",
   width = "70%"
 )
-
 ```
 
-
-
-```{r}
+```{python}
 #| label: salop-line-mod
-
 render_tikz_svg(
-  tikz_picture = "
-\\begin{tikzpicture}[>=stealth, line cap=round]
-
-% --- Key positions ---
-\\def\\xL{-5.0}   % left \\bar p
-\\def\\xA{-2.0}   % left marginal consumer
-\\def\\xC{0.0}    % p (center)
-\\def\\xB{2.0}    % right marginal consumer
-\\def\\xR{5.0}    % right \\bar p
-
-% --- Baseline with arrows ---
-\\draw[thick, <->] (-6.0,0) -- (6.0,0);
-
-% --- Points ---
-\\fill (\\xL,0) circle (2pt);
-\\fill (\\xA,0) circle (2pt);
-\\fill (\\xC,0) circle (2pt);
-\\fill (\\xB,0) circle (2pt);
-\\fill (\\xR,0) circle (2pt);
-
-% --- Point labels ---
-\\node[below] at (\\xL,0) {$\\bar p$};
-\\node[below] at (\\xC,0) {$p$};
-\\node[below] at (\\xR,0) {$\\bar p$};
-
-% --- Braces for d_m on each side of p ---
-\\draw[decorate, decoration={brace, amplitude=4pt}]
-  (\\xA,0.65) -- (\\xC,0.65)
+  tikz_picture=r"""
+\begin{tikzpicture}[>=stealth, line cap=round]
+\def\xL{-5.0}   % left \bar p
+\def\xA{-2.0}   % left marginal consumer
+\def\xC{0.0}    % p (center)
+\def\xB{2.0}    % right marginal consumer
+\def\xR{5.0}    % right \bar p
+\draw[thick, <->] (-6.0,0) -- (6.0,0);
+\fill (\xL,0) circle (2pt);
+\fill (\xA,0) circle (2pt);
+\fill (\xC,0) circle (2pt);
+\fill (\xB,0) circle (2pt);
+\fill (\xR,0) circle (2pt);
+\node[below] at (\xL,0) {$\bar p$};
+\node[below] at (\xC,0) {$p$};
+\node[below] at (\xR,0) {$\bar p$};
+\draw[decorate, decoration={brace, amplitude=4pt}]
+  (\xA,0.65) -- (\xC,0.65)
   node[midway, yshift=10pt] {$d_m$};
-
-\\draw[decorate, decoration={brace, amplitude=4pt}]
-  (\\xC,0.65) -- (\\xB,0.65)
+\draw[decorate, decoration={brace, amplitude=4pt}]
+  (\xC,0.65) -- (\xB,0.65)
   node[midway, yshift=10pt] {$d_m$};
-
-% --- Marginal consumer labels with downward arrows to points xA and xB ---
-\\node[align=center] at (\\xA,1.55) {Marginal\\\\consumer};
-\\draw[->, thick] (\\xA,1.20) -- (\\xA,0.12);
-
-\\node[align=center] at (\\xB,1.55) {Marginal\\\\consumer};
-\\draw[->, thick] (\\xB,1.20) -- (\\xB,0.12);
-
-% --- Net surplus < 0 annotations with arrows pointing outward ---
-\\node[align=center] at (-3.9,0.95) {Net surplus $< 0$};
-\\draw[->, thick] (-3.2,0.55) -- (-4.9,0.55);
-
-\\node[align=center] at (3.9,0.95) {Net surplus $< 0$};
-\\draw[->, thick] (3.2,0.55) -- (4.9,0.55);
-
-\\end{tikzpicture}",
+\node[align=center] at (\xA,1.55) {Marginal\\consumer};
+\draw[->, thick] (\xA,1.20) -- (\xA,0.12);
+\node[align=center] at (\xB,1.55) {Marginal\\consumer};
+\draw[->, thick] (\xB,1.20) -- (\xB,0.12);
+\node[align=center] at (-3.9,0.95) {Net surplus $< 0$};
+\draw[->, thick] (-3.2,0.55) -- (-4.9,0.55);
+\node[align=center] at (3.9,0.95) {Net surplus $< 0$};
+\draw[->, thick] (3.2,0.55) -- (4.9,0.55);
+\end{tikzpicture}
+""",
   name = "fig-salop-line-mod",
   width = "70%"
 )
-
 ```
 
-
-```{r}
+```{python}
 #| label: fig-salop-line-comp-region
-
 render_tikz_svg(
-  tikz_picture = "
-\\begin{tikzpicture}[>=stealth, line cap=round]
-
-% --- Key positions ---
-\\def\\xL{-5.0}   % left \\bar p
-\\def\\xA{-2.0}   % left marginal consumer
-\\def\\xC{0.0}    % p (center)
-\\def\\xB{2.0}    % right marginal consumer
-\\def\\xR{5.0}    % right \\bar p
-
-% --- Baseline with arrows ---
-\\draw[thick, <->] (-6.0,0) -- (6.0,0);
-
-% --- Points ---
-\\fill (\\xL,0) circle (2pt);
-\\fill (\\xA,0) circle (2pt);
-\\fill (\\xC,0) circle (2pt);
-\\fill (\\xB,0) circle (2pt);
-\\fill (\\xR,0) circle (2pt);
-
-% --- Point labels ---
-\\node[below] at (\\xL,0) {$\\bar p$};
-\\node[below] at (\\xC,0) {$p$};
-\\node[below] at (\\xR,0) {$\\bar p$};
-
-% --- Braces: (1/n - x) on the outer segments, x on the inner segments ---
-\\draw[decorate, decoration={brace, amplitude=4pt}]
-  (\\xL,0.65) -- (\\xA,0.65)
-  node[midway, yshift=10pt] {$\\frac{1}{n}-x$};
-
-\\draw[decorate, decoration={brace, amplitude=4pt}]
-  (\\xA,0.65) -- (\\xC,0.65)
+  tikz_picture=r"""
+\begin{tikzpicture}[>=stealth, line cap=round]
+\def\xL{-5.0}   % left \bar p
+\def\xA{-2.0}   % left marginal consumer
+\def\xC{0.0}    % p (center)
+\def\xB{2.0}    % right marginal consumer
+\def\xR{5.0}    % right \bar p
+\draw[thick, <->] (-6.0,0) -- (6.0,0);
+\fill (\xL,0) circle (2pt);
+\fill (\xA,0) circle (2pt);
+\fill (\xC,0) circle (2pt);
+\fill (\xB,0) circle (2pt);
+\fill (\xR,0) circle (2pt);
+\node[below] at (\xL,0) {$\bar p$};
+\node[below] at (\xC,0) {$p$};
+\node[below] at (\xR,0) {$\bar p$};
+\draw[decorate, decoration={brace, amplitude=4pt}]
+  (\xL,0.65) -- (\xA,0.65)
+  node[midway, yshift=10pt] {$\frac{1}{n}-x$};
+\draw[decorate, decoration={brace, amplitude=4pt}]
+  (\xA,0.65) -- (\xC,0.65)
   node[midway, yshift=10pt] {$x$};
-
-\\draw[decorate, decoration={brace, amplitude=4pt}]
-  (\\xC,0.65) -- (\\xB,0.65)
+\draw[decorate, decoration={brace, amplitude=4pt}]
+  (\xC,0.65) -- (\xB,0.65)
   node[midway, yshift=10pt] {$x$};
-
-\\draw[decorate, decoration={brace, amplitude=4pt}]
-  (\\xB,0.65) -- (\\xR,0.65)
-  node[midway, yshift=10pt] {$\\frac{1}{n}-x$};
-
-% --- Marginal consumer labels with downward arrows to points xA and xB ---
-\\node[align=center] at (\\xA,1.55) {Marginal\\\\consumer};
-\\draw[->, thick] (\\xA,1.20) -- (\\xA,0.12);
-
-\\node[align=center] at (\\xB,1.55) {Marginal\\\\consumer};
-\\draw[->, thick] (\\xB,1.20) -- (\\xB,0.12);
-
-\\end{tikzpicture}",
+\draw[decorate, decoration={brace, amplitude=4pt}]
+  (\xB,0.65) -- (\xR,0.65)
+  node[midway, yshift=10pt] {$\frac{1}{n}-x$};
+\node[align=center] at (\xA,1.55) {Marginal\\consumer};
+\draw[->, thick] (\xA,1.20) -- (\xA,0.12);
+\node[align=center] at (\xB,1.55) {Marginal\\consumer};
+\draw[->, thick] (\xB,1.20) -- (\xB,0.12);
+\end{tikzpicture}
+""",
   name = "fig-salop-line-comp-region",
   width = "70%"
 )
-
 ```
 
-
-```{r}
+```{python}
 #| label: fig-salop-demand-comp-mon
 render_tikz_svg(
-  tikz_picture = "
-\\begin{tikzpicture}[>=stealth, line cap=round, line join=round]
-
-% --- Axes ---
-\\draw[->, thick] (0,0) -- (6.6,0) node[anchor=west] {$q$};
-\\draw[->, thick] (0,0) -- (0,5.2) node[anchor=south] {$p$};
-
-% --- Mark on p-axis ---
-\\fill (0,4.2) circle (1.5pt);
-\\node[left] at (0,4.2) {$v$};
-
-% --- Demand / kinked line ---
-\\draw[thick] (0,4.2) -- (3.0,3.0) -- (5.2,1.6);
-
-% --- Vertical dashed separator ---
-\\draw[densely dashed, thick] (3.0,0) -- (3.0,4.8);
-
-% --- Region labels ---
-\\node at (1.9,4.6) {Monopoly};
-\\node at (1.9,4.2) {region};
-
-\\node at (4.2,4.6) {Competitive};
-\\node at (4.2,4.2) {region};
-
-\\end{tikzpicture}",
+  tikz_picture=r"""
+\begin{tikzpicture}[>=stealth, line cap=round, line join=round]
+\draw[->, thick] (0,0) -- (6.6,0) node[anchor=west] {$q$};
+\draw[->, thick] (0,0) -- (0,5.2) node[anchor=south] {$p$};
+\fill (0,4.2) circle (1.5pt);
+\node[left] at (0,4.2) {$v$};
+\draw[thick] (0,4.2) -- (3.0,3.0) -- (5.2,1.6);
+\draw[densely dashed, thick] (3.0,0) -- (3.0,4.8);
+\node at (3.0,5.1) {$D$};
+\node at (5.5,1.6) [anchor=west] {$S$};
+\end{tikzpicture}
+""",
   name = "fig-salop-demand-comp-mon",
   width = "70%"
 )
-
 ```
 
-```{r}
-#| label: fig-stackelberg-br
-
+```{python}
+#| label: fig-salop-demand-comp-mon-2
 render_tikz_svg(
-  tikz_picture = "\\begin{tikzpicture}
-\\begin{axis}[
-  width=13cm,height=8cm,
-  xmin=0,xmax=10,
-  ymin=0,ymax=10,
-  axis lines=left,
-  ticks=none,
-  xlabel={$q_1$},
-  ylabel={$q_2$},
-  xlabel style={at={(axis description cs:0.98,0.02)}, anchor=west},
-  ylabel style={at={(axis description cs:0.02,0.98)}, anchor=south},
-  clip=false,
-]
+  tikz_picture=r"""
+\begin{tikzpicture}[>=stealth, line cap=round, line join=round]
+\draw[->, thick] (0,0) -- (6.6,0) node[anchor=west] {$q$};
+\draw[->, thick] (0,0) -- (0,5.2) node[anchor=south] {$p$};
+\fill (0,4.2) circle (1.5pt);
+\node[left] at (0,4.2) {$v$};
+\draw[thick] (0,4.2) -- (3.0,3.0) -- (5.2,1.6);
+\draw[densely dashed, thick] (3.0,0) -- (3.0,4.8);
+\node at (3.0,5.1) {$D$};
+\node at (5.5,1.6) [anchor=west] {$S$};
+\end{tikzpicture}
+""",
+  name = "fig-salop-demand-comp-mon-2",
+  width = "70%"
+)
+```
 
-% --- Choose parameters just for geometry (keeps everything in-frame) ---
-% We target BR2(q1) = alpha - beta*q1 with intercept 8 and slope -0.5
-\\pgfmathsetmacro{\\alpha}{8}
-\\pgfmathsetmacro{\\beta}{0.5}
+```{python}
+#| label: fig-salop-demand-comp-mon-3
+render_tikz_svg(
+  tikz_picture=r"""
+\begin{tikzpicture}[>=stealth, line cap=round, line join=round]
+\draw[->, thick] (0,0) -- (6.6,0) node[anchor=west] {$q$};
+\draw[->, thick] (0,0) -- (0,5.2) node[anchor=south] {$p$};
+\fill (0,4.2) circle (1.5pt);
+\node[left] at (0,4.2) {$v$};
+\draw[thick] (0,4.2) -- (3.0,3.0) -- (5.2,1.6);
+\draw[densely dashed, thick] (3.0,0) -- (3.0,4.8);
+\node at (3.0,5.1) {$D$};
+\node at (5.5,1.6) [anchor=west] {$S$};
+\end{tikzpicture}
+""",
+  name = "fig-salop-demand-comp-mon-3",
+  width = "70%"
+)
+```
 
-% Best response of firm 2
-\\addplot[thick, domain=0:10, samples=2] ({x},{max(0,\\alpha - \\beta*x)});
-\\node[anchor=west] at (axis cs:7.2,4.4) {$BR_2(q_1)$};
+```{python}
+#| label: fig-salop-demand-comp-mon-4
+render_tikz_svg(
+  tikz_picture=r"""
+\begin{tikzpicture}[>=stealth, line cap=round, line join=round]
+\draw[->, thick] (0,0) -- (6.6,0) node[anchor=west] {$q$};
+\draw[->, thick] (0,0) -- (0,5.2) node[anchor=south] {$p$};
+\fill (0,4.2) circle (1.5pt);
+\node[left] at (0,4.2) {$v$};
+\draw[thick] (0,4.2) -- (3.0,3.0) -- (5.2,1.6);
+\draw[densely dashed, thick] (3.0,0) -- (3.0,4.8);
+\node at (3.0,5.1) {$D$};
+\node at (5.5,1.6) [anchor=west] {$S$};
+\end{tikzpicture}
+""",
+  name = "fig-salop-demand-comp-mon-4",
+  width = "70%"
+)
+```
 
-% Cournot point (on BR with symmetry in the linear case)
-% Solve q = alpha/(1+beta)??? Here we set it explicitly to match slide geometry
-\\pgfmathsetmacro{\\qC}{\\alpha/(1+2*\\beta)} % (consistent with linear model mapping)
-\\pgfmathsetmacro{\\q2C}{\\alpha - \\beta*\\qC}
+```{python}
+#| label: fig-salop-demand-comp-mon-5
+render_tikz_svg(
+  tikz_picture=r"""
+\begin{tikzpicture}[>=stealth, line cap=round, line join=round]
+\draw[->, thick] (0,0) -- (6.6,0) node[anchor=west] {$q$};
+\draw[->, thick] (0,0) -- (0,5.2) node[anchor=south] {$p$};
+\fill (0,4.2) circle (1.5pt);
+\node[left] at (0,4.2) {$v$};
+\draw[thick] (0,4.2) -- (3.0,3.0) -- (5.2,1.6);
+\draw[densely dashed, thick] (3.0,0) -- (3.0,4.8);
+\node at (3.0,5.1) {$D$};
+\node at (5.5,1.6) [anchor=west] {$S$};
+\end{tikzpicture}
+""",
+  name = "fig-salop-demand-comp-mon-5",
+  width = "70%"
+)
+```
 
-% Stackelberg point: q1 larger, q2 on BR
-\\pgfmathsetmacro{\\qS}{2*\\qC}             % leader expands output
-\\pgfmathsetmacro{\\q2S}{\\alpha - \\beta*\\qS}
+```{python}
+#| label: fig-salop-demand-comp-mon-6
+render_tikz_svg(
+  tikz_picture=r"""
+\begin{tikzpicture}[>=stealth, line cap=round, line join=round]
+\draw[->, thick] (0,0) -- (6.6,0) node[anchor=west] {$q$};
+\draw[->, thick] (0,0) -- (0,5.2) node[anchor=south] {$p$};
+\fill (0,4.2) circle (1.5pt);
+\node[left] at (0,4.2) {$v$};
+\draw[thick] (0,4.2) -- (3.0,3.0) -- (5.2,1.6);
+\draw[densely dashed, thick] (3.0,0) -- (3.0,4.8);
+\node at (3.0,5.1) {$D$};
+\node at (5.5,1.6) [anchor=west] {$S$};
+\end{tikzpicture}
+""",
+  name = "fig-salop-demand-comp-mon-6",
+  width = "70%"
+)
+```
 
-% Mark points
-\\addplot[only marks, mark=*, mark size=1.8pt] coordinates {(\\qC,\\q2C)};
-\\node[anchor=south west] at (axis cs:\\qC,\\q2C) {Cournot};
+```{python}
+#| label: fig-salop-demand-comp-mon-7
+render_tikz_svg(
+  tikz_picture=r"""
+\begin{tikzpicture}[>=stealth, line cap=round, line join=round]
+\draw[->, thick] (0,0) -- (6.6,0) node[anchor=west] {$q$};
+\draw[->, thick] (0,0) -- (0,5.2) node[anchor=south] {$p$};
+\fill (0,4.2) circle (1.5pt);
+\node[left] at (0,4.2) {$v$};
+\draw[thick] (0,4.2) -- (3.0,3.0) -- (5.2,1.6);
+\draw[densely dashed, thick] (3.0,0) -- (3.0,4.8);
+\node at (3.0,5.1) {$D$};
+\node at (5.5,1.6) [anchor=west] {$S$};
+\end{tikzpicture}
+""",
+  name = "fig-salop-demand-comp-mon-7",
+  width = "70%"
+)
+```
 
-\\addplot[only marks, mark=*, mark size=1.8pt] coordinates {(\\qS,\\q2S)};
-\\node[anchor=south west] at (axis cs:\\qS,\\q2S) {Stackelberg};
+```{python}
+#| label: fig-salop-demand-comp-mon-8
+render_tikz_svg(
+  tikz_picture=r"""
+\begin{tikzpicture}[>=stealth, line cap=round, line join=round]
+\draw[->, thick] (0,0) -- (6.6,0) node[anchor=west] {$q$};
+\draw[->, thick] (0,0) -- (0,5.2) node[anchor=south] {$p$};
+\fill (0,4.2) circle (1.5pt);
+\node[left] at (0,4.2) {$v$};
+\draw[thick] (0,4.2) -- (3.0,3.0) -- (5.2,1.6);
+\draw[densely dashed, thick] (3.0,0) -- (3.0,4.8);
+\node at (3.0,5.1) {$D$};
+\node at (5.5,1.6) [anchor=west] {$S$};
+\end{tikzpicture}
+""",
+  name = "fig-salop-demand-comp-mon-8",
+  width = "70%"
+)
+```
 
-% Dotted guides
-\\addplot[densely dotted] coordinates {(\\qC,0) (\\qC,\\q2C)};
-\\addplot[densely dotted] coordinates {(0,\\q2C) (\\qC,\\q2C)};
-\\addplot[densely dotted] coordinates {(\\qS,0) (\\qS,\\q2S)};
-\\addplot[densely dotted] coordinates {(0,\\q2S) (\\qS,\\q2S)};
+```{python}
+#| label: fig-salop-demand-comp-mon-9
+render_tikz_svg(
+  tikz_picture=r"""
+\begin{tikzpicture}[>=stealth, line cap=round, line join=round]
+\draw[->, thick] (0,0) -- (6.6,0) node[anchor=west] {$q$};
+\draw[->, thick] (0,0) -- (0,5.2) node[anchor=south] {$p$};
+\fill (0,4.2) circle (1.5pt);
+\node[left] at (0,4.2) {$v$};
+\draw[thick] (0,4.2) -- (3.0,3.0) -- (5.2,1.6);
+\draw[densely dashed, thick] (3.0,0) -- (3.0,4.8);
+\node at (3.0,5.1) {$D$};
+\node at (5.5,1.6) [anchor=west] {$S$};
+\end{tikzpicture}
+""",
+  name = "fig-salop-demand-comp-mon-9",
+  width = "70%"
+)
+```
 
-% --- Leader isoprofit curves (stylized; computed from linear inverse demand) ---
-% Take linear demand P = A - (q1+q2), MC=0 purely for shape.
-% Leader profit: pi1 = q1*(A - q1 - q2)
-% => isoprofit: q2 = A - q1 - pi/q1
-\\pgfmathsetmacro{\\A}{10}
-\\addplot[thin, domain=0.7:9.5, samples=200] ({x},{max(0,\\A - x - 10/x)});
-\\addplot[thin, domain=0.7:9.5, samples=200] ({x},{max(0,\\A - x - 14/x)});
-\\addplot[thin, domain=0.7:9.5, samples=200] ({x},{max(0,\\A - x - 18/x)});
-
-\\node[anchor=west] at (axis cs:6.9,1.2) {Leader isoprofits};
-
-% Optional label to stress strategic substitutes (downward BR)
-\\node[anchor=west] at (axis cs:0.4,9.4) {Strategic substitutes: $BR_2'(q_1)<0$};
-
-\\end{axis}
-\\end{tikzpicture}
-",
-  name = "fig-stackelberg-br",
+```{python}
+#| label: fig-salop-demand-comp-mon-10
+render_tikz_svg(
+  tikz_picture=r"""
+\begin{tikzpicture}[>=stealth, line cap=round, line join=round]
+\draw[->, thick] (0,0) -- (6.6,0) node[anchor=west] {$q$};
+\draw[->, thick] (0,0) -- (0,5.2) node[anchor=south] {$p$};
+\fill (0,4.2) circle (1.5pt);
+\node[left] at (0,4.2) {$v$};
+\draw[thick] (0,4.2) -- (3.0,3.0) -- (5.2,1.6);
+\draw[densely dashed, thick] (3.0,0) -- (3.0,4.8);
+\node at (3.0,5.1) {$D$};
+\node at (5.5,1.6) [anchor=west] {$S$};
+\end{tikzpicture}
+""",
+  name = "fig-salop-demand-comp-mon-10",
   width = "70%"
 )
 ```
