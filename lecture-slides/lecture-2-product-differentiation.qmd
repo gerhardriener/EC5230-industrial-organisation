@@ -9,6 +9,7 @@ format:
     preview-links: auto
     transition: none
     background-transition: fade
+  beamer: default
 execute:
   echo: false
   warning: false
@@ -43,7 +44,15 @@ $U_1(\ell)=\bar u - p_1 - c|\ell-a|$, $U_2(\ell)=\bar u - p_2 - c|\ell-(L-b)|$, 
 
 ## Geometry
 
-![](figs/fig-hotelling-fixed-location.svg){fig-alt="Hotelling line with fixed locations" fig-align="center" width="14cm"}
+::: {.content-visible when-format="beamer"}
+```{=latex}
+\resizebox{0.8\textwidth}{!}{\includestandalone{figs/source/fig-hotelling-fixed-location}}
+```
+:::
+
+::: {.content-visible when-format="revealjs"}
+![](figs/fig-hotelling-fixed-location.svg){fig-alt="Hotelling line with fixed locations" fig-align="center" width="70%"}
+:::
 
 - Choice variables: $p_1, p_2$
 - Parameters: $L, a, b, c$
@@ -89,7 +98,15 @@ Prices are strategic complements; if $a=b$ then $p_1^*=p_2^*$
 Co-location removes captive consumers; any $p>0$ can be profitably undercut.
 :::
 
-![](figs/fig-hotelling-movement-location.svg){fig-align="center"}
+::: {.content-visible when-format="beamer"}
+```{=latex}
+\resizebox{0.6\textwidth}{!}{\includestandalone{figs/source/fig-hotelling-movement-location}}
+```
+:::
+
+::: {.content-visible when-format="revealjs"}
+![](figs/fig-hotelling-movement-location.svg){fig-align="center" width="60%"}
+:::
 
 ## Move incentives at fixed prices
 
@@ -142,7 +159,15 @@ Lp_1 & \text{if } p_1 < p_2 - c(L - a - b) \\[0.5em]
 
 - **Region 3 (no demand)**: Firm 1 sets too high a price; demand is zero
 
-![](figs/fig-hotelling-profit-function.svg){fig-alt="Hotelling price subgame: payoff regions" fig-align="center" width="14cm"}
+::: {.content-visible when-format="beamer"}
+```{=latex}
+\resizebox{0.9\textwidth}{!}{\includestandalone{figs/source/fig-hotelling-profit-function}}
+```
+:::
+
+::: {.content-visible when-format="revealjs"}
+![](figs/fig-hotelling-profit-function.svg){fig-alt="Hotelling price subgame: payoff regions" fig-align="center" width="80%"}
+:::
 
 
 # Salop Circular City
@@ -154,8 +179,15 @@ Lp_1 & \text{if } p_1 < p_2 - c(L - a - b) \\[0.5em]
 - $n$ firms are symmetrically located; adjacent distance is $\frac{1}{n}$
 - Each consumer buys at most one unit: from some firm or the outside good
 
-![](figs/fig-salop-cycle.svg){fig-align="center" width="16cm"}
+::: {.content-visible when-format="beamer"}
+```{=latex}
+\resizebox{0.5\textwidth}{!}{\includestandalone{figs/source/fig-salop-cycle}}
+```
+:::
 
+::: {.content-visible when-format="revealjs"}
+![](figs/fig-salop-cycle.svg){fig-align="center" width="50%"}
+:::
 
 ## Objects
 
@@ -163,9 +195,15 @@ Lp_1 & \text{if } p_1 < p_2 - c(L - a - b) \\[0.5em]
 - Parameters: $n, c, u, u^*$
 - Outcomes: market boundaries / cutoffs, quantities
 
-![](figs/fig-salop-cycle.svg){fig-align="center" width="16cm"}
+::: {.content-visible when-format="beamer"}
+```{=latex}
+\resizebox{0.5\textwidth}{!}{\includestandalone{figs/source/fig-salop-cycle}}
+```
+:::
 
-
+::: {.content-visible when-format="revealjs"}
+![](figs/fig-salop-cycle.svg){fig-align="center" width="50%"}
+:::
 
 ## Consumers
 
@@ -213,7 +251,15 @@ Competitive-region inverse demand is steeper than monopoly-region inverse demand
   - **Neighbour-boundary (competitive region)**: $q^C = \frac{\frac{c}{n} - p + \tilde{p}}{c}$
 - The switch in the binding constraint creates a kink in inverse demand and a discrete change in marginal revenue
 
-![](figs/fig-salop-demand-comp-mon.svg){fig-alt="Salop demand: monopoly vs competitive regimes" fig-align="center" width="16cm"}
+::: {.content-visible when-format="beamer"}
+```{=latex}
+\resizebox{0.7\textwidth}{!}{\includestandalone{figs/source/fig-salop-demand-comp-mon}}
+```
+:::
+
+::: {.content-visible when-format="revealjs"}
+![](figs/fig-salop-demand-comp-mon.svg){fig-alt="Salop demand: monopoly vs competitive regimes" fig-align="center" width="70%"}
+:::
 
 ## Cost functions
 

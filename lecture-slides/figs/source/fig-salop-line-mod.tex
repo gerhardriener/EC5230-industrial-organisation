@@ -1,0 +1,30 @@
+\begin{tikzpicture}[>=stealth, line cap=round]
+\def\xL{-5.0}   % left \bar p
+\def\xA{-2.0}   % left marginal consumer
+\def\xC{0.0}    % p (center)
+\def\xB{2.0}    % right marginal consumer
+\def\xR{5.0}    % right \bar p
+\draw[thick, <->] (-6.0,0) -- (6.0,0);
+\fill (\xL,0) circle (2pt);
+\fill (\xA,0) circle (2pt);
+\fill (\xC,0) circle (2pt);
+\fill (\xB,0) circle (2pt);
+\fill (\xR,0) circle (2pt);
+\node[below] at (\xL,0) {$\bar p$};
+\node[below] at (\xC,0) {$p$};
+\node[below] at (\xR,0) {$\bar p$};
+\draw[decorate, decoration={brace, amplitude=4pt}]
+  (\xA,0.65) -- (\xC,0.65)
+  node[midway, yshift=10pt] {$d_m$};
+\draw[decorate, decoration={brace, amplitude=4pt}]
+  (\xC,0.65) -- (\xB,0.65)
+  node[midway, yshift=10pt] {$d_m$};
+\node[align=center] at (\xA,1.55) {Marginal\\consumer};
+\draw[->, thick] (\xA,1.20) -- (\xA,0.12);
+\node[align=center] at (\xB,1.55) {Marginal\\consumer};
+\draw[->, thick] (\xB,1.20) -- (\xB,0.12);
+\node[align=center] at (-3.9,0.95) {Net surplus $< 0$};
+\draw[->, thick] (-3.2,0.55) -- (-4.9,0.55);
+\node[align=center] at (3.9,0.95) {Net surplus $< 0$};
+\draw[->, thick] (3.2,0.55) -- (4.9,0.55);
+\end{tikzpicture}

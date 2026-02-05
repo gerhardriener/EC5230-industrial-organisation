@@ -1,0 +1,53 @@
+\begin{tikzpicture}
+\begin{axis}[
+  width=12.8cm, height=6.0cm,
+  xmin=0, xmax=10.6,
+  ymin=0, ymax=5.2,
+  axis lines=left,
+  axis line style={thick, -{Stealth[length=2.2mm]}},
+  ticks=none,
+  clip=false,
+  xlabel={$p_1$},
+  ylabel={$\pi_1(p_1,\bar p_2)$},
+  xlabel style={at={(axis description cs:1.02,0.02)}, anchor=west},
+  ylabel style={at={(axis description cs:0.02,1.02)}, anchor=south},
+]
+
+% --- Key x locations (chosen to match the screenshot spacing) ---
+\pgfmathsetmacro{\xL}{3.25}  % left cutoff: \bar p_2 - c(L-a-b)
+\pgfmathsetmacro{\xM}{6.20}  % middle cutoff: \bar p_1
+\pgfmathsetmacro{\xR}{8.35}  % right cutoff: \bar p_2 + c(L-a-b)
+
+% --- Key y levels (enforce: yTop > yPeak) ---
+\pgfmathsetmacro{\yTop}{4.70}  % highest point (end of linear segment)
+\pgfmathsetmacro{\yDrop}{2.55} % value after discrete drop
+\pgfmathsetmacro{\yPeak}{3.85} % peak of middle segment (STRICTLY below yTop)
+
+% --- Curvature parameter k from vertex form so that parabola passes through (xL,yDrop) ---
+% y(x) = yPeak - k (x-xM)^2, with y(xL)=yDrop => k=(yPeak-yDrop)/(xL-xM)^2
+\pgfmathsetmacro{\k}{(\yPeak-\yDrop)/((\xL-\xM)^2)}
+
+% --- Implied right-end y-value (consistent with the same parabola) ---
+\pgfmathsetmacro{\yR}{\yPeak - \k*(\xR-\xM)^2}
+
+% 1) Left linear segment (formula): line from (0,0) to (xL,yTop)
+\addplot[thick, domain=0:\xL, samples=2] ({x},{(\yTop/\xL)*x});
+
+% 2) Discrete drop at xL
+\addplot[thick] coordinates {(\xL,\yTop) (\xL,\yDrop)};
+
+% 3) Middle segment (formula): concave parabola in vertex form
+\addplot[thick, domain=\xL:\xR, samples=200] ({x},{\yPeak - \k*(x-\xM)^2});
+
+% --- Dashed vertical cutoffs (match slide: extend to each segment’s value) ---
+\addplot[densely dashed, thick, gray] coordinates {(\xL,0) (\xL,\yTop)};
+\addplot[densely dashed, thick, gray] coordinates {(\xM,0) (\xM,\yPeak)};
+\addplot[densely dashed, thick, gray] coordinates {(\xR,0) (\xR,\yR)};
+
+% --- x-axis labels ---
+\node[anchor=north] at (axis cs:\xL,0) {$\bar p_2-c(L-a-b)$};
+\node[anchor=north] at (axis cs:\xM,0) {$\bar p_1$};
+\node[anchor=north] at (axis cs:\xR,0) {$\bar p_2+c(L-a-b)$};
+
+\end{axis}
+\end{tikzpicture}

@@ -9,6 +9,7 @@ format:
     preview-links: auto
     transition: none
     background-transition: fade
+  beamer: default
 execute:
   echo: false
   warning: false

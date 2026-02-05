@@ -1,0 +1,16 @@
+\begin{tikzpicture}[x=1cm,y=1cm, line cap=round, line join=round]
+\def\R{2.2} % radius
+\draw[thick] (0,0) circle (\R);
+\fill (0,\R) circle (1.6pt);
+\fill (\R,0) circle (1.6pt);
+\fill (0,-\R) circle (1.6pt);
+\fill (-\R,0) circle (1.6pt);
+\node[above] at (0,\R) {$\bar p$};
+\node[right] at (\R,0) {$\bar p$};
+\node[below] at (0,-\R) {$p$};
+\node[left]  at (-\R,0) {$\bar p$};
+\node at (-1.75,  1.75) {$\frac{1}{4}$};
+\node at ( 1.75,  1.75) {$\frac{1}{4}$};
+\node at (-1.75, -1.75) {$\frac{1}{4}$};
+\node at ( 1.75, -1.75) {$\frac{1}{4}$};
+\end{tikzpicture}
