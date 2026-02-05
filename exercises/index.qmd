@@ -8,7 +8,7 @@ Practice exercises for EC5230 Industrial Organisation. Each part includes a vers
 
 ### Exercise Sets
 
-| Set | Problems (HTML) | 
+| Set | Problems with solutions (HTML) | 
 |---|---|
 | Exercise 1 | [Problems](exercises-1.html) |
 
