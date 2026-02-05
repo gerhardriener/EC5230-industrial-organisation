@@ -88,3 +88,6 @@ _OLD/
 # -----------------------------
 exams/
 admin/
+
+/.quarto/
+**/*.quarto_ipynb

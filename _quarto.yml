@@ -44,8 +44,7 @@ bibliography: references.bib
 biblio-style: chicago-author-date
 
 execute:
+  python: ".venv/Scripts/python.exe"
   echo: false
   warning: false
   message: false
-
-jupyter: false

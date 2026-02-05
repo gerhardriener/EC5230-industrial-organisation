@@ -1,20 +1,19 @@
 ---
 title: "Lecture 2 – Product Differentiation"
 format:
-  clean-revealjs:
-    slide-number: true
-    title-slide-attributes:
-      data-background-color: "#00539b"
-    chalkboard: true
-    preview-links: auto
-    transition: none
-    background-transition: fade
-jupyter: false
+    clean-revealjs:
+        slide-number: true
+        title-slide-attributes:
+            data-background-color: "#00539b"
+        chalkboard: true
+        preview-links: auto
+        transition: none
+        background-transition: fade
 execute:
-  echo: false
-  warning: false
-  message: false
-  cache: true
+    echo: false
+    warning: false
+    message: false
+    cache: true
 ---
 
 ## Differentiation types
