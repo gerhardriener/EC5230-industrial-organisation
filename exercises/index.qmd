@@ -10,7 +10,7 @@ Practice exercises for EC5230 Industrial Organisation. Each part includes a vers
 
 | Set | html | pdf |
 |---|---|---|
-| Exercises 1 | [](sheets/exercises-1.html) |[](sheets/exercises-1.pdf) |
+| Exercises 1 | [download](sheets/exercises-1.html) |[download](sheets/exercises-1.pdf) |
 
 : {.striped .hover}
 

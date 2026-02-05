@@ -49,25 +49,14 @@ Use the links below to access lectures, exercises, and interactive applications.
 
 ### [Lecture Slides](lecture-slides/)
 
-Comprehensive lecture notes covering key topics in industrial organisation:
-
-- [Lecture 1: Competition & Oligopoly Coordination](lecture-slides/lecture-1-oligopoly.html){target="_blank"}
-- [Lecture 2: Product Differentiation](lecture-slides/lecture-2-product-differentiation.html){target="_blank"}
-- [Lecture 3: Economics of Innovation](lecture-slides/lecture-3-innovation.html){target="_blank"}
-- [Lecture 4: Patents and Intellectual Property Rights](lecture-slides/lecture-4-patents.html){target="_blank"}
-- [Lecture 5: Multi-stage Games and Strategic Commitment](lecture-slides/lecture-5-multistage.html){target="_blank"}
-- [Lecture 7: Cooperative R&D](lecture-slides/lecture-7-cooperative-rd.html){target="_blank"}
-- [Lecture 8: Bundling and Tying](lecture-slides/lecture-8-bundling.html){target="_blank"}
-- [Lecture 9: Advertising and Brand Competition](lecture-slides/lecture-9-advertising.html){target="_blank"}
-- [Lecture 11: Mergers and Acquisitions](lecture-slides/lecture-11-mergers.html){target="_blank"}
-- [Lecture 12: Sustainable Industrialisation](lecture-slides/lecture-12-sustainability.html){target="_blank"}
 
 ### [Exercises](exercises/)
 
 Problem sets with and without solutions to help you practice the concepts covered in lectures. Tutorials focus on live problem-solving (numerical and discussion/interpretation questions).
 
-### [Interactive Apps](apps/)
+### Interactive Apps
 
+TBD
 Interactive visualisations to explore key economic models:
 
 - Cournot duopoly best responses
