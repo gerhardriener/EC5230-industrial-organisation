@@ -8,7 +8,7 @@ description: "MSc-level Industrial Organisation course at the University of St A
 
 website:
   title: "EC5230 Industrial Organisation"
-  site-url: "https://gerhardriener.github.io/EC5230-industrial-organisation/"
+  # site-url: "https://gerhardriener.github.io/EC5230-industrial-organisation/"
   description: "MSc-level Industrial Organisation course at the University of St Andrews"
 
   navbar:
@@ -38,7 +38,6 @@ format:
     toc-depth: 3
     number-sections: false
     link-external-newwindow: true
-
 
 bibliography: references.bib
 biblio-style: chicago-author-date
