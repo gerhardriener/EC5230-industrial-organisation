@@ -181,9 +181,9 @@ Holding everything else fixed, an incumbent monopolist has **weaker** incentives
 
 ## Empirical example: competition and innovation
 
-::: {.callout-note title="Inverted-U evidence (QJE)"}
-Aghion et al. (2005) document an **inverted-U** relationship between product-market competition and innovation (patents/citations) in UK firms, consistent with “escape competition” incentives for neck-and-neck firms and a **replacement effect** for laggards. DOI: 10.1162/0033553053970214. [@aghionCompetitionInnovationInvertedU2005]
-:::
+Inverted-U evidence (QJE)
+@aghionCompetitionInnovationInvertedU2005 document an **inverted-U** relationship between product-market competition and innovation (patents/citations) in UK firms, consistent with “escape competition” incentives for neck-and-neck firms and a **replacement effect** for laggards. 
+
 
 ## Social planner: value of a cost reduction
 
