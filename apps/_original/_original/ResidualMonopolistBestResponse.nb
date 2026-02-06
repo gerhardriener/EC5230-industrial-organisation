@@ -1,0 +1,544 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     22692,        534]
+NotebookOptionsPosition[     22048,        514]
+NotebookOutlinePosition[     22389,        529]
+CellTagsIndexPosition[     22346,        526]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["The (Residual) Monopolist's Best Response", "Section",
+ CellChangeTimes->{{3.7799834094326377`*^9, 3.7799834255091467`*^9}, {
+   3.7799836522283297`*^9, 3.7799836558478384`*^9}, 3.78068808421973*^9, {
+   3.784526046289156*^9, 
+   3.784526051664569*^9}},ExpressionUUID->"7d03eae2-abbe-4d39-8929-\
+6cb70a7911b2"],
+
+Cell["\<\
+Created by Flavio Toxvaerd, University of Cambridge. https : // \
+sites.google.com/site/toxvaerd11/. See accompanying file for instructions.\
+\>", "Author",
+ CellChangeTimes->{{3.812263106402562*^9, 3.812263123327351*^9}, {
+   3.8122631619256015`*^9, 3.812263182379957*^9}, 
+   3.8122638300747433`*^9},ExpressionUUID->"77091327-baec-425c-9650-\
+2abcd817183d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Column", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Plot", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"qi", " ", 
+           RowBox[{"(", 
+            RowBox[{"a", "-", "ci", "-", 
+             RowBox[{"b", " ", 
+              RowBox[{"(", 
+               RowBox[{"qi", "+", "qj"}], ")"}]}]}], ")"}]}], ",", 
+          RowBox[{"qi", " ", 
+           RowBox[{"(", 
+            RowBox[{"a", "-", "ci", "-", 
+             RowBox[{"b", " ", "qi"}]}], ")"}]}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"qi", ",", "0", ",", "20"}], "}"}], ",", 
+        RowBox[{"PlotRange", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "10"}], ",", "75"}], "}"}]}], ",", 
+        RowBox[{
+        "PlotLabel", "\[Rule]", "\"\<Residual Monopolist's Problem\>\""}], 
+        ",", 
+        RowBox[{"LabelStyle", "\[Rule]", "Bold"}], ",", 
+        RowBox[{"PlotStyle", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"Blue", ",", "Thick"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"Black", ",", "Thin", ",", "Dashed"}], "}"}]}], "}"}]}], 
+        ",", 
+        RowBox[{"PlotLegends", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+          "\"\<\!\(\*SubscriptBox[\(\[Pi]\), \(i\)]\)( \
+,\!\(\*SubscriptBox[\(q\), \(j\)]\))\>\"", ",", 
+           "\"\<\!\(\*SubscriptBox[\(\[Pi]\), \(i\)]\)( ,0)\>\""}], "}"}]}], 
+        ",", 
+        RowBox[{"AxesLabel", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+          "\"\<\!\(\*SubscriptBox[\(q\), \(i\)]\)\>\"", ",", 
+           "\"\<\!\(\*SubscriptBox[\(\[Pi]\), \(i\)]\)( \
+,\!\(\*SubscriptBox[\(q\), \(j\)]\))\>\""}], "}"}]}], ",", 
+        RowBox[{"Ticks", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               FractionBox[
+                RowBox[{"a", "-", "ci", "-", 
+                 RowBox[{"b", " ", "qj"}]}], 
+                RowBox[{"2", " ", "b"}]], ",", 
+               "\"\<\!\(\*SubsuperscriptBox[\(q\), \(i\), \
+\(M\)]\)(\!\(\*SubscriptBox[\(q\), \(j\)]\))\>\""}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               FractionBox[
+                RowBox[{"a", "-", "ci"}], 
+                RowBox[{"2", " ", "b"}]], ",", 
+               "\"\<\!\(\*SubsuperscriptBox[\(q\), \(i\), \(M\)]\)(0)\>\""}], 
+              "}"}]}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0", ",", "\"\<\>\""}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"0", ",", "\"\<\>\""}], "}"}]}], "}"}]}], "}"}]}], ",", 
+        RowBox[{"Epilog", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"Hue", "[", "0.9", "]"}], ",", 
+             RowBox[{"PointSize", "[", "0.025", "]"}], ",", 
+             RowBox[{"Point", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                FractionBox[
+                 RowBox[{"a", "-", "ci", "-", 
+                  RowBox[{"b", " ", "qj"}]}], 
+                 RowBox[{"2", " ", "b"}]], ",", 
+                FractionBox[
+                 SuperscriptBox[
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"-", "a"}], "+", "ci", "+", 
+                    RowBox[{"b", " ", "qj"}]}], ")"}], "2"], 
+                 RowBox[{"4", " ", "b"}]]}], "}"}], "]"}]}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"Hue", "[", "0.9", "]"}], ",", 
+             RowBox[{"PointSize", "[", "0.025", "]"}], ",", 
+             RowBox[{"Point", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                FractionBox[
+                 RowBox[{"a", "-", "ci"}], 
+                 RowBox[{"2", " ", "b"}]], ",", 
+                FractionBox[
+                 SuperscriptBox[
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"-", "a"}], "+", "ci"}], ")"}], "2"], 
+                 RowBox[{"4", " ", "b"}]]}], "}"}], "]"}]}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"Thin", ",", "Dashed", ",", 
+             RowBox[{"Line", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  FractionBox[
+                   RowBox[{"a", "-", "ci", "-", 
+                    RowBox[{"b", " ", "qj"}]}], 
+                   RowBox[{"2", " ", "b"}]], ",", "0"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  FractionBox[
+                   RowBox[{"a", "-", "ci", "-", 
+                    RowBox[{"b", " ", "qj"}]}], 
+                   RowBox[{"2", " ", "b"}]], ",", 
+                  FractionBox[
+                   SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"-", "a"}], "+", "ci", "+", 
+                    RowBox[{"b", " ", "qj"}]}], ")"}], "2"], 
+                   RowBox[{"4", " ", "b"}]]}], "}"}]}], "}"}], "]"}]}], "}"}],
+            ",", 
+           RowBox[{"{", 
+            RowBox[{"Thin", ",", "Dashed", ",", 
+             RowBox[{"Line", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  FractionBox[
+                   RowBox[{"a", "-", "ci"}], 
+                   RowBox[{"2", " ", "b"}]], ",", "0"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  FractionBox[
+                   RowBox[{"a", "-", "ci"}], 
+                   RowBox[{"2", " ", "b"}]], ",", 
+                  FractionBox[
+                   SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"-", "a"}], "+", "ci"}], ")"}], "2"], 
+                   RowBox[{"4", " ", "b"}]]}], "}"}]}], "}"}], "]"}]}], 
+            "}"}]}], "}"}]}], ",", 
+        RowBox[{"ImageSize", "\[Rule]", "450"}], ",", 
+        RowBox[{"ImagePadding", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"100", ",", "20"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"25", ",", "20"}], "}"}]}], "}"}]}]}], "]"}], ",", 
+      RowBox[{"Show", "[", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"ParametricPlot", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"x", ",", 
+            FractionBox[
+             RowBox[{"a", "-", "ci", "-", 
+              RowBox[{"2", " ", "b", " ", "x"}]}], "b"]}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"x", ",", "0", ",", "20"}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Ticks", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 FractionBox[
+                  RowBox[{"a", "-", "ci", "-", 
+                   RowBox[{"b", " ", "qj"}]}], 
+                  RowBox[{"2", " ", "b"}]], ",", 
+                 "\"\<\!\(\*SubsuperscriptBox[\(q\), \(i\), \
+\(C\)]\)(\!\(\*SubscriptBox[\(q\), \(j\)]\))\>\""}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 FractionBox[
+                  RowBox[{"a", "-", "ci"}], 
+                  RowBox[{"2", " ", "b"}]], ",", 
+                 
+                 "\"\<\!\(\*SubsuperscriptBox[\(q\), \(i\), \
+\(C\)]\)(0)\>\""}], "}"}]}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                "qj", ",", "\"\<\!\(\*SubscriptBox[\(q\), \(j\)]\)\>\""}], 
+                "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"0", ",", "\"\<\>\""}], "}"}]}], "}"}]}], "}"}]}], 
+          ",", 
+          RowBox[{"PlotStyle", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{"{", 
+             RowBox[{"Black", ",", "Thick"}], "}"}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{
+          "PlotLabel", "\[Rule]", 
+           "\"\<Best Response of Residual Monopolist\>\""}], ",", 
+          RowBox[{"LabelStyle", "\[Rule]", "Bold"}], ",", 
+          RowBox[{"PlotLegends", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<\!\(\*SubscriptBox[\(R\), \(i\)]\)(\!\(\*SubscriptBox[\(q\), \
+\(j\)]\))\>\"", ",", 
+             "\"\<\!\(\*SubscriptBox[\(R\), \
+\(j\)]\)(\!\(\*SubscriptBox[\(q\), \(i\)]\))\>\""}], "}"}]}], ",", 
+          RowBox[{"PlotRange", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0", ",", "20"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"0", ",", "20"}], "}"}]}], "}"}]}], ",", 
+          RowBox[{"ImageSize", "\[Rule]", "450"}], ",", 
+          RowBox[{"ImagePadding", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"100", ",", "20"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"25", ",", "20"}], "}"}]}], "}"}]}]}], "]"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Plot", "[", 
+         RowBox[{"0", ",", 
+          RowBox[{"{", 
+           RowBox[{"x", ",", "0", ",", "20"}], "}"}]}], "]"}], ",", 
+        RowBox[{"AxesLabel", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           SubscriptBox["q", "i"], ",", 
+           SubscriptBox["q", "j"]}], "}"}]}], ",", "\[IndentingNewLine]", 
+        RowBox[{"Epilog", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"Hue", "[", "0.9", "]"}], ",", 
+             RowBox[{"PointSize", "[", "0.025", "]"}], ",", 
+             RowBox[{"Point", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                FractionBox[
+                 RowBox[{"a", "-", "ci", "-", 
+                  RowBox[{"b", " ", "qj"}]}], 
+                 RowBox[{"2", " ", "b"}]], ",", "qj"}], "}"}], "]"}]}], "}"}],
+            ",", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"Thin", ",", "Dashed", ",", 
+             RowBox[{"Line", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"0", ",", "qj"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  FractionBox[
+                   RowBox[{"a", "-", "ci", "-", 
+                    RowBox[{"b", " ", "qj"}]}], 
+                   RowBox[{"2", " ", "b"}]], ",", "qj"}], "}"}]}], "}"}], 
+              "]"}]}], "}"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"Thin", ",", "Dashed", ",", 
+             RowBox[{"Line", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  FractionBox[
+                   RowBox[{"a", "-", "ci", "-", 
+                    RowBox[{"b", " ", "qj"}]}], 
+                   RowBox[{"2", " ", "b"}]], ",", "0"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  FractionBox[
+                   RowBox[{"a", "-", "ci", "-", 
+                    RowBox[{"b", " ", "qj"}]}], 
+                   RowBox[{"2", " ", "b"}]], ",", 
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{"qj", "+", ".1"}], ")"}], " ", "500"}]}], "}"}]}],
+                "}"}], "]"}]}], "}"}]}], "}"}]}]}], "]"}]}], "}"}], "]"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", "15", ",", "20"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"b", ",", "0.75", ",", "5"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"ci", ",", "2", ",", "5"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"qj", ",", "0", ",", "20"}], "}"}], ",", 
+   RowBox[{"ControlPlacement", "\[Rule]", "Left"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.784058468964321*^9, 3.7840584812090855`*^9}, {
+   3.784354222594322*^9, 3.7843542329268475`*^9}, {3.7843542934772544`*^9, 
+   3.78435435709103*^9}, 3.7843544859119654`*^9, {3.784354540067647*^9, 
+   3.784354555233079*^9}, {3.784354606066722*^9, 3.7843546255325003`*^9}, {
+   3.784354674192744*^9, 3.7843546851439714`*^9}, {3.784354758792036*^9, 
+   3.784354759579833*^9}, {3.7843555038529243`*^9, 3.7843555151418934`*^9}, {
+   3.7843555491766105`*^9, 3.784355561665804*^9}, {3.784355632839452*^9, 
+   3.784355655663525*^9}, {3.7843558498584423`*^9, 3.7843559729073086`*^9}, 
+   3.784356054589425*^9, {3.784356098526679*^9, 3.7843561583209085`*^9}, {
+   3.7844646650428286`*^9, 3.784464718093273*^9}, {3.7844647483992434`*^9, 
+   3.7844648251256895`*^9}, {3.784464863864978*^9, 3.7844648640496244`*^9}, {
+   3.7844649389693956`*^9, 3.784464970151958*^9}, 3.784465046573865*^9, {
+   3.7844651181045356`*^9, 3.78446511918901*^9}, {3.784465153908558*^9, 
+   3.7844651552441125`*^9}, {3.784465198495559*^9, 3.7844651992939787`*^9}, {
+   3.7844652808442745`*^9, 3.784465327027734*^9}, {3.7844653656333766`*^9, 
+   3.784465366306786*^9}},
+ CellLabel->"In[21]:=",ExpressionUUID->"c05e2517-fbee-441a-a02b-fcab23df4cfc"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`a$$ = 15, $CellContext`b$$ = 
+    0.75, $CellContext`ci$$ = 2, $CellContext`qj$$ = 6.4, Typeset`show$$ = 
+    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`a$$], 15, 20}, {
+      Hold[$CellContext`b$$], 0.75, 5}, {
+      Hold[$CellContext`ci$$], 2, 5}, {
+      Hold[$CellContext`qj$$], 0, 20}}, Typeset`size$$ = {
+    559., {326.5, 332.5}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`a$67536$$ = 
+    0, $CellContext`b$67537$$ = 0, $CellContext`ci$67538$$ = 
+    0, $CellContext`qj$67539$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`a$$ = 15, $CellContext`b$$ = 
+        0.75, $CellContext`ci$$ = 2, $CellContext`qj$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`a$$, $CellContext`a$67536$$, 0], 
+        Hold[$CellContext`b$$, $CellContext`b$67537$$, 0], 
+        Hold[$CellContext`ci$$, $CellContext`ci$67538$$, 0], 
+        Hold[$CellContext`qj$$, $CellContext`qj$67539$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Column[{
+         Plot[{$CellContext`qi ($CellContext`a$$ - $CellContext`ci$$ - \
+$CellContext`b$$ ($CellContext`qi + $CellContext`qj$$)), $CellContext`qi \
+($CellContext`a$$ - $CellContext`ci$$ - $CellContext`b$$ $CellContext`qi)}, \
+{$CellContext`qi, 0, 20}, PlotRange -> {-10, 75}, PlotLabel -> 
+          "Residual Monopolist's Problem", LabelStyle -> Bold, 
+          PlotStyle -> {{Blue, Thick}, {Black, Thin, Dashed}}, 
+          PlotLegends -> {
+           "\!\(\*SubscriptBox[\(\[Pi]\), \(i\)]\)( \
+,\!\(\*SubscriptBox[\(q\), \(j\)]\))", 
+            "\!\(\*SubscriptBox[\(\[Pi]\), \(i\)]\)( ,0)"}, 
+          AxesLabel -> {
+           "\!\(\*SubscriptBox[\(q\), \(i\)]\)", 
+            "\!\(\*SubscriptBox[\(\[Pi]\), \(i\)]\)( \
+,\!\(\*SubscriptBox[\(q\), \(j\)]\))"}, 
+          Ticks -> {{{($CellContext`a$$ - $CellContext`ci$$ - \
+$CellContext`b$$ $CellContext`qj$$)/(2 $CellContext`b$$), 
+              "\!\(\*SubsuperscriptBox[\(q\), \(i\), \
+\(M\)]\)(\!\(\*SubscriptBox[\(q\), \(j\)]\))"}, {($CellContext`a$$ - \
+$CellContext`ci$$)/(2 $CellContext`b$$), 
+              "\!\(\*SubsuperscriptBox[\(q\), \(i\), \(M\)]\)(0)"}}, {{
+             0, ""}, {0, ""}}}, Epilog -> {{
+             Hue[0.9], 
+             PointSize[0.025], 
+             
+             Point[{($CellContext`a$$ - $CellContext`ci$$ - $CellContext`b$$ \
+$CellContext`qj$$)/(
+               2 $CellContext`b$$), (-$CellContext`a$$ + $CellContext`ci$$ + \
+$CellContext`b$$ $CellContext`qj$$)^2/(4 $CellContext`b$$)}]}, {
+             Hue[0.9], 
+             PointSize[0.025], 
+             
+             Point[{($CellContext`a$$ - $CellContext`ci$$)/(
+               2 $CellContext`b$$), (-$CellContext`a$$ + \
+$CellContext`ci$$)^2/(4 $CellContext`b$$)}]}, {Thin, Dashed, 
+             
+             Line[{{($CellContext`a$$ - $CellContext`ci$$ - $CellContext`b$$ \
+$CellContext`qj$$)/(2 $CellContext`b$$), 
+                0}, {($CellContext`a$$ - $CellContext`ci$$ - $CellContext`b$$ \
+$CellContext`qj$$)/(
+                2 $CellContext`b$$), (-$CellContext`a$$ + $CellContext`ci$$ + \
+$CellContext`b$$ $CellContext`qj$$)^2/(4 $CellContext`b$$)}}]}, {Thin, Dashed, 
+             
+             Line[{{($CellContext`a$$ - $CellContext`ci$$)/(
+                2 $CellContext`b$$), 
+                0}, {($CellContext`a$$ - $CellContext`ci$$)/(
+                2 $CellContext`b$$), (-$CellContext`a$$ + \
+$CellContext`ci$$)^2/(4 $CellContext`b$$)}}]}}, ImageSize -> 450, 
+          ImagePadding -> {{100, 20}, {25, 20}}], 
+         Show[
+          
+          ParametricPlot[{$CellContext`x, ($CellContext`a$$ - \
+$CellContext`ci$$ - (
+              2 $CellContext`b$$) $CellContext`x)/$CellContext`b$$}, \
+{$CellContext`x, 0, 20}, 
+           Ticks -> {{{($CellContext`a$$ - $CellContext`ci$$ - \
+$CellContext`b$$ $CellContext`qj$$)/(2 $CellContext`b$$), 
+               "\!\(\*SubsuperscriptBox[\(q\), \(i\), \
+\(C\)]\)(\!\(\*SubscriptBox[\(q\), \(j\)]\))"}, {($CellContext`a$$ - \
+$CellContext`ci$$)/(2 $CellContext`b$$), 
+               "\!\(\*SubsuperscriptBox[\(q\), \(i\), \(C\)]\)(0)"}}, \
+{{$CellContext`qj$$, "\!\(\*SubscriptBox[\(q\), \(j\)]\)"}, {0, ""}}}, 
+           PlotStyle -> {{Black, Thick}}, PlotLabel -> 
+           "Best Response of Residual Monopolist", LabelStyle -> Bold, 
+           PlotLegends -> {
+            "\!\(\*SubscriptBox[\(R\), \(i\)]\)(\!\(\*SubscriptBox[\(q\), \(j\
+\)]\))", "\!\(\*SubscriptBox[\(R\), \(j\)]\)(\!\(\*SubscriptBox[\(q\), \(i\)]\
+\))"}, PlotRange -> {{0, 20}, {0, 20}}, ImageSize -> 450, 
+           ImagePadding -> {{100, 20}, {25, 20}}], 
+          Plot[0, {$CellContext`x, 0, 20}], AxesLabel -> {
+            Subscript[$CellContext`q, $CellContext`i], 
+            Subscript[$CellContext`q, $CellContext`j]}, Epilog -> {{
+             Hue[0.9], 
+             PointSize[0.025], 
+             
+             Point[{($CellContext`a$$ - $CellContext`ci$$ - $CellContext`b$$ \
+$CellContext`qj$$)/(2 $CellContext`b$$), $CellContext`qj$$}]}, {Thin, Dashed, 
+             
+             Line[{{0, $CellContext`qj$$}, {($CellContext`a$$ - \
+$CellContext`ci$$ - $CellContext`b$$ $CellContext`qj$$)/(
+                2 $CellContext`b$$), $CellContext`qj$$}}]}, {Thin, Dashed, 
+             
+             Line[{{($CellContext`a$$ - $CellContext`ci$$ - $CellContext`b$$ \
+$CellContext`qj$$)/(2 $CellContext`b$$), 
+                0}, {($CellContext`a$$ - $CellContext`ci$$ - $CellContext`b$$ \
+$CellContext`qj$$)/(2 $CellContext`b$$), ($CellContext`qj$$ + 0.1) 
+                500}}]}}]}], 
+      "Specifications" :> {{$CellContext`a$$, 15, 20}, {$CellContext`b$$, 
+         0.75, 5}, {$CellContext`ci$$, 2, 5}, {$CellContext`qj$$, 0, 20}}, 
+      "Options" :> {ControlPlacement -> Left}, "DefaultOptions" :> {}],
+     ImageSizeCache->{842., {359., 365.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.784354674676096*^9, 3.784354685639249*^9}, 
+   3.7843547608514204`*^9, 3.7843555164398685`*^9, 3.7843555627446537`*^9, 
+   3.7843556573794765`*^9, {3.784355852967767*^9, 3.784355878212412*^9}, {
+   3.7843559133022823`*^9, 3.78435597403156*^9}, 3.784356056093876*^9, 
+   3.7843561209853153`*^9, 3.7843561593916855`*^9, 3.7843564013698235`*^9, 
+   3.784464634716257*^9, {3.78446467553986*^9, 3.784464719456729*^9}, {
+   3.784464755687117*^9, 3.7844648257575607`*^9}, 3.7844648649447813`*^9, {
+   3.7844649439691706`*^9, 3.7844649710451064`*^9}, 3.7844650473719735`*^9, 
+   3.7844651203836656`*^9, 3.784465156755931*^9, 3.784465200079255*^9, {
+   3.7844652921297393`*^9, 3.784465328141402*^9}, 3.784465367826104*^9},
+ CellLabel->"Out[21]=",ExpressionUUID->"1cb89136-f957-4e3c-ad24-b50fc0914720"]
+}, {2}]]
+}, Open  ]]
+},
+WindowSize->{1904, 997},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 316, 5, 67, "Section",ExpressionUUID->"7d03eae2-abbe-4d39-8929-6cb70a7911b2"],
+Cell[899, 29, 369, 7, 31, "Author",ExpressionUUID->"77091327-baec-425c-9650-2abcd817183d"],
+Cell[CellGroupData[{
+Cell[1293, 40, 13223, 328, 534, "Input",ExpressionUUID->"c05e2517-fbee-441a-a02b-fcab23df4cfc"],
+Cell[14519, 370, 7504, 140, 743, "Output",ExpressionUUID->"1cb89136-f957-4e3c-ad24-b50fc0914720"]
+}, {2}]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

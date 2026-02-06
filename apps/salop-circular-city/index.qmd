@@ -1,0 +1,302 @@
+---
+title: "Salop's Circular City Model: Market Shares & Competition"
+author: "Interactive Visualization of Horizontal Differentiation"
+format: 
+  html:
+    page-layout: full
+    theme: cosmo
+server: shiny
+execute:
+  freeze: false
+---
+
+## Model Overview
+
+This interactive visualization illustrates **Salop's Model of Horizontal Differentiation** on a circular city with three firms. It shows how market shares change with arbitrary prices set by each firm on different market segments.
+
+**The Economic Intuition:** Firms are located on a circle and compete for consumers distributed uniformly around it. Each firm sets two prices—one on the arc towards each adjacent neighbor (e.g., $p_{13}$ is Firm 1's price on the arc toward Firm 3). Consumers purchase from the firm that minimizes their total cost (posted price plus transportation cost).
+
+### Experiments
+
+1. **Price Effects on Market Shares:** Adjust prices $p_{ij}$ for each firm to see how market shares change. 
+   - Increase the price $p_{13}$ (Firm 1's price toward Firm 3). How does this affect the market shares of Firms 1 and 3?
+   - Compare effects of $p_{13}$ versus $p_{31}$ (Firm 3's price toward Firm 1).
+
+2. **Consumer Location:** Use the slider to move a red dot around the circle representing an arbitrary consumer. Observe which firm would serve this consumer at current prices.
+
+3. **Firm Locations:** The three firms (black dots) are equally spaced at positions 0°, 120°, and 240° on the circle.
+
+```{r}
+#| context: setup
+#| eval: true
+library(shiny)
+library(ggplot2)
+library(dplyr)
+
+# Define plotting theme
+theme_econ <- theme_minimal() +
+  theme(
+    plot.title = element_text(face = "bold", hjust = 0.5),
+    axis.title = element_text(face = "italic"),
+    panel.grid.minor = element_blank(),
+    axis.text = element_blank(),
+    axis.ticks = element_blank()
+  )
+```
+
+```{r}
+#| panel: sidebar
+
+h3("Price Controls")
+helpText("Prices set by each firm on market segments towards their neighbors")
+
+sliderInput(
+  "p12",
+  label = "Firm 1 - Price toward Firm 2 (p₁₂):",
+  min = 0,
+  max = 10,
+  value = 2,
+  step = 0.1
+)
+
+sliderInput(
+  "p13",
+  label = "Firm 1 - Price toward Firm 3 (p₁₃):",
+  min = 0,
+  max = 10,
+  value = 2,
+  step = 0.1
+)
+
+hr()
+
+sliderInput(
+  "p21",
+  label = "Firm 2 - Price toward Firm 1 (p₂₁):",
+  min = 0,
+  max = 10,
+  value = 2,
+  step = 0.1
+)
+
+sliderInput(
+  "p23",
+  label = "Firm 2 - Price toward Firm 3 (p₂₃):",
+  min = 0,
+  max = 10,
+  value = 2,
+  step = 0.1
+)
+
+hr()
+
+sliderInput(
+  "p31",
+  label = "Firm 3 - Price toward Firm 1 (p₃₁):",
+  min = 0,
+  max = 10,
+  value = 2,
+  step = 0.1
+)
+
+sliderInput(
+  "p32",
+  label = "Firm 3 - Price toward Firm 2 (p₃₂):",
+  min = 0,
+  max = 10,
+  value = 2,
+  step = 0.1
+)
+
+hr()
+
+h3("Consumer Location")
+sliderInput(
+  "consumer_loc",
+  label = "Consumer Location (degrees):",
+  min = 0,
+  max = 360,
+  value = 180,
+  step = 1
+)
+
+hr()
+
+h4("Model Parameters")
+sliderInput(
+  "transport_cost",
+  label = "Transportation Cost per Unit Distance (t):",
+  min = 0.01,
+  max = 2,
+  value = 0.1,
+  step = 0.01
+)
+
+helpText("Original model by Steven Salop (1979)")
+```
+
+```{r}
+#| panel: fill
+
+tabsetPanel(
+  tabPanel(
+    "Interactive Graph",
+    br(),
+    plotOutput("salopPlot", height = "600px")
+  ),
+  tabPanel(
+    "Market Share Information",
+    withMathJax(),
+    h3("How Market Shares are Determined"),
+    p("Each consumer chooses the firm that minimizes their total cost:"),
+    p("$$C_i(\\theta) = p_i(\\theta) + t \\cdot d_i(\\theta)$$"),
+    p(
+      "where $p_i(\\theta)$ is the price charged by firm $i$ to a consumer at location $\\theta$ (one of the two segment prices $p_{ij}$), and $d_i(\\theta)$ is the shortest distance (along the circle) from that consumer to firm $i$."
+    ),
+
+    h4("Market Boundaries"),
+    p("The boundary between Firm $i$ and Firm $j$ occurs where:"),
+    p(
+      "$$p_i(\\theta) + t \\cdot d_i(\\theta) = p_j(\\theta) + t \\cdot d_j(\\theta)$$"
+    ),
+    p(
+      "Solving for the boundary location determines which consumers are served by each firm."
+    ),
+
+    h4("Key Observations"),
+    tags$ul(
+      tags$li(
+        "With symmetric prices ($p_{ij} = c$ for all $i,j$), market shares are equal (1/3 each)."
+      ),
+      tags$li("Higher prices reduce a firm's market share on that segment."),
+      tags$li(
+        "Transportation costs ($t$) determine the willingness of consumers to switch between firms."
+      ),
+      tags$li(
+        "The market is fully covered—every consumer purchases from exactly one firm."
+      )
+    )
+  )
+)
+```
+
+```{r}
+#| context: server
+#| eval: true
+
+# Calculate market boundaries and shares
+market_data <- reactive({
+  t <- input$transport_cost
+
+  # Firm locations (equally spaced on circle)
+  firm_locs <- c(0, 120, 240)
+
+  # Signed angle difference in (-180, 180]; sign indicates direction around the circle
+  signed_angle_diff <- function(theta, origin) {
+    ((theta - origin + 180) %% 360) - 180
+  }
+
+  # Segment-specific prices: p_ij is the price Firm i charges on the arc in the
+  # direction of Firm j.
+  firm_price <- function(firm_id, theta) {
+    diff <- signed_angle_diff(theta, firm_locs[firm_id])
+    is_ccw <- diff >= 0
+
+    switch(
+      as.character(firm_id),
+      "1" = ifelse(is_ccw, input$p12, input$p13), # CCW from 0° points toward Firm 2
+      "2" = ifelse(is_ccw, input$p23, input$p21), # CCW from 120° points toward Firm 3
+      "3" = ifelse(is_ccw, input$p31, input$p32) # CCW from 240° points toward Firm 1
+    )
+  }
+
+  firm_costs <- function(theta) {
+    sapply(1:3, function(i) {
+      diff <- signed_angle_diff(theta, firm_locs[i])
+      d <- abs(diff) # distance along the circle (in degrees)
+      p <- firm_price(i, theta)
+      p + t * d
+    })
+  }
+
+  # For each degree on circle, determine which firm serves
+  locations <- seq(0, 359.9, by = 0.5)
+
+  serving_firm <- sapply(locations, function(theta) {
+    which.min(firm_costs(theta))
+  })
+
+  # Calculate market shares
+  shares <- table(serving_firm) / length(serving_firm)
+  shares_full <- numeric(3)
+  shares_full[as.numeric(names(shares))] <- as.numeric(shares)
+
+  consumer_costs <- firm_costs(input$consumer_loc)
+  consumer_firm <- which.min(consumer_costs)
+
+  list(
+    locations = locations,
+    serving_firm = serving_firm,
+    shares = shares_full,
+    firm_locs = firm_locs,
+    consumer_firm = consumer_firm
+  )
+})
+
+# Plot rendering
+output$salopPlot <- renderPlot({
+  data <- market_data()
+  consumer_angle <- input$consumer_loc
+  
+  # Prepare data for circle plot
+  circle_data <- data.frame(
+    angle = data$locations,
+    firm = data$serving_firm
+  )
+  
+  # Convert to cartesian for plotting
+  circle_data$x <- cos(circle_data$angle * pi / 180)
+  circle_data$y <- sin(circle_data$angle * pi / 180)
+  
+  # Firm locations in cartesian
+  firm_x <- cos(data$firm_locs * pi / 180)
+  firm_y <- sin(data$firm_locs * pi / 180)
+  
+  # Consumer location in cartesian
+  consumer_x <- cos(consumer_angle * pi / 180)
+  consumer_y <- sin(consumer_angle * pi / 180)
+  
+  # Create the plot
+  ggplot(circle_data, aes(x = x, y = y, color = factor(firm))) +
+    geom_point(size = 3, alpha = 0.7) +
+    scale_color_manual(
+      values = c("1" = "#0072B2", "2" = "#D55E00", "3" = "#009E73"),
+      labels = c("Firm 1", "Firm 2", "Firm 3"),
+      name = "Serving Firm"
+    ) +
+    # Firm locations (black dots)
+    annotate("point", x = firm_x, y = firm_y, color = "black", size = 6, shape = 16) +
+    # Firm labels
+    annotate("text", x = firm_x * 1.15, y = firm_y * 1.15, label = c("Firm 1", "Firm 2", "Firm 3"),
+             size = 4, fontface = "bold") +
+    # Consumer location (red dot)
+    annotate("point", x = consumer_x, y = consumer_y, color = "#E69F00", size = 5, shape = 17) +
+    annotate("text", x = consumer_x * 0.75, y = consumer_y * 0.75, label = "Consumer",
+             color = "#E69F00", size = 3, fontface = "italic") +
+    # Circle reference
+    coord_fixed(ratio = 1) +
+    labs(
+      title = sprintf("Salop's Circular City Model - Market Shares: Firm 1 = %.1f%%, Firm 2 = %.1f%%, Firm 3 = %.1f%%",
+                      data$shares[1] * 100, data$shares[2] * 100, data$shares[3] * 100),
+      x = "",
+      y = ""
+    ) +
+    theme_econ +
+    theme(
+      axis.line = element_blank(),
+      panel.border = element_blank(),
+      panel.background = element_rect(fill = "white", color = "gray90"),
+      legend.position = "bottom"
+    )
+})
+```
