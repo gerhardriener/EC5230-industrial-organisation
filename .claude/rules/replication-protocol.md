@@ -1,7 +1,6 @@
 ---
 paths:
   - "scripts/**/*.R"
-  - "Figures/**/*.R"
 ---
 
 # Replication-First Protocol
@@ -33,14 +32,15 @@ Before writing any R code:
    - What outputs? (tables, figures, estimates)
 
 3. **Record gold standard numbers** -- the exact results from the paper:
+
    ```markdown
    ## Replication Targets: [Paper Author (Year)]
 
-   | Target | Table/Figure | Value | SE/CI | Notes |
-   |--------|-------------|-------|-------|-------|
+   | Target   | Table/Figure   | Value  | SE/CI   | Notes                 |
+   | -------- | -------------- | ------ | ------- | --------------------- |
    | Main ATT | Table 2, Col 3 | -1.632 | (0.584) | Primary specification |
-   | Placebo | Table 3, Col 1 | 0.012 | (0.891) | Should be ~0 |
-   | ...     | ...           | ...   | ...   | ... |
+   | Placebo  | Table 3, Col 1 | 0.012  | (0.891) | Should be ~0          |
+   | ...      | ...            | ...    | ...     | ...                   |
    ```
 
 4. **Store gold standard** in one of:
@@ -69,12 +69,12 @@ When translating code (typically Stata to R):
 
 <!-- Customize: Add pitfalls specific to your field's common packages -->
 
-| Stata | R | Trap |
-|-------|---|------|
-| `reg y x, cluster(id)` | `feols(y ~ x, cluster = ~id)` | Stata clusters df-adjust differently from some R packages |
-| `areg y x, absorb(id)` | `feols(y ~ x \| id)` | Check demeaning method matches |
-| `probit` for PS | `glm(family=binomial(link="probit"))` | R default logit != Stata default in some commands |
-| `bootstrap, reps(999)` | Depends on method | Match seed, reps, and bootstrap type exactly |
+| Stata                  | R                                     | Trap                                                      |
+| ---------------------- | ------------------------------------- | --------------------------------------------------------- |
+| `reg y x, cluster(id)` | `feols(y ~ x, cluster = ~id)`         | Stata clusters df-adjust differently from some R packages |
+| `areg y x, absorb(id)` | `feols(y ~ x \| id)`                  | Check demeaning method matches                            |
+| `probit` for PS        | `glm(family=binomial(link="probit"))` | R default logit != Stata default in some commands         |
+| `bootstrap, reps(999)` | Depends on method                     | Match seed, reps, and bootstrap type exactly              |
 
 ---
 
@@ -107,13 +107,13 @@ for (name in names(targets)) {
 
 ### Tolerance Thresholds
 
-| Type | Tolerance | Rationale |
-|------|-----------|-----------|
-| Integers (N, counts) | Exact match | No reason for any difference |
-| Point estimates | < 0.01 | Rounding in paper display |
-| Standard errors | < 0.05 | Bootstrap/clustering variation |
-| P-values | Same significance level | Exact p may differ slightly |
-| Percentages | < 0.1pp | Display rounding |
+| Type                 | Tolerance               | Rationale                      |
+| -------------------- | ----------------------- | ------------------------------ |
+| Integers (N, counts) | Exact match             | No reason for any difference   |
+| Point estimates      | < 0.01                  | Rounding in paper display      |
+| Standard errors      | < 0.05                  | Bootstrap/clustering variation |
+| P-values             | Same significance level | Exact p may differ slightly    |
+| Percentages          | < 0.1pp                 | Display rounding               |
 
 ### If Mismatch
 
@@ -134,12 +134,14 @@ Save to `quality_reports/LectureNN_replication_report.md`:
 
 ```markdown
 # Replication Report: [Paper Author (Year)]
+
 **Date:** [YYYY-MM-DD]
 **Lecture:** [LectureNN]
 **Original language:** [Stata/R/etc.]
 **R translation:** [script path]
 
 ## Summary
+
 - **Targets checked:** N
 - **Passed:** M
 - **Failed:** K
@@ -147,14 +149,16 @@ Save to `quality_reports/LectureNN_replication_report.md`:
 
 ## Results Comparison
 
-| Target | Paper | Ours | Diff | Status |
-|--------|-------|------|------|--------|
-| Main ATT | -1.632 | -1.631 | 0.001 | PASS |
-| Main SE | 0.584 | 0.586 | 0.002 | PASS |
-| ...     | ...   | ...  | ...  | ... |
+| Target   | Paper  | Ours   | Diff  | Status |
+| -------- | ------ | ------ | ----- | ------ |
+| Main ATT | -1.632 | -1.631 | 0.001 | PASS   |
+| Main SE  | 0.584  | 0.586  | 0.002 | PASS   |
+| ...      | ...    | ...    | ...   | ...    |
 
 ## Discrepancies (if any)
+
 ### [Target name]
+
 - **Paper value:** X
 - **Our value:** Y
 - **Investigation:** [what we checked]
@@ -162,6 +166,7 @@ Save to `quality_reports/LectureNN_replication_report.md`:
 - **Resolution:** [how resolved, or "pending"]
 
 ## Environment
+
 - R version: [version]
 - Key packages: [with versions]
 - Data source: [path or URL]

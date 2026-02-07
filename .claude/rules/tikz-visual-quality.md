@@ -1,7 +1,7 @@
 ---
 paths:
-  - "Slides/**/*.tex"
-  - "Figures/**/*.tex"
+  - "lecture-slides/**/*.qmd"
+  - "lecture-slides/figs/**/*.tex"
 ---
 
 # TikZ Visual Quality Standards
@@ -11,11 +11,13 @@ paths:
 ## Label Positioning
 
 ### No Overlaps
+
 - Labels must NEVER overlap with curves, lines, dots, braces, or other labels
 - After placing a label, mentally trace surrounding elements for collisions
 - When two labels are near the same vertical position, stagger them
 
 ### Consistent Placement
+
 - Group labels: right of final data point
 - Axis labels: at arrow tips
 - Annotation labels: adjacent to braces/arrows, outside data area
@@ -24,14 +26,17 @@ paths:
 ## Visual Semantics
 
 ### Observed vs. Counterfactual
+
 - **Solid dots/lines** = observed outcomes, realized paths
 - **Hollow circles/dashed lines** = counterfactual outcomes, unrealized paths
 
 ### Color Semantics
+
 - Use consistent colors for semantic meaning (positive, negative, neutral)
 - Define colors in your Beamer theme for reuse
 
 ### Line Weights
+
 - Axes: `thick`
 - Data lines: `thick`
 - Annotation arrows: `thick` (NOT `very thick`)
@@ -59,6 +64,6 @@ paths:
 
 ## Single Source of Truth (CRITICAL)
 
-**The Beamer `.tex` file is the authoritative source for ALL TikZ diagrams.**
+**The `.tex` file is the authoritative source for ALL TikZ diagrams.**
 
-Edit TikZ in the Beamer file FIRST, then copy verbatim to `extract_tikz.tex`.
+Edit TikZ in the file FIRST, then copy verbatim to `extract_tikz.tex`.

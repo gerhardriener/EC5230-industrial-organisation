@@ -13,7 +13,6 @@ Cross-reference all citations in lecture files against bibliography entries.
 1. **Read the bibliography file** and extract all citation keys
 
 2. **Scan all lecture files for citation keys:**
-   - `.tex` files: look for `\cite{`, `\citet{`, `\citep{`, `\citeauthor{`, `\citeyear{`
    - `.qmd` files: look for `@key`, `[@key]`, `[@key1; @key2]`
    - Extract all unique citation keys used
 
@@ -35,12 +34,13 @@ Cross-reference all citations in lecture files against bibliography entries.
    - List of quality issues
 
 ## Files to scan:
+
 ```
-Slides/*.tex
-Quarto/*.qmd
+lecture-slides/**/*.qmd
 ```
 
 ## Bibliography location:
+
 ```
-Bibliography_base.bib  (repo root)
+references.bib  (repo root)
 ```

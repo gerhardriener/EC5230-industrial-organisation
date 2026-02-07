@@ -1,24 +1,23 @@
 ---
 paths:
-  - "Figures/**/*"
-  - "Quarto/**/*.qmd"
-  - "Slides/**/*.tex"
+  - "lecture-slides/figs/**/*"
+  - "lecture-slides/**/*.qmd"
 ---
 
 # Single Source of Truth: Enforcement Protocol
 
-**The Beamer `.tex` file is the authoritative source for ALL content.** Everything else is derived.
+**The quarto `.qmd` and the tikz `.tex` files are the authoritative source for ALL content.** Everything else is derived.
 
 ---
 
 ## TikZ Freshness Protocol (MANDATORY)
 
-**Before using ANY TikZ SVG in a Quarto slide, verify it matches the current Beamer source.**
+**Before using ANY TikZ SVG in a Quarto slide, verify it matches the current source.**
 
 ### The Diff-Check Procedure
 
 ```
-Step 1: Read the TikZ block from the Beamer .tex file
+Step 1: Read the TikZ block from the .tex file
 Step 2: Read the corresponding block from Figures/LectureN/extract_tikz.tex
 Step 3: Compare EVERY coordinate, label, color, opacity, and anchor point
 Step 4: If ANY difference exists → update extract_tikz.tex from Beamer → recompile → regenerate SVGs
@@ -28,6 +27,7 @@ Step 5: Only then reference the SVG in the QMD
 ### When to Re-Extract
 
 Re-extract ALL TikZ diagrams when:
+
 - The Beamer `.tex` file has been modified since the last extraction
 - Starting a new Quarto translation
 - Any TikZ-related quality issue is reported
@@ -47,38 +47,14 @@ Before translating ANY lecture to Quarto:
 
 ---
 
-## Content Fidelity Mandate
-
-**Quarto translation must be FAITHFUL to Beamer content, not a paraphrase.**
-
-### What "Faithful" Means
-- Every Beamer frame → one Quarto slide (1:1 mapping)
-- Every mathematical expression → identical notation
-- Every citation → same reference
-- Every figure → same data visualization
-- Every environment → CSS equivalent
-
-### Content Fidelity Checklist
-```
-[ ] Frame count: Beamer frames == Quarto slides
-[ ] Math check: every equation appears with identical notation
-[ ] Citation check: every \cite has a @key in Quarto
-[ ] Environment check: every Beamer box has CSS equivalent
-[ ] Figure check: every \includegraphics has SVG or plotly equivalent
-[ ] No added content: Quarto does not invent slides not in Beamer
-[ ] No dropped content: every Beamer idea appears in Quarto
-```
-
----
-
 ## The Single Source of Truth Chain
 
 ```
-Beamer .tex (SOURCE OF TRUTH)
+Quarto .qmd (SOURCE OF TRUTH)
   ├── extract_tikz.tex → PDF → SVGs (derived)
-  ├── Quarto .qmd → HTML (derived)
-  ├── Bibliography_base.bib (shared)
-  └── Figures/LectureN/*.rds → plotly charts (data source)
+  ├── Quarto → HTML (derived)
+  ├── Quarto → pdf (derived)
+  ├── references.bib (shared)
 
 NEVER edit derived artifacts independently.
 ALWAYS propagate changes from source → derived.

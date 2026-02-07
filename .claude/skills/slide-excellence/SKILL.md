@@ -2,7 +2,7 @@
 name: slide-excellence
 description: Comprehensive slide excellence review combining visual audit, pedagogical review, proofreading, and optional TikZ/parity/substance reviews. Produces multiple reports and a combined summary.
 disable-model-invocation: true
-argument-hint: "[QMD or TEX filename]"
+argument-hint: "[QMD filename]"
 ---
 
 # Slide Excellence Review
@@ -18,26 +18,32 @@ Parse `$ARGUMENTS` for the filename. Resolve path in `Quarto/` or `Slides/`.
 ### 2. Run Review Agents in Parallel
 
 **Agent 1: Visual Audit** (slide-auditor)
+
 - Overflow, font consistency, box fatigue, spacing, images
 - Save: `quality_reports/[FILE]_visual_audit.md`
 
 **Agent 2: Pedagogical Review** (pedagogy-reviewer)
+
 - 13 pedagogical patterns, narrative, pacing, notation
 - Save: `quality_reports/[FILE]_pedagogy_report.md`
 
 **Agent 3: Proofreading** (proofreader)
+
 - Grammar, typos, consistency, academic quality, citations
 - Save: `quality_reports/[FILE]_report.md`
 
 **Agent 4: TikZ Review** (only if file contains TikZ)
+
 - Label overlaps, geometric accuracy, visual semantics
 - Save: `quality_reports/[FILE]_tikz_review.md`
 
 **Agent 5: Content Parity** (only for .qmd files with corresponding .tex)
+
 - Frame count comparison, environment parity, content drift
 - Save: `quality_reports/[FILE]_parity_report.md`
 
 **Agent 6: Substance Review** (optional, for .tex files)
+
 - Domain correctness via domain-reviewer protocol
 - Save: `quality_reports/[FILE]_substance_review.md`
 
@@ -48,22 +54,24 @@ Parse `$ARGUMENTS` for the filename. Resolve path in `Quarto/` or `Slides/`.
 
 ## Overall Quality Score: [EXCELLENT / GOOD / NEEDS WORK / POOR]
 
-| Dimension | Critical | Medium | Low |
-|-----------|----------|--------|-----|
-| Visual/Layout | | | |
-| Pedagogical | | | |
-| Proofreading | | | |
+| Dimension     | Critical | Medium | Low |
+| ------------- | -------- | ------ | --- |
+| Visual/Layout |          |        |     |
+| Pedagogical   |          |        |     |
+| Proofreading  |          |        |     |
 
 ### Critical Issues (Immediate Action Required)
+
 ### Medium Issues (Next Revision)
+
 ### Recommended Next Steps
 ```
 
 ## Quality Score Rubric
 
-| Score | Critical | Medium | Meaning |
-|-------|----------|--------|---------|
-| Excellent | 0-2 | 0-5 | Ready to present |
-| Good | 3-5 | 6-15 | Minor refinements |
-| Needs Work | 6-10 | 16-30 | Significant revision |
-| Poor | 11+ | 31+ | Major restructuring |
+| Score      | Critical | Medium | Meaning              |
+| ---------- | -------- | ------ | -------------------- |
+| Excellent  | 0-2      | 0-5    | Ready to present     |
+| Good       | 3-5      | 6-15   | Minor refinements    |
+| Needs Work | 6-10     | 16-30  | Significant revision |
+| Poor       | 11+      | 31+    | Major restructuring  |

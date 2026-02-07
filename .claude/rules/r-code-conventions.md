@@ -1,7 +1,7 @@
 ---
 paths:
   - "**/*.R"
-  - "Figures/**/*.R"
+  - "lecture-slides/figs/**/*.R"
   - "scripts/**/*.R"
 ---
 
@@ -65,6 +65,7 @@ Numbered sections: 0. Setup, 1. Data/DGP, 2. Estimation, 3. Run, 4. Figures, 5. 
 ## 5. Domain Correctness
 
 <!-- Customize for your field's known pitfalls -->
+
 - Verify estimator implementations match slide formulas
 - Check known package bugs (document in Section 12 below)
 
@@ -81,6 +82,7 @@ negative_red  <- "#b91c1c"
 ```
 
 ### Custom Theme
+
 ```r
 theme_custom <- function(base_size = 14) {
   theme_minimal(base_size = base_size) +
@@ -92,6 +94,7 @@ theme_custom <- function(base_size = 14) {
 ```
 
 ### Figure Dimensions for Beamer
+
 ```r
 ggsave(filepath, width = 12, height = 5, bg = "transparent")
 ```
@@ -122,8 +125,9 @@ saveRDS(result, file.path(out_dir, "descriptive_name.rds"))
 ## 9. Common Pitfalls
 
 <!-- Add your field-specific pitfalls here -->
-| Pitfall | Impact | Prevention |
-|---------|--------|------------|
-| Missing `bg = "transparent"` | White boxes on slides | Always include in ggsave() |
-| `cat()` for status | Noisy stdout | Use message() sparingly |
-| Hardcoded paths | Breaks on other machines | Use relative paths |
+
+| Pitfall                      | Impact                   | Prevention                 |
+| ---------------------------- | ------------------------ | -------------------------- |
+| Missing `bg = "transparent"` | White boxes on slides    | Always include in ggsave() |
+| `cat()` for status           | Noisy stdout             | Use message() sparingly    |
+| Hardcoded paths              | Breaks on other machines | Use relative paths         |

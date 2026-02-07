@@ -20,7 +20,7 @@ execute:
 
 # Innovation and Market Structure {background-color="#00539b"}
 
-## Why innovation is central in IO
+## Innovation as a margin of competition
 
 Innovation is the **dynamic** margin of competition: firms try to change the game by shifting **costs** and **demand**.
 
@@ -32,7 +32,7 @@ Innovation is the **dynamic** margin of competition: firms try to change the gam
 
 ## Types of innovation (and what we model today)
 
-**Process innovation** (this lecture’s workhorse case)
+**Process innovation** (this lecture's workhorse case)
 
 - Lowers marginal (or average) cost, e.g. a better production method
 - Think: a shift from $c_0$ to $c_1<c_0$
@@ -58,11 +58,11 @@ Innovation is the **dynamic** margin of competition: firms try to change the gam
 4. Seminal results on **concentration** and **R&D** (Dasgupta–Stiglitz)
 :::
 
-## Two-way relationship to keep in mind
+## Market structure and innovation: a two-way relationship
 
 **Market structure → innovation**
 
-- Competition affects profits, appropriability, and the gain from becoming “better” than rivals
+- Competition affects profits, appropriability, and the gain from becoming "better" than rivals
 
 **Innovation → market structure**
 
@@ -70,9 +70,9 @@ Innovation is the **dynamic** margin of competition: firms try to change the gam
 
 ## Measuring incentives: willingness to pay (WTP)
 
-- **Firm WTP**: the max lump-sum payment that leaves profits unchanged  
+- **Firm WTP**: the max lump-sum payment that leaves profits unchanged
   $\Rightarrow \ \text{WTP} = \Delta \pi$
-- **Planner WTP**: the max lump-sum payment that leaves welfare unchanged  
+- **Planner WTP**: the max lump-sum payment that leaves welfare unchanged
   $\Rightarrow \ \text{WTP} = \Delta W$
 
 In what follows we compute WTP for:
@@ -90,14 +90,14 @@ $$
 
 **Technology**
 
-- Constant marginal cost $c$
+- Constant marginal cost $c \in \{c_0, c_1\}$
 - Process innovation reduces marginal cost from $c_0$ to $c_1$ with $c_1 < c_0 < A$
 
 ::: {.callout-note title="Goal"}
 Compute the value of moving from $c_0$ to $c_1$ under different market structures.
 :::
 
-## Monopoly benchmark (exclusive access before and after)
+## Monopoly benchmark: problem and solution
 
 **Problem**
 
@@ -111,6 +111,8 @@ $$
 Q^m(c) = \frac{A-c}{2}, \qquad P^m(c) = \frac{A+c}{2}, \qquad \pi^m(c) = \frac{(A-c)^2}{4}
 $$
 
+## Monopoly WTP for innovation
+
 **WTP for the innovation**
 
 $$
@@ -118,7 +120,7 @@ $$
 $$
 
 ::: {.callout-note title="Interpretation"}
-$\Delta \pi^m$ is the monopolist’s value of *exclusive* access to the lower cost $c_1$ (it is incremental because the firm already earns rents at $c_0$).
+$\Delta \pi^m$ is the monopolist's value of *exclusive* access to the lower cost $c_1$ (it is incremental because the firm already earns rents at $c_0$).
 :::
 
 ## Perfect competition benchmark (innovation creates rents)
@@ -145,7 +147,7 @@ $$
 
 **Why the non-drastic formula?** If the innovator sets $p=c_0$, quantity is $Q=A-c_0$, so profits are $(p-c_1)Q=(c_0-c_1)(A-c_0)$.
 
-**Drastic innovation condition**
+## Drastic innovation condition
 
 $$
 P^m(c_1) < c_0
@@ -155,13 +157,17 @@ P^m(c_1) < c_0
 A + c_1 < 2c_0
 $$
 
+<!-- TODO: Add demand-cost diagram showing drastic vs non-drastic threshold -->
+
+## Replacement effect [@arrowEconomicWelfareAllocation1972]
+
 ::: {.callout-note title="Key idea (replacement effect)"}
-Under perfect competition, pre-innovation profits are zero, so innovation mainly **creates** rents. Under monopoly, innovation partly **replaces** existing rents. [@arrowEconomicWelfareAllocation1972]
+Under perfect competition, pre-innovation profits are zero, so innovation mainly **creates** rents. Under monopoly, innovation partly **replaces** existing rents.
 :::
 
-::: {.callout-note title="Appropriability (important!)"}
-If the innovation cannot be protected (instant diffusion / perfect imitation), competition drives price to $c_1$ and the innovator’s WTP is **zero**. Most IO policy questions start from the fact that appropriability is **imperfect but positive** (patents, secrecy, lead time).
-:::
+## Appropriability and imitation
+
+*If the innovation cannot be protected (instant diffusion / perfect imitation), competition drives price to $c_1$ and the innovator's WTP is zero. Most IO policy questions start from the fact that appropriability is imperfect but positive (patents, secrecy, lead time).*
 
 ## Replacement effect: a one-line comparison (drastic case)
 
@@ -171,21 +177,25 @@ $$
 \Delta \pi^{pc} = \pi^m(c_1), \qquad \Delta \pi^m = \pi^m(c_1) - \pi^m(c_0)
 $$
 
-So
+. . .
 
 $$
 \Delta \pi^{pc} - \Delta \pi^m = \pi^m(c_0) > 0
 $$
 
 ::: {.callout-important title="Takeaway"}
-Holding everything else fixed, an incumbent monopolist has **weaker** incentives to innovate than a competitive industry because it is “replacing” its own pre-innovation rents.
+Holding everything else fixed, an incumbent monopolist has **weaker** incentives to innovate than a competitive industry because it is "replacing" its own pre-innovation rents.
 :::
+
+<!-- TODO: Add surplus diagram illustrating the replacement effect (pre/post innovation surplus under monopoly vs competition) -->
 
 ## Empirical example: competition and innovation
 
-Inverted-U evidence (QJE)
-@aghionCompetitionInnovationInvertedU2005 document an **inverted-U** relationship between product-market competition and innovation (patents/citations) in UK firms, consistent with “escape competition” incentives for neck-and-neck firms and a **replacement effect** for laggards. 
+::: {.callout-note title="Inverted-U evidence (QJE)"}
+[@aghionCompetitionInnovationInvertedU2005] document an **inverted-U** relationship between product-market competition and innovation (patents/citations) in UK firms, consistent with "escape competition" incentives for neck-and-neck firms and a **replacement effect** for laggards.
+:::
 
+<!-- TODO: Add sketch of the inverted-U relationship from Aghion et al. (2005) -->
 
 ## Social planner: value of a cost reduction
 
@@ -201,15 +211,17 @@ $$
 W(c) = \int_0^{A-c} (A - Q - c) \, dQ = \frac{(A-c)^2}{2}
 $$
 
+::: {.callout-note title="Interpretation"}
+In this linear example, $\Delta W = 2\,\Delta \pi^m$: the planner values the output expansion that the monopolist does not internalise.
+:::
+
+## Social planner WTP for innovation
+
 **Max WTP for innovation (social planner):**
 
 $$
 \Delta W = W(c_1) - W(c_0) = \frac{(A-c_1)^2 - (A-c_0)^2}{2}
 $$
-
-::: {.callout-note title="Interpretation"}
-In this linear example, $\Delta W = 2\,\Delta \pi^m$: the planner values the output expansion that the monopolist does not internalise.
-:::
 
 ## Putting the benchmarks side-by-side
 
@@ -226,7 +238,7 @@ Private incentives and social value need not align: **$\Delta W$ can exceed $\De
 ## Empirical example: private vs social returns
 
 ::: {.callout-note title="Welfare gains from product innovation (JPE)"}
-Trajtenberg (1989) estimates consumer and producer surplus gains from quality improvements in computed tomography (CT) scanners, illustrating that the **social value** of innovation can greatly exceed the innovator’s private returns. DOI: 10.1086/261611. [@trajtenbergWelfareAnalysisProduct1989]
+Trajtenberg (1989) estimates consumer and producer surplus gains from quality improvements in computed tomography (CT) scanners, illustrating that the **social value** of innovation can greatly exceed the innovator's private returns. [@trajtenbergWelfareAnalysisProduct1989]
 :::
 
 ## Quick numeric check (optional)
@@ -237,7 +249,7 @@ Take $A=20$, $c_0=10$, $c_1=6$.
 - Planner: $W(c_0)=50$, $W(c_1)=98$, so $\Delta W=48$ (twice the monopoly gain)
 
 ::: {.callout-note title="Discussion question"}
-In what sense is this “too little” innovation from a welfare perspective? What policy instruments could close the gap?
+In what sense is this "too little" innovation from a welfare perspective? What policy instruments could close the gap?
 :::
 
 # Innovation with Rivals and Entry {background-color="#00539b"}
@@ -246,7 +258,7 @@ In what sense is this “too little” innovation from a welfare perspective? Wh
 
 **Takeaway**
 
-- Innovation incentives need not be monotone in “competition intensity”
+- Innovation incentives need not be monotone in "competition intensity"
 - They depend on:
   - Number of firms ($n$)
   - Product differentiation
@@ -272,7 +284,7 @@ More rivals reduces baseline profits (hurting incentives), but can increase the 
 
 - Both can acquire innovation reducing MC from $c_0$ to $c_1 < c_0$
 - Entrant can enter profitably **only if** it gets innovation
-- Let $\pi^d(c_i,c_j)$ denote firm $i$’s profit in the post-entry **duopoly** when costs are $(c_i,c_j)$
+- Let $\pi^d(c_i,c_j)$ denote firm $i$'s profit in the post-entry **duopoly** when costs are $(c_i,c_j)$
 
 **Payoffs:**
 
@@ -299,6 +311,8 @@ $$
 
 **Incumbent has stronger incentives if**
 
+. . .
+
 $$
 V_I > V_E \quad \Leftrightarrow \quad \pi^m(c_1) > \pi^d(c_1, c_0) + \pi^d(c_0, c_1)
 $$
@@ -309,27 +323,35 @@ Typically when products are close substitutes (entry is very harmful).
 Here the incumbent may innovate **more** than an entrant because innovation does two things at once: it lowers cost *and* it keeps the market in the monopoly regime (entry deterrence / pre-emption).
 :::
 
+## Discussion: when does pre-emption fail?
+
+Under what market conditions might an entrant have stronger innovation incentives than the incumbent? What features would reverse the pre-emption result?
+
 ## Empirical example: strategic incentives and market share
 
 ::: {.callout-note title="Pre-emptive innovation patterns (ReStud)"}
-Blundell, Griffith, and Van Reenen (1999) find that higher market share and market value predict more patenting/innovations in UK manufacturing firms, consistent with **strategic** incentives (including pre-emptive innovation) in oligopolistic industries. DOI: 10.1111/1467-937X.00097. [@blundellMarketShareMarket1999]
+Blundell, Griffith, and Van Reenen (1999) find that higher market share and market value predict more patenting/innovations in UK manufacturing firms, consistent with **strategic** incentives (including pre-emptive innovation) in oligopolistic industries. [@blundellMarketShareMarket1999]
 :::
 
 # Seminal Contributions {background-color="#00539b"}
 
-## Why Dasgupta–Stiglitz matters [@dasguptaIndustrialStructureNature1980]
+## Dasgupta–Stiglitz: endogenous R&D and market structure [@dasguptaIndustrialStructureNature1980]
 
 They model R&D as an **endogenous sunk cost**: firms spend on R&D to reduce marginal cost, and entry adjusts endogenously.
 
-The punchline is a clean link between:
+The key result is a clean link between:
 
 - **Demand conditions** (elasticity, market size)
 - **Innovative opportunities** (how effective R&D is at lowering costs)
 - **Equilibrium concentration** (how many firms survive under free entry)
 
+::: {.callout-note title="Notation shift"}
+We now move from the linear demand model ($P = A - Q$) to general functional forms ($U(Q)$, $c(x)$) to state the Dasgupta–Stiglitz results.
+:::
+
 ## Dasgupta–Stiglitz (1980): planner benchmark [@dasguptaIndustrialStructureNature1980]
 
-**Question**: Does more firms imply more innovation?
+**Question**: Do more firms imply more innovation?
 
 **Primitives:**
 
@@ -349,17 +371,17 @@ $$
 -c'(x)Q = 1
 $$
 
-**Interpretation:**
+## Planner benchmark: interpretation
 
 - Optimal R&D increases with scale $Q$: a larger market makes cost reduction more valuable
 
 ## Empirical example: market size and innovation
 
 ::: {.callout-note title="Pharmaceutical innovation responds to demand (QJE)"}
-Acemoglu and Linn (2004) show that larger potential markets lead to more pharmaceutical innovation (new drugs/new molecular entities), consistent with models where the return to innovation rises with **scale**. DOI: 10.1162/0033553041502144. [@acemogluMarketSizeInnovation2004]
+Acemoglu and Linn (2004) show that larger potential markets lead to more pharmaceutical innovation (new drugs/new molecular entities), consistent with models where the return to innovation rises with **scale**. [@acemogluMarketSizeInnovation2004]
 :::
 
-## Dasgupta–Stiglitz (1980): symmetric oligopoly [@dasguptaIndustrialStructureNature1980]
+## Dasgupta–Stiglitz (1980): firm's problem [@dasguptaIndustrialStructureNature1980]
 
 **Firm $i$'s problem (symmetric firms):**
 
@@ -371,20 +393,22 @@ $$
 
 - $q_1^* = \cdots = q_N^* = Q^*/N$ and $x_1^* = \cdots = x_N^* = x^*$
 
+## Dasgupta–Stiglitz (1980): equilibrium pricing [@dasguptaIndustrialStructureNature1980]
+
 **First-order condition in $q_i$:**
 
 $$
 P(Q^*)\left(1 - \frac{1}{N\varepsilon}\right) = c(x^*)
 $$
 
-where $\varepsilon = -\frac{\partial Q}{\partial P}\frac{P}{Q}$ is demand elasticity
+where $\varepsilon = -\frac{\partial Q}{\partial P}\frac{P}{Q}$ is the demand elasticity.
 
 **Interpretation:**
 
 - The term $\left(1-\frac{1}{N\varepsilon}\right)$ captures market power via the perceived demand elasticity under Cournot
   - More firms ($N\uparrow$) → perceived demand becomes more elastic → mark-ups fall
 
-## Free entry and concentration [@dasguptaIndustrialStructureNature1980]
+## Free entry condition [@dasguptaIndustrialStructureNature1980]
 
 **Zero profit condition** (free entry):
 
@@ -398,6 +422,8 @@ $$
 P - c = N^* \frac{x^*}{Q^*}
 $$
 
+## Equilibrium concentration [@dasguptaIndustrialStructureNature1980]
+
 **Define innovative potential:**
 
 $$
@@ -406,12 +432,29 @@ $$
 
 **Equilibrium concentration satisfies:**
 
+. . .
+
 $$
 \frac{1}{N^*} = \frac{1}{\varepsilon} \cdot \frac{\alpha}{1+\alpha}
 $$
 
 ::: {.callout-note title="Interpretation"}
 Concentration and research intensity are jointly determined: entry expands $N$ until operating surplus covers R&D outlays $x^*$. Higher innovative potential ($\alpha$) supports higher concentration; more elastic demand lowers concentration.
+:::
+
+## Dasgupta–Stiglitz: numerical illustration
+
+**Using the concentration formula** with specific values:
+
+$$
+\frac{1}{N^*} = \frac{1}{\varepsilon} \cdot \frac{\alpha}{1+\alpha}
+$$
+
+- If $\varepsilon = 2$ and $\alpha = 1$: $\frac{1}{N^*} = \frac{1}{2} \cdot \frac{1}{2} = \frac{1}{4}$, so $N^* = 4$ firms
+- If $\varepsilon = 2$ and $\alpha = 3$: $\frac{1}{N^*} = \frac{1}{2} \cdot \frac{3}{4} = \frac{3}{8}$, so $N^* \approx 2.7$ firms
+
+::: {.callout-note title="Discussion question"}
+If a government subsidy increases innovative potential ($\alpha$), what does the model predict for market structure? Is this welfare-improving?
 :::
 
 ## Dasgupta (1986): key comparative statics (I) [@dasguptaTheoryTechnologicalCompetition1986]
@@ -450,16 +493,18 @@ $$
 - Larger markets (higher $\sigma$) increase the return to cost reduction
 - Stronger innovative opportunities (higher $\alpha$) can support higher concentration in equilibrium
 
-## Summary
+## Summary and next week
+
+**Summary**
 
 - Innovation value depends on the objective: **$\Delta \pi$ (private)** versus **$\Delta W$ (social)**
-- Replacement effect: pre-innovation rents reduce the incumbent’s incremental gain from innovation
+- Replacement effect: pre-innovation rents reduce the incumbent's incremental gain from innovation
 - With entry threat, innovation can be worth more because it changes **market structure** (monopoly vs duopoly)
 - In oligopoly, incentives reflect competing forces (competition effect vs competitive advantage effect)
 
-## Next week: patents and IPRs
+**Next week: patents and IPRs**
 
-- Patents as incentives: monopoly rights v dynamic efficiency
+- Patents as incentives: monopoly rights vs. dynamic efficiency
 - Patent races and timing
 - Disclosure, licensing, and welfare
 - Horizontal and vertical innovation (brief)

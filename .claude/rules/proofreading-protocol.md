@@ -1,7 +1,6 @@
 ---
 paths:
-  - "Slides/**/*.tex"
-  - "Quarto/**/*.qmd"
+  - "lecture-slides/**/*.qmd"
   - "quality_reports/**"
 ---
 
@@ -10,6 +9,7 @@ paths:
 **Every lecture file MUST be reviewed by the proofreading agent before any commit or PR.**
 
 The proofreading agent checks for:
+
 - **Grammar errors** -- subject-verb agreement, missing articles, wrong prepositions
 - **Typos** -- misspellings, search-and-replace corruption
 - **Overflow issues** -- overfull hbox in Beamer, content exceeding slide boundaries in Quarto
@@ -35,6 +35,7 @@ Launch parallel review agents for all modified lecture files. Each agent:
 5. **Does NOT modify any source files**
 
 **Example report entry:**
+
 ```
 ### Issue 7: Wrong preposition
 - **File:** Slides/LectureN_Topic.tex
@@ -47,6 +48,7 @@ Launch parallel review agents for all modified lecture files. Each agent:
 ### Phase 2: Review & Approve
 
 The user (or Claude, if instructed) reviews the proposed changes:
+
 - Accepts all changes, or
 - Accepts selectively, or
 - Requests modifications
@@ -56,6 +58,7 @@ The user (or Claude, if instructed) reviews the proposed changes:
 ### Phase 3: Apply Fixes
 
 Launch parallel fix agents to apply only the approved changes:
+
 - Each agent reads the report and applies edits using the Edit tool
 - Uses `replace_all: true` for issues with multiple instances
 - Verifies each edit succeeded
@@ -85,6 +88,7 @@ Save the report to quality_reports/[FILENAME_WITHOUT_EXT]_report.md
 ## Integration Points
 
 Run proofreading at these points:
+
 1. **Before any commit** -- on all modified lecture files
 2. **Before any PR** -- full sweep of all lecture files
 3. **After creating new lecture content** -- immediately after development
@@ -93,6 +97,7 @@ Run proofreading at these points:
 ## Quality Reports
 
 Reports saved to `quality_reports/` with naming convention:
+
 ```
 quality_reports/
 ├── Lecture1_Topic_report.md
