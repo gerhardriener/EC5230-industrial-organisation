@@ -15,23 +15,26 @@ Extract TikZ diagrams from the Beamer source, compile to multi-page PDF, and con
 
 **Before compiling, verify that `extract_tikz.tex` matches the current Beamer source.**
 
-1. Find the Beamer source: `ls Slides/$ARGUMENTS*.tex`
-2. Extract all `\begin{tikzpicture}` blocks from Beamer
-3. Compare with `Figures/$ARGUMENTS/extract_tikz.tex`
+1. Find the Beamer source: `ls lecture-slides/slides/figs/source/$ARGUMENTS*.tex`
+2. Extract all `\begin{tikzpicture}` blocks from tex file
+3. Compare with `lecture-slides/slides/figs/source/$ARGUMENTS/extract_tikz.tex`
 4. If ANY difference exists: update extract_tikz.tex from the Beamer source
 5. If extract_tikz.tex doesn't exist: create it from scratch
 
 ### Step 1: Navigate to the lecture's Figures directory
+
 ```bash
-cd Figures/$ARGUMENTS
+cd lecture-slides/slides/figs/source/$ARGUMENTS
 ```
 
 ### Step 2: Compile the extract_tikz.tex file
+
 ```bash
 TEXINPUTS=../../Preambles:$TEXINPUTS xelatex -interaction=nonstopmode extract_tikz.tex
 ```
 
 ### Step 3: Count the number of pages
+
 ```bash
 pdfinfo extract_tikz.pdf | grep "Pages:"
 ```
@@ -49,16 +52,19 @@ done
 ```
 
 ### Step 5: Sync to docs/ for deployment
+
 ```bash
 cd ../..
 ./scripts/sync_to_docs.sh $ARGUMENTS
 ```
 
 ### Step 6: Verify SVG files
+
 - Read 2-3 SVG files to confirm they contain valid SVG markup
 - Confirm file sizes are reasonable (not 0 bytes)
 
 ### Step 7: Report results
 
 ## Source of Truth Reminder
+
 TikZ diagrams MUST be edited in the Beamer `.tex` file first, then copied verbatim to `extract_tikz.tex`. See `.claude/rules/single-source-of-truth.md`.
