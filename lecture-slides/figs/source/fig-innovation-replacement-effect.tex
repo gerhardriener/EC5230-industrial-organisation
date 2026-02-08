@@ -44,6 +44,11 @@
   coordinates {(0,\cO) (\QmO,\cO) (\QmO,\PmO) (0,\PmO)} \closedcycle;
 \node[font=\small, align=center, fill=white, fill opacity=0.85, text opacity=1, inner sep=2pt] at (axis cs:2.5,12.5) {$\pi^m(c_0)$\\(replaced)};
 
+% Lost profit strip (top-left of old rectangle, darker red with pattern)
+\addplot[fill=red!40, draw=red!70!black, thick, forget plot, opacity=0.7]
+  coordinates {(0,\PmI) (\QmO,\PmI) (\QmO,\PmO) (0,\PmO)} \closedcycle;
+\node[font=\scriptsize, red!70!black] at (axis cs:2.5,14) {lost: 10};
+
 % Post-innovation profit (blue outline): rectangle c1 to P^m(c1), width Q^m(c1)
 \addplot[draw=blue!70!black, thick, fill=none, forget plot]
   coordinates {(0,\cI) (\QmI,\cI) (\QmI,\PmI) (0,\PmI)};
@@ -63,16 +68,17 @@
 \addplot[fill=blue!25, draw=none, forget plot]
   coordinates {(\QmO,\cO) (\QmI,\cO) (\QmI,\PmI) (\QmO,\PmI)} \closedcycle;
 
-% Label gain
-\node[font=\small, blue!70!black, fill=white, fill opacity=0.85, text opacity=1, inner sep=2pt] at (axis cs:3.5,8) {gain};
-
-% Label: Delta pi^m
+% Label: Delta pi^m with arrow to blue region
 \node[font=\small, align=center, blue!70!black] at (axis cs:7.5,3)
   {$\Delta\pi^m = 24$};
+\draw[->, blue!70!black, thick] (axis cs:7,3.5) -- (axis cs:6,7);
 
-% Dashed verticals
+% Dashed verticals with x-axis labels
 \addplot[densely dashed, thin, gray] coordinates {(\QmO,0) (\QmO,\PmO)};
+\node[anchor=north, gray, font=\small] at (axis cs:\QmO,0) {$Q^m_0$};
+
 \addplot[densely dashed, thin, gray] coordinates {(\QmI,0) (\QmI,\PmI)};
+\node[anchor=north, gray, font=\small] at (axis cs:\QmI,0) {$Q^m_1$};
 
 \end{axis}
 \end{scope}
@@ -112,8 +118,9 @@
 \node[anchor=east, blue!70!black, font=\small] at (axis cs:0,\cI) {$c_1$};
 
 % Pre-innovation: P = c0, profit = 0 (nothing to shade)
-\node[font=\small, red!70!black, align=center] at (axis cs:12,11)
+\node[font=\small, red!70!black, align=center, anchor=west] at (axis cs:10.5,10.5)
   {Pre-innovation:\\$\pi = 0$};
+\draw[->, red!70!black] (axis cs:10.5,10) -- (axis cs:10,10);
 
 % Post-innovation profit (non-drastic): rectangle c1 to c0, width A-c0
 \addplot[fill=green!25, draw=green!50!black, thick, forget plot]

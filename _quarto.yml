@@ -17,10 +17,8 @@ website:
     left:
       - text: "Home"
         file: index.qmd
-      - text: "Lectures"
-        file: lecture-slides/index.qmd
       - text: "Exercises"
-        href: exercises/
+        href: exercises/index.qmd
   sidebar:
     - title: "Lecture Slides"
       style: "docked"
@@ -28,8 +26,9 @@ website:
       contents:
         - section: "Weeks 1-5"
           contents:
-            - lecture-slides/lecture-1-oligopoly.qmd
-            - lecture-slides/lecture-2-product-differentiation.qmd
+            - lecture-slides/slides/lecture-1-oligopoly.qmd
+            - lecture-slides/slides/lecture-2-product-differentiation.qmd
+            - lecture-slides/slides/lecture-3-innovation.qmd
 
 format:
   html:

@@ -1,7 +1,5 @@
 ---
 title: "Exercise 1: Oligopoly and Product Differentiation"
-params:
-  solution: false
 format:
   html:
     toc: false

@@ -120,8 +120,8 @@ for tex_file in tex_files:
     if match:
         tikz_code = match.group(0)  # Include the environment tags
         svg_file = render_tikz_svg(tikz_picture=tikz_code, name=fig_name)
-        print(f"✓ {svg_file}")
+        print(f"[OK] {svg_file}")
     else:
-        print(f"⚠ Skipped {tex_file.name} (no tikzpicture environment found)")
+        print(f"[SKIP] Skipped {tex_file.name} (no tikzpicture environment found)")
 
-print(f"\n✓ Generated {len(tex_files)} SVG diagrams.")
+print(f"\n[OK] Generated {len(tex_files)} SVG diagrams.")

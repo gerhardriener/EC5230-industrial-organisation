@@ -37,6 +37,7 @@ By the end of the module, you will be able to:
 This module contributes to UN Sustainable Development Goals:
 
 - **Goal 9: Industry, Innovation, and Infrastructure** — Examining how patents and IPRs impact innovation disclosure and cooperative R&D
+
 - **Goal 12: Responsible Consumption and Production** — Analysing network effects in technology adoption and sustainable industrialisation
 
 ## Course Materials

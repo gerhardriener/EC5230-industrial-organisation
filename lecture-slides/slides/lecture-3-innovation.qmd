@@ -31,15 +31,15 @@ Innovation is the **dynamic** margin of competition: firms try to change the gam
 ## Learning objectives
 
 - Compute the **private value** of a process innovation under different market structures
-- Define **drastic vs non-drastic** innovations and explain the **replacement effect** (Arrow)
+- Define **drastic vs non-drastic** innovations and explain the **replacement effect** [@arrowEconomicWelfareAllocation1972]
 - Understand why innovation can have **strategic value** when it affects **entry** and market structure
-- See how models with **free entry + endogenous R&D** link innovation to **concentration** (Dasgupta–Stiglitz)
+- See how models with **free entry + endogenous R&D** link innovation to **concentration** [@dasguptaIndustrialStructureNature1980]
 
 ::: {.callout-note title="Today: roadmap"}
 1. Benchmark model: value of a process innovation under **monopoly**, **perfect competition**, and the **social planner**
 2. **Drastic vs non-drastic** innovations and the **replacement effect**
 3. Innovation incentives in **oligopoly** and under **entry threat**
-4. Seminal results on **concentration** and **R&D** (Dasgupta–Stiglitz)
+4. Seminal results on **concentration** and **R&D** [@dasguptaIndustrialStructureNature1980]
 :::
 
 ## Market structure and innovation: a two-way relationship
@@ -107,6 +107,16 @@ $$
 $\Delta \pi^m$ is the monopolist's value of *exclusive* access to the lower cost $c_1$ (it is incremental because the firm already earns rents at $c_0$).
 :::
 
+## Discussion: Why does innovation matter for growth?
+
+Before the Industrial Revolution (~1760–1840), global GDP per capita was roughly flat for centuries. Since then, it has grown exponentially.
+
+**Question for you:**
+
+- What role did innovation (new production methods, machinery, transport) play in this transformation?
+- Why might market structure affect the *rate* of innovation — and therefore long-run growth?
+- Should we expect monopolies or competitive markets to innovate more? (We'll answer this formally in a moment.)
+
 ## Perfect competition benchmark (innovation creates rents)
 
 **Before innovation (all firms at MC $c_0$):**
@@ -151,7 +161,7 @@ $$
 
 ## Numeric check: drastic or non-drastic?
 
-Take $A=20$, $c_0=10$, $c_1=6$.
+Take $A=20$, $c_0=10$, and $c_1=6$.
 
 - **Drastic condition**: $A + c_1 = 26 > 2c_0 = 20$ → **non-drastic**
 - Innovator limit-prices at $p = c_0 = 10$, sells $Q = A - c_0 = 10$
@@ -258,7 +268,7 @@ Trajtenberg (1989) estimates consumer and producer surplus gains from quality im
 
 ## Quick numeric check (optional)
 
-Take $A=20$, $c_0=10$, $c_1=6$.
+Take $A=20$, $c_0=10$, and $c_1=6$.
 
 - Monopoly: $\pi^m(c_0)=25$, $\pi^m(c_1)=49$, so $\Delta\pi^m=24$
 - Planner: $W(c_0)=50$, $W(c_1)=98$, so $\Delta W=48$ (twice the monopoly gain)
@@ -445,32 +455,40 @@ $$
 P - c = N^* \frac{x^*}{Q^*}
 $$
 
-## Deriving the concentration formula
+## Deriving the concentration formula (I): Setup
 
 **Combine the two conditions:**
 
 - From pricing FOC: $P - c = \frac{P}{N\varepsilon}$
 - From free entry: $P - c = \frac{Nx}{Q}$
 
-**Equating and using the R&D FOC** ($-c'(x)q = 1$, so $x/(cq) = \alpha$):
+**Equating the two expressions:**
 
 $$
-\frac{P}{N\varepsilon} = \frac{Nx}{Q} = \alpha c
+\frac{P}{N\varepsilon} = \frac{Nx}{Q}
 $$
 
-**Dividing by $P$ and noting** $c/P = 1 - 1/(N\varepsilon)$ from the pricing FOC:
+*(We solve for $N$ on the next slide.)*
+
+## Deriving the concentration formula (II): Solution
+
+**Introduce innovative potential** $\alpha = -\frac{dc(x)}{dx}\frac{x}{c}$ (from firm's R&D FOC).
+
+**This implies:** $\frac{x}{cq} = \alpha$, so $\frac{Nx}{Q} = \frac{Nx}{Nq} = \frac{x}{q} = \alpha c$
+
+**Substitute into our equation:**
+
+$$
+\underbrace{\frac{P}{N\varepsilon}}_{\text{markup}} = \underbrace{\alpha c}_{\text{R\&D cost per unit}}
+$$
+
+**Divide by $P$** and use $c/P = 1 - 1/(N\varepsilon)$ from the pricing FOC:
 
 $$
 \frac{1}{N\varepsilon} = \alpha\!\left(1 - \frac{1}{N\varepsilon}\right) \quad \Rightarrow \quad \frac{1}{N^*} = \frac{1}{\varepsilon}\cdot\frac{\alpha}{1+\alpha}
 $$
 
 ## Equilibrium concentration [@dasguptaIndustrialStructureNature1980]
-
-**Define innovative potential:**
-
-$$
-\alpha = -\frac{dc(x)}{dx}\frac{x}{c}
-$$
 
 **Equilibrium concentration satisfies:**
 
