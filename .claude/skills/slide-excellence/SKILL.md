@@ -47,6 +47,23 @@ Parse `$ARGUMENTS` for the filename. Resolve path in `Quarto/` or `Slides/`.
 - Domain correctness via domain-reviewer protocol
 - Save: `quality_reports/[FILE]_substance_review.md`
 
+**Agent 7: Citation Key Audit** (always for .qmd files)
+
+- Detect hardcoded author-year citations not using `@citationKey` syntax
+- Cross-reference against `references.bib` to suggest correct keys
+- Exempt: figure `fig-alt` strings, code blocks, YAML frontmatter, non-citation parenthetical asides
+- Detection patterns:
+  - `Author (YYYY)` — e.g., `Arrow (1962)`
+  - `Author et al. (YYYY)` — e.g., `Aghion et al. (2005)`
+  - `Author and Author (YYYY)` — e.g., `Acemoglu and Linn (2004)`
+  - `Author, Author, and Author (YYYY)` — e.g., `Blundell, Griffith, and Van Reenen (1999)`
+  - `(Author YYYY)` or `(Author, YYYY)` — e.g., `(Dasgupta–Stiglitz 1980)`
+- Skip lines where a `@citationKey` for the same reference already appears
+- For each match: report line number, matched text, and suggested `@key` replacement from `references.bib`
+- If no matching bib entry exists: flag as "hardcoded citation with no bib entry" (double issue)
+- Quality gate: **-10 per instance** (Major)
+- Save: `quality_reports/[FILE]_citation_audit.md`
+
 ### 3. Synthesize Combined Summary
 
 ```markdown
@@ -59,6 +76,7 @@ Parse `$ARGUMENTS` for the filename. Resolve path in `Quarto/` or `Slides/`.
 | Visual/Layout |          |        |     |
 | Pedagogical   |          |        |     |
 | Proofreading  |          |        |     |
+| Citations     |          |        |     |
 
 ### Critical Issues (Immediate Action Required)
 

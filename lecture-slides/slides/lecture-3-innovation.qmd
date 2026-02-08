@@ -1,21 +1,5 @@
 ---
 title: "Lecture 3 - Innovation"
-format:
-  clean-revealjs:
-    slide-number: true
-    title-slide-attributes:
-      data-background-color: "#00539b"
-    chalkboard: true
-    preview-links: auto
-    transition: none
-    background-transition: fade
-  beamer: default
-
-execute:
-  echo: false
-  warning: false
-  message: false
-  cache: true
 ---
 
 # Innovation and Market Structure {background-color="#00539b"}
@@ -157,7 +141,26 @@ P^m(c_1) < c_0
 A + c_1 < 2c_0
 $$
 
-<!-- TODO: Add demand-cost diagram showing drastic vs non-drastic threshold -->
+::: {.content-visible when-format="beamer"}
+\resizebox{0.85\textwidth}{!}{\includestandalone{../figs/source/fig-innovation-drastic-threshold}}
+:::
+
+::: {.content-visible when-format="html"}
+![](../figs/fig-innovation-drastic-threshold.svg){fig-alt="Demand-cost diagram showing drastic vs non-drastic innovation threshold" fig-align="center" width="80%"}
+:::
+
+## Numeric check: drastic or non-drastic?
+
+Take $A=20$, $c_0=10$, $c_1=6$.
+
+- **Drastic condition**: $A + c_1 = 26 > 2c_0 = 20$ → **non-drastic**
+- Innovator limit-prices at $p = c_0 = 10$, sells $Q = A - c_0 = 10$
+- Competitive innovator profit: $(c_0 - c_1)(A - c_0) = 4 \times 10 = 40$
+- Recall monopoly WTP: $\Delta\pi^m = \frac{(14)^2 - (10)^2}{4} = \frac{196 - 100}{4} = 24$
+
+::: {.callout-note title="Replacement effect preview"}
+The competitive innovator earns $40 > 24$ (the monopolist's WTP). The monopolist gains less because it already earns $\pi^m(c_0) = 25$ before innovating — it is partly **replacing** existing rents.
+:::
 
 ## Replacement effect [@arrowEconomicWelfareAllocation1972]
 
@@ -187,7 +190,13 @@ $$
 Holding everything else fixed, an incumbent monopolist has **weaker** incentives to innovate than a competitive industry because it is "replacing" its own pre-innovation rents.
 :::
 
-<!-- TODO: Add surplus diagram illustrating the replacement effect (pre/post innovation surplus under monopoly vs competition) -->
+::: {.content-visible when-format="beamer"}
+\resizebox{0.95\textwidth}{!}{\includestandalone{../figs/source/fig-innovation-replacement-effect}}
+:::
+
+::: {.content-visible when-format="html"}
+![](../figs/fig-innovation-replacement-effect.svg){fig-alt="Two-panel surplus diagram: monopoly replaces existing rents while competitive innovator creates new rents" fig-align="center" width="95%"}
+:::
 
 ## Empirical example: competition and innovation
 
@@ -195,7 +204,13 @@ Holding everything else fixed, an incumbent monopolist has **weaker** incentives
 [@aghionCompetitionInnovationInvertedU2005] document an **inverted-U** relationship between product-market competition and innovation (patents/citations) in UK firms, consistent with "escape competition" incentives for neck-and-neck firms and a **replacement effect** for laggards.
 :::
 
-<!-- TODO: Add sketch of the inverted-U relationship from Aghion et al. (2005) -->
+::: {.content-visible when-format="beamer"}
+\resizebox{0.8\textwidth}{!}{\includestandalone{../figs/source/fig-innovation-inverted-u}}
+:::
+
+::: {.content-visible when-format="html"}
+![](../figs/fig-innovation-inverted-u.svg){fig-alt="Inverted-U relationship between competition and innovation, after Aghion et al. (2005)" fig-align="center" width="75%"}
+:::
 
 ## Social planner: value of a cost reduction
 
@@ -284,7 +299,7 @@ More rivals reduces baseline profits (hurting incentives), but can increase the 
 
 - Both can acquire innovation reducing MC from $c_0$ to $c_1 < c_0$
 - Entrant can enter profitably **only if** it gets innovation
-- Let $\pi^d(c_i,c_j)$ denote firm $i$'s profit in the post-entry **duopoly** when costs are $(c_i,c_j)$
+- Let $\pi^d(c_i,c_j)$ denote firm $i$'s profit in the post-entry **duopoly** when own cost is $c_i$ and the rival's cost is $c_j$
 
 **Payoffs:**
 
@@ -345,8 +360,16 @@ The key result is a clean link between:
 - **Innovative opportunities** (how effective R&D is at lowering costs)
 - **Equilibrium concentration** (how many firms survive under free entry)
 
-::: {.callout-note title="Notation shift"}
-We now move from the linear demand model ($P = A - Q$) to general functional forms ($U(Q)$, $c(x)$) to state the Dasgupta–Stiglitz results.
+The linear model gave us clean closed-form comparisons. The D-S framework sacrifices tractability for generality — but delivers a structural result linking innovation to concentration.
+
+::: {.callout-note title="Notation for this section"}
+| Symbol | Type | Meaning |
+|--------|------|---------|
+| $x$ | Choice | R&D expenditure per firm |
+| $c(x)$ | Function | Marginal cost (decreasing in $x$) |
+| $N$ | Outcome | Number of active firms (endogenous) |
+| $\varepsilon$ | Parameter | Demand elasticity |
+| $\alpha$ | Parameter | Innovative potential (R&D cost elasticity) |
 :::
 
 ## Dasgupta–Stiglitz (1980): planner benchmark [@dasguptaIndustrialStructureNature1980]
@@ -420,6 +443,25 @@ $$
 
 $$
 P - c = N^* \frac{x^*}{Q^*}
+$$
+
+## Deriving the concentration formula
+
+**Combine the two conditions:**
+
+- From pricing FOC: $P - c = \frac{P}{N\varepsilon}$
+- From free entry: $P - c = \frac{Nx}{Q}$
+
+**Equating and using the R&D FOC** ($-c'(x)q = 1$, so $x/(cq) = \alpha$):
+
+$$
+\frac{P}{N\varepsilon} = \frac{Nx}{Q} = \alpha c
+$$
+
+**Dividing by $P$ and noting** $c/P = 1 - 1/(N\varepsilon)$ from the pricing FOC:
+
+$$
+\frac{1}{N\varepsilon} = \alpha\!\left(1 - \frac{1}{N\varepsilon}\right) \quad \Rightarrow \quad \frac{1}{N^*} = \frac{1}{\varepsilon}\cdot\frac{\alpha}{1+\alpha}
 $$
 
 ## Equilibrium concentration [@dasguptaIndustrialStructureNature1980]

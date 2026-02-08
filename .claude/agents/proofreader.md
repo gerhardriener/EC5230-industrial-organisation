@@ -14,6 +14,7 @@ Review the specified file thoroughly and produce a detailed report of all issues
 ## Check for These Categories
 
 ### 1. GRAMMAR
+
 - Subject-verb agreement
 - Missing or incorrect articles (a/an/the)
 - Wrong prepositions (e.g., "eligible to" → "eligible for")
@@ -21,22 +22,25 @@ Review the specified file thoroughly and produce a detailed report of all issues
 - Dangling modifiers
 
 ### 2. TYPOS
+
 - Misspellings
 - Search-and-replace artifacts (e.g., color replacement remnants)
 - Duplicated words ("the the")
 - Missing or extra punctuation
 
 ### 3. OVERFLOW
-- **LaTeX (.tex):** Content likely to cause overfull hbox warnings. Look for long equations without `\resizebox`, overly long bullet points, or too many items per slide.
+
 - **Quarto (.qmd):** Content likely to exceed slide boundaries. Look for: too many bullet points, inline font-size overrides below 0.85em, missing negative margins on dense slides.
 
 ### 4. CONSISTENCY
-- Citation format: `\citet` vs `\citep` (LaTeX), `@key` vs `[@key]` (Quarto)
+
+- Citation format: `@key` vs `[@key]` (Quarto)
 - Notation: Same symbol used for different things, or different symbols for the same thing
 - Terminology: Consistent use of terms across slides
 - Box usage: `keybox` vs `highlightbox` vs `methodbox` used appropriately
 
 ### 5. ACADEMIC QUALITY
+
 - Informal abbreviations (don't, can't, it's)
 - Missing words that make sentences incomplete
 - Awkward phrasing that could confuse students
@@ -50,6 +54,7 @@ For each issue found, provide:
 
 ```markdown
 ### Issue N: [Brief description]
+
 - **File:** [filename]
 - **Location:** [slide title or line number]
 - **Current:** "[exact text that's wrong]"

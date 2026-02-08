@@ -68,49 +68,52 @@ This repository is designed for multi-platform collaboration using:
 
 ```
 EC5230-industrial-organisation/
-├── CLAUDE.MD                          # This file — Claude's guide
+├── CLAUDE.md                          # This file — Claude's guide
+├── README.md
 ├── .github/
 │   └── copilot-instructions.md       # Course-specific authoring rules
 ├── _quarto.yml                        # Project-level Quarto config
+├── _extensions/                       # Quarto extensions
+│   ├── grantmcdermott/clean/         # Clean theme (Beamer)
+│   └── pandoc-ext/diagram/           # Diagram filter
 ├── index.qmd                          # Course homepage
 ├── references.bib                     # Centralized bibliography
+├── scripts/
+│   ├── tikz2pdf.py                   # TikZ → PDF → SVG pipeline
+│   ├── quality_score.py              # Slide quality scoring
+│   └── sync_to_docs.sh              # Deploy to GitHub Pages
 ├── lecture-slides/
-│   ├── _quarto.yml                   # Subsite config (formats, templates)
 │   ├── index.qmd                     # Lecture landing page
 │   ├── slides/
+│   │   ├── lecture-0-intro.qmd
 │   │   ├── lecture-1-oligopoly.qmd
 │   │   ├── lecture-2-product-differentiation.qmd
 │   │   ├── lecture-3-innovation.qmd
 │   │   ├── lecture-4-patents.qmd
-│   │   ├── lecture-5-multistage.qmd
-│   │   ├── lecture-7-cooperative-rd.qmd
-│   │   ├── lecture-8-bundling.qmd
-│   │   ├── lecture-9-advertising.qmd
-│   │   ├── lecture-11-mergers.qmd
-│   │   └── lecture-12-sustainability.qmd
-│   ├── figs/
-│   │   ├── source/                   # TikZ source files (.tex)
-│   │   └── *.svg                     # Generated SVG diagrams
-│   ├── theme/
-│   │   └── st-andrews.scss          # Custom Quarto theme
-│   ├── diagram-templates.qmd        # TikZ rendering helpers
-│   ├── generate-diagrams.py         # TikZ → PDF → SVG pipeline
-│   └── extract-tikz.py              # Extract TikZ code from diagrams
+│   │   ├── lecture-5-repeated-games.qmd
+│   │   └── lecture-6-corporate-rand.qmd
+│   └── figs/
+│       ├── source/                   # TikZ source files (.tex)
+│       └── *.svg                     # Generated SVG diagrams
 ├── exercises/
-│   ├── exercise-template.qmd        # Template for exercise sets
-│   ├── exercises-1-oligopoly.qmd
-│   └── solutions/
-├── apps/                             # Optional Shiny applications
+│   ├── index.qmd                     # Exercises landing page
+│   ├── sheets/
+│   │   └── exercises-1.qmd
+│   └── live/
+│       └── live-exercise-1.qmd
+├── apps/                              # Interactive Shiny applications
 │   ├── cournot-duopoly/
 │   ├── monopolist-profits/
-│   └── salop-circular-city/
-├── _site/                            # Rendered output (HTML + PDF)
-├── quality_reports/
-│   ├── plans/                        # Implementation plans
-│   └── session_logs/                 # Session notes
-└── master_supporting_docs/
-    ├── supporting_papers/            # Academic references
-    └── supporting_slides/            # Existing lecture materials
+│   ├── salop-circular-city/
+│   ├── profit-possibility-cournot/
+│   └── _original/                    # Original standalone R scripts
+├── guide/
+│   └── workflow-guide.qmd            # Development workflow guide
+├── docs/                              # GitHub Pages deployment
+├── _site/                             # Rendered output (HTML + PDF)
+└── quality_reports/
+    ├── plans/                         # Implementation plans
+    └── session_logs/                  # Session notes
 ```
 
 ---
@@ -149,7 +152,7 @@ For any non-trivial task, Claude enters **plan mode first** before writing code:
 | Content       | Source of Truth                    | Derived From                     |
 | ------------- | ---------------------------------- | -------------------------------- |
 | Slide content | `lecture-slides/slides/*.qmd`      | Generated to HTML/PDF            |
-| TikZ diagrams | `lecture-slides/figs/source/*.tex` | → SVG via `generate-diagrams.py` |
+| TikZ diagrams | `lecture-slides/figs/source/*.tex` | → SVG via `scripts/tikz2pdf.py`  |
 | Bibliography  | `references.bib`                   | All slides reference it          |
 | Figures       | `lecture-slides/figs/`             | Deployed to `_site/`             |
 
@@ -159,18 +162,15 @@ For any non-trivial task, Claude enters **plan mode first** before writing code:
 
 ## Current Project State
 
-| Lecture              | Status     | Content                        |
-| -------------------- | ---------- | ------------------------------ |
-| 1: Oligopoly         | ✓ Complete | Cournot, welfare, coordination |
-| 2: Differentiation   | ✓ Complete | Hotelling, Salop, free entry   |
-| 3: Innovation        | —          | [To develop]                   |
-| 4: Patents           | —          | [To develop]                   |
-| 5: Multi-stage Games | —          | [To develop]                   |
-| 7: Cooperative R&D   | —          | [To develop]                   |
-| 8: Bundling          | —          | [To develop]                   |
-| 9: Advertising       | —          | [To develop]                   |
-| 11: Mergers          | —          | [To develop]                   |
-| 12: Sustainability   | —          | [To develop]                   |
+| Lecture              | Status       | Content                            |
+| -------------------- | ------------ | ---------------------------------- |
+| 0: Introduction      | ✓ Complete   | Course overview                    |
+| 1: Oligopoly         | ✓ Complete   | Cournot, welfare, coordination     |
+| 2: Differentiation   | ✓ Complete   | Hotelling, Salop, free entry       |
+| 3: Innovation        | In progress  | Arrow, D-S, replacement effect     |
+| 4: Patents           | —            | [To develop]                       |
+| 5: Repeated Games    | —            | [To develop]                       |
+| 6: Corporate R&D     | —            | [To develop]                       |
 
 ---
 
@@ -206,17 +206,12 @@ Output: `_site/lecture-slides/slides/lecture-*.html` (RevealJS) and `lecture-*.p
 ## Quick Reference Commands
 
 ```bash
-# Compile LaTeX (3-pass)
-cd Slides && TEXINPUTS=../Preambles:$TEXINPUTS xelatex file.tex
+# Generate SVGs from TikZ source files
+python scripts/tikz2pdf.py
 
 # Deploy Quarto to GitHub Pages
 ./scripts/sync_to_docs.sh LectureN
 
 # Run quality score
-python scripts/quality_score.py Quarto/file.qmd
-
-# Add a paper (Claude auto-splits)
-cp paper.pdf master_supporting_docs/supporting_papers/
+python scripts/quality_score.py lecture-slides/slides/file.qmd
 ```
-
-

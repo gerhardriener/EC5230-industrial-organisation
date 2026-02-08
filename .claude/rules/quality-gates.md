@@ -31,11 +31,12 @@ paths:
 
 ### Major (Should Pass for PR)
 
-| Issue                  | Deduction         |
-| ---------------------- | ----------------- |
-| Text overflow          | -5 per instance   |
-| TikZ label overlap     | -5 per diagram    |
-| Notation inconsistency | -3 per occurrence |
+| Issue                              | Deduction         |
+| ---------------------------------- | ----------------- |
+| Hardcoded citation (missing @key)  | -10 per instance  |
+| Text overflow                      | -5 per instance   |
+| TikZ label overlap                 | -5 per diagram    |
+| Notation inconsistency             | -3 per occurrence |
 
 ### Minor (Nice-to-Have)
 

@@ -23,7 +23,9 @@
       "Bash(gh pr create:*)",
       "Bash(git pull:*)",
       "Bash(git reflog expire:*)",
-      "Bash(git gc:*)"
+      "Bash(git gc:*)",
+      "Bash(python scripts/generate-diagrams.py:*)",
+      "Bash(where:*)"
     ]
   }
 }
