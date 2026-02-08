@@ -311,6 +311,8 @@ More rivals reduces baseline profits (hurting incentives), but can increase the 
 - Entrant can enter profitably **only if** it gets innovation
 - Let $\pi^d(c_i,c_j)$ denote firm $i$'s profit in the post-entry **duopoly** when own cost is $c_i$ and the rival's cost is $c_j$
 
+**Timing/game structure:** We compare the **willingness to pay** for innovation (e.g., in a patent auction or R&D race). The innovation is awarded to whichever firm values it more highly. Entry happens *after* the innovation is allocated.
+
 **Payoffs:**
 
 - **If incumbent gets innovation**: entrant stays out
@@ -358,9 +360,9 @@ Under what market conditions might an entrant have stronger innovation incentive
 Blundell, Griffith, and Van Reenen (1999) find that higher market share and market value predict more patenting/innovations in UK manufacturing firms, consistent with **strategic** incentives (including pre-emptive innovation) in oligopolistic industries. [@blundellMarketShareMarket1999]
 :::
 
-# Seminal Contributions {background-color="#00539b"}
+# Endogenous R&D and market structure {background-color="#00539b"}
 
-## Dasgupta–Stiglitz: endogenous R&D and market structure [@dasguptaIndustrialStructureNature1980]
+## @dasguptaIndustrialStructureNature1980: setup and key result 
 
 They model R&D as an **endogenous sunk cost**: firms spend on R&D to reduce marginal cost, and entry adjusts endogenously.
 
@@ -379,7 +381,7 @@ The linear model gave us clean closed-form comparisons. The D-S framework sacrif
 | $c(x)$ | Function | Marginal cost (decreasing in $x$) |
 | $N$ | Outcome | Number of active firms (endogenous) |
 | $\varepsilon$ | Parameter | Demand elasticity |
-| $\alpha$ | Parameter | Innovative potential (R&D cost elasticity) |
+| $\alpha$ | Parameter | Innovative potential: $\alpha = -\frac{dc(x)}{dx}\frac{x}{c}$ (R&D cost elasticity) |
 :::
 
 ## Dasgupta–Stiglitz (1980): planner benchmark [@dasguptaIndustrialStructureNature1980]
@@ -416,7 +418,9 @@ Acemoglu and Linn (2004) show that larger potential markets lead to more pharmac
 
 ## Dasgupta–Stiglitz (1980): firm's problem [@dasguptaIndustrialStructureNature1980]
 
-**Firm $i$'s problem (symmetric firms):**
+**Assumptions:** Firms engage in **Cournot (quantity) competition** with symmetric costs. Each firm chooses R&D expenditure $x_i$ and output $q_i$ simultaneously.
+
+**Firm $i$'s problem:**
 
 $$
 \max_{x_i, q_i} \ \pi(x_i, q_i) = [P(q_i + q_{-i}) - c(x_i)]q_i - x_i
@@ -426,7 +430,18 @@ $$
 
 - $q_1^* = \cdots = q_N^* = Q^*/N$ and $x_1^* = \cdots = x_N^* = x^*$
 
-## Dasgupta–Stiglitz (1980): equilibrium pricing [@dasguptaIndustrialStructureNature1980]
+## Intuition check: What determines $N^*$?
+
+What forces at work here?
+
+- **Entry incentive:** If industry profits are positive, more firms want to enter
+- **R&D cost:** Each firm must spend $x^*$ to achieve low cost $c(x^*)$
+- **Market power:** More firms → lower mark-ups → lower operating profits
+- **Zero-profit equilibrium:** Entry stops when operating profits just cover R&D outlays
+
+**Key insight:** Equilibrium concentration ($N^*$) balances these forces. We'll derive the precise formula by combining the pricing and free-entry conditions.
+
+## @dasguptaIndustrialStructureNature1980: equilibrium pricing
 
 **First-order condition in $q_i$:**
 
