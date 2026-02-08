@@ -26,13 +26,28 @@
 | `/pedagogy-review [filename]`     | PhD-student lens: narrative, notation, pacing review                 |
 | `/review-r [file or LectureN]`    | R code review: quality, reproducibility, correctness                 |
 | `/qa-quarto [LectureN]`           | Adversarial Quarto vs Beamer QA: critic finds issues, fixer resolves |
-| `/slide-excellence [filename]`    | Combined visual + pedagogical + proofreading review                  |
+| `/slide-excellence [filename]`    | Combined visual + pedagogical + proofreading + citation audit review |
 | `/translate-to-quarto [filename]` | Full Beamer to Quarto translation workflow                           |
 | `/validate-bib`                   | Cross-reference citations vs bibliography file                       |
 | `/devils-advocate`                | Challenge slide design with pedagogical questions                    |
 | `/create-lecture`                 | Full lecture creation workflow                                       |
 
-**Agents** (available for delegation): `proofreader`, `slide-auditor`, `pedagogy-reviewer`, `r-reviewer`, `tikz-reviewer`, `beamer-translator`, `quarto-critic`, `quarto-fixer`, `verifier`, `domain-reviewer`
+**Agents** (available for delegation):
+
+| Agent | Model | Purpose |
+|-------|-------|---------|
+| `proofreader` | inherit | Grammar, typos, overflow, consistency |
+| `slide-auditor` | inherit | Visual layout, spacing, overflow |
+| `pedagogy-reviewer` | inherit | Narrative arc, pedagogical patterns |
+| `r-reviewer` | sonnet | R code quality and reproducibility |
+| `tikz-reviewer` | inherit | TikZ diagram visual quality |
+| `beamer-translator` | opus | Beamer→Quarto translation |
+| `quarto-critic` | opus | Adversarial QA (read-only) |
+| `quarto-fixer` | sonnet | Implements critic fixes |
+| `verifier` | inherit | Compilation and rendering checks |
+| `domain-reviewer` | inherit | Substantive domain correctness |
+
+**Note:** Citation audit is built into the `/slide-excellence` skill (not a standalone agent).
 
 **Rules** (auto-loaded): See `.claude/rules/` for domain-specific rules on LaTeX, Quarto, R, verification, proofreading, and quality gates.
 
@@ -81,7 +96,7 @@ EC5230-industrial-organisation/
 ├── scripts/
 │   ├── tikz2pdf.py                   # TikZ → PDF → SVG pipeline
 │   ├── quality_score.py              # Slide quality scoring
-│   └── sync_to_docs.sh              # Deploy to GitHub Pages
+│   └── sync_to_docs.sh              # Render and publish to gh-pages branch
 ├── lecture-slides/
 │   ├── index.qmd                     # Lecture landing page
 │   ├── slides/

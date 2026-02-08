@@ -1,21 +1,21 @@
 ---
 paths:
-  - "Slides/**/*.tex"
+  - "lecture-slides/slides/**/*.qmd"
 ---
 
-# No \pause in Beamer Slides
+# No `. . .` in Beamer Slides
 
 <!-- Customize: If you prefer fragment reveals, delete this rule file entirely. -->
 <!-- This rule enforces a "no overlay" policy for Beamer slides. -->
 
-**NEVER use `\pause`, `\onslide`, `\only`, `\uncover`, or any other Beamer overlay/fragment commands in slide decks.**
+**NEVER use `. . .`, `.incremental`, or any other reveal.js overlay/fragment commands in slide decks.**
 
 ## Rationale
 
 - All content appears at once on each slide
 - Fragment reveals add complexity without pedagogical benefit for this delivery style
 - Slides should be self-contained and readable as a static PDF handout
-- This applies to all `.tex` files in `Slides/`
+- This applies to all `.qmd` files in `lecture-slides/slides`
 
 ## What to Do Instead
 
@@ -26,4 +26,4 @@ paths:
 
 ## Enforcement
 
-If a quality control agent (proofreader, pedagogy-reviewer, slide-auditor) suggests adding `\pause` or overlay commands, **ignore that recommendation** and note that this course does not use fragment reveals.
+If a quality control agent (proofreader, pedagogy-reviewer, slide-auditor) suggests adding `. . .` or overlay commands, **ignore that recommendation** and note that this course does not use fragment reveals.

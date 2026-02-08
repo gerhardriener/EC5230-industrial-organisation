@@ -129,6 +129,8 @@ Before the Industrial Revolution (~1760–1840), global GDP per capita was rough
 - **Drastic**: innovator behaves as a monopolist with cost $c_1$
 - **Non-drastic**: innovator is constrained by the competitive fringe at cost $c_0$ (limit pricing)
 
+## Innovation WTP under perfect competition
+
 **Innovator profit / WTP**
 
 $$
@@ -180,7 +182,9 @@ Under perfect competition, pre-innovation profits are zero, so innovation mainly
 
 ## Appropriability and imitation
 
-*If the innovation cannot be protected (instant diffusion / perfect imitation), competition drives price to $c_1$ and the innovator's WTP is zero. Most IO policy questions start from the fact that appropriability is imperfect but positive (patents, secrecy, lead time).*
+* If the innovation cannot be protected (instant diffusion / perfect imitation), competition drives price to $c_1$ and the innovator's WTP is zero. 
+
+* Most IO policy questions start from the fact that appropriability is imperfect but positive (patents, secrecy, lead time).
 
 ## Replacement effect: a one-line comparison (drastic case)
 
@@ -190,11 +194,12 @@ $$
 \Delta \pi^{pc} = \pi^m(c_1), \qquad \Delta \pi^m = \pi^m(c_1) - \pi^m(c_0)
 $$
 
-. . .
 
 $$
 \Delta \pi^{pc} - \Delta \pi^m = \pi^m(c_0) > 0
 $$
+
+## Replacement effect: intuition
 
 ::: {.callout-important title="Takeaway"}
 Holding everything else fixed, an incumbent monopolist has **weaker** incentives to innovate than a competitive industry because it is "replacing" its own pre-innovation rents.
@@ -211,7 +216,7 @@ Holding everything else fixed, an incumbent monopolist has **weaker** incentives
 ## Empirical example: competition and innovation
 
 ::: {.callout-note title="Inverted-U evidence (QJE)"}
-[@aghionCompetitionInnovationInvertedU2005] document an **inverted-U** relationship between product-market competition and innovation (patents/citations) in UK firms, consistent with "escape competition" incentives for neck-and-neck firms and a **replacement effect** for laggards.
+@aghionCompetitionInnovationInvertedU2005 document an **inverted-U** relationship between product-market competition and innovation (patents/citations) in UK firms, consistent with "escape competition" incentives for neck-and-neck firms and a **replacement effect** for laggards.
 :::
 
 ::: {.content-visible when-format="beamer"}
@@ -221,6 +226,8 @@ Holding everything else fixed, an incumbent monopolist has **weaker** incentives
 ::: {.content-visible when-format="html"}
 ![](../figs/fig-innovation-inverted-u.svg){fig-alt="Inverted-U relationship between competition and innovation, after Aghion et al. (2005)" fig-align="center" width="75%"}
 :::
+
+# Social Value of Innovation {background-color="#00539b"}
 
 ## Social planner: value of a cost reduction
 
@@ -263,7 +270,7 @@ Private incentives and social value need not align: **$\Delta W$ can exceed $\De
 ## Empirical example: private vs social returns
 
 ::: {.callout-note title="Welfare gains from product innovation (JPE)"}
-Trajtenberg (1989) estimates consumer and producer surplus gains from quality improvements in computed tomography (CT) scanners, illustrating that the **social value** of innovation can greatly exceed the innovator's private returns. [@trajtenbergWelfareAnalysisProduct1989]
+@trajtenbergWelfareAnalysisProduct1989 estimates consumer and producer surplus gains from quality improvements in computed tomography (CT) scanners, illustrating that the **social value** of innovation can greatly exceed the innovator's private returns.
 :::
 
 ## Quick numeric check (optional)

@@ -2,7 +2,7 @@
 
 **After a plan is approved, the orchestrator takes over.** It implements, verifies, reviews, fixes, and scores autonomously — presenting results only when the work meets quality standards or fix rounds are exhausted.
 
-The plan-first workflow handles *what and why*. The orchestrator handles *how*, autonomously.
+The plan-first workflow handles _what and why_. The orchestrator handles _how_, autonomously.
 
 ---
 
@@ -12,13 +12,13 @@ The orchestrator kicks in under these conditions:
 
 1. **After plan approval** — the standard trigger. Plan-first workflow step 7 hands off to the orchestrator.
 2. **"Just do it" mode** — when the user says "just do it", "you decide", or "handle it", skip the final presentation gate.
-3. **Skill delegation** — when a skill like `/create-lecture` or `/translate-to-quarto` reaches its implementation phase, the orchestrator loop governs execution.
+3. **Skill delegation** — when a skill like `/create-lecture` reaches its implementation phase, the orchestrator loop governs execution.
 
 The orchestrator does NOT activate for:
 
 - Single-file trivial edits (typo fix, add a citation)
 - Purely informational questions
-- Running a standalone skill like `/compile-latex` or `/deploy`
+- Running a standalone skill like `/deploy`
 
 ---
 
@@ -50,14 +50,13 @@ Plan approved → orchestrator activates
 
 Select review agents based on **file types touched during implementation**:
 
-| Files Modified | Agents to Run | Parallel? |
-|---------------|---------------|-----------|
-| `.tex` (Beamer) | proofreader, slide-auditor, pedagogy-reviewer | Yes |
-| `.qmd` (Quarto) | proofreader, slide-auditor, pedagogy-reviewer | Yes |
-| `.qmd` with `.tex` pair | + quarto-critic (→ quarto-fixer if issues) | After above |
-| `.R` scripts | r-reviewer | Yes (with others) |
-| TikZ content present | tikz-reviewer | Yes (with others) |
-| Domain-critical content | domain-reviewer (if configured) | Yes (with others) |
+| Files Modified          | Agents to Run                                 | Parallel?         |
+| ----------------------- | --------------------------------------------- | ----------------- |
+| `.qmd` (Quarto)         | proofreader, slide-auditor, pedagogy-reviewer | Yes               |
+| `.qmd` with `.tex` pair | + quarto-critic (→ quarto-fixer if issues)    | After above       |
+| `.R` scripts            | r-reviewer                                    | Yes (with others) |
+| TikZ content present    | tikz-reviewer                                 | Yes (with others) |
+| Domain-critical content | domain-reviewer (if configured)               | Yes (with others) |
 
 **Run independent agents in parallel.** The quarto-critic runs after the parallel batch because it needs their context. If the quarto-critic finds issues, invoke quarto-fixer and re-run quarto-critic (up to 5 sub-rounds within the main loop).
 

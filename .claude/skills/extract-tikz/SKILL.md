@@ -1,70 +1,123 @@
 ---
 name: extract-tikz
-description: Extract TikZ diagrams from Beamer source, compile to PDF, convert to SVG with 0-based indexing. Use when updating TikZ diagrams for Quarto slides.
+description: Generate SVG diagrams from TikZ source files using scripts/tikz2pdf.py. Use when creating or updating TikZ diagrams for lecture slides.
 disable-model-invocation: true
-argument-hint: "[LectureN, e.g., Lecture2]"
+argument-hint: "[optional: specific figure name]"
 ---
 
-# Extract TikZ Diagrams to SVG
+# Generate TikZ Diagrams to SVG
 
-Extract TikZ diagrams from the Beamer source, compile to multi-page PDF, and convert each page to SVG for use in Quarto slides.
+Generate SVG diagrams from TikZ source files for use in Quarto RevealJS slides.
+
+## Current TikZ Pipeline
+
+**See [.claude/rules/tikz-workflow.md](.claude/rules/tikz-workflow.md) for the complete workflow documentation.**
+
+### Quick Summary
+
+- **Source files:** `lecture-slides/figs/source/*.tex` (standalone `.tex` files, one per diagram)
+- **Generated SVGs:** `lecture-slides/figs/*.svg`
+- **Conversion script:** `scripts/tikz2pdf.py`
+- **Pipeline:** `.tex` → PDF (pdflatex) → SVG (pdftocairo)
+
+---
 
 ## Steps
 
-### Step 0: Freshness Check (MANDATORY)
-
-**Before compiling, verify that `extract_tikz.tex` matches the current Beamer source.**
-
-1. Find the Beamer source: `ls lecture-slides/slides/figs/source/$ARGUMENTS*.tex`
-2. Extract all `\begin{tikzpicture}` blocks from tex file
-3. Compare with `lecture-slides/slides/figs/source/$ARGUMENTS/extract_tikz.tex`
-4. If ANY difference exists: update extract_tikz.tex from the Beamer source
-5. If extract_tikz.tex doesn't exist: create it from scratch
-
-### Step 1: Navigate to the lecture's Figures directory
+### Step 1: Verify Source Files Exist
 
 ```bash
-cd lecture-slides/slides/figs/source/$ARGUMENTS
+ls -la lecture-slides/figs/source/
 ```
 
-### Step 2: Compile the extract_tikz.tex file
+Check that:
+- Target `.tex` files exist
+- Each file contains a `\begin{tikzpicture}...\end{tikzpicture}` environment
+- Files use standalone format (no preamble needed — script wraps them)
+
+### Step 2: Run the Conversion Script
+
+**From project root:**
 
 ```bash
-TEXINPUTS=../../Preambles:$TEXINPUTS xelatex -interaction=nonstopmode extract_tikz.tex
+python scripts/tikz2pdf.py
 ```
 
-### Step 3: Count the number of pages
+The script will:
+1. Find all `.tex` files in `lecture-slides/figs/source/`
+2. Wrap each tikzpicture in a standalone document with required packages
+3. Compile to PDF using `pdflatex`
+4. Convert PDF to SVG using `pdftocairo`
+5. Save SVG to `lecture-slides/figs/[name].svg`
+6. Clean up auxiliary files (.aux, .log, .tex wrapper)
+
+### Step 3: Verify SVG Generation
 
 ```bash
-pdfinfo extract_tikz.pdf | grep "Pages:"
+ls -lh lecture-slides/figs/*.svg
 ```
 
-### Step 4: Convert each page to SVG using 0-BASED INDEXING
+Check that:
+- SVG files exist for all source `.tex` files
+- File sizes are reasonable (not 0 bytes, typically 5-50 KB)
+- Timestamp shows they were just generated
 
-**CRITICAL: PDF pages are 1-indexed, but output SVG files are 0-indexed!**
+### Step 4: Verify SVG Content (Sample Check)
+
+Read one or two SVG files to confirm they contain valid SVG markup:
 
 ```bash
-PAGES=$(pdfinfo extract_tikz.pdf | grep "Pages:" | awk '{print $2}')
-for i in $(seq 1 $PAGES); do
-  idx=$(printf "%02d" $((i-1)))
-  pdf2svg extract_tikz.pdf tikz_exact_$idx.svg $i
-done
+head -n 20 lecture-slides/figs/fig-innovation-replacement-effect.svg
 ```
 
-### Step 5: Sync to docs/ for deployment
+Should see `<svg` tags, `<path>` elements, etc.
+
+### Step 5: Test in Slides
+
+If updating existing diagrams, render the affected lecture slide:
 
 ```bash
-cd ../..
-./scripts/sync_to_docs.sh $ARGUMENTS
+quarto render lecture-slides/slides/lecture-N-topic.qmd
 ```
 
-### Step 6: Verify SVG files
+Open the HTML output and verify diagrams display correctly.
 
-- Read 2-3 SVG files to confirm they contain valid SVG markup
-- Confirm file sizes are reasonable (not 0 bytes)
+---
 
-### Step 7: Report results
+## Troubleshooting
 
-## Source of Truth Reminder
+### Error: "pdflatex not found"
+- Install a LaTeX distribution (TeX Live, MiKTeX, etc.)
+- Ensure `pdflatex` is in PATH
 
-TikZ diagrams MUST be edited in the Beamer `.tex` file first, then copied verbatim to `extract_tikz.tex`. See `.claude/rules/single-source-of-truth.md`.
+### Error: "pdftocairo not found"
+- Install poppler-utils: `brew install poppler` (macOS) or `apt-get install poppler-utils` (Linux)
+- Windows: Download from poppler releases
+
+### Error: "PDF not produced"
+- Check the `.tex` file for LaTeX errors
+- Run `pdflatex` manually on the source file to see error messages
+- Common issues: missing `\usetikzlibrary{}`, wrong `pgfplots` syntax
+
+### SVG looks wrong or incomplete
+- Check that the source `.tex` file compiles correctly as PDF first
+- Verify `\pgfplotsset{compat=1.18}` is compatible with your pgfplots version
+- Check for font embedding issues (pdftocairo converts fonts to paths)
+
+---
+
+## Source of Truth
+
+**CRITICAL:** TikZ diagrams have a SINGLE source of truth: `lecture-slides/figs/source/*.tex`
+
+- To modify a diagram: edit the `.tex` source file, then re-run `tikz2pdf.py`
+- NEVER edit the generated SVG files directly — changes will be overwritten
+- For dual-format rendering (Beamer PDF + Quarto HTML), see `.claude/rules/tikz-workflow.md`
+
+---
+
+## Related Files
+
+- **Conversion script:** [scripts/tikz2pdf.py](scripts/tikz2pdf.py)
+- **Full workflow guide:** [.claude/rules/tikz-workflow.md](.claude/rules/tikz-workflow.md)
+- **Visual quality standards:** [.claude/agents/tikz-reviewer.md](.claude/agents/tikz-reviewer.md)

@@ -150,7 +150,7 @@ Rules:
 
 ## TikZ diagrams
 
-Use the template in `lecture-slides/diagram-templates.qmd` for consistency.
+TikZ source files live in `lecture-slides/figs/source/*.tex`. See `.claude/rules/tikz-workflow.md` for the complete workflow.
 
 ---
 
@@ -169,7 +169,6 @@ Each app must:
 
 - Slides: `lecture-slides/`
 - Theme: `lecture-slides/theme/`
-- Apps: `shiny-apps/`
 - Exercises: `exercises/`
 
 ---
@@ -188,8 +187,6 @@ All `.qmd` must be listed in `_quarto.yml`.
 ---
 
 ## Exercises (tutorial handouts)
-
-Use the template: `exercises/exercise-template.qmd`.
 
 Requirements:
 
@@ -217,5 +214,11 @@ Before accepting output, verify:
 - colours/typography compliant
 - blank lines around lists
 - ending slides: `## Summary and next week` then `## References`
+
+---
+
+## Beamer → Quarto translation
+
+When translating existing Beamer slides to Quarto format, all content standards above still apply. See `.claude/agents/beamer-translator.md` for environment mapping, citation conversion, and format-specific patterns. Translated slides must preserve pedagogical flow, mathematical precision, and visual quality.
 
 **End of EC5230 Copilot Instructions**
