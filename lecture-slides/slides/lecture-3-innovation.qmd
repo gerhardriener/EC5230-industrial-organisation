@@ -357,7 +357,7 @@ Under what market conditions might an entrant have stronger innovation incentive
 ## Empirical example: strategic incentives and market share
 
 ::: {.callout-note title="Pre-emptive innovation patterns (ReStud)"}
-Blundell, Griffith, and Van Reenen (1999) find that higher market share and market value predict more patenting/innovations in UK manufacturing firms, consistent with **strategic** incentives (including pre-emptive innovation) in oligopolistic industries. [@blundellMarketShareMarket1999]
+@blundellMarketShareMarket1999 find that higher market share and market value predict more patenting/innovations in UK manufacturing firms, consistent with **strategic** incentives (including pre-emptive innovation) in oligopolistic industries.
 :::
 
 # Endogenous R&D and market structure {background-color="#00539b"}

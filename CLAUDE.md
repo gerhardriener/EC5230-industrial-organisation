@@ -149,12 +149,12 @@ For any non-trivial task, Claude enters **plan mode first** before writing code:
 
 **NEVER duplicate content:**
 
-| Content       | Source of Truth                    | Derived From                     |
-| ------------- | ---------------------------------- | -------------------------------- |
-| Slide content | `lecture-slides/slides/*.qmd`      | Generated to HTML/PDF            |
-| TikZ diagrams | `lecture-slides/figs/source/*.tex` | → SVG via `scripts/tikz2pdf.py`  |
-| Bibliography  | `references.bib`                   | All slides reference it          |
-| Figures       | `lecture-slides/figs/`             | Deployed to `_site/`             |
+| Content       | Source of Truth                    | Derived From                    |
+| ------------- | ---------------------------------- | ------------------------------- |
+| Slide content | `lecture-slides/slides/*.qmd`      | Generated to HTML/PDF           |
+| TikZ diagrams | `lecture-slides/figs/source/*.tex` | → SVG via `scripts/tikz2pdf.py` |
+| Bibliography  | `references.bib`                   | All slides reference it         |
+| Figures       | `lecture-slides/figs/`             | Deployed to `_site/`            |
 
 > **Modify source, regenerate derived versions.**
 
@@ -162,15 +162,23 @@ For any non-trivial task, Claude enters **plan mode first** before writing code:
 
 ## Current Project State
 
-| Lecture              | Status       | Content                            |
-| -------------------- | ------------ | ---------------------------------- |
-| 0: Introduction      | ✓ Complete   | Course overview                    |
-| 1: Oligopoly         | ✓ Complete   | Cournot, welfare, coordination     |
-| 2: Differentiation   | ✓ Complete   | Hotelling, Salop, free entry       |
-| 3: Innovation        | In progress  | Arrow, D-S, replacement effect     |
-| 4: Patents           | —            | [To develop]                       |
-| 5: Repeated Games    | —            | [To develop]                       |
-| 6: Corporate R&D     | —            | [To develop]                       |
+| Lecture            | Status     | Content                        | Last Updated |
+| ------------------ | ---------- | ------------------------------ | ------------ |
+| 0: Introduction    | ✓ Complete | Course overview                | —            |
+| 1: Oligopoly       | ✓ Complete | Cournot, welfare, coordination | —            |
+| 2: Differentiation | ✓ Complete | Hotelling, Salop, free entry   | —            |
+| 3: Innovation      | ✓ Complete | Arrow, D-S, replacement effect | 2026-02-08   |
+| 4: Patents         | —          | [To develop]                   | —            |
+| 5: Repeated Games  | —          | [To develop]                   | —            |
+| 6: Corporate R&D   | —          | [To develop]                   | —            |
+
+**Recent Quality Improvements (Lecture 3, 2026-02-08):**
+
+- Fixed 4 critical issues (TikZ compilation, overlapping fills, grammar, citations)
+- Fixed 6 major issues (dense derivation split, TikZ visual clarity, disconnected labels)
+- Added 3 pedagogical improvements (early Socratic question on growth, full α notation, assumption clarifications)
+- Quality score: GOOD → EXCELLENT (teaching-ready)
+- See: `quality_reports/session_logs/2026-02-08_lecture-3-review-and-fixes.md` for full details
 
 ---
 
@@ -210,8 +218,15 @@ Output: `_site/lecture-slides/slides/lecture-*.html` (RevealJS) and `lecture-*.p
 python scripts/tikz2pdf.py
 
 # Deploy Quarto to GitHub Pages
-./scripts/sync_to_docs.sh LectureN
+quarto publish gh-pages --no-browser
+
+# Render specific lecture (PDF + HTML)
+quarto render lecture-slides/slides/lecture-N-name.qmd
 
 # Run quality score
-python scripts/quality_score.py lecture-slides/slides/file.qmd
+python scripts/quality_score.py lecture-slides/slides/lecture-N-name.qmd
 ```
+
+---
+
+## Known Issues
