@@ -7,7 +7,6 @@ format:
     preview-links: auto
     transition: none
     background-transition: fade
-
   beamer:
     keep-tex: false
     header-includes: |

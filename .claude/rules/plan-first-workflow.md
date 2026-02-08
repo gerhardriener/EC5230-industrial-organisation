@@ -38,7 +38,7 @@ A task is "non-trivial" if it involves:
 
 You may skip plan mode for:
 - Single-file edits with a clear scope (fix a typo, add a citation)
-- Running existing skills/commands (`/compile-latex`, `/deploy`)
+- Running existing skills/commands (`/deploy`)
 - Purely informational questions
 - Tasks the user explicitly says to do immediately
 
