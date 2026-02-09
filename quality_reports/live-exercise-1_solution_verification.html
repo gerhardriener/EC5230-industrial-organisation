@@ -9,7 +9,7 @@
 <meta name="author" content="Gerhard Riener">
 <meta name="description" content="MSc-level Industrial Organisation course at the University of St Andrews">
 
-<title>Exercises – EC5230 Industrial Organisation</title>
+<title>live-exercise-1_solution_verification – EC5230 Industrial Organisation</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -74,10 +74,39 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
-<body class="nav-sidebar docked nav-fixed quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -162,78 +191,38 @@ ul.task-list li input[type="checkbox"] {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../exercises/index.html">Exercises</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../exercises/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Exercises</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Exercise Sheets</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../exercises/sheets/exercises-1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercise 1: Oligopoly and Product Differentiation</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Live Exercises</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../exercises/live/live-exercise-1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Live Exercise 1: Hotelling with quadratic transportation costs</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#problem-sets" id="toc-problem-sets" class="nav-link active" data-scroll-target="#problem-sets">Problem Sets</a>
+  <li><a href="#solution-verification-live-exercise-1.qmd" id="toc-solution-verification-live-exercise-1.qmd" class="nav-link active" data-scroll-target="#solution-verification-live-exercise-1.qmd">Solution Verification: live-exercise-1.qmd</a>
   <ul class="collapse">
-  <li><a href="#exercise-sheets" id="toc-exercise-sheets" class="nav-link" data-scroll-target="#exercise-sheets">Exercise Sheets</a></li>
-  <li><a href="#live-exercises" id="toc-live-exercises" class="nav-link" data-scroll-target="#live-exercises">Live Exercises</a></li>
-  <li><a href="#how-to-use-these-exercises" id="toc-how-to-use-these-exercises" class="nav-link" data-scroll-target="#how-to-use-these-exercises">How to Use These Exercises</a></li>
+  <li><a href="#executive-summary" id="toc-executive-summary" class="nav-link" data-scroll-target="#executive-summary">Executive Summary</a></li>
+  <li><a href="#part-by-part-verification" id="toc-part-by-part-verification" class="nav-link" data-scroll-target="#part-by-part-verification">Part-by-Part Verification</a>
+  <ul class="collapse">
+  <li><a href="#part-a-marginal-consumer-and-demands" id="toc-part-a-marginal-consumer-and-demands" class="nav-link" data-scroll-target="#part-a-marginal-consumer-and-demands">Part (a): Marginal consumer and demands</a></li>
+  <li><a href="#part-b-best-responses" id="toc-part-b-best-responses" class="nav-link" data-scroll-target="#part-b-best-responses">Part (b): Best responses</a></li>
+  <li><a href="#part-c-price-equilibrium" id="toc-part-c-price-equilibrium" class="nav-link" data-scroll-target="#part-c-price-equilibrium">Part (c): Price equilibrium</a></li>
+  <li><a href="#part-d-interior-condition" id="toc-part-d-interior-condition" class="nav-link" data-scroll-target="#part-d-interior-condition">Part (d): Interior condition</a></li>
+  <li><a href="#part-e-numerical-check" id="toc-part-e-numerical-check" class="nav-link" data-scroll-target="#part-e-numerical-check">Part (e): Numerical check</a></li>
+  <li><a href="#part-f-discussion-quadratic-vs-linear-costs" id="toc-part-f-discussion-quadratic-vs-linear-costs" class="nav-link" data-scroll-target="#part-f-discussion-quadratic-vs-linear-costs">Part (f): Discussion — quadratic vs linear costs</a></li>
+  </ul></li>
+  <li><a href="#minor-issues" id="toc-minor-issues" class="nav-link" data-scroll-target="#minor-issues">Minor Issues</a>
+  <ul class="collapse">
+  <li><a href="#issue-1-solution-skips-a-step-low-severity-line-117" id="toc-issue-1-solution-skips-a-step-low-severity-line-117" class="nav-link" data-scroll-target="#issue-1-solution-skips-a-step-low-severity-line-117">Issue 1: Solution skips a step (LOW severity, line 117)</a></li>
+  </ul></li>
+  <li><a href="#summary-of-solution-quality" id="toc-summary-of-solution-quality" class="nav-link" data-scroll-target="#summary-of-solution-quality">Summary of Solution Quality</a></li>
+  <li><a href="#verification-method" id="toc-verification-method" class="nav-link" data-scroll-target="#verification-method">Verification Method</a></li>
+  <li><a href="#recommendations" id="toc-recommendations" class="nav-link" data-scroll-target="#recommendations">Recommendations</a>
+  <ul class="collapse">
+  <li><a href="#optional-improvements" id="toc-optional-improvements" class="nav-link" data-scroll-target="#optional-improvements">Optional Improvements</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -243,7 +232,6 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Exercises</h1>
 </div>
 
 <div>
@@ -271,100 +259,307 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="problem-sets" class="level2">
-<h2 class="anchored" data-anchor-id="problem-sets">Problem Sets</h2>
-<p>Practice exercises for EC5230 Industrial Organisation.</p>
-<p>Each exercise is published in two explicit variants:</p>
-<ul>
-<li><strong>Student</strong> version (<code>solutions: false</code>)</li>
-<li><strong>Instructor</strong> version (<code>solutions: true</code>)</li>
-</ul>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Use the navbar <code>Exercises</code> menu for direct links to each sheet.</p>
-</div>
-</div>
-<section id="exercise-sheets" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-sheets">Exercise Sheets</h3>
+<section id="solution-verification-live-exercise-1.qmd" class="level1">
+<h1>Solution Verification: live-exercise-1.qmd</h1>
+<p><strong>File:</strong> <code>exercises/live/live-exercise-1.qmd</code> <strong>Verification Date:</strong> 2026-02-09 <strong>Verifier:</strong> Manual algebraic check</p>
+<hr>
+<section id="executive-summary" class="level2">
+<h2 class="anchored" data-anchor-id="executive-summary">Executive Summary</h2>
+<p><strong>Solutions Verified:</strong> Parts (a) through (f) <strong>Algebraic Errors:</strong> 0 critical, 0 medium, 1 low <strong>Numerical Errors:</strong> 0 <strong>Economic Logic:</strong> Sound</p>
+<p><strong>Overall Assessment:</strong> ✅ <strong>CORRECT</strong> (solutions are mathematically accurate)</p>
+<p>All derivations have been independently verified. Solutions show appropriate intermediate steps and arrive at correct final answers.</p>
+<hr>
+</section>
+<section id="part-by-part-verification" class="level2">
+<h2 class="anchored" data-anchor-id="part-by-part-verification">Part-by-Part Verification</h2>
+<section id="part-a-marginal-consumer-and-demands" class="level3">
+<h3 class="anchored" data-anchor-id="part-a-marginal-consumer-and-demands">Part (a): Marginal consumer and demands</h3>
+<p><strong>Question:</strong> Derive x* and demands q₁, q₂</p>
+<p><strong>Solution Claims:</strong> 1. Indifference: <span class="math inline">\(\bar u - p_1 - t(x-a)^2 = \bar u - p_2 - t(1-a-x)^2\)</span> 2. Simplifies to: <span class="math inline">\(x^* = \frac{1}{2} + \frac{p_2 - p_1}{2td}\)</span> 3. Demands: <span class="math inline">\(q_1 = x^*\)</span>, <span class="math inline">\(q_2 = 1 - x^*\)</span></p>
+<p><strong>Independent Verification:</strong></p>
+<p><strong>Step 1:</strong> Indifference condition ✓</p>
+<pre><code>U₁(x) = U₂(x)
+ū - p₁ - t(x-a)² = ū - p₂ - t(1-a-x)²
+p₂ - p₁ = t[(x-a)² - (1-a-x)²]</code></pre>
+<p><strong>Step 2:</strong> Expand quadratics</p>
+<pre><code>(x-a)² - (1-a-x)² = (x² - 2ax + a²) - ((1-a)² - 2(1-a)x + x²)
+                   = -2ax + a² - (1-a)² + 2(1-a)x
+                   = -2ax + 2(1-a)x + a² - (1-a)²
+                   = 2x[1-a-a] + [a² - (1-2a+a²)]
+                   = 2x(1-2a) + [a² - 1 + 2a - a²]
+                   = 2x(1-2a) + 2a - 1
+                   = (1-2a)(2x-1)
+                   = d(2x-1)  [since d = 1-2a]</code></pre>
+<p>So:</p>
+<pre><code>p₂ - p₁ = td(2x-1)
+2x-1 = (p₂-p₁)/(td)
+x = 1/2 + (p₂-p₁)/(2td)  ✓</code></pre>
+<p><strong>Verification:</strong> ✅ CORRECT</p>
+<p><strong>Note:</strong> Solution (line 117) provides alternative derivation <span class="math inline">\((x-a)^2-(1-a-x)^2=(1-2a)(2x-1)=d(2x-1)\)</span>, which is correct and more direct.</p>
+<hr>
+</section>
+<section id="part-b-best-responses" class="level3">
+<h3 class="anchored" data-anchor-id="part-b-best-responses">Part (b): Best responses</h3>
+<p><strong>Question:</strong> Derive BR₁(p₂) and BR₂(p₁)</p>
+<p><strong>Solution Claims:</strong> - <span class="math inline">\(BR_1(p_2) = \frac{p_2 + c_1 + td}{2}\)</span> - <span class="math inline">\(BR_2(p_1) = \frac{p_1 + c_2 + td}{2}\)</span></p>
+<p><strong>Independent Verification:</strong></p>
+<p><strong>Firm 1’s problem:</strong></p>
+<pre><code>max π₁ = (p₁ - c₁) q₁
+     p₁
+
+where q₁ = 1/2 + (p₂-p₁)/(2td)</code></pre>
+<p><strong>FOC:</strong></p>
+<pre><code>∂π₁/∂p₁ = q₁ + (p₁-c₁)(∂q₁/∂p₁) = 0
+
+∂q₁/∂p₁ = -1/(2td)
+
+So: q₁ - (p₁-c₁)/(2td) = 0
+    (p₁-c₁)/(2td) = q₁
+    p₁ - c₁ = 2td · q₁</code></pre>
+<p>Substitute q₁:</p>
+<pre><code>p₁ - c₁ = 2td · [1/2 + (p₂-p₁)/(2td)]
+        = td + (p₂-p₁)
+        = td + p₂ - p₁
+
+2p₁ = p₂ + c₁ + td
+
+p₁ = (p₂ + c₁ + td)/2  ✓</code></pre>
+<p><strong>Verification:</strong> ✅ CORRECT</p>
+<p>By symmetry, BR₂(p₁) follows the same logic.</p>
+<hr>
+</section>
+<section id="part-c-price-equilibrium" class="level3">
+<h3 class="anchored" data-anchor-id="part-c-price-equilibrium">Part (c): Price equilibrium</h3>
+<p><strong>Question:</strong> Solve for (p₁<em>, p₂</em>) and (q₁<em>, q₂</em>), show price gap, discuss distance effect</p>
+<p><strong>Solution Claims:</strong> - <span class="math inline">\(p_1^* = td + \frac{2c_1 + c_2}{3}\)</span> - <span class="math inline">\(p_2^* = td + \frac{c_1 + 2c_2}{3}\)</span> - <span class="math inline">\(p_2^* - p_1^* = \frac{c_2 - c_1}{3}\)</span> - <span class="math inline">\(q_1^* = \frac{1}{2} + \frac{c_2-c_1}{6td}\)</span> - <span class="math inline">\(q_2^* = \frac{1}{2} - \frac{c_2-c_1}{6td}\)</span></p>
+<p><strong>Independent Verification:</strong></p>
+<p><strong>System:</strong></p>
+<pre><code>2p₁ = p₂ + c₁ + td  ... (1)
+2p₂ = p₁ + c₂ + td  ... (2)</code></pre>
+<p>From (1): <span class="math inline">\(p₂ = 2p₁ - c₁ - td\)</span></p>
+<p>Substitute into (2):</p>
+<pre><code>2(2p₁ - c₁ - td) = p₁ + c₂ + td
+4p₁ - 2c₁ - 2td = p₁ + c₂ + td
+3p₁ = 2c₁ + c₂ + 3td
+p₁* = td + (2c₁ + c₂)/3  ✓</code></pre>
+<p>By symmetry (or back-substitution):</p>
+<pre><code>p₂* = td + (c₁ + 2c₂)/3  ✓</code></pre>
+<p><strong>Price gap:</strong></p>
+<pre><code>p₂* - p₁* = [(c₁ + 2c₂) - (2c₁ + c₂)]/3
+          = (c₂ - c₁)/3  ✓</code></pre>
+<p><strong>Market shares:</strong></p>
+<pre><code>q₁* = 1/2 + (p₂* - p₁*)/(2td)
+    = 1/2 + [(c₂-c₁)/3]/(2td)
+    = 1/2 + (c₂-c₁)/(6td)  ✓
+
+q₂* = 1 - q₁*
+    = 1/2 - (c₂-c₁)/(6td)  ✓</code></pre>
+<p><strong>Verification:</strong> ✅ ALL CORRECT</p>
+<p><strong>Distance effect (line 179):</strong> “Distance d raises the common ‘differentiation’ term td in prices, hence increases average markups and profits.”</p>
+<p><strong>Check:</strong> Both prices have td as additive term. As d↑, both p₁* and p₂* increase proportionally (holding costs constant). Average markup = p̄ - c̄ = td + (c₁+c₂)/3 - (c₁+c₂)/2 increases in td. ✓ SOUND</p>
+<hr>
+</section>
+<section id="part-d-interior-condition" class="level3">
+<h3 class="anchored" data-anchor-id="part-d-interior-condition">Part (d): Interior condition</h3>
+<p><strong>Question:</strong> Derive condition for interior split (both firms have positive market share)</p>
+<p><strong>Solution Claim:</strong> <span class="math inline">\(|c_2 - c_1| &lt; 3td\)</span></p>
+<p><strong>Independent Verification:</strong></p>
+<p><strong>Interior requires:</strong> <span class="math inline">\(0 &lt; q_1^*, q_2^* &lt; 1\)</span></p>
+<p>From part (c):</p>
+<pre><code>q₁* = 1/2 + (c₂-c₁)/(6td)
+q₂* = 1/2 - (c₂-c₁)/(6td)</code></pre>
+<p><strong>Condition 1:</strong> q₁* &lt; 1</p>
+<pre><code>1/2 + (c₂-c₁)/(6td) &lt; 1
+(c₂-c₁)/(6td) &lt; 1/2
+c₂-c₁ &lt; 3td</code></pre>
+<p><strong>Condition 2:</strong> q₂* &gt; 0</p>
+<pre><code>1/2 - (c₂-c₁)/(6td) &gt; 0
+1/2 &gt; (c₂-c₁)/(6td)
+3td &gt; c₂-c₁
+c₂-c₁ &lt; 3td</code></pre>
+<p><strong>Condition 3:</strong> q₁* &gt; 0</p>
+<pre><code>1/2 + (c₂-c₁)/(6td) &gt; 0
+(c₂-c₁) &gt; -3td
+c₁-c₂ &lt; 3td</code></pre>
+<p><strong>Condition 4:</strong> q₂* &lt; 1</p>
+<pre><code>1/2 - (c₂-c₁)/(6td) &lt; 1
+-(c₂-c₁)/(6td) &lt; 1/2
+c₁-c₂ &lt; 3td</code></pre>
+<p><strong>Combined:</strong> Conditions 1-4 reduce to <span class="math inline">\(|c_2 - c_1| &lt; 3td\)</span> ✓</p>
+<p><strong>Economic interpretation (line 191):</strong> “If |c₂-c₁| is too large relative to td, the low-cost firm can profitably set a price that leaves the rival with (essentially) zero demand.”</p>
+<p><strong>Verification:</strong> ✅ CORRECT and economically sound</p>
+<hr>
+</section>
+<section id="part-e-numerical-check" class="level3">
+<h3 class="anchored" data-anchor-id="part-e-numerical-check">Part (e): Numerical check</h3>
+<p><strong>Question:</strong> Compute (p₁<em>, p₂</em>, q₁<em>, q₂</em>) with a=1/4, t=2, c₁=0, c₂=1</p>
+<p><strong>Solution Claims:</strong> - d = 1/2 - td = 1 - p₁* = 4/3 - p₂* = 5/3 - q₁* = 2/3 - q₂* = 1/3</p>
+<p><strong>Independent Verification:</strong></p>
+<p><strong>Parameters:</strong></p>
+<pre><code>a = 1/4
+d = 1 - 2a = 1 - 2(1/4) = 1 - 1/2 = 1/2  ✓
+t = 2
+td = 2 · (1/2) = 1  ✓
+c₁ = 0
+c₂ = 1</code></pre>
+<p><strong>Prices:</strong></p>
+<pre><code>p₁* = td + (2c₁ + c₂)/3
+    = 1 + (0 + 1)/3
+    = 1 + 1/3
+    = 4/3  ✓
+
+p₂* = td + (c₁ + 2c₂)/3
+    = 1 + (0 + 2)/3
+    = 1 + 2/3
+    = 5/3  ✓</code></pre>
+<p><strong>Market shares:</strong></p>
+<pre><code>q₁* = 1/2 + (c₂-c₁)/(6td)
+    = 1/2 + 1/(6·1)
+    = 1/2 + 1/6
+    = 3/6 + 1/6
+    = 4/6
+    = 2/3  ✓
+
+q₂* = 1 - q₁*
+    = 1 - 2/3
+    = 1/3  ✓</code></pre>
+<p><strong>Verification:</strong> ✅ ALL NUMERICAL VALUES CORRECT</p>
+<hr>
+</section>
+<section id="part-f-discussion-quadratic-vs-linear-costs" class="level3">
+<h3 class="anchored" data-anchor-id="part-f-discussion-quadratic-vs-linear-costs">Part (f): Discussion — quadratic vs linear costs</h3>
+<p><strong>Question:</strong> Explain why quadratic costs make competition intensity depend on distance, unlike linear costs</p>
+<p><strong>Solution Claim (line 209-210):</strong> “With quadratic costs, the demand sensitivity |∂q₁/∂p₁| = 1/(2td) depends on the distance d.&nbsp;Closer firms (smaller d) face more elastic demand and therefore lower markups; this makes the location game less prone to ‘market capture’ incentives than under linear costs.”</p>
+<p><strong>Independent Verification:</strong></p>
+<p><strong>Quadratic costs (this exercise):</strong></p>
+<pre><code>q₁ = 1/2 + (p₂-p₁)/(2td)
+∂q₁/∂p₁ = -1/(2td)
+
+Demand elasticity ε₁ = (∂q₁/∂p₁) · (p₁/q₁) depends on d through the 1/(2td) term.</code></pre>
+<p><strong>Linear costs (Lecture 2):</strong> From lecture, with U(x) = ū - p - c|x-x_i|:</p>
+<pre><code>Marginal consumer: p₁ + cx = p₂ + cy
+With x + y = L-a-b:
+  x = (p₂ - p₁ + c(L+a-b))/(2c)
+
+∂x/∂p₁ = -1/(2c)</code></pre>
+<p>The slope does NOT depend on (L-a-b), the distance between firms. Only on c.</p>
+<p><strong>With quadratic costs:</strong></p>
+<pre><code>∂q₁/∂p₁ = -1/(2td)</code></pre>
+<p>The slope DOES depend on d.</p>
+<p><strong>Economic logic:</strong> - Smaller d → firms closer → steeper utility penalty for mismatch → more elastic demand → fiercer price competition → lower markups - In location stage, extreme differentiation (d large) less attractive because it softens price competition too much - With linear costs, demand slope independent of d → location incentives distorted → “principle of minimum differentiation” breakdown</p>
+<p><strong>Verification:</strong> ✅ ECONOMICALLY SOUND and mathematically accurate</p>
+<hr>
+</section>
+</section>
+<section id="minor-issues" class="level2">
+<h2 class="anchored" data-anchor-id="minor-issues">Minor Issues</h2>
+<section id="issue-1-solution-skips-a-step-low-severity-line-117" class="level3">
+<h3 class="anchored" data-anchor-id="issue-1-solution-skips-a-step-low-severity-line-117">Issue 1: Solution skips a step (LOW severity, line 117)</h3>
+<p><strong>Location:</strong> Part (a) solution, line 117</p>
+<p><strong>Current:</strong> “Expanding (or using <span class="math inline">\((x-a)^2-(1-a-x)^2=(1-2a)(2x-1)=d(2x-1)\)</span>) gives …”</p>
+<p><strong>Analysis:</strong> The solution provides the factored form <span class="math inline">\((x-a)^2-(1-a-x)^2=(1-2a)(2x-1)\)</span> without showing the expansion. While this is correct (verified above), some students may struggle to verify it.</p>
+<p><strong>Impact:</strong> LOW (advanced students can verify; others can accept the identity and proceed)</p>
+<p><strong>Recommendation:</strong> Add one line showing the expansion for completeness:</p>
+<pre><code>Expanding: (x-a)² - (1-a-x)² = (x²-2ax+a²) - ((1-a)²-2(1-a)x+x²) = (1-2a)(2x-1) = d(2x-1)</code></pre>
+<hr>
+</section>
+</section>
+<section id="summary-of-solution-quality" class="level2">
+<h2 class="anchored" data-anchor-id="summary-of-solution-quality">Summary of Solution Quality</h2>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 24%">
+<col style="width: 21%">
+<col style="width: 17%">
+<col style="width: 21%">
+<col style="width: 8%">
+</colgroup>
 <thead>
 <tr class="header">
-<th>Set</th>
-<th>Source</th>
-<th>Student (HTML)</th>
-<th>Instructor (HTML)</th>
-<th>Student (PDF)</th>
-<th>Instructor (PDF)</th>
+<th>Part</th>
+<th>Algebraic Correctness</th>
+<th>Numerical Accuracy</th>
+<th>Economic Logic</th>
+<th>Intermediate Steps</th>
+<th>Status</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Exercise 1: Oligopoly and Product Differentiation</td>
-<td><a href="../exercises/sheets/exercises-1.html">qmd</a></td>
-<td><a href="sheets/exercises-1.html">download</a></td>
-<td><a href="sheets/exercises-1-solutions.html">download</a></td>
-<td><a href="sheets/exercises-1.pdf">download</a></td>
-<td><a href="sheets/exercises-1-solutions.pdf">download</a></td>
+<td>(a)</td>
+<td>✓ Correct</td>
+<td>N/A</td>
+<td>✓ Sound</td>
+<td>✓ Adequate</td>
+<td>CORRECT</td>
 </tr>
-</tbody>
-</table>
-</section>
-<section id="live-exercises" class="level3">
-<h3 class="anchored" data-anchor-id="live-exercises">Live Exercises</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Set</th>
-<th>Source</th>
-<th>Student (HTML)</th>
-<th>Instructor (HTML)</th>
-<th>Student (PDF)</th>
-<th>Instructor (PDF)</th>
+<tr class="even">
+<td>(b)</td>
+<td>✓ Correct</td>
+<td>N/A</td>
+<td>✓ Sound</td>
+<td>✓ Good</td>
+<td>CORRECT</td>
 </tr>
-</thead>
-<tbody>
 <tr class="odd">
-<td>Live Exercise 1: Hotelling with quadratic transportation costs</td>
-<td><a href="../exercises/live/live-exercise-1.html">qmd</a></td>
-<td><a href="live/live-exercise-1.html">download</a></td>
-<td><a href="live/live-exercise-1-solutions.html">download</a></td>
-<td><a href="live/live-exercise-1.pdf">download</a></td>
-<td><a href="live/live-exercise-1-solutions.pdf">download</a></td>
+<td>(c)</td>
+<td>✓ Correct</td>
+<td>N/A</td>
+<td>✓ Sound</td>
+<td>✓ Good</td>
+<td>CORRECT</td>
+</tr>
+<tr class="even">
+<td>(d)</td>
+<td>✓ Correct</td>
+<td>N/A</td>
+<td>✓ Sound</td>
+<td>✓ Adequate</td>
+<td>CORRECT</td>
+</tr>
+<tr class="odd">
+<td>(e)</td>
+<td>✓ Correct</td>
+<td>✓ All correct</td>
+<td>N/A</td>
+<td>✓ Clear</td>
+<td>CORRECT</td>
+</tr>
+<tr class="even">
+<td>(f)</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>✓ Sound</td>
+<td>✓ Clear</td>
+<td>CORRECT</td>
 </tr>
 </tbody>
 </table>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>Study Advice
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Try to complete the problems on your own before going to class. Active problem-solving is essential for mastering industrial organisation concepts.</p>
-</div>
-</div>
+<p><strong>Overall:</strong> ✅ <strong>CORRECT</strong> — All solutions verified mathematically accurate</p>
+<hr>
 </section>
-<section id="how-to-use-these-exercises" class="level3">
-<h3 class="anchored" data-anchor-id="how-to-use-these-exercises">How to Use These Exercises</h3>
+<section id="verification-method" class="level2">
+<h2 class="anchored" data-anchor-id="verification-method">Verification Method</h2>
+<p>All key derivations were independently reproduced: 1. Indifference condition solved for x* (expanded quadratics manually) 2. Best response functions derived from FOCs 3. Equilibrium system solved (substitution method) 4. Interior condition derived from inequality constraints 5. Numerical values computed independently 6. Economic reasoning checked against standard IO theory</p>
+<p><strong>Confidence level:</strong> HIGH (all critical steps verified)</p>
+<hr>
+</section>
+<section id="recommendations" class="level2">
+<h2 class="anchored" data-anchor-id="recommendations">Recommendations</h2>
+<section id="optional-improvements" class="level3">
+<h3 class="anchored" data-anchor-id="optional-improvements">Optional Improvements</h3>
 <ol type="1">
-<li><strong>Review the relevant lecture material</strong> before attempting each problem set</li>
-<li><strong>Attempt all problems</strong> without looking at solutions</li>
-<li><strong>Check your answers</strong> against the solutions</li>
-<li><strong>Identify gaps</strong> in your understanding and revisit lecture notes</li>
+<li><strong>Part (a) solution:</strong> Add one line showing quadratic expansion for transparency</li>
+<li><strong>Part (c) solution:</strong> Could add verification that q₁* + q₂* = 1 (consistency check)</li>
+<li><strong>Part (f) solution:</strong> Could reference specific line in Lecture 2 for linear cost formula comparison</li>
 </ol>
+<p><strong>None of these affect correctness — purely pedagogical enhancements.</strong></p>
+<hr>
+<p><strong>Report saved to:</strong> <code>quality_reports/live-exercise-1_solution_verification.md</code> <strong>Conclusion:</strong> Solutions are mathematically correct and economically sound. Ready for classroom use.</p>
 
 
+</section>
 </section>
 </section>
 

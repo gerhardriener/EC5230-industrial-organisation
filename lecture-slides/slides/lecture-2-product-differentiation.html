@@ -6,8 +6,8 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ce4278342a015d016477ed09bce942c5.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.17">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-3f61aac59b63c3a2d0e87c59ee7d0662.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.19">
 
   <meta name="author" content="Gerhard Riener">
   <title>EC5230 Industrial Organisation – Lecture 2 – Product Differentiation</title>
@@ -185,7 +185,7 @@ Gerhard Riener
 <h2>Setup: Fixed locations, price competition</h2>
 <ul>
 <li>Duopoly, marginal cost <span class="math inline">\(0\)</span></li>
-<li>Consumers (<span class="math inline">\(\ell\)</span>) uniformly distributed on <span class="math inline">\([0,L]\)</span> (<span class="citation" data-cites="hotellingStabilityCompetition1929">Hotelling (<a href="#/references" role="doc-biblioref" onclick="">1929</a>)</span> line)</li>
+<li>Consumers (<span class="math inline">\(\ell\)</span>) uniformly distributed on <span class="math inline">\([0,L]\)</span> <span class="citation" data-cites="hotellingStabilityCompetition1929">(<a href="#/references" role="doc-biblioref" onclick="">Hotelling 1929</a>)</span></li>
 <li>Firm 1 at <span class="math inline">\(a\)</span> and Firm 2 at <span class="math inline">\(L-b\)</span></li>
 <li>Mismatch (transport) cost <span class="math inline">\(C(d)=cd\)</span> with <span class="math inline">\(c&gt;0\)</span>, <span class="math inline">\(d\)</span> extent of mismatch</li>
 <li>Unit demand; assume full market coverage in equilibrium</li>
@@ -287,16 +287,17 @@ Gerhard Riener
 <li><span class="math inline">\(\frac{\partial \pi_1^*}{\partial a} = \frac{c}{9}(3L + a - b) &gt; 0\)</span> and <span class="math inline">\(\frac{\partial \pi_2^*}{\partial b} = \frac{c}{9}(3L + b - a) &gt; 0\)</span></li>
 <li>In the pricing subgame, increasing <span class="math inline">\(a\)</span> (resp. <span class="math inline">\(b\)</span>) moves Firm 1 (resp. Firm 2) inward (toward the centre)</li>
 <li>These are comparative statics holding the rival location fixed</li>
-<li>Under linear transport costs, pricing incentives can pull locations toward the centre firms will “go where the demand is”</li>
+<li>Under linear transport costs, pricing incentives can pull locations toward the centre; firms will “go where the demand is”</li>
 </ul>
 </section>
 <section id="identifying-clustering-motives" class="slide level2">
 <h2>Identifying clustering motives</h2>
-<p><strong>Question</strong> Why are so many businesses clustered together?</p>
+<p><strong>Question:</strong> Why are so many businesses clustered together?</p>
 <ul>
 <li><p>Going where the demand is?</p></li>
-<li><p>Possible collusion story? Being next to the competitor facilitates monitoring?</p></li>
+<li><p>Possible collusion story? Being next to the competitor facilitates monitoring.</p></li>
 </ul>
+<p>Next: the formal location game clarifies when this clustering logic breaks down under linear transport costs.</p>
 </section>
 <section id="location-game-daspremonthotellingsstabilitycompetition1979" class="slide level2">
 <h2>Location game <span class="citation" data-cites="daspremontHotellingsStabilityCompetition1979">(<a href="#/references" role="doc-biblioref" onclick=""><span class="nocase">d’Aspremont et al.</span> 1979</a>)</span></h2>
@@ -321,19 +322,25 @@ Gerhard Riener
 </div>
 </div>
 </section>
-<section id="profit-function" class="slide level2">
-<h2>Profit function</h2>
+<section id="profit-function-interior-region" class="slide level2">
+<h2>Profit function: interior region</h2>
 <ul>
 <li>Let <span class="math inline">\(\Delta \equiv L-a-b\)</span> denote the distance between firms</li>
-<li>In the price subgame (locations fixed), Firm 1’s profit is piecewise in <span class="math inline">\((p_1,p_2)\)</span> <span class="citation" data-cites="daspremontHotellingsStabilityCompetition1979">(<a href="#/references" role="doc-biblioref" onclick=""><span class="nocase">d’Aspremont et al.</span> 1979</a>)</span></li>
+<li>Interior-demand region: <span class="math inline">\(|p_1 - p_2| \le c\Delta\)</span></li>
+<li>In this region, Firm 1’s profit is:</li>
 </ul>
-<p><span class="math display">\[\pi_1(p_1, p_2) =
-\begin{cases}
+<p><span class="math display">\[
+\pi_1(p_1,p_2)=
 \frac{p_1 p_2}{2c} - \frac{p_1^2}{2c} + \frac{(L+a-b)p_1}{2}
-&amp; \text{if } |p_1 - p_2| \le c(L - a - b) \\[0.5em]
-Lp_1 &amp; \text{if } p_1 &lt; p_2 - c(L - a - b) \\[0.5em]
-0 &amp; \text{if } p_1 &gt; p_2 + c(L - a - b)
-\end{cases}\]</span></p>
+\]</span></p>
+</section>
+<section id="profit-function-corner-regions" class="slide level2">
+<h2>Profit function: corner regions</h2>
+<ul>
+<li>Market capture: if <span class="math inline">\(p_1 &lt; p_2 - c\Delta\)</span>, then <span class="math inline">\(\pi_1 = Lp_1\)</span></li>
+<li>No demand: if <span class="math inline">\(p_1 &gt; p_2 + c\Delta\)</span>, then <span class="math inline">\(\pi_1 = 0\)</span></li>
+<li>Together with the interior expression, these define the piecewise payoff in <span class="citation" data-cites="daspremontHotellingsStabilityCompetition1979">(<a href="#/references" role="doc-biblioref" onclick=""><span class="nocase">d’Aspremont et al.</span> 1979</a>)</span></li>
+</ul>
 </section>
 <section id="profit-regions" class="slide level2">
 <h2>Profit regions</h2>
@@ -365,9 +372,10 @@ Lp_1 &amp; \text{if } p_1 &lt; p_2 - c(L - a - b) \\[0.5em]
 <li>Choice variable: <span class="math inline">\(p_i\)</span></li>
 <li>Parameters: <span class="math inline">\(n, c, u, u^*\)</span></li>
 <li>Outcomes: market boundaries / cutoffs, quantities</li>
+<li>Symmetric benchmark: if neighbours set <span class="math inline">\(\tilde{p}=p\)</span>, the boundary consumer is at <span class="math inline">\(x=\frac{1}{2n}\)</span></li>
+<li>Baseline local demand before participation truncation: <span class="math inline">\(q^C=2x=\frac{1}{n}\)</span></li>
 </ul>
-
-<img data-src="../figs/fig-salop-cycle.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:50.0%"></section>
+</section>
 <section id="consumers" class="slide level2">
 <h2>Consumers</h2>
 <ul>
@@ -460,7 +468,10 @@ Lp_1 &amp; \text{if } p_1 &lt; p_2 - c(L - a - b) \\[0.5em]
 <p><strong>Competitive-region condition (outside option not binding)</strong></p>
 </div>
 <div class="callout-content">
-<p>In a symmetric profile, the farthest consumer from a firm is at distance <span class="math inline">\(\frac{1}{2n}\)</span>. A sufficient condition for the competitive region to apply at the symmetric equilibrium is <span class="math inline">\(v \ge p^C + \frac{c}{2n}\)</span>.</p>
+<ul>
+<li>In a symmetric profile, the farthest consumer from a firm is at distance <span class="math inline">\(\frac{1}{2n}\)</span>.</li>
+<li>A sufficient condition for the competitive region to apply at the symmetric equilibrium is <span class="math inline">\(v \ge p^C + \frac{c}{2n}\)</span>.</li>
+</ul>
 </div>
 </div>
 </div>
@@ -507,7 +518,7 @@ Lp_1 &amp; \text{if } p_1 &lt; p_2 - c(L - a - b) \\[0.5em]
 <li>Social optimum: <span class="math inline">\(n^S=\frac{1}{2}\sqrt{\frac{c}{F}}\)</span></li>
 <li>Free entry: <span class="math inline">\(n^C=\sqrt{\frac{c}{F}}\)</span> so <span class="math inline">\(n^C=2n^S\)</span></li>
 </ul>
-<p>Excess entry due to business stealing externality</p>
+<p>Excess entry due to the business-stealing externality.</p>
 </section>
 <section id="summary-and-next-week" class="slide level2">
 <h2>Summary and next week</h2>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.17">
+<meta name="generator" content="quarto-1.9.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -25,7 +25,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -42,10 +61,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ce4278342a015d016477ed09bce942c5.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-3f61aac59b63c3a2d0e87c59ee7d0662.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-da3805a3419a5cda4b8ab6b18e8fe390.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-28d27a42a56729422b407e3a5d101f61.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -98,14 +117,64 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link active" href="./index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./lecture-slides/index.html"> 
-<span class="menu-text">Lectures</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-lectures" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Lectures</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-lectures">    
+        <li>
+    <a class="dropdown-item" href="./lecture-slides/index.html">
+ <span class="dropdown-text">All Lecture Slides</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./exercises/"> 
-<span class="menu-text">Exercises</span></a>
+        <li>
+    <a class="dropdown-item" href="./lecture-slides/slides/lecture-0-intro.html">
+ <span class="dropdown-text">Week 0: Introduction</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./lecture-slides/slides/lecture-1-oligopoly.html">
+ <span class="dropdown-text">Week 1: Oligopoly</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./lecture-slides/slides/lecture-2-product-differentiation.html">
+ <span class="dropdown-text">Week 2: Product Differentiation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./lecture-slides/slides/lecture-3-innovation.html">
+ <span class="dropdown-text">Week 3: Innovation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./lecture-slides/slides/lecture-4-patents.html">
+ <span class="dropdown-text">Week 4: Patents and IPRs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./lecture-slides/slides/lecture-5-repeated-games.html">
+ <span class="dropdown-text">Week 5: Multi-stage Games</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./lecture-slides/slides/lecture-6-corporate-rand.html">
+ <span class="dropdown-text">Week 7: Cooperative R&amp;D</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-exercises" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Exercises</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-exercises">    
+        <li>
+    <a class="dropdown-item" href="./exercises/index.html">
+ <span class="dropdown-text">All Exercises</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./exercises/sheets/exercises-1.html">
+ <span class="dropdown-text">Exercise 1: Oligopoly and Product Differentiation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./exercises/live/live-exercise-1.html">
+ <span class="dropdown-text">Live Exercise 1: Hotelling (Quadratic Transport Costs)</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -131,8 +200,6 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#course-materials" id="toc-course-materials" class="nav-link" data-scroll-target="#course-materials">Course Materials</a>
   <ul class="collapse">
-  <li><a href="#lecture-slides" id="toc-lecture-slides" class="nav-link" data-scroll-target="#lecture-slides">Lecture Slides</a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
   <li><a href="#interactive-apps" id="toc-interactive-apps" class="nav-link" data-scroll-target="#interactive-apps">Interactive Apps</a></li>
   </ul></li>
   <li><a href="#textbooks-and-readings" id="toc-textbooks-and-readings" class="nav-link" data-scroll-target="#textbooks-and-readings">Textbooks and Readings</a></li>
@@ -213,8 +280,8 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="sustainability-in-the-curriculum">Sustainability in the Curriculum</h3>
 <p>This module contributes to UN Sustainable Development Goals:</p>
 <ul>
-<li><strong>Goal 9: Industry, Innovation, and Infrastructure</strong> — Examining how patents and IPRs impact innovation disclosure and cooperative R&amp;D</li>
-<li><strong>Goal 12: Responsible Consumption and Production</strong> — Analysing network effects in technology adoption and sustainable industrialisation</li>
+<li><p><strong>Goal 9: Industry, Innovation, and Infrastructure</strong> — Examining how patents and IPRs impact innovation disclosure and cooperative R&amp;D</p></li>
+<li><p><strong>Goal 12: Responsible Consumption and Production</strong> — Analysing network effects in technology adoption and sustainable industrialisation</p></li>
 </ul>
 </section>
 </section>
@@ -226,36 +293,37 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Navigation
+Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Use the links below to access lectures, exercises, and interactive applications.</p>
+<p>Use the top navbar for section-level navigation and the sidebars on lecture/exercise pages for week-by-week links.</p>
 </div>
 </div>
-<section id="lecture-slides" class="level3">
-<h3 class="anchored" data-anchor-id="lecture-slides"><a href="lecture-slides/">Lecture Slides</a></h3>
-<p>Comprehensive lecture notes covering key topics in industrial organisation:</p>
-<ul>
-<li><a href="lecture-slides/lecture-1-oligopoly.html" target="_blank">Lecture 1: Competition &amp; Oligopoly Coordination</a></li>
-<li><a href="lecture-slides/lecture-2-product-differentiation.html" target="_blank">Lecture 2: Product Differentiation</a></li>
-<li><a href="lecture-slides/lecture-3-innovation.html" target="_blank">Lecture 3: Economics of Innovation</a></li>
-<li><a href="lecture-slides/lecture-4-patents.html" target="_blank">Lecture 4: Patents and Intellectual Property Rights</a></li>
-<li><a href="lecture-slides/lecture-5-multistage.html" target="_blank">Lecture 5: Multi-stage Games and Strategic Commitment</a></li>
-<li><a href="lecture-slides/lecture-7-cooperative-rd.html" target="_blank">Lecture 7: Cooperative R&amp;D</a></li>
-<li><a href="lecture-slides/lecture-8-bundling.html" target="_blank">Lecture 8: Bundling and Tying</a></li>
-<li><a href="lecture-slides/lecture-9-advertising.html" target="_blank">Lecture 9: Advertising and Brand Competition</a></li>
-<li><a href="lecture-slides/lecture-11-mergers.html" target="_blank">Lecture 11: Mergers and Acquisitions</a></li>
-<li><a href="lecture-slides/lecture-12-sustainability.html" target="_blank">Lecture 12: Sustainable Industrialisation</a></li>
-</ul>
-</section>
-<section id="exercises" class="level3">
-<h3 class="anchored" data-anchor-id="exercises"><a href="exercises/">Exercises</a></h3>
-<p>Problem sets with and without solutions to help you practice the concepts covered in lectures. Tutorials focus on live problem-solving (numerical and discussion/interpretation questions).</p>
-</section>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Material</th>
+<th>What it includes</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Lecture Slides</td>
+<td>Weekly lecture decks in interactive HTML and printable PDF formats</td>
+<td><a href="./lecture-slides/index.html">Lecture Slides overview</a></td>
+</tr>
+<tr class="even">
+<td>Exercises</td>
+<td>Student and instructor variants for sheets and live tutorial exercises</td>
+<td><a href="./exercises/index.html">Exercises overview</a></td>
+</tr>
+</tbody>
+</table>
 <section id="interactive-apps" class="level3">
-<h3 class="anchored" data-anchor-id="interactive-apps"><a href="apps/">Interactive Apps</a></h3>
-<p>Interactive visualisations to explore key economic models:</p>
+<h3 class="anchored" data-anchor-id="interactive-apps">Interactive Apps</h3>
+<p>TBD. Interactive visualisations to explore key economic models:</p>
 <ul>
 <li>Cournot duopoly best responses</li>
 <li>Monopolist profit maximisation</li>
@@ -268,10 +336,10 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="textbooks-and-readings">Textbooks and Readings</h2>
 <p>There is no single prescribed textbook. The course draws on chapters from:</p>
 <ul>
-<li><strong>Belleflamme, P. &amp; Peitz, M. (2015).</strong> <em>Industrial Organisation: Markets and Strategies</em> (2nd ed.). Cambridge University Press.</li>
-<li><strong>Shy, O. (1996).</strong> <em>Industrial Organisation: Theory and Applications</em>. MIT Press.</li>
-<li><strong>Scotchmer, S. (2004).</strong> <em>Innovation and Incentives</em>. Princeton University Press.</li>
-<li><strong>Church, J. &amp; Ware, R. (2000).</strong> <em>Industrial Organization: A Strategic Approach</em>. Irwin McGraw-Hill.</li>
+<li><strong><span class="citation" data-cites="belleflammeIndustrialOrganizationMarkets2015">Belleflamme and Peitz (<a href="#ref-belleflammeIndustrialOrganizationMarkets2015" role="doc-biblioref">2015</a>)</span></strong> <em>Industrial Organisation: Markets and Strategies</em> (2nd ed.). Cambridge University Press.</li>
+<li><strong><span class="citation" data-cites="shyIndustrialOrganizationTheory1995">Shy (<a href="#ref-shyIndustrialOrganizationTheory1995" role="doc-biblioref">1995</a>)</span></strong> <em>Industrial Organisation: Theory and Applications</em>. MIT Press.</li>
+<li><strong><span class="citation" data-cites="scotchmerInnovationIncentives2006">Scotchmer (<a href="#ref-scotchmerInnovationIncentives2006" role="doc-biblioref">2006</a>)</span></strong> <em>Innovation and Incentives</em>. Princeton University Press.</li>
+<li><strong><span class="citation" data-cites="churchIndustrialOrganizationStrategic2000">Church (<a href="#ref-churchIndustrialOrganizationStrategic2000" role="doc-biblioref">2000</a>)</span></strong> <em>Industrial Organization: A Strategic Approach</em>. Irwin McGraw-Hill.</li>
 </ul>
 <p>Journal articles are available through the online reading list and cited at the end of each lecture.</p>
 </section>
@@ -359,9 +427,23 @@ ul.task-list li input[type="checkbox"] {
 <p><em>Course materials developed at the University of St Andrews. Interactive apps based on concepts by Flavio Toxvaerd (University of Cambridge).</em></p>
 
 
+
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-belleflammeIndustrialOrganizationMarkets2015" class="csl-entry" role="listitem">
+Belleflamme, Paul, and Martin Peitz. 2015. <em>Industrial Organization: Markets and Strategies</em>. Cambridge University Press.
+</div>
+<div id="ref-churchIndustrialOrganizationStrategic2000" class="csl-entry" role="listitem">
+Church, Jeffrey R. 2000. <em>Industrial Organization: A Strategic Approach</em>. Irwin McGraw Hill.
+</div>
+<div id="ref-scotchmerInnovationIncentives2006" class="csl-entry" role="listitem">
+Scotchmer, Suzanne. 2006. <em>Innovation and Incentives</em>. MIT Press.
+</div>
+<div id="ref-shyIndustrialOrganizationTheory1995" class="csl-entry" role="listitem">
+Shy, Oz. 1995. <em>Industrial Organization: Theory and Applications</em>. MIT Press.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

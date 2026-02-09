@@ -9,7 +9,7 @@
 <meta name="author" content="Gerhard Riener">
 <meta name="description" content="MSc-level Industrial Organisation course at the University of St Andrews">
 
-<title>Exercises – EC5230 Industrial Organisation</title>
+<title>lecture-3-innovation_pedagogy_report – EC5230 Industrial Organisation</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -74,10 +74,39 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
-<body class="nav-sidebar docked nav-fixed quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -162,78 +191,45 @@ ul.task-list li input[type="checkbox"] {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../exercises/index.html">Exercises</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../exercises/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Exercises</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Exercise Sheets</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../exercises/sheets/exercises-1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercise 1: Oligopoly and Product Differentiation</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Live Exercises</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../exercises/live/live-exercise-1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Live Exercise 1: Hotelling with quadratic transportation costs</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#problem-sets" id="toc-problem-sets" class="nav-link active" data-scroll-target="#problem-sets">Problem Sets</a>
+  <li><a href="#pedagogical-review-lecture-3-innovation.qmd" id="toc-pedagogical-review-lecture-3-innovation.qmd" class="nav-link active" data-scroll-target="#pedagogical-review-lecture-3-innovation.qmd">Pedagogical Review: lecture-3-innovation.qmd</a>
   <ul class="collapse">
-  <li><a href="#exercise-sheets" id="toc-exercise-sheets" class="nav-link" data-scroll-target="#exercise-sheets">Exercise Sheets</a></li>
-  <li><a href="#live-exercises" id="toc-live-exercises" class="nav-link" data-scroll-target="#live-exercises">Live Exercises</a></li>
-  <li><a href="#how-to-use-these-exercises" id="toc-how-to-use-these-exercises" class="nav-link" data-scroll-target="#how-to-use-these-exercises">How to Use These Exercises</a></li>
+  <li><a href="#pattern-scorecard-7-followed-3-partial-3-violated" id="toc-pattern-scorecard-7-followed-3-partial-3-violated" class="nav-link" data-scroll-target="#pattern-scorecard-7-followed-3-partial-3-violated">Pattern Scorecard: 7 Followed / 3 Partial / 3 Violated</a></li>
+  <li><a href="#pattern-details" id="toc-pattern-details" class="nav-link" data-scroll-target="#pattern-details">Pattern Details</a>
+  <ul class="collapse">
+  <li><a href="#pattern-3-worked-example-after-every-definition-partial" id="toc-pattern-3-worked-example-after-every-definition-partial" class="nav-link" data-scroll-target="#pattern-3-worked-example-after-every-definition-partial">Pattern 3: Worked Example After Every Definition — PARTIAL</a></li>
+  <li><a href="#pattern-5-fragment-reveals-violated" id="toc-pattern-5-fragment-reveals-violated" class="nav-link" data-scroll-target="#pattern-5-fragment-reveals-violated">Pattern 5: Fragment Reveals — VIOLATED</a></li>
+  <li><a href="#pattern-7-two-slide-strategy-for-dense-theorems-partial" id="toc-pattern-7-two-slide-strategy-for-dense-theorems-partial" class="nav-link" data-scroll-target="#pattern-7-two-slide-strategy-for-dense-theorems-partial">Pattern 7: Two-Slide Strategy for Dense Theorems — PARTIAL</a></li>
+  <li><a href="#pattern-10-box-fatigue-violated" id="toc-pattern-10-box-fatigue-violated" class="nav-link" data-scroll-target="#pattern-10-box-fatigue-violated">Pattern 10: Box Fatigue — VIOLATED</a></li>
+  <li><a href="#pattern-11-socratic-embedding-partial" id="toc-pattern-11-socratic-embedding-partial" class="nav-link" data-scroll-target="#pattern-11-socratic-embedding-partial">Pattern 11: Socratic Embedding — PARTIAL</a></li>
+  <li><a href="#pattern-12-visual-first-for-complex-concepts-violated" id="toc-pattern-12-visual-first-for-complex-concepts-violated" class="nav-link" data-scroll-target="#pattern-12-visual-first-for-complex-concepts-violated">Pattern 12: Visual-First for Complex Concepts — VIOLATED</a></li>
+  </ul></li>
+  <li><a href="#deck-level-analysis" id="toc-deck-level-analysis" class="nav-link" data-scroll-target="#deck-level-analysis">Deck-Level Analysis</a>
+  <ul class="collapse">
+  <li><a href="#narrative-arc" id="toc-narrative-arc" class="nav-link" data-scroll-target="#narrative-arc">Narrative Arc</a></li>
+  <li><a href="#pacing" id="toc-pacing" class="nav-link" data-scroll-target="#pacing">Pacing</a></li>
+  <li><a href="#visual-rhythm" id="toc-visual-rhythm" class="nav-link" data-scroll-target="#visual-rhythm">Visual Rhythm</a></li>
+  <li><a href="#notation-consistency" id="toc-notation-consistency" class="nav-link" data-scroll-target="#notation-consistency">Notation Consistency</a></li>
+  <li><a href="#student-concerns" id="toc-student-concerns" class="nav-link" data-scroll-target="#student-concerns">Student Concerns</a></li>
+  </ul></li>
+  <li><a href="#top-5-critical-recommendations" id="toc-top-5-critical-recommendations" class="nav-link" data-scroll-target="#top-5-critical-recommendations">Top 5 Critical Recommendations</a>
+  <ul class="collapse">
+  <li><a href="#add-visual-diagrams-for-key-concepts-high" id="toc-add-visual-diagrams-for-key-concepts-high" class="nav-link" data-scroll-target="#add-visual-diagrams-for-key-concepts-high">1. Add visual diagrams for key concepts (High)</a></li>
+  <li><a href="#add-a-worked-numerical-example-for-dasgupta-stiglitz-high" id="toc-add-a-worked-numerical-example-for-dasgupta-stiglitz-high" class="nav-link" data-scroll-target="#add-a-worked-numerical-example-for-dasgupta-stiglitz-high">2. Add a worked numerical example for Dasgupta-Stiglitz (High)</a></li>
+  <li><a href="#split-the-dense-free-entryconcentration-slide-high" id="toc-split-the-dense-free-entryconcentration-slide-high" class="nav-link" data-scroll-target="#split-the-dense-free-entryconcentration-slide-high">3. Split the dense free-entry/concentration slide (High)</a></li>
+  <li><a href="#add-fragment-reveals-at-punchline-moments-medium" id="toc-add-fragment-reveals-at-punchline-moments-medium" class="nav-link" data-scroll-target="#add-fragment-reveals-at-punchline-moments-medium">4. Add fragment reveals at punchline moments (Medium)</a></li>
+  <li><a href="#add-12-more-socratic-questions-medium" id="toc-add-12-more-socratic-questions-medium" class="nav-link" data-scroll-target="#add-12-more-socratic-questions-medium">5. Add 1–2 more Socratic questions (Medium)</a></li>
+  </ul></li>
+  <li><a href="#overall-assessment" id="toc-overall-assessment" class="nav-link" data-scroll-target="#overall-assessment">Overall Assessment</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -243,7 +239,6 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Exercises</h1>
 </div>
 
 <div>
@@ -271,98 +266,183 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="problem-sets" class="level2">
-<h2 class="anchored" data-anchor-id="problem-sets">Problem Sets</h2>
-<p>Practice exercises for EC5230 Industrial Organisation.</p>
-<p>Each exercise is published in two explicit variants:</p>
-<ul>
-<li><strong>Student</strong> version (<code>solutions: false</code>)</li>
-<li><strong>Instructor</strong> version (<code>solutions: true</code>)</li>
-</ul>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Use the navbar <code>Exercises</code> menu for direct links to each sheet.</p>
-</div>
-</div>
-<section id="exercise-sheets" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-sheets">Exercise Sheets</h3>
+<section id="pedagogical-review-lecture-3-innovation.qmd" class="level1">
+<h1>Pedagogical Review: lecture-3-innovation.qmd</h1>
+<p><strong>Date:</strong> 2026-02-07 <strong>Reviewer:</strong> Claude Code (Pedagogy-Reviewer Agent) <strong>File:</strong> <code>lecture-slides/slides/lecture-3-innovation.qmd</code></p>
+<hr>
+<section id="pattern-scorecard-7-followed-3-partial-3-violated" class="level2">
+<h2 class="anchored" data-anchor-id="pattern-scorecard-7-followed-3-partial-3-violated">Pattern Scorecard: 7 Followed / 3 Partial / 3 Violated</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>Set</th>
-<th>Source</th>
-<th>Student (HTML)</th>
-<th>Instructor (HTML)</th>
-<th>Student (PDF)</th>
-<th>Instructor (PDF)</th>
+<th>#</th>
+<th>Pattern</th>
+<th>Status</th>
+<th>Severity</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Exercise 1: Oligopoly and Product Differentiation</td>
-<td><a href="../exercises/sheets/exercises-1.html">qmd</a></td>
-<td><a href="sheets/exercises-1.html">download</a></td>
-<td><a href="sheets/exercises-1-solutions.html">download</a></td>
-<td><a href="sheets/exercises-1.pdf">download</a></td>
-<td><a href="sheets/exercises-1-solutions.pdf">download</a></td>
+<td>1</td>
+<td>Motivation before formalism</td>
+<td>FOLLOWED</td>
+<td>—</td>
 </tr>
-</tbody>
-</table>
-</section>
-<section id="live-exercises" class="level3">
-<h3 class="anchored" data-anchor-id="live-exercises">Live Exercises</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Set</th>
-<th>Source</th>
-<th>Student (HTML)</th>
-<th>Instructor (HTML)</th>
-<th>Student (PDF)</th>
-<th>Instructor (PDF)</th>
+<tr class="even">
+<td>2</td>
+<td>Incremental notation</td>
+<td>FOLLOWED</td>
+<td>Low</td>
 </tr>
-</thead>
-<tbody>
 <tr class="odd">
-<td>Live Exercise 1: Hotelling with quadratic transportation costs</td>
-<td><a href="../exercises/live/live-exercise-1.html">qmd</a></td>
-<td><a href="live/live-exercise-1.html">download</a></td>
-<td><a href="live/live-exercise-1-solutions.html">download</a></td>
-<td><a href="live/live-exercise-1.pdf">download</a></td>
-<td><a href="live/live-exercise-1-solutions.pdf">download</a></td>
+<td>3</td>
+<td>Worked example after every definition</td>
+<td>PARTIAL</td>
+<td><strong>High</strong></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Progressive complexity</td>
+<td>FOLLOWED</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Fragment reveals for problem-solution</td>
+<td>VIOLATED</td>
+<td>Medium</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Standout slides at conceptual pivots</td>
+<td>FOLLOWED</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Two-slide strategy for dense theorems</td>
+<td>PARTIAL</td>
+<td><strong>High</strong></td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>Semantic color usage</td>
+<td>PARTIAL</td>
+<td>Low</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>Box hierarchy</td>
+<td>FOLLOWED</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>Box fatigue (per-slide)</td>
+<td>VIOLATED</td>
+<td>Medium</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>Socratic embedding</td>
+<td>PARTIAL</td>
+<td>Medium</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>Visual-first for complex concepts</td>
+<td>VIOLATED</td>
+<td><strong>High</strong></td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td>Two-column definition comparisons</td>
+<td>FOLLOWED</td>
+<td>Low</td>
 </tr>
 </tbody>
 </table>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>Study Advice
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Try to complete the problems on your own before going to class. Active problem-solving is essential for mastering industrial organisation concepts.</p>
-</div>
-</div>
+<hr>
 </section>
-<section id="how-to-use-these-exercises" class="level3">
-<h3 class="anchored" data-anchor-id="how-to-use-these-exercises">How to Use These Exercises</h3>
-<ol type="1">
-<li><strong>Review the relevant lecture material</strong> before attempting each problem set</li>
-<li><strong>Attempt all problems</strong> without looking at solutions</li>
-<li><strong>Check your answers</strong> against the solutions</li>
-<li><strong>Identify gaps</strong> in your understanding and revisit lecture notes</li>
-</ol>
+<section id="pattern-details" class="level2">
+<h2 class="anchored" data-anchor-id="pattern-details">Pattern Details</h2>
+<section id="pattern-3-worked-example-after-every-definition-partial" class="level3">
+<h3 class="anchored" data-anchor-id="pattern-3-worked-example-after-every-definition-partial">Pattern 3: Worked Example After Every Definition — PARTIAL</h3>
+<p>The monopoly and competition benchmarks have worked derivations, and a numerical check appears (lines 232–241). However, the <strong>Dasgupta-Stiglitz model</strong> (lines 330–415) introduces the planner problem, FOC, free-entry condition, and concentration formula across four consecutive slides with <strong>no numerical example</strong>. Comparative statics (lines 417–451) also lack worked examples.</p>
+</section>
+<section id="pattern-5-fragment-reveals-violated" class="level3">
+<h3 class="anchored" data-anchor-id="pattern-5-fragment-reveals-violated">Pattern 5: Fragment Reveals — VIOLATED</h3>
+<p>Zero fragment reveals (<code>. . .</code>) in the entire deck. Key “punchline” moments that should be revealed after a pause: - Replacement effect inequality: <span class="math inline">\(\Delta \pi^{pc} - \Delta \pi^m = \pi^m(c_0) &gt; 0\)</span> - Pre-emption condition: <span class="math inline">\(V_I &gt; V_E\)</span> - D-S concentration formula</p>
+</section>
+<section id="pattern-7-two-slide-strategy-for-dense-theorems-partial" class="level3">
+<h3 class="anchored" data-anchor-id="pattern-7-two-slide-strategy-for-dense-theorems-partial">Pattern 7: Two-Slide Strategy for Dense Theorems — PARTIAL</h3>
+<p>The free-entry/concentration slide (lines 387–415) crams <strong>four equations</strong> plus an interpretation callout onto a single slide. This is the densest slide in the deck.</p>
+</section>
+<section id="pattern-10-box-fatigue-violated" class="level3">
+<h3 class="anchored" data-anchor-id="pattern-10-box-fatigue-violated">Pattern 10: Box Fatigue — VIOLATED</h3>
+<p>The perfect competition benchmark slide (lines 124–164) contains <strong>two callout boxes</strong> plus equations and the drastic condition. ~54% of slides have at least one callout overall.</p>
+</section>
+<section id="pattern-11-socratic-embedding-partial" class="level3">
+<h3 class="anchored" data-anchor-id="pattern-11-socratic-embedding-partial">Pattern 11: Socratic Embedding — PARTIAL</h3>
+<p>Only <strong>one</strong> discussion question in the deck (line 239–241). Target is 2–3 per lecture.</p>
+</section>
+<section id="pattern-12-visual-first-for-complex-concepts-violated" class="level3">
+<h3 class="anchored" data-anchor-id="pattern-12-visual-first-for-complex-concepts-violated">Pattern 12: Visual-First for Complex Concepts — VIOLATED</h3>
+<p><strong>Zero diagrams or figures</strong> in the entire deck. Concepts crying out for visuals: - Replacement effect: surplus rectangles under monopoly vs competition - Drastic vs non-drastic: demand-cost diagram with threshold - Inverted-U relationship: the iconic Aghion et al.&nbsp;curve - D-S comparative statics: schematic of <span class="math inline">\(N^*\)</span> and <span class="math inline">\(x^*\)</span> co-movement</p>
+<hr>
+</section>
+</section>
+<section id="deck-level-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="deck-level-analysis">Deck-Level Analysis</h2>
+<section id="narrative-arc" class="level3">
+<h3 class="anchored" data-anchor-id="narrative-arc">Narrative Arc</h3>
+<p>Coherent and well-structured: motivation → benchmarks → replacement effect → strategic settings → Dasgupta-Stiglitz → summary. The two-way relationship framing (line 62) recurs implicitly throughout. One weakness: the transition from benchmarks to oligopoly/entry (line 243) is slightly abrupt.</p>
+</section>
+<section id="pacing" class="level3">
+<h3 class="anchored" data-anchor-id="pacing">Pacing</h3>
+<p>Uneven across sections: - <strong>Section 1 (Motivation + Benchmarks):</strong> 12 slides — well paced, good rhythm - <strong>Section 2 (Oligopoly + Entry):</strong> 5 slides — slightly thin - <strong>Section 3 (Dasgupta-Stiglitz):</strong> 7 slides — densest stretch. Four consecutive theory-heavy slides with no example or visual break (exceeds recommended max of 3–4 consecutive theory slides)</p>
+</section>
+<section id="visual-rhythm" class="level3">
+<h3 class="anchored" data-anchor-id="visual-rhythm">Visual Rhythm</h3>
+<p>Heavily text-and-equation based: - 0 diagrams/figures - 0 R-generated plots - 4 section dividers (good) - 1 table, 1 numerical example - 4 empirical callouts (all text-based)</p>
+</section>
+<section id="notation-consistency" class="level3">
+<h3 class="anchored" data-anchor-id="notation-consistency">Notation Consistency</h3>
+<p>Generally consistent. Minor issue: social planner output <span class="math inline">\(Q^{sp}\)</span> introduced but competitive output has no symbol. The D-S section introduces entirely new notation (<span class="math inline">\(U(Q)\)</span>, <span class="math inline">\(c(x)\)</span>, <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\sigma\)</span>, <span class="math inline">\(\beta\)</span>, <span class="math inline">\(\varepsilon\)</span>) without flagging the shift from the linear model.</p>
+</section>
+<section id="student-concerns" class="level3">
+<h3 class="anchored" data-anchor-id="student-concerns">Student Concerns</h3>
+<p>A critical MSc student might ask: 1. “Where is the proof that <span class="math inline">\(\Delta \pi^{pc} &gt; \Delta \pi^m\)</span> in the <strong>non-drastic</strong> case?” (only shown for drastic) 2. “The D-S concentration formula seems to come from nowhere” — intermediate algebra is missing 3. “What are the specific functional forms in D-S?” — the switch from general to CES/isoelastic forms is not flagged 4. “The inverted-U is mentioned but never shown” 5. “How does this handle asymmetric firms?”</p>
+<hr>
+</section>
+</section>
+<section id="top-5-critical-recommendations" class="level2">
+<h2 class="anchored" data-anchor-id="top-5-critical-recommendations">Top 5 Critical Recommendations</h2>
+<section id="add-visual-diagrams-for-key-concepts-high" class="level3">
+<h3 class="anchored" data-anchor-id="add-visual-diagrams-for-key-concepts-high">1. Add visual diagrams for key concepts (High)</h3>
+<p>The deck has zero figures. At minimum add: - (a) Surplus diagram illustrating the replacement effect - (b) Demand-cost diagram showing drastic vs non-drastic threshold - (c) Sketch of the inverted-U from Aghion et al. These would dramatically improve retention of the three most important ideas.</p>
+</section>
+<section id="add-a-worked-numerical-example-for-dasgupta-stiglitz-high" class="level3">
+<h3 class="anchored" data-anchor-id="add-a-worked-numerical-example-for-dasgupta-stiglitz-high">2. Add a worked numerical example for Dasgupta-Stiglitz (High)</h3>
+<p>The D-S section has four consecutive theory slides with no example. Insert a numerical example showing how <span class="math inline">\(N^*\)</span> changes when <span class="math inline">\(\alpha\)</span> doubles or <span class="math inline">\(\varepsilon\)</span> increases. Critical for exam preparation.</p>
+</section>
+<section id="split-the-dense-free-entryconcentration-slide-high" class="level3">
+<h3 class="anchored" data-anchor-id="split-the-dense-free-entryconcentration-slide-high">3. Split the dense free-entry/concentration slide (High)</h3>
+<p>Lines 387–415 contain four equations, a definition, and a callout. Split into: (1) zero-profit condition and rearrangement, (2) innovative potential definition and concentration formula with interpretation.</p>
+</section>
+<section id="add-fragment-reveals-at-punchline-moments-medium" class="level3">
+<h3 class="anchored" data-anchor-id="add-fragment-reveals-at-punchline-moments-medium">4. Add fragment reveals at punchline moments (Medium)</h3>
+<p>Insert <code>. . .</code> before: (a) the replacement effect inequality, (b) the <span class="math inline">\(V_I &gt; V_E\)</span> condition, and (c) the D-S concentration formula. Creates problem-then-solution rhythm.</p>
+</section>
+<section id="add-12-more-socratic-questions-medium" class="level3">
+<h3 class="anchored" data-anchor-id="add-12-more-socratic-questions-medium">5. Add 1–2 more Socratic questions (Medium)</h3>
+<p>Only one discussion question currently. Add after the pre-emption result and after D-S comparative statics.</p>
+<hr>
+</section>
+</section>
+<section id="overall-assessment" class="level2">
+<h2 class="anchored" data-anchor-id="overall-assessment">Overall Assessment</h2>
+<p><strong>Good with significant room for improvement.</strong> The economic content is rigorous, well-sequenced, and empirically grounded. The narrative arc is clear and the replacement effect is well motivated. The main deficiencies are in <em>presentation</em> rather than <em>content</em>: the complete absence of diagrams, the dense D-S section without examples, and the lack of interactive/reveal elements. Addressing the top 3 recommendations would lift this from a competent theory-heavy lecture to an engaging and memorable one.</p>
 
 
 </section>

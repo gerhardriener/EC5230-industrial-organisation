@@ -6,8 +6,8 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ce4278342a015d016477ed09bce942c5.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.17">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-3f61aac59b63c3a2d0e87c59ee7d0662.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.19">
 
   <meta name="author" content="Gerhard Riener">
   <title>EC5230 Industrial Organisation – Lecture 3 - Innovation</title>
@@ -168,8 +168,8 @@ Gerhard Riener
 <h1>Innovation and Market Structure</h1>
 
 </section>
-<section id="why-innovation-is-central-in-io" class="slide level2">
-<h2>Why innovation is central in IO</h2>
+<section id="innovation-as-a-margin-of-competition" class="slide level2">
+<h2>Innovation as a margin of competition</h2>
 <p>Innovation is the <strong>dynamic</strong> margin of competition: firms try to change the game by shifting <strong>costs</strong> and <strong>demand</strong>.</p>
 <p><strong>Why IO cares</strong></p>
 <ul>
@@ -196,9 +196,8 @@ Gerhard Riener
 <h2>Learning objectives</h2>
 <ul>
 <li>Compute the <strong>private value</strong> of a process innovation under different market structures</li>
-<li>Define <strong>drastic vs non-drastic</strong> innovations and explain the <strong>replacement effect</strong> (Arrow)</li>
-<li>Understand why innovation can have <strong>strategic value</strong> when it affects <strong>entry</strong> and market structure</li>
-<li>See how models with <strong>free entry + endogenous R&amp;D</strong> link innovation to <strong>concentration</strong> (Dasgupta–Stiglitz)</li>
+<li>Define <strong>drastic vs non-drastic</strong> innovations and explain the <strong>replacement effect</strong> <span class="citation" data-cites="arrowEconomicWelfareAllocation1972">(<a href="#/references" role="doc-biblioref" onclick="">Arrow 1972</a>)</span></li>
+<li>Understand how <strong>free entry + endogenous R&amp;D</strong> link innovation to <strong>concentration</strong> <span class="citation" data-cites="dasguptaIndustrialStructureNature1980">(<a href="#/references" role="doc-biblioref" onclick="">Dasgupta and Stiglitz 1980</a>)</span></li>
 </ul>
 <div title="Today: roadmap">
 <div class="callout callout-note callout-titled callout-style-default">
@@ -211,18 +210,41 @@ Gerhard Riener
 </div>
 <div class="callout-content">
 <ol type="1">
-<li>Benchmark model: value of a process innovation under <strong>monopoly</strong>, <strong>perfect competition</strong>, and the <strong>social planner</strong></li>
+<li>Benchmark model: value under <strong>monopoly</strong>, <strong>perfect competition</strong>, and <strong>social planner</strong></li>
 <li><strong>Drastic vs non-drastic</strong> innovations and the <strong>replacement effect</strong></li>
-<li>Innovation incentives in <strong>oligopoly</strong> and under <strong>entry threat</strong></li>
-<li>Seminal results on <strong>concentration</strong> and <strong>R&amp;D</strong> (Dasgupta–Stiglitz)</li>
+<li>Innovation with <strong>oligopoly</strong> and <strong>entry threat</strong></li>
+<li><strong>Concentration</strong> and <strong>R&amp;D</strong> <span class="citation" data-cites="dasguptaIndustrialStructureNature1980">(<a href="#/references" role="doc-biblioref" onclick="">Dasgupta and Stiglitz 1980</a>)</span></li>
 </ol>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="two-way-relationship-to-keep-in-mind" class="slide level2">
-<h2>Two-way relationship to keep in mind</h2>
+<section id="discussion-why-does-innovation-matter-for-growth" class="slide level2">
+<h2>Discussion: Why does innovation matter for growth?</h2>
+<p>Before the Industrial Revolution (~1760–1840), global GDP per capita was roughly flat for centuries. Since then, it has grown exponentially.</p>
+<div title="Question for you">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Question for you</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li>What role did innovation (new production methods, machinery, transport) play in this transformation?</li>
+<li>Why might market structure affect the <em>rate</em> of innovation — and therefore long-run growth?</li>
+<li>Should we expect monopolies or competitive markets to innovate more? (We’ll answer this formally in a moment.)</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="market-structure-and-innovation-a-two-way-relationship" class="slide level2">
+<h2>Market structure and innovation: a two-way relationship</h2>
 <p><strong>Market structure → innovation</strong></p>
 <ul>
 <li>Competition affects profits, appropriability, and the gain from becoming “better” than rivals</li>
@@ -235,10 +257,8 @@ Gerhard Riener
 <section id="measuring-incentives-willingness-to-pay-wtp" class="slide level2">
 <h2>Measuring incentives: willingness to pay (WTP)</h2>
 <ul>
-<li><strong>Firm WTP</strong>: the max lump-sum payment that leaves profits unchanged<br>
-<span class="math inline">\(\Rightarrow \ \text{WTP} = \Delta \pi\)</span></li>
-<li><strong>Planner WTP</strong>: the max lump-sum payment that leaves welfare unchanged<br>
-<span class="math inline">\(\Rightarrow \ \text{WTP} = \Delta W\)</span></li>
+<li><strong>Firm WTP</strong>: the max lump-sum payment that leaves profits unchanged <span class="math inline">\(\Rightarrow \ \text{WTP} = \Delta \pi\)</span></li>
+<li><strong>Planner WTP</strong>: the max lump-sum payment that leaves welfare unchanged <span class="math inline">\(\Rightarrow \ \text{WTP} = \Delta W\)</span></li>
 </ul>
 <p>In what follows we compute WTP for: <strong>Monopoly</strong> (before/after), <strong>perfect competition</strong> (before; exclusive rights after), and the <strong>social planner</strong>.</p>
 </section></section>
@@ -255,7 +275,7 @@ P(Q) = A - Q
 \]</span></p>
 <p><strong>Technology</strong></p>
 <ul>
-<li>Constant marginal cost <span class="math inline">\(c\)</span></li>
+<li>Constant marginal cost <span class="math inline">\(c \in \{c_0, c_1\}\)</span></li>
 <li>Process innovation reduces marginal cost from <span class="math inline">\(c_0\)</span> to <span class="math inline">\(c_1\)</span> with <span class="math inline">\(c_1 &lt; c_0 &lt; A\)</span></li>
 </ul>
 <div title="Goal">
@@ -274,8 +294,8 @@ P(Q) = A - Q
 </div>
 </div>
 </section>
-<section id="monopoly-benchmark-exclusive-access-before-and-after" class="slide level2">
-<h2>Monopoly benchmark (exclusive access before and after)</h2>
+<section id="monopoly-benchmark-problem-and-solution" class="slide level2">
+<h2>Monopoly benchmark: problem and solution</h2>
 <p><strong>Problem</strong></p>
 <p><span class="math display">\[
 \max_Q \ (A - Q - c)Q
@@ -284,6 +304,9 @@ P(Q) = A - Q
 <p><span class="math display">\[
 Q^m(c) = \frac{A-c}{2}, \qquad P^m(c) = \frac{A+c}{2}, \qquad \pi^m(c) = \frac{(A-c)^2}{4}
 \]</span></p>
+</section>
+<section id="monopoly-wtp-for-innovation" class="slide level2">
+<h2>Monopoly WTP for innovation</h2>
 <p><strong>WTP for the innovation</strong></p>
 <p><span class="math display">\[
 \Delta \pi^m = \pi^m(c_1) - \pi^m(c_0) = \frac{(A-c_1)^2 - (A-c_0)^2}{4}
@@ -316,6 +339,9 @@ Q^m(c) = \frac{A-c}{2}, \qquad P^m(c) = \frac{A+c}{2}, \qquad \pi^m(c) = \frac{(
 <li><strong>Drastic</strong>: innovator behaves as a monopolist with cost <span class="math inline">\(c_1\)</span></li>
 <li><strong>Non-drastic</strong>: innovator is constrained by the competitive fringe at cost <span class="math inline">\(c_0\)</span> (limit pricing)</li>
 </ul>
+</section>
+<section id="innovation-wtp-under-perfect-competition" class="slide level2">
+<h2>Innovation WTP under perfect competition</h2>
 <p><strong>Innovator profit / WTP</strong></p>
 <p><span class="math display">\[
 \Delta \pi^{pc} =
@@ -325,7 +351,9 @@ Q^m(c) = \frac{A-c}{2}, \qquad P^m(c) = \frac{A+c}{2}, \qquad \pi^m(c) = \frac{(
 \end{cases}
 \]</span></p>
 <p><strong>Why the non-drastic formula?</strong> If the innovator sets <span class="math inline">\(p=c_0\)</span>, quantity is <span class="math inline">\(Q=A-c_0\)</span>, so profits are <span class="math inline">\((p-c_1)Q=(c_0-c_1)(A-c_0)\)</span>.</p>
-<p><strong>Drastic innovation condition</strong></p>
+</section>
+<section id="drastic-innovation-condition" class="slide level2">
+<h2>Drastic innovation condition</h2>
 <p><span class="math display">\[
 P^m(c_1) &lt; c_0
 \quad \Leftrightarrow \quad
@@ -333,36 +361,56 @@ P^m(c_1) &lt; c_0
 \quad \Leftrightarrow \quad
 A + c_1 &lt; 2c_0
 \]</span></p>
-<div title="Key idea (replacement effect)">
+
+<img data-src="../figs/fig-innovation-drastic-threshold.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%" alt="Demand-cost diagram showing drastic vs non-drastic innovation threshold"></section>
+<section id="numeric-check-drastic-or-non-drastic" class="slide level2">
+<h2>Numeric check: drastic or non-drastic?</h2>
+<p>Take <span class="math inline">\(A=20\)</span>, <span class="math inline">\(c_0=10\)</span>, and <span class="math inline">\(c_1=6\)</span>.</p>
+<ul>
+<li><strong>Drastic condition</strong>: <span class="math inline">\(A + c_1 = 26 &gt; 2c_0 = 20\)</span> → <strong>non-drastic</strong></li>
+<li>Innovator limit-prices at <span class="math inline">\(p = c_0 = 10\)</span>, sells <span class="math inline">\(Q = A - c_0 = 10\)</span></li>
+<li>Competitive innovator profit: <span class="math inline">\((c_0 - c_1)(A - c_0) = 4 \times 10 = 40\)</span></li>
+<li>Recall monopoly WTP: <span class="math inline">\(\Delta\pi^m = \frac{(14)^2 - (10)^2}{4} = \frac{196 - 100}{4} = 24\)</span></li>
+</ul>
+<div title="Replacement effect preview">
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Key idea (replacement effect)</strong></p>
+<p><strong>Replacement effect preview</strong></p>
 </div>
 <div class="callout-content">
-<p>Under perfect competition, pre-innovation profits are zero, so innovation mainly <strong>creates</strong> rents. Under monopoly, innovation partly <strong>replaces</strong> existing rents. <span class="citation" data-cites="arrowEconomicWelfareAllocation1972">(<a href="#/references" role="doc-biblioref" onclick="">Arrow 1972</a>)</span></p>
+<p>The competitive innovator earns <span class="math inline">\(40 &gt; 24\)</span> (the monopolist’s WTP). The monopolist gains less because it already earns <span class="math inline">\(\pi^m(c_0) = 25\)</span> before innovating — it is partly <strong>replacing</strong> existing rents.</p>
 </div>
 </div>
 </div>
 </div>
-<div title="Appropriability (important!)">
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Appropriability (important!)</strong></p>
-</div>
-<div class="callout-content">
-<p>If the innovation cannot be protected (instant diffusion / perfect imitation), competition drives price to <span class="math inline">\(c_1\)</span> and the innovator’s WTP is <strong>zero</strong>. Most IO policy questions start from the fact that appropriability is <strong>imperfect but positive</strong> (patents, secrecy, lead time).</p>
-</div>
-</div>
-</div>
-</div>
+</section>
+<section id="replacement-effect-visual-comparison" class="slide level2">
+<h2>Replacement effect: visual comparison</h2>
+<ul>
+<li>Left panel: the incumbent monopolist already earns <span class="math inline">\(\pi^m(c_0)\)</span> before innovating.</li>
+<li>Innovation raises monopoly profit only by the increment <span class="math inline">\(\pi^m(c_1)-\pi^m(c_0)\)</span>.</li>
+<li>Right panel: under competitive pre-innovation conditions, the innovation mostly <strong>creates</strong> rents.</li>
+</ul>
+
+<img data-src="../figs/fig-innovation-replacement-effect.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:95.0%" alt="Two-panel surplus diagram: monopoly replaces existing rents while competitive innovator creates new rents"></section>
+<section id="replacement-effect-arroweconomicwelfareallocation1972" class="slide level2">
+<h2>Replacement effect <span class="citation" data-cites="arrowEconomicWelfareAllocation1972">(<a href="#/references" role="doc-biblioref" onclick="">Arrow 1972</a>)</span></h2>
+<ul>
+<li>Under perfect competition, pre-innovation profits are approximately zero.</li>
+<li>Under monopoly, pre-innovation profits are positive.</li>
+<li>So the same innovation has a larger incremental private value in competitive settings.</li>
+</ul>
+</section>
+<section id="appropriability-and-imitation" class="slide level2">
+<h2>Appropriability and imitation</h2>
+<ul>
+<li><p>If the innovation cannot be protected (instant diffusion / perfect imitation), competition drives price to <span class="math inline">\(c_1\)</span> and the innovator’s WTP is zero.</p></li>
+<li><p>Most IO policy questions start from the fact that appropriability is imperfect but positive (patents, secrecy, lead time).</p></li>
+</ul>
 </section>
 <section id="replacement-effect-a-one-line-comparison-drastic-case" class="slide level2">
 <h2>Replacement effect: a one-line comparison (drastic case)</h2>
@@ -370,10 +418,16 @@ A + c_1 &lt; 2c_0
 <p><span class="math display">\[
 \Delta \pi^{pc} = \pi^m(c_1), \qquad \Delta \pi^m = \pi^m(c_1) - \pi^m(c_0)
 \]</span></p>
-<p>So</p>
 <p><span class="math display">\[
 \Delta \pi^{pc} - \Delta \pi^m = \pi^m(c_0) &gt; 0
 \]</span></p>
+<ul>
+<li>The wedge equals pre-innovation monopoly rents, <span class="math inline">\(\pi^m(c_0)\)</span>.</li>
+<li>The replacement effect is strongest when baseline monopoly rents are high.</li>
+</ul>
+</section>
+<section id="replacement-effect-intuition" class="slide level2">
+<h2>Replacement effect: intuition</h2>
 <div title="Takeaway">
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
@@ -392,7 +446,32 @@ A + c_1 &lt; 2c_0
 </section>
 <section id="empirical-example-competition-and-innovation" class="slide level2">
 <h2>Empirical example: competition and innovation</h2>
-<p>Inverted-U evidence (QJE) <span class="citation" data-cites="aghionCompetitionInnovationInvertedU2005">Aghion et al. (<a href="#/references" role="doc-biblioref" onclick="">2005</a>)</span> document an <strong>inverted-U</strong> relationship between product-market competition and innovation (patents/citations) in UK firms, consistent with “escape competition” incentives for neck-and-neck firms and a <strong>replacement effect</strong> for laggards.</p>
+<ul>
+<li>Low competition: firms have little pressure to “escape.”</li>
+<li>Intermediate competition: innovation incentives are strongest for neck-and-neck firms.</li>
+<li>Very high competition: post-innovation rents are compressed, reducing innovation incentives.</li>
+</ul>
+<div title="Inverted-U evidence (QJE)">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Inverted-U evidence (QJE)</strong></p>
+</div>
+<div class="callout-content">
+<p><span class="citation" data-cites="aghionCompetitionInnovationInvertedU2005">Aghion et al. (<a href="#/references" role="doc-biblioref" onclick="">2005</a>)</span> document an <strong>inverted-U</strong> relationship between product-market competition and innovation (patents/citations) in UK firms, consistent with “escape competition” incentives for neck-and-neck firms and a <strong>replacement effect</strong> for laggards.</p>
+</div>
+</div>
+</div>
+</div>
+
+<img data-src="../figs/fig-innovation-inverted-u.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:75.0%" alt="Inverted-U relationship between competition and innovation, after Aghion et al. (2005)"></section></section>
+<section>
+<section id="social-value-of-innovation" class="title-slide slide level1 center" data-background-color="#00539b">
+<h1>Social Value of Innovation</h1>
+
 </section>
 <section id="social-planner-value-of-a-cost-reduction" class="slide level2">
 <h2>Social planner: value of a cost reduction</h2>
@@ -403,10 +482,6 @@ Q^{sp}(c) = A - c
 <p><strong>Total surplus (welfare):</strong></p>
 <p><span class="math display">\[
 W(c) = \int_0^{A-c} (A - Q - c) \, dQ = \frac{(A-c)^2}{2}
-\]</span></p>
-<p><strong>Max WTP for innovation (social planner):</strong></p>
-<p><span class="math display">\[
-\Delta W = W(c_1) - W(c_0) = \frac{(A-c_1)^2 - (A-c_0)^2}{2}
 \]</span></p>
 <div title="Interpretation">
 <div class="callout callout-note callout-titled callout-style-default">
@@ -423,6 +498,17 @@ W(c) = \int_0^{A-c} (A - Q - c) \, dQ = \frac{(A-c)^2}{2}
 </div>
 </div>
 </div>
+</section>
+<section id="social-planner-wtp-for-innovation" class="slide level2">
+<h2>Social planner WTP for innovation</h2>
+<p><strong>Max WTP for innovation (social planner):</strong></p>
+<p><span class="math display">\[
+\Delta W = W(c_1) - W(c_0) = \frac{(A-c_1)^2 - (A-c_0)^2}{2}
+\]</span></p>
+<ul>
+<li>This is the full increase in total surplus from lowering marginal cost.</li>
+<li>In the linear benchmark, it is exactly twice the monopoly incremental profit.</li>
+</ul>
 </section>
 <section id="putting-the-benchmarks-side-by-side" class="slide level2">
 <h2>Putting the benchmarks side-by-side</h2>
@@ -475,6 +561,11 @@ W(c) = \int_0^{A-c} (A - Q - c) \, dQ = \frac{(A-c)^2}{2}
 </section>
 <section id="empirical-example-private-vs-social-returns" class="slide level2">
 <h2>Empirical example: private vs social returns</h2>
+<ul>
+<li>Measured producer gains capture only part of innovation’s value.</li>
+<li>Consumer surplus from quality improvements can be very large.</li>
+<li>This gap motivates policy tools that raise private appropriability.</li>
+</ul>
 <div title="Welfare gains from product innovation (JPE)">
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
@@ -485,7 +576,7 @@ W(c) = \int_0^{A-c} (A - Q - c) \, dQ = \frac{(A-c)^2}{2}
 <p><strong>Welfare gains from product innovation (JPE)</strong></p>
 </div>
 <div class="callout-content">
-<p>Trajtenberg (1989) estimates consumer and producer surplus gains from quality improvements in computed tomography (CT) scanners, illustrating that the <strong>social value</strong> of innovation can greatly exceed the innovator’s private returns. DOI: 10.1086/261611. <span class="citation" data-cites="trajtenbergWelfareAnalysisProduct1989">(<a href="#/references" role="doc-biblioref" onclick="">Trajtenberg 1989</a>)</span></p>
+<p><span class="citation" data-cites="trajtenbergWelfareAnalysisProduct1989">Trajtenberg (<a href="#/references" role="doc-biblioref" onclick="">1989</a>)</span> estimates consumer and producer surplus gains from quality improvements in computed tomography (CT) scanners, illustrating that the <strong>social value</strong> of innovation can greatly exceed the innovator’s private returns.</p>
 </div>
 </div>
 </div>
@@ -493,7 +584,7 @@ W(c) = \int_0^{A-c} (A - Q - c) \, dQ = \frac{(A-c)^2}{2}
 </section>
 <section id="quick-numeric-check-optional" class="slide level2">
 <h2>Quick numeric check (optional)</h2>
-<p>Take <span class="math inline">\(A=20\)</span>, <span class="math inline">\(c_0=10\)</span>, <span class="math inline">\(c_1=6\)</span>.</p>
+<p>Take <span class="math inline">\(A=20\)</span>, <span class="math inline">\(c_0=10\)</span>, and <span class="math inline">\(c_1=6\)</span>.</p>
 <ul>
 <li>Monopoly: <span class="math inline">\(\pi^m(c_0)=25\)</span>, <span class="math inline">\(\pi^m(c_1)=49\)</span>, so <span class="math inline">\(\Delta\pi^m=24\)</span></li>
 <li>Planner: <span class="math inline">\(W(c_0)=50\)</span>, <span class="math inline">\(W(c_1)=98\)</span>, so <span class="math inline">\(\Delta W=48\)</span> (twice the monopoly gain)</li>
@@ -563,8 +654,13 @@ W(c) = \int_0^{A-c} (A - Q - c) \, dQ = \frac{(A-c)^2}{2}
 <ul>
 <li>Both can acquire innovation reducing MC from <span class="math inline">\(c_0\)</span> to <span class="math inline">\(c_1 &lt; c_0\)</span></li>
 <li>Entrant can enter profitably <strong>only if</strong> it gets innovation</li>
-<li>Let <span class="math inline">\(\pi^d(c_i,c_j)\)</span> denote firm <span class="math inline">\(i\)</span>’s profit in the post-entry <strong>duopoly</strong> when costs are <span class="math inline">\((c_i,c_j)\)</span></li>
+<li>Let <span class="math inline">\(\pi^d(c_i,c_j)\)</span> denote firm <span class="math inline">\(i\)</span>’s profit in the post-entry <strong>duopoly</strong> when own cost is <span class="math inline">\(c_i\)</span> and the rival’s cost is <span class="math inline">\(c_j\)</span></li>
 </ul>
+<p><strong>Timing/game structure:</strong></p>
+<p>We compare the <strong>willingness to pay</strong> for innovation (e.g., in a patent auction or R&amp;D race). The innovation is awarded to whichever firm values it more highly. Entry happens <em>after</em> the innovation is allocated.</p>
+</section>
+<section id="entry-threat-payoff-structure" class="slide level2">
+<h2>Entry threat: payoff structure</h2>
 <p><strong>Payoffs:</strong></p>
 <ul>
 <li><strong>If incumbent gets innovation</strong>: entrant stays out
@@ -601,11 +697,11 @@ V_I = \pi^m(c_1) - \pi^d(c_0, c_1)
 <p><span class="math display">\[
 V_E = \pi^d(c_1, c_0)
 \]</span></p>
-<p><strong>Incumbent has stronger incentives if</strong></p>
+<p><strong>Incumbent has stronger incentives if:</strong></p>
 <p><span class="math display">\[
 V_I &gt; V_E \quad \Leftrightarrow \quad \pi^m(c_1) &gt; \pi^d(c_1, c_0) + \pi^d(c_0, c_1)
 \]</span></p>
-<p>Typically when products are close substitutes (entry is very harmful).</p>
+<p>This typically holds when products are close substitutes (entry is very harmful).</p>
 <div title="Interpretation">
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
@@ -616,7 +712,25 @@ V_I &gt; V_E \quad \Leftrightarrow \quad \pi^m(c_1) &gt; \pi^d(c_1, c_0) + \pi^d
 <p><strong>Interpretation</strong></p>
 </div>
 <div class="callout-content">
-<p>Here the incumbent may innovate <strong>more</strong> than an entrant because innovation does two things at once: it lowers cost <em>and</em> it keeps the market in the monopoly regime (entry deterrence / pre-emption).</p>
+<p>The incumbent may innovate <strong>more</strong> than an entrant because innovation does two things: it lowers cost <em>and</em> it keeps the market in the monopoly regime (entry deterrence / pre-emption).</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="discussion-when-does-pre-emption-fail" class="slide level2">
+<h2>Discussion: when does pre-emption fail?</h2>
+<div title="Discussion question">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Discussion question</strong></p>
+</div>
+<div class="callout-content">
+<p>Under what market conditions might an entrant have stronger innovation incentives than the incumbent? What features would reverse the pre-emption result?</p>
 </div>
 </div>
 </div>
@@ -634,30 +748,73 @@ V_I &gt; V_E \quad \Leftrightarrow \quad \pi^m(c_1) &gt; \pi^d(c_1, c_0) + \pi^d
 <p><strong>Pre-emptive innovation patterns (ReStud)</strong></p>
 </div>
 <div class="callout-content">
-<p>Blundell, Griffith, and Van Reenen (1999) find that higher market share and market value predict more patenting/innovations in UK manufacturing firms, consistent with <strong>strategic</strong> incentives (including pre-emptive innovation) in oligopolistic industries. DOI: 10.1111/1467-937X.00097. <span class="citation" data-cites="blundellMarketShareMarket1999">(<a href="#/references" role="doc-biblioref" onclick="">Blundell et al. 1999</a>)</span></p>
+<p><span class="citation" data-cites="blundellMarketShareMarket1999">Blundell et al. (<a href="#/references" role="doc-biblioref" onclick="">1999</a>)</span> find that higher market share and market value predict more patenting/innovations in UK manufacturing firms, consistent with <strong>strategic</strong> incentives (including pre-emptive innovation) in oligopolistic industries.</p>
 </div>
 </div>
 </div>
 </div>
 </section></section>
 <section>
-<section id="seminal-contributions" class="title-slide slide level1 center" data-background-color="#00539b">
-<h1>Seminal Contributions</h1>
+<section id="endogenous-rd-and-market-structure-dasguptaindustrialstructurenature1980" class="title-slide slide level1 center" data-background-color="#00539b">
+<h1>Endogenous R&amp;D and Market Structure: <span class="citation" data-cites="dasguptaIndustrialStructureNature1980">Dasgupta and Stiglitz (<a href="#/references" role="doc-biblioref" onclick="">1980</a>)</span></h1>
 
 </section>
-<section id="why-dasguptastiglitz-matters-dasguptaindustrialstructurenature1980" class="slide level2">
-<h2>Why Dasgupta–Stiglitz matters <span class="citation" data-cites="dasguptaIndustrialStructureNature1980">(<a href="#/references" role="doc-biblioref" onclick="">Dasgupta and Stiglitz 1980</a>)</span></h2>
-<p>They model R&amp;D as an <strong>endogenous sunk cost</strong>: firms spend on R&amp;D to reduce marginal cost, and entry adjusts endogenously.</p>
-<p>The punchline is a clean link between:</p>
+<section id="setup-and-key-result" class="slide level2">
+<h2>Setup and key result</h2>
+<p>The <span class="citation" data-cites="dasguptaIndustrialStructureNature1980">Dasgupta and Stiglitz (<a href="#/references" role="doc-biblioref" onclick="">1980</a>)</span> model treats R&amp;D as an <strong>endogenous sunk cost</strong>: firms spend on R&amp;D to reduce marginal cost, and entry adjusts endogenously.</p>
+<p>The key result is a clean link between:</p>
 <ul>
 <li><strong>Demand conditions</strong> (elasticity, market size)</li>
 <li><strong>Innovative opportunities</strong> (how effective R&amp;D is at lowering costs)</li>
 <li><strong>Equilibrium concentration</strong> (how many firms survive under free entry)</li>
 </ul>
+<p>The linear model gave us clean closed-form comparisons. The D-S framework sacrifices tractability for generality — but delivers a structural result linking innovation to concentration.</p>
+<p><strong>Notation for this section</strong></p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 34%">
+<col style="width: 26%">
+<col style="width: 39%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Symbol</th>
+<th>Type</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(x\)</span></td>
+<td>Choice</td>
+<td>R&amp;D expenditure per firm</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(c(x)\)</span></td>
+<td>Function</td>
+<td>Marginal cost (decreasing in <span class="math inline">\(x\)</span>)</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(N\)</span></td>
+<td>Outcome</td>
+<td>Number of active firms (endogenous)</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\varepsilon\)</span></td>
+<td>Parameter</td>
+<td>Demand elasticity</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\alpha\)</span></td>
+<td>Parameter</td>
+<td>R&amp;D cost elasticity: <span class="math inline">\(\alpha = -\frac{dc(x)}{dx}\frac{x}{c}\)</span> (measures how effectively R&amp;D reduces cost)</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="dasguptastiglitz-1980-planner-benchmark-dasguptaindustrialstructurenature1980" class="slide level2">
-<h2>Dasgupta–Stiglitz (1980): planner benchmark <span class="citation" data-cites="dasguptaIndustrialStructureNature1980">(<a href="#/references" role="doc-biblioref" onclick="">Dasgupta and Stiglitz 1980</a>)</span></h2>
-<p><strong>Question</strong>: Does more firms imply more innovation?</p>
+<section id="planner-benchmark" class="slide level2">
+<h2>Planner benchmark</h2>
+<p><strong>Question</strong>: Do more firms imply more innovation?</p>
 <p><strong>Primitives:</strong></p>
 <ul>
 <li><span class="math inline">\(U(Q)\)</span> = gross social benefit</li>
@@ -672,32 +829,39 @@ V_I &gt; V_E \quad \Leftrightarrow \quad \pi^m(c_1) &gt; \pi^d(c_1, c_0) + \pi^d
 <p><span class="math display">\[
 -c'(x)Q = 1
 \]</span></p>
-<p><strong>Interpretation:</strong></p>
+</section>
+<section id="planner-benchmark-interpretation" class="slide level2">
+<h2>Planner benchmark: interpretation</h2>
 <ul>
 <li>Optimal R&amp;D increases with scale <span class="math inline">\(Q\)</span>: a larger market makes cost reduction more valuable</li>
 </ul>
 </section>
 <section id="empirical-example-market-size-and-innovation" class="slide level2">
 <h2>Empirical example: market size and innovation</h2>
-<div title="Pharmaceutical innovation responds to demand (QJE)">
+<div title="Pharmaceutical innovation responds to demand">
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Pharmaceutical innovation responds to demand (QJE)</strong></p>
+<p><strong>Pharmaceutical innovation responds to demand</strong></p>
 </div>
 <div class="callout-content">
-<p>Acemoglu and Linn (2004) show that larger potential markets lead to more pharmaceutical innovation (new drugs/new molecular entities), consistent with models where the return to innovation rises with <strong>scale</strong>. DOI: 10.1162/0033553041502144. <span class="citation" data-cites="acemogluMarketSizeInnovation2004">(<a href="#/references" role="doc-biblioref" onclick="">Acemoglu and Linn 2004</a>)</span></p>
+<p><span class="citation" data-cites="acemogluMarketSizeInnovation2004">Acemoglu and Linn (<a href="#/references" role="doc-biblioref" onclick="">2004</a>)</span> show that larger potential markets lead to</p>
+<ul>
+<li>more pharmaceutical innovation (new drugs/new molecular entities)</li>
+<li><span class="math inline">\(\rightarrow\)</span> consistent with models where the return to innovation rises with <strong>scale</strong>.</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="dasguptastiglitz-1980-symmetric-oligopoly-dasguptaindustrialstructurenature1980" class="slide level2">
-<h2>Dasgupta–Stiglitz (1980): symmetric oligopoly <span class="citation" data-cites="dasguptaIndustrialStructureNature1980">(<a href="#/references" role="doc-biblioref" onclick="">Dasgupta and Stiglitz 1980</a>)</span></h2>
-<p><strong>Firm <span class="math inline">\(i\)</span>’s problem (symmetric firms):</strong></p>
+<section id="firms-problem" class="slide level2">
+<h2>Firm’s problem</h2>
+<p><strong>Assumptions:</strong> Firms engage in <strong>Cournot (quantity) competition</strong> with symmetric costs. Each firm chooses R&amp;D expenditure <span class="math inline">\(x_i\)</span> and output <span class="math inline">\(q_i\)</span> simultaneously.</p>
+<p><strong>Firm <span class="math inline">\(i\)</span>’s problem:</strong></p>
 <p><span class="math display">\[
 \max_{x_i, q_i} \ \pi(x_i, q_i) = [P(q_i + q_{-i}) - c(x_i)]q_i - x_i
 \]</span></p>
@@ -705,11 +869,38 @@ V_I &gt; V_E \quad \Leftrightarrow \quad \pi^m(c_1) &gt; \pi^d(c_1, c_0) + \pi^d
 <ul>
 <li><span class="math inline">\(q_1^* = \cdots = q_N^* = Q^*/N\)</span> and <span class="math inline">\(x_1^* = \cdots = x_N^* = x^*\)</span></li>
 </ul>
+</section>
+<section id="intuition-check-what-determines-n" class="slide level2">
+<h2>Intuition check: What determines <span class="math inline">\(N^*\)</span>?</h2>
+<p>What forces at work here?</p>
+<ul>
+<li><strong>Entry incentive:</strong> If industry profits are positive, more firms want to enter</li>
+<li><strong>R&amp;D cost:</strong> Each firm must spend <span class="math inline">\(x^*\)</span> to achieve low cost <span class="math inline">\(c(x^*)\)</span></li>
+<li><strong>Market power:</strong> More firms → lower mark-ups → lower operating profits</li>
+<li><strong>Zero-profit equilibrium:</strong> Entry stops when operating profits just cover R&amp;D outlays</li>
+</ul>
+<p><strong>Key insight:</strong> Equilibrium concentration (<span class="math inline">\(N^*\)</span>) balances these forces. We’ll derive the precise formula by combining the pricing and free-entry conditions.</p>
+</section>
+<section id="reminder-cournot-perceived-elasticity" class="slide level2">
+<h2>Reminder: Cournot perceived elasticity</h2>
+<p><strong>From Lecture 1:</strong> Under Cournot competition, firm <span class="math inline">\(i\)</span> perceives the demand elasticity facing its own output as <span class="math inline">\(N\varepsilon\)</span>, where <span class="math inline">\(\varepsilon\)</span> is the market demand elasticity.</p>
+<p><strong>This gives the markup formula:</strong></p>
+<p><span class="math display">\[
+\frac{P - c}{P} = \frac{1}{N\varepsilon}
+\]</span></p>
+<p><strong>Rearranging:</strong></p>
+<p><span class="math display">\[
+P\left(1 - \frac{1}{N\varepsilon}\right) = c
+\]</span></p>
+<p>We’ll use this to link pricing to R&amp;D in the Dasgupta–Stiglitz model.</p>
+</section>
+<section id="equilibrium-pricing" class="slide level2">
+<h2>Equilibrium pricing</h2>
 <p><strong>First-order condition in <span class="math inline">\(q_i\)</span>:</strong></p>
 <p><span class="math display">\[
 P(Q^*)\left(1 - \frac{1}{N\varepsilon}\right) = c(x^*)
 \]</span></p>
-<p>where <span class="math inline">\(\varepsilon = -\frac{\partial Q}{\partial P}\frac{P}{Q}\)</span> is demand elasticity</p>
+<p>where <span class="math inline">\(\varepsilon = -\frac{\partial Q}{\partial P}\frac{P}{Q}\)</span> is the demand elasticity.</p>
 <p><strong>Interpretation:</strong></p>
 <ul>
 <li>The term <span class="math inline">\(\left(1-\frac{1}{N\varepsilon}\right)\)</span> captures market power via the perceived demand elasticity under Cournot
@@ -718,8 +909,8 @@ P(Q^*)\left(1 - \frac{1}{N\varepsilon}\right) = c(x^*)
 </ul></li>
 </ul>
 </section>
-<section id="free-entry-and-concentration-dasguptaindustrialstructurenature1980" class="slide level2">
-<h2>Free entry and concentration <span class="citation" data-cites="dasguptaIndustrialStructureNature1980">(<a href="#/references" role="doc-biblioref" onclick="">Dasgupta and Stiglitz 1980</a>)</span></h2>
+<section id="free-entry-condition" class="slide level2">
+<h2>Free entry condition</h2>
 <p><strong>Zero profit condition</strong> (free entry):</p>
 <p><span class="math display">\[
 \pi = 0 \quad \Rightarrow \quad (P - c)\frac{Q^*}{N^*} - x^* = 0
@@ -728,10 +919,35 @@ P(Q^*)\left(1 - \frac{1}{N\varepsilon}\right) = c(x^*)
 <p><span class="math display">\[
 P - c = N^* \frac{x^*}{Q^*}
 \]</span></p>
-<p><strong>Define innovative potential:</strong></p>
+</section>
+<section id="deriving-the-concentration-formula-i-setup" class="slide level2">
+<h2>Deriving the concentration formula (I): Setup</h2>
+<p><strong>Combine the two conditions:</strong></p>
+<ul>
+<li>From pricing FOC: <span class="math inline">\(P - c = \frac{P}{N\varepsilon}\)</span></li>
+<li>From free entry: <span class="math inline">\(P - c = \frac{Nx}{Q}\)</span></li>
+</ul>
+<p><strong>Equating the two expressions:</strong></p>
 <p><span class="math display">\[
-\alpha = -\frac{dc(x)}{dx}\frac{x}{c}
+\frac{P}{N\varepsilon} = \frac{Nx}{Q}
 \]</span></p>
+<p><em>(We solve for <span class="math inline">\(N\)</span> on the next slide.)</em></p>
+</section>
+<section id="deriving-the-concentration-formula-ii-solution" class="slide level2">
+<h2>Deriving the concentration formula (II): Solution</h2>
+<p><strong>Introduce the R&amp;D cost elasticity</strong> <span class="math inline">\(\alpha = -\frac{dc(x)}{dx}\frac{x}{c}\)</span> (from firm’s R&amp;D FOC).</p>
+<p><strong>This implies:</strong> <span class="math inline">\(\frac{x}{cq} = \alpha\)</span>, so <span class="math inline">\(\frac{Nx}{Q} = \frac{Nx}{Nq} = \frac{x}{q} = \alpha c\)</span></p>
+<p><strong>Substitute into our equation:</strong></p>
+<p><span class="math display">\[
+\underbrace{\frac{P}{N\varepsilon}}_{\text{markup}} = \underbrace{\alpha c}_{\text{R\&amp;D cost per unit}}
+\]</span></p>
+<p><strong>Divide by <span class="math inline">\(P\)</span></strong> and use <span class="math inline">\(c/P = 1 - 1/(N\varepsilon)\)</span> from the pricing FOC:</p>
+<p><span class="math display">\[
+\frac{1}{N\varepsilon} = \alpha\!\left(1 - \frac{1}{N\varepsilon}\right) \quad \Rightarrow \quad \frac{1}{N^*} = \frac{1}{\varepsilon}\cdot\frac{\alpha}{1+\alpha}
+\]</span></p>
+</section>
+<section id="equilibrium-concentration" class="slide level2">
+<h2>Equilibrium concentration</h2>
 <p><strong>Equilibrium concentration satisfies:</strong></p>
 <p><span class="math display">\[
 \frac{1}{N^*} = \frac{1}{\varepsilon} \cdot \frac{\alpha}{1+\alpha}
@@ -746,14 +962,40 @@ P - c = N^* \frac{x^*}{Q^*}
 <p><strong>Interpretation</strong></p>
 </div>
 <div class="callout-content">
-<p>Concentration and research intensity are jointly determined: entry expands <span class="math inline">\(N\)</span> until operating surplus covers R&amp;D outlays <span class="math inline">\(x^*\)</span>. Higher innovative potential (<span class="math inline">\(\alpha\)</span>) supports higher concentration; more elastic demand lowers concentration.</p>
+<p>Concentration and research intensity are jointly determined: entry expands <span class="math inline">\(N\)</span> until operating surplus covers R&amp;D outlays <span class="math inline">\(x^*\)</span>. Higher R&amp;D cost elasticity (<span class="math inline">\(\alpha\)</span>) supports higher concentration; more elastic demand lowers concentration.</p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="dasgupta-1986-key-comparative-statics-i-dasguptatheorytechnologicalcompetition1986" class="slide level2">
-<h2>Dasgupta (1986): key comparative statics (I) <span class="citation" data-cites="dasguptaTheoryTechnologicalCompetition1986">(<a href="#/references" role="doc-biblioref" onclick="">Dasgupta 1986</a>)</span></h2>
+<section id="numerical-illustration" class="slide level2">
+<h2>Numerical illustration</h2>
+<p><strong>Using the concentration formula</strong> with specific values:</p>
+<p><span class="math display">\[
+\frac{1}{N^*} = \frac{1}{\varepsilon} \cdot \frac{\alpha}{1+\alpha}
+\]</span></p>
+<ul>
+<li>If <span class="math inline">\(\varepsilon = 2\)</span> and <span class="math inline">\(\alpha = 1\)</span>: <span class="math inline">\(\frac{1}{N^*} = \frac{1}{2} \cdot \frac{1}{2} = \frac{1}{4}\)</span>, so <span class="math inline">\(N^* = 4\)</span> firms</li>
+<li>If <span class="math inline">\(\varepsilon = 2\)</span> and <span class="math inline">\(\alpha = 3\)</span>: <span class="math inline">\(\frac{1}{N^*} = \frac{1}{2} \cdot \frac{3}{4} = \frac{3}{8}\)</span>, so <span class="math inline">\(N^* \approx 2.7\)</span> firms</li>
+</ul>
+<div title="Discussion question">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Discussion question</strong></p>
+</div>
+<div class="callout-content">
+<p>If a government subsidy increases the R&amp;D cost elasticity (<span class="math inline">\(\alpha\)</span>, making R&amp;D more effective), what does the model predict for market structure? Is this welfare-improving?</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="key-comparative-statics-i" class="slide level2">
+<h2>Key comparative statics (I)</h2>
 <p><strong>With <span class="math inline">\(P(Q) = \sigma Q^{-\varepsilon}\)</span> and <span class="math inline">\(c(x) = \beta x^{-\alpha}\)</span>:</strong></p>
 <p><strong>Dynamic vs static efficiency trade-off:</strong></p>
 <ul>
@@ -769,9 +1011,9 @@ P - c = N^* \frac{x^*}{Q^*}
 <li>Market structure affects both static outcomes (<span class="math inline">\(Q\)</span>) and dynamic investment incentives (<span class="math inline">\(x\)</span>)</li>
 </ul>
 </section>
-<section id="dasgupta-1986-key-comparative-statics-ii-dasguptatheorytechnologicalcompetition1986" class="slide level2">
-<h2>Dasgupta (1986): key comparative statics (II) <span class="citation" data-cites="dasguptaTheoryTechnologicalCompetition1986">(<a href="#/references" role="doc-biblioref" onclick="">Dasgupta 1986</a>)</span></h2>
-<p><strong>Greater innovative opportunities</strong> associated with higher concentration:</p>
+<section id="key-comparative-statics-ii" class="slide level2">
+<h2>Key comparative statics (II)</h2>
+<p><strong>Greater R&amp;D effectiveness</strong> (higher <span class="math inline">\(\alpha\)</span>) associated with higher concentration:</p>
 <p><span class="math display">\[
 \frac{\partial (1/N^*)}{\partial \alpha} &gt; 0
 \]</span></p>
@@ -782,22 +1024,21 @@ P - c = N^* \frac{x^*}{Q^*}
 <p><strong>Interpretation:</strong></p>
 <ul>
 <li>Larger markets (higher <span class="math inline">\(\sigma\)</span>) increase the return to cost reduction</li>
-<li>Stronger innovative opportunities (higher <span class="math inline">\(\alpha\)</span>) can support higher concentration in equilibrium</li>
+<li>More effective R&amp;D (higher <span class="math inline">\(\alpha\)</span>) can support higher concentration in equilibrium</li>
 </ul>
 </section>
-<section id="summary" class="slide level2">
-<h2>Summary</h2>
+<section id="summary-and-next-week" class="slide level2">
+<h2>Summary and next week</h2>
+<p><strong>Summary</strong></p>
 <ul>
 <li>Innovation value depends on the objective: <strong><span class="math inline">\(\Delta \pi\)</span> (private)</strong> versus <strong><span class="math inline">\(\Delta W\)</span> (social)</strong></li>
 <li>Replacement effect: pre-innovation rents reduce the incumbent’s incremental gain from innovation</li>
 <li>With entry threat, innovation can be worth more because it changes <strong>market structure</strong> (monopoly vs duopoly)</li>
 <li>In oligopoly, incentives reflect competing forces (competition effect vs competitive advantage effect)</li>
 </ul>
-</section>
-<section id="next-week-patents-and-iprs" class="slide level2">
-<h2>Next week: patents and IPRs</h2>
+<p><strong>Next week: patents and IPRs</strong></p>
 <ul>
-<li>Patents as incentives: monopoly rights v dynamic efficiency</li>
+<li>Patents as incentives: monopoly rights vs.&nbsp;dynamic efficiency</li>
 <li>Patent races and timing</li>
 <li>Disclosure, licensing, and welfare</li>
 <li>Horizontal and vertical innovation (brief)</li>
@@ -817,9 +1058,6 @@ Arrow, K. J. 1972. <span>‘Economic Welfare and the Allocation of Resources for
 </div>
 <div id="ref-blundellMarketShareMarket1999" class="csl-entry" role="listitem">
 Blundell, Richard, Rachel Griffith, and John Van Reenen. 1999. <span>‘Market Share, Market Value and Innovation in a Panel of British Manufacturing Firms’</span>. <em>The Review of Economic Studies</em> 66 (3): 529–54. <a href="https://doi.org/10.1111/1467-937X.00097">https://doi.org/10.1111/1467-937X.00097</a>.
-</div>
-<div id="ref-dasguptaTheoryTechnologicalCompetition1986" class="csl-entry" role="listitem">
-Dasgupta, Partha. 1986. <span>‘The Theory of Technological Competition’</span>. In <em>New Developments in the Analysis of Market Structure: Proceedings of a Conference Held by the International Economic Association in <span>Ottawa</span>, Canada</em>, edited by Joseph E. Stiglitz and G. Frank Mathewson. Palgrave Macmillan UK. <a href="https://doi.org/10.1007/978-1-349-18058-5_17">https://doi.org/10.1007/978-1-349-18058-5_17</a>.
 </div>
 <div id="ref-dasguptaIndustrialStructureNature1980" class="csl-entry" role="listitem">
 Dasgupta, Partha, and Joseph Stiglitz. 1980. <span>‘Industrial Structure and the Nature of Innovative Activity’</span>. <em>The Economic Journal</em> 90 (358): 266–93. <a href="https://doi.org/10.2307/2231788">https://doi.org/10.2307/2231788</a>.

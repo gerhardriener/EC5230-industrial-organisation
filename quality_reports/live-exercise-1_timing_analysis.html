@@ -9,7 +9,7 @@
 <meta name="author" content="Gerhard Riener">
 <meta name="description" content="MSc-level Industrial Organisation course at the University of St Andrews">
 
-<title>Exercises – EC5230 Industrial Organisation</title>
+<title>live-exercise-1_timing_analysis – EC5230 Industrial Organisation</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -77,7 +77,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar docked nav-fixed quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -162,78 +162,54 @@ ul.task-list li input[type="checkbox"] {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../exercises/index.html">Exercises</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../exercises/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Exercises</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Exercise Sheets</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../exercises/sheets/exercises-1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercise 1: Oligopoly and Product Differentiation</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Live Exercises</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../exercises/live/live-exercise-1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Live Exercise 1: Hotelling with quadratic transportation costs</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#problem-sets" id="toc-problem-sets" class="nav-link active" data-scroll-target="#problem-sets">Problem Sets</a>
+  <li><a href="#timing-analysis-live-exercise-1.qmd" id="toc-timing-analysis-live-exercise-1.qmd" class="nav-link active" data-scroll-target="#timing-analysis-live-exercise-1.qmd">Timing Analysis: live-exercise-1.qmd</a>
   <ul class="collapse">
-  <li><a href="#exercise-sheets" id="toc-exercise-sheets" class="nav-link" data-scroll-target="#exercise-sheets">Exercise Sheets</a></li>
-  <li><a href="#live-exercises" id="toc-live-exercises" class="nav-link" data-scroll-target="#live-exercises">Live Exercises</a></li>
-  <li><a href="#how-to-use-these-exercises" id="toc-how-to-use-these-exercises" class="nav-link" data-scroll-target="#how-to-use-these-exercises">How to Use These Exercises</a></li>
+  <li><a href="#executive-summary" id="toc-executive-summary" class="nav-link" data-scroll-target="#executive-summary">Executive Summary</a></li>
+  <li><a href="#time-breakdown-by-part" id="toc-time-breakdown-by-part" class="nav-link" data-scroll-target="#time-breakdown-by-part">Time Breakdown by Part</a>
+  <ul class="collapse">
+  <li><a href="#part-a-marginal-consumer-and-demands" id="toc-part-a-marginal-consumer-and-demands" class="nav-link" data-scroll-target="#part-a-marginal-consumer-and-demands">Part (a): Marginal consumer and demands</a></li>
+  <li><a href="#part-b-best-responses-in-prices" id="toc-part-b-best-responses-in-prices" class="nav-link" data-scroll-target="#part-b-best-responses-in-prices">Part (b): Best responses in prices</a></li>
+  <li><a href="#part-c-price-equilibrium" id="toc-part-c-price-equilibrium" class="nav-link" data-scroll-target="#part-c-price-equilibrium">Part (c): Price equilibrium</a></li>
+  <li><a href="#part-d-interior-condition-optional-challenge" id="toc-part-d-interior-condition-optional-challenge" class="nav-link" data-scroll-target="#part-d-interior-condition-optional-challenge">Part (d): Interior condition (OPTIONAL CHALLENGE)</a></li>
+  <li><a href="#part-e-numerical-check" id="toc-part-e-numerical-check" class="nav-link" data-scroll-target="#part-e-numerical-check">Part (e): Numerical check</a></li>
+  <li><a href="#part-f-discussion-question" id="toc-part-f-discussion-question" class="nav-link" data-scroll-target="#part-f-discussion-question">Part (f): Discussion question</a></li>
+  </ul></li>
+  <li><a href="#total-time-estimates" id="toc-total-time-estimates" class="nav-link" data-scroll-target="#total-time-estimates">Total Time Estimates</a>
+  <ul class="collapse">
+  <li><a href="#scenario-1-all-parts-including-d" id="toc-scenario-1-all-parts-including-d" class="nav-link" data-scroll-target="#scenario-1-all-parts-including-d">Scenario 1: All parts including (d)</a></li>
+  <li><a href="#scenario-2-skip-part-d-recommended" id="toc-scenario-2-skip-part-d-recommended" class="nav-link" data-scroll-target="#scenario-2-skip-part-d-recommended">Scenario 2: Skip part (d) [recommended]</a></li>
+  <li><a href="#scenario-3-only-a-c-tightest-time" id="toc-scenario-3-only-a-c-tightest-time" class="nav-link" data-scroll-target="#scenario-3-only-a-c-tightest-time">Scenario 3: Only (a)-(c) [tightest time]</a></li>
+  </ul></li>
+  <li><a href="#comparison-to-target" id="toc-comparison-to-target" class="nav-link" data-scroll-target="#comparison-to-target">Comparison to Target</a></li>
+  <li><a href="#timing-issues" id="toc-timing-issues" class="nav-link" data-scroll-target="#timing-issues">Timing Issues</a>
+  <ul class="collapse">
+  <li><a href="#issue-1-too-many-sub-questions-critical" id="toc-issue-1-too-many-sub-questions-critical" class="nav-link" data-scroll-target="#issue-1-too-many-sub-questions-critical">Issue 1: Too many sub-questions (CRITICAL)</a></li>
+  <li><a href="#issue-2-part-c-is-dense-medium" id="toc-issue-2-part-c-is-dense-medium" class="nav-link" data-scroll-target="#issue-2-part-c-is-dense-medium">Issue 2: Part (c) is dense (MEDIUM)</a></li>
+  <li><a href="#issue-3-no-warm-up-low" id="toc-issue-3-no-warm-up-low" class="nav-link" data-scroll-target="#issue-3-no-warm-up-low">Issue 3: No warm-up (LOW)</a></li>
+  </ul></li>
+  <li><a href="#pedagogical-timing-notes" id="toc-pedagogical-timing-notes" class="nav-link" data-scroll-target="#pedagogical-timing-notes">Pedagogical Timing Notes</a>
+  <ul class="collapse">
+  <li><a href="#strengths" id="toc-strengths" class="nav-link" data-scroll-target="#strengths">Strengths</a></li>
+  <li><a href="#weaknesses" id="toc-weaknesses" class="nav-link" data-scroll-target="#weaknesses">Weaknesses</a></li>
+  </ul></li>
+  <li><a href="#recommendations" id="toc-recommendations" class="nav-link" data-scroll-target="#recommendations">Recommendations</a>
+  <ul class="collapse">
+  <li><a href="#priority-1-critical-reduce-scope" id="toc-priority-1-critical-reduce-scope" class="nav-link" data-scroll-target="#priority-1-critical-reduce-scope">Priority 1 (CRITICAL): Reduce scope</a></li>
+  <li><a href="#priority-2-medium-clarify-instructions" id="toc-priority-2-medium-clarify-instructions" class="nav-link" data-scroll-target="#priority-2-medium-clarify-instructions">Priority 2 (MEDIUM): Clarify instructions</a></li>
+  <li><a href="#priority-3-low-split-part-c" id="toc-priority-3-low-split-part-c" class="nav-link" data-scroll-target="#priority-3-low-split-part-c">Priority 3 (LOW): Split part (c)</a></li>
+  </ul></li>
+  <li><a href="#comparison-to-timing-heuristics" id="toc-comparison-to-timing-heuristics" class="nav-link" data-scroll-target="#comparison-to-timing-heuristics">Comparison to Timing Heuristics</a></li>
+  <li><a href="#final-verdict" id="toc-final-verdict" class="nav-link" data-scroll-target="#final-verdict">Final Verdict</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -243,7 +219,6 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Exercises</h1>
 </div>
 
 <div>
@@ -271,98 +246,272 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="problem-sets" class="level2">
-<h2 class="anchored" data-anchor-id="problem-sets">Problem Sets</h2>
-<p>Practice exercises for EC5230 Industrial Organisation.</p>
-<p>Each exercise is published in two explicit variants:</p>
-<ul>
-<li><strong>Student</strong> version (<code>solutions: false</code>)</li>
-<li><strong>Instructor</strong> version (<code>solutions: true</code>)</li>
-</ul>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Use the navbar <code>Exercises</code> menu for direct links to each sheet.</p>
-</div>
-</div>
-<section id="exercise-sheets" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-sheets">Exercise Sheets</h3>
+<section id="timing-analysis-live-exercise-1.qmd" class="level1">
+<h1>Timing Analysis: live-exercise-1.qmd</h1>
+<p><strong>File:</strong> <code>exercises/live/live-exercise-1.qmd</code> <strong>Exercise Type:</strong> Live (group work) <strong>Target Time:</strong> 15-20 minutes <strong>Review Date:</strong> 2026-02-09</p>
+<hr>
+<section id="executive-summary" class="level2">
+<h2 class="anchored" data-anchor-id="executive-summary">Executive Summary</h2>
+<p><strong>Estimated Completion Time:</strong> 25-33 minutes (including optional part d) <strong>Without Optional Parts:</strong> 20-28 minutes (parts a,b,c,e,f) <strong>Deviation from Target:</strong> +25% to +65% over 20-minute target</p>
+<p><strong>Status:</strong> ⚠️ <strong>OVER TIME</strong> (CRITICAL if including part d; MEDIUM without it)</p>
+<p><strong>Recommendation:</strong> Mark part (d) explicitly as “optional/challenge” OR remove parts (e) and (f) to fit 20-minute window.</p>
+<hr>
+</section>
+<section id="time-breakdown-by-part" class="level2">
+<h2 class="anchored" data-anchor-id="time-breakdown-by-part">Time Breakdown by Part</h2>
+<section id="part-a-marginal-consumer-and-demands" class="level3">
+<h3 class="anchored" data-anchor-id="part-a-marginal-consumer-and-demands">Part (a): Marginal consumer and demands</h3>
+<p><strong>Tasks:</strong> 1. Write indifference condition 2. Solve for x* (quadratic algebra) 3. Derive q1(p1,p2) and q2(p1,p2)</p>
+<p><strong>Estimated Time:</strong> - Write indifference: 1-2 min (straightforward utility comparison) - Solve for x<em>: 2-3 min (expanding (x-a)² - (1-a-x)², factoring, isolating x) - Write demands: 1 min (x</em> = q1 by definition)</p>
+<p><strong>Subtotal:</strong> 4-6 minutes</p>
+<p><strong>Complexity:</strong> STANDARD (requires careful algebra with squared terms)</p>
+<hr>
+</section>
+<section id="part-b-best-responses-in-prices" class="level3">
+<h3 class="anchored" data-anchor-id="part-b-best-responses-in-prices">Part (b): Best responses in prices</h3>
+<p><strong>Tasks:</strong> 1. FOC for Firm 1 2. Simplify to BR₁(p₂) 3. FOC for Firm 2 4. Simplify to BR₂(p₁)</p>
+<p><strong>Estimated Time:</strong> - FOC for Firm 1: 2-3 min (differentiation of π₁ = (p₁ - c₁)q₁, substitute ∂q₁/∂p₁ = -1/(2td), solve) - FOC for Firm 2: 2-3 min (symmetric)</p>
+<p><strong>Subtotal:</strong> 4-6 minutes</p>
+<p><strong>Complexity:</strong> STANDARD (routine FOC derivation, algebra similar to linear Hotelling but with td term)</p>
+<hr>
+</section>
+<section id="part-c-price-equilibrium" class="level3">
+<h3 class="anchored" data-anchor-id="part-c-price-equilibrium">Part (c): Price equilibrium</h3>
+<p><strong>Tasks:</strong> 1. Solve 2×2 system of BR functions 2. Compute equilibrium market shares 3. Show price gap p₂* - p₁* = (c₂-c₁)/3 4. Explain how distance d affects average markup</p>
+<p><strong>Estimated Time:</strong> - Solve system: 3-4 min (substitute BR₁ into BR₂, back-substitute) - Compute shares: 2 min (substitute prices into demand) - Show price gap: 1 min (subtract equilibrium prices) - Discuss distance effect: 2 min (identify td term, explain economic mechanism)</p>
+<p><strong>Subtotal:</strong> 8-9 minutes</p>
+<p><strong>Complexity:</strong> STANDARD to CHALLENGING (system solving is routine, interpretation requires understanding differentiation)</p>
+<hr>
+</section>
+<section id="part-d-interior-condition-optional-challenge" class="level3">
+<h3 class="anchored" data-anchor-id="part-d-interior-condition-optional-challenge">Part (d): Interior condition (OPTIONAL CHALLENGE)</h3>
+<p><strong>Tasks:</strong> 1. Derive condition |c₂-c₁| &lt; 3td from q₁<em>, q₂</em> ∈ (0,1) 2. Economic interpretation</p>
+<p><strong>Estimated Time:</strong> - Derive condition: 3-4 min (set q₁* &lt; 1 and q₂* &gt; 0, manipulate inequality) - Economic interpretation: 2 min (explain “cost difference too large”)</p>
+<p><strong>Subtotal:</strong> 5-6 minutes</p>
+<p><strong>Complexity:</strong> CHALLENGE (requires recognizing equilibrium validity conditions)</p>
+<p><strong>Note:</strong> Currently labeled “optional challenge” in line 78, which is good. However, many students may attempt it anyway if time permits.</p>
+<hr>
+</section>
+<section id="part-e-numerical-check" class="level3">
+<h3 class="anchored" data-anchor-id="part-e-numerical-check">Part (e): Numerical check</h3>
+<p><strong>Tasks:</strong> Compute (p₁<em>, p₂</em>, q₁<em>, q₂</em>) with a=1/4, t=2, c₁=0, c₂=1</p>
+<p><strong>Estimated Time:</strong> - Calculate d = 1/2: 30 sec - Calculate td = 1: 30 sec - Compute p₁* = 4/3: 1 min - Compute p₂* = 5/3, q₁* = 2/3, q₂* = 1/3: 1-2 min</p>
+<p><strong>Subtotal:</strong> 2-3 minutes</p>
+<p><strong>Complexity:</strong> ROUTINE (substitution and arithmetic)</p>
+<hr>
+</section>
+<section id="part-f-discussion-question" class="level3">
+<h3 class="anchored" data-anchor-id="part-f-discussion-question">Part (f): Discussion question</h3>
+<p><strong>Tasks:</strong> Explain why quadratic costs make competition depend on distance, unlike linear costs</p>
+<p><strong>Estimated Time:</strong> - Read and understand question: 1 min - Formulate answer using expressions from (c): 2-3 min</p>
+<p><strong>Subtotal:</strong> 2-3 minutes</p>
+<p><strong>Complexity:</strong> STANDARD (conceptual, requires understanding demand elasticity ∂q₁/∂p₁ = 1/(2td))</p>
+<hr>
+</section>
+</section>
+<section id="total-time-estimates" class="level2">
+<h2 class="anchored" data-anchor-id="total-time-estimates">Total Time Estimates</h2>
+<section id="scenario-1-all-parts-including-d" class="level3">
+<h3 class="anchored" data-anchor-id="scenario-1-all-parts-including-d">Scenario 1: All parts including (d)</h3>
+<p><strong>Sum:</strong> 4-6 + 4-6 + 8-9 + 5-6 + 2-3 + 2-3 = 25-33 minutes <strong>+10% reading buffer:</strong> 28-36 minutes <strong>Status:</strong> <strong>CRITICAL</strong> (40-80% over 20-minute target)</p>
+</section>
+<section id="scenario-2-skip-part-d-recommended" class="level3">
+<h3 class="anchored" data-anchor-id="scenario-2-skip-part-d-recommended">Scenario 2: Skip part (d) [recommended]</h3>
+<p><strong>Sum:</strong> 4-6 + 4-6 + 8-9 + 2-3 + 2-3 = 20-27 minutes <strong>+10% buffer:</strong> 22-30 minutes <strong>Status:</strong> <strong>MEDIUM</strong> (10-50% over target)</p>
+</section>
+<section id="scenario-3-only-a-c-tightest-time" class="level3">
+<h3 class="anchored" data-anchor-id="scenario-3-only-a-c-tightest-time">Scenario 3: Only (a)-(c) [tightest time]</h3>
+<p><strong>Sum:</strong> 4-6 + 4-6 + 8-9 = 16-21 minutes <strong>+10% buffer:</strong> 18-23 minutes <strong>Status:</strong> <strong>GOOD</strong> (0-15% over target, within acceptable range)</p>
+<hr>
+</section>
+</section>
+<section id="comparison-to-target" class="level2">
+<h2 class="anchored" data-anchor-id="comparison-to-target">Comparison to Target</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>Set</th>
-<th>Source</th>
-<th>Student (HTML)</th>
-<th>Instructor (HTML)</th>
-<th>Student (PDF)</th>
-<th>Instructor (PDF)</th>
+<th>Scenario</th>
+<th>Min (min)</th>
+<th>Max (min)</th>
+<th>% of 20-min target</th>
+<th>Assessment</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Exercise 1: Oligopoly and Product Differentiation</td>
-<td><a href="../exercises/sheets/exercises-1.html">qmd</a></td>
-<td><a href="sheets/exercises-1.html">download</a></td>
-<td><a href="sheets/exercises-1-solutions.html">download</a></td>
-<td><a href="sheets/exercises-1.pdf">download</a></td>
-<td><a href="sheets/exercises-1-solutions.pdf">download</a></td>
+<td>All parts (a-f)</td>
+<td>28</td>
+<td>36</td>
+<td>140-180%</td>
+<td>CRITICAL: TOO LONG</td>
 </tr>
-</tbody>
-</table>
-</section>
-<section id="live-exercises" class="level3">
-<h3 class="anchored" data-anchor-id="live-exercises">Live Exercises</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Set</th>
-<th>Source</th>
-<th>Student (HTML)</th>
-<th>Instructor (HTML)</th>
-<th>Student (PDF)</th>
-<th>Instructor (PDF)</th>
+<tr class="even">
+<td>Skip (d) — (a,b,c,e,f)</td>
+<td>22</td>
+<td>30</td>
+<td>110-150%</td>
+<td>MEDIUM: Slightly over</td>
 </tr>
-</thead>
-<tbody>
 <tr class="odd">
-<td>Live Exercise 1: Hotelling with quadratic transportation costs</td>
-<td><a href="../exercises/live/live-exercise-1.html">qmd</a></td>
-<td><a href="live/live-exercise-1.html">download</a></td>
-<td><a href="live/live-exercise-1-solutions.html">download</a></td>
-<td><a href="live/live-exercise-1.pdf">download</a></td>
-<td><a href="live/live-exercise-1-solutions.pdf">download</a></td>
+<td>Core only — (a,b,c)</td>
+<td>18</td>
+<td>23</td>
+<td>90-115%</td>
+<td>GOOD: Near target</td>
 </tr>
 </tbody>
 </table>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>Study Advice
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Try to complete the problems on your own before going to class. Active problem-solving is essential for mastering industrial organisation concepts.</p>
-</div>
-</div>
+<p><strong>Target benchmark:</strong> 15-22 minutes (75-110% of 20-minute target) is EXCELLENT</p>
+<hr>
 </section>
-<section id="how-to-use-these-exercises" class="level3">
-<h3 class="anchored" data-anchor-id="how-to-use-these-exercises">How to Use These Exercises</h3>
+<section id="timing-issues" class="level2">
+<h2 class="anchored" data-anchor-id="timing-issues">Timing Issues</h2>
+<section id="issue-1-too-many-sub-questions-critical" class="level3">
+<h3 class="anchored" data-anchor-id="issue-1-too-many-sub-questions-critical">Issue 1: Too many sub-questions (CRITICAL)</h3>
+<p><strong>Problem:</strong> 6 sub-questions (a-f) is excessive for a 20-minute exercise.</p>
+<p><strong>Evidence:</strong> - Even skipping optional (d), estimated time is 22-30 min - With (d), exercise takes 28-36 min (up to 80% over target)</p>
+<p><strong>Impact:</strong> Students will rush final parts or not finish, reducing learning value</p>
+<p><strong>Recommended Fix (choose one):</strong></p>
+<p><strong>Option A (Remove numerical/discussion):</strong> - Keep (a), (b), (c), (d-optional) - Remove (e) and (f) - New total: 18-23 min ✓ GOOD</p>
+<p><strong>Option B (Make more optional):</strong> - Required: (a), (b), (c) only - Optional: (d), (e), (f) labeled “if time permits” - Core total: 18-23 min ✓ GOOD</p>
+<p><strong>Option C (Simplify part c):</strong> - Combine “show price gap” and “discuss distance” into one question - Keep (a), (b), (c-simplified), (e) - Remove (d) and (f) - New total: ~18-22 min ✓ GOOD</p>
+<hr>
+</section>
+<section id="issue-2-part-c-is-dense-medium" class="level3">
+<h3 class="anchored" data-anchor-id="issue-2-part-c-is-dense-medium">Issue 2: Part (c) is dense (MEDIUM)</h3>
+<p><strong>Problem:</strong> Part (c) has 4 distinct tasks: 1. Solve equilibrium 2. Compute shares 3. Show price gap formula 4. Discuss distance effect</p>
+<p><strong>Evidence:</strong> Estimated 8-9 minutes for one “part” is high</p>
+<p><strong>Impact:</strong> May feel overwhelming; students might not finish all tasks</p>
+<p><strong>Recommended Fix:</strong> Split into (c) and (c’) or simplify: - <strong>(c)</strong> Solve for (p₁<em>, p₂</em>) and (q₁<em>, q₂</em>) - <strong>(c’)</strong> Show that p₂* - p₁* = (c₂-c₁)/3 and explain how distance affects markups</p>
+<p>This makes progression clearer and allows partial credit.</p>
+<hr>
+</section>
+<section id="issue-3-no-warm-up-low" class="level3">
+<h3 class="anchored" data-anchor-id="issue-3-no-warm-up-low">Issue 3: No warm-up (LOW)</h3>
+<p><strong>Problem:</strong> Part (a) immediately requires nontrivial algebra (expanding quadratics, factoring)</p>
+<p><strong>Evidence:</strong> Part (a) is 4-6 minutes, which is appropriate for a main derivation but quick for a warm-up</p>
+<p><strong>Impact:</strong> Groups may struggle to get started, eating into time for later parts</p>
+<p><strong>Recommended Fix (optional):</strong> Add a sub-part (a.0) before current (a): - <strong>(a.0)</strong> “Write down the utility functions for a consumer at location x buying from Firm 1 and Firm 2.” [1 min] - Then proceed to current (a)</p>
+<p>This gives students a moment to orient before tackling the algebra.</p>
+<hr>
+</section>
+</section>
+<section id="pedagogical-timing-notes" class="level2">
+<h2 class="anchored" data-anchor-id="pedagogical-timing-notes">Pedagogical Timing Notes</h2>
+<section id="strengths" class="level3">
+<h3 class="anchored" data-anchor-id="strengths">Strengths</h3>
 <ol type="1">
-<li><strong>Review the relevant lecture material</strong> before attempting each problem set</li>
-<li><strong>Attempt all problems</strong> without looking at solutions</li>
-<li><strong>Check your answers</strong> against the solutions</li>
-<li><strong>Identify gaps</strong> in your understanding and revisit lecture notes</li>
+<li><strong>Logical progression:</strong> (a) → (b) → (c) is classic IO textbook sequence (demands → FOCs → equilibrium)</li>
+<li><strong>Scaffolding:</strong> Earlier parts set up later parts (demands from (a) are used in (b), BRs from (b) used in (c))</li>
+<li><strong>Validation:</strong> Part (e) numerical check helps students verify algebraic work</li>
 </ol>
+</section>
+<section id="weaknesses" class="level3">
+<h3 class="anchored" data-anchor-id="weaknesses">Weaknesses</h3>
+<ol type="1">
+<li><strong>No breathing room:</strong> 25-33 min for a “15-minute” exercise (line 21) leaves no buffer for group discussion or questions</li>
+<li><strong>Back-loaded complexity:</strong> Parts (d), (e), (f) come after the hardest work, when students are mentally fatigued</li>
+<li><strong>Optional not clearly scoped:</strong> Part (d) says “optional challenge” but (e) and (f) are not marked optional, even though time will be tight</li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="recommendations" class="level2">
+<h2 class="anchored" data-anchor-id="recommendations">Recommendations</h2>
+<section id="priority-1-critical-reduce-scope" class="level3">
+<h3 class="anchored" data-anchor-id="priority-1-critical-reduce-scope">Priority 1 (CRITICAL): Reduce scope</h3>
+<p><strong>Choose one:</strong></p>
+<ol type="1">
+<li><strong>Remove (e) and (f)</strong> → Total: 18-23 min ✓</li>
+<li><strong>Make (d), (e), (f) all optional</strong> → Core: 18-23 min ✓</li>
+<li><strong>Keep only (a), (b), (c), (e)</strong> → Total: ~20-25 min (closer to target)</li>
+</ol>
+</section>
+<section id="priority-2-medium-clarify-instructions" class="level3">
+<h3 class="anchored" data-anchor-id="priority-2-medium-clarify-instructions">Priority 2 (MEDIUM): Clarify instructions</h3>
+<ol type="1">
+<li><strong>Update line 21</strong> from “≈15 minutes” to “≈20 minutes” to match actual scope</li>
+<li><strong>Label optional parts explicitly:</strong>
+<ul>
+<li>“### (d) [OPTIONAL] When does one firm…”</li>
+<li>“### (e) [OPTIONAL] Quick numerical check”</li>
+<li>“### (f) [OPTIONAL] Discussion”</li>
+</ul></li>
+</ol>
+</section>
+<section id="priority-3-low-split-part-c" class="level3">
+<h3 class="anchored" data-anchor-id="priority-3-low-split-part-c">Priority 3 (LOW): Split part (c)</h3>
+<p>Make it two sub-parts (c) and (c’) for clarity and pacing.</p>
+<hr>
+</section>
+</section>
+<section id="comparison-to-timing-heuristics" class="level2">
+<h2 class="anchored" data-anchor-id="comparison-to-timing-heuristics">Comparison to Timing Heuristics</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 22%">
+<col style="width: 38%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Task Type</th>
+<th>Heuristic</th>
+<th>Actual in Exercise</th>
+<th>Match?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Indifference condition derivation</td>
+<td>3-4 min</td>
+<td>2-3 min (part a, step 2)</td>
+<td>✓ Faster (simpler algebra)</td>
+</tr>
+<tr class="even">
+<td>Demand functions</td>
+<td>1-2 min</td>
+<td>1 min (part a, step 3)</td>
+<td>✓ Match</td>
+</tr>
+<tr class="odd">
+<td>FOC derivation</td>
+<td>3-4 min per firm</td>
+<td>2-3 min per firm (part b)</td>
+<td>✓ Slightly faster (standard)</td>
+</tr>
+<tr class="even">
+<td>Solve 2×2 system</td>
+<td>3-4 min</td>
+<td>3-4 min (part c)</td>
+<td>✓ Match</td>
+</tr>
+<tr class="odd">
+<td>Numerical computation</td>
+<td>2-3 min</td>
+<td>2-3 min (part e)</td>
+<td>✓ Match</td>
+</tr>
+<tr class="even">
+<td>Conceptual discussion</td>
+<td>2-3 min</td>
+<td>2-3 min (part f)</td>
+<td>✓ Match</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Conclusion:</strong> Individual task estimates align well with heuristics. The TOTAL time issue arises from having TOO MANY tasks, not from misestimating individual tasks.</p>
+<hr>
+</section>
+<section id="final-verdict" class="level2">
+<h2 class="anchored" data-anchor-id="final-verdict">Final Verdict</h2>
+<p><strong>Estimated Time:</strong> 25-33 minutes (all parts) or 20-28 minutes (skip d) <strong>Target:</strong> 20 minutes <strong>Deviation:</strong> +25% to +65%</p>
+<p><strong>Quality Gate:</strong> ❌ FAILS (exceeds 20% deviation threshold)</p>
+<p><strong>Status:</strong> NEEDS REVISION to reduce scope</p>
+<p><strong>After fixes:</strong> If parts (e) and (f) removed → 18-23 min → ✓ GOOD (within 15% of target)</p>
+<hr>
+<p><strong>Report saved to:</strong> <code>quality_reports/live-exercise-1_timing_analysis.md</code> <strong>Next step:</strong> Apply scope reduction (remove or mark (e) and (f) as optional)</p>
 
 
 </section>
