@@ -20,13 +20,13 @@
 
 ## Parameters
 
-| Parameter | Required | Description | Example |
-|-----------|----------|-------------|---------|
-| `--type` | Yes | Exercise type: `live` or `takehome` | `live` |
-| `--lecture` | Yes | Lecture number(s) to reinforce | `3` or `1,2,3` |
-| `--topic` | Yes | Main topic/concept | `"Cournot with cost asymmetry"` |
-| `--difficulty` | No | Target difficulty (routine/standard/challenge) | `standard` |
-| `--extensions` | No | Optional extensions/twists | `"Add free entry condition"` |
+| Parameter      | Required | Description                                    | Example                         |
+| -------------- | -------- | ---------------------------------------------- | ------------------------------- |
+| `--type`       | Yes      | Exercise type: `live` or `takehome`            | `live`                          |
+| `--lecture`    | Yes      | Lecture number(s) to reinforce                 | `3` or `1,2,3`                  |
+| `--topic`      | Yes      | Main topic/concept                             | `"Cournot with cost asymmetry"` |
+| `--difficulty` | No       | Target difficulty (routine/standard/challenge) | `standard`                      |
+| `--extensions` | No       | Optional extensions/twists                     | `"Add free entry condition"`    |
 
 ---
 
@@ -111,8 +111,6 @@
 ```markdown
 ---
 title: "Live Exercise N: [Topic]"
-params:
-  solution: false
 format:
   html:
     toc: false
@@ -126,6 +124,12 @@ format:
     number-sections: false
 solutions: false
 ---
+
+::: {.content-hidden unless-meta="solutions"}
+
+# Solutions
+
+:::
 
 **Group exercise (≈15-20 minutes)**
 
@@ -185,6 +189,12 @@ format:
 solutions: false
 ---
 
+::: {.content-hidden unless-meta="solutions"}
+
+# Solutions
+
+:::
+
 **Instructions**
 
 - Answer all questions.
@@ -235,11 +245,13 @@ solutions: false
 ### For Live Exercises (20-minute target)
 
 **Structure:**
+
 - **1 focused problem** with 3-5 sub-questions
 - **Progressive difficulty:** warm-up → main derivation → interpretation/extension
 - **Group-friendly:** can be divided among group members, then synthesized
 
 **Timing guidelines:**
+
 - Part (a): 3-5 min (warm-up: define notation, set up FOC)
 - Part (b): 5-8 min (main derivation: equilibrium, best response)
 - Part (c): 4-6 min (computation or comparative statics)
@@ -247,6 +259,7 @@ solutions: false
 - Optional part (e): challenge extension (for advanced groups)
 
 **Content:**
+
 - Reinforce 1-2 lecture concepts
 - Use familiar market structure with a twist
 - Include numerical check for validation
@@ -255,16 +268,19 @@ solutions: false
 ### For Take-Home Exercises (60-minute target)
 
 **Structure:**
+
 - **2-3 problems** covering different concepts
 - **Each problem** has 2-4 sub-questions
 - **Mix:** routine applications + deeper analysis
 
 **Timing guidelines:**
+
 - Problem 1 (routine): 15-20 min
 - Problem 2 (standard): 25-30 min
 - Problem 3 (challenge - optional): 15-20 min
 
 **Content:**
+
 - Reinforce 2-3 lecture topics
 - Include at least one problem that combines concepts
 - Require written explanations, not just algebra
@@ -275,24 +291,28 @@ solutions: false
 ## Common Exercise Types
 
 ### Cournot Oligopoly Variants
+
 - Asymmetric costs
 - N firms with free entry
 - Sequential quantity choice (Stackelberg)
 - Welfare comparisons
 
 ### Product Differentiation
+
 - Hotelling with different cost functions (linear, quadratic)
 - Hotelling with asymmetric locations
 - Salop with heterogeneous firms
 - Vertical differentiation
 
 ### Innovation & R&D
+
 - Process innovation value (monopoly vs competition)
 - Drastic vs non-drastic innovations
 - Patent races
 - R&D spillovers
 
 ### Strategic Entry/Exit
+
 - Entry deterrence pricing
 - Capacity commitments
 - Market foreclosure
@@ -390,6 +410,7 @@ Any extensions or special requirements? (optional)
 ### Plan Mode Integration
 
 The skill uses the plan-first workflow:
+
 1. Automatically enters plan mode
 2. Creates plan file in `quality_reports/plans/`
 3. Presents plan to user
@@ -398,6 +419,7 @@ The skill uses the plan-first workflow:
 ### Solution Generation Strategy
 
 When writing solutions:
+
 - Start from problem setup
 - Show FOCs explicitly (don't skip differentiation)
 - Show algebraic simplification steps (don't jump to final form)
@@ -407,6 +429,7 @@ When writing solutions:
 ### Iteration Protocol
 
 If quality review finds critical issues:
+
 1. Identify issue type (algebra error, timing issue, unclear instruction)
 2. Fix in exercise file
 3. Re-run affected review agent

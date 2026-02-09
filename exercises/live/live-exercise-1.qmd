@@ -1,7 +1,6 @@
 ---
 title: "Live Exercise 1: Hotelling with quadratic transportation costs"
-params:
-  solution: false
+
 format:
   html:
     toc: false
@@ -17,6 +16,10 @@ format:
     number-sections: false
 solutions: true
 ---
+
+::: {.content-hidden unless-meta="solutions"}
+# Solutions
+:::
 
 **Group exercise (≈20 minutes)**
 
