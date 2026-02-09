@@ -69,10 +69,10 @@ Interactive visualisations to explore key economic models:
 
 There is no single prescribed textbook. The course draws on chapters from:
 
-- **Belleflamme, P. & Peitz, M. (2015).** *Industrial Organisation: Markets and Strategies* (2nd ed.). Cambridge University Press.
-- **Shy, O. (1996).** *Industrial Organisation: Theory and Applications*. MIT Press.
-- **Scotchmer, S. (2004).** *Innovation and Incentives*. Princeton University Press.
-- **Church, J. & Ware, R. (2000).** *Industrial Organization: A Strategic Approach*. Irwin McGraw-Hill.
+- **@belleflammeIndustrialOrganizationMarkets2015** *Industrial Organisation: Markets and Strategies* (2nd ed.). Cambridge University Press.
+- **@shyIndustrialOrganizationTheory1995** *Industrial Organisation: Theory and Applications*. MIT Press.
+- **@scotchmerInnovationIncentives2006** *Innovation and Incentives*. Princeton University Press.
+- **@churchIndustrialOrganizationStrategic2000** *Industrial Organization: A Strategic Approach*. Irwin McGraw-Hill.
 
 Journal articles are available through the online reading list and cited at the end of each lecture.
 

@@ -32,14 +32,23 @@ Innovation is the **dynamic** margin of competition: firms try to change the gam
 
 - Compute the **private value** of a process innovation under different market structures
 - Define **drastic vs non-drastic** innovations and explain the **replacement effect** [@arrowEconomicWelfareAllocation1972]
-- Understand why innovation can have **strategic value** when it affects **entry** and market structure
-- See how models with **free entry + endogenous R&D** link innovation to **concentration** [@dasguptaIndustrialStructureNature1980]
+- Understand how **free entry + endogenous R&D** link innovation to **concentration** [@dasguptaIndustrialStructureNature1980]
 
 ::: {.callout-note title="Today: roadmap"}
-1. Benchmark model: value of a process innovation under **monopoly**, **perfect competition**, and the **social planner**
+1. Benchmark model: value under **monopoly**, **perfect competition**, and **social planner**
 2. **Drastic vs non-drastic** innovations and the **replacement effect**
-3. Innovation incentives in **oligopoly** and under **entry threat**
-4. Seminal results on **concentration** and **R&D** [@dasguptaIndustrialStructureNature1980]
+3. Innovation with **oligopoly** and **entry threat**
+4. **Concentration** and **R&D** [@dasguptaIndustrialStructureNature1980]
+:::
+
+## Discussion: Why does innovation matter for growth?
+
+Before the Industrial Revolution (~1760–1840), global GDP per capita was roughly flat for centuries. Since then, it has grown exponentially.
+
+::: {.callout-note title="Question for you"}
+- What role did innovation (new production methods, machinery, transport) play in this transformation?
+- Why might market structure affect the *rate* of innovation — and therefore long-run growth?
+- Should we expect monopolies or competitive markets to innovate more? (We'll answer this formally in a moment.)
 :::
 
 ## Market structure and innovation: a two-way relationship
@@ -107,16 +116,6 @@ $$
 $\Delta \pi^m$ is the monopolist's value of *exclusive* access to the lower cost $c_1$ (it is incremental because the firm already earns rents at $c_0$).
 :::
 
-## Discussion: Why does innovation matter for growth?
-
-Before the Industrial Revolution (~1760–1840), global GDP per capita was roughly flat for centuries. Since then, it has grown exponentially.
-
-**Question for you:**
-
-- What role did innovation (new production methods, machinery, transport) play in this transformation?
-- Why might market structure affect the *rate* of innovation — and therefore long-run growth?
-- Should we expect monopolies or competitive markets to innovate more? (We'll answer this formally in a moment.)
-
 ## Perfect competition benchmark (innovation creates rents)
 
 **Before innovation (all firms at MC $c_0$):**
@@ -174,6 +173,16 @@ Take $A=20$, $c_0=10$, and $c_1=6$.
 The competitive innovator earns $40 > 24$ (the monopolist's WTP). The monopolist gains less because it already earns $\pi^m(c_0) = 25$ before innovating — it is partly **replacing** existing rents.
 :::
 
+## Replacement effect: visual comparison
+
+::: {.content-visible when-format="beamer"}
+\resizebox{0.95\textwidth}{!}{\includestandalone{../figs/source/fig-innovation-replacement-effect}}
+:::
+
+::: {.content-visible when-format="html"}
+![](../figs/fig-innovation-replacement-effect.svg){fig-alt="Two-panel surplus diagram: monopoly replaces existing rents while competitive innovator creates new rents" fig-align="center" width="95%"}
+:::
+
 ## Replacement effect [@arrowEconomicWelfareAllocation1972]
 
 ::: {.callout-note title="Key idea (replacement effect)"}
@@ -203,14 +212,6 @@ $$
 
 ::: {.callout-important title="Takeaway"}
 Holding everything else fixed, an incumbent monopolist has **weaker** incentives to innovate than a competitive industry because it is "replacing" its own pre-innovation rents.
-:::
-
-::: {.content-visible when-format="beamer"}
-\resizebox{0.95\textwidth}{!}{\includestandalone{../figs/source/fig-innovation-replacement-effect}}
-:::
-
-::: {.content-visible when-format="html"}
-![](../figs/fig-innovation-replacement-effect.svg){fig-alt="Two-panel surplus diagram: monopoly replaces existing rents while competitive innovator creates new rents" fig-align="center" width="95%"}
 :::
 
 ## Empirical example: competition and innovation
@@ -318,7 +319,11 @@ More rivals reduces baseline profits (hurting incentives), but can increase the 
 - Entrant can enter profitably **only if** it gets innovation
 - Let $\pi^d(c_i,c_j)$ denote firm $i$'s profit in the post-entry **duopoly** when own cost is $c_i$ and the rival's cost is $c_j$
 
-**Timing/game structure:** We compare the **willingness to pay** for innovation (e.g., in a patent auction or R&D race). The innovation is awarded to whichever firm values it more highly. Entry happens *after* the innovation is allocated.
+**Timing/game structure:**
+
+We compare the **willingness to pay** for innovation (e.g., in a patent auction or R&D race). The innovation is awarded to whichever firm values it more highly. Entry happens *after* the innovation is allocated.
+
+## Entry threat: payoff structure
 
 **Payoffs:**
 
@@ -343,23 +348,23 @@ $$
 V_E = \pi^d(c_1, c_0)
 $$
 
-**Incumbent has stronger incentives if**
-
-. . .
+**Incumbent has stronger incentives if:**
 
 $$
 V_I > V_E \quad \Leftrightarrow \quad \pi^m(c_1) > \pi^d(c_1, c_0) + \pi^d(c_0, c_1)
 $$
 
-Typically when products are close substitutes (entry is very harmful).
+This typically holds when products are close substitutes (entry is very harmful).
 
 ::: {.callout-important title="Interpretation"}
-Here the incumbent may innovate **more** than an entrant because innovation does two things at once: it lowers cost *and* it keeps the market in the monopoly regime (entry deterrence / pre-emption).
+The incumbent may innovate **more** than an entrant because innovation does two things: it lowers cost *and* it keeps the market in the monopoly regime (entry deterrence / pre-emption).
 :::
 
 ## Discussion: when does pre-emption fail?
 
+::: {.callout-note title="Discussion question"}
 Under what market conditions might an entrant have stronger innovation incentives than the incumbent? What features would reverse the pre-emption result?
+:::
 
 ## Empirical example: strategic incentives and market share
 
@@ -367,11 +372,11 @@ Under what market conditions might an entrant have stronger innovation incentive
 @blundellMarketShareMarket1999 find that higher market share and market value predict more patenting/innovations in UK manufacturing firms, consistent with **strategic** incentives (including pre-emptive innovation) in oligopolistic industries.
 :::
 
-# Endogenous R&D and market structure {background-color="#00539b"}
+# Endogenous R&D and market structure @dasguptaIndustrialStructureNature1980: {background-color="#00539b"}
 
-## @dasguptaIndustrialStructureNature1980: setup and key result 
+##  Setup and key result 
 
-They model R&D as an **endogenous sunk cost**: firms spend on R&D to reduce marginal cost, and entry adjusts endogenously.
+@dasguptaIndustrialStructureNature1980 model R&D as an **endogenous sunk cost**: firms spend on R&D to reduce marginal cost, and entry adjusts endogenously.
 
 The key result is a clean link between:
 
@@ -388,7 +393,7 @@ The linear model gave us clean closed-form comparisons. The D-S framework sacrif
 | $c(x)$ | Function | Marginal cost (decreasing in $x$) |
 | $N$ | Outcome | Number of active firms (endogenous) |
 | $\varepsilon$ | Parameter | Demand elasticity |
-| $\alpha$ | Parameter | Innovative potential: $\alpha = -\frac{dc(x)}{dx}\frac{x}{c}$ (R&D cost elasticity) |
+| $\alpha$ | Parameter | R&D cost elasticity: $\alpha = -\frac{dc(x)}{dx}\frac{x}{c}$ (measures how effectively R&D reduces cost) |
 :::
 
 ## Dasgupta–Stiglitz (1980): planner benchmark [@dasguptaIndustrialStructureNature1980]
@@ -448,6 +453,24 @@ What forces at work here?
 
 **Key insight:** Equilibrium concentration ($N^*$) balances these forces. We'll derive the precise formula by combining the pricing and free-entry conditions.
 
+## Reminder: Cournot perceived elasticity
+
+**From Lecture 1:** Under Cournot competition, firm $i$ perceives the demand elasticity facing its own output as $N\varepsilon$, where $\varepsilon$ is the market demand elasticity.
+
+**This gives the markup formula:**
+
+$$
+\frac{P - c}{P} = \frac{1}{N\varepsilon}
+$$
+
+**Rearranging:**
+
+$$
+P\left(1 - \frac{1}{N\varepsilon}\right) = c
+$$
+
+We'll use this to link pricing to R&D in the Dasgupta–Stiglitz model.
+
 ## @dasguptaIndustrialStructureNature1980: equilibrium pricing
 
 **First-order condition in $q_i$:**
@@ -494,7 +517,7 @@ $$
 
 ## Deriving the concentration formula (II): Solution
 
-**Introduce innovative potential** $\alpha = -\frac{dc(x)}{dx}\frac{x}{c}$ (from firm's R&D FOC).
+**Introduce the R&D cost elasticity** $\alpha = -\frac{dc(x)}{dx}\frac{x}{c}$ (from firm's R&D FOC).
 
 **This implies:** $\frac{x}{cq} = \alpha$, so $\frac{Nx}{Q} = \frac{Nx}{Nq} = \frac{x}{q} = \alpha c$
 
@@ -521,7 +544,7 @@ $$
 $$
 
 ::: {.callout-note title="Interpretation"}
-Concentration and research intensity are jointly determined: entry expands $N$ until operating surplus covers R&D outlays $x^*$. Higher innovative potential ($\alpha$) supports higher concentration; more elastic demand lowers concentration.
+Concentration and research intensity are jointly determined: entry expands $N$ until operating surplus covers R&D outlays $x^*$. Higher R&D cost elasticity ($\alpha$) supports higher concentration; more elastic demand lowers concentration.
 :::
 
 ## Dasgupta–Stiglitz: numerical illustration
@@ -536,7 +559,7 @@ $$
 - If $\varepsilon = 2$ and $\alpha = 3$: $\frac{1}{N^*} = \frac{1}{2} \cdot \frac{3}{4} = \frac{3}{8}$, so $N^* \approx 2.7$ firms
 
 ::: {.callout-note title="Discussion question"}
-If a government subsidy increases innovative potential ($\alpha$), what does the model predict for market structure? Is this welfare-improving?
+If a government subsidy increases the R&D cost elasticity ($\alpha$, making R&D more effective), what does the model predict for market structure? Is this welfare-improving?
 :::
 
 ## Dasgupta (1986): key comparative statics (I) [@dasguptaTheoryTechnologicalCompetition1986]
@@ -558,7 +581,7 @@ If a government subsidy increases innovative potential ($\alpha$), what does the
 
 ## Dasgupta (1986): key comparative statics (II) [@dasguptaTheoryTechnologicalCompetition1986]
 
-**Greater innovative opportunities** associated with higher concentration:
+**Greater R&D effectiveness** (higher $\alpha$) associated with higher concentration:
 
 $$
 \frac{\partial (1/N^*)}{\partial \alpha} > 0
@@ -573,7 +596,7 @@ $$
 **Interpretation:**
 
 - Larger markets (higher $\sigma$) increase the return to cost reduction
-- Stronger innovative opportunities (higher $\alpha$) can support higher concentration in equilibrium
+- More effective R&D (higher $\alpha$) can support higher concentration in equilibrium
 
 ## Summary and next week
 
