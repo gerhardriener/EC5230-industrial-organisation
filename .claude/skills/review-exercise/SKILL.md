@@ -1,10 +1,17 @@
+---
+name: review-exercise
+description: Comprehensive multi-dimensional review of course exercises, covering timing, pedagogy, correctness, and clarity.
+disable-model-invocation: true
+argument-hint: "<file> [--type=live|takehome]"
+---
+
 # Exercise Review Skill
 
 **Command:** `/review-exercise`
 
 **Purpose:** Comprehensive multi-dimensional review of course exercises (live or take-home problem sets)
 
-**Scope:** Analyzes exercises for timing appropriateness, pedagogical alignment, solution correctness, clarity, and citation quality.
+**Scope:** Analyzes exercises for timing appropriateness, pedagogical alignment, solution correctness, and clarity.
 
 ---
 
@@ -63,12 +70,7 @@ Launch multiple review agents concurrently to maximize efficiency:
 **Agent 3: Proofreader** (proofreader, existing)
 - Grammar, typos, consistency
 - Academic quality
-- **Save:** `quality_reports/[FILE]_proofreading.md`
-
-**Agent 4: Citation Auditor** (citation-auditor, built-in)
-- Hardcoded citations vs `@citationKey` syntax
-- Bibliography cross-reference
-- **Save:** `quality_reports/[FILE]_citation_audit.md`
+- **Save:** `quality_reports/[FILE]_report.md`
 
 ### Step 3: Synthesize Combined Summary
 
@@ -85,7 +87,6 @@ After all agents complete, generate a synthesis report:
 | Pedagogy  |          |        |     |
 | Solutions |          |        |     |
 | Clarity   |          |        |     |
-| Citations |          |        |     |
 
 ### Summary
 
@@ -125,37 +126,11 @@ After all agents complete, generate a synthesis report:
 
 ## Quality Score Rubric
 
-### Overall Rating
-
-| Score | Critical | Medium | Timing Deviation | Solution Errors | Meaning |
-|-------|----------|--------|------------------|-----------------|---------|
-| **EXCELLENT** | 0 | 0-2 | ≤10% | 0 critical | Ready to deploy |
-| **GOOD** | 0-1 | 3-5 | ≤20% | 0-1 medium | Minor fixes needed |
-| **NEEDS REVISION** | 2-3 | 6-10 | >20% or <50% | 1+ critical | Significant work required |
-| **POOR** | 4+ | 11+ | >50% or <30% | Multiple critical | Major restructuring |
-
-### Timing Scoring
-
-**Live exercises (target: 20 min):**
-- **Perfect:** 15-22 min (75-110% of target)
-- **Good:** 12-25 min (60-125%)
-- **Needs work:** 10-30 min (50-150%)
-- **Poor:** <10 min or >30 min
-
-**Take-home exercises (target: 60 min):**
-- **Perfect:** 50-70 min (83-117% of target)
-- **Good:** 40-80 min (67-133%)
-- **Needs work:** 30-90 min (50-150%)
-- **Poor:** <30 min or >90 min
-
-### Solution Correctness Scoring
-
-| Rating | Critical Errors | Medium Errors | Meaning |
-|--------|-----------------|---------------|---------|
-| **CORRECT** | 0 | 0-1 (typos only) | Solutions verified correct |
-| **MINOR ERRORS** | 0 | 2-3 | Small fixes needed |
-| **NEEDS REVISION** | 1-2 | 4+ | Rework required |
-| **INCORRECT** | 3+ | Any | Major errors throughout |
+Use `../../rules/exercise-quality-rubric.md` as the canonical rubric for:
+- score bands
+- timing windows
+- severity thresholds
+- rating interpretation
 
 ---
 
@@ -163,7 +138,7 @@ After all agents complete, generate a synthesis report:
 
 The skill produces:
 
-1. **Individual agent reports** (4 files in `quality_reports/`)
+1. **Individual agent reports** (3 files in `quality_reports/`)
 2. **Synthesis report** (1 file summarizing all dimensions)
 3. **Console summary** (brief text output with key findings)
 
@@ -187,8 +162,7 @@ The skill produces:
 📁 Reports saved to quality_reports/:
   - live-exercise-1_exercise_review.md
   - live-exercise-1_solution_check.md
-  - live-exercise-1_proofreading.md
-  - live-exercise-1_citation_audit.md
+  - live-exercise-1_report.md
   - live-exercise-1_exercise_synthesis.md
 
 ✅ Ready to deploy with minor fixes
@@ -266,18 +240,6 @@ The `exercise-reviewer` agent uses these heuristics:
 
 ### Parallel Execution
 
-All four agents run in parallel (single message with multiple `Task` calls) to maximize performance. Agents are independent and don't depend on each other's output.
-
-### Citation Audit Scope
-
-For exercises, citation audit focuses on:
-- References to papers in problem statements
-- Citations in solution explanations
-- References to lecture materials (should use consistent format)
-
-Unlike slides, exercises typically have fewer citations, so this dimension has lower weight.
+All three agents run in parallel (single message with multiple `Task` calls) to maximize performance. Agents are independent and don't depend on each other's output.
 
 ---
-
-**Created:** 2026-02-09
-**Last Updated:** 2026-02-09

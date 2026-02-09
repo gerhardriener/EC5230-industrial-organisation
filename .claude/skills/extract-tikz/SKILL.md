@@ -11,7 +11,7 @@ Generate SVG diagrams from TikZ source files for use in Quarto RevealJS slides.
 
 ## Current TikZ Pipeline
 
-**See [.claude/rules/tikz-workflow.md](.claude/rules/tikz-workflow.md) for the complete workflow documentation.**
+**See [tikz-workflow.md](../../rules/tikz-workflow.md) for the complete workflow documentation.**
 
 ### Quick Summary
 
@@ -112,12 +112,12 @@ Open the HTML output and verify diagrams display correctly.
 
 - To modify a diagram: edit the `.tex` source file, then re-run `tikz2pdf.py`
 - NEVER edit the generated SVG files directly — changes will be overwritten
-- For dual-format rendering (Beamer PDF + Quarto HTML), see `.claude/rules/tikz-workflow.md`
+- For dual-format rendering (Beamer PDF + Quarto HTML), see `../../rules/tikz-workflow.md`
 
 ---
 
 ## Related Files
 
-- **Conversion script:** [scripts/tikz2pdf.py](scripts/tikz2pdf.py)
-- **Full workflow guide:** [.claude/rules/tikz-workflow.md](.claude/rules/tikz-workflow.md)
-- **Visual quality standards:** [.claude/agents/tikz-reviewer.md](.claude/agents/tikz-reviewer.md)
+- **Conversion script:** [scripts/tikz2pdf.py](../../../scripts/tikz2pdf.py)
+- **Full workflow guide:** [tikz-workflow.md](../../rules/tikz-workflow.md)
+- **Visual quality standards:** [tikz-reviewer.md](../../agents/tikz-reviewer.md)

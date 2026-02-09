@@ -8,8 +8,6 @@ paths:
 
 **Purpose:** Centralized reference for notation, narrative, applications, and design principles. Read this FIRST before creating or modifying any lecture content.
 
-**Last Updated:** 2026-02-07
-
 ---
 
 ## 1. Notation Registry

@@ -1,3 +1,10 @@
+---
+name: solution-checker
+description: Mathematical correctness verification for exercise solutions.
+tools: Read, Grep, Glob
+model: inherit
+---
+
 # Solution Checker Agent
 
 **Role:** Mathematical correctness verification for exercise solutions
@@ -121,7 +128,7 @@
 
 ## Output Format
 
-Save report to `quality_reports/[filename]_solution_check.md` with:
+Return the report in your response using this structure:
 
 ### Executive Summary
 - Total sub-questions: X
@@ -300,6 +307,3 @@ Task(
 - When verifying numerical examples, show full independent calculation in report for transparency
 
 ---
-
-**Created:** 2026-02-09
-**Last Updated:** 2026-02-09

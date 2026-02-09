@@ -3,10 +3,10 @@
 **This document is the authoritative guide for creating, modifying, and deploying TikZ diagrams in this project.**
 
 Referenced by:
-- [.claude/agents/tikz-reviewer.md](.claude/agents/tikz-reviewer.md)
-- [.claude/skills/extract-tikz/SKILL.md](.claude/skills/extract-tikz/SKILL.md)
-- [.github/copilot-instructions.md](.github/copilot-instructions.md)
-- [.claude/agents/beamer-translator.md](.claude/agents/beamer-translator.md)
+- [tikz-reviewer.md](../agents/tikz-reviewer.md)
+- [extract-tikz SKILL.md](../skills/extract-tikz/SKILL.md)
+- [copilot-instructions.md](../../.github/copilot-instructions.md)
+- [beamer-translator.md](../agents/beamer-translator.md)
 
 ---
 
@@ -194,7 +194,7 @@ All TikZ diagrams MUST pass the `tikz-reviewer` agent standards:
 
 **Review protocol:** Run `/tikz-reviewer` after ANY diagram modification. Iterate until APPROVED.
 
-See [.claude/agents/tikz-reviewer.md](.claude/agents/tikz-reviewer.md) for full quality checklist.
+See [tikz-reviewer.md](../agents/tikz-reviewer.md) for full quality checklist.
 
 ---
 
@@ -288,8 +288,8 @@ SVG files are committed so that GitHub Pages deployment doesn't require LaTeX/po
 
 ## Related Documentation
 
-- **Visual quality standards:** [.claude/agents/tikz-reviewer.md](.claude/agents/tikz-reviewer.md)
-- **Conversion script:** [scripts/tikz2pdf.py](scripts/tikz2pdf.py)
-- **Extract-tikz skill:** [.claude/skills/extract-tikz/SKILL.md](.claude/skills/extract-tikz/SKILL.md)
-- **Beamer→Quarto translation:** [.claude/agents/beamer-translator.md](.claude/agents/beamer-translator.md)
-- **Course authoring rules:** [.github/copilot-instructions.md](.github/copilot-instructions.md)
+- **Visual quality standards:** [tikz-reviewer.md](../agents/tikz-reviewer.md)
+- **Conversion script:** [scripts/tikz2pdf.py](../../scripts/tikz2pdf.py)
+- **Extract-tikz skill:** [extract-tikz SKILL.md](../skills/extract-tikz/SKILL.md)
+- **Beamer→Quarto translation:** [beamer-translator.md](../agents/beamer-translator.md)
+- **Course authoring rules:** [copilot-instructions.md](../../.github/copilot-instructions.md)

@@ -31,7 +31,7 @@ Every script MUST follow this section layout:
 # Inputs:
 #   - [data source or URL]
 #
-# Outputs (saved to Figures/LectureN/):
+# Outputs (saved to lecture-slides/figs/ or another repo-relative output folder):
 #   - [file.pdf]  -- [description]
 #   - [file.rds]  -- [description]
 #
@@ -64,21 +64,26 @@ Numbered sections: 0. Setup, 1. Data/DGP, 2. Estimation, 3. Run, 4. Figures, 5. 
 
 ## 5. Domain Correctness
 
-<!-- Customize for your field's known pitfalls -->
-
 - Verify estimator implementations match slide formulas
 - Check known package bugs (document in Section 12 below)
 
 ## 6. Visual Identity
 
+Canonical palette source: `st-andrews-visual-identity.md`
+(`.claude/rules/st-andrews-visual-identity.md`)
+
 ```r
-# --- Your institutional palette ---
-# Customize these colors for your institution
-primary_blue  <- "#012169"
-primary_gold  <- "#f2a900"
-accent_gray   <- "#525252"
-positive_green <- "#15803d"
-negative_red  <- "#b91c1c"
+# --- St Andrews institutional palette ---
+# Values below MUST match `.claude/rules/st-andrews-visual-identity.md`
+primary_blue    <- "#00539b"
+primary_red     <- "#ee312a"
+primary_yellow  <- "#ffdf00"
+primary_black   <- "#231f20"
+mid_blue        <- "#007dc5"
+burgundy        <- "#c60c46"
+positive_green  <- "#54b948"
+dark_green      <- "#005953"
+accent_gray     <- "#525252"
 ```
 
 ### Custom Theme
@@ -123,8 +128,6 @@ saveRDS(result, file.path(out_dir, "descriptive_name.rds"))
 ```
 
 ## 9. Common Pitfalls
-
-<!-- Add your field-specific pitfalls here -->
 
 | Pitfall                      | Impact                   | Prevention                 |
 | ---------------------------- | ------------------------ | -------------------------- |

@@ -92,3 +92,6 @@ apps/
 
 /.quarto/
 **/*.quarto_ipynb
+
+# Claude local machine/session overrides
+.claude/settings.local.json

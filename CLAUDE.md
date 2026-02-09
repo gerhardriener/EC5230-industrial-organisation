@@ -1,14 +1,5 @@
 # CLAUDE.MD — Academic Project Development with Claude Code
 
-<!-- ============================================================
-     HOW TO USE THIS TEMPLATE:
-     1. Replace all [BRACKETED PLACEHOLDERS] with your project info
-     2. Delete sections that don't apply to your project
-     3. Add domain-specific sections as needed
-     4. This file is read by Claude at the start of every session
-     ============================================================ -->
-
-**Last Updated:** February 2026
 **Project:** EC5230 — Industrial Organisation (MSc-level course)
 **Institution:** University of St Andrews
 **Working Branch:** main
@@ -28,7 +19,6 @@
 | `/review-r [file or LectureN]`              | R code review: quality, reproducibility, correctness                 |
 | `/qa-quarto [LectureN]`                     | Adversarial Quarto vs Beamer QA: critic finds issues, fixer resolves |
 | `/slide-excellence [filename]`              | Combined visual + pedagogical + proofreading + citation audit review |
-| `/translate-to-quarto [filename]`           | Full Beamer to Quarto translation workflow                           |
 | `/create-lecture`                           | Full lecture creation workflow                                       |
 | `/devils-advocate`                          | Challenge slide design with pedagogical questions                    |
 | **Exercises**                               |                                                                      |
@@ -59,6 +49,8 @@
 **Rules** (auto-loaded): See `.claude/rules/` for domain-specific rules:
 - [callout-box-guidelines.md](.claude/rules/callout-box-guidelines.md) — Callout box word count thresholds and content appropriateness
 - [tikz-workflow.md](.claude/rules/tikz-workflow.md) — TikZ diagram creation and SVG conversion pipeline
+- [st-andrews-visual-identity.md](.claude/rules/st-andrews-visual-identity.md) — Canonical typography and color palette
+- [exercise-quality-rubric.md](.claude/rules/exercise-quality-rubric.md) — Canonical timing and scoring rubric for exercises
 - Additional rules on LaTeX, Quarto, R, verification, proofreading, and quality gates
 
 ---
@@ -227,12 +219,9 @@ Output: `_site/lecture-slides/slides/lecture-*.html` (RevealJS) and `lecture-*.p
 
 ## St Andrews Visual Identity
 
-**Colour palette** (from `.github/copilot-instructions.md`):
-
-- Primary: Blue `#00539b`, Red `#ee312a`, Yellow `#ffdf00`, Black `#231f20`
-- Secondary: Mid Blue `#007dc5`, Burgundy `#c60c46`, Green `#54b948`, Dark Green `#005953`
-
-**Typography:** PT Sans for all headings and body text
+Use `.claude/rules/st-andrews-visual-identity.md` as the canonical source for:
+- Typography (PT Sans)
+- Primary and secondary colour palette values
 
 ---
 

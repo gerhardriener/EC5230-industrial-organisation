@@ -67,8 +67,6 @@ When translating code (typically Stata to R):
 
 ### Common Stata to R Translation Pitfalls
 
-<!-- Customize: Add pitfalls specific to your field's common packages -->
-
 | Stata                  | R                                     | Trap                                                      |
 | ---------------------- | ------------------------------------- | --------------------------------------------------------- |
 | `reg y x, cluster(id)` | `feols(y ~ x, cluster = ~id)`         | Stata clusters df-adjust differently from some R packages |
@@ -192,4 +190,4 @@ After replication is verified (all targets PASS):
 
 - **`/create-lecture` Phase 4:** When replication packages are provided, follow this protocol before creating figures
 - **`/review-r`:** The r-reviewer agent checks for replication-related issues (DGP match, correct estimand)
-- **`/substance-review`:** The domain reviewer checks code-theory alignment
+- **Domain review (optional):** The domain-reviewer agent can be used for code-theory alignment checks

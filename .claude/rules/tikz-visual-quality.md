@@ -66,4 +66,4 @@ paths:
 
 **The `.tex` file is the authoritative source for ALL TikZ diagrams.**
 
-Edit TikZ in the file FIRST, then copy verbatim to `extract_tikz.tex`.
+Edit TikZ in `lecture-slides/figs/source/*.tex` FIRST, then regenerate SVGs with `python scripts/tikz2pdf.py`.

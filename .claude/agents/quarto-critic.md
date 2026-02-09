@@ -77,7 +77,7 @@ If ANY of these fail, the verdict is **REJECTED**:
 - TikZ: SVGs referenced (not PDFs)?
 - Tables: same structure, alignment?
 - Boxes: every Beamer box type has CSS equivalent?
-- **Callout density:** Quarto callout boxes follow density guidelines (see [.claude/rules/callout-box-guidelines.md](../.claude/rules/callout-box-guidelines.md))
+- **Callout density:** Quarto callout boxes follow density guidelines (see [callout-box-guidelines.md](../rules/callout-box-guidelines.md))
   - Compare callout word count between Beamer and Quarto
   - Flag if Quarto adds dense callouts (>80 words) where Beamer had concise presentation
   - Flag if callout contains tables or complex notation (should be on main slide)
@@ -146,13 +146,11 @@ The @dasguptaIndustrialStructureNature1980 result shows...
 
 ## Report Format
 
-**Save report to:** `quality_reports/[Lecture]_qa_critic_round[N].md`
-
 ```markdown
 # Quarto vs Beamer Audit: [Lecture Name]
 
-**Beamer source:** `Slides/LectureXX_Topic.tex` ([N] pages)
-**Quarto source:** `Quarto/LectureX_Topic.qmd` ([M] slides)
+**Beamer reference:** `_site/lecture-slides/slides/lecture-X-topic.pdf` ([N] pages)
+**Quarto source:** `lecture-slides/slides/lecture-X-topic.qmd` ([M] slides)
 **Round:** [N]
 **Date:** [YYYY-MM-DD]
 
@@ -217,13 +215,4 @@ The @dasguptaIndustrialStructureNature1980 result shows...
 
 You are the **adversary**. Your job is to find problems, not to approve quickly. A single overlooked overflow or missing equation damages the course. Be thorough, be harsh, be specific.
 
-## Session Log Integration
-
-If a session log file exists in `quality_reports/session_logs/` matching today's date, append a brief entry when you find critical issues:
-
-**Format:**
-```markdown
-- **quarto-critic found [N] critical, [M] major issues in [lecture]**: [one-line summary]
-```
-
-This helps maintain a continuous record of decisions and fixes throughout the session.
+Return the completed report in your response so the calling workflow can persist it.

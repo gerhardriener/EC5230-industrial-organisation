@@ -1,3 +1,10 @@
+---
+name: exercise-reviewer
+description: Pedagogical and timing review for course exercises (live and take-home problem sets).
+tools: Read, Grep, Glob
+model: inherit
+---
+
 # Exercise Reviewer Agent
 
 **Role:** Pedagogical and timing review for course exercises (live and take-home problem sets)
@@ -19,17 +26,19 @@
 
 ### 1. Timing Analysis
 
-**For live exercises (target: 15-20 minutes):**
+**For live exercises (target: 20 minutes):**
 - Estimate completion time based on:
   - Number of sub-questions
   - Algebraic complexity (derivations, substitutions, systems of equations)
   - Computational steps (numerical checks)
   - Conceptual/discussion components
-- Flag if estimated time exceeds 25 minutes (critical) or 22 minutes (medium)
+- Flag as **critical** if estimated time is outside 12-30 minutes
+- Flag as **medium** if estimated time is outside 15-25 minutes
 
-**For take-home exercises (target: 45-60 minutes):**
+**For take-home exercises (target: 60 minutes):**
 - Estimate total time across all problems
-- Flag if estimated time exceeds 75 minutes (critical) or 70 minutes (medium)
+- Flag as **critical** if estimated time is outside 40-85 minutes
+- Flag as **medium** if estimated time is outside 48-72 minutes
 - Check balance across problems (no single problem should exceed 40% of total time)
 
 **Timing heuristics:**
@@ -106,7 +115,7 @@
 
 ## Output Format
 
-Save report to `quality_reports/[filename]_exercise_review.md` with:
+Return the report in your response using this structure:
 
 ### Executive Summary
 - Exercise type (live / takehome)
@@ -145,26 +154,7 @@ Save report to `quality_reports/[filename]_exercise_review.md` with:
 
 ## Quality Gates
 
-**EXCELLENT (teaching-ready):**
-- Timing within target ±10%
-- All concepts covered in prior lectures
-- Clear progressive difficulty
-- No critical issues, ≤2 medium issues
-
-**GOOD (minor revisions):**
-- Timing within target ±20%
-- Pedagogical alignment clear
-- 3-5 medium issues, no critical
-
-**NEEDS REVISION:**
-- Timing off by >20% OR
-- Missing prerequisites OR
-- 6+ medium issues OR 1+ critical
-
-**POOR (major restructuring):**
-- Timing off by >50% OR
-- Multiple critical pedagogical gaps OR
-- Ambiguous instructions
+Use the canonical exercise rubric in `../rules/exercise-quality-rubric.md` for timing windows, score bands, and severity interpretation.
 
 ---
 
@@ -223,6 +213,3 @@ Task(
 ```
 
 ---
-
-**Created:** 2026-02-09
-**Last Updated:** 2026-02-09

@@ -98,6 +98,8 @@ For every **lecture slide deck**:
 
 ## University of St Andrews visual identity
 
+Canonical source: `.claude/rules/st-andrews-visual-identity.md`
+
 ### Typefaces
 
 - Use **PT Sans** for all headings and body text.
@@ -105,23 +107,7 @@ For every **lecture slide deck**:
 
 ### Colour palette (restricted)
 
-Use only official colours:
-
-**Primary**
-
-- St Andrews Blue `#00539b`
-- St Andrews Red `#ee312a`
-- St Andrews Yellow `#ffdf00`
-- St Andrews Black `#231f20`
-
-**Secondary (plots only)**
-
-- Mid Blue `#007dc5`
-- Burgundy `#c60c46`
-- Green `#54b948`
-- Dark Green `#005953`
-- Optional Purple `#7b439a`
-- Optional Orange `#f5842b`
+Use only colours defined in `.claude/rules/st-andrews-visual-identity.md` (Primary + Secondary).
 
 Use white generously.
 

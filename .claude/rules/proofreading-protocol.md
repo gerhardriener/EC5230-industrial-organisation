@@ -38,7 +38,7 @@ Launch parallel review agents for all modified lecture files. Each agent:
 
 ```
 ### Issue 7: Wrong preposition
-- **File:** Slides/LectureN_Topic.tex
+- **File:** lecture-slides/slides/lecture-N-topic.qmd
 - **Location:** Slide "Example Title", line ~247
 - **Current:** "eligible to the program"
 - **Proposed:** "eligible for the program"

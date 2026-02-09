@@ -1,53 +1,46 @@
 ---
 paths:
-  - "Slides/**/*.tex"
-  - "Quarto/**/*.qmd"
-  - "docs/**"
+  - "lecture-slides/slides/**/*.qmd"
+  - "lecture-slides/figs/source/**/*.tex"
+  - "scripts/**/*.R"
 ---
 
 # Task Completion Verification Protocol
 
 **At the end of EVERY task, Claude MUST verify the output works correctly.** This is non-negotiable.
 
-## For Quarto/HTML Slides:
-1. Run `./scripts/sync_to_docs.sh` (or `./scripts/sync_to_docs.sh LectureN`) to render and deploy
-2. Open the HTML in browser: `open docs/slides/LectureX.html`
-3. Verify images display by reading 2-3 image files to confirm valid content
-4. Check HTML source for correct image paths
-5. Check for overflow by scanning dense slides
-6. Verify environment parity: every Beamer box environment has a CSS equivalent in the QMD
-7. Report verification results
+## For Quarto HTML Slides:
+1. Run `./scripts/sync_to_docs.sh` (or `./scripts/sync_to_docs.sh lecture-N-name`) to render and publish
+2. Open rendered output in `_site/lecture-slides/slides/` and verify slide rendering visually
+3. Verify referenced SVG paths resolve from the rendered HTML
+4. Check for overflow by scanning dense slides
+5. Verify environment parity: every custom callout/class used in QMD has a CSS equivalent
+6. Report verification results
 
-## For LaTeX/Beamer Slides:
-1. Compile with xelatex and check for errors
-2. Open the PDF to verify figures render
-3. Check for overfull hbox warnings
-
-## For TikZ Diagrams in HTML/Quarto:
-1. Browsers **cannot** display PDF images inline — ALWAYS convert to SVG
-2. Use SVG (vector format) for crisp rendering: `pdf2svg input.pdf output.svg`
-3. **NEVER use PNG for diagrams** — PNG is raster and looks blurry
-4. Verify SVG files contain valid XML/SVG markup
-5. Copy SVGs to `docs/Figures/LectureX/` via `sync_to_docs.sh`
-6. **Freshness check:** Before using any TikZ SVG, verify extract_tikz.tex matches current Beamer source
+## For TikZ Source and SVGs:
+1. Treat `lecture-slides/figs/source/*.tex` as the single source of truth
+2. Regenerate SVGs via `python scripts/tikz2pdf.py`
+3. Verify generated SVG files exist in `lecture-slides/figs/`
+4. Verify SVG files contain valid XML/SVG markup (`<svg` present)
+5. Re-render affected lecture slides and confirm diagrams display correctly
 
 ## For R Scripts:
-1. Run `Rscript scripts/R/filename.R`
-2. Verify output files (PDF, RDS) were created with non-zero size
+1. Run `Rscript path/to/script.R`
+2. Verify output files (PDF, SVG, RDS) were created with non-zero size
 3. Spot-check estimates for reasonable magnitude
 
 ## Common Pitfalls:
 - **PDF images in HTML**: Browsers don't render PDFs inline → convert to SVG
-- **Relative paths**: `../Figures/` works from `Quarto/` but not from `docs/slides/` → use `sync_to_docs.sh`
+- **Relative paths**: verify references from `lecture-slides/slides/*.qmd` resolve in `_site/`
 - **Assuming success**: Always verify output files exist AND contain correct content
-- **Stale TikZ SVGs**: extract_tikz.tex diverges from Beamer source → always diff-check
+- **Stale TikZ SVGs**: `.tex` source changed but SVG not regenerated
 
 ## Verification Checklist:
 ```
 [ ] Output file created successfully
 [ ] No compilation/render errors
 [ ] Images/figures display correctly
-[ ] Paths resolve in deployment location (docs/)
+[ ] Paths resolve in deployment location (_site/)
 [ ] Opened in browser/viewer to confirm visual appearance
 [ ] Reported results to user
 ```

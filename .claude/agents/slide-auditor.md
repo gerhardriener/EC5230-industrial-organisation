@@ -38,7 +38,7 @@ Audit every slide in the specified file for visual layout issues. Produce a repo
 
 **Callout boxes should reduce clutter by highlighting one key point, not add cognitive load through dense content.**
 
-See [.claude/rules/callout-box-guidelines.md](../.claude/rules/callout-box-guidelines.md) for complete guidelines.
+See [callout-box-guidelines.md](../rules/callout-box-guidelines.md) for complete guidelines.
 
 **Check for these violations:**
 
@@ -77,7 +77,7 @@ See [.claude/rules/callout-box-guidelines.md](../.claude/rules/callout-box-guide
 - Missing standout/transition slides at major conceptual pivots
 - Missing framing sentences before formal definitions
 - Semantic colors not used on binary contrasts (e.g., "Correct" vs "Wrong")
-- Note: Check `.claude/rules/no-pause-beamer.md` for overlay command policy
+- Note: Check `../rules/no-pause-beamer.md` for overlay command policy
 
 ### ENVIRONMENT PARITY (Beamer → Quarto)
 
@@ -151,7 +151,7 @@ Suggest Quarto-native solutions:
 
 ## Save the Report
 
-After completing the audit, save your report to:
+Return the report in your response. The calling workflow is responsible for persisting it to:
 
 ```
 quality_reports/[FILENAME_WITHOUT_EXT]_visual_audit.md
@@ -162,16 +162,3 @@ For example, if auditing `lecture-3-innovation.qmd`, save to:
 ```
 quality_reports/lecture-3-innovation_visual_audit.md
 ```
-
-Use the Write tool to save the complete report.
-
-## Session Log Integration
-
-If a session log file exists in `quality_reports/session_logs/` matching today's date, append a brief entry when you find critical issues:
-
-**Format:**
-```markdown
-- **slide-auditor found [N] [severity] issues in [file]**: [one-line summary]
-```
-
-This helps maintain a continuous record of decisions and fixes throughout the session.

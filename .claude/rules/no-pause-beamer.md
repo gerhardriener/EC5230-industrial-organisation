@@ -3,10 +3,7 @@ paths:
   - "lecture-slides/slides/**/*.qmd"
 ---
 
-# No `. . .` in Beamer Slides
-
-<!-- Customize: If you prefer fragment reveals, delete this rule file entirely. -->
-<!-- This rule enforces a "no overlay" policy for Beamer slides. -->
+# No Overlay Commands in Slide Decks
 
 **NEVER use `. . .`, `.incremental`, or any other reveal.js overlay/fragment commands in slide decks.**
 

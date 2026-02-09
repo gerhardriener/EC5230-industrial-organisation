@@ -6,30 +6,30 @@ paths:
 
 # Single Source of Truth: Enforcement Protocol
 
-**The quarto `.qmd` and the tikz `.tex` files are the authoritative source for ALL content.** Everything else is derived.
+**The Quarto `.qmd` files and TikZ source `.tex` files are authoritative.** Everything else is derived.
 
 ---
 
 ## TikZ Freshness Protocol (MANDATORY)
 
-**Before using ANY TikZ SVG in a Quarto slide, verify it matches the current source.**
+**Before using ANY TikZ SVG in a Quarto slide, verify it was regenerated from current source.**
 
-### The Diff-Check Procedure
+### The Source Regeneration Procedure
 
 ```
 Step 1: Read the TikZ block from the .tex file
-Step 2: Read the corresponding block from Figures/LectureN/extract_tikz.tex
-Step 3: Compare EVERY coordinate, label, color, opacity, and anchor point
-Step 4: If ANY difference exists → update extract_tikz.tex from Beamer → recompile → regenerate SVGs
+Step 2: Run `python scripts/tikz2pdf.py` from repo root
+Step 3: Confirm SVG exists at `lecture-slides/figs/[name].svg`
+Step 4: Confirm SVG timestamp is newer than source edit
 Step 5: Only then reference the SVG in the QMD
 ```
 
-### When to Re-Extract
+### When to Regenerate
 
-Re-extract ALL TikZ diagrams when:
+Regenerate SVGs when:
 
-- The Beamer `.tex` file has been modified since the last extraction
-- Starting a new Quarto translation
+- A source `.tex` file was modified
+- Starting a new Quarto conversion cycle
 - Any TikZ-related quality issue is reported
 - Before any commit that includes QMD changes
 
@@ -51,9 +51,10 @@ Before translating ANY lecture to Quarto:
 
 ```
 Quarto .qmd (SOURCE OF TRUTH)
-  ├── extract_tikz.tex → PDF → SVGs (derived)
+  ├── lecture-slides/figs/source/*.tex (TikZ source)
+  ├── scripts/tikz2pdf.py → lecture-slides/figs/*.svg (derived)
   ├── Quarto → HTML (derived)
-  ├── Quarto → pdf (derived)
+  ├── Quarto → PDF (derived)
   ├── references.bib (shared)
 
 NEVER edit derived artifacts independently.

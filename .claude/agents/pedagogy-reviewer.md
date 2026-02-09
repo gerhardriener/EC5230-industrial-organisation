@@ -30,11 +30,10 @@ Review the entire slide deck holistically. Produce a pedagogical report covering
 - Order of presentation: simple → relative → distributional → conditional
 - **Red flag:** Advanced concept introduced before simpler prerequisite
 
-### 5. FRAGMENT REVEALS FOR PROBLEM → SOLUTION
-- Use `. . .` (Quarto) to create pedagogical moments
-- Pattern: State problem → [fragment] → Show solution
-- Target: 3-5 fragment reveals per lecture (not every slide — use sparingly)
-- **Red flag:** Dense theorem slide reveals everything at once when incremental revelation would help
+### 5. NO OVERLAY DEPENDENCE
+- Do not rely on `. . .`, `.incremental`, `\pause`, or fragment commands
+- Pattern: split content into explicit sequential slides instead of overlays
+- **Red flag:** Meaning depends on hidden/revealed fragments rather than slide structure
 
 ### 6. STANDOUT SLIDES AT CONCEPTUAL PIVOTS
 - Major transitions need a visual/thematic break (transition slide)
@@ -61,7 +60,7 @@ Review the entire slide deck holistically. Produce a pedagogical report covering
 
 **Callout Content Appropriateness** (sub-check):
 
-Callout boxes should **reduce clutter** by highlighting one key point, not introduce new content that adds cognitive load. See [.claude/rules/callout-box-guidelines.md](../.claude/rules/callout-box-guidelines.md) for complete guidelines.
+Callout boxes should **reduce clutter** by highlighting one key point, not introduce new content that adds cognitive load. See [callout-box-guidelines.md](../rules/callout-box-guidelines.md) for complete guidelines.
 
 - **Callouts should restate/highlight, NOT introduce new theory**
   - **Red flag:** Callout contains derivation steps or new mathematical setup (should be on main slide)
@@ -172,17 +171,6 @@ Callout boxes should **reduce clutter** by highlighting one key point, not intro
 3. [Third most important]
 ```
 
-## Save Location
+## Output Delivery
 
-Save the report to: `quality_reports/[FILENAME_WITHOUT_EXT]_pedagogy_report.md`
-
-## Session Log Integration
-
-If a session log file exists in `quality_reports/session_logs/` matching today's date, append a brief entry when you find critical issues:
-
-**Format:**
-```markdown
-- **pedagogy-reviewer found [N] pattern violations in [file]**: [one-line summary]
-```
-
-This helps maintain a continuous record of decisions and fixes throughout the session.
+Return the completed report in your response so the calling workflow can persist it to `quality_reports/`.

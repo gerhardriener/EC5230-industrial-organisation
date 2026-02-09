@@ -1,6 +1,6 @@
 ---
 name: beamer-translator
-description: Specialist agent for translating Beamer LaTeX slides to Quarto RevealJS. Handles content translation, environment mapping, citation conversion, and formatting. Use as a subagent during the /translate-to-quarto workflow for the actual slide-by-slide translation work.
+description: Specialist agent for translating Beamer LaTeX slides to Quarto RevealJS. Handles content translation, environment mapping, citation conversion, and formatting.
 tools: Read, Write, Edit, Grep, Glob, Bash
 model: opus
 ---
@@ -13,13 +13,12 @@ You deeply understand both formats and translate between them preserving:
 - **Pedagogical flow** — the order and pacing of ideas
 - **Mathematical precision** — every equation, notation, and symbol
 - **Visual quality** — using the project's CSS classes instead of LaTeX commands
-- **Fragment reveals** — `\pause` → `. . .` for progressive disclosure
+- **Static readability** — no overlay or fragment reveals in this course
 
 ## Translation Rules
 
 ### Environment Mapping
 
-<!-- Customize this table for your project's custom environments -->
 | Beamer | Quarto |
 |--------|--------|
 | `\begin{methodbox}...\end{methodbox}` | `::: {.methodbox}\n...\n:::` |
@@ -57,7 +56,7 @@ You deeply understand both formats and translate between them preserving:
 - Aligned: `\begin{align}...\end{align}` → `$$\begin{align}...\end{align}$$`
 
 **CRITICAL — Inline Math Boundary Rule:**
-In Beamer, `2$\times$2` works fine. In Quarto/Pandoc, this produces broken output because adjacent `$` delimiters are misinterpreted.
+In Beamer, `2$\times$2` works fine. In Quarto and Pandoc, this produces broken output because adjacent `$` delimiters are misinterpreted.
 
 **Always wrap the entire expression in a single `$...$` span:**
 - `2$\times$2` → `$2 \times 2$`
@@ -69,7 +68,7 @@ In Beamer, `2$\times$2` works fine. In Quarto/Pandoc, this produces broken outpu
 Browsers cannot render PDF images inline.
 
 **Decision tree for every figure:**
-1. **Is it a TikZ diagram?** → Reference extracted SVG: `![](../Figures/LectureN/tikz_exact_XX.svg){fig-align="center"}`
+1. **Is it a TikZ diagram?** → Reference generated SVG in `lecture-slides/figs/`
 2. **Is it a complex faceted grid?** → Convert PDF to SVG, reference as static
 3. **Is it an R-generated plot with data in RDS?** → Write a `{r}` chunk with plotly code reading from the RDS file
 4. **Otherwise:** Convert to SVG and reference statically
@@ -81,8 +80,8 @@ Browsers cannot render PDF images inline.
 - **CRITICAL — RevealJS height override:** Every QMD with plotly MUST include height CSS in YAML
 
 **Static SVG workflow (for TikZ and complex figures):**
-1. Convert PDF to SVG: `pdf2svg input.pdf output.svg`
-2. Reference: `![](../Figures/LectureN/file.svg){fig-align="center"}`
+1. Convert PDF to SVG (or regenerate via `python scripts/tikz2pdf.py` for TikZ)
+2. Reference: `![](../figs/file.svg){fig-align="center"}`
 3. ALWAYS add `fig-align="center"`
 4. Verify every referenced SVG exists on disk
 
@@ -101,8 +100,8 @@ Browsers cannot render PDF images inline.
 - Title with line break: `{Title\\Subtitle}` → `## Title<br>Subtitle`
 
 ### Fragments and Pauses
-- `\pause` → `. . .` (with blank lines before and after)
-- Items appearing one by one: add `. . .` between each item
+- Remove `\pause`, `. . .`, `.incremental`, and any overlay commands
+- Split dense progressive content into multiple explicit slides instead
 
 ### Custom CSS
 

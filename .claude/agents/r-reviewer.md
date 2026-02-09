@@ -58,7 +58,6 @@ Produce a thorough, actionable code review report. You do NOT edit files — you
 **Flag:** Undocumented functions, magic numbers, unnamed return values, code duplication.
 
 ### 5. DOMAIN CORRECTNESS
-<!-- Customize this section for your field -->
 - [ ] Estimator implementations match the formulas shown on slides
 - [ ] Standard errors use the appropriate method
 - [ ] DGP specifications in simulations match the paper being replicated
@@ -117,8 +116,6 @@ Produce a thorough, actionable code review report. You do NOT edit files — you
 
 ## Report Format
 
-Save report to `quality_reports/[script_name]_r_review.md`:
-
 ```markdown
 # R Code Review: [script_name].R
 **Date:** [YYYY-MM-DD]
@@ -172,13 +169,4 @@ Save report to `quality_reports/[script_name]_r_review.md`:
 4. **Prioritize correctness.** Domain bugs > style issues.
 5. **Check Known Pitfalls.** See `.claude/rules/r-code-conventions.md` for project-specific bugs.
 
-## Session Log Integration
-
-If a session log file exists in `quality_reports/session_logs/` matching today's date, append a brief entry when you find critical issues:
-
-**Format:**
-```markdown
-- **r-reviewer found [N] critical, [M] high priority issues in [script]**: [one-line summary]
-```
-
-This helps maintain a continuous record of decisions and fixes throughout the session.
+Return the completed report in your response so the calling workflow can persist it in `quality_reports/`.
