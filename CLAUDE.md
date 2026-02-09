@@ -12,6 +12,8 @@
 - `.claude/rules/plan-first-workflow.md` — plan-first workflow and session logging
 - `.claude/rules/single-source-of-truth.md` — source chain and TikZ freshness rules
 - `.claude/rules/quality-gates.md` — commit/PR thresholds
+- `.claude/rules/authoring-standards.md` — slide authoring standards
+- `.claude/rules/exercise-standards.md` — exercise requirements
 - `.claude/rules/exercise-quality-rubric.md` — exercise timing and scoring
 - `.claude/rules/proofreading-protocol.md` — proofreading gate
 - `.claude/rules/callout-box-guidelines.md` — callout usage rules

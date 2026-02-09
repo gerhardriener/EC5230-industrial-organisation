@@ -2,7 +2,6 @@
 paths:
   - "lecture-slides/**/*.qmd"
   - "scripts/**/*.R"
-  - ".github/copilot-instructions.md"
 ---
 
 # St Andrews Visual Identity (Canonical)

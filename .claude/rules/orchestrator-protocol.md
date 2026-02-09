@@ -10,7 +10,7 @@ The plan-first workflow handles _what and why_. The orchestrator handles _how_, 
 
 The orchestrator kicks in under these conditions:
 
-1. **After plan approval** — the standard trigger. Plan-first workflow step 7 hands off to the orchestrator.
+1. **After plan approval** — the standard trigger. The plan-first workflow hands off to the orchestrator after approval.
 2. **"Just do it" mode** — when the user says "just do it", "you decide", or "handle it", skip the final presentation gate.
 3. **Skill delegation** — when a skill like `/create-lecture` reaches its implementation phase, the orchestrator loop governs execution.
 
@@ -103,7 +103,7 @@ When the loop completes (score >= threshold or max rounds), present a structured
 - [e.g., "Run /slide-excellence for full review"]
 ```
 
-Append the summary to the session log (Rule 5b of plan-first-workflow).
+Append the summary to the session log as required by `.claude/rules/plan-first-workflow.md`.
 
 ---
 

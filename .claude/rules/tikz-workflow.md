@@ -5,7 +5,6 @@
 Referenced by:
 - [tikz-reviewer.md](../agents/tikz-reviewer.md)
 - [extract-tikz SKILL.md](../skills/extract-tikz/SKILL.md)
-- [copilot-instructions.md](../../.github/copilot-instructions.md)
 - [beamer-translator.md](../agents/beamer-translator.md)
 
 ---
@@ -182,7 +181,7 @@ All TikZ diagrams MUST pass the `tikz-reviewer` agent standards:
 - **No label overlaps** — labels must not intersect curves, dots, or other labels
 - **Geometric accuracy** — parallel lines must have identical slopes; dot alignment exact
 - **Visual semantics** — solid=observed, dashed=counterfactual; filled=observed, hollow=counterfactual
-- **Consistent colors** — use project palette (see `.github/copilot-instructions.md`)
+- **Consistent colors** — use project palette (see `.claude/rules/st-andrews-visual-identity.md`)
 - **Readable at distance** — font sizes and line weights suitable for lecture hall projection
 
 ### Code Requirements
@@ -292,4 +291,4 @@ SVG files are committed so that GitHub Pages deployment doesn't require LaTeX/po
 - **Conversion script:** [scripts/tikz2pdf.py](../../scripts/tikz2pdf.py)
 - **Extract-tikz skill:** [extract-tikz SKILL.md](../skills/extract-tikz/SKILL.md)
 - **Beamer→Quarto translation:** [beamer-translator.md](../agents/beamer-translator.md)
-- **Course authoring rules:** [copilot-instructions.md](../../.github/copilot-instructions.md)
+- **Course authoring index:** [CLAUDE.md](../../CLAUDE.md)

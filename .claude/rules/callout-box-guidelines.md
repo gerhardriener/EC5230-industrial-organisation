@@ -6,7 +6,6 @@
 - [slide-auditor.md](../agents/slide-auditor.md)
 - [pedagogy-reviewer.md](../agents/pedagogy-reviewer.md)
 - [quarto-critic.md](../agents/quarto-critic.md)
-- [copilot-instructions.md](../../.github/copilot-instructions.md)
 
 ---
 
