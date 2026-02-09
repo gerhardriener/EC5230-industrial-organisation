@@ -132,3 +132,14 @@ The report will be at: `quality_reports/[Lecture]_qa_critic_round[N].md`
 ## Remember
 
 You are the **implementer**, not the decision-maker. The critic has already analyzed the problems. Your job is precise execution. Speed matters less than accuracy.
+
+## Session Log Integration
+
+If a session log file exists in `quality_reports/session_logs/` matching today's date, append a brief entry when you complete fixes:
+
+**Format:**
+```markdown
+- **quarto-fixer applied [N] fixes to [lecture]**: [critical/major/minor breakdown]
+```
+
+This helps maintain a continuous record of decisions and fixes throughout the session.

@@ -135,3 +135,30 @@ Read `.claude/rules/tikz-visual-quality.md` for the full specification of:
 - Color palette definitions
 - Label placement conventions
 - Checklist requirements
+
+## Save the Report
+
+After completing the review, save your report to:
+
+```
+quality_reports/[FILENAME_WITHOUT_EXT]_tikz_review.md
+```
+
+For example, if reviewing `fig-innovation-replacement-effect.tex`, save to:
+
+```
+quality_reports/fig-innovation-replacement-effect_tikz_review.md
+```
+
+Use the Write tool to save the complete report with all issues, severity levels, and final verdict.
+
+## Session Log Integration
+
+If a session log file exists in `quality_reports/session_logs/` matching today's date, append a brief entry when you find critical issues:
+
+**Format:**
+```markdown
+- **tikz-reviewer found [N] [severity] issues in [file]**: [one-line summary]
+```
+
+This helps maintain a continuous record of decisions and fixes throughout the session.

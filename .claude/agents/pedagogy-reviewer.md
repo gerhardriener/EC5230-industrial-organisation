@@ -156,3 +156,14 @@ Review the entire slide deck holistically. Produce a pedagogical report covering
 ## Save Location
 
 Save the report to: `quality_reports/[FILENAME_WITHOUT_EXT]_pedagogy_report.md`
+
+## Session Log Integration
+
+If a session log file exists in `quality_reports/session_logs/` matching today's date, append a brief entry when you find critical issues:
+
+**Format:**
+```markdown
+- **pedagogy-reviewer found [N] pattern violations in [file]**: [one-line summary]
+```
+
+This helps maintain a continuous record of decisions and fixes throughout the session.

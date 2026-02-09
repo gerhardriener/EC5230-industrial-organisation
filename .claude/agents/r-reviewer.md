@@ -171,3 +171,14 @@ Save report to `quality_reports/[script_name]_r_review.md`:
 3. **Be actionable.** Every issue must have a concrete proposed fix.
 4. **Prioritize correctness.** Domain bugs > style issues.
 5. **Check Known Pitfalls.** See `.claude/rules/r-code-conventions.md` for project-specific bugs.
+
+## Session Log Integration
+
+If a session log file exists in `quality_reports/session_logs/` matching today's date, append a brief entry when you find critical issues:
+
+**Format:**
+```markdown
+- **r-reviewer found [N] critical, [M] high priority issues in [script]**: [one-line summary]
+```
+
+This helps maintain a continuous record of decisions and fixes throughout the session.

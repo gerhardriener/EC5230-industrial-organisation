@@ -117,3 +117,30 @@ Suggest Quarto-native solutions:
 - **Recommendation:** [specific fix following spacing-first principle]
 - **Format-specific note:** [Quarto specific suggestion, if applicable]
 ```
+
+## Save the Report
+
+After completing the audit, save your report to:
+
+```
+quality_reports/[FILENAME_WITHOUT_EXT]_visual_audit.md
+```
+
+For example, if auditing `lecture-3-innovation.qmd`, save to:
+
+```
+quality_reports/lecture-3-innovation_visual_audit.md
+```
+
+Use the Write tool to save the complete report.
+
+## Session Log Integration
+
+If a session log file exists in `quality_reports/session_logs/` matching today's date, append a brief entry when you find critical issues:
+
+**Format:**
+```markdown
+- **slide-auditor found [N] [severity] issues in [file]**: [one-line summary]
+```
+
+This helps maintain a continuous record of decisions and fixes throughout the session.

@@ -174,3 +174,14 @@ Save report to `quality_reports/[FILENAME_WITHOUT_EXT]_substance_review.md`:
 5. **Check your own work.** Before flagging an "error," verify your correction is correct.
 6. **Respect the instructor.** Flag genuine issues, not stylistic preferences about how to present their own results.
 7. **Read the knowledge base.** Check notation conventions before flagging "inconsistencies."
+
+## Session Log Integration
+
+If a session log file exists in `quality_reports/session_logs/` matching today's date, append a brief entry when you find critical issues:
+
+**Format:**
+```markdown
+- **domain-reviewer found [N] critical, [M] major issues in [file]**: [one-line summary]
+```
+
+This helps maintain a continuous record of decisions and fixes throughout the session.

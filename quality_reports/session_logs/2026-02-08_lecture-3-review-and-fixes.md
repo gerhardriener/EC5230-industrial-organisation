@@ -368,3 +368,47 @@ All critical and major issues resolved. Lecture demonstrates strong pedagogical 
 - Historical context (Industrial Revolution → economic growth)
 
 The lecture now provides a rigorous, well-paced progression from motivation → benchmarks → strategic models → general framework, suitable for MSc-level instruction.
+
+---
+
+## Documentation Infrastructure Improvement
+
+**Task:** Fix quality reports directory configuration for proper subdirectory organization
+
+### Problem Identified
+- Plans and session logs were not being written to their proper subdirectories (`quality_reports/plans/` and `quality_reports/session_logs/`)
+- 2 agents (slide-auditor, tikz-reviewer) lacked explicit save path instructions
+- No agents had guidance on appending to session logs during work (Rule 5b behavior)
+
+### Solution Implemented
+**Files Modified:** 8 agent definition files
+
+1. **Added "## Save the Report" sections** (2 agents):
+   - `.claude/agents/slide-auditor.md` → `quality_reports/[FILENAME_WITHOUT_EXT]_visual_audit.md`
+   - `.claude/agents/tikz-reviewer.md` → `quality_reports/[FILENAME_WITHOUT_EXT]_tikz_review.md`
+
+2. **Added "## Session Log Integration" sections** (all 8 agents):
+   - `proofreader.md`
+   - `pedagogy-reviewer.md`
+   - `quarto-critic.md`
+   - `quarto-fixer.md`
+   - `r-reviewer.md`
+   - `domain-reviewer.md`
+   - `slide-auditor.md`
+   - `tikz-reviewer.md`
+
+Each section includes:
+- Instruction to check for session log file in `quality_reports/session_logs/` matching today's date
+- Format template for appending brief entries when critical issues are found
+- Rationale: maintain continuous record of decisions and fixes throughout session
+
+### Impact
+- Agents now have explicit, consistent save paths for all reports
+- Session logging behavior is now proactive and documented (Rule 5b compliance)
+- Three-tier organization maintained:
+  - `quality_reports/` → review reports (proofreader, auditor, etc.)
+  - `quality_reports/plans/` → implementation plans
+  - `quality_reports/session_logs/` → session work logs
+
+**Status:** ✓ COMPLETE
+**Next Step:** Test agents to verify they write to correct subdirectories

@@ -68,3 +68,14 @@ For each issue found, provide:
 Save to `quality_reports/[FILENAME_WITHOUT_EXT]_report.md`
 
 For `.qmd` files, append `_qmd` to the name: `quality_reports/[FILENAME]_qmd_report.md`
+
+## Session Log Integration
+
+If a session log file exists in `quality_reports/session_logs/` matching today's date, append a brief entry when you find critical issues:
+
+**Format:**
+```markdown
+- **proofreader found [N] [severity] issues in [file]**: [one-line summary]
+```
+
+This helps maintain a continuous record of decisions and fixes throughout the session.
