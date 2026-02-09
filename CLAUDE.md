@@ -8,7 +8,7 @@
 
 ## Canonical Sources (No Duplication)
 
-- `.github/copilot-instructions.md` — authoring rules, slide grammar, rendering commands, visual identity
+- `.github/copilot-instructions.md` — thin pointer to canonical `.claude/rules/` sources
 - `.claude/rules/plan-first-workflow.md` — plan-first workflow and session logging
 - `.claude/rules/single-source-of-truth.md` — source chain and TikZ freshness rules
 - `.claude/rules/quality-gates.md` — commit/PR thresholds
@@ -98,7 +98,7 @@ EC5230-industrial-organisation/
 ├── CLAUDE.md                          # This file — Claude's guide
 ├── README.md
 ├── .github/
-│   └── copilot-instructions.md       # Course-specific authoring rules
+│   └── copilot-instructions.md       # Pointer to canonical `.claude/rules/`
 ├── _quarto.yml                        # Project-level Quarto config
 ├── _extensions/                       # Quarto extensions
 │   ├── grantmcdermott/clean/         # Clean theme (Beamer)
@@ -148,7 +148,7 @@ EC5230-industrial-organisation/
 ## Working Philosophy
 
 - **You drive the theory** — provide papers, pedagogical goals, and assessment criteria.
-- **Claude proposes structures** — aligned with `.github/copilot-instructions.md`.
+- **Claude proposes structures** — aligned with canonical `.claude/rules/` sources.
 - **Iterate together** — refine until excellent; you keep final control.
 - **Devil's advocate mode** — challenge assumptions and explore alternative presentations.
 - **Reference validation** — citations and claims are verified for accuracy.

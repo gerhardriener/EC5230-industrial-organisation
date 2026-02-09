@@ -21,7 +21,7 @@ Perform a thorough visual layout audit of a slide deck.
 
    **OVERFLOW:** Content exceeding slide boundaries
    **FONT CONSISTENCY:** Inline font-size overrides, inconsistent sizes
-   **BOX FATIGUE:** 2+ colored boxes on one slide, wrong box types
+   **BOX FATIGUE:** More than 2 colored boxes on one slide, wrong box types
    **SPACING:** Missing negative margins, missing fig-align
    **LAYOUT:** Missing transitions, missing framing sentences, semantic colors
 

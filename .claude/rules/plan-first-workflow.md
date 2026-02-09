@@ -1,4 +1,4 @@
-# Plan-First Workflow (Core)
+# Plan-First Workflow (Canonical)
 
 **Applies to:** all non-trivial tasks.
 

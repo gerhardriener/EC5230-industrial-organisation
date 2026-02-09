@@ -1,4 +1,4 @@
-# TikZ Diagram Workflow — Single Source of Truth
+# TikZ Diagram Workflow (Canonical)
 
 **This document is the authoritative guide for creating, modifying, and deploying TikZ diagrams in this project.**
 
@@ -191,7 +191,7 @@ All TikZ diagrams MUST pass the `tikz-reviewer` agent standards:
 - **Whitespace balance** — no cramped regions, no excessive dead space
 - **Axis ranges** — extend sufficiently beyond data points
 
-**Review protocol:** Run `/tikz-reviewer` after ANY diagram modification. Iterate until APPROVED.
+**Review protocol:** Run the `tikz-reviewer` agent after ANY diagram modification. Iterate until APPROVED.
 
 See [tikz-reviewer.md](../agents/tikz-reviewer.md) for full quality checklist.
 
@@ -254,14 +254,14 @@ See [tikz-reviewer.md](../agents/tikz-reviewer.md) for full quality checklist.
 2. Write TikZ code (tikzpicture environment only, no preamble)
 3. Run `python scripts/tikz2pdf.py`
 4. Add conditional rendering blocks to QMD file
-5. Run `/tikz-reviewer` and iterate until APPROVED
+5. Run the `tikz-reviewer` agent and iterate until APPROVED
 6. Render slides and verify both PDF and HTML outputs
 
 **Modifying an existing diagram:**
 
 1. Edit `.tex` file in `lecture-slides/figs/source/`
 2. Run `python scripts/tikz2pdf.py` to regenerate SVG
-3. Run `/tikz-reviewer` to verify changes
+3. Run the `tikz-reviewer` agent to verify changes
 4. Re-render slides to verify both formats
 
 **NEVER:**

@@ -1,4 +1,4 @@
-# Callout Box Guidelines — Core Rules
+# Callout Box Guidelines (Canonical)
 
 **Purpose:** Callout boxes should **highlight** existing content, not introduce new content or add cognitive load.
 

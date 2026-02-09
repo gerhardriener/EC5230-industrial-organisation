@@ -4,7 +4,7 @@ paths:
   - "scripts/**/*.R"
 ---
 
-# Quality Gates (Core)
+# Quality Gates (Canonical)
 
 **Purpose:** Minimal thresholds for commit and PR readiness.
 

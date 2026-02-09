@@ -117,7 +117,6 @@ Each app must:
 ## File Structure (Conventions)
 
 - Slides: `lecture-slides/`
-- Theme: `lecture-slides/theme/`
 - Exercises: `exercises/`
 
 ---

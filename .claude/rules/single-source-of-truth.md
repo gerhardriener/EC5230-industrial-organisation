@@ -4,7 +4,7 @@ paths:
   - "lecture-slides/**/*.qmd"
 ---
 
-# Single Source of Truth: Enforcement Protocol
+# Single Source of Truth (Canonical)
 
 **The Quarto `.qmd` files and TikZ source `.tex` files are authoritative.** Everything else is derived.
 

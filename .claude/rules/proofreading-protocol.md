@@ -4,7 +4,7 @@ paths:
   - "quality_reports/**"
 ---
 
-# Proofreading Protocol (Core)
+# Proofreading Protocol (Canonical)
 
 **Rule:** Every modified lecture file must be reviewed by the `proofreader` agent before commit or PR.
 

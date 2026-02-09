@@ -23,7 +23,7 @@ model: inherit
 - Overuse of `.smaller` class
 
 ### 3. Box & Callout Use
-- 2+ colored boxes on one slide
+- More than 2 colored boxes on one slide
 - `.quotebox` used without attribution
 - `.resultbox` overuse
 - Callout violations: follow `../rules/callout-box-guidelines.md`

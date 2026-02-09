@@ -11,7 +11,7 @@ This repository contains the EC5230 course materials and the Claude Code workflo
 ## Start Here
 
 1. `CLAUDE.md` - project context, commands, and current workflow index
-2. `.github/copilot-instructions.md` - authoring rules for slides and exercises
+2. `.github/copilot-instructions.md` - pointer to canonical rules in `.claude/rules/`
 3. `.claude/rules/` - canonical rules (plan-first, quality gates, callouts, TikZ, verification)
 4. `guide/workflow-guide.qmd` - full workflow walkthrough (also on the live site)
 
