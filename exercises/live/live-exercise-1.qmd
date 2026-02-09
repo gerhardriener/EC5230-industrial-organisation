@@ -18,7 +18,9 @@ solutions: true
 ---
 
 ::: {.content-hidden unless-meta="solutions"}
+
 # Solutions
+
 :::
 
 **Group exercise (≈20 minutes)**
