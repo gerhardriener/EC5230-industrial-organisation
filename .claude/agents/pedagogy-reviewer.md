@@ -59,6 +59,25 @@ Review the entire slide deck holistically. Produce a pedagogical report covering
 - More than 2 dilutes visual emphasis — demote transitional remarks to plain italic
 - **Red flag:** 3 colored boxes on one slide
 
+**Callout Content Appropriateness** (sub-check):
+
+Callout boxes should **reduce clutter** by highlighting one key point, not introduce new content that adds cognitive load. See [.claude/rules/callout-box-guidelines.md](../.claude/rules/callout-box-guidelines.md) for complete guidelines.
+
+- **Callouts should restate/highlight, NOT introduce new theory**
+  - **Red flag:** Callout contains derivation steps or new mathematical setup (should be on main slide)
+  - **Red flag:** Callout contains notation definitions (should be on main slide with optional interpretation callout)
+  - **Red flag:** Callout contains utility function definitions or technical setup
+
+- **Callout content serves pedagogical purpose**
+  - **Green flag:** Callout interprets a result already shown on slide
+  - **Green flag:** Callout highlights economic intuition behind a formula
+  - **Green flag:** Callout poses a discussion question or warns about caveat
+  - **Red flag:** Callout contains content that, if removed, makes the slide incomplete (content belongs on main slide)
+
+- **Callout length appropriate** (see slide-auditor for word count checks)
+  - Ideal: 15-60 words
+  - **Red flag:** Callout exceeds 80 words or contains tables/complex notation
+
 ### 11. SOCRATIC EMBEDDING
 - Questions posed at bottom of slides to provoke thought
 - Target: 2-3 embedded questions per lecture

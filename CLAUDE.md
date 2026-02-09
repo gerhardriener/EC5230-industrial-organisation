@@ -56,7 +56,10 @@
 
 **Note:** Citation audit is built into the `/slide-excellence` skill (not a standalone agent).
 
-**Rules** (auto-loaded): See `.claude/rules/` for domain-specific rules on LaTeX, Quarto, R, verification, proofreading, and quality gates.
+**Rules** (auto-loaded): See `.claude/rules/` for domain-specific rules:
+- [callout-box-guidelines.md](.claude/rules/callout-box-guidelines.md) — Callout box word count thresholds and content appropriateness
+- [tikz-workflow.md](.claude/rules/tikz-workflow.md) — TikZ diagram creation and SVG conversion pipeline
+- Additional rules on LaTeX, Quarto, R, verification, proofreading, and quality gates
 
 ---
 

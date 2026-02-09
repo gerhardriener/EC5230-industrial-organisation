@@ -77,6 +77,12 @@ If ANY of these fail, the verdict is **REJECTED**:
 - TikZ: SVGs referenced (not PDFs)?
 - Tables: same structure, alignment?
 - Boxes: every Beamer box type has CSS equivalent?
+- **Callout density:** Quarto callout boxes follow density guidelines (see [.claude/rules/callout-box-guidelines.md](../.claude/rules/callout-box-guidelines.md))
+  - Compare callout word count between Beamer and Quarto
+  - Flag if Quarto adds dense callouts (>80 words) where Beamer had concise presentation
+  - Flag if callout contains tables or complex notation (should be on main slide)
+  - Validate callout type matches purpose (note/important/warning)
+  - Flag if same content appears in both main slide AND callout (redundant)
 
 ### 4. Typography & Spacing
 

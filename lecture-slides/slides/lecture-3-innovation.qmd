@@ -563,7 +563,7 @@ $$
 If a government subsidy increases the R&D cost elasticity ($\alpha$, making R&D more effective), what does the model predict for market structure? Is this welfare-improving?
 :::
 
-## Dasgupta (1986): key comparative statics (I) [@dasguptaTheoryTechnologicalCompetition1986]
+## Key comparative statics (I)
 
 **With $P(Q) = \sigma Q^{-\varepsilon}$ and $c(x) = \beta x^{-\alpha}$:**
 
@@ -580,7 +580,7 @@ If a government subsidy increases the R&D cost elasticity ($\alpha$, making R&D 
 
 - Market structure affects both static outcomes ($Q$) and dynamic investment incentives ($x$)
 
-## Dasgupta (1986): key comparative statics (II) [@dasguptaTheoryTechnologicalCompetition1986]
+## Key comparative statics (II) 
 
 **Greater R&D effectiveness** (higher $\alpha$) associated with higher concentration:
 

@@ -34,6 +34,37 @@ Audit every slide in the specified file for visual layout issues. Produce a repo
 - `.quotebox` used for non-quotations (should only be for actual quotes with attribution)
 - `.resultbox` overused (reserve for genuinely key findings)
 
+### CALLOUT TEXT DENSITY
+
+**Callout boxes should reduce clutter by highlighting one key point, not add cognitive load through dense content.**
+
+See [.claude/rules/callout-box-guidelines.md](../.claude/rules/callout-box-guidelines.md) for complete guidelines.
+
+**Check for these violations:**
+
+- **Word count >80:** Flag as CRITICAL if callout exceeds 100 words, MEDIUM if 61-80 words
+- **Tables in callouts:** Flag as CRITICAL — tables belong on main slide
+- **Complex notation in callouts:** Flag as MAJOR if callout contains notation definitions like `$\alpha \equiv -\frac{dc}{dx}\frac{x}{c}$`
+- **Callout-to-slide ratio >40%:** Flag as MEDIUM if callout content dominates the slide
+- **New theory introduction:** Flag as MAJOR if callout introduces content not already on slide (callouts should restate/highlight, not teach)
+- **Multi-concept mixing:** Flag as MEDIUM if callout contains multiple unrelated points
+
+**How to check:**
+
+1. Grep for `::: {.callout-` blocks
+2. Count words in each callout content (exclude heading)
+3. Check for presence of tables (`|---|---|`)
+4. Check for complex inline math (`\frac`, `\equiv`, etc.)
+5. Validate callout purpose matches type (note/important/warning)
+
+**Recommended fixes (in priority order):**
+
+1. **Dense callouts (>80 words):** Move content to main slide, keep only interpretation/highlight in callout
+2. **Tables in callouts:** Move table to main slide OR speaker notes
+3. **Notation definitions in callouts:** Move notation to main slide, optionally add callout for interpretation
+4. **Multi-concept callouts:** Split into separate callouts OR integrate into main slide flow
+5. **New theory in callouts:** Move derivation/setup to main slide, keep only result interpretation in callout
+
 ### SPACING ISSUES
 
 - Missing negative margins on section headings (`margin-bottom: -0.3em`)
