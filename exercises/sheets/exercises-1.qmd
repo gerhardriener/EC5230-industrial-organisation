@@ -16,11 +16,16 @@ format:
 solutions: false
 ---
 
+::: {.content-hidden unless-meta="solutions"}
+
+# Solutions
+
+:::
+
 **Instructions**
 
 - Answer all questions.
 - Show intermediate steps.
-- Instructor version is rendered with `-M solutions:true`.
 
 ## Problem 1: Welfare analysis
 

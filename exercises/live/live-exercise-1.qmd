@@ -25,7 +25,7 @@ solutions: false
 
 **Group exercise (≈20 minutes)**
 
-- Work in groups of 3–4.
+- Work in groups of 2–3.
 - Show your steps (the algebra is the point).
 - Assume full market coverage throughout (everyone buys from one of the two firms).
 
