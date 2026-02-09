@@ -39,18 +39,20 @@
 
 **Agents** (available for delegation):
 
-| Agent               | Model   | Purpose                               |
-| ------------------- | ------- | ------------------------------------- |
-| `proofreader`       | inherit | Grammar, typos, overflow, consistency |
-| `slide-auditor`     | inherit | Visual layout, spacing, overflow      |
-| `pedagogy-reviewer` | inherit | Narrative arc, pedagogical patterns   |
-| `r-reviewer`        | sonnet  | R code quality and reproducibility    |
-| `tikz-reviewer`     | inherit | TikZ diagram visual quality           |
-| `beamer-translator` | opus    | Beamer→Quarto translation             |
-| `quarto-critic`     | opus    | Adversarial QA (read-only)            |
-| `quarto-fixer`      | sonnet  | Implements critic fixes               |
-| `verifier`          | inherit | Compilation and rendering checks      |
-| `domain-reviewer`   | inherit | Substantive domain correctness        |
+| Agent               | Model   | Purpose                                      |
+| ------------------- | ------- | -------------------------------------------- |
+| `proofreader`       | inherit | Grammar, typos, overflow, consistency        |
+| `slide-auditor`     | inherit | Visual layout, spacing, overflow             |
+| `pedagogy-reviewer` | inherit | Narrative arc, pedagogical patterns          |
+| `exercise-reviewer` | inherit | Exercise timing and pedagogical review       |
+| `solution-checker`  | inherit | Mathematical correctness verification        |
+| `r-reviewer`        | sonnet  | R code quality and reproducibility           |
+| `tikz-reviewer`     | inherit | TikZ diagram visual quality                  |
+| `beamer-translator` | opus    | Beamer→Quarto translation                    |
+| `quarto-critic`     | opus    | Adversarial QA (read-only)                   |
+| `quarto-fixer`      | sonnet  | Implements critic fixes                      |
+| `verifier`          | inherit | Compilation and rendering checks             |
+| `domain-reviewer`   | inherit | Substantive domain correctness               |
 
 **Note:** Citation audit is built into the `/slide-excellence` skill (not a standalone agent).
 
