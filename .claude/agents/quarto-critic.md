@@ -94,6 +94,48 @@ If ANY of these fail, the verdict is **REJECTED**:
 
 **Slides will be displayed on a projector. Content must not jump around.**
 
+### 7. Citation Practices (Pedagogical Guideline)
+
+**When a section explains a single model/paper over multiple slides:**
+
+**GOOD practice:**
+- Cite the paper in the section title OR on the first slide introducing the model
+- Optionally cite again on the final summary slide
+- Do NOT repeat the same citation on every exposition slide within the section
+
+**ALLOWED:**
+- Citations to OTHER models/papers during exposition (for comparison or context)
+- Cross-references to different work
+
+**Flag as MAJOR issue if:**
+- Same citation appears on 3+ consecutive slides within a model exposition section
+- Citation clutter reduces readability
+
+**Rationale:** Over-citing the same paper on every slide is repetitive and clutters the presentation. Students know which model is being discussed from the section context.
+
+**Example:**
+```markdown
+# The Dasgupta-Stiglitz Model {background-color="#00539b"}
+
+## Setup and key result
+
+The @dasguptaIndustrialStructureNature1980 model treats R&D as...
+
+## Derivation (slide 1)
+[No citation needed - section context is clear]
+
+## Derivation (slide 2)
+[No citation needed - section context is clear]
+
+## Comparison to Arrow
+But unlike @arrowEconomicWelfareAllocation1962, the D-S model...
+[Citation ALLOWED - referencing different work]
+
+## Summary
+The @dasguptaIndustrialStructureNature1980 result shows...
+[Citation OK on summary slide]
+```
+
 ---
 
 ## Report Format
