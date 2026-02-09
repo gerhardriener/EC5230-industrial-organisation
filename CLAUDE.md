@@ -6,7 +6,22 @@
 
 ---
 
-## Quick Reference: Available Skills & Agents
+## Canonical Sources (No Duplication)
+
+- `.github/copilot-instructions.md` — authoring rules, slide grammar, rendering commands, visual identity
+- `.claude/rules/plan-first-workflow.md` — plan-first workflow and session logging
+- `.claude/rules/single-source-of-truth.md` — source chain and TikZ freshness rules
+- `.claude/rules/quality-gates.md` — commit/PR thresholds
+- `.claude/rules/exercise-quality-rubric.md` — exercise timing and scoring
+- `.claude/rules/proofreading-protocol.md` — proofreading gate
+- `.claude/rules/callout-box-guidelines.md` — callout usage rules
+- `.claude/rules/tikz-workflow.md` — TikZ pipeline
+- `.claude/rules/st-andrews-visual-identity.md` — palette and typography
+- `.claude/rules/verification-protocol.md` — verification requirements
+
+---
+
+## Quick Reference: Skills & Agents
 
 | Command                                     | What It Does                                                         |
 | ------------------------------------------- | -------------------------------------------------------------------- |
@@ -15,14 +30,14 @@
 | `/extract-tikz [LectureN]`                  | TikZ diagrams to PDF to SVG with 0-based indexing                    |
 | `/proofread [filename]`                     | Grammar/typo/overflow review and report                              |
 | `/visual-audit [filename]`                  | Slide layout audit for overflow and consistency                      |
-| `/pedagogy-review [filename]`               | PhD-student lens: narrative, notation, pacing review                 |
+| `/pedagogy-review [filename]`               | Pedagogical review (read-only)                                       |
 | `/review-r [file or LectureN]`              | R code review: quality, reproducibility, correctness                 |
 | `/qa-quarto [LectureN]`                     | Adversarial Quarto vs Beamer QA: critic finds issues, fixer resolves |
 | `/slide-excellence [filename]`              | Combined visual + pedagogical + proofreading + citation audit review |
 | `/create-lecture`                           | Full lecture creation workflow                                       |
 | `/devils-advocate`                          | Challenge slide design with pedagogical questions                    |
 | **Exercises**                               |                                                                      |
-| `/review-exercise <file>`                   | Comprehensive exercise review: timing, pedagogy, solutions, clarity  |
+| `/review-exercise <file>`                   | Exercise review: timing, pedagogy, solutions, clarity                |
 | `/create-exercise --type --lecture --topic` | Generate new exercise from specifications with quality checks        |
 | **Bibliography**                            |                                                                      |
 | `/validate-bib`                             | Cross-reference citations vs bibliography file                       |
@@ -38,20 +53,13 @@
 | `solution-checker`  | inherit | Mathematical correctness verification        |
 | `r-reviewer`        | sonnet  | R code quality and reproducibility           |
 | `tikz-reviewer`     | inherit | TikZ diagram visual quality                  |
-| `beamer-translator` | opus    | Beamer→Quarto translation                    |
+| `beamer-translator` | opus    | Beamer->Quarto translation                    |
 | `quarto-critic`     | opus    | Adversarial QA (read-only)                   |
 | `quarto-fixer`      | sonnet  | Implements critic fixes                      |
 | `verifier`          | inherit | Compilation and rendering checks             |
 | `domain-reviewer`   | inherit | Substantive domain correctness               |
 
-**Note:** Citation audit is built into the `/slide-excellence` skill (not a standalone agent).
-
-**Rules** (auto-loaded): See `.claude/rules/` for domain-specific rules:
-- [callout-box-guidelines.md](.claude/rules/callout-box-guidelines.md) — Callout box word count thresholds and content appropriateness
-- [tikz-workflow.md](.claude/rules/tikz-workflow.md) — TikZ diagram creation and SVG conversion pipeline
-- [st-andrews-visual-identity.md](.claude/rules/st-andrews-visual-identity.md) — Canonical typography and color palette
-- [exercise-quality-rubric.md](.claude/rules/exercise-quality-rubric.md) — Canonical timing and scoring rubric for exercises
-- Additional rules on LaTeX, Quarto, R, verification, proofreading, and quality gates
+**Note:** Citation audit is built into `/slide-excellence` (not a standalone agent).
 
 ---
 
@@ -96,9 +104,9 @@ EC5230-industrial-organisation/
 ├── index.qmd                          # Course homepage
 ├── references.bib                     # Centralized bibliography
 ├── scripts/
-│   ├── tikz2pdf.py                   # TikZ → PDF → SVG pipeline
+│   ├── tikz2pdf.py                   # TikZ -> PDF -> SVG pipeline
 │   ├── quality_score.py              # Slide quality scoring
-│   └── sync_to_docs.sh              # Render and publish to gh-pages branch
+│   └── sync_to_docs.sh               # Render and publish to gh-pages branch
 ├── lecture-slides/
 │   ├── index.qmd                     # Lecture landing page
 │   ├── slides/
@@ -137,43 +145,14 @@ EC5230-industrial-organisation/
 
 ## Working Philosophy
 
-### Collaborative Partnership Approach
-
-Claude serves as your **collaborative partner** in developing exam-usable lecture notes:
-
-- **You drive the theory** — provide papers, pedagogical goals, and assessment criteria
-- **Claude proposes structures** — organizes content per `.github/copilot-instructions.md`
-- **You iterate together** — refine until excellent
-- **You maintain control** — all final decisions rest with you
-
-### Communication Style
-
-- **Devil's advocate mode** — challenge assumptions and explore alternative presentations
-- **Reference validation** — every citation and claim verified for accuracy
-- **Aesthetic excellence** — all slides should be visually compelling
-- **Understanding > speed** — getting it right matters more than getting it fast
-
-### Plan-First Approach
-
-For any non-trivial task, Claude enters **plan mode first** before writing code:
-
-1. **Plan** — draft approach, list files, identify risks
-2. **Save** — write plan to `quality_reports/plans/` for persistence
-3. **Review** — present and await your approval
-4. **Implement** — only then make changes
-
-### Single Source of Truth
-
-**NEVER duplicate content:**
-
-| Content       | Source of Truth                    | Derived From                    |
-| ------------- | ---------------------------------- | ------------------------------- |
-| Slide content | `lecture-slides/slides/*.qmd`      | Generated to HTML/PDF           |
-| TikZ diagrams | `lecture-slides/figs/source/*.tex` | → SVG via `scripts/tikz2pdf.py` |
-| Bibliography  | `references.bib`                   | All slides reference it         |
-| Figures       | `lecture-slides/figs/`             | Deployed to `_site/`            |
-
-> **Modify source, regenerate derived versions.**
+- **You drive the theory** — provide papers, pedagogical goals, and assessment criteria.
+- **Claude proposes structures** — aligned with `.github/copilot-instructions.md`.
+- **Iterate together** — refine until excellent; you keep final control.
+- **Devil's advocate mode** — challenge assumptions and explore alternative presentations.
+- **Reference validation** — citations and claims are verified for accuracy.
+- **Aesthetic and pedagogical quality** — visual clarity and teaching effectiveness matter.
+- **Understanding > speed** — correctness and clarity outrank velocity.
+- **Plan-first and source-of-truth** — follow `.claude/rules/plan-first-workflow.md` and `.claude/rules/single-source-of-truth.md`.
 
 ---
 
@@ -193,53 +172,18 @@ For any non-trivial task, Claude enters **plan mode first** before writing code:
 
 - Fixed 4 critical issues (TikZ compilation, overlapping fills, grammar, citations)
 - Fixed 6 major issues (dense derivation split, TikZ visual clarity, disconnected labels)
-- Added 3 pedagogical improvements (early Socratic question on growth, full α notation, assumption clarifications)
-- Quality score: GOOD → EXCELLENT (teaching-ready)
+- Added 3 pedagogical improvements (early Socratic question on growth, full alpha notation, assumption clarifications)
+- Quality score: GOOD -> EXCELLENT (teaching-ready)
 - See: `quality_reports/session_logs/2026-02-08_lecture-3-review-and-fixes.md` for full details
 
 ---
 
-## Quarto Rendering Workflow
+## Operational Notes
 
-```bash
-# From project root:
-quarto render                          # All HTML + PDF
-
-# Specific lecture:
-cd lecture-slides
-quarto render slides/lecture-2-product-differentiation.qmd
-
-# Preview:
-quarto preview lecture-slides/
-```
-
-Output: `_site/lecture-slides/slides/lecture-*.html` (RevealJS) and `lecture-*.pdf` (Beamer)
-
----
-
-## St Andrews Visual Identity
-
-Use `.claude/rules/st-andrews-visual-identity.md` as the canonical source for:
-- Typography (PT Sans)
-- Primary and secondary colour palette values
-
----
-
-## Quick Reference Commands
-
-```bash
-# Generate SVGs from TikZ source files
-python scripts/tikz2pdf.py
-
-# Deploy Quarto to GitHub Pages
-quarto publish gh-pages --no-browser
-
-# Render specific lecture (PDF + HTML)
-quarto render lecture-slides/slides/lecture-N-name.qmd
-
-# Run quality score
-python scripts/quality_score.py lecture-slides/slides/lecture-N-name.qmd
-```
+- **Rendering and deployment:** Use `/deploy` or see `.claude/skills/deploy/SKILL.md`.
+- **TikZ pipeline:** See `.claude/rules/tikz-workflow.md`.
+- **Exercise workflow index:** `.claude/EXERCISE_WORKFLOW.md`.
+- **Rendered outputs:** `_site/lecture-slides/slides/lecture-*.html` and `lecture-*.pdf`.
 
 ---
 
