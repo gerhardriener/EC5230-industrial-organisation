@@ -424,8 +424,11 @@ $$
 
 ## Empirical example: market size and innovation
 
-::: {.callout-note title="Pharmaceutical innovation responds to demand (QJE)"}
-@acemogluMarketSizeInnovation2004 show that larger potential markets lead to more pharmaceutical innovation (new drugs/new molecular entities), consistent with models where the return to innovation rises with **scale**.
+::: {.callout-note title="Pharmaceutical innovation responds to demand"}
+@acemogluMarketSizeInnovation2004 show that larger potential markets lead to 
+
+* more pharmaceutical innovation (new drugs/new molecular entities) 
+* $\rightarrow$ consistent with models where the return to innovation rises with **scale**.
 :::
 
 ## Firm's problem
