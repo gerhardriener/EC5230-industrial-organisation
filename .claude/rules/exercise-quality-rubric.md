@@ -9,7 +9,7 @@ paths:
 
 # Exercise Quality Rubric (Canonical)
 
-Use this rubric as the single source of truth for exercise timing and quality scoring.
+**Purpose:** Single source of truth for exercise timing bands, score bands, severity, and release gate.
 
 ---
 
@@ -40,7 +40,7 @@ Use this rubric as the single source of truth for exercise timing and quality sc
 
 ## Score Bands
 
-| Score | Rating | Typical Meaning |
+| Score | Rating | Meaning |
 | --- | --- | --- |
 | 85-100 | EXCELLENT | Teaching-ready with minimal or no edits |
 | 70-84 | GOOD | Minor revisions recommended |
@@ -61,7 +61,7 @@ Use this rubric as the single source of truth for exercise timing and quality sc
 
 Before presenting an exercise as ready:
 
-- Timing must be at least **GOOD** band
-- Solution correctness must be **CORRECT** or **MINOR ERRORS** only
+- Timing at least **GOOD**
+- Solution correctness: **CORRECT** or **MINOR ERRORS**
 - No unresolved **Critical** issues
-- Overall score must be **>= 80/100**
+- Overall score **>= 80/100**

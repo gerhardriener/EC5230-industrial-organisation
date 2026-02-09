@@ -4,89 +4,70 @@ paths:
   - "scripts/**/*.R"
 ---
 
-# Quality Gates & Scoring Rubrics
+# Quality Gates (Core)
 
-**Purpose:** Define objective quality thresholds for committing and deploying course materials.
-
----
-
-## Scoring System
-
-- **80/100 = Commit threshold** — Good enough to save progress
-- **90/100 = PR threshold** — High quality ready for deployment
-- **95/100 = Excellence** — Aspirational target
+**Purpose:** Minimal thresholds for commit and PR readiness.
 
 ---
 
-## Quarto Lecture Slides (.qmd files)
+## Thresholds
 
-### Critical (Must Pass for Commit)
-
-| Issue               | Deduction        |
-| ------------------- | ---------------- |
-| Compilation failure | -100 (auto-fail) |
-| Equation overflow   | -20 per instance |
-| Broken citation     | -15 per citation |
-| Typo in equation    | -10 per typo     |
-
-### Major (Should Pass for PR)
-
-| Issue                              | Deduction         |
-| ---------------------------------- | ----------------- |
-| Hardcoded citation (missing @key)  | -10 per instance  |
-| Text overflow                      | -5 per instance   |
-| TikZ label overlap                 | -5 per diagram    |
-| Notation inconsistency             | -3 per occurrence |
-
-### Minor (Nice-to-Have)
-
-| Issue                    | Deduction         |
-| ------------------------ | ----------------- |
-| Font size reduction used | -1 per slide      |
-| Missing framing sentence | -1 per definition |
+- **80/100** = Commit threshold (save progress)
+- **90/100** = PR threshold (deploy-ready)
+- **95/100** = Excellence (aspirational)
 
 ---
 
-## R Scripts (.R files)
+## Quarto Slides (.qmd)
 
-### Critical
+**Critical (block commit):**
 
-| Issue                      | Deduction        |
-| -------------------------- | ---------------- |
-| Syntax errors              | -100 (auto-fail) |
-| Known domain-specific bugs | -30              |
-| Hardcoded absolute paths   | -20              |
+- Compilation failure
+- Equation overflow
+- Broken citation
 
-### Major
+**Major (block PR):**
 
-| Issue                     | Deduction     |
-| ------------------------- | ------------- |
-| Missing set.seed()        | -10           |
-| Missing figure generation | -5 per figure |
-| Wrong color palette       | -3 per figure |
+- Hardcoded citation (missing `@key`)
+- Text overflow
+- TikZ label overlap
+- Notation inconsistency
 
----
+**Minor (advisory):**
 
-## Beamer Slides (.tex files)
-
-### Critical
-
-| Issue                       | Deduction        |
-| --------------------------- | ---------------- |
-| XeLaTeX compilation failure | -100 (auto-fail) |
-| Undefined citation          | -15 per citation |
-| Overfull hbox > 10pt        | -10 per instance |
+- Font size reduction used
+- Missing framing sentence
 
 ---
 
-## Quality Gate Enforcement
+## R Scripts (.R)
 
-### Commit Gate (score < 80)
+**Critical:**
 
-Block commit. List blocking issues with required actions.
+- Syntax errors
+- Known domain-specific bugs
+- Hardcoded absolute paths
 
-### PR Gate (score < 90)
+**Major:**
 
-Allow commit but warn. List issues with recommendations to reach PR quality.
+- Missing `set.seed()`
+- Missing figure generation
+- Wrong color palette
 
-### User can override with justification when needed.
+---
+
+## Beamer Slides (.tex)
+
+**Critical:**
+
+- XeLaTeX compilation failure
+- Undefined citation
+- Overfull hbox > 10pt
+
+---
+
+## Enforcement
+
+- **Commit gate:** score < 80 → block commit
+- **PR gate:** score < 90 → warn and list issues
+- Override allowed with justification

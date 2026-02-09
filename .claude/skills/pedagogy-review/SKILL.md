@@ -1,35 +1,33 @@
 ---
 name: pedagogy-review
-description: Run holistic pedagogical review on lecture slides. Checks narrative arc, student prerequisites, worked examples, notation clarity, and deck pacing.
+description: Run a pedagogical review on lecture slides (read-only).
 disable-model-invocation: true
 argument-hint: "[QMD or TEX filename]"
 ---
 
-# Pedagogical Review of Lecture Slides
+# Pedagogical Review Skill
 
-Perform a comprehensive pedagogical review.
+**Purpose:** Run the `pedagogy-reviewer` agent and return a structured report.
+
+---
 
 ## Steps
 
-1. **Identify the file** specified in `$ARGUMENTS`
-   - If no argument, ask user which lecture to review
-   - If just a name, look in `lecture-slides/`
+1. Resolve the file path from `$ARGUMENTS` (default under `lecture-slides/`).
+2. Invoke `pedagogy-reviewer` with the full path.
+3. Return the report in response text.
 
-2. **Launch the pedagogy-reviewer agent** with the full file path
-   - The agent checks 13 pedagogical patterns
-   - Performs deck-level analysis (narrative arc, pacing, visual rhythm, notation)
-   - Considers student perspective (prerequisites, objections)
+---
 
-3. **The agent produces a report** saved to:
-   `quality_reports/[FILENAME_WITHOUT_EXT]_pedagogy_report.md`
+## Output Artifact
 
-4. **Present summary to user:**
-   - Patterns followed vs violated (out of 13)
-   - Deck-level assessments
-   - Critical recommendations (top 3-5)
+Invoking workflow saves to:
 
-## Important Notes
+`quality_reports/[FILENAME_WITHOUT_EXT]_pedagogy_report.md`
 
-- This is a **read-only review** — no files are edited
-- Focuses on **pedagogy** not visual layout (use `/visual-audit` for that)
-- For a combined review, use `/slide-excellence` instead
+---
+
+## Notes
+
+- Read-only review; no edits.
+- For combined review, use `/slide-excellence`.

@@ -1,65 +1,43 @@
 ---
 name: slide-excellence
-description: Comprehensive slide excellence review combining visual audit, pedagogical review, proofreading, and optional TikZ/parity checks. Produces multiple reports and a combined summary.
+description: Multi-dimensional slide review combining visual, pedagogical, proofreading, and citation checks.
 disable-model-invocation: true
 argument-hint: "[QMD filename]"
 ---
 
 # Slide Excellence Review
 
-Run a comprehensive multi-dimensional review of lecture slides. Multiple agents analyze the file independently, then results are synthesized.
+**Purpose:** Run a comprehensive review across visual layout, pedagogy, proofreading, and citations, then synthesize findings.
 
-## Steps
+---
 
-### 1. Identify the File
+## Inputs
 
-Parse `$ARGUMENTS` for the filename. Resolve path in `lecture-slides/slides/`.
+- `$ARGUMENTS`: lecture filename (resolve under `lecture-slides/slides/`)
 
-### 2. Run Review Agents in Parallel
+---
 
-**Agent 1: Visual Audit** (slide-auditor)
+## Review Stack (Run in Parallel)
 
-- Overflow, font consistency, box fatigue, spacing, images
-- Persist response to: `quality_reports/[FILE]_visual_audit.md`
+1. **slide-auditor** — layout, overflow, spacing, box fatigue  
+   Save: `quality_reports/[FILE]_visual_audit.md`
+2. **pedagogy-reviewer** — narrative, pacing, notation, patterns  
+   Save: `quality_reports/[FILE]_pedagogy_report.md`
+3. **proofreader** — grammar, consistency, citations  
+   Save: `quality_reports/[FILE]_report.md`
+4. **tikz-reviewer** — only if TikZ present  
+   Save: `quality_reports/[FILE]_tikz_review.md`
 
-**Agent 2: Pedagogical Review** (pedagogy-reviewer)
+**Inline checks in this skill:**
 
-- 13 pedagogical patterns, narrative, pacing, notation
-- Persist response to: `quality_reports/[FILE]_pedagogy_report.md`
+- **Content parity check:** slide count and environment parity vs Beamer (if applicable)  
+  Save: `quality_reports/[FILE]_parity_report.md`
+- **Citation key audit (for .qmd):** flag hardcoded author-year citations lacking `@key`  
+  Save: `quality_reports/[FILE]_citation_audit.md`
 
-**Agent 3: Proofreading** (proofreader)
+---
 
-- Grammar, typos, consistency, academic quality, citations
-- Persist response to: `quality_reports/[FILE]_report.md`
-
-**Agent 4: TikZ Review** (only if file contains TikZ)
-
-- Label overlaps, geometric accuracy, visual semantics
-- Persist response to: `quality_reports/[FILE]_tikz_review.md`
-
-**Agent 5: Content Parity Check** (inline check in this skill)
-
-- Frame count comparison, environment parity, content drift
-- Persist report to: `quality_reports/[FILE]_parity_report.md`
-
-**Agent 6: Citation Key Audit** (always for .qmd files)
-
-- Detect hardcoded author-year citations not using `@citationKey` syntax
-- Cross-reference against `references.bib` to suggest correct keys
-- Exempt: figure `fig-alt` strings, code blocks, YAML frontmatter, non-citation parenthetical asides
-- Detection patterns:
-  - `Author (YYYY)` — e.g., `Arrow (1962)`
-  - `Author et al. (YYYY)` — e.g., `Aghion et al. (2005)`
-  - `Author and Author (YYYY)` — e.g., `Acemoglu and Linn (2004)`
-  - `Author, Author, and Author (YYYY)` — e.g., `Blundell, Griffith, and Van Reenen (1999)`
-  - `(Author YYYY)` or `(Author, YYYY)` — e.g., `(Dasgupta–Stiglitz 1980)`
-- Skip lines where a `@citationKey` for the same reference already appears
-- For each match: report line number, matched text, and suggested `@key` replacement from `references.bib`
-- If no matching bib entry exists: flag as "hardcoded citation with no bib entry" (double issue)
-- Quality gate: **-10 per instance** (Major)
-- Save: `quality_reports/[FILE]_citation_audit.md`
-
-### 3. Synthesize Combined Summary
+## Synthesis Output
 
 ```markdown
 # Slide Excellence Review: [Filename]
@@ -73,12 +51,12 @@ Parse `$ARGUMENTS` for the filename. Resolve path in `lecture-slides/slides/`.
 | Proofreading  |          |        |     |
 | Citations     |          |        |     |
 
-### Critical Issues (Immediate Action Required)
-
-### Medium Issues (Next Revision)
-
+### Critical Issues
+### Medium Issues
 ### Recommended Next Steps
 ```
+
+---
 
 ## Quality Score Rubric
 
