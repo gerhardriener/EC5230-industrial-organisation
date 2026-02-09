@@ -33,7 +33,7 @@ execute:
 ## Setup: Fixed locations, price competition
 
 - Duopoly, marginal cost $0$
-- Consumers ($\ell$) uniformly distributed on $[0,L]$ (@hotellingStabilityCompetition1929 line)
+- Consumers ($\ell$) uniformly distributed on $[0,L]$ [@hotellingStabilityCompetition1929]
 - Firm 1 at $a$ and Firm 2 at $L-b$
 - Mismatch (transport) cost $C(d)=cd$ with $c>0$, $d$ extent of mismatch
 - Unit demand; assume full market coverage in equilibrium
@@ -113,16 +113,17 @@ Co-location removes captive consumers; any $p>0$ can be profitably undercut.
 - $\frac{\partial \pi_1^*}{\partial a} = \frac{c}{9}(3L + a - b) > 0$ and $\frac{\partial \pi_2^*}{\partial b} = \frac{c}{9}(3L + b - a) > 0$
 - In the pricing subgame, increasing $a$ (resp. $b$) moves Firm 1 (resp. Firm 2) inward (toward the centre)
 - These are comparative statics holding the rival location fixed
-- Under linear transport costs, pricing incentives can pull locations toward the centre firms will “go where the demand is”
+- Under linear transport costs, pricing incentives can pull locations toward the centre; firms will “go where the demand is”
 
 ## Identifying clustering motives
 
-**Question** Why are so many businesses clustered together?
+**Question:** Why are so many businesses clustered together?
 
 - Going where the demand is?
 
-- Possible collusion story? Being next to the competitor facilitates
-monitoring?
+- Possible collusion story? Being next to the competitor facilitates monitoring.
+
+Next: the formal location game clarifies when this clustering logic breaks down under linear transport costs.
 
 
 ## Location game [@daspremontHotellingsStabilityCompetition1979]
@@ -138,18 +139,22 @@ monitoring?
 More convex mismatch costs make small location changes less effective at stealing marginal consumers through pricing.
 :::
 
-## Profit function
+## Profit function: interior region
 
 - Let $\Delta \equiv L-a-b$ denote the distance between firms
-- In the price subgame (locations fixed), Firm 1’s profit is piecewise in $(p_1,p_2)$ [@daspremontHotellingsStabilityCompetition1979]
+- Interior-demand region: $|p_1 - p_2| \le c\Delta$
+- In this region, Firm 1's profit is:
 
-$$\pi_1(p_1, p_2) =
-\begin{cases}
+$$
+\pi_1(p_1,p_2)=
 \frac{p_1 p_2}{2c} - \frac{p_1^2}{2c} + \frac{(L+a-b)p_1}{2}
-& \text{if } |p_1 - p_2| \le c(L - a - b) \\[0.5em]
-Lp_1 & \text{if } p_1 < p_2 - c(L - a - b) \\[0.5em]
-0 & \text{if } p_1 > p_2 + c(L - a - b)
-\end{cases}$$
+$$
+
+## Profit function: corner regions
+
+- Market capture: if $p_1 < p_2 - c\Delta$, then $\pi_1 = Lp_1$
+- No demand: if $p_1 > p_2 + c\Delta$, then $\pi_1 = 0$
+- Together with the interior expression, these define the piecewise payoff in [@daspremontHotellingsStabilityCompetition1979]
 
 ## Profit regions
 
@@ -194,16 +199,8 @@ Lp_1 & \text{if } p_1 < p_2 - c(L - a - b) \\[0.5em]
 - Choice variable: $p_i$
 - Parameters: $n, c, u, u^*$
 - Outcomes: market boundaries / cutoffs, quantities
-
-::: {.content-visible when-format="beamer"}
-```{=latex}
-\resizebox{0.5\textwidth}{!}{\includestandalone{../figs/source/fig-salop-cycle}}
-```
-:::
-
-::: {.content-visible when-format="revealjs"}
-![](../figs/fig-salop-cycle.svg){fig-align="center" width="50%"}
-:::
+- Symmetric benchmark: if neighbours set $\tilde{p}=p$, the boundary consumer is at $x=\frac{1}{2n}$
+- Baseline local demand before participation truncation: $q^C=2x=\frac{1}{n}$
 
 ## Consumers
 
@@ -274,7 +271,8 @@ Competitive-region inverse demand is steeper than monopoly-region inverse demand
 
 ::: {.callout-note title="Competitive-region condition (outside option not binding)"}
 
-In a symmetric profile, the farthest consumer from a firm is at distance $\frac{1}{2n}$. A sufficient condition for the competitive region to apply at the symmetric equilibrium is $v \ge p^C + \frac{c}{2n}$.
+- In a symmetric profile, the farthest consumer from a firm is at distance $\frac{1}{2n}$.
+- A sufficient condition for the competitive region to apply at the symmetric equilibrium is $v \ge p^C + \frac{c}{2n}$.
 
 :::
 
@@ -311,7 +309,7 @@ Planner problem: Choose $n$ to maximise $W(n)$
 - Social optimum: $n^S=\frac{1}{2}\sqrt{\frac{c}{F}}$
 - Free entry: $n^C=\sqrt{\frac{c}{F}}$ so $n^C=2n^S$ 
 
-Excess entry due to business stealing externality
+Excess entry due to the business-stealing externality.
 
 ## Summary and next week
 
