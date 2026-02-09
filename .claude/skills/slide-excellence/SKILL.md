@@ -33,7 +33,7 @@ argument-hint: "[QMD filename]"
 - **Content parity check:** slide count and environment parity vs Beamer (if applicable)  
   Save: `quality_reports/[FILE]_parity_report.md`
 - **Citation key audit (for .qmd):** flag hardcoded author-year citations lacking `@key`  
-  Save: `quality_reports/[FILE]_citation_audit.md`
+  Include findings in the synthesized report under the `Citations` dimension (no standalone citation-audit artifact).
 
 ---
 
@@ -53,6 +53,7 @@ argument-hint: "[QMD filename]"
 
 ### Critical Issues
 ### Medium Issues
+### Citation Key Findings
 ### Recommended Next Steps
 ```
 
