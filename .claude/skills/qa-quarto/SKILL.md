@@ -8,6 +8,7 @@ argument-hint: "[LectureN, e.g., Lecture1]"
 # Adversarial Quarto vs Beamer QA Workflow
 
 Compare Quarto HTML slides against their Beamer PDF benchmark using an iterative critic/fixer loop.
+Use `.claude/rules/audit-report-conventions.md` for naming/persistence conventions.
 
 **Philosophy:** The Beamer PDF is the gold standard. The Quarto translation must be at least as good in every dimension.
 
@@ -38,11 +39,15 @@ Phase 0: Pre-flight → Phase 1: Critic audit → Phase 2: Fixer → Phase 3: Re
 
 ## Phase 1: Initial Audit
 
-Launch the `quarto-critic` agent to compare Beamer vs Quarto comprehensively. Report saved to `quality_reports/[Lecture]_qa_critic_round1.md`.
+Launch the `quarto-critic` agent to compare Beamer vs Quarto comprehensively, then persist the returned report to:
+
+- `quality_reports/[LECTURE_ID]_qa_critic_round[ROUND].md` (use `ROUND=1` for the first audit)
 
 ## Phase 2: Fix Cycle
 
-If not APPROVED, launch `quarto-fixer` agent to apply fixes (Critical → Major → Minor), re-render, and verify.
+If not APPROVED, launch `quarto-fixer` agent to apply fixes (Critical → Major → Minor), re-render, and verify. Persist fixer round reports to:
+
+- `quality_reports/[LECTURE_ID]_qa_fixer_round[ROUND].md`
 
 ## Phase 3: Re-Audit
 
@@ -54,4 +59,8 @@ Max 5 fix rounds. After that, escalate to user with remaining issues.
 
 ## Final Report
 
-Save to `quality_reports/[Lecture]_qa_final.md` with hard gate status, iteration summary, and remaining issues.
+Persist the synthesized final report to:
+
+- `quality_reports/[LECTURE_ID]_qa_final.md`
+
+Include hard gate status, iteration summary, and remaining issues.

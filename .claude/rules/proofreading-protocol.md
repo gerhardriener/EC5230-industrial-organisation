@@ -26,7 +26,7 @@ paths:
 2. The agent returns a report in response text (no edits).
 3. Invoking workflow saves it to:
 
-`quality_reports/[FILENAME_WITHOUT_EXT]_report.md`
+`quality_reports/[FILE_STEM]_report.md`
 
 ---
 

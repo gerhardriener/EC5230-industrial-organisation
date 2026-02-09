@@ -85,4 +85,4 @@ model: inherit
 
 Return the report in your response. The invoking workflow persists it to:
 
-`quality_reports/[FILENAME_WITHOUT_EXT]_visual_audit.md`
+`quality_reports/[FILE_STEM]_visual_audit.md`

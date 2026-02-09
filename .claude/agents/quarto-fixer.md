@@ -23,7 +23,7 @@ Your role is to **execute** the fixes identified by the quarto-critic agent. You
 
 ### Step 1: Read the Critic's Report
 
-The report will be at: `quality_reports/[Lecture]_qa_critic_round[N].md`
+The report will be at: `quality_reports/[LECTURE_ID]_qa_critic_round[ROUND].md`
 
 ### Step 2: Apply Fixes (Priority Order)
 
@@ -77,15 +77,17 @@ The report will be at: `quality_reports/[Lecture]_qa_critic_round[N].md`
 ./scripts/sync_to_docs.sh LectureX
 ```
 
-### Step 4: Verify and Report
+### Step 4: Verify and Return Report
 
-**Save report to:** `quality_reports/[Lecture]_qa_fixer_round[N].md`
+Return the completed fixer report in your response. The invoking workflow persists it to:
+
+`quality_reports/[LECTURE_ID]_qa_fixer_round[ROUND].md`
 
 ```markdown
-# Fix Report: [Lecture Name] — Round [N]
+# Fix Report: [Lecture Name] — Round [ROUND]
 
 **Source file:** `lecture-slides/slides/lecture-X-topic.qmd`
-**Critic report:** `quality_reports/[Lecture]_qa_critic_round[N].md`
+**Critic report:** `quality_reports/[LECTURE_ID]_qa_critic_round[ROUND].md`
 **Date:** [YYYY-MM-DD]
 
 ## Issues Addressed

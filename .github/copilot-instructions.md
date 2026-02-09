@@ -12,6 +12,7 @@ The **canonical rules** live in `.claude/rules/` and must be followed.
 - Visual identity: `.claude/rules/st-andrews-visual-identity.md`
 - Callouts: `.claude/rules/callout-box-guidelines.md`
 - TikZ pipeline: `.claude/rules/tikz-workflow.md`
+- Audit report conventions: `.claude/rules/audit-report-conventions.md`
 
 ---
 

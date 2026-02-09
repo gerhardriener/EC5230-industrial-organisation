@@ -14,35 +14,44 @@ argument-hint: "[QMD filename]"
 ## Inputs
 
 - `$ARGUMENTS`: lecture filename (resolve under `lecture-slides/slides/`)
+- Derive `FILE_STEM` from filename without extension.
+- Follow `../../rules/audit-report-conventions.md` for artifact naming/persistence.
 
 ---
 
 ## Review Stack (Run in Parallel)
 
-1. **slide-auditor** — layout, overflow, spacing, box fatigue  
-   Save: `quality_reports/[FILE]_visual_audit.md`
-2. **pedagogy-reviewer** — narrative, pacing, notation, patterns  
-   Save: `quality_reports/[FILE]_pedagogy_report.md`
-3. **proofreader** — grammar, consistency, citations  
-   Save: `quality_reports/[FILE]_report.md`
-4. **tikz-reviewer** — only if TikZ present  
-   Save: `quality_reports/[FILE]_tikz_review.md`
+1. **slide-auditor** — layout, overflow, spacing, box fatigue
+2. **pedagogy-reviewer** — narrative, pacing, notation, patterns
+3. **proofreader** — grammar, consistency, citations
+4. **tikz-reviewer** — only if TikZ present
 
 **Inline checks in this skill:**
 
-- **Content parity check:** slide count and environment parity vs Beamer (if applicable)  
-  Save: `quality_reports/[FILE]_parity_report.md`
+- **Content parity check:** slide count and environment parity vs Beamer (if applicable)
 - **Citation key audit (for .qmd):** flag hardcoded author-year citations lacking `@key`  
   Include findings in the synthesized report under the `Citations` dimension (no standalone citation-audit artifact).
+
+All reviewer agents return reports in response text. The invoking workflow persists:
+
+- `quality_reports/[FILE_STEM]_visual_audit.md`
+- `quality_reports/[FILE_STEM]_pedagogy_report.md`
+- `quality_reports/[FILE_STEM]_report.md`
+- `quality_reports/[FILE_STEM]_tikz_review.md` (if TikZ present)
+- `quality_reports/[FILE_STEM]_parity_report.md`
 
 ---
 
 ## Synthesis Output
 
+Persist synthesized output to:
+
+- `quality_reports/[FILE_STEM]_slide_excellence_synthesis.md`
+
 ```markdown
 # Slide Excellence Review: [Filename]
 
-## Overall Quality Score: [EXCELLENT / GOOD / NEEDS WORK / POOR]
+## Overall Quality Score: [EXCELLENT / GOOD / NEEDS REVISION / POOR]
 
 | Dimension     | Critical | Medium | Low |
 | ------------- | -------- | ------ | --- |
@@ -65,5 +74,5 @@ argument-hint: "[QMD filename]"
 | ---------- | -------- | ------ | -------------------- |
 | Excellent  | 0-2      | 0-5    | Ready to present     |
 | Good       | 3-5      | 6-15   | Minor refinements    |
-| Needs Work | 6-10     | 16-30  | Significant revision |
+| Needs Revision | 6-10  | 16-30  | Significant revision |
 | Poor       | 11+      | 31+    | Major restructuring  |

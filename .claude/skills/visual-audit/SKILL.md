@@ -8,10 +8,12 @@ argument-hint: "[QMD filename]"
 # Visual Audit of Slide Deck
 
 Perform a thorough visual layout audit of a slide deck.
+Use `.claude/rules/audit-report-conventions.md` for naming/persistence conventions.
 
 ## Steps
 
 1. **Read the slide file** specified in `$ARGUMENTS`
+   - Derive `FILE_STEM` from filename without extension.
 
 2. **For Quarto (.qmd) files:**
    - Render with `quarto render lecture-slides/slides/$ARGUMENTS`
@@ -27,7 +29,9 @@ Perform a thorough visual layout audit of a slide deck.
 
 4. **Produce a report** organized by slide with severity and recommendations
 
-5. **Follow the spacing-first principle:**
+5. **Return report text** for the invoking workflow to persist to:
+   - `quality_reports/[FILE_STEM]_visual_audit.md`
+6. **Follow the spacing-first principle:**
    1. Reduce vertical spacing with negative margins
    2. Consolidate lists
    3. Move displayed equations inline

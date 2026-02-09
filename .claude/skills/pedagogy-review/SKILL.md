@@ -8,6 +8,7 @@ argument-hint: "[QMD or TEX filename]"
 # Pedagogical Review Skill
 
 **Purpose:** Run the `pedagogy-reviewer` agent and return a structured report.
+Use `.claude/rules/audit-report-conventions.md` for naming/persistence conventions.
 
 ---
 
@@ -23,7 +24,7 @@ argument-hint: "[QMD or TEX filename]"
 
 Invoking workflow saves to:
 
-`quality_reports/[FILENAME_WITHOUT_EXT]_pedagogy_report.md`
+`quality_reports/[FILE_STEM]_pedagogy_report.md`
 
 ---
 

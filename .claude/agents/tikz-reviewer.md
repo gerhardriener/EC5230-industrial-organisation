@@ -141,7 +141,7 @@ Read `../rules/tikz-visual-quality.md` for the full specification of:
 Return the report in your response. The calling workflow is responsible for persisting it to:
 
 ```
-quality_reports/[FILENAME_WITHOUT_EXT]_tikz_review.md
+quality_reports/[FILE_STEM]_tikz_review.md
 ```
 
 For example, if reviewing `fig-innovation-replacement-effect.tex`, save to:

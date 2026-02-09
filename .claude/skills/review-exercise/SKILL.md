@@ -22,6 +22,7 @@ argument-hint: "<file> [--type=live|takehome]"
 Type auto-detect:
 - `exercises/live/` → live
 - `exercises/sheets/` → takehome
+- Derive `FILE_STEM` from the exercise filename without extension.
 
 ---
 
@@ -74,16 +75,18 @@ Use the canonical rubric in `../../rules/exercise-quality-rubric.md` for:
 - score bands
 - severity interpretation
 
+Use `../../rules/audit-report-conventions.md` for report naming and persistence pattern.
+
 ---
 
 ## Output Artifacts
 
 Persist to `quality_reports/`:
 
-- `[FILE]_exercise_review.md`
-- `[FILE]_solution_check.md`
-- `[FILE]_report.md`
-- `[FILE]_exercise_synthesis.md`
+- `[FILE_STEM]_exercise_review.md`
+- `[FILE_STEM]_solution_check.md`
+- `[FILE_STEM]_report.md`
+- `[FILE_STEM]_exercise_synthesis.md`
 
 ---
 

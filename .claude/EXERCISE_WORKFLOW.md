@@ -20,6 +20,7 @@
 
 - **Exercise rubric (single source):** `.claude/rules/exercise-quality-rubric.md`
 - **Proofreading protocol:** `.claude/rules/proofreading-protocol.md`
+- **Audit report conventions:** `.claude/rules/audit-report-conventions.md`
 - **Plan-first workflow:** `.claude/rules/plan-first-workflow.md`
 - **General verification:** `.claude/rules/verification-protocol.md`
 
@@ -54,10 +55,10 @@ Minimum release gate:
 
 A completed review cycle should produce:
 
-- `quality_reports/[exercise]_exercise_review.md`
-- `quality_reports/[exercise]_solution_check.md`
-- `quality_reports/[exercise]_report.md`
-- `quality_reports/[exercise]_exercise_synthesis.md`
+- `quality_reports/[FILE_STEM]_exercise_review.md`
+- `quality_reports/[FILE_STEM]_solution_check.md`
+- `quality_reports/[FILE_STEM]_report.md`
+- `quality_reports/[FILE_STEM]_exercise_synthesis.md`
 
 ---
 

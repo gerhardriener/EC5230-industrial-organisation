@@ -8,6 +8,7 @@ argument-hint: "[filename or 'all' or 'LectureN']"
 # Review R Scripts
 
 Run the comprehensive R code review protocol.
+Use `.claude/rules/audit-report-conventions.md` for naming/persistence conventions.
 
 ## Steps
 
@@ -19,7 +20,7 @@ Run the comprehensive R code review protocol.
 2. **For each script, launch the `r-reviewer` agent** with instructions to:
    - Follow the full protocol in the agent instructions
    - Read `.claude/rules/r-code-conventions.md` for current standards
-   - Persist response to `quality_reports/[script_name]_r_review.md`
+   - Return report text for the invoking workflow to persist at `quality_reports/[FILE_STEM]_r_review.md`
 
 3. **After all reviews complete**, present a summary:
    - Total issues found per script
