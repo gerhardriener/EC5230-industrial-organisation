@@ -25,7 +25,8 @@
       "Bash(git reflog expire:*)",
       "Bash(git gc:*)",
       "Bash(python scripts/generate-diagrams.py:*)",
-      "Bash(where:*)"
+      "Bash(where:*)",
+      "Bash(python:*)"
     ]
   }
 }
