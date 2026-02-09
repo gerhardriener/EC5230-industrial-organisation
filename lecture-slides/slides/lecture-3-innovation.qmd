@@ -372,11 +372,11 @@ Under what market conditions might an entrant have stronger innovation incentive
 @blundellMarketShareMarket1999 find that higher market share and market value predict more patenting/innovations in UK manufacturing firms, consistent with **strategic** incentives (including pre-emptive innovation) in oligopolistic industries.
 :::
 
-# Endogenous R&D and market structure @dasguptaIndustrialStructureNature1980: {background-color="#00539b"}
+# Endogenous R&D and Market Structure {background-color="#00539b"}
 
-##  Setup and key result 
+## Setup and key result
 
-@dasguptaIndustrialStructureNature1980 model R&D as an **endogenous sunk cost**: firms spend on R&D to reduce marginal cost, and entry adjusts endogenously.
+The @dasguptaIndustrialStructureNature1980 model treats R&D as an **endogenous sunk cost**: firms spend on R&D to reduce marginal cost, and entry adjusts endogenously.
 
 The key result is a clean link between:
 
@@ -425,7 +425,7 @@ $$
 ## Empirical example: market size and innovation
 
 ::: {.callout-note title="Pharmaceutical innovation responds to demand (QJE)"}
-Acemoglu and Linn (2004) show that larger potential markets lead to more pharmaceutical innovation (new drugs/new molecular entities), consistent with models where the return to innovation rises with **scale**. [@acemogluMarketSizeInnovation2004]
+@acemogluMarketSizeInnovation2004 show that larger potential markets lead to more pharmaceutical innovation (new drugs/new molecular entities), consistent with models where the return to innovation rises with **scale**.
 :::
 
 ## Dasgupta–Stiglitz (1980): firm's problem [@dasguptaIndustrialStructureNature1980]
@@ -536,8 +536,6 @@ $$
 ## Equilibrium concentration [@dasguptaIndustrialStructureNature1980]
 
 **Equilibrium concentration satisfies:**
-
-. . .
 
 $$
 \frac{1}{N^*} = \frac{1}{\varepsilon} \cdot \frac{\alpha}{1+\alpha}
