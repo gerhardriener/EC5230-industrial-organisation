@@ -12,8 +12,12 @@ Render the Quarto project and publish to the `gh-pages` branch using `quarto pub
 ## Steps
 
 1. **Run the publish script:**
-   - If `$ARGUMENTS` is provided (e.g., "lecture-2"): `./scripts/sync_to_docs.sh $ARGUMENTS`
-   - If no argument: `./scripts/sync_to_docs.sh` (renders all and publishes)
+   - **PowerShell (Windows):**
+     - If `$ARGUMENTS` is provided (e.g., "lecture-2"): `pwsh -File ./scripts/sync_to_docs.ps1 $ARGUMENTS`
+     - If no argument: `pwsh -File ./scripts/sync_to_docs.ps1`
+   - **Bash (macOS/Linux/Git Bash):**
+     - If `$ARGUMENTS` is provided: `./scripts/sync_to_docs.sh $ARGUMENTS`
+     - If no argument: `./scripts/sync_to_docs.sh` (renders all and publishes)
 
 2. **Verify the published site:**
    - Check that `quarto publish` completed without errors
@@ -27,7 +31,8 @@ Render the Quarto project and publish to the `gh-pages` branch using `quarto pub
    - Check that all referenced SVG files exist in `lecture-slides/figs/`
 
 5. **Open in browser** for visual verification:
-   - `open _site/lecture-slides/slides/lecture-X-name.html`
+   - PowerShell: `Start-Process _site/lecture-slides/slides/lecture-X-name.html`
+   - Bash/macOS: `open _site/lecture-slides/slides/lecture-X-name.html`
    - Confirm slides render, images display, navigation works
 
 6. **Report results** to the user
@@ -37,3 +42,4 @@ Render the Quarto project and publish to the `gh-pages` branch using `quarto pub
 - Optionally renders a specific lecture QMD file if an argument is given
 - Runs `quarto publish gh-pages --no-browser` to render the full project and push to the `gh-pages` branch
 - No manual `docs/` sync needed — Quarto handles everything
+- `all` is accepted to skip lecture pre-filter and publish the full project

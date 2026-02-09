@@ -77,6 +77,10 @@ The report will be at: `quality_reports/[LECTURE_ID]_qa_critic_round[ROUND].md`
 ./scripts/sync_to_docs.sh LectureX
 ```
 
+```powershell
+pwsh -File ./scripts/sync_to_docs.ps1 LectureX
+```
+
 ### Step 4: Verify and Return Report
 
 Return the completed fixer report in your response. The invoking workflow persists it to:
@@ -98,7 +102,7 @@ Return the completed fixer report in your response. The invoking workflow persis
 | M1 | Major | Fixed | [description] |
 
 ## Render Status
-- **Command:** `./scripts/sync_to_docs.sh LectureX`
+- **Command:** `./scripts/sync_to_docs.sh LectureX` or `pwsh -File ./scripts/sync_to_docs.ps1 LectureX`
 - **Result:** Success / Failed
 
 ## Ready for Re-Review

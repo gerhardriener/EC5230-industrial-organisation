@@ -109,7 +109,8 @@ EC5230-industrial-organisation/
 ├── scripts/
 │   ├── tikz2pdf.py                   # TikZ -> PDF -> SVG pipeline
 │   ├── quality_score.py              # Slide quality scoring
-│   └── sync_to_docs.sh               # Render and publish to gh-pages branch
+│   ├── sync_to_docs.sh               # Render and publish to gh-pages branch (Bash)
+│   └── sync_to_docs.ps1              # Render and publish to gh-pages branch (PowerShell)
 ├── lecture-slides/
 │   ├── index.qmd                     # Lecture landing page
 │   ├── slides/

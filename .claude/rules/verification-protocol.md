@@ -10,7 +10,9 @@ paths:
 **At the end of EVERY task, Claude MUST verify the output works correctly.** This is non-negotiable.
 
 ## For Quarto HTML Slides:
-1. Run `./scripts/sync_to_docs.sh` (or `./scripts/sync_to_docs.sh lecture-N-name`) to render and publish
+1. Run render/publish script for your shell:
+   - PowerShell: `pwsh -File ./scripts/sync_to_docs.ps1` (or `pwsh -File ./scripts/sync_to_docs.ps1 lecture-N-name`)
+   - Bash: `./scripts/sync_to_docs.sh` (or `./scripts/sync_to_docs.sh lecture-N-name`)
 2. Open rendered output in `_site/lecture-slides/slides/` and verify slide rendering visually
 3. Verify referenced SVG paths resolve from the rendered HTML
 4. Check for overflow by scanning dense slides

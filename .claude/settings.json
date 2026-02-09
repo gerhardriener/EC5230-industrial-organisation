@@ -26,6 +26,8 @@
       "Bash(python3 *)",
       "Bash(./scripts/sync_to_docs.sh *)",
       "Bash(./scripts/sync_to_docs.sh)",
+      "Bash(pwsh -File ./scripts/sync_to_docs.ps1 *)",
+      "Bash(pwsh -File ./scripts/sync_to_docs.ps1)",
       "Bash(chmod *)",
       "Bash(open *)",
       "Bash(ls *)",
