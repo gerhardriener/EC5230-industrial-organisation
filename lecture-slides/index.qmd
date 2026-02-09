@@ -6,9 +6,16 @@ title: "Lecture Slides"
 
 Choose your preferred format: **HTML** (interactive slides) or **PDF** (printable).
 
+### Week 0
+
+**Lecture 0: EC5230 – Industrial Organisation**
+
+- [HTML slides](slides/lecture-0-intro.html){target="_blank"}
+- [PDF slides](slides/lecture-0-intro.pdf){target="_blank"}
+
 ### Week 1
 
-**Lecture 1: Competition & Oligopoly Coordination**
+**Lecture 1: Oligopoly**
 
 - [HTML slides](slides/lecture-1-oligopoly.html){target="_blank"}
 - [PDF slides](slides/lecture-1-oligopoly.pdf){target="_blank"}
@@ -22,7 +29,7 @@ Choose your preferred format: **HTML** (interactive slides) or **PDF** (printabl
 
 ### Week 3
 
-**Lecture 3: Economics of Innovation**
+**Lecture 3: Innovation**
 
 - [HTML slides](slides/lecture-3-innovation.html){target="_blank"}
 - [PDF slides](slides/lecture-3-innovation.pdf){target="_blank"}
@@ -36,42 +43,14 @@ Choose your preferred format: **HTML** (interactive slides) or **PDF** (printabl
 
 ### Week 5
 
-**Lecture 5: Multi-stage Games and Strategic Commitment**
+**Lecture 5: Multi-stage Games**
 
-- [HTML slides](slides/lecture-5-multistage.html){target="_blank"}
-- [PDF slides](slides/lecture-5-multistage.pdf){target="_blank"}
+- [HTML slides](slides/lecture-5-repeated-games.html){target="_blank"}
+- [PDF slides](slides/lecture-5-repeated-games.pdf){target="_blank"}
 
 ### Week 7
 
-**Lecture 7: Cooperative R&D**
+**Lecture 6: Cooperative R&D**
 
-- [HTML slides](slides/lecture-7-cooperative-rd.html){target="_blank"}
-- [PDF slides](slides/lecture-7-cooperative-rd.pdf){target="_blank"}
-
-### Week 8
-
-**Lecture 8: Bundling and Tying**
-
-- [HTML slides](slides/lecture-8-bundling.html){target="_blank"}
-- [PDF slides](slides/lecture-8-bundling.pdf){target="_blank"}
-
-### Week 9
-
-**Lecture 9: Advertising and Brand Competition**
-
-- [HTML slides](slides/lecture-9-advertising.html){target="_blank"}
-- [PDF slides](slides/lecture-9-advertising.pdf){target="_blank"}
-
-### Week 11
-
-**Lecture 11: Mergers and Acquisitions**
-
-- [HTML slides](slides/lecture-11-mergers.html){target="_blank"}
-- [PDF slides](slides/lecture-11-mergers.pdf){target="_blank"}
-
-### Week 12
-
-**Lecture 12: Sustainable Industrialisation**
-
-- [HTML slides](slides/lecture-12-sustainability.html){target="_blank"}
-- [PDF slides](slides/lecture-12-sustainability.pdf){target="_blank"}
+- [HTML slides](slides/lecture-6-corporate-rand.html){target="_blank"}
+- [PDF slides](slides/lecture-6-corporate-rand.pdf){target="_blank"}

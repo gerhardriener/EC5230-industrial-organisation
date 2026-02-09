@@ -16,6 +16,8 @@ argument-hint: "[QMD filename]"
 - `$ARGUMENTS`: lecture filename (resolve under `lecture-slides/slides/`)
 - Derive `FILE_STEM` from filename without extension.
 - Follow `../../rules/audit-report-conventions.md` for artifact naming/persistence.
+- Initialize workflow logging:
+  - `python scripts/workflow_log.py init --task "slide excellence: [FILE_STEM]" --slug "slide-excellence-[FILE_STEM]"`
 
 ---
 
@@ -47,6 +49,9 @@ All reviewer agents return reports in response text. The invoking workflow persi
 Persist synthesized output to:
 
 - `quality_reports/[FILE_STEM]_slide_excellence_synthesis.md`
+
+Close workflow log:
+- `python scripts/workflow_log.py close --slug "slide-excellence-[FILE_STEM]" --summary "slide excellence review complete"`
 
 ```markdown
 # Slide Excellence Review: [Filename]

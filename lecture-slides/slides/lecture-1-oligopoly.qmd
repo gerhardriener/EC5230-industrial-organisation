@@ -537,28 +537,16 @@ Calculate:
 - Can the MFN clause be too restrictive?
 
 
-## Summary: Oligopoly Coordination
+## Summary and next week
 
-**Key takeaways:**
+**Summary**
 
 1. **Coordination problem:** Joint profit maximisation yields higher payoffs than Nash equilibrium, but the cooperative outcome is not self-enforcing in simultaneous-move games
 2. **Single-period dilemma:** The Nash equilibrium is Pareto-inefficient
 3. **Facilitating devices:** MFN clauses alter the payoff structure to align individual and collective incentives
 4. **Self-enforcement:** Properly structured MFN clauses render deviation less profitable than compliance, inducing equilibrium behaviour
 
-
-## References 
-
-[@belleflammeIndustrialOrganizationMarkets2015]
-
-- Belleflamme, P., & Peitz, M. (2015). *Industrial Organization: Markets and Strategies* (2nd ed.). Cambridge University Press. Chapters 2.1–2.3, 3.2–3.3.
-- Cooper, T. E. (1986). Most-Favored-Customer Pricing and Tacit Collusion. *The RAND Journal of Economics*, 17(3), 377–388.
-- Salop, S. C. (1986). Practices that (Credibly) Facilitate Oligopoly Co-ordination. In: Stiglitz, J. E., Mathewson, G. F. (eds) *New Developments in the Analysis of Market Structure*. International Economic Association Series, vol 77. Palgrave Macmillan.
-- Shy, O. (1996). *Industrial Organization: Theory and Applications*. MIT Press. Chapters 3.2, 6.1
-
-## Preview: Lecture 2
-
-**Product Differentiation**
+**Next week: Product Differentiation**
 
 Not all products are the same. Firms strategically differentiate their offerings to:
 
@@ -567,3 +555,12 @@ Not all products are the same. Firms strategically differentiate their offerings
 - Capture different market segments
 
 Next lecture: How does differentiation affect competition and welfare?
+
+## References
+
+[@belleflammeIndustrialOrganizationMarkets2015]
+
+- Belleflamme, P., & Peitz, M. (2015). *Industrial Organization: Markets and Strategies* (2nd ed.). Cambridge University Press. Chapters 2.1–2.3, 3.2–3.3.
+- Cooper, T. E. (1986). Most-Favored-Customer Pricing and Tacit Collusion. *The RAND Journal of Economics*, 17(3), 377–388.
+- Salop, S. C. (1986). Practices that (Credibly) Facilitate Oligopoly Co-ordination. In: Stiglitz, J. E., Mathewson, G. F. (eds) *New Developments in the Analysis of Market Structure*. International Economic Association Series, vol 77. Palgrave Macmillan.
+- Shy, O. (1996). *Industrial Organization: Theory and Applications*. MIT Press. Chapters 3.2, 6.1

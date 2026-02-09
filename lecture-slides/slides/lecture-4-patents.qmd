@@ -352,7 +352,7 @@ $$
 - Interpretation:
   - Firms overinvest when the negative externality on rivals’ profits outweighs the consumer-surplus gain from having two innovators
 
-# Summary and next week
+## Summary and next week
 
 **Summary**
 

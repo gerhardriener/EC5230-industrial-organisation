@@ -101,14 +101,14 @@ paths:
 | 0   | Introduction                  | What is IO and how is the course structured?                            | —                                                                                    | —                                               |
 | 1   | Oligopoly                     | How does market structure affect pricing, welfare, and coordination?    | $q_i$, $\alpha_i$, $\eta$, Lerner index, $BR_i$, $\tilde{a}$/$\tilde{b}$/$\tilde{d}$ | Cournot, Bertrand, MFN facilitating devices     |
 | 2   | Product Differentiation       | How does spatial differentiation shape competition, entry, and welfare? | $\ell$, $L$, $c$, $v$, $n^C$, $n^S$, $q^M$, $q^C$                                    | Hotelling line, Salop circular city, free entry |
-| 3   | Innovation                    | How do market structures affect incentives to innovate?                 |                                                                                      | Innovation under uncertainty                    |
-| 4   | Patents & IPRs                | How do patents balance innovation incentives against diffusion?         |                                                                                      | Patent design, IPR policy                       |
-| 5   | Multi-stage games             | How do firms commit strategically across periods?                       |                                                                                      | Subgame perfection, commitment                  |
-| 6   | Cooperative R&D               | When should firms cooperate on research?                                |                                                                                      | R&D joint ventures                              |
-| 7   | Bundling                      | How does bundling affect competition and welfare?                       |                                                                                      | Bundling strategies                             |
-| 8   | Advertising                   | How does advertising affect market outcomes?                            |                                                                                      | Persuasive vs informative advertising           |
-| 9   | Mergers                       | When do mergers harm or benefit consumers?                              |                                                                                      | Merger analysis                                 |
-| 10  | Sustainable industrialisation | How can industrial policy promote sustainability?                       |                                                                                      | Policy evaluation                               |
+| 3   | Innovation                    | How do market structures affect incentives to innovate?                 | $\Delta\\pi$, $\Delta W$, $x$, $N$, $\\varepsilon$, $\\alpha$                         | Innovation under uncertainty                    |
+| 4   | Patents & IPRs                | How do patents balance innovation incentives against diffusion?         | $(\\nu,F)$, $T$, $\\pi$, $\\ell$, $r$, $\\tau$                                       | Patent design, IPR policy                       |
+| 5   | Multi-stage games             | How do firms commit strategically across periods?                       | SPNE, $q_1^S$, $q_2^S$, $\\theta_i$, $BR_i(\\cdot)$                                  | Subgame perfection, commitment                  |
+| 6   | Cooperative R&D               | When should firms cooperate on research?                                | $x_i$, $\\beta$, $q_i^*$, $W$, RJV payoffs                                           | R&D joint ventures                              |
+| 7   | Bundling                      | How does bundling affect competition and welfare?                       | $p_A$, $p_B$, $p_{AB}$, reservation values, surplus decomposition                    | Bundling strategies                             |
+| 8   | Advertising                   | How does advertising affect market outcomes?                            | advertising intensity $a_i$, demand shifters, informative vs persuasive channels     | Persuasive vs informative advertising           |
+| 9   | Mergers                       | When do mergers harm or benefit consumers?                              | diversion ratios, efficiencies, unilateral effects, HHI                              | Merger analysis                                 |
+| 10  | Sustainable industrialisation | How can industrial policy promote sustainability?                       | abatement cost terms, policy instruments, welfare objective                           | Policy evaluation                               |
 
 ### Connections Between Lectures
 
@@ -132,7 +132,7 @@ paths:
 
 ### Replication Data Sources
 
-- Interactive Shiny apps for Cournot, monopoly, profit frontiers, and Salop models (see course website)
+- Interactive app modules are optional and repository-dependent. If absent, rely on static figures/R scripts in `lecture-slides/figs/` and `scripts/`.
 
 ---
 
@@ -147,9 +147,10 @@ paths:
 | Use `callout-note`, `callout-important`, `callout-warning` boxes | Highlights key insights, warnings, equilibrium results | L1, L2           |
 | Dual-format support: `clean-revealjs` + `beamer`                 | Allows PDF and HTML output from same source            | L1, L2           |
 | Figures via SVG (revealjs) and `\includestandalone` (beamer)     | Platform-appropriate rendering                         | L2               |
-| End each lecture with References + Preview of next lecture       | Narrative continuity                                   | L1, L2           |
+| End each lecture with `Summary and next week` then `References` | Narrative continuity and closing consistency           | L1, L2           |
 | Tables for comparing market structures / models                  | Side-by-side regime comparisons                        | L1, L2           |
 | First introduction of a research paper or source                 | cite in the first slide where the model appears        | L1, L2, L3       |
+| Summary + next-week slide before final references slide          | Standardized lecture closing schema                    | L2, L3, L4, L5, L6 |
 
 ### What Has Been Overridden (Don't Do This)
 

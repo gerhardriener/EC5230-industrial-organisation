@@ -60,6 +60,11 @@ A completed review cycle should produce:
 - `quality_reports/[FILE_STEM]_report.md`
 - `quality_reports/[FILE_STEM]_exercise_synthesis.md`
 
+For publication, render explicit variants:
+
+- `pwsh -File ./scripts/render_exercises.ps1` (Windows)
+- `./scripts/render_exercises.sh` (macOS/Linux)
+
 ---
 
 ## Notes

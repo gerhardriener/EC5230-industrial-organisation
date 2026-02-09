@@ -29,13 +29,16 @@
 | Command                                     | What It Does                                                         |
 | ------------------------------------------- | -------------------------------------------------------------------- |
 | **Lecture Slides**                          |                                                                      |
+| `/compile-latex [file.tex]`                | Compile Beamer `.tex` slides with XeLaTeX/BibTeX passes             |
 | `/deploy [LectureN]`                        | Render Quarto slides and sync to GitHub Pages                        |
 | `/extract-tikz [LectureN]`                  | TikZ diagrams to PDF to SVG with 0-based indexing                    |
 | `/proofread [filename]`                     | Grammar/typo/overflow review and report                              |
 | `/visual-audit [filename]`                  | Slide layout audit for overflow and consistency                      |
 | `/pedagogy-review [filename]`               | Pedagogical review (read-only)                                       |
+| `/substance-review [filename]`              | IO domain correctness review (read-only)                             |
 | `/review-r [file or LectureN]`              | R code review: quality, reproducibility, correctness                 |
 | `/qa-quarto [LectureN]`                     | Adversarial Quarto vs Beamer QA: critic finds issues, fixer resolves |
+| `/translate-to-quarto [LectureN or file]`   | Beamer to Quarto translation workflow                                |
 | `/slide-excellence [filename]`              | Combined visual + pedagogical + proofreading + citation audit review |
 | `/create-lecture`                           | Full lecture creation workflow                                       |
 | `/devils-advocate`                          | Challenge slide design with pedagogical questions                    |
@@ -130,12 +133,6 @@ EC5230-industrial-organisation/
 │   │   └── exercises-1.qmd
 │   └── live/
 │       └── live-exercise-1.qmd
-├── apps/                              # Interactive Shiny applications
-│   ├── cournot-duopoly/
-│   ├── monopolist-profits/
-│   ├── salop-circular-city/
-│   ├── profit-possibility-cournot/
-│   └── _original/                    # Original standalone R scripts
 ├── guide/
 │   └── workflow-guide.qmd            # Development workflow guide
 ├── docs/                              # GitHub Pages deployment
@@ -168,9 +165,9 @@ EC5230-industrial-organisation/
 | 1: Oligopoly       | ✓ Complete | Cournot, welfare, coordination | —            |
 | 2: Differentiation | ✓ Complete | Hotelling, Salop, free entry   | —            |
 | 3: Innovation      | ✓ Complete | Arrow, D-S, replacement effect | 2026-02-08   |
-| 4: Patents         | —          | [To develop]                   | —            |
-| 5: Repeated Games  | —          | [To develop]                   | —            |
-| 6: Corporate R&D   | —          | [To develop]                   | —            |
+| 4: Patents         | ✓ Draft    | Patent design, races, welfare  | 2026-02-09   |
+| 5: Repeated Games  | ✓ Draft    | Stackelberg, delegation         | 2026-02-09   |
+| 6: Corporate R&D   | ✓ Draft    | Spillovers, RJV, cooperation    | 2026-02-09   |
 
 **Recent Quality Improvements (Lecture 3, 2026-02-08):**
 

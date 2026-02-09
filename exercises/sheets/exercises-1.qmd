@@ -13,14 +13,14 @@ format:
     linkcolor: blue
     urlcolor: blue
     number-sections: false
-solutions: true
+solutions: false
 ---
 
 **Instructions**
 
 - Answer all questions.
 - Show intermediate steps.
-- Solutions are included only when `params.solution: true`.
+- Instructor version is rendered with `-M solutions:true`.
 
 ## Problem 1: Welfare analysis
 

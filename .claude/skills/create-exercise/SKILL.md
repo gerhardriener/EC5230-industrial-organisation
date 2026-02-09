@@ -35,6 +35,8 @@ Follow the plan-first workflow in `.claude/rules/plan-first-workflow.md`:
 - Identify likely student errors.
 - Save the plan to `quality_reports/plans/YYYY-MM-DD_exercise-[type]-[topic].md`.
 - Present plan for approval before drafting.
+- Initialize plan/session logging helper:
+  - `python scripts/workflow_log.py init --task "create exercise: $ARGUMENTS" --slug "exercise-$ARGUMENTS"`
 
 ### 2. Draft Exercise File
 
@@ -63,12 +65,18 @@ Run `/review-exercise` and address critical issues. Re-run until:
 - Overall score >= 80/100
 - No Critical issues
 - Solution correctness: CORRECT or MINOR ERRORS
+- Append key fix decisions while iterating:
+  - `python scripts/workflow_log.py append --slug "exercise-$ARGUMENTS" --note "<fix applied>"`
 
 ### 5. Render and Index
 
-- Render both student and instructor versions.
+- Render both student and instructor versions with:
+  - PowerShell: `pwsh -File ./scripts/render_exercises.ps1`
+  - Bash: `./scripts/render_exercises.sh`
 - Update `exercises/index.qmd` with link and short description.
 - Provide summary: file path, time estimate, key concepts.
+- Close workflow log:
+  - `python scripts/workflow_log.py close --slug "exercise-$ARGUMENTS" --summary "exercise created and reviewed"`
 
 ---
 

@@ -95,3 +95,6 @@ apps/
 
 # Claude local machine/session overrides
 .claude/settings.local.json
+
+# Local scratch files
+_tmp_test*.txt

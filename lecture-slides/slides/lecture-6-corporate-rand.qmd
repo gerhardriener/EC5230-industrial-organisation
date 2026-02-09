@@ -281,9 +281,7 @@ $$
 - Interpretation:
   - With duplication, cooperation depends mainly on success probability $p$ (not on $F$)
 
-# Summary and references {background-color="#00539b"}
-
-## Summary & references
+## Summary and next week
 
 **Summary**
 
@@ -292,17 +290,17 @@ $$
 - Full cooperation may reduce product-market competition, affecting output and welfare
 - RJVs trade off cost sharing against strategic effects from duplication and winning probabilities
 
-**References**
+**Next week: assessment and feedback**
+
+- Online class test (timing and format)
+- Tutorial: class test feedback and problem solving
+- Transition to subsequent lecture topics as scheduled
+
+## References
 
 - d’Aspremont, C., & Jacquemin, A. (1988). Cooperative and Noncooperative R&D in Duopoly with Spillovers. *American Economic Review*, 78(5), 1133–1137.
 - Combs, K. L. (1992). Cost sharing vs. multiple research projects in cooperative R&D. *Economics Letters*, 39(3), 353–357.
 - Belleflamme, P., & Peitz, M. (2015). *Industrial Organization: Markets and Strategies* (2nd ed.). Cambridge University Press. Chapter 18.3.
 - Shy, O. (1996). *Industrial Organization: Theory and Applications*. MIT Press. Chapter 9.
-
-## Next week: assessment and feedback
-
-- Online class test (timing and format)
-- Tutorial: class test feedback and problem solving
-- Transition to subsequent lecture topics as scheduled
 
 

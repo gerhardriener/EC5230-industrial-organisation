@@ -4,13 +4,16 @@ title: "Exercises"
 
 ## Problem Sets
 
-Practice exercises for EC5230 Industrial Organisation. Each part includes a version without solutions and a version with solutions for checking your work, published after discussion in class
+Practice exercises for EC5230 Industrial Organisation. Each exercise is published in two explicit variants:
+- **Student** version (`solutions: false`)
+- **Instructor** version (`solutions: true`)
 
 ### Exercise Sets
 
-| Set | html | pdf |
-|---|---|---|
-| Exercises 1 | [download](sheets/exercises-1.html) |[download](sheets/exercises-1.pdf) |
+| Set | Student (HTML) | Instructor (HTML) | Student (PDF) | Instructor (PDF) |
+|---|---|---|---|---|
+| Exercises 1 | [download](sheets/exercises-1.html) | [download](sheets/exercises-1-solutions.html) | [download](sheets/exercises-1.pdf) | [download](sheets/exercises-1-solutions.pdf) |
+| Live Exercise 1 | [download](live/live-exercise-1.html) | [download](live/live-exercise-1-solutions.html) | [download](live/live-exercise-1.pdf) | [download](live/live-exercise-1-solutions.pdf) |
 
 : {.striped .hover}
 

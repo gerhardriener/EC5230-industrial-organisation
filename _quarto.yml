@@ -20,15 +20,33 @@ website:
       - text: "Exercises"
         href: exercises/index.qmd
   sidebar:
+    # BEGIN AUTO-LECTURE-SIDEBAR
     - title: "Lecture Slides"
       style: "docked"
       background: light
       contents:
-        - section: "Weeks 1-5"
+        - section: "Week 0"
+          contents:
+            - lecture-slides/slides/lecture-0-intro.qmd
+        - section: "Week 1"
           contents:
             - lecture-slides/slides/lecture-1-oligopoly.qmd
+        - section: "Week 2"
+          contents:
             - lecture-slides/slides/lecture-2-product-differentiation.qmd
+        - section: "Week 3"
+          contents:
             - lecture-slides/slides/lecture-3-innovation.qmd
+        - section: "Week 4"
+          contents:
+            - lecture-slides/slides/lecture-4-patents.qmd
+        - section: "Week 5"
+          contents:
+            - lecture-slides/slides/lecture-5-repeated-games.qmd
+        - section: "Week 7"
+          contents:
+            - lecture-slides/slides/lecture-6-corporate-rand.qmd
+    # END AUTO-LECTURE-SIDEBAR
 
 format:
   html:

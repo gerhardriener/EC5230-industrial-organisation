@@ -106,7 +106,7 @@ The single most powerful pattern in this system is the **adversarial QA loop**:
     | Verdict |
     +----+----+
      /       \
-APPROVED   NEEDS WORK
+APPROVED   NEEDS REVISION
     |          |
   Done    +----v---------+
           | quarto-fixer |  "Fixed 12/12 issues."
@@ -261,10 +261,10 @@ Add any additional tools you use (e.g., `python3`, `julia`, `pandoc`).
 /compile-latex MyFirstLecture
 
 # Test 2: Can Claude proofread?
-/proofread Slides/MyFirstLecture.tex
+/proofread lecture-slides/slides/lecture-1-oligopoly.qmd
 
 # Test 3: Does the quality score work?
-python scripts/quality_score.py Quarto/MyFile.qmd
+python scripts/quality_score.py lecture-slides/slides/lecture-1-oligopoly.qmd
 ```
 
 ---
@@ -469,7 +469,7 @@ Use it for:
 
 ## Key Facts
 - Project uses XeLaTeX, not pdflatex
-- Bibliography file: Bibliography_base.bib
+- Bibliography file: references.bib
 
 ## Corrections Log
 - [LEARN:r-code] Package X drops obs silently when covariate is missing
@@ -895,3 +895,4 @@ Then create `SKILL.md` with YAML frontmatter + step-by-step instructions.
 | Knowledge Base | `.claude/rules/knowledge-base-template.md` | Domain notation template |
 | Plan-First Workflow | `.claude/rules/plan-first-workflow.md` | Plan mode, plan saving, context preservation, session logging |
 | Orchestrator Protocol | `.claude/rules/orchestrator-protocol.md` | Contractor mode: autonomous implement-verify-review-fix loop |
+

@@ -18,6 +18,9 @@ Use `.claude/rules/audit-report-conventions.md` for naming/persistence conventio
 
 ```
 Phase 0: Pre-flight → Phase 1: Critic audit → Phase 2: Fixer → Phase 3: Re-audit → Loop until APPROVED (max 5 rounds)
+
+Initialize workflow logging before Phase 0:
+- `python scripts/workflow_log.py init --task "qa-quarto: $ARGUMENTS" --slug "qa-quarto-$ARGUMENTS"`
 ```
 
 ## Hard Gates (Non-Negotiable)
@@ -64,3 +67,6 @@ Persist the synthesized final report to:
 - `quality_reports/[LECTURE_ID]_qa_final.md`
 
 Include hard gate status, iteration summary, and remaining issues.
+
+Close workflow log:
+- `python scripts/workflow_log.py close --slug "qa-quarto-$ARGUMENTS" --summary "qa-quarto loop complete"`

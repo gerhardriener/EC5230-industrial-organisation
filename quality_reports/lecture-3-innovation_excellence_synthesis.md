@@ -25,7 +25,7 @@
 | **TOTAL**          | **4**    | **11** | **15** | **30** |
 
 **Quality Interpretation:**
-- **4 Critical** + **11 Medium** → **GOOD** (borderline with "Needs Work")
+- **4 Critical** + **11 Medium** → **GOOD** (borderline with "NEEDS REVISION")
 - TikZ dimension alone: **NEEDS REVISION** (critical readability flaws)
 - Content dimension alone: **EXCELLENT** (pedagogically sound)
 
@@ -341,7 +341,7 @@ With critical issues resolved:
 | ---------- | -------- | ------ | -------------------- |
 | Excellent  | 0-2      | 0-5    | Ready to present     |
 | Good       | 3-5      | 6-15   | Minor refinements    |
-| Needs Work | 6-10     | 16-30  | Significant revision |
+| NEEDS REVISION | 6-10     | 16-30  | Significant revision |
 | Poor       | 11+      | 31+    | Major restructuring  |
 
 **This deck:** 4 Critical + 11 Medium = **GOOD** (upper range)
@@ -356,7 +356,7 @@ If we weight dimensions by impact on student learning:
 |-----------|--------|--------|----------------|
 | Pedagogical | 40% | Excellent | 36/40 |
 | Content (Proofreading) | 30% | Good | 24/30 |
-| Visual (TikZ + Layout) | 30% | Needs Work | 15/30 |
+| Visual (TikZ + Layout) | 30% | NEEDS REVISION | 15/30 |
 | **TOTAL** | 100% | **GOOD** | **75/100** |
 
 **Interpretation:** Strong content held back by visual issues. Fix the visuals to unlock full potential.
@@ -433,3 +433,4 @@ If we weight dimensions by impact on student learning:
 **Review completed:** 2026-02-09
 **Next review recommended:** After TikZ fixes applied
 **Estimated time to teaching-ready:** 30-60 minutes (fix 4 critical issues + verify)
+

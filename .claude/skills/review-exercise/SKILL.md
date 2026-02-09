@@ -24,6 +24,9 @@ Type auto-detect:
 - `exercises/sheets/` → takehome
 - Derive `FILE_STEM` from the exercise filename without extension.
 
+Before running the review stack, initialize log artifacts:
+- `python scripts/workflow_log.py init --task "review exercise: [FILE_STEM]" --slug "review-[FILE_STEM]"`
+
 ---
 
 ## Review Agents (Run in Parallel)
@@ -65,6 +68,10 @@ Create a combined summary:
 2. ...
 ```
 
+Use only canonical verdict vocabulary:
+- `EXCELLENT / GOOD / NEEDS REVISION / POOR`
+- `CORRECT / MINOR ERRORS / NEEDS REVISION / INCORRECT`
+
 ---
 
 ## Quality Rubric
@@ -87,6 +94,9 @@ Persist to `quality_reports/`:
 - `[FILE_STEM]_solution_check.md`
 - `[FILE_STEM]_report.md`
 - `[FILE_STEM]_exercise_synthesis.md`
+
+On completion:
+- `python scripts/workflow_log.py close --slug "review-[FILE_STEM]" --summary "exercise review cycle complete"`
 
 ---
 

@@ -30,6 +30,15 @@ Create a beautiful, pedagogically excellent quarto reveal.js lecture deck.
 
 ## WORKFLOW
 
+### Pre-step: Plan and Session Log (required)
+
+- Create persistent plan/session artifacts before drafting:
+  - `python scripts/workflow_log.py init --task "create lecture: $ARGUMENTS" --slug "create-lecture-$ARGUMENTS"`
+- Append key design decisions during implementation:
+  - `python scripts/workflow_log.py append --slug "create-lecture-$ARGUMENTS" --note "<decision>"`
+- Close the log at completion:
+  - `python scripts/workflow_log.py close --slug "create-lecture-$ARGUMENTS" --summary "workflow complete"`
+
 ### Phase 0: Intake & Context
 
 - Read knowledge base and creation guide

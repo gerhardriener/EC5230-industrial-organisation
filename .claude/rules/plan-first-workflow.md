@@ -28,6 +28,10 @@ Save plans to `quality_reports/plans/` using:
 
 `YYYY-MM-DD_short-description.md`
 
+Recommended helper for deterministic plan/log creation:
+
+- `python scripts/workflow_log.py init --task "<task>" --slug "<short-slug>"`
+
 Minimal plan format:
 
 ```markdown
@@ -58,6 +62,11 @@ Log entries:
 - After plan approval (goal + plan summary)
 - When a key decision changes
 - At session end (summary + open questions)
+
+Recommended helper commands:
+
+- Append decision: `python scripts/workflow_log.py append --slug "<short-slug>" --note "<decision>"`
+- Close task: `python scripts/workflow_log.py close --slug "<short-slug>" --summary "<outcome>"`
 
 ---
 

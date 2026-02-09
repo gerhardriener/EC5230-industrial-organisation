@@ -282,7 +282,7 @@ strings live-exercise-1.pdf | grep "### (f)"  # 0 results ✓
 |-------------|----------|--------|--------|-----------|---------|
 | **EXCELLENT** (85-100) | 0 | 0-2 | ±10% | CORRECT | Ready to deploy |
 | GOOD (70-84) | 0-1 | 3-5 | ±20% | MINOR ERRORS | Minor fixes needed |
-| NEEDS REVISION (50-69) | 2-3 | 6-10 | >20% | NEEDS WORK | Significant revisions |
+| NEEDS REVISION (50-69) | 2-3 | 6-10 | >20% | NEEDS REVISION | Significant revisions |
 | POOR (<50) | 4+ | 11+ | >50% | INCORRECT | Major restructuring |
 
 **This Exercise (After Fix):**
@@ -472,3 +472,4 @@ The scope reduction resolved the CRITICAL timing issue. Three MEDIUM-priority no
 **Report saved to:** `quality_reports/live-exercise-1_scope_reduction_applied.md`
 **Date:** 2026-02-09
 **Verification:** Complete (all outputs tested and validated)
+

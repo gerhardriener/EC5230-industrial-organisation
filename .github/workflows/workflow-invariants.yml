@@ -1,0 +1,29 @@
+name: Workflow Invariants
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  lint-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Check lecture registry sync
+        run: python scripts/sync_lecture_registry.py --check
+
+      - name: Run workflow invariant lints
+        run: python scripts/lint_workflow_invariants.py
+
+      - name: Run quality score contract checks
+        run: python scripts/check_quality_score_contract.py
+

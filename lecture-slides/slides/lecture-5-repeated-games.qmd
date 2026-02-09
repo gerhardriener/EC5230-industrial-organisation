@@ -350,6 +350,21 @@ With $A=10$, $c=1$: $\hat{\pi}=2.43 < \pi^C=5.0625$ (delegation intensifies comp
 Delegation can be privately attractive ex ante (as a commitment device) but can reduce profits in equilibrium while benefiting consumers.
 :::
 
+## Summary and next week
+
+**Summary**
+
+- Subgame perfect equilibrium is solved by backward induction in finite multi-stage games
+- Stackelberg timing creates first-mover advantage through commitment
+- Strategic delegation can raise aggressiveness but may lower industry profits in equilibrium
+- Welfare effects can diverge: consumers may gain even when firms lose
+
+**Next week: cooperative R&D**
+
+- Spillovers and non-cooperative R&D incentives
+- Cooperative R&D and research joint ventures
+- Welfare and policy implications under different cooperation regimes
+
 ## References
 
 
