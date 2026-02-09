@@ -59,7 +59,7 @@ Let $x^*$ be the consumer indifferent between the two firms (assume $x^* \in (a,
 2. Solve for $x^*$ as a function of $(p_1,p_2,t,a)$.
 3. Use your result to write demands $q_1(p_1,p_2)$ and $q_2(p_1,p_2)$.
 
-*Hint:* For $x \in (a,1-a)$ you can drop absolute values; only squared distances matter.
+*Hint:* For $x \in (a,1-a)$, squared distances are always positive; no absolute values are needed.
 
 ### (b) Best responses in prices
 
@@ -82,7 +82,7 @@ Then compute equilibrium market shares $(q_1^*,q_2^*)$.
 
 ### (d) When does one firm capture the whole market? (optional challenge)
 
-Your answer in (a)–(c) assumed an interior split ($x^*\in(0,1)$).
+Your answer in (a)–(c) assumed an interior split ($x^* \in (a, 1-a)$).
 
 1. Derive the condition on the cost difference $\Delta c \equiv c_2-c_1$ (relative to $t$ and $d$) under which the interior split is valid.
 2. Give a short economic interpretation: what happens if $|\Delta c|$ is "too large"?
