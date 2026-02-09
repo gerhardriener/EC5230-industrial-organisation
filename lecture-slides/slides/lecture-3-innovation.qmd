@@ -175,6 +175,10 @@ The competitive innovator earns $40 > 24$ (the monopolist's WTP). The monopolist
 
 ## Replacement effect: visual comparison
 
+- Left panel: the incumbent monopolist already earns $\pi^m(c_0)$ before innovating.
+- Innovation raises monopoly profit only by the increment $\pi^m(c_1)-\pi^m(c_0)$.
+- Right panel: under competitive pre-innovation conditions, the innovation mostly **creates** rents.
+
 ::: {.content-visible when-format="beamer"}
 \resizebox{0.95\textwidth}{!}{\includestandalone{../figs/source/fig-innovation-replacement-effect}}
 :::
@@ -185,9 +189,9 @@ The competitive innovator earns $40 > 24$ (the monopolist's WTP). The monopolist
 
 ## Replacement effect [@arrowEconomicWelfareAllocation1972]
 
-::: {.callout-note title="Key idea (replacement effect)"}
-Under perfect competition, pre-innovation profits are zero, so innovation mainly **creates** rents. Under monopoly, innovation partly **replaces** existing rents.
-:::
+- Under perfect competition, pre-innovation profits are approximately zero.
+- Under monopoly, pre-innovation profits are positive.
+- So the same innovation has a larger incremental private value in competitive settings.
 
 ## Appropriability and imitation
 
@@ -208,6 +212,9 @@ $$
 \Delta \pi^{pc} - \Delta \pi^m = \pi^m(c_0) > 0
 $$
 
+- The wedge equals pre-innovation monopoly rents, $\pi^m(c_0)$.
+- The replacement effect is strongest when baseline monopoly rents are high.
+
 ## Replacement effect: intuition
 
 ::: {.callout-important title="Takeaway"}
@@ -215,6 +222,10 @@ Holding everything else fixed, an incumbent monopolist has **weaker** incentives
 :::
 
 ## Empirical example: competition and innovation
+
+- Low competition: firms have little pressure to "escape."
+- Intermediate competition: innovation incentives are strongest for neck-and-neck firms.
+- Very high competition: post-innovation rents are compressed, reducing innovation incentives.
 
 ::: {.callout-note title="Inverted-U evidence (QJE)"}
 @aghionCompetitionInnovationInvertedU2005 document an **inverted-U** relationship between product-market competition and innovation (patents/citations) in UK firms, consistent with "escape competition" incentives for neck-and-neck firms and a **replacement effect** for laggards.
@@ -256,6 +267,9 @@ $$
 \Delta W = W(c_1) - W(c_0) = \frac{(A-c_1)^2 - (A-c_0)^2}{2}
 $$
 
+- This is the full increase in total surplus from lowering marginal cost.
+- In the linear benchmark, it is exactly twice the monopoly incremental profit.
+
 ## Putting the benchmarks side-by-side
 
 | Environment | What the innovator captures | WTP / value |
@@ -269,6 +283,10 @@ Private incentives and social value need not align: **$\Delta W$ can exceed $\De
 :::
 
 ## Empirical example: private vs social returns
+
+- Measured producer gains capture only part of innovation's value.
+- Consumer surplus from quality improvements can be very large.
+- This gap motivates policy tools that raise private appropriability.
 
 ::: {.callout-note title="Welfare gains from product innovation (JPE)"}
 @trajtenbergWelfareAnalysisProduct1989 estimates consumer and producer surplus gains from quality improvements in computed tomography (CT) scanners, illustrating that the **social value** of innovation can greatly exceed the innovator's private returns.
@@ -386,7 +404,8 @@ The key result is a clean link between:
 
 The linear model gave us clean closed-form comparisons. The D-S framework sacrifices tractability for generality — but delivers a structural result linking innovation to concentration.
 
-::: {.callout-note title="Notation for this section"}
+**Notation for this section**
+
 | Symbol | Type | Meaning |
 |--------|------|---------|
 | $x$ | Choice | R&D expenditure per firm |
@@ -394,7 +413,6 @@ The linear model gave us clean closed-form comparisons. The D-S framework sacrif
 | $N$ | Outcome | Number of active firms (endogenous) |
 | $\varepsilon$ | Parameter | Demand elasticity |
 | $\alpha$ | Parameter | R&D cost elasticity: $\alpha = -\frac{dc(x)}{dx}\frac{x}{c}$ (measures how effectively R&D reduces cost) |
-:::
 
 ## Planner benchmark 
 

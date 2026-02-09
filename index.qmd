@@ -43,22 +43,17 @@ This module contributes to UN Sustainable Development Goals:
 ## Course Materials
 
 ::: {.callout-note}
-## Navigation
-
-Use the links below to access lectures, exercises, and interactive applications.
+Use the top navbar for section-level navigation and the sidebars on lecture/exercise pages for week-by-week links.
 :::
 
-### [Lecture Slides](lecture-slides/)
-
-
-### [Exercises](exercises/)
-
-Problem sets with and without solutions to help you practice the concepts covered in lectures. Tutorials focus on live problem-solving (numerical and discussion/interpretation questions).
+| Material | What it includes | Link |
+|---|---|---|
+| Lecture Slides | Weekly lecture decks in interactive HTML and printable PDF formats | [Lecture Slides overview](lecture-slides/index.qmd) |
+| Exercises | Student and instructor variants for sheets and live tutorial exercises | [Exercises overview](exercises/index.qmd) |
 
 ### Interactive Apps
 
-TBD
-Interactive visualisations to explore key economic models:
+TBD. Interactive visualisations to explore key economic models:
 
 - Cournot duopoly best responses
 - Monopolist profit maximisation

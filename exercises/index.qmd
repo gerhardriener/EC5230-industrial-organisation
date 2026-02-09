@@ -4,20 +4,28 @@ title: "Exercises"
 
 ## Problem Sets
 
-Practice exercises for EC5230 Industrial Organisation. Each exercise is published in two explicit variants:
+Practice exercises for EC5230 Industrial Organisation.
+
+Each exercise is published in two explicit variants:
+
 - **Student** version (`solutions: false`)
 - **Instructor** version (`solutions: true`)
 
-### Exercise Sets
+::: {.callout-note}
+Use the navbar `Exercises` menu for direct links to each sheet.
+:::
 
-| Set | Student (HTML) | Instructor (HTML) | Student (PDF) | Instructor (PDF) |
-|---|---|---|---|---|
-| Exercises 1 | [download](sheets/exercises-1.html) | [download](sheets/exercises-1-solutions.html) | [download](sheets/exercises-1.pdf) | [download](sheets/exercises-1-solutions.pdf) |
-| Live Exercise 1 | [download](live/live-exercise-1.html) | [download](live/live-exercise-1-solutions.html) | [download](live/live-exercise-1.pdf) | [download](live/live-exercise-1-solutions.pdf) |
+### Exercise Sheets
 
-: {.striped .hover}
+| Set | Source | Student (HTML) | Instructor (HTML) | Student (PDF) | Instructor (PDF) |
+|---|---|---|---|---|---|
+| Exercise 1: Oligopoly and Product Differentiation | [qmd](sheets/exercises-1.qmd) | [download](sheets/exercises-1.html) | [download](sheets/exercises-1-solutions.html) | [download](sheets/exercises-1.pdf) | [download](sheets/exercises-1-solutions.pdf) |
 
----
+### Live Exercises
+
+| Set | Source | Student (HTML) | Instructor (HTML) | Student (PDF) | Instructor (PDF) |
+|---|---|---|---|---|---|
+| Live Exercise 1: Hotelling with quadratic transportation costs | [qmd](live/live-exercise-1.qmd) | [download](live/live-exercise-1.html) | [download](live/live-exercise-1-solutions.html) | [download](live/live-exercise-1.pdf) | [download](live/live-exercise-1-solutions.pdf) |
 
 ::: {.callout-warning}
 ## Study Advice

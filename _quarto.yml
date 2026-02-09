@@ -17,14 +17,42 @@ website:
     left:
       - text: "Home"
         file: index.qmd
+      - text: "Lectures"
+        menu:
+          - text: "All Lecture Slides"
+            href: lecture-slides/index.qmd
+          - text: "Week 0: Introduction"
+            href: lecture-slides/slides/lecture-0-intro.qmd
+          - text: "Week 1: Oligopoly"
+            href: lecture-slides/slides/lecture-1-oligopoly.qmd
+          - text: "Week 2: Product Differentiation"
+            href: lecture-slides/slides/lecture-2-product-differentiation.qmd
+          - text: "Week 3: Innovation"
+            href: lecture-slides/slides/lecture-3-innovation.qmd
+          - text: "Week 4: Patents and IPRs"
+            href: lecture-slides/slides/lecture-4-patents.qmd
+          - text: "Week 5: Multi-stage Games"
+            href: lecture-slides/slides/lecture-5-repeated-games.qmd
+          - text: "Week 7: Cooperative R&D"
+            href: lecture-slides/slides/lecture-6-corporate-rand.qmd
       - text: "Exercises"
-        href: exercises/index.qmd
+        menu:
+          - text: "All Exercises"
+            href: exercises/index.qmd
+          - text: "Exercise 1: Oligopoly and Product Differentiation"
+            href: exercises/sheets/exercises-1.qmd
+          - text: "Live Exercise 1: Hotelling (Quadratic Transport Costs)"
+            href: exercises/live/live-exercise-1.qmd
+
   sidebar:
-    # BEGIN AUTO-LECTURE-SIDEBAR
-    - title: "Lecture Slides"
+    - id: lectures
+      title: "Lecture Slides"
       style: "docked"
       background: light
       contents:
+        - text: "Lecture Overview"
+          href: lecture-slides/index.qmd
+        # BEGIN AUTO-LECTURE-SIDEBAR
         - section: "Week 0"
           contents:
             - lecture-slides/slides/lecture-0-intro.qmd
@@ -46,7 +74,19 @@ website:
         - section: "Week 7"
           contents:
             - lecture-slides/slides/lecture-6-corporate-rand.qmd
-    # END AUTO-LECTURE-SIDEBAR
+        # END AUTO-LECTURE-SIDEBAR
+    - id: exercises
+      title: "Exercises"
+      style: "docked"
+      background: light
+      contents:
+        - exercises/index.qmd
+        - section: "Exercise Sheets"
+          contents:
+            - exercises/sheets/exercises-1.qmd
+        - section: "Live Exercises"
+          contents:
+            - exercises/live/live-exercise-1.qmd
 
 format:
   html:
