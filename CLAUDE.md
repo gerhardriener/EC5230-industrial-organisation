@@ -17,35 +17,40 @@
 
 ## Quick Reference: Available Skills & Agents
 
-| Command                           | What It Does                                                         |
-| --------------------------------- | -------------------------------------------------------------------- |
-| `/deploy [LectureN]`              | Render Quarto slides and sync to GitHub Pages                        |
-| `/extract-tikz [LectureN]`        | TikZ diagrams to PDF to SVG with 0-based indexing                    |
-| `/proofread [filename]`           | Grammar/typo/overflow review and report                              |
-| `/visual-audit [filename]`        | Slide layout audit for overflow and consistency                      |
-| `/pedagogy-review [filename]`     | PhD-student lens: narrative, notation, pacing review                 |
-| `/review-r [file or LectureN]`    | R code review: quality, reproducibility, correctness                 |
-| `/qa-quarto [LectureN]`           | Adversarial Quarto vs Beamer QA: critic finds issues, fixer resolves |
-| `/slide-excellence [filename]`    | Combined visual + pedagogical + proofreading + citation audit review |
-| `/translate-to-quarto [filename]` | Full Beamer to Quarto translation workflow                           |
-| `/validate-bib`                   | Cross-reference citations vs bibliography file                       |
-| `/devils-advocate`                | Challenge slide design with pedagogical questions                    |
-| `/create-lecture`                 | Full lecture creation workflow                                       |
+| Command                                     | What It Does                                                         |
+| ------------------------------------------- | -------------------------------------------------------------------- |
+| **Lecture Slides**                          |                                                                      |
+| `/deploy [LectureN]`                        | Render Quarto slides and sync to GitHub Pages                        |
+| `/extract-tikz [LectureN]`                  | TikZ diagrams to PDF to SVG with 0-based indexing                    |
+| `/proofread [filename]`                     | Grammar/typo/overflow review and report                              |
+| `/visual-audit [filename]`                  | Slide layout audit for overflow and consistency                      |
+| `/pedagogy-review [filename]`               | PhD-student lens: narrative, notation, pacing review                 |
+| `/review-r [file or LectureN]`              | R code review: quality, reproducibility, correctness                 |
+| `/qa-quarto [LectureN]`                     | Adversarial Quarto vs Beamer QA: critic finds issues, fixer resolves |
+| `/slide-excellence [filename]`              | Combined visual + pedagogical + proofreading + citation audit review |
+| `/translate-to-quarto [filename]`           | Full Beamer to Quarto translation workflow                           |
+| `/create-lecture`                           | Full lecture creation workflow                                       |
+| `/devils-advocate`                          | Challenge slide design with pedagogical questions                    |
+| **Exercises**                               |                                                                      |
+| `/review-exercise <file>`                   | Comprehensive exercise review: timing, pedagogy, solutions, clarity  |
+| `/create-exercise --type --lecture --topic` | Generate new exercise from specifications with quality checks        |
+| **Bibliography**                            |                                                                      |
+| `/validate-bib`                             | Cross-reference citations vs bibliography file                       |
 
 **Agents** (available for delegation):
 
-| Agent | Model | Purpose |
-|-------|-------|---------|
-| `proofreader` | inherit | Grammar, typos, overflow, consistency |
-| `slide-auditor` | inherit | Visual layout, spacing, overflow |
-| `pedagogy-reviewer` | inherit | Narrative arc, pedagogical patterns |
-| `r-reviewer` | sonnet | R code quality and reproducibility |
-| `tikz-reviewer` | inherit | TikZ diagram visual quality |
-| `beamer-translator` | opus | Beamer→Quarto translation |
-| `quarto-critic` | opus | Adversarial QA (read-only) |
-| `quarto-fixer` | sonnet | Implements critic fixes |
-| `verifier` | inherit | Compilation and rendering checks |
-| `domain-reviewer` | inherit | Substantive domain correctness |
+| Agent               | Model   | Purpose                               |
+| ------------------- | ------- | ------------------------------------- |
+| `proofreader`       | inherit | Grammar, typos, overflow, consistency |
+| `slide-auditor`     | inherit | Visual layout, spacing, overflow      |
+| `pedagogy-reviewer` | inherit | Narrative arc, pedagogical patterns   |
+| `r-reviewer`        | sonnet  | R code quality and reproducibility    |
+| `tikz-reviewer`     | inherit | TikZ diagram visual quality           |
+| `beamer-translator` | opus    | Beamer→Quarto translation             |
+| `quarto-critic`     | opus    | Adversarial QA (read-only)            |
+| `quarto-fixer`      | sonnet  | Implements critic fixes               |
+| `verifier`          | inherit | Compilation and rendering checks      |
+| `domain-reviewer`   | inherit | Substantive domain correctness        |
 
 **Note:** Citation audit is built into the `/slide-excellence` skill (not a standalone agent).
 

@@ -372,7 +372,7 @@ Under what market conditions might an entrant have stronger innovation incentive
 @blundellMarketShareMarket1999 find that higher market share and market value predict more patenting/innovations in UK manufacturing firms, consistent with **strategic** incentives (including pre-emptive innovation) in oligopolistic industries.
 :::
 
-# Endogenous R&D and Market Structure {background-color="#00539b"}
+# Endogenous R&D and Market Structure: @dasguptaIndustrialStructureNature1980 {background-color="#00539b"}
 
 ## Setup and key result
 
@@ -396,7 +396,7 @@ The linear model gave us clean closed-form comparisons. The D-S framework sacrif
 | $\alpha$ | Parameter | R&D cost elasticity: $\alpha = -\frac{dc(x)}{dx}\frac{x}{c}$ (measures how effectively R&D reduces cost) |
 :::
 
-## Dasgupta–Stiglitz (1980): planner benchmark [@dasguptaIndustrialStructureNature1980]
+## Planner benchmark 
 
 **Question**: Do more firms imply more innovation?
 
@@ -428,7 +428,7 @@ $$
 @acemogluMarketSizeInnovation2004 show that larger potential markets lead to more pharmaceutical innovation (new drugs/new molecular entities), consistent with models where the return to innovation rises with **scale**.
 :::
 
-## Dasgupta–Stiglitz (1980): firm's problem [@dasguptaIndustrialStructureNature1980]
+## Firm's problem
 
 **Assumptions:** Firms engage in **Cournot (quantity) competition** with symmetric costs. Each firm chooses R&D expenditure $x_i$ and output $q_i$ simultaneously.
 
@@ -471,7 +471,7 @@ $$
 
 We'll use this to link pricing to R&D in the Dasgupta–Stiglitz model.
 
-## @dasguptaIndustrialStructureNature1980: equilibrium pricing
+## Equilibrium pricing
 
 **First-order condition in $q_i$:**
 
@@ -486,7 +486,7 @@ where $\varepsilon = -\frac{\partial Q}{\partial P}\frac{P}{Q}$ is the demand el
 - The term $\left(1-\frac{1}{N\varepsilon}\right)$ captures market power via the perceived demand elasticity under Cournot
   - More firms ($N\uparrow$) → perceived demand becomes more elastic → mark-ups fall
 
-## Free entry condition [@dasguptaIndustrialStructureNature1980]
+## Free entry condition 
 
 **Zero profit condition** (free entry):
 
@@ -533,7 +533,7 @@ $$
 \frac{1}{N\varepsilon} = \alpha\!\left(1 - \frac{1}{N\varepsilon}\right) \quad \Rightarrow \quad \frac{1}{N^*} = \frac{1}{\varepsilon}\cdot\frac{\alpha}{1+\alpha}
 $$
 
-## Equilibrium concentration [@dasguptaIndustrialStructureNature1980]
+## Equilibrium concentration 
 
 **Equilibrium concentration satisfies:**
 
@@ -545,7 +545,7 @@ $$
 Concentration and research intensity are jointly determined: entry expands $N$ until operating surplus covers R&D outlays $x^*$. Higher R&D cost elasticity ($\alpha$) supports higher concentration; more elastic demand lowers concentration.
 :::
 
-## Dasgupta–Stiglitz: numerical illustration
+## Numerical illustration
 
 **Using the concentration formula** with specific values:
 
