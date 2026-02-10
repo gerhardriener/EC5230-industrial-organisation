@@ -4163,6 +4163,8 @@ window.Quarto = {
 </header>
 
 
+<section id="solutions" class="level1">
+<h1>Solutions</h1>
 <p><strong>Group exercise (≈20 minutes)</strong></p>
 <ul>
 <li>Work in groups of 2–3.</li>
@@ -4219,8 +4221,80 @@ U_i(x) = \bar u - p_i - t(x-x_i)^2,
 <li>Derive the condition on the cost difference <span class="math inline">\(\Delta c \equiv c_2-c_1\)</span> (relative to <span class="math inline">\(t\)</span> and <span class="math inline">\(d\)</span>) under which the interior split is valid.</li>
 <li>Give a short economic interpretation: what happens if <span class="math inline">\(|\Delta c|\)</span> is “too large”?</li>
 </ol>
+</section>
+</section>
+<section id="suggested-solution-sketch" class="level2">
+<h2 class="anchored" data-anchor-id="suggested-solution-sketch">Suggested solution (sketch)</h2>
+<section id="a" class="level3">
+<h3 class="anchored" data-anchor-id="a">(a)</h3>
+<p>Indifference:</p>
+<p><span class="math display">\[
+\bar u - p_1 - t(x-a)^2 = \bar u - p_2 - t(1-a-x)^2.
+\]</span></p>
+<p>Cancel <span class="math inline">\(\bar u\)</span> and rearrange:</p>
+<p><span class="math display">\[
+p_2-p_1 = t\big[(x-a)^2-(1-a-x)^2\big].
+\]</span></p>
+<p>Expanding (or using <span class="math inline">\((x-a)^2-(1-a-x)^2=(1-2a)(2x-1)=d(2x-1)\)</span>) gives</p>
+<p><span class="math display">\[
+x^*=\frac{1}{2}+\frac{p_2-p_1}{2td}.
+\]</span></p>
+<p>For an interior split, demands are</p>
+<p><span class="math display">\[
+q_1 = x^*,
+\qquad
+q_2 = 1-x^*.
+\]</span></p>
+</section>
+<section id="b" class="level3">
+<h3 class="anchored" data-anchor-id="b">(b)</h3>
+<p>Using <span class="math inline">\(q_1=\frac{1}{2}+\frac{p_2-p_1}{2td}\)</span>, we have <span class="math inline">\(\frac{\partial q_1}{\partial p_1}=-\frac{1}{2td}\)</span>. FOC for Firm 1:</p>
+<p><span class="math display">\[
+0=\frac{\partial \pi_1}{\partial p_1}
+= q_1 + (p_1-c_1)\frac{\partial q_1}{\partial p_1}
+= q_1 - \frac{p_1-c_1}{2td}.
+\]</span></p>
+<p>So <span class="math inline">\(p_1-c_1=2td\,q_1\)</span>, i.e.</p>
+<p><span class="math display">\[
+p_1-c_1 = 2td\left(\frac{1}{2}+\frac{p_2-p_1}{2td}\right)
+= td + p_2 - p_1
+\quad \Rightarrow \quad
+BR_1(p_2)=\frac{p_2+c_1+td}{2}.
+\]</span></p>
+<p>Similarly,</p>
+<p><span class="math display">\[
+BR_2(p_1)=\frac{p_1+c_2+td}{2}.
+\]</span></p>
+</section>
+<section id="c" class="level3">
+<h3 class="anchored" data-anchor-id="c">(c)</h3>
+<p>Solve <span class="math inline">\(2p_1=p_2+c_1+td\)</span> and <span class="math inline">\(2p_2=p_1+c_2+td\)</span> to get</p>
+<p><span class="math display">\[
+p_1^* = td + \frac{2c_1+c_2}{3},
+\qquad
+p_2^* = td + \frac{c_1+2c_2}{3}.
+\]</span></p>
+<p>Price gap: <span class="math inline">\(p_2^*-p_1^*=\frac{c_2-c_1}{3}\)</span>.</p>
+<p>Market shares:</p>
+<p><span class="math display">\[
+q_1^*=\frac{1}{2}+\frac{c_2-c_1}{6td},
+\qquad
+q_2^*=\frac{1}{2}-\frac{c_2-c_1}{6td}.
+\]</span></p>
+<p>Distance <span class="math inline">\(d\)</span> raises the common “differentiation” term <span class="math inline">\(td\)</span> in prices, hence increases average markups and profits.</p>
+</section>
+<section id="d" class="level3">
+<h3 class="anchored" data-anchor-id="d">(d)</h3>
+<p>Interior split requires <span class="math inline">\(q_1^*,q_2^* \in (0,1)\)</span>, i.e.</p>
+<p><span class="math display">\[
+\left|\frac{c_2-c_1}{6td}\right| &lt; \frac{1}{2}
+\quad \Leftrightarrow \quad
+|c_2-c_1| &lt; 3td.
+\]</span></p>
+<p>If <span class="math inline">\(|c_2-c_1|\)</span> is too large relative to <span class="math inline">\(td\)</span>, the low-cost firm can profitably set a price that leaves the rival with (essentially) zero demand.</p>
 
 
+</section>
 </section>
 </section>
 
