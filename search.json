@@ -2870,7 +2870,7 @@
     "href": "lecture-slides/slides/lecture-3-innovation.html#setup-and-key-result",
     "title": "Lecture 3 - Innovation",
     "section": "Setup and key result",
-    "text": "Setup and key result\nThe Dasgupta and Stiglitz (1980) model treats R&D as an endogenous sunk cost: firms spend on R&D to reduce marginal cost, and entry adjusts endogenously.\nThe key result is a clean link between:\n\nDemand conditions (elasticity, market size)\nInnovative opportunities (how effective R&D is at lowering costs)\nEquilibrium concentration (how many firms survive under free entry)\n\nThe linear model gave us clean closed-form comparisons. The D-S framework sacrifices tractability for generality — but delivers a structural result linking innovation to concentration.\nNotation for this section\n\n\n\n\n\n\n\n\nSymbol\nType\nMeaning\n\n\n\n\n\\(x\\)\nChoice\nR&D expenditure per firm\n\n\n\\(c(x)\\)\nFunction\nMarginal cost (decreasing in \\(x\\))\n\n\n\\(N\\)\nOutcome\nNumber of active firms (endogenous)\n\n\n\\(\\varepsilon\\)\nParameter\nDemand elasticity\n\n\n\\(\\alpha\\)\nParameter\nR&D cost elasticity: \\(\\alpha = -\\frac{dc(x)}{dx}\\frac{x}{c}\\) (measures how effectively R&D reduces cost)",
+    "text": "Setup and key result\nThe Dasgupta and Stiglitz (1980) model treats R&D as an endogenous sunk cost: firms spend on R&D to reduce marginal cost, and entry adjusts endogenously.\nThe key result is a clean link between:\n\nDemand conditions (elasticity, market size)\nInnovative opportunities (how effective R&D is at lowering costs)\nEquilibrium concentration (how many firms survive under free entry)\n\nThe linear model gave us clean closed-form comparisons. The D-S framework sacrifices tractability for generality — but delivers a structural result linking innovation to concentration.\n## Notation for this section\n\n\n\n\n\n\n\n\nSymbol\nType\nMeaning\n\n\n\n\n\\(x\\)\nChoice\nR&D expenditure per firm\n\n\n\\(c(x)\\)\nFunction\nMarginal cost (decreasing in \\(x\\))\n\n\n\\(N\\)\nOutcome\nNumber of active firms (endogenous)\n\n\n\\(\\varepsilon\\)\nParameter\nDemand elasticity\n\n\n\\(\\alpha\\)\nParameter\nR&D cost elasticity: \\(\\alpha = -\\frac{dc(x)}{dx}\\frac{x}{c}\\) (measures how effectively R&D reduces cost)",
     "crumbs": [
       "Week 3",
       "Lecture 3 - Innovation"
@@ -2881,18 +2881,18 @@
     "href": "lecture-slides/slides/lecture-3-innovation.html#planner-benchmark",
     "title": "Lecture 3 - Innovation",
     "section": "Planner benchmark",
-    "text": "Planner benchmark\nQuestion: Do more firms imply more innovation?\nPrimitives:\n\n\\(U(Q)\\) = gross social benefit\n\\(c = c(x)\\) = constant marginal cost depending on R&D expenditure \\(x\\)\nAssumption: \\(c'(x) &lt; 0\\) (R&D reduces cost)\n\nSocial optimum:\n\\[\n\\max_{x,Q} \\ V(x,Q) = U(Q) - c(x)Q - x\n\\]\nFirst-order condition in \\(x\\):\n\\[\n-c'(x)Q = 1\n\\]",
+    "text": "Planner benchmark\nQuestion: Do more firms imply more innovation?\nPrimitives:\n\n\\(U(Q)\\) = gross social benefit\n\\(c = c(x)\\) = constant marginal cost depending on R&D expenditure \\(x\\)\nAssumption: \\(c'(x) &lt; 0\\) (R&D reduces cost)",
     "crumbs": [
       "Week 3",
       "Lecture 3 - Innovation"
     ]
   },
   {
-    "objectID": "lecture-slides/slides/lecture-3-innovation.html#planner-benchmark-interpretation",
-    "href": "lecture-slides/slides/lecture-3-innovation.html#planner-benchmark-interpretation",
+    "objectID": "lecture-slides/slides/lecture-3-innovation.html#planner-benchmark-social-optimum",
+    "href": "lecture-slides/slides/lecture-3-innovation.html#planner-benchmark-social-optimum",
     "title": "Lecture 3 - Innovation",
-    "section": "Planner benchmark: interpretation",
-    "text": "Planner benchmark: interpretation\n\nOptimal R&D increases with scale \\(Q\\): a larger market makes cost reduction more valuable",
+    "section": "Planner benchmark: Social optimum",
+    "text": "Planner benchmark: Social optimum\n\\[\n\\max_{x,Q} \\ V(x,Q) = U(Q) - c(x)Q - x\n\\]\nFirst-order condition in \\(x\\):\n\\[\n-c'(x)Q = 1\n\\]\nOptimal R&D increases with scale \\(Q\\): a larger market makes cost reduction more valuable",
     "crumbs": [
       "Week 3",
       "Lecture 3 - Innovation"
