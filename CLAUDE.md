@@ -6,71 +6,6 @@
 
 ---
 
-## Canonical Sources (No Duplication)
-
-- `.github/copilot-instructions.md` — thin pointer to canonical `.claude/rules/` sources
-- `.claude/rules/plan-first-workflow.md` — plan-first workflow and session logging
-- `.claude/rules/single-source-of-truth.md` — source chain and TikZ freshness rules
-- `.claude/rules/quality-gates.md` — commit/PR thresholds
-- `.claude/rules/audit-report-conventions.md` — report naming, persistence, and synthesis pattern
-- `.claude/rules/authoring-standards.md` — slide authoring standards
-- `.claude/rules/exercise-standards.md` — exercise requirements
-- `.claude/rules/exercise-quality-rubric.md` — exercise timing and scoring
-- `.claude/rules/proofreading-protocol.md` — proofreading gate
-- `.claude/rules/callout-box-guidelines.md` — callout usage rules
-- `.claude/rules/tikz-workflow.md` — TikZ pipeline
-- `.claude/rules/st-andrews-visual-identity.md` — palette and typography
-- `.claude/rules/verification-protocol.md` — verification requirements
-
----
-
-## Quick Reference: Skills & Agents
-
-| Command                                     | What It Does                                                         |
-| ------------------------------------------- | -------------------------------------------------------------------- |
-| **Lecture Slides**                          |                                                                      |
-| `/compile-latex [file.tex]`                | Compile Beamer `.tex` slides with XeLaTeX/BibTeX passes             |
-| `/deploy [LectureN]`                        | Render Quarto slides and sync to GitHub Pages                        |
-| `/extract-tikz [LectureN]`                  | TikZ diagrams to PDF to SVG with 0-based indexing                    |
-| `/slide-excellence [filename]`              | Canonical lecture release review: visual + pedagogy + proofreading + citation audit |
-| `/proofread [filename]`                     | Diagnostics-only proofreading report (avoid stacking with `/slide-excellence`) |
-| `/visual-audit [filename]`                  | Diagnostics-only layout/overflow debug (avoid stacking with `/slide-excellence`) |
-| `/pedagogy-review [filename]`               | Diagnostics-only narrative/pacing review (avoid stacking with `/slide-excellence`) |
-| `/substance-review [filename]`              | IO domain correctness review (read-only)                             |
-| `/review-r [file or LectureN]`              | R code review: quality, reproducibility, correctness                 |
-| `/qa-quarto [LectureN]`                     | Quarto vs Beamer parity QA (translation mode; uses canonical orchestrator loop) |
-| `/translate-to-quarto [LectureN or file]`   | Beamer to Quarto translation workflow                                |
-| `/create-lecture`                           | Full lecture creation workflow                                       |
-| `/devils-advocate`                          | Optional adversarial challenge pass after baseline pedagogy review   |
-| **Exercises**                               |                                                                      |
-| `/review-exercise <file>`                   | Exercise review: timing, pedagogy, solutions, clarity                |
-| `/create-exercise --type --lecture --topic` | Generate new exercise from specifications with quality checks        |
-| **Bibliography**                            |                                                                      |
-| `/validate-bib`                             | Cross-reference citations vs bibliography file                       |
-
-**Agents** (available for delegation):
-
-| Agent               | Model   | Purpose                                      |
-| ------------------- | ------- | -------------------------------------------- |
-| `proofreader`       | inherit | Grammar, typos, overflow, consistency        |
-| `slide-auditor`     | inherit | Visual layout, spacing, overflow             |
-| `pedagogy-reviewer` | inherit | Narrative arc, pedagogical patterns          |
-| `exercise-reviewer` | inherit | Exercise timing and pedagogical review       |
-| `solution-checker`  | inherit | Mathematical correctness verification        |
-| `r-reviewer`        | sonnet  | R code quality and reproducibility           |
-| `tikz-reviewer`     | inherit | TikZ diagram visual quality                  |
-| `beamer-translator` | opus    | Beamer->Quarto translation                    |
-| `quarto-critic`     | opus    | Adversarial QA (read-only)                   |
-| `quarto-fixer`      | sonnet  | Implements critic fixes                      |
-| `verifier`          | inherit | Canonical compile/render verification engine |
-| `domain-reviewer`   | inherit | Substantive domain correctness               |
-
-**Note:** Citation audit is built into `/slide-excellence` (not a standalone agent).
-
-**Hard rule (avoid duplicate work):** In orchestrator mode (plan approved), do not manually run a second full lecture review stack unless you intentionally want a milestone audit snapshot.
-
----
-
 ## Project Overview
 
 **EC5230 Industrial Organisation** is an MSc-level course at the University of St Andrews covering firm behavior in imperfectly competitive markets, strategic interactions, and industrial economics policy.
@@ -94,6 +29,82 @@ This repository is designed for multi-platform collaboration using:
 - **GitHub** for version control and cross-computer synchronization
 - **Quarto** for slide rendering (HTML + PDF)
 - **Claude Code** for slide development, content creation, and pedagogical refinement
+
+---
+
+## Tone and author voice
+
+The authorial voice is that of a **senior professor in Industrial Organisation**. Slides and exercises must be **exam-usable** and **theory-first**, using canonical IO notation and standard results, with the objective of:
+
+- preparing students to solve exam-style problems accurately and efficiently; and
+- building deeper understanding of IO models (strategic interaction, market power, and equilibrium reasoning).
+
+Clarity, consistency of notation, and tight alignment between assumptions, equilibrium concepts, and comparative statics take priority over narrative.
+
+---
+
+## Canonical Sources (No Duplication)
+
+- `.github/copilot-instructions.md` — thin pointer to canonical `.claude/rules/` sources
+- `.claude/rules/plan-first-workflow.md` — plan-first workflow and session logging
+- `.claude/rules/single-source-of-truth.md` — source chain and TikZ freshness rules
+- `.claude/rules/quality-gates.md` — commit/PR thresholds
+- `.claude/rules/audit-report-conventions.md` — report naming, persistence, and synthesis pattern
+- `.claude/rules/authoring-standards.md` — slide authoring standards
+- `.claude/rules/exercise-standards.md` — exercise requirements
+- `.claude/rules/exercise-quality-rubric.md` — exercise timing and scoring
+- `.claude/rules/proofreading-protocol.md` — proofreading gate
+- `.claude/rules/callout-box-guidelines.md` — callout usage rules
+- `.claude/rules/tikz-workflow.md` — TikZ pipeline
+- `.claude/rules/st-andrews-visual-identity.md` — palette and typography
+- `.claude/rules/verification-protocol.md` — verification requirements
+
+---
+
+## Quick Reference: Skills & Agents
+
+| Command                                     | What It Does                                                                        |
+| ------------------------------------------- | ----------------------------------------------------------------------------------- |
+| **Lecture Slides**                          |                                                                                     |
+| `/compile-latex [file.tex]`                 | Compile Beamer `.tex` slides with XeLaTeX/BibTeX passes                             |
+| `/deploy [LectureN]`                        | Render Quarto slides and sync to GitHub Pages                                       |
+| `/extract-tikz [LectureN]`                  | TikZ diagrams to PDF to SVG with 0-based indexing                                   |
+| `/slide-excellence [filename]`              | Canonical lecture release review: visual + pedagogy + proofreading + citation audit |
+| `/proofread [filename]`                     | Diagnostics-only proofreading report (avoid stacking with `/slide-excellence`)      |
+| `/visual-audit [filename]`                  | Diagnostics-only layout/overflow debug (avoid stacking with `/slide-excellence`)    |
+| `/pedagogy-review [filename]`               | Diagnostics-only narrative/pacing review (avoid stacking with `/slide-excellence`)  |
+| `/substance-review [filename]`              | IO domain correctness review (read-only)                                            |
+| `/review-r [file or LectureN]`              | R code review: quality, reproducibility, correctness                                |
+| `/qa-quarto [LectureN]`                     | Quarto vs Beamer parity QA (translation mode; uses canonical orchestrator loop)     |
+| `/translate-to-quarto [LectureN or file]`   | Beamer to Quarto translation workflow                                               |
+| `/create-lecture`                           | Full lecture creation workflow                                                      |
+| `/devils-advocate`                          | Optional adversarial challenge pass after baseline pedagogy review                  |
+| **Exercises**                               |                                                                                     |
+| `/review-exercise <file>`                   | Exercise review: timing, pedagogy, solutions, clarity                               |
+| `/create-exercise --type --lecture --topic` | Generate new exercise from specifications with quality checks                       |
+| **Bibliography**                            |                                                                                     |
+| `/validate-bib`                             | Cross-reference citations vs bibliography file                                      |
+
+**Agents** (available for delegation):
+
+| Agent               | Model   | Purpose                                      |
+| ------------------- | ------- | -------------------------------------------- |
+| `proofreader`       | inherit | Grammar, typos, overflow, consistency        |
+| `slide-auditor`     | inherit | Visual layout, spacing, overflow             |
+| `pedagogy-reviewer` | inherit | Narrative arc, pedagogical patterns          |
+| `exercise-reviewer` | inherit | Exercise timing and pedagogical review       |
+| `solution-checker`  | inherit | Mathematical correctness verification        |
+| `r-reviewer`        | sonnet  | R code quality and reproducibility           |
+| `tikz-reviewer`     | inherit | TikZ diagram visual quality                  |
+| `beamer-translator` | opus    | Beamer->Quarto translation                   |
+| `quarto-critic`     | opus    | Adversarial QA (read-only)                   |
+| `quarto-fixer`      | sonnet  | Implements critic fixes                      |
+| `verifier`          | inherit | Canonical compile/render verification engine |
+| `domain-reviewer`   | inherit | Substantive domain correctness               |
+
+**Note:** Citation audit is built into `/slide-excellence` (not a standalone agent).
+
+**Hard rule (avoid duplicate work):** In orchestrator mode (plan approved), do not manually run a second full lecture review stack unless you intentionally want a milestone audit snapshot.
 
 ---
 
@@ -168,8 +179,8 @@ EC5230-industrial-organisation/
 | 2: Differentiation | ✓ Complete | Hotelling, Salop, free entry   | —            |
 | 3: Innovation      | ✓ Complete | Arrow, D-S, replacement effect | 2026-02-08   |
 | 4: Patents         | ✓ Draft    | Patent design, races, welfare  | 2026-02-09   |
-| 5: Repeated Games  | ✓ Draft    | Stackelberg, delegation         | 2026-02-09   |
-| 6: Corporate R&D   | ✓ Draft    | Spillovers, RJV, cooperation    | 2026-02-09   |
+| 5: Repeated Games  | ✓ Draft    | Stackelberg, delegation        | 2026-02-09   |
+| 6: Corporate R&D   | ✓ Draft    | Spillovers, RJV, cooperation   | 2026-02-09   |
 
 **Recent Quality Improvements (Lecture 3, 2026-02-08):**
 
