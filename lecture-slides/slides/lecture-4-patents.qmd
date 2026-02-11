@@ -22,17 +22,27 @@ execute:
 
 ## IPRs: economic problem
 
-::: {.callout-note}
-## Object of analysis
-
+::: {.callout-note title="Object of analysis"}
 IPRs make a non-rival good partially excludable, creating private incentives for costly innovation.
 :::
 
 - Knowledge is (partly) **non-rival** and often **hard to exclude**
 - Without protection, imitation can dissipate rents $\Rightarrow$ weak private incentive to incur fixed R\&D cost
 
-- **Policy objective**
-  - Provide incentives for invention while limiting static distortions in product markets
+- **Policy objective:** provide incentives for invention while limiting static distortions in product markets
+
+## Learning objectives
+
+- Explain why non-rival ideas can lead to underinvestment without protection
+- Use the ideas model to compare the private investment condition $\pi \nu T \ge F$ to the planner objective
+- Understand how **length** and **breadth** jointly shape the incentive-distortion trade-off
+- Explain why patent races can generate socially excessive duplication
+
+::: {.callout-note title="Today: roadmap"}
+1. Patents as incentives: the central trade-off
+2. Patent length in the ideas model (screening and welfare)
+3. Breadth, endogenous R\&D, and patent races
+:::
 
 ## IPRs: instruments
 
@@ -60,6 +70,12 @@ IPRs make a non-rival good partially excludable, creating private incentives for
   - What is an optimal **length** and **breadth**?
   - How does competition in R\&D (patent races) affect efficiency?
 
+## Running application (throughout): pharmaceuticals
+
+- Fixed development cost $F$ is large (clinical trials), while marginal cost is low
+- Patent protection creates temporary market power, but expiry enables generic entry
+- Breadth maps to how close a substitute can be without infringing; races map to multiple labs pursuing the same target
+
 # Scotchmer: ideas model {background-color="#00539b"}
 
 ## Ideas model (Scotchmer): primitives
@@ -74,6 +90,10 @@ Following @scotchmerInnovationIncentives2006
 - **Interpretation**
   - $\nu$ captures the size of social gains from making the idea usable
   - $F$ is the up-front resource cost required for development
+
+::: {.callout-note title="Application: a new drug"}
+Map $(\nu,F)$ to an innovation with large fixed R\&D cost $F$ and a flow of benefits $\nu$ that is partially appropriable during patent protection.
+:::
 
 ## Ideas model (Scotchmer): social value under discounting
 
@@ -101,11 +121,11 @@ $$
 \pi \nu T
 $$
 
-- Per-period deadweight loss: $\ell \nu$ $\Rightarrow$ patent DWL: $\ell \nu T$
+- Per-period deadweight loss: $\lambda \nu$ $\Rightarrow$ patent DWL: $\lambda \nu T$
 
 - **Interpretation**
   - $\pi$ is a reduced-form “appropriability” parameter
-  - $\ell$ captures the static distortion created by protection
+  - $\lambda$ captures the static distortion created by protection
 
 ## Discounted patent length: $T$
 
@@ -144,7 +164,7 @@ $$
 - Discounted net social value (invention made):
 
 $$
-\frac{\nu}{r} - \ell \nu T
+\frac{\nu}{r} - \lambda \nu T
 $$
 
 - **Interpretation**
@@ -156,7 +176,7 @@ $$
 - If inventions differ in $(\nu,F)$, “one-size-fits-all” length is not generally optimal
 
 - Comparative statics (holding other parameters fixed):
-  - more elastic demand / stronger substitution $\Rightarrow$ higher DWL $\ell$ $\Rightarrow$ shorter protection
+  - more elastic demand / stronger substitution $\Rightarrow$ higher DWL $\lambda$ $\Rightarrow$ shorter protection
   - higher development cost $F$ $\Rightarrow$ longer protection to ensure investment
 
 ## Example: ideas A and B
@@ -164,11 +184,11 @@ $$
 - Idea A: $(\nu_A=5, F_A=10)$
 - Idea B: $(\nu_B=2, F_B=20)$
 
-Let $T=20$, $\pi=\tfrac{1}{2}$, $\ell=\tfrac{1}{4}$, $r=\tfrac{1}{3}$.
+Let $T=20$, $\pi=\tfrac{1}{2}$, $\lambda=\tfrac{1}{4}$, $r=\tfrac{1}{3}$.
 
 - Tasks:
   - Which ideas are privately profitable ($\pi \nu T \ge F$)?
-  - Which ideas have positive discounted net social value $\left(\frac{\nu}{r}-\ell \nu T - F \ge 0\right)$?
+  - Which ideas have positive discounted net social value $\left(\frac{\nu}{r}-\lambda \nu T - F \ge 0\right)$?
 
 - **Interpretation**
   - With these parameter values, private profitability need not coincide with positive net social value: patent protection can induce investment even when net welfare is negative
@@ -186,6 +206,10 @@ Let $T=20$, $\pi=\tfrac{1}{2}$, $\ell=\tfrac{1}{4}$, $r=\tfrac{1}{3}$.
 - **Interpretation**
   - Allowing close substitutes increases the elasticity of demand faced by the patent holder
 
+::: {.callout-note title="Application: close substitutes"}
+In pharmaceuticals, breadth maps to whether a close substitute can launch during protection without infringing.
+:::
+
 ## Breadth and demand elasticity (intuition)
 
 - If close substitutes are allowed:
@@ -200,9 +224,7 @@ Let $T=20$, $\pi=\tfrac{1}{2}$, $\ell=\tfrac{1}{4}$, $r=\tfrac{1}{3}$.
 
 Assume the “correct” expected private value of protection is fixed.
 
-::: {.callout-note}
-## Regimes (product space)
-
+::: {.callout-note title="Regimes (product space)"}
 - Broad–short: $(\hat{T}, \hat{\pi}_1+\hat{\pi}_2)$
 - Narrow–long: $(\tilde{T}, \tilde{\pi}_1)$
 :::
@@ -312,11 +334,13 @@ Planner chooses $\tau$ trading off:
 - Assumption (for the comparison):
   - $CS^d>CS^m$ (more competition in the product market raises consumer surplus)
 
+::: {.callout-note title="Application: parallel R&D programs"}
+Think of multiple labs racing to develop the same drug/vaccine: each pays a fixed setup cost and succeeds with some probability.
+:::
+
 ## Patent race: Nash equilibrium condition
 
-::: {.callout-warning}
-## Duplication incentive
-
+::: {.callout-warning title="Duplication incentive"}
 “Winner-takes-all” payoffs can create privately excessive entry into R\&D when firms ignore duplication costs.
 :::
 
@@ -352,12 +376,30 @@ $$
 - Interpretation:
   - Firms overinvest when the negative externality on rivals’ profits outweighs the consumer-surplus gain from having two innovators
 
+## Numerical check: duplication region
+
+Let $p=0.8$, $\pi^m=10$, $\pi^d=3$, $W^m=15$, $W^d=16$.
+
+- Private two-division threshold:
+
+$$
+f^{priv}_2 = p(1-p)\pi^m + p^2\pi^d = 0.8(0.2)10 + 0.64(3) = 3.52
+$$
+
+- Social two-division threshold:
+
+$$
+f^{publ}_2 = p(1-2p)W^m + p^2W^d = 0.8(-0.6)15 + 0.64(16) = 3.04
+$$
+
+- If $f=3.2$, then $f^{publ}_2 < f < f^{priv}_2$: two research divisions are privately viable but socially excessive.
+
 ## Summary and next week
 
 **Summary**
 
 - Patents trade off dynamic incentives against static distortions (deadweight loss during protection)
-- In the ideas model, investment requires $\pi \nu T \ge F$, while welfare accounts for $\frac{\nu}{r}$ and the DWL term $\ell \nu T$
+- In the ideas model, investment requires $\pi \nu T \ge F$, while welfare accounts for $\frac{\nu}{r}$ and the DWL term $\lambda \nu T$
 - Breadth and length can be substitutes in delivering a given private incentive level (broad–short vs narrow–long)
 - Patent races can generate socially excessive duplication when private entry incentives exceed social benefits
 
@@ -368,3 +410,6 @@ $$
 - Strategic delegation (Vickers)
 
 ## References
+
+::: {#refs}
+:::
