@@ -2646,11 +2646,11 @@
     ]
   },
   {
-    "objectID": "lecture-slides/slides/lecture-3-innovation.html#drastic-innovation-condition",
-    "href": "lecture-slides/slides/lecture-3-innovation.html#drastic-innovation-condition",
+    "objectID": "lecture-slides/slides/lecture-3-innovation.html#drastic-vs-non-drastic-innovation-condition",
+    "href": "lecture-slides/slides/lecture-3-innovation.html#drastic-vs-non-drastic-innovation-condition",
     "title": "Lecture 3 - Innovation",
-    "section": "Drastic innovation condition",
-    "text": "Drastic innovation condition\n\\[\nP^m(c_1) &lt; c_0\n\\quad \\Leftrightarrow \\quad\n\\frac{A+c_1}{2} &lt; c_0\n\\quad \\Leftrightarrow \\quad\nA + c_1 &lt; 2c_0\n\\]",
+    "section": "Drastic vs non-drastic innovation condition",
+    "text": "Drastic vs non-drastic innovation condition\n\\[\n\\text{Drastic: } \\;\nP^m(c_1) &lt; c_0\n\\;\\Leftrightarrow\\;\n\\frac{A+c_1}{2} &lt; c_0\n\\;\\Leftrightarrow\\;\nA + c_1 &lt; 2c_0\n\\]\n\\[\n\\text{Non-drastic: } \\;\nP^m(c_1) \\ge c_0\n\\;\\Leftrightarrow\\;\n\\frac{A+c_1}{2} \\ge c_0\n\\;\\Leftrightarrow\\;\nA + c_1 \\ge 2c_0\n\\]\nBoundary case: \\(P^m(c_1)=c_0\\) (equivalently \\(A+c_1=2c_0\\)).",
     "crumbs": [
       "Week 3",
       "Lecture 3 - Innovation"
@@ -2661,7 +2661,7 @@
     "href": "lecture-slides/slides/lecture-3-innovation.html#numeric-check-drastic-or-non-drastic",
     "title": "Lecture 3 - Innovation",
     "section": "Numeric check: drastic or non-drastic?",
-    "text": "Numeric check: drastic or non-drastic?\nTake \\(A=20\\), \\(c_0=10\\), and \\(c_1=6\\).\n\nDrastic condition: \\(A + c_1 = 26 &gt; 2c_0 = 20\\) → non-drastic\nInnovator limit-prices at \\(p = c_0 = 10\\), sells \\(Q = A - c_0 = 10\\)\nCompetitive innovator profit: \\((c_0 - c_1)(A - c_0) = 4 \\times 10 = 40\\)\nRecall monopoly WTP: \\(\\Delta\\pi^m = \\frac{(14)^2 - (10)^2}{4} = \\frac{196 - 100}{4} = 24\\)\n\n\n\n\n\n\n\n\nReplacement effect preview\n\n\nThe competitive innovator earns \\(40 &gt; 24\\) (the monopolist’s WTP). The monopolist gains less because it already earns \\(\\pi^m(c_0) = 25\\) before innovating — it is partly replacing existing rents.",
+    "text": "Numeric check: drastic or non-drastic?\nUse the same values as panel (a): \\(A=18\\), \\(c_0=10\\), and \\(c_1=6\\).\n\nDrastic condition: \\(A + c_1 = 24 &gt; 2c_0 = 20\\) → non-drastic\nInnovator limit-prices at \\(p = c_0 = 10\\), sells \\(Q = A - c_0 = 8\\)\nCompetitive innovator profit: \\((c_0 - c_1)(A - c_0) = 4 \\times 8 = 32\\)\nRecall monopoly WTP: \\(\\Delta\\pi^m = \\frac{(12)^2 - (8)^2}{4} = \\frac{144 - 64}{4} = 20\\)\n\n\n\n\n\n\n\n\nReplacement effect preview\n\n\nThe competitive innovator earns \\(32 &gt; 20\\) (the monopolist’s WTP). The monopolist gains less because it already earns \\(\\pi^m(c_0) = 16\\) before innovating — it is partly replacing existing rents.",
     "crumbs": [
       "Week 3",
       "Lecture 3 - Innovation"
@@ -2683,29 +2683,18 @@
     "href": "lecture-slides/slides/lecture-3-innovation.html#replacement-effect-arroweconomicwelfareallocation1972",
     "title": "Lecture 3 - Innovation",
     "section": "Replacement effect (Arrow 1972)",
-    "text": "Replacement effect (Arrow 1972)\n\nUnder perfect competition, pre-innovation profits are approximately zero.\nUnder monopoly, pre-innovation profits are positive.\nSo the same innovation has a larger incremental private value in competitive settings.",
+    "text": "Replacement effect (Arrow 1972)\n\nThe key object is the incremental value of innovation.\nCompetitive benchmark: pre-innovation profits are approximately zero, so \\(\\Delta\\pi^{pc} \\approx \\pi_{\\text{after}}^{pc}\\).\nMonopoly benchmark: pre-innovation profits are positive, so \\(\\Delta\\pi^{m} = \\pi_{\\text{after}}^{m} - \\pi^{m}(c_0)\\).\nThis gap in incremental value is the replacement effect.",
     "crumbs": [
       "Week 3",
       "Lecture 3 - Innovation"
     ]
   },
   {
-    "objectID": "lecture-slides/slides/lecture-3-innovation.html#appropriability-and-imitation",
-    "href": "lecture-slides/slides/lecture-3-innovation.html#appropriability-and-imitation",
+    "objectID": "lecture-slides/slides/lecture-3-innovation.html#drastic-benchmark-one-line-wedge",
+    "href": "lecture-slides/slides/lecture-3-innovation.html#drastic-benchmark-one-line-wedge",
     "title": "Lecture 3 - Innovation",
-    "section": "Appropriability and imitation",
-    "text": "Appropriability and imitation\n\nIf the innovation cannot be protected (instant diffusion / perfect imitation), competition drives price to \\(c_1\\) and the innovator’s WTP is zero.\nMost IO policy questions start from the fact that appropriability is imperfect but positive (patents, secrecy, lead time).",
-    "crumbs": [
-      "Week 3",
-      "Lecture 3 - Innovation"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/slides/lecture-3-innovation.html#replacement-effect-a-one-line-comparison-drastic-case",
-    "href": "lecture-slides/slides/lecture-3-innovation.html#replacement-effect-a-one-line-comparison-drastic-case",
-    "title": "Lecture 3 - Innovation",
-    "section": "Replacement effect: a one-line comparison (drastic case)",
-    "text": "Replacement effect: a one-line comparison (drastic case)\nIf the innovation is drastic and grants exclusive rights:\n\\[\n\\Delta \\pi^{pc} = \\pi^m(c_1), \\qquad \\Delta \\pi^m = \\pi^m(c_1) - \\pi^m(c_0)\n\\]\n\\[\n\\Delta \\pi^{pc} - \\Delta \\pi^m = \\pi^m(c_0) &gt; 0\n\\]\n\nThe wedge equals pre-innovation monopoly rents, \\(\\pi^m(c_0)\\).\nThe replacement effect is strongest when baseline monopoly rents are high.",
+    "section": "Drastic benchmark: one-line wedge",
+    "text": "Drastic benchmark: one-line wedge\nIf innovation is drastic and grants exclusive rights:\n\\[\n\\Delta \\pi^{pc} = \\pi^m(c_1), \\qquad \\Delta \\pi^m = \\pi^m(c_1) - \\pi^m(c_0)\n\\]\n\\[\n\\Delta \\pi^{pc} - \\Delta \\pi^m = \\pi^m(c_0) &gt; 0\n\\]\n\nThe wedge equals pre-innovation monopoly rents, \\(\\pi^m(c_0)\\).\nThe replacement effect is strongest when baseline monopoly rents are high.",
     "crumbs": [
       "Week 3",
       "Lecture 3 - Innovation"
@@ -2717,6 +2706,17 @@
     "title": "Lecture 3 - Innovation",
     "section": "Replacement effect: intuition",
     "text": "Replacement effect: intuition\n\n\n\n\n\n\n\nTakeaway\n\n\nHolding everything else fixed, an incumbent monopolist has weaker incentives to innovate than a competitive industry because it is “replacing” its own pre-innovation rents.",
+    "crumbs": [
+      "Week 3",
+      "Lecture 3 - Innovation"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/slides/lecture-3-innovation.html#appropriability-and-imitation",
+    "href": "lecture-slides/slides/lecture-3-innovation.html#appropriability-and-imitation",
+    "title": "Lecture 3 - Innovation",
+    "section": "Appropriability and imitation",
+    "text": "Appropriability and imitation\n\nIf the innovation cannot be protected (instant diffusion / perfect imitation), competition drives price to \\(c_1\\) and the innovator’s WTP is zero.\nMost IO policy questions start from imperfect but positive appropriability (patents, secrecy, lead time).",
     "crumbs": [
       "Week 3",
       "Lecture 3 - Innovation"
@@ -2789,55 +2789,55 @@
     ]
   },
   {
-    "objectID": "lecture-slides/slides/lecture-3-innovation.html#incentives-to-innovate-in-oligopoly",
-    "href": "lecture-slides/slides/lecture-3-innovation.html#incentives-to-innovate-in-oligopoly",
+    "objectID": "lecture-slides/slides/lecture-3-innovation.html#incentives-to-innovate-with-rivals-intuition-first",
+    "href": "lecture-slides/slides/lecture-3-innovation.html#incentives-to-innovate-with-rivals-intuition-first",
     "title": "Lecture 3 - Innovation",
-    "section": "Incentives to innovate in oligopoly",
-    "text": "Incentives to innovate in oligopoly\nTakeaway\n\nInnovation incentives need not be monotone in “competition intensity”\nThey depend on:\n\nNumber of firms (\\(n\\))\nProduct differentiation\nMode of competition (price vs quantity)\nWhether innovation is protectable (patents/lead time) and whether there are spillovers\n\n\n\n\n\n\n\n\n\nRule of thumb\n\n\nMore rivals reduces baseline profits (hurting incentives), but can increase the value of being the low-cost firm (helping incentives).",
+    "section": "Incentives to innovate with rivals: intuition first",
+    "text": "Incentives to innovate with rivals: intuition first\nInnovation incentives are not monotone in “competition intensity.”\n\nThey depend on market structure (\\(n\\), differentiation, price vs quantity competition).\nThey depend on technology and institutions (protectability, spillovers).\n\n\n\n\n\n\n\n\nRule of thumb\n\n\nMore rivals reduce baseline profits (discouraging innovation), but can raise the value of becoming the low-cost firm (encouraging innovation).",
     "crumbs": [
       "Week 3",
       "Lecture 3 - Innovation"
     ]
   },
   {
-    "objectID": "lecture-slides/slides/lecture-3-innovation.html#impact-of-number-of-firms-cournot-intuition",
-    "href": "lecture-slides/slides/lecture-3-innovation.html#impact-of-number-of-firms-cournot-intuition",
+    "objectID": "lecture-slides/slides/lecture-3-innovation.html#number-of-rivals-cournot-intuition",
+    "href": "lecture-slides/slides/lecture-3-innovation.html#number-of-rivals-cournot-intuition",
     "title": "Lecture 3 - Innovation",
-    "section": "Impact of number of firms (Cournot intuition)",
-    "text": "Impact of number of firms (Cournot intuition)\nLinear Cournot with \\(n\\) firms: incentives can follow an inverse-U as \\(n\\) increases.\nTwo opposing effects as \\(n \\uparrow\\):\n\nCompetition effect: profits for all firms fall (discourages innovation)\nCompetitive advantage effect: cost advantage becomes more valuable when there are more inefficient rivals (encourages innovation)",
+    "section": "Number of rivals: Cournot intuition",
+    "text": "Number of rivals: Cournot intuition\nIn linear Cournot, R&D incentives can follow an inverse-U as \\(n\\) rises:\n\nCompetition effect: more firms compress profits for everyone.\nCompetitive advantage effect: a cost lead is more valuable when many higher-cost rivals remain.\n\nWhich force dominates is an empirical question and can vary by industry.",
     "crumbs": [
       "Week 3",
       "Lecture 3 - Innovation"
     ]
   },
   {
-    "objectID": "lecture-slides/slides/lecture-3-innovation.html#monopoly-threatened-by-entry-setup",
-    "href": "lecture-slides/slides/lecture-3-innovation.html#monopoly-threatened-by-entry-setup",
+    "objectID": "lecture-slides/slides/lecture-3-innovation.html#entry-threat-framework-incumbent-vs-entrant",
+    "href": "lecture-slides/slides/lecture-3-innovation.html#entry-threat-framework-incumbent-vs-entrant",
     "title": "Lecture 3 - Innovation",
-    "section": "Monopoly threatened by entry: setup",
-    "text": "Monopoly threatened by entry: setup\nIncumbent monopoly faces potential entrant:\n\nBoth can acquire innovation reducing MC from \\(c_0\\) to \\(c_1 &lt; c_0\\)\nEntrant can enter profitably only if it gets innovation\nLet \\(\\pi^d(c_i,c_j)\\) denote firm \\(i\\)’s profit in the post-entry duopoly when own cost is \\(c_i\\) and the rival’s cost is \\(c_j\\)\n\nTiming/game structure:\nWe compare the willingness to pay for innovation (e.g., in a patent auction or R&D race). The innovation is awarded to whichever firm values it more highly. Entry happens after the innovation is allocated.",
+    "section": "Entry threat framework: incumbent vs entrant",
+    "text": "Entry threat framework: incumbent vs entrant\nConsider an incumbent monopolist facing a potential entrant:\n\nInnovation lowers marginal cost from \\(c_0\\) to \\(c_1&lt;c_0\\).\nThe entrant can profitably enter only if it obtains the innovation.\nLet \\(\\pi^d(c_i,c_j)\\) be firm \\(i\\)’s duopoly profit when own cost is \\(c_i\\) and rival cost is \\(c_j\\).\n\nTiming:\n\nFirms compete for innovation (patent auction / R&D race).\nInnovation is allocated to the higher-valuation firm.\nEntry decision and product-market competition occur after allocation.",
     "crumbs": [
       "Week 3",
       "Lecture 3 - Innovation"
     ]
   },
   {
-    "objectID": "lecture-slides/slides/lecture-3-innovation.html#entry-threat-payoff-structure",
-    "href": "lecture-slides/slides/lecture-3-innovation.html#entry-threat-payoff-structure",
+    "objectID": "lecture-slides/slides/lecture-3-innovation.html#who-values-innovation-more",
+    "href": "lecture-slides/slides/lecture-3-innovation.html#who-values-innovation-more",
     "title": "Lecture 3 - Innovation",
-    "section": "Entry threat: payoff structure",
-    "text": "Entry threat: payoff structure\nPayoffs:\n\nIf incumbent gets innovation: entrant stays out\n\nIncumbent: \\(\\pi^m(c_1)\\); Entrant: \\(0\\)\n\nIf entrant gets innovation: entrant enters\n\nIncumbent: \\(\\pi^d(c_0, c_1)\\); Entrant: \\(\\pi^d(c_1, c_0)\\)\n\n\n\n\n\n\n\n\n\nStrategic value\n\n\nInnovation can change market structure (monopoly vs duopoly), so incentives are not only about production efficiency.",
+    "section": "Who values innovation more?",
+    "text": "Who values innovation more?\nPayoff logic by winner:\n\nIf the incumbent wins: market stays monopoly, payoff \\(\\pi^m(c_1)\\).\nIf the entrant wins: entry occurs, payoffs become \\(\\pi^d(c_0,c_1)\\) for the incumbent and \\(\\pi^d(c_1,c_0)\\) for the entrant.\n\nSo per-period valuations are:\n\\[\nV_I = \\pi^m(c_1) - \\pi^d(c_0, c_1), \\qquad\nV_E = \\pi^d(c_1, c_0)\n\\]",
     "crumbs": [
       "Week 3",
       "Lecture 3 - Innovation"
     ]
   },
   {
-    "objectID": "lecture-slides/slides/lecture-3-innovation.html#entry-threat-pre-emption-incentives-gilbertpreemptivepatentingpersistence1982",
-    "href": "lecture-slides/slides/lecture-3-innovation.html#entry-threat-pre-emption-incentives-gilbertpreemptivepatentingpersistence1982",
+    "objectID": "lecture-slides/slides/lecture-3-innovation.html#entry-threat-pre-emption-condition-gilbertpreemptivepatentingpersistence1982",
+    "href": "lecture-slides/slides/lecture-3-innovation.html#entry-threat-pre-emption-condition-gilbertpreemptivepatentingpersistence1982",
     "title": "Lecture 3 - Innovation",
-    "section": "Entry threat: pre-emption incentives (Gilbert and Newbery 1982)",
-    "text": "Entry threat: pre-emption incentives (Gilbert and Newbery 1982)\nPer-period value of innovation\n\\[\nV_I = \\pi^m(c_1) - \\pi^d(c_0, c_1)\n\\]\n\\[\nV_E = \\pi^d(c_1, c_0)\n\\]\nIncumbent has stronger incentives if:\n\\[\nV_I &gt; V_E \\quad \\Leftrightarrow \\quad \\pi^m(c_1) &gt; \\pi^d(c_1, c_0) + \\pi^d(c_0, c_1)\n\\]\nThis typically holds when products are close substitutes (entry is very harmful).\n\n\n\n\n\n\n\nInterpretation\n\n\nThe incumbent may innovate more than an entrant because innovation does two things: it lowers cost and it keeps the market in the monopoly regime (entry deterrence / pre-emption).",
+    "section": "Entry threat: pre-emption condition (Gilbert and Newbery 1982)",
+    "text": "Entry threat: pre-emption condition (Gilbert and Newbery 1982)\nThe incumbent has stronger innovation incentives when:\n\\[\nV_I &gt; V_E\n\\quad \\Leftrightarrow \\quad\n\\pi^m(c_1) &gt; \\pi^d(c_1, c_0) + \\pi^d(c_0, c_1)\n\\]\nThis is more likely when products are close substitutes, so entry would sharply reduce incumbent profits.\n\n\n\n\n\n\n\nInterpretation\n\n\nFor incumbents, innovation has a dual payoff: efficiency gain (lower cost) plus market-structure protection (deterring entry). That is the pre-emption channel.",
     "crumbs": [
       "Week 3",
       "Lecture 3 - Innovation"
@@ -2855,6 +2855,17 @@
     ]
   },
   {
+    "objectID": "lecture-slides/slides/lecture-3-innovation.html#answer-when-entrant-incentives-dominate",
+    "href": "lecture-slides/slides/lecture-3-innovation.html#answer-when-entrant-incentives-dominate",
+    "title": "Lecture 3 - Innovation",
+    "section": "Answer: when entrant incentives dominate",
+    "text": "Answer: when entrant incentives dominate\nEntrant incentives are stronger when:\n\\[\nV_E &gt; V_I\n\\quad \\Leftrightarrow \\quad\n\\pi^d(c_1,c_0) + \\pi^d(c_0,c_1) &gt; \\pi^m(c_1)\n\\]\n\nWeak business-stealing effect: products are more differentiated, so entry hurts the incumbent less.\nLow market-structure protection value: moving from duopoly to monopoly is not worth much to the incumbent.\nHigh entrant upside from innovation: entrant post-entry profits \\(\\pi^d(c_1,c_0)\\) are large (e.g., efficient entry, strong demand segment).\nLarge incumbent replacement effect: the incumbent already has substantial rents without innovating, so incremental gains are limited.\nWeaker appropriability for incumbents (strong spillovers/imitation): innovation is less effective as an entry-deterrence tool.\n\n\n\n\n\n\n\n\nBottom line\n\n\nPre-emption fails when the incumbent’s entry-deterrence motive is weak and the entrant’s duopoly gain from innovating is strong.",
+    "crumbs": [
+      "Week 3",
+      "Lecture 3 - Innovation"
+    ]
+  },
+  {
     "objectID": "lecture-slides/slides/lecture-3-innovation.html#empirical-example-strategic-incentives-and-market-share",
     "href": "lecture-slides/slides/lecture-3-innovation.html#empirical-example-strategic-incentives-and-market-share",
     "title": "Lecture 3 - Innovation",
@@ -2866,165 +2877,110 @@
     ]
   },
   {
-    "objectID": "lecture-slides/slides/lecture-3-innovation.html#setup-and-key-result",
-    "href": "lecture-slides/slides/lecture-3-innovation.html#setup-and-key-result",
+    "objectID": "lecture-slides/slides/lecture-3-innovation.html#big-question",
+    "href": "lecture-slides/slides/lecture-3-innovation.html#big-question",
     "title": "Lecture 3 - Innovation",
-    "section": "Setup and key result",
-    "text": "Setup and key result\nThe Dasgupta and Stiglitz (1980) model treats R&D as an endogenous sunk cost: firms spend on R&D to reduce marginal cost, and entry adjusts endogenously.\nThe key result is a clean link between:\n\nDemand conditions (elasticity, market size)\nInnovative opportunities (how effective R&D is at lowering costs)\nEquilibrium concentration (how many firms survive under free entry)\n\nThe linear model gave us clean closed-form comparisons. The D-S framework sacrifices tractability for generality — but delivers a structural result linking innovation to concentration.\n## Notation for this section\n\n\n\n\n\n\n\n\nSymbol\nType\nMeaning\n\n\n\n\n\\(x\\)\nChoice\nR&D expenditure per firm\n\n\n\\(c(x)\\)\nFunction\nMarginal cost (decreasing in \\(x\\))\n\n\n\\(N\\)\nOutcome\nNumber of active firms (endogenous)\n\n\n\\(\\varepsilon\\)\nParameter\nDemand elasticity\n\n\n\\(\\alpha\\)\nParameter\nR&D cost elasticity: \\(\\alpha = -\\frac{dc(x)}{dx}\\frac{x}{c}\\) (measures how effectively R&D reduces cost)",
+    "section": "Big Question",
+    "text": "Big Question\nIn Dasgupta-Stiglitz, firms choose R&D and entry is endogenous.\nThe central question is: what jointly determines innovation intensity and concentration?\nKey forces:\n\nDemand conditions (elasticity, market size)\nR&D technology (how effectively spending lowers cost)\nFree entry (how many firms can cover R&D outlays)",
     "crumbs": [
       "Week 3",
       "Lecture 3 - Innovation"
     ]
   },
   {
-    "objectID": "lecture-slides/slides/lecture-3-innovation.html#planner-benchmark",
-    "href": "lecture-slides/slides/lecture-3-innovation.html#planner-benchmark",
+    "objectID": "lecture-slides/slides/lecture-3-innovation.html#notation-for-this-section",
+    "href": "lecture-slides/slides/lecture-3-innovation.html#notation-for-this-section",
     "title": "Lecture 3 - Innovation",
-    "section": "Planner benchmark",
-    "text": "Planner benchmark\nQuestion: Do more firms imply more innovation?\nPrimitives:\n\n\\(U(Q)\\) = gross social benefit\n\\(c = c(x)\\) = constant marginal cost depending on R&D expenditure \\(x\\)\nAssumption: \\(c'(x) &lt; 0\\) (R&D reduces cost)",
+    "section": "Notation for this section",
+    "text": "Notation for this section\n\n\n\n\n\n\n\n\nSymbol\nType\nMeaning\n\n\n\n\n\\(x\\)\nChoice\nR&D expenditure per firm\n\n\n\\(c(x)\\)\nFunction\nMarginal cost, with \\(c'(x)&lt;0\\)\n\n\n\\(N\\)\nOutcome\nNumber of active firms (endogenous)\n\n\n\\(\\varepsilon\\)\nParameter\nMarket demand elasticity\n\n\n\\(\\alpha\\)\nParameter\nR&D cost elasticity, \\(\\alpha=-\\frac{dc(x)}{dx}\\frac{x}{c}\\)",
     "crumbs": [
       "Week 3",
       "Lecture 3 - Innovation"
     ]
   },
   {
-    "objectID": "lecture-slides/slides/lecture-3-innovation.html#planner-benchmark-social-optimum",
-    "href": "lecture-slides/slides/lecture-3-innovation.html#planner-benchmark-social-optimum",
+    "objectID": "lecture-slides/slides/lecture-3-innovation.html#planner-benchmark-why-scale-matters",
+    "href": "lecture-slides/slides/lecture-3-innovation.html#planner-benchmark-why-scale-matters",
     "title": "Lecture 3 - Innovation",
-    "section": "Planner benchmark: Social optimum",
-    "text": "Planner benchmark: Social optimum\n\\[\n\\max_{x,Q} \\ V(x,Q) = U(Q) - c(x)Q - x\n\\]\nFirst-order condition in \\(x\\):\n\\[\n-c'(x)Q = 1\n\\]\nOptimal R&D increases with scale \\(Q\\): a larger market makes cost reduction more valuable",
+    "section": "Planner benchmark: why scale matters",
+    "text": "Planner benchmark: why scale matters\nPlanner problem:\n\\[\n\\max_{x,Q}\\; V(x,Q)=U(Q)-c(x)Q-x\n\\]\nFOC for R&D:\n\\[\n-c'(x)Q=1\n\\]\nInterpretation: the marginal benefit of R&D is proportional to output scale \\(Q\\), so larger markets justify more cost-reducing innovation.",
     "crumbs": [
       "Week 3",
       "Lecture 3 - Innovation"
     ]
   },
   {
-    "objectID": "lecture-slides/slides/lecture-3-innovation.html#empirical-example-market-size-and-innovation",
-    "href": "lecture-slides/slides/lecture-3-innovation.html#empirical-example-market-size-and-innovation",
+    "objectID": "lecture-slides/slides/lecture-3-innovation.html#empirical-anchor-market-size-and-innovation",
+    "href": "lecture-slides/slides/lecture-3-innovation.html#empirical-anchor-market-size-and-innovation",
     "title": "Lecture 3 - Innovation",
-    "section": "Empirical example: market size and innovation",
-    "text": "Empirical example: market size and innovation\n\n\n\n\n\n\n\nPharmaceutical innovation responds to demand\n\n\nAcemoglu and Linn (2004) show that larger potential markets lead to\n\nmore pharmaceutical innovation (new drugs/new molecular entities)\n\\(\\rightarrow\\) consistent with models where the return to innovation rises with scale.",
+    "section": "Empirical anchor: market size and innovation",
+    "text": "Empirical anchor: market size and innovation\n\n\n\n\n\n\n\nPharmaceutical innovation responds to demand\n\n\nAcemoglu and Linn (2004) show that larger potential markets lead to:\n\nmore pharmaceutical innovation (new drugs / new molecular entities)\nconsistent evidence that innovation incentives rise with market scale",
     "crumbs": [
       "Week 3",
       "Lecture 3 - Innovation"
     ]
   },
   {
-    "objectID": "lecture-slides/slides/lecture-3-innovation.html#firms-problem",
-    "href": "lecture-slides/slides/lecture-3-innovation.html#firms-problem",
+    "objectID": "lecture-slides/slides/lecture-3-innovation.html#industry-side-firms-choose-output-and-rd",
+    "href": "lecture-slides/slides/lecture-3-innovation.html#industry-side-firms-choose-output-and-rd",
     "title": "Lecture 3 - Innovation",
-    "section": "Firm’s problem",
-    "text": "Firm’s problem\nAssumptions: Firms engage in Cournot (quantity) competition with symmetric costs. Each firm chooses R&D expenditure \\(x_i\\) and output \\(q_i\\) simultaneously.\nFirm \\(i\\)’s problem:\n\\[\n\\max_{x_i, q_i} \\ \\pi(x_i, q_i) = [P(q_i + q_{-i}) - c(x_i)]q_i - x_i\n\\]\nSymmetric equilibrium:\n\n\\(q_1^* = \\cdots = q_N^* = Q^*/N\\) and \\(x_1^* = \\cdots = x_N^* = x^*\\)",
+    "section": "Industry side: firms choose output and R&D",
+    "text": "Industry side: firms choose output and R&D\nAssume symmetric Cournot competition. Firm \\(i\\) solves:\n\\[\n\\max_{x_i,q_i}\\; \\pi_i=[P(Q)-c(x_i)]q_i-x_i,\\qquad Q=q_i+q_{-i}\n\\]\nIn symmetric equilibrium, \\(q_i^*=Q^*/N^*\\) and \\(x_i^*=x^*\\).",
     "crumbs": [
       "Week 3",
       "Lecture 3 - Innovation"
     ]
   },
   {
-    "objectID": "lecture-slides/slides/lecture-3-innovation.html#intuition-check-what-determines-n",
-    "href": "lecture-slides/slides/lecture-3-innovation.html#intuition-check-what-determines-n",
+    "objectID": "lecture-slides/slides/lecture-3-innovation.html#two-equilibrium-conditions",
+    "href": "lecture-slides/slides/lecture-3-innovation.html#two-equilibrium-conditions",
     "title": "Lecture 3 - Innovation",
-    "section": "Intuition check: What determines \\(N^*\\)?",
-    "text": "Intuition check: What determines \\(N^*\\)?\nWhat forces at work here?\n\nEntry incentive: If industry profits are positive, more firms want to enter\nR&D cost: Each firm must spend \\(x^*\\) to achieve low cost \\(c(x^*)\\)\nMarket power: More firms → lower mark-ups → lower operating profits\nZero-profit equilibrium: Entry stops when operating profits just cover R&D outlays\n\nKey insight: Equilibrium concentration (\\(N^*\\)) balances these forces. We’ll derive the precise formula by combining the pricing and free-entry conditions.",
+    "section": "Two equilibrium conditions",
+    "text": "Two equilibrium conditions\nFrom Cournot pricing (perceived elasticity \\(N\\varepsilon\\)):\n\\[\n\\frac{P-c}{P}=\\frac{1}{N\\varepsilon}\n\\quad\\Leftrightarrow\\quad\nP-c=\\frac{P}{N\\varepsilon}\n\\]\nFrom free entry (zero profit):\n\\[\n(P-c)\\frac{Q}{N}-x=0\n\\quad\\Leftrightarrow\\quad\nP-c=\\frac{Nx}{Q}\n\\]\nEntry continues until operating margins exactly cover per-firm R&D spending.",
     "crumbs": [
       "Week 3",
       "Lecture 3 - Innovation"
     ]
   },
   {
-    "objectID": "lecture-slides/slides/lecture-3-innovation.html#reminder-cournot-perceived-elasticity",
-    "href": "lecture-slides/slides/lecture-3-innovation.html#reminder-cournot-perceived-elasticity",
+    "objectID": "lecture-slides/slides/lecture-3-innovation.html#deriving-concentration-in-one-step",
+    "href": "lecture-slides/slides/lecture-3-innovation.html#deriving-concentration-in-one-step",
     "title": "Lecture 3 - Innovation",
-    "section": "Reminder: Cournot perceived elasticity",
-    "text": "Reminder: Cournot perceived elasticity\nFrom Lecture 1: Under Cournot competition, firm \\(i\\) perceives the demand elasticity facing its own output as \\(N\\varepsilon\\), where \\(\\varepsilon\\) is the market demand elasticity.\nThis gives the markup formula:\n\\[\n\\frac{P - c}{P} = \\frac{1}{N\\varepsilon}\n\\]\nRearranging:\n\\[\nP\\left(1 - \\frac{1}{N\\varepsilon}\\right) = c\n\\]\nWe’ll use this to link pricing to R&D in the Dasgupta–Stiglitz model.",
+    "section": "Deriving concentration in one step",
+    "text": "Deriving concentration in one step\nEquate the two expressions for the margin:\n\\[\n\\frac{P}{N\\varepsilon}=\\frac{Nx}{Q}\n\\]\nUse the R&D elasticity definition with the R&D FOC (\\(-c'(x)q=1\\)), which implies:\n\\[\n\\frac{x}{q}=\\alpha c\n\\quad\\Rightarrow\\quad\n\\frac{Nx}{Q}=\\alpha c\n\\]\nSo:\n\\[\n\\frac{P}{N\\varepsilon}=\\alpha c\n\\]\nDivide by \\(P\\) and substitute \\(c/P=1-\\frac{1}{N\\varepsilon}\\):\n\\[\n\\frac{1}{N\\varepsilon}\n=\n\\alpha\\!\\left(1-\\frac{1}{N\\varepsilon}\\right)\n\\quad\\Rightarrow\\quad\n\\frac{1}{N^*}\n=\n\\frac{1}{\\varepsilon}\\cdot\\frac{\\alpha}{1+\\alpha}\n\\]",
     "crumbs": [
       "Week 3",
       "Lecture 3 - Innovation"
     ]
   },
   {
-    "objectID": "lecture-slides/slides/lecture-3-innovation.html#equilibrium-pricing",
-    "href": "lecture-slides/slides/lecture-3-innovation.html#equilibrium-pricing",
+    "objectID": "lecture-slides/slides/lecture-3-innovation.html#core-result-equilibrium-concentration",
+    "href": "lecture-slides/slides/lecture-3-innovation.html#core-result-equilibrium-concentration",
     "title": "Lecture 3 - Innovation",
-    "section": "Equilibrium pricing",
-    "text": "Equilibrium pricing\nFirst-order condition in \\(q_i\\):\n\\[\nP(Q^*)\\left(1 - \\frac{1}{N\\varepsilon}\\right) = c(x^*)\n\\]\nwhere \\(\\varepsilon = -\\frac{\\partial Q}{\\partial P}\\frac{P}{Q}\\) is the demand elasticity.\nInterpretation:\n\nThe term \\(\\left(1-\\frac{1}{N\\varepsilon}\\right)\\) captures market power via the perceived demand elasticity under Cournot\n\nMore firms (\\(N\\uparrow\\)) → perceived demand becomes more elastic → mark-ups fall",
+    "section": "Core result: equilibrium concentration",
+    "text": "Core result: equilibrium concentration\n\\[\n\\frac{1}{N^*}=\\frac{1}{\\varepsilon}\\cdot\\frac{\\alpha}{1+\\alpha}\n\\]\n\n\n\n\n\n\n\nInterpretation\n\n\nConcentration and innovation are jointly determined.\nHigher R&D effectiveness (\\(\\alpha\\)) supports higher concentration, while more elastic demand (\\(\\varepsilon\\)) supports lower concentration.",
     "crumbs": [
       "Week 3",
       "Lecture 3 - Innovation"
     ]
   },
   {
-    "objectID": "lecture-slides/slides/lecture-3-innovation.html#free-entry-condition",
-    "href": "lecture-slides/slides/lecture-3-innovation.html#free-entry-condition",
+    "objectID": "lecture-slides/slides/lecture-3-innovation.html#numerical-check",
+    "href": "lecture-slides/slides/lecture-3-innovation.html#numerical-check",
     "title": "Lecture 3 - Innovation",
-    "section": "Free entry condition",
-    "text": "Free entry condition\nZero profit condition (free entry):\n\\[\n\\pi = 0 \\quad \\Rightarrow \\quad (P - c)\\frac{Q^*}{N^*} - x^* = 0\n\\]\nRearrange:\n\\[\nP - c = N^* \\frac{x^*}{Q^*}\n\\]",
+    "section": "Numerical check",
+    "text": "Numerical check\nUsing \\(\\frac{1}{N^*}=\\frac{1}{\\varepsilon}\\cdot\\frac{\\alpha}{1+\\alpha}\\):\n\nIf \\(\\varepsilon=2\\) and \\(\\alpha=1\\), then \\(\\frac{1}{N^*}=\\frac{1}{4}\\) so \\(N^*=4\\).\nIf \\(\\varepsilon=2\\) and \\(\\alpha=3\\), then \\(\\frac{1}{N^*}=\\frac{3}{8}\\) so \\(N^*\\approx2.7\\).\n\n\n\n\n\n\n\n\nDiscussion question\n\n\nIf policy raises R&D effectiveness (\\(\\alpha\\)), the model predicts more concentration (lower \\(N^*\\)).\nWhen is that welfare-improving once we account for both dynamic gains and static mark-up losses?",
     "crumbs": [
       "Week 3",
       "Lecture 3 - Innovation"
     ]
   },
   {
-    "objectID": "lecture-slides/slides/lecture-3-innovation.html#deriving-the-concentration-formula-i-setup",
-    "href": "lecture-slides/slides/lecture-3-innovation.html#deriving-the-concentration-formula-i-setup",
+    "objectID": "lecture-slides/slides/lecture-3-innovation.html#comparative-statics-and-trade-offs",
+    "href": "lecture-slides/slides/lecture-3-innovation.html#comparative-statics-and-trade-offs",
     "title": "Lecture 3 - Innovation",
-    "section": "Deriving the concentration formula (I): Setup",
-    "text": "Deriving the concentration formula (I): Setup\nCombine the two conditions:\n\nFrom pricing FOC: \\(P - c = \\frac{P}{N\\varepsilon}\\)\nFrom free entry: \\(P - c = \\frac{Nx}{Q}\\)\n\nEquating the two expressions:\n\\[\n\\frac{P}{N\\varepsilon} = \\frac{Nx}{Q}\n\\]\n(We solve for \\(N\\) on the next slide.)",
-    "crumbs": [
-      "Week 3",
-      "Lecture 3 - Innovation"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/slides/lecture-3-innovation.html#deriving-the-concentration-formula-ii-solution",
-    "href": "lecture-slides/slides/lecture-3-innovation.html#deriving-the-concentration-formula-ii-solution",
-    "title": "Lecture 3 - Innovation",
-    "section": "Deriving the concentration formula (II): Solution",
-    "text": "Deriving the concentration formula (II): Solution\nIntroduce the R&D cost elasticity \\(\\alpha = -\\frac{dc(x)}{dx}\\frac{x}{c}\\) (from firm’s R&D FOC).\nThis implies: \\(\\frac{x}{cq} = \\alpha\\), so \\(\\frac{Nx}{Q} = \\frac{Nx}{Nq} = \\frac{x}{q} = \\alpha c\\)\nSubstitute into our equation:\n\\[\n\\underbrace{\\frac{P}{N\\varepsilon}}_{\\text{markup}} = \\underbrace{\\alpha c}_{\\text{R\\&D cost per unit}}\n\\]\nDivide by \\(P\\) and use \\(c/P = 1 - 1/(N\\varepsilon)\\) from the pricing FOC:\n\\[\n\\frac{1}{N\\varepsilon} = \\alpha\\!\\left(1 - \\frac{1}{N\\varepsilon}\\right) \\quad \\Rightarrow \\quad \\frac{1}{N^*} = \\frac{1}{\\varepsilon}\\cdot\\frac{\\alpha}{1+\\alpha}\n\\]",
-    "crumbs": [
-      "Week 3",
-      "Lecture 3 - Innovation"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/slides/lecture-3-innovation.html#equilibrium-concentration",
-    "href": "lecture-slides/slides/lecture-3-innovation.html#equilibrium-concentration",
-    "title": "Lecture 3 - Innovation",
-    "section": "Equilibrium concentration",
-    "text": "Equilibrium concentration\nEquilibrium concentration satisfies:\n\\[\n\\frac{1}{N^*} = \\frac{1}{\\varepsilon} \\cdot \\frac{\\alpha}{1+\\alpha}\n\\]\n\n\n\n\n\n\n\nInterpretation\n\n\nConcentration and research intensity are jointly determined: entry expands \\(N\\) until operating surplus covers R&D outlays \\(x^*\\). Higher R&D cost elasticity (\\(\\alpha\\)) supports higher concentration; more elastic demand lowers concentration.",
-    "crumbs": [
-      "Week 3",
-      "Lecture 3 - Innovation"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/slides/lecture-3-innovation.html#numerical-illustration",
-    "href": "lecture-slides/slides/lecture-3-innovation.html#numerical-illustration",
-    "title": "Lecture 3 - Innovation",
-    "section": "Numerical illustration",
-    "text": "Numerical illustration\nUsing the concentration formula with specific values:\n\\[\n\\frac{1}{N^*} = \\frac{1}{\\varepsilon} \\cdot \\frac{\\alpha}{1+\\alpha}\n\\]\n\nIf \\(\\varepsilon = 2\\) and \\(\\alpha = 1\\): \\(\\frac{1}{N^*} = \\frac{1}{2} \\cdot \\frac{1}{2} = \\frac{1}{4}\\), so \\(N^* = 4\\) firms\nIf \\(\\varepsilon = 2\\) and \\(\\alpha = 3\\): \\(\\frac{1}{N^*} = \\frac{1}{2} \\cdot \\frac{3}{4} = \\frac{3}{8}\\), so \\(N^* \\approx 2.7\\) firms\n\n\n\n\n\n\n\n\nDiscussion question\n\n\nIf a government subsidy increases the R&D cost elasticity (\\(\\alpha\\), making R&D more effective), what does the model predict for market structure? Is this welfare-improving?",
-    "crumbs": [
-      "Week 3",
-      "Lecture 3 - Innovation"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/slides/lecture-3-innovation.html#key-comparative-statics-i",
-    "href": "lecture-slides/slides/lecture-3-innovation.html#key-comparative-statics-i",
-    "title": "Lecture 3 - Innovation",
-    "section": "Key comparative statics (I)",
-    "text": "Key comparative statics (I)\nWith \\(P(Q) = \\sigma Q^{-\\varepsilon}\\) and \\(c(x) = \\beta x^{-\\alpha}\\):\nDynamic vs static efficiency trade-off:\n\n\\(x^*(N+1) &lt; x^*(N)\\) (more firms → less R&D per firm)\n\\(Q^*(N+1) &gt; Q^*(N)\\) (more firms → higher output)\n\nResearch intensity:\n\nOften maximized at moderate concentration (Scherer-style inverse-U)\n\nInterpretation:\n\nMarket structure affects both static outcomes (\\(Q\\)) and dynamic investment incentives (\\(x\\))",
-    "crumbs": [
-      "Week 3",
-      "Lecture 3 - Innovation"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/slides/lecture-3-innovation.html#key-comparative-statics-ii",
-    "href": "lecture-slides/slides/lecture-3-innovation.html#key-comparative-statics-ii",
-    "title": "Lecture 3 - Innovation",
-    "section": "Key comparative statics (II)",
-    "text": "Key comparative statics (II)\nGreater R&D effectiveness (higher \\(\\alpha\\)) associated with higher concentration:\n\\[\n\\frac{\\partial (1/N^*)}{\\partial \\alpha} &gt; 0\n\\]\nDemand growth stimulates R&D:\n\\[\n\\frac{\\partial x^*}{\\partial \\sigma} &gt; 0\n\\]\nInterpretation:\n\nLarger markets (higher \\(\\sigma\\)) increase the return to cost reduction\nMore effective R&D (higher \\(\\alpha\\)) can support higher concentration in equilibrium",
+    "section": "Comparative statics and trade-offs",
+    "text": "Comparative statics and trade-offs\nWith \\(P(Q)=\\sigma Q^{-\\varepsilon}\\) and \\(c(x)=\\beta x^{-\\alpha}\\):\n\n\\(\\frac{\\partial(1/N^*)}{\\partial\\alpha}&gt;0\\): more effective R&D tends to increase concentration.\n\\(\\frac{\\partial(1/N^*)}{\\partial\\varepsilon}&lt;0\\): more elastic demand tends to reduce concentration.\n\\(\\frac{\\partial x^*}{\\partial \\sigma}&gt;0\\): larger markets raise R&D effort.\nTypically, \\(x^*(N+1)&lt;x^*(N)\\) but \\(Q^*(N+1)&gt;Q^*(N)\\): more firms improve static efficiency yet can weaken per-firm innovation incentives.\n\nThis is the core dynamic-static tension in endogenous market-structure models.",
     "crumbs": [
       "Week 3",
       "Lecture 3 - Innovation"
