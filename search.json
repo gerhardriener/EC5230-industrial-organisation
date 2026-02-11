@@ -2738,7 +2738,7 @@
     "href": "lecture-slides/slides/lecture-3-innovation.html#social-planner-value-of-a-cost-reduction",
     "title": "Lecture 3 - Innovation",
     "section": "Social planner: value of a cost reduction",
-    "text": "Social planner: value of a cost reduction\nEfficient output (price equals marginal cost)\n\\[\nQ^{sp}(c) = A - c\n\\]\nTotal surplus (welfare):\n\\[\nW(c) = \\int_0^{A-c} (A - Q - c) \\, dQ = \\frac{(A-c)^2}{2}\n\\]\n\n\n\n\n\n\n\nInterpretation\n\n\nIn this linear example, \\(\\Delta W = 2\\,\\Delta \\pi^m\\): the planner values the output expansion that the monopolist does not internalise.",
+    "text": "Social planner: value of a cost reduction\nAfter the private-value benchmarks, we now switch to the social objective.\nEfficient output (price equals marginal cost)\n\\[\nQ^{sp}(c) = A - c\n\\]\nTotal surplus (welfare):\n\\[\nW(c) = \\int_0^{A-c} (A - Q - c) \\, dQ = \\frac{(A-c)^2}{2}\n\\]\n\n\n\n\n\n\n\nInterpretation\n\n\nIn this linear example, \\(\\Delta W = 2\\,\\Delta \\pi^m\\): the planner values the output expansion that the monopolist does not internalise.",
     "crumbs": [
       "Week 3",
       "Lecture 3 - Innovation"
@@ -2782,7 +2782,7 @@
     "href": "lecture-slides/slides/lecture-3-innovation.html#quick-numeric-check-optional",
     "title": "Lecture 3 - Innovation",
     "section": "Quick numeric check (optional)",
-    "text": "Quick numeric check (optional)\nTake \\(A=20\\), \\(c_0=10\\), and \\(c_1=6\\).\n\nMonopoly: \\(\\pi^m(c_0)=25\\), \\(\\pi^m(c_1)=49\\), so \\(\\Delta\\pi^m=24\\)\nPlanner: \\(W(c_0)=50\\), \\(W(c_1)=98\\), so \\(\\Delta W=48\\) (twice the monopoly gain)\n\n\n\n\n\n\n\n\nDiscussion question\n\n\nIn what sense is this “too little” innovation from a welfare perspective? What policy instruments could close the gap?",
+    "text": "Quick numeric check (optional)\nUsing the same calibration as earlier (\\(A=18\\), \\(c_0=10\\), \\(c_1=6\\)):\n\nMonopoly: \\(\\pi^m(c_0)=16\\), \\(\\pi^m(c_1)=36\\), so \\(\\Delta\\pi^m=20\\)\nPlanner: \\(W(c_0)=32\\), \\(W(c_1)=72\\), so \\(\\Delta W=40\\) (twice the monopoly gain)\n\n\n\n\n\n\n\n\nDiscussion question\n\n\nIn what sense is this “too little” innovation from a welfare perspective? What policy instruments could close the gap?",
     "crumbs": [
       "Week 3",
       "Lecture 3 - Innovation"
@@ -2793,7 +2793,7 @@
     "href": "lecture-slides/slides/lecture-3-innovation.html#incentives-to-innovate-with-rivals-intuition-first",
     "title": "Lecture 3 - Innovation",
     "section": "Incentives to innovate with rivals: intuition first",
-    "text": "Incentives to innovate with rivals: intuition first\nInnovation incentives are not monotone in “competition intensity.”\n\nThey depend on market structure (\\(n\\), differentiation, price vs quantity competition).\nThey depend on technology and institutions (protectability, spillovers).\n\n\n\n\n\n\n\n\nRule of thumb\n\n\nMore rivals reduce baseline profits (discouraging innovation), but can raise the value of becoming the low-cost firm (encouraging innovation).",
+    "text": "Incentives to innovate with rivals: intuition first\nWe now move from benchmark environments to strategic interaction with rivals and entry threat.\nInnovation incentives are not monotone in “competition intensity.”\n\nThey depend on market structure (\\(n\\), differentiation, price vs quantity competition).\nThey depend on technology and institutions (protectability, spillovers).\n\n\n\n\n\n\n\n\nRule of thumb\n\n\nMore rivals reduce baseline profits (discouraging innovation), but can raise the value of becoming the low-cost firm (encouraging innovation).",
     "crumbs": [
       "Week 3",
       "Lecture 3 - Innovation"
@@ -2881,7 +2881,7 @@
     "href": "lecture-slides/slides/lecture-3-innovation.html#big-question",
     "title": "Lecture 3 - Innovation",
     "section": "Big Question",
-    "text": "Big Question\nIn Dasgupta-Stiglitz, firms choose R&D and entry is endogenous.\nThe central question is: what jointly determines innovation intensity and concentration?\nKey forces:\n\nDemand conditions (elasticity, market size)\nR&D technology (how effectively spending lowers cost)\nFree entry (how many firms can cover R&D outlays)",
+    "text": "Big Question\nIn Dasgupta-Stiglitz, firms choose R&D and entry is endogenous.\nThe central question is: what jointly determines innovation intensity and concentration?\nThis final model puts both objects, \\(x\\) and \\(N\\), inside one equilibrium system.\nKey forces:\n\nDemand conditions (elasticity, market size)\nR&D technology (how effectively spending lowers cost)\nFree entry (how many firms can cover R&D outlays)",
     "crumbs": [
       "Week 3",
       "Lecture 3 - Innovation"
@@ -2947,7 +2947,7 @@
     "href": "lecture-slides/slides/lecture-3-innovation.html#deriving-concentration-in-one-step",
     "title": "Lecture 3 - Innovation",
     "section": "Deriving concentration in one step",
-    "text": "Deriving concentration in one step\nEquate the two expressions for the margin:\n\\[\n\\frac{P}{N\\varepsilon}=\\frac{Nx}{Q}\n\\]\nUse the R&D elasticity definition with the R&D FOC (\\(-c'(x)q=1\\)), which implies:\n\\[\n\\frac{x}{q}=\\alpha c\n\\quad\\Rightarrow\\quad\n\\frac{Nx}{Q}=\\alpha c\n\\]\nSo:\n\\[\n\\frac{P}{N\\varepsilon}=\\alpha c\n\\]\nDivide by \\(P\\) and substitute \\(c/P=1-\\frac{1}{N\\varepsilon}\\):\n\\[\n\\frac{1}{N\\varepsilon}\n=\n\\alpha\\!\\left(1-\\frac{1}{N\\varepsilon}\\right)\n\\quad\\Rightarrow\\quad\n\\frac{1}{N^*}\n=\n\\frac{1}{\\varepsilon}\\cdot\\frac{\\alpha}{1+\\alpha}\n\\]",
+    "text": "Deriving concentration in one step\nEquate the two expressions for the margin:\n\\[\n\\frac{P}{N\\varepsilon}=\\frac{Nx}{Q}\n\\]\nUse the R&D elasticity definition with the R&D FOC (\\(-c'(x)q=1\\)), which implies:\n\\[\n\\frac{x}{q}=\\alpha c\n\\quad\\Rightarrow\\quad\n\\frac{Nx}{Q}=\\alpha c\n\\]\nwhere symmetry implies \\(q=Q/N\\).\nSo:\n\\[\n\\frac{P}{N\\varepsilon}=\\alpha c\n\\]\nDivide by \\(P\\) and substitute \\(c/P=1-\\frac{1}{N\\varepsilon}\\):\n\\[\n\\frac{1}{N\\varepsilon}\n=\n\\alpha\\!\\left(1-\\frac{1}{N\\varepsilon}\\right)\n\\quad\\Rightarrow\\quad\n\\frac{1}{N^*}\n=\n\\frac{1}{\\varepsilon}\\cdot\\frac{\\alpha}{1+\\alpha}\n\\]",
     "crumbs": [
       "Week 3",
       "Lecture 3 - Innovation"
@@ -2980,7 +2980,7 @@
     "href": "lecture-slides/slides/lecture-3-innovation.html#comparative-statics-and-trade-offs",
     "title": "Lecture 3 - Innovation",
     "section": "Comparative statics and trade-offs",
-    "text": "Comparative statics and trade-offs\nWith \\(P(Q)=\\sigma Q^{-\\varepsilon}\\) and \\(c(x)=\\beta x^{-\\alpha}\\):\n\n\\(\\frac{\\partial(1/N^*)}{\\partial\\alpha}&gt;0\\): more effective R&D tends to increase concentration.\n\\(\\frac{\\partial(1/N^*)}{\\partial\\varepsilon}&lt;0\\): more elastic demand tends to reduce concentration.\n\\(\\frac{\\partial x^*}{\\partial \\sigma}&gt;0\\): larger markets raise R&D effort.\nTypically, \\(x^*(N+1)&lt;x^*(N)\\) but \\(Q^*(N+1)&gt;Q^*(N)\\): more firms improve static efficiency yet can weaken per-firm innovation incentives.\n\nThis is the core dynamic-static tension in endogenous market-structure models.",
+    "text": "Comparative statics and trade-offs\nWith \\(P(Q)=\\sigma Q^{-\\varepsilon}\\) and \\(c(x)=\\beta x^{-\\alpha}\\):\n\nHere, \\(\\sigma&gt;0\\) is a demand-level (market-size) shifter.\n\\(\\frac{\\partial(1/N^*)}{\\partial\\alpha}&gt;0\\): more effective R&D tends to increase concentration.\n\\(\\frac{\\partial(1/N^*)}{\\partial\\varepsilon}&lt;0\\): more elastic demand tends to reduce concentration.\n\\(\\frac{\\partial x^*}{\\partial \\sigma}&gt;0\\): larger markets raise R&D effort.\nTypically, \\(x^*(N+1)&lt;x^*(N)\\) but \\(Q^*(N+1)&gt;Q^*(N)\\): more firms improve static efficiency yet can weaken per-firm innovation incentives.\n\nThis is the core dynamic-static tension in endogenous market-structure models.",
     "crumbs": [
       "Week 3",
       "Lecture 3 - Innovation"
