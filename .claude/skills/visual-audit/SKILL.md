@@ -15,6 +15,7 @@ Use `.claude/rules/audit-report-conventions.md` for naming/persistence conventio
 - This is a **diagnostic-only** skill for isolated visual issues.
 - For standard release review, use `/slide-excellence` (which already includes `slide-auditor`).
 - Do not run `/visual-audit` and `/slide-excellence` back-to-back on the same file unless doing a focused re-check after fixes.
+- Both workflows persist to `quality_reports/[FILE_STEM]_visual_audit.md`; running both will overwrite.
 
 ## Steps
 

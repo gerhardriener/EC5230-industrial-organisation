@@ -11,6 +11,8 @@ argument-hint: "[QMD filename]"
 
 **Default release review:** prefer this skill over stacking separate `/visual-audit`, `/pedagogy-review`, and `/proofread` runs for the same file.
 
+**Orchestrator mode note:** if a plan was just approved and the orchestrator is already running the standard review stack, only run `/slide-excellence` when you explicitly want a milestone audit snapshot.
+
 ---
 
 ## Inputs

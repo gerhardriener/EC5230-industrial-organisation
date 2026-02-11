@@ -74,6 +74,14 @@ Select review agents based on **file types touched during implementation**:
 
 ---
 
+## Avoid Duplicate Review Stacks (Hard Rule)
+
+When the orchestrator is active, it already runs the standard review agents for modified `.qmd` files (proofreader + slide-auditor + pedagogy-reviewer).
+
+Do not manually run a second full review stack (e.g., `/slide-excellence`, or stacking `/proofread` + `/visual-audit` + `/pedagogy-review`) on the same revision unless explicitly intended as a **milestone audit** to capture an independent snapshot.
+
+---
+
 ## Fix Priority and Loop Limits
 
 Within each fix round, apply fixes in strict order:
@@ -113,7 +121,7 @@ When the loop completes (score >= threshold or max rounds), present a structured
 - [List with severity]
 
 ### Recommended Next Steps
-- [e.g., "Run /slide-excellence for full review"]
+- [e.g., "Run /slide-excellence as a milestone audit snapshot (optional)"]
 ```
 
 Append the summary to the session log as required by `.claude/rules/plan-first-workflow.md`.

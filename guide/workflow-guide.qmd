@@ -642,6 +642,14 @@ The orchestrator selects agents based on which files were touched:
 
 Agents that are independent of each other run in parallel. The quarto-critic runs after other agents because it may need their context.
 
+::: {.callout-important}
+## Hard Rule: Don’t Double-Run Full Review Stacks in Orchestrator Mode
+
+Once a plan is approved, you are in **orchestrator mode**: the orchestrator already runs the standard review agents (proofreader + slide-auditor + pedagogy-reviewer) as part of its verify–review–fix loop.
+
+Do **not** manually run a second full review stack (e.g., `/slide-excellence`, or stacking `/proofread` + `/visual-audit` + `/pedagogy-review`) on the same revision unless you are intentionally doing a **milestone audit** to capture an independent review snapshot.
+:::
+
 ### "Just Do It" Mode
 
 Sometimes you do not want to approve the final result --- you just want it done:
@@ -679,10 +687,10 @@ Both are valid. The orchestrator is the "I trust you, handle it" path. Skills ar
   +-- Phase 2: Design slide structure
   +-- Phase 3: Draft Beamer slides
   +-- Phase 4: Generate R figures
-  +-- Phase 5: Polish and verify
-  |     +-- /substance-review (domain correctness)
-  |     +-- /proofread (grammar/typos)
-  |     +-- /visual-audit (layout)
+  +-- Phase 5: Review, polish, and verify
+  |     +-- /slide-excellence (canonical release review)
+  |     +-- /substance-review (optional: domain correctness)
+  |     +-- /proofread OR /visual-audit OR /pedagogy-review (diagnostics-only, as needed)
   +-- Phase 6: Deploy
         +-- /translate-to-quarto (optional)
         +-- /deploy
@@ -732,20 +740,30 @@ In one course, we discovered that a widely-used R package silently produced **in
 
 ## Pattern 6: Multi-Agent Review
 
-The `/slide-excellence` skill runs up to 6 agents in parallel:
+For lecture slide decks, the canonical release review is:
+
+`/slide-excellence lecture-X-topic.qmd`
+
+Use this instead of stacking `/proofread`, `/visual-audit`, and `/pedagogy-review`.
+
+The canonical spec (agents + artifacts) lives in `.claude/skills/slide-excellence/SKILL.md`. At a high level:
 
 ```
-/slide-excellence Lecture5_Topic.tex
+/slide-excellence lecture-5-repeated-games.qmd
   |
   +-- Agent 1: Visual Audit (slide-auditor)
   +-- Agent 2: Pedagogical Review (pedagogy-reviewer)
   +-- Agent 3: Proofreading (proofreader)
   +-- Agent 4: TikZ Review (tikz-reviewer, if applicable)
-  +-- Agent 5: Content Parity (if Quarto version exists)
-  +-- Agent 6: Substance Review (domain-reviewer)
+  +-- Inline checks: citation key audit + parity checks (if applicable)
   |
   +-- Synthesize: Combined quality score + prioritized fix list
 ```
+
+Optional add-ons:
+
+- `/substance-review lecture-X-topic.qmd` for domain correctness (read-only)
+- `/qa-quarto LectureX` for Quarto vs Beamer parity (translation mode)
 
 ## Pattern 7: Self-Improvement Loop {#pattern-7-self-improvement-loop}
 

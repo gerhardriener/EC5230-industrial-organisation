@@ -75,6 +75,7 @@ Create a beautiful, pedagogically excellent quarto reveal.js lecture deck.
 ### Phase 5: Polish & Compile
 
 - Full 3-pass compilation
+- Run `/slide-excellence` for the canonical teaching-ready release review (do not stack `/proofread` + `/visual-audit` + `/pedagogy-review` on the same revision)
 - Run Devil's Advocate
 - Run Substance Review (if domain reviewer configured)
 - Update knowledge base with new notation
@@ -95,4 +96,5 @@ Create a beautiful, pedagogically excellent quarto reveal.js lecture deck.
 [ ] New notation added to knowledge base
 [ ] Session log updated
 [ ] Devil's Advocate run
+[ ] Slide excellence review run (or explicitly skipped because orchestrator already produced a milestone audit snapshot)
 ```

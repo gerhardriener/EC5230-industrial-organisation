@@ -10,6 +10,12 @@ argument-hint: "[filename or 'all']"
 Run the mandatory proofreading protocol on lecture files. This produces a report of all issues found WITHOUT editing any source files.
 Use `.claude/rules/audit-report-conventions.md` for naming/persistence conventions.
 
+## Positioning
+
+- This is a **diagnostic** skill for isolated language/consistency checks.
+- For a teaching-ready release review, use `/slide-excellence` (it already includes `proofreader`).
+- Do not run `/proofread` and `/slide-excellence` back-to-back on the same revision unless doing a focused re-check. Both persist to `quality_reports/[FILE_STEM]_report.md` and will overwrite.
+
 ## Steps
 
 1. **Identify files to review:**

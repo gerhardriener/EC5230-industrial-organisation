@@ -32,14 +32,14 @@
 | `/compile-latex [file.tex]`                | Compile Beamer `.tex` slides with XeLaTeX/BibTeX passes             |
 | `/deploy [LectureN]`                        | Render Quarto slides and sync to GitHub Pages                        |
 | `/extract-tikz [LectureN]`                  | TikZ diagrams to PDF to SVG with 0-based indexing                    |
-| `/proofread [filename]`                     | Grammar/typo/overflow review and report                              |
-| `/visual-audit [filename]`                  | Targeted visual-only diagnostic (use `/slide-excellence` for standard release review) |
-| `/pedagogy-review [filename]`               | Baseline pedagogical review (read-only)                              |
+| `/slide-excellence [filename]`              | Canonical lecture release review: visual + pedagogy + proofreading + citation audit |
+| `/proofread [filename]`                     | Diagnostics-only proofreading report (avoid stacking with `/slide-excellence`) |
+| `/visual-audit [filename]`                  | Diagnostics-only layout/overflow debug (avoid stacking with `/slide-excellence`) |
+| `/pedagogy-review [filename]`               | Diagnostics-only narrative/pacing review (avoid stacking with `/slide-excellence`) |
 | `/substance-review [filename]`              | IO domain correctness review (read-only)                             |
 | `/review-r [file or LectureN]`              | R code review: quality, reproducibility, correctness                 |
-| `/qa-quarto [LectureN]`                     | Quarto vs Beamer parity QA profile (uses canonical orchestrator loop) |
+| `/qa-quarto [LectureN]`                     | Quarto vs Beamer parity QA (translation mode; uses canonical orchestrator loop) |
 | `/translate-to-quarto [LectureN or file]`   | Beamer to Quarto translation workflow                                |
-| `/slide-excellence [filename]`              | Combined visual + pedagogical + proofreading + citation audit review |
 | `/create-lecture`                           | Full lecture creation workflow                                       |
 | `/devils-advocate`                          | Optional adversarial challenge pass after baseline pedagogy review   |
 | **Exercises**                               |                                                                      |
@@ -66,6 +66,8 @@
 | `domain-reviewer`   | inherit | Substantive domain correctness               |
 
 **Note:** Citation audit is built into `/slide-excellence` (not a standalone agent).
+
+**Hard rule (avoid duplicate work):** In orchestrator mode (plan approved), do not manually run a second full lecture review stack unless you intentionally want a milestone audit snapshot.
 
 ---
 

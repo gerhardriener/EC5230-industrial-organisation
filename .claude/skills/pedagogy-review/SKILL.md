@@ -10,7 +10,11 @@ argument-hint: "[QMD or TEX filename]"
 **Purpose:** Run the `pedagogy-reviewer` agent and return a structured report.
 Use `.claude/rules/audit-report-conventions.md` for naming/persistence conventions.
 
-This is the **default pedagogical baseline review**.
+## Positioning
+
+- This is a **diagnostic** baseline review for narrative, pacing, and notation clarity.
+- For a teaching-ready release review, use `/slide-excellence` (it already includes `pedagogy-reviewer`).
+- Avoid stacking `/pedagogy-review` and `/slide-excellence` back-to-back on the same revision unless doing a focused re-check. Both persist to `quality_reports/[FILE_STEM]_pedagogy_report.md` and will overwrite.
 
 ---
 
