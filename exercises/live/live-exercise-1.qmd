@@ -14,7 +14,7 @@ format:
     linkcolor: blue
     urlcolor: blue
     number-sections: false
-solutions: false
+solutions: true
 ---
 
 ::: {.content-hidden unless-meta="solutions"}

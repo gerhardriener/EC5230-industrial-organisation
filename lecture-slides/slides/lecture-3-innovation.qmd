@@ -404,7 +404,7 @@ The key result is a clean link between:
 
 The linear model gave us clean closed-form comparisons. The D-S framework sacrifices tractability for generality — but delivers a structural result linking innovation to concentration.
 
-**Notation for this section**
+ ## Notation for this section
 
 | Symbol | Type | Meaning |
 |--------|------|---------|
@@ -424,7 +424,7 @@ The linear model gave us clean closed-form comparisons. The D-S framework sacrif
 - $c = c(x)$ = constant marginal cost depending on R&D expenditure $x$
 - Assumption: $c'(x) < 0$ (R&D reduces cost)
 
-**Social optimum:**
+## Planner benchmark: Social optimum
 
 $$
 \max_{x,Q} \ V(x,Q) = U(Q) - c(x)Q - x
@@ -436,9 +436,7 @@ $$
 -c'(x)Q = 1
 $$
 
-## Planner benchmark: interpretation
-
-- Optimal R&D increases with scale $Q$: a larger market makes cost reduction more valuable
+Optimal R&D increases with scale $Q$: a larger market makes cost reduction more valuable
 
 ## Empirical example: market size and innovation
 
