@@ -6,6 +6,18 @@ The plan-first workflow handles _what and why_. The orchestrator handles _how_, 
 
 ---
 
+## Canonical Loop Ownership
+
+This document defines the **only** iterative review-fix loop and retry policy.
+
+- Skills may define setup inputs, artifacts, and review scope.
+- Skills must **not** define independent loop counters, retry ceilings, or competing fix-order logic.
+- `/qa-quarto` is a Quarto parity **profile** that runs on this loop, not a separate loop engine.
+
+If a skill and this protocol disagree, this protocol wins for iteration behavior.
+
+---
+
 ## When the Orchestrator Activates
 
 The orchestrator kicks in under these conditions:
@@ -75,6 +87,7 @@ Within each fix round, apply fixes in strict order:
 - **Main loop:** max 5 review-fix rounds
 - **Critic-fixer sub-loop:** max 5 rounds (within each main loop iteration)
 - **Verification retries:** max 2 attempts per verification step
+- **Skill wrappers:** cannot define higher limits than these ceilings
 - After max rounds, present what remains. Never loop indefinitely.
 
 ---

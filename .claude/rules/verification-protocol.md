@@ -7,7 +7,25 @@ paths:
 
 # Task Completion Verification Protocol
 
-**At the end of EVERY task, Claude MUST verify the output works correctly.** This is non-negotiable.
+**At the end of every write task, Claude MUST verify the output works correctly.** This is non-negotiable.
+
+## Scope (MANDATORY)
+
+Verification is required when the task **creates or modifies** project artifacts, especially:
+
+- `lecture-slides/slides/**/*.qmd`
+- `lecture-slides/figs/source/**/*.tex`
+- `lecture-slides/figs/**/*.svg`
+- `scripts/**/*.R`
+- deployment/render outputs touched by those edits
+
+Verification is **not required** for:
+
+- Read-only review/report tasks
+- Planning-only tasks
+- Purely informational tasks
+
+For non-write tasks, report verification status as `N/A (no files modified)`.
 
 ## For Quarto HTML Slides:
 1. Run render/publish script for your shell:

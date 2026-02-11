@@ -10,6 +10,8 @@ argument-hint: "[QMD or TEX filename]"
 **Purpose:** Run the `pedagogy-reviewer` agent and return a structured report.
 Use `.claude/rules/audit-report-conventions.md` for naming/persistence conventions.
 
+This is the **default pedagogical baseline review**.
+
 ---
 
 ## Steps
@@ -32,3 +34,4 @@ Invoking workflow saves to:
 
 - Read-only review; no edits.
 - For combined review, use `/slide-excellence`.
+- Use `/devils-advocate` only for a focused challenge pass after this baseline report (or when explicitly requested by the user).

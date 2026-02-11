@@ -10,6 +10,24 @@ paths:
 
 ---
 
+## Authority by Workflow Phase (MANDATORY)
+
+To avoid ambiguity between translation QA and ongoing authoring, authority is phase-dependent:
+
+1. **Translation parity phase (Beamer -> Quarto)**
+   - Applies when running `/translate-to-quarto` or `/qa-quarto`.
+   - The Beamer source/PDF is the **parity benchmark**.
+   - Quarto is adjusted until parity hard gates pass.
+2. **Post-parity maintenance phase (Quarto-first)**
+   - Applies after parity is approved.
+   - `lecture-slides/**/*.qmd` is authoritative for future slide edits.
+   - HTML/PDF outputs are derived from Quarto unless explicit re-translation is requested.
+3. **TikZ diagrams (all phases)**
+   - `lecture-slides/figs/source/*.tex` is authoritative.
+   - SVGs remain derived artifacts.
+
+---
+
 ## TikZ Freshness Protocol (MANDATORY)
 
 **Before using ANY TikZ SVG in a Quarto slide, verify it was regenerated from current source.**
@@ -48,6 +66,18 @@ Before translating ANY lecture to Quarto:
 ---
 
 ## The Single Source of Truth Chain
+
+### Translation Parity Phase (Beamer -> Quarto)
+
+```
+Beamer .tex/.pdf (PARITY BENCHMARK)
+  ├── Quarto .qmd (translation target until parity)
+  ├── scripts/tikz2pdf.py → lecture-slides/figs/*.svg (derived)
+  ├── Quarto → HTML (derived)
+  └── Quarto → PDF (derived)
+```
+
+### Post-Parity Maintenance Phase (Quarto-first)
 
 ```
 Quarto .qmd (SOURCE OF TRUTH)

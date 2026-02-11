@@ -33,15 +33,15 @@
 | `/deploy [LectureN]`                        | Render Quarto slides and sync to GitHub Pages                        |
 | `/extract-tikz [LectureN]`                  | TikZ diagrams to PDF to SVG with 0-based indexing                    |
 | `/proofread [filename]`                     | Grammar/typo/overflow review and report                              |
-| `/visual-audit [filename]`                  | Slide layout audit for overflow and consistency                      |
-| `/pedagogy-review [filename]`               | Pedagogical review (read-only)                                       |
+| `/visual-audit [filename]`                  | Targeted visual-only diagnostic (use `/slide-excellence` for standard release review) |
+| `/pedagogy-review [filename]`               | Baseline pedagogical review (read-only)                              |
 | `/substance-review [filename]`              | IO domain correctness review (read-only)                             |
 | `/review-r [file or LectureN]`              | R code review: quality, reproducibility, correctness                 |
-| `/qa-quarto [LectureN]`                     | Adversarial Quarto vs Beamer QA: critic finds issues, fixer resolves |
+| `/qa-quarto [LectureN]`                     | Quarto vs Beamer parity QA profile (uses canonical orchestrator loop) |
 | `/translate-to-quarto [LectureN or file]`   | Beamer to Quarto translation workflow                                |
 | `/slide-excellence [filename]`              | Combined visual + pedagogical + proofreading + citation audit review |
 | `/create-lecture`                           | Full lecture creation workflow                                       |
-| `/devils-advocate`                          | Challenge slide design with pedagogical questions                    |
+| `/devils-advocate`                          | Optional adversarial challenge pass after baseline pedagogy review   |
 | **Exercises**                               |                                                                      |
 | `/review-exercise <file>`                   | Exercise review: timing, pedagogy, solutions, clarity                |
 | `/create-exercise --type --lecture --topic` | Generate new exercise from specifications with quality checks        |
@@ -62,7 +62,7 @@
 | `beamer-translator` | opus    | Beamer->Quarto translation                    |
 | `quarto-critic`     | opus    | Adversarial QA (read-only)                   |
 | `quarto-fixer`      | sonnet  | Implements critic fixes                      |
-| `verifier`          | inherit | Compilation and rendering checks             |
+| `verifier`          | inherit | Canonical compile/render verification engine |
 | `domain-reviewer`   | inherit | Substantive domain correctness               |
 
 **Note:** Citation audit is built into `/slide-excellence` (not a standalone agent).

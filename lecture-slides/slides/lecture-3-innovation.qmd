@@ -255,6 +255,8 @@ Holding everything else fixed, an incumbent monopolist has **weaker** incentives
 
 ## Social planner: value of a cost reduction
 
+After the private-value benchmarks, we now switch to the **social objective**.
+
 **Efficient output** (price equals marginal cost)
 
 $$
@@ -306,10 +308,10 @@ Private incentives and social value need not align: **$\Delta W$ can exceed $\De
 
 ## Quick numeric check (optional)
 
-Take $A=20$, $c_0=10$, and $c_1=6$.
+Using the same calibration as earlier ($A=18$, $c_0=10$, $c_1=6$):
 
-- Monopoly: $\pi^m(c_0)=25$, $\pi^m(c_1)=49$, so $\Delta\pi^m=24$
-- Planner: $W(c_0)=50$, $W(c_1)=98$, so $\Delta W=48$ (twice the monopoly gain)
+- Monopoly: $\pi^m(c_0)=16$, $\pi^m(c_1)=36$, so $\Delta\pi^m=20$
+- Planner: $W(c_0)=32$, $W(c_1)=72$, so $\Delta W=40$ (twice the monopoly gain)
 
 ::: {.callout-note title="Discussion question"}
 In what sense is this "too little" innovation from a welfare perspective? What policy instruments could close the gap?
@@ -318,6 +320,8 @@ In what sense is this "too little" innovation from a welfare perspective? What p
 # Innovation with Rivals and Entry {background-color="#00539b"}
 
 ## Incentives to innovate with rivals: intuition first
+
+We now move from benchmark environments to **strategic interaction** with rivals and entry threat.
 
 Innovation incentives are not monotone in "competition intensity."
 
@@ -420,6 +424,8 @@ Pre-emption fails when the incumbent's **entry-deterrence motive is weak** and t
 In Dasgupta-Stiglitz, firms choose R&D and entry is endogenous.  
 The central question is: **what jointly determines innovation intensity and concentration?**
 
+This final model puts both objects, $x$ and $N$, inside one equilibrium system.
+
 Key forces:
 
 - **Demand conditions** (elasticity, market size)
@@ -507,6 +513,8 @@ $$
 \frac{Nx}{Q}=\alpha c
 $$
 
+where symmetry implies $q=Q/N$.
+
 So:
 
 $$
@@ -538,10 +546,7 @@ Higher R&D effectiveness ($\alpha$) supports higher concentration, while more el
 
 ## Numerical check
 
-Using
-$
-\frac{1}{N^*}=\frac{1}{\varepsilon}\cdot\frac{\alpha}{1+\alpha}
-$:
+Using $\frac{1}{N^*}=\frac{1}{\varepsilon}\cdot\frac{\alpha}{1+\alpha}$:
 
 - If $\varepsilon=2$ and $\alpha=1$, then $\frac{1}{N^*}=\frac{1}{4}$ so $N^*=4$.
 - If $\varepsilon=2$ and $\alpha=3$, then $\frac{1}{N^*}=\frac{3}{8}$ so $N^*\approx2.7$.
@@ -555,6 +560,7 @@ When is that welfare-improving once we account for both dynamic gains and static
 
 With $P(Q)=\sigma Q^{-\varepsilon}$ and $c(x)=\beta x^{-\alpha}$:
 
+- Here, $\sigma>0$ is a demand-level (market-size) shifter.
 - $\frac{\partial(1/N^*)}{\partial\alpha}>0$: more effective R&D tends to increase concentration.
 - $\frac{\partial(1/N^*)}{\partial\varepsilon}<0$: more elastic demand tends to reduce concentration.
 - $\frac{\partial x^*}{\partial \sigma}>0$: larger markets raise R&D effort.

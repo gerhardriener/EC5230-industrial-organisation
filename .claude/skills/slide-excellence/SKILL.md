@@ -9,6 +9,8 @@ argument-hint: "[QMD filename]"
 
 **Purpose:** Run a comprehensive review across visual layout, pedagogy, proofreading, and citations, then synthesize findings.
 
+**Default release review:** prefer this skill over stacking separate `/visual-audit`, `/pedagogy-review`, and `/proofread` runs for the same file.
+
 ---
 
 ## Inputs

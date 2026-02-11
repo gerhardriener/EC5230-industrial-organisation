@@ -1,14 +1,20 @@
 ---
 name: visual-audit
-description: Perform adversarial visual audit of Quarto or Beamer slides checking for overflow, font consistency, box fatigue, and layout issues.
+description: Targeted visual-only diagnostic using slide-auditor. Use for isolated layout debugging, not full review cycles.
 disable-model-invocation: true
 argument-hint: "[QMD filename]"
 ---
 
 # Visual Audit of Slide Deck
 
-Perform a thorough visual layout audit of a slide deck.
+Perform a targeted visual layout audit of a slide deck.
 Use `.claude/rules/audit-report-conventions.md` for naming/persistence conventions.
+
+## Positioning
+
+- This is a **diagnostic-only** skill for isolated visual issues.
+- For standard release review, use `/slide-excellence` (which already includes `slide-auditor`).
+- Do not run `/visual-audit` and `/slide-excellence` back-to-back on the same file unless doing a focused re-check after fixes.
 
 ## Steps
 

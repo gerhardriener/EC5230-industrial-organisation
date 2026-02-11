@@ -1,6 +1,6 @@
 ---
 name: devils-advocate
-description: Challenge a slide deck design with 5-7 specific pedagogical questions. Checks ordering, prerequisites, gaps, alternatives, notation conflicts, cognitive load, and book readiness.
+description: Focused adversarial challenge pass for pedagogy. Use after baseline pedagogy review or on explicit request.
 disable-model-invocation: true
 argument-hint: "[Lecture filename or topic description]"
 ---
@@ -10,6 +10,12 @@ argument-hint: "[Lecture filename or topic description]"
 Critically examine a slide deck and challenge its design with 5-7 specific pedagogical questions.
 
 **Philosophy:** "We arrive at the best possible presentation through active dialogue."
+
+## Positioning
+
+- This is a **challenge extension**, not the default pedagogical review.
+- Default baseline: `/pedagogy-review` (or `/slide-excellence` for full-stack review).
+- Use this skill when you want alternative sequencing, stronger pushback, or explicit stress-testing of teaching choices.
 
 ---
 
