@@ -415,228 +415,152 @@ Pre-emption fails when the incumbent's **entry-deterrence motive is weak** and t
 
 # Endogenous R&D and Market Structure: @dasguptaIndustrialStructureNature1980 {background-color="#00539b"}
 
-## Setup and key result
+## Big Question
 
-The @dasguptaIndustrialStructureNature1980 model treats R&D as an **endogenous sunk cost**: firms spend on R&D to reduce marginal cost, and entry adjusts endogenously.
+In Dasgupta-Stiglitz, firms choose R&D and entry is endogenous.  
+The central question is: **what jointly determines innovation intensity and concentration?**
 
-The key result is a clean link between:
+Key forces:
 
 - **Demand conditions** (elasticity, market size)
-- **Innovative opportunities** (how effective R&D is at lowering costs)
-- **Equilibrium concentration** (how many firms survive under free entry)
+- **R&D technology** (how effectively spending lowers cost)
+- **Free entry** (how many firms can cover R&D outlays)
 
-The linear model gave us clean closed-form comparisons. The D-S framework sacrifices tractability for generality — but delivers a structural result linking innovation to concentration.
-
- ## Notation for this section
+## Notation for this section
 
 | Symbol | Type | Meaning |
 |--------|------|---------|
 | $x$ | Choice | R&D expenditure per firm |
-| $c(x)$ | Function | Marginal cost (decreasing in $x$) |
+| $c(x)$ | Function | Marginal cost, with $c'(x)<0$ |
 | $N$ | Outcome | Number of active firms (endogenous) |
-| $\varepsilon$ | Parameter | Demand elasticity |
-| $\alpha$ | Parameter | R&D cost elasticity: $\alpha = -\frac{dc(x)}{dx}\frac{x}{c}$ (measures how effectively R&D reduces cost) |
+| $\varepsilon$ | Parameter | Market demand elasticity |
+| $\alpha$ | Parameter | R&D cost elasticity, $\alpha=-\frac{dc(x)}{dx}\frac{x}{c}$ |
 
-## Planner benchmark 
+## Planner benchmark: why scale matters
 
-**Question**: Do more firms imply more innovation?
-
-**Primitives:**
-
-- $U(Q)$ = gross social benefit
-- $c = c(x)$ = constant marginal cost depending on R&D expenditure $x$
-- Assumption: $c'(x) < 0$ (R&D reduces cost)
-
-## Planner benchmark: Social optimum
+Planner problem:
 
 $$
-\max_{x,Q} \ V(x,Q) = U(Q) - c(x)Q - x
+\max_{x,Q}\; V(x,Q)=U(Q)-c(x)Q-x
 $$
 
-**First-order condition in $x$:**
+FOC for R&D:
 
 $$
--c'(x)Q = 1
+-c'(x)Q=1
 $$
 
-Optimal R&D increases with scale $Q$: a larger market makes cost reduction more valuable
+Interpretation: the marginal benefit of R&D is proportional to output scale $Q$, so larger markets justify more cost-reducing innovation.
 
-## Empirical example: market size and innovation
+## Empirical anchor: market size and innovation
 
 ::: {.callout-note title="Pharmaceutical innovation responds to demand"}
-@acemogluMarketSizeInnovation2004 show that larger potential markets lead to 
+@acemogluMarketSizeInnovation2004 show that larger potential markets lead to:
 
-* more pharmaceutical innovation (new drugs/new molecular entities) 
-* $\rightarrow$ consistent with models where the return to innovation rises with **scale**.
+- more pharmaceutical innovation (new drugs / new molecular entities)
+- consistent evidence that innovation incentives rise with market scale
 :::
 
-## Firm's problem
+## Industry side: firms choose output and R&D
 
-**Assumptions:** Firms engage in **Cournot (quantity) competition** with symmetric costs. Each firm chooses R&D expenditure $x_i$ and output $q_i$ simultaneously.
-
-**Firm $i$'s problem:**
+Assume symmetric Cournot competition. Firm $i$ solves:
 
 $$
-\max_{x_i, q_i} \ \pi(x_i, q_i) = [P(q_i + q_{-i}) - c(x_i)]q_i - x_i
+\max_{x_i,q_i}\; \pi_i=[P(Q)-c(x_i)]q_i-x_i,\qquad Q=q_i+q_{-i}
 $$
 
-**Symmetric equilibrium:**
+In symmetric equilibrium, $q_i^*=Q^*/N^*$ and $x_i^*=x^*$.
 
-- $q_1^* = \cdots = q_N^* = Q^*/N$ and $x_1^* = \cdots = x_N^* = x^*$
+## Two equilibrium conditions
 
-## Intuition check: What determines $N^*$?
-
-What forces at work here?
-
-- **Entry incentive:** If industry profits are positive, more firms want to enter
-- **R&D cost:** Each firm must spend $x^*$ to achieve low cost $c(x^*)$
-- **Market power:** More firms → lower mark-ups → lower operating profits
-- **Zero-profit equilibrium:** Entry stops when operating profits just cover R&D outlays
-
-**Key insight:** Equilibrium concentration ($N^*$) balances these forces. We'll derive the precise formula by combining the pricing and free-entry conditions.
-
-## Reminder: Cournot perceived elasticity
-
-**From Lecture 1:** Under Cournot competition, firm $i$ perceives the demand elasticity facing its own output as $N\varepsilon$, where $\varepsilon$ is the market demand elasticity.
-
-**This gives the markup formula:**
+From Cournot pricing (perceived elasticity $N\varepsilon$):
 
 $$
-\frac{P - c}{P} = \frac{1}{N\varepsilon}
+\frac{P-c}{P}=\frac{1}{N\varepsilon}
+\quad\Leftrightarrow\quad
+P-c=\frac{P}{N\varepsilon}
 $$
 
-**Rearranging:**
+From free entry (zero profit):
 
 $$
-P\left(1 - \frac{1}{N\varepsilon}\right) = c
+(P-c)\frac{Q}{N}-x=0
+\quad\Leftrightarrow\quad
+P-c=\frac{Nx}{Q}
 $$
 
-We'll use this to link pricing to R&D in the Dasgupta–Stiglitz model.
+Entry continues until operating margins exactly cover per-firm R&D spending.
 
-## Equilibrium pricing
+## Deriving concentration in one step
 
-**First-order condition in $q_i$:**
-
-$$
-P(Q^*)\left(1 - \frac{1}{N\varepsilon}\right) = c(x^*)
-$$
-
-where $\varepsilon = -\frac{\partial Q}{\partial P}\frac{P}{Q}$ is the demand elasticity.
-
-**Interpretation:**
-
-- The term $\left(1-\frac{1}{N\varepsilon}\right)$ captures market power via the perceived demand elasticity under Cournot
-  - More firms ($N\uparrow$) → perceived demand becomes more elastic → mark-ups fall
-
-## Free entry condition 
-
-**Zero profit condition** (free entry):
+Equate the two expressions for the margin:
 
 $$
-\pi = 0 \quad \Rightarrow \quad (P - c)\frac{Q^*}{N^*} - x^* = 0
+\frac{P}{N\varepsilon}=\frac{Nx}{Q}
 $$
 
-**Rearrange:**
+Use the R&D elasticity definition with the R&D FOC ($-c'(x)q=1$), which implies:
 
 $$
-P - c = N^* \frac{x^*}{Q^*}
+\frac{x}{q}=\alpha c
+\quad\Rightarrow\quad
+\frac{Nx}{Q}=\alpha c
 $$
 
-## Deriving the concentration formula (I): Setup
-
-**Combine the two conditions:**
-
-- From pricing FOC: $P - c = \frac{P}{N\varepsilon}$
-- From free entry: $P - c = \frac{Nx}{Q}$
-
-**Equating the two expressions:**
+So:
 
 $$
-\frac{P}{N\varepsilon} = \frac{Nx}{Q}
+\frac{P}{N\varepsilon}=\alpha c
 $$
 
-*(We solve for $N$ on the next slide.)*
-
-## Deriving the concentration formula (II): Solution
-
-**Introduce the R&D cost elasticity** $\alpha = -\frac{dc(x)}{dx}\frac{x}{c}$ (from firm's R&D FOC).
-
-**This implies:** $\frac{x}{cq} = \alpha$, so $\frac{Nx}{Q} = \frac{Nx}{Nq} = \frac{x}{q} = \alpha c$
-
-**Substitute into our equation:**
+Divide by $P$ and substitute $c/P=1-\frac{1}{N\varepsilon}$:
 
 $$
-\underbrace{\frac{P}{N\varepsilon}}_{\text{markup}} = \underbrace{\alpha c}_{\text{R\&D cost per unit}}
+\frac{1}{N\varepsilon}
+=
+\alpha\!\left(1-\frac{1}{N\varepsilon}\right)
+\quad\Rightarrow\quad
+\frac{1}{N^*}
+=
+\frac{1}{\varepsilon}\cdot\frac{\alpha}{1+\alpha}
 $$
 
-**Divide by $P$** and use $c/P = 1 - 1/(N\varepsilon)$ from the pricing FOC:
+## Core result: equilibrium concentration
 
 $$
-\frac{1}{N\varepsilon} = \alpha\!\left(1 - \frac{1}{N\varepsilon}\right) \quad \Rightarrow \quad \frac{1}{N^*} = \frac{1}{\varepsilon}\cdot\frac{\alpha}{1+\alpha}
-$$
-
-## Equilibrium concentration 
-
-**Equilibrium concentration satisfies:**
-
-$$
-\frac{1}{N^*} = \frac{1}{\varepsilon} \cdot \frac{\alpha}{1+\alpha}
+\frac{1}{N^*}=\frac{1}{\varepsilon}\cdot\frac{\alpha}{1+\alpha}
 $$
 
 ::: {.callout-note title="Interpretation"}
-Concentration and research intensity are jointly determined: entry expands $N$ until operating surplus covers R&D outlays $x^*$. Higher R&D cost elasticity ($\alpha$) supports higher concentration; more elastic demand lowers concentration.
+Concentration and innovation are jointly determined.  
+Higher R&D effectiveness ($\alpha$) supports higher concentration, while more elastic demand ($\varepsilon$) supports lower concentration.
 :::
 
-## Numerical illustration
+## Numerical check
 
-**Using the concentration formula** with specific values:
+Using
+$
+\frac{1}{N^*}=\frac{1}{\varepsilon}\cdot\frac{\alpha}{1+\alpha}
+$:
 
-$$
-\frac{1}{N^*} = \frac{1}{\varepsilon} \cdot \frac{\alpha}{1+\alpha}
-$$
-
-- If $\varepsilon = 2$ and $\alpha = 1$: $\frac{1}{N^*} = \frac{1}{2} \cdot \frac{1}{2} = \frac{1}{4}$, so $N^* = 4$ firms
-- If $\varepsilon = 2$ and $\alpha = 3$: $\frac{1}{N^*} = \frac{1}{2} \cdot \frac{3}{4} = \frac{3}{8}$, so $N^* \approx 2.7$ firms
+- If $\varepsilon=2$ and $\alpha=1$, then $\frac{1}{N^*}=\frac{1}{4}$ so $N^*=4$.
+- If $\varepsilon=2$ and $\alpha=3$, then $\frac{1}{N^*}=\frac{3}{8}$ so $N^*\approx2.7$.
 
 ::: {.callout-note title="Discussion question"}
-If a government subsidy increases the R&D cost elasticity ($\alpha$, making R&D more effective), what does the model predict for market structure? Is this welfare-improving?
+If policy raises R&D effectiveness ($\alpha$), the model predicts **more concentration** (lower $N^*$).  
+When is that welfare-improving once we account for both dynamic gains and static mark-up losses?
 :::
 
-## Key comparative statics (I)
+## Comparative statics and trade-offs
 
-**With $P(Q) = \sigma Q^{-\varepsilon}$ and $c(x) = \beta x^{-\alpha}$:**
+With $P(Q)=\sigma Q^{-\varepsilon}$ and $c(x)=\beta x^{-\alpha}$:
 
-**Dynamic vs static efficiency trade-off:**
+- $\frac{\partial(1/N^*)}{\partial\alpha}>0$: more effective R&D tends to increase concentration.
+- $\frac{\partial(1/N^*)}{\partial\varepsilon}<0$: more elastic demand tends to reduce concentration.
+- $\frac{\partial x^*}{\partial \sigma}>0$: larger markets raise R&D effort.
+- Typically, $x^*(N+1)<x^*(N)$ but $Q^*(N+1)>Q^*(N)$: more firms improve static efficiency yet can weaken per-firm innovation incentives.
 
-- $x^*(N+1) < x^*(N)$ (more firms → less R&D per firm)
-- $Q^*(N+1) > Q^*(N)$ (more firms → higher output)
-
-**Research intensity:**
-
-- Often maximized at moderate concentration (Scherer-style inverse-U)
-
-**Interpretation:**
-
-- Market structure affects both static outcomes ($Q$) and dynamic investment incentives ($x$)
-
-## Key comparative statics (II) 
-
-**Greater R&D effectiveness** (higher $\alpha$) associated with higher concentration:
-
-$$
-\frac{\partial (1/N^*)}{\partial \alpha} > 0
-$$
-
-**Demand growth stimulates R&D:**
-
-$$
-\frac{\partial x^*}{\partial \sigma} > 0
-$$
-
-**Interpretation:**
-
-- Larger markets (higher $\sigma$) increase the return to cost reduction
-- More effective R&D (higher $\alpha$) can support higher concentration in equilibrium
+This is the core dynamic-static tension in endogenous market-structure models.
 
 ## Summary and next week
 

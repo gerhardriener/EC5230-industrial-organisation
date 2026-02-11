@@ -1,13 +1,8 @@
 <!DOCTYPE html>
-<html lang="en-GB"><head>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-html/tabby.min.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-3f61aac59b63c3a2d0e87c59ee7d0662.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.19">
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.19" />
 
   <meta name="author" content="Gerhard Riener">
   <title>EC5230 Industrial Organisation – Lecture 3 - Innovation</title>
@@ -146,12 +141,12 @@
     }
   </style>
 </head>
-<body class="quarto-light">
+<body>
 <script src="mathjax-config.js"></script>
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-color="#00539b" class="quarto-title-block center">
+<section id="title-slide" data-background-color="#00539b" class="quarto-title-block">
   <h1 class="title">Lecture 3 - Innovation</h1>
 
 <div class="quarto-title-authors">
@@ -164,8 +159,8 @@ Gerhard Riener
 
 </section>
 <section>
-<section id="innovation-and-market-structure" class="title-slide slide level1 center" data-background-color="#00539b">
-<h1>Innovation and Market Structure</h1>
+<section id="innovation-and-market-structure" class="title-slide slide level1" data-background-color="#00539b">
+<h1 data-background-color="#00539b">Innovation and Market Structure</h1>
 
 </section>
 <section id="innovation-as-a-margin-of-competition" class="slide level2">
@@ -182,7 +177,7 @@ Gerhard Riener
 <h2>Types of innovation (and what we model today)</h2>
 <p><strong>Process innovation</strong> (this lecture’s workhorse case)</p>
 <ul>
-<li>Lowers marginal (or average) cost, e.g.&nbsp;a better production method</li>
+<li>Lowers marginal (or average) cost, e.g. a better production method</li>
 <li>Think: a shift from <span class="math inline">\(c_0\)</span> to <span class="math inline">\(c_1&lt;c_0\)</span></li>
 </ul>
 <p><strong>Product innovation</strong></p>
@@ -196,15 +191,15 @@ Gerhard Riener
 <h2>Learning objectives</h2>
 <ul>
 <li>Compute the <strong>private value</strong> of a process innovation under different market structures</li>
-<li>Define <strong>drastic vs non-drastic</strong> innovations and explain the <strong>replacement effect</strong> <span class="citation" data-cites="arrowEconomicWelfareAllocation1972">(<a href="#/references" role="doc-biblioref" onclick="">Arrow 1972</a>)</span></li>
-<li>Understand how <strong>free entry + endogenous R&amp;D</strong> link innovation to <strong>concentration</strong> <span class="citation" data-cites="dasguptaIndustrialStructureNature1980">(<a href="#/references" role="doc-biblioref" onclick="">Dasgupta and Stiglitz 1980</a>)</span></li>
+<li>Define <strong>drastic vs non-drastic</strong> innovations and explain the <strong>replacement effect</strong> <span class="citation" data-cites="arrowEconomicWelfareAllocation1972">(<a href="#/ref-arrowEconomicWelfareAllocation1972" role="doc-biblioref">Arrow 1972</a>)</span></li>
+<li>Understand how <strong>free entry + endogenous R&amp;D</strong> link innovation to <strong>concentration</strong> <span class="citation" data-cites="dasguptaIndustrialStructureNature1980">(<a href="#/ref-dasguptaIndustrialStructureNature1980" role="doc-biblioref">Dasgupta and Stiglitz 1980</a>)</span></li>
 </ul>
 <div title="Today: roadmap">
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class='callout-icon'></i>
 </div>
 <p><strong>Today: roadmap</strong></p>
 </div>
@@ -213,7 +208,7 @@ Gerhard Riener
 <li>Benchmark model: value under <strong>monopoly</strong>, <strong>perfect competition</strong>, and <strong>social planner</strong></li>
 <li><strong>Drastic vs non-drastic</strong> innovations and the <strong>replacement effect</strong></li>
 <li>Innovation with <strong>oligopoly</strong> and <strong>entry threat</strong></li>
-<li><strong>Concentration</strong> and <strong>R&amp;D</strong> <span class="citation" data-cites="dasguptaIndustrialStructureNature1980">(<a href="#/references" role="doc-biblioref" onclick="">Dasgupta and Stiglitz 1980</a>)</span></li>
+<li><strong>Concentration</strong> and <strong>R&amp;D</strong> <span class="citation" data-cites="dasguptaIndustrialStructureNature1980">(<a href="#/ref-dasguptaIndustrialStructureNature1980" role="doc-biblioref">Dasgupta and Stiglitz 1980</a>)</span></li>
 </ol>
 </div>
 </div>
@@ -228,7 +223,7 @@ Gerhard Riener
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class='callout-icon'></i>
 </div>
 <p><strong>Question for you</strong></p>
 </div>
@@ -263,8 +258,8 @@ Gerhard Riener
 <p>In what follows we compute WTP for: <strong>Monopoly</strong> (before/after), <strong>perfect competition</strong> (before; exclusive rights after), and the <strong>social planner</strong>.</p>
 </section></section>
 <section>
-<section id="benchmarks-value-of-a-process-innovation" class="title-slide slide level1 center" data-background-color="#00539b">
-<h1>Benchmarks: Value of a Process Innovation</h1>
+<section id="benchmarks-value-of-a-process-innovation" class="title-slide slide level1" data-background-color="#00539b">
+<h1 data-background-color="#00539b">Benchmarks: Value of a Process Innovation</h1>
 
 </section>
 <section id="setup-linear-demand-cost-reducing-innovation" class="slide level2">
@@ -283,7 +278,7 @@ P(Q) = A - Q
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class='callout-icon'></i>
 </div>
 <p><strong>Goal</strong></p>
 </div>
@@ -316,7 +311,7 @@ Q^m(c) = \frac{A-c}{2}, \qquad P^m(c) = \frac{A+c}{2}, \qquad \pi^m(c) = \frac{(
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class='callout-icon'></i>
 </div>
 <p><strong>Interpretation</strong></p>
 </div>
@@ -371,8 +366,12 @@ P^m(c_1) \ge c_0
 A + c_1 \ge 2c_0
 \]</span></p>
 <p>Boundary case: <span class="math inline">\(P^m(c_1)=c_0\)</span> (equivalently <span class="math inline">\(A+c_1=2c_0\)</span>).</p>
-
-<img data-src="../figs/fig-innovation-drastic-threshold.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:92.0%" alt="Two-panel demand-cost diagram comparing non-drastic and drastic innovation conditions"></section>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figs/fig-innovation-drastic-threshold.svg" class="quarto-figure quarto-figure-center" style="width:92.0%" alt="Two-panel demand-cost diagram comparing non-drastic and drastic innovation conditions" /></p>
+</figure>
+</div>
+</section>
 <section id="numeric-check-drastic-or-non-drastic" class="slide level2">
 <h2>Numeric check: drastic or non-drastic?</h2>
 <p>Use the same values as panel (a): <span class="math inline">\(A=18\)</span>, <span class="math inline">\(c_0=10\)</span>, and <span class="math inline">\(c_1=6\)</span>.</p>
@@ -387,7 +386,7 @@ A + c_1 \ge 2c_0
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class='callout-icon'></i>
 </div>
 <p><strong>Replacement effect preview</strong></p>
 </div>
@@ -405,10 +404,14 @@ A + c_1 \ge 2c_0
 <li>Innovation raises monopoly profit only by the increment <span class="math inline">\(\pi^m(c_1)-\pi^m(c_0)\)</span>.</li>
 <li>Right panel: under competitive pre-innovation conditions, the innovation mostly <strong>creates</strong> rents.</li>
 </ul>
-
-<img data-src="../figs/fig-innovation-replacement-effect.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:95.0%" alt="Two-panel surplus diagram: monopoly replaces existing rents while competitive innovator creates new rents"></section>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figs/fig-innovation-replacement-effect.svg" class="quarto-figure quarto-figure-center" style="width:95.0%" alt="Two-panel surplus diagram: monopoly replaces existing rents while competitive innovator creates new rents" /></p>
+</figure>
+</div>
+</section>
 <section id="replacement-effect-arroweconomicwelfareallocation1972" class="slide level2">
-<h2>Replacement effect <span class="citation" data-cites="arrowEconomicWelfareAllocation1972">(<a href="#/references" role="doc-biblioref" onclick="">Arrow 1972</a>)</span></h2>
+<h2>Replacement effect <span class="citation" data-cites="arrowEconomicWelfareAllocation1972">(<a href="#/ref-arrowEconomicWelfareAllocation1972" role="doc-biblioref">Arrow 1972</a>)</span></h2>
 <ul>
 <li>The key object is the <strong>incremental</strong> value of innovation.</li>
 <li>Competitive benchmark: pre-innovation profits are approximately zero, so <span class="math inline">\(\Delta\pi^{pc} \approx \pi_{\text{after}}^{pc}\)</span>.</li>
@@ -437,7 +440,7 @@ A + c_1 \ge 2c_0
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class='callout-icon'></i>
 </div>
 <p><strong>Takeaway</strong></p>
 </div>
@@ -467,21 +470,25 @@ A + c_1 \ge 2c_0
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class='callout-icon'></i>
 </div>
 <p><strong>Inverted-U evidence (QJE)</strong></p>
 </div>
 <div class="callout-content">
-<p><span class="citation" data-cites="aghionCompetitionInnovationInvertedU2005">Aghion et al. (<a href="#/references" role="doc-biblioref" onclick="">2005</a>)</span> document an <strong>inverted-U</strong> relationship between product-market competition and innovation (patents/citations) in UK firms, consistent with “escape competition” incentives for neck-and-neck firms and a <strong>replacement effect</strong> for laggards.</p>
+<p><span class="citation" data-cites="aghionCompetitionInnovationInvertedU2005">Aghion et al. (<a href="#/ref-aghionCompetitionInnovationInvertedU2005" role="doc-biblioref">2005</a>)</span> document an <strong>inverted-U</strong> relationship between product-market competition and innovation (patents/citations) in UK firms, consistent with “escape competition” incentives for neck-and-neck firms and a <strong>replacement effect</strong> for laggards.</p>
 </div>
 </div>
 </div>
 </div>
-
-<img data-src="../figs/fig-innovation-inverted-u.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:75.0%" alt="Inverted-U relationship between competition and innovation, after Aghion et al. (2005)"></section></section>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figs/fig-innovation-inverted-u.svg" class="quarto-figure quarto-figure-center" style="width:75.0%" alt="Inverted-U relationship between competition and innovation, after Aghion et al. (2005)" /></p>
+</figure>
+</div>
+</section></section>
 <section>
-<section id="social-value-of-innovation" class="title-slide slide level1 center" data-background-color="#00539b">
-<h1>Social Value of Innovation</h1>
+<section id="social-value-of-innovation" class="title-slide slide level1" data-background-color="#00539b">
+<h1 data-background-color="#00539b">Social Value of Innovation</h1>
 
 </section>
 <section id="social-planner-value-of-a-cost-reduction" class="slide level2">
@@ -499,7 +506,7 @@ W(c) = \int_0^{A-c} (A - Q - c) \, dQ = \frac{(A-c)^2}{2}
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class='callout-icon'></i>
 </div>
 <p><strong>Interpretation</strong></p>
 </div>
@@ -525,9 +532,9 @@ W(c) = \int_0^{A-c} (A - Q - c) \, dQ = \frac{(A-c)^2}{2}
 <h2>Putting the benchmarks side-by-side</h2>
 <table class="caption-top">
 <colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -559,7 +566,7 @@ W(c) = \int_0^{A-c} (A - Q - c) \, dQ = \frac{(A-c)^2}{2}
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class='callout-icon'></i>
 </div>
 <p><strong>Policy interpretation</strong></p>
 </div>
@@ -582,12 +589,12 @@ W(c) = \int_0^{A-c} (A - Q - c) \, dQ = \frac{(A-c)^2}{2}
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class='callout-icon'></i>
 </div>
 <p><strong>Welfare gains from product innovation (JPE)</strong></p>
 </div>
 <div class="callout-content">
-<p><span class="citation" data-cites="trajtenbergWelfareAnalysisProduct1989">Trajtenberg (<a href="#/references" role="doc-biblioref" onclick="">1989</a>)</span> estimates consumer and producer surplus gains from quality improvements in computed tomography (CT) scanners, illustrating that the <strong>social value</strong> of innovation can greatly exceed the innovator’s private returns.</p>
+<p><span class="citation" data-cites="trajtenbergWelfareAnalysisProduct1989">Trajtenberg (<a href="#/ref-trajtenbergWelfareAnalysisProduct1989" role="doc-biblioref">1989</a>)</span> estimates consumer and producer surplus gains from quality improvements in computed tomography (CT) scanners, illustrating that the <strong>social value</strong> of innovation can greatly exceed the innovator’s private returns.</p>
 </div>
 </div>
 </div>
@@ -605,7 +612,7 @@ W(c) = \int_0^{A-c} (A - Q - c) \, dQ = \frac{(A-c)^2}{2}
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class='callout-icon'></i>
 </div>
 <p><strong>Discussion question</strong></p>
 </div>
@@ -617,8 +624,8 @@ W(c) = \int_0^{A-c} (A - Q - c) \, dQ = \frac{(A-c)^2}{2}
 </div>
 </section></section>
 <section>
-<section id="innovation-with-rivals-and-entry" class="title-slide slide level1 center" data-background-color="#00539b">
-<h1>Innovation with Rivals and Entry</h1>
+<section id="innovation-with-rivals-and-entry" class="title-slide slide level1" data-background-color="#00539b">
+<h1 data-background-color="#00539b">Innovation with Rivals and Entry</h1>
 
 </section>
 <section id="incentives-to-innovate-with-rivals-intuition-first" class="slide level2">
@@ -633,7 +640,7 @@ W(c) = \int_0^{A-c} (A - Q - c) \, dQ = \frac{(A-c)^2}{2}
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class='callout-icon'></i>
 </div>
 <p><strong>Rule of thumb</strong></p>
 </div>
@@ -682,7 +689,7 @@ V_E = \pi^d(c_1, c_0)
 \]</span></p>
 </section>
 <section id="entry-threat-pre-emption-condition-gilbertpreemptivepatentingpersistence1982" class="slide level2">
-<h2>Entry threat: pre-emption condition <span class="citation" data-cites="gilbertPreemptivePatentingPersistence1982">(<a href="#/references" role="doc-biblioref" onclick="">Gilbert and Newbery 1982</a>)</span></h2>
+<h2>Entry threat: pre-emption condition <span class="citation" data-cites="gilbertPreemptivePatentingPersistence1982">(<a href="#/ref-gilbertPreemptivePatentingPersistence1982" role="doc-biblioref">Gilbert and Newbery 1982</a>)</span></h2>
 <p>The incumbent has stronger innovation incentives when:</p>
 <p><span class="math display">\[
 V_I &gt; V_E
@@ -695,7 +702,7 @@ V_I &gt; V_E
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class='callout-icon'></i>
 </div>
 <p><strong>Interpretation</strong></p>
 </div>
@@ -713,12 +720,43 @@ V_I &gt; V_E
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class='callout-icon'></i>
 </div>
 <p><strong>Discussion question</strong></p>
 </div>
 <div class="callout-content">
 <p>Under what market conditions might an entrant have stronger innovation incentives than the incumbent? What features would reverse the pre-emption result?</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="answer-when-entrant-incentives-dominate" class="slide level2">
+<h2>Answer: when entrant incentives dominate</h2>
+<p>Entrant incentives are stronger when:</p>
+<p><span class="math display">\[
+V_E &gt; V_I
+\quad \Leftrightarrow \quad
+\pi^d(c_1,c_0) + \pi^d(c_0,c_1) &gt; \pi^m(c_1)
+\]</span></p>
+<ul>
+<li><strong>Weak business-stealing effect</strong>: products are more differentiated, so entry hurts the incumbent less.</li>
+<li><strong>Low market-structure protection value</strong>: moving from duopoly to monopoly is not worth much to the incumbent.</li>
+<li><strong>High entrant upside from innovation</strong>: entrant post-entry profits <span class="math inline">\(\pi^d(c_1,c_0)\)</span> are large (e.g., efficient entry, strong demand segment).</li>
+<li><strong>Large incumbent replacement effect</strong>: the incumbent already has substantial rents without innovating, so incremental gains are limited.</li>
+<li><strong>Weaker appropriability for incumbents</strong> (strong spillovers/imitation): innovation is less effective as an entry-deterrence tool.</li>
+</ul>
+<div title="Bottom line">
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class='callout-icon'></i>
+</div>
+<p><strong>Bottom line</strong></p>
+</div>
+<div class="callout-content">
+<p>Pre-emption fails when the incumbent’s <strong>entry-deterrence motive is weak</strong> and the entrant’s <strong>duopoly gain from innovating is strong</strong>.</p>
 </div>
 </div>
 </div>
@@ -731,38 +769,40 @@ V_I &gt; V_E
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class='callout-icon'></i>
 </div>
 <p><strong>Pre-emptive innovation patterns (ReStud)</strong></p>
 </div>
 <div class="callout-content">
-<p><span class="citation" data-cites="blundellMarketShareMarket1999">Blundell et al. (<a href="#/references" role="doc-biblioref" onclick="">1999</a>)</span> find that higher market share and market value predict more patenting/innovations in UK manufacturing firms, consistent with <strong>strategic</strong> incentives (including pre-emptive innovation) in oligopolistic industries.</p>
+<p><span class="citation" data-cites="blundellMarketShareMarket1999">Blundell et al. (<a href="#/ref-blundellMarketShareMarket1999" role="doc-biblioref">1999</a>)</span> find that higher market share and market value predict more patenting/innovations in UK manufacturing firms, consistent with <strong>strategic</strong> incentives (including pre-emptive innovation) in oligopolistic industries.</p>
 </div>
 </div>
 </div>
 </div>
 </section></section>
 <section>
-<section id="endogenous-rd-and-market-structure-dasguptaindustrialstructurenature1980" class="title-slide slide level1 center" data-background-color="#00539b">
-<h1>Endogenous R&amp;D and Market Structure: <span class="citation" data-cites="dasguptaIndustrialStructureNature1980">Dasgupta and Stiglitz (<a href="#/references" role="doc-biblioref" onclick="">1980</a>)</span></h1>
+<section id="endogenous-rd-and-market-structure-dasguptaindustrialstructurenature1980" class="title-slide slide level1" data-background-color="#00539b">
+<h1 data-background-color="#00539b">Endogenous R&amp;D and Market Structure: <span class="citation" data-cites="dasguptaIndustrialStructureNature1980">Dasgupta and Stiglitz (<a href="#/ref-dasguptaIndustrialStructureNature1980" role="doc-biblioref">1980</a>)</span></h1>
 
 </section>
-<section id="setup-and-key-result" class="slide level2">
-<h2>Setup and key result</h2>
-<p>The <span class="citation" data-cites="dasguptaIndustrialStructureNature1980">Dasgupta and Stiglitz (<a href="#/references" role="doc-biblioref" onclick="">1980</a>)</span> model treats R&amp;D as an <strong>endogenous sunk cost</strong>: firms spend on R&amp;D to reduce marginal cost, and entry adjusts endogenously.</p>
-<p>The key result is a clean link between:</p>
+<section id="big-question" class="slide level2">
+<h2>Big Question</h2>
+<p>In Dasgupta-Stiglitz, firms choose R&amp;D and entry is endogenous.<br />
+The central question is: <strong>what jointly determines innovation intensity and concentration?</strong></p>
+<p>Key forces:</p>
 <ul>
 <li><strong>Demand conditions</strong> (elasticity, market size)</li>
-<li><strong>Innovative opportunities</strong> (how effective R&amp;D is at lowering costs)</li>
-<li><strong>Equilibrium concentration</strong> (how many firms survive under free entry)</li>
+<li><strong>R&amp;D technology</strong> (how effectively spending lowers cost)</li>
+<li><strong>Free entry</strong> (how many firms can cover R&amp;D outlays)</li>
 </ul>
-<p>The linear model gave us clean closed-form comparisons. The D-S framework sacrifices tractability for generality — but delivers a structural result linking innovation to concentration.</p>
-<p>## Notation for this section</p>
+</section>
+<section id="notation-for-this-section" class="slide level2">
+<h2>Notation for this section</h2>
 <table class="caption-top">
 <colgroup>
-<col style="width: 34%">
-<col style="width: 26%">
-<col style="width: 39%">
+<col style="width: 34%" />
+<col style="width: 26%" />
+<col style="width: 39%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -780,7 +820,7 @@ V_I &gt; V_E
 <tr class="even">
 <td><span class="math inline">\(c(x)\)</span></td>
 <td>Function</td>
-<td>Marginal cost (decreasing in <span class="math inline">\(x\)</span>)</td>
+<td>Marginal cost, with <span class="math inline">\(c&#39;(x)&lt;0\)</span></td>
 </tr>
 <tr class="odd">
 <td><span class="math inline">\(N\)</span></td>
@@ -790,227 +830,157 @@ V_I &gt; V_E
 <tr class="even">
 <td><span class="math inline">\(\varepsilon\)</span></td>
 <td>Parameter</td>
-<td>Demand elasticity</td>
+<td>Market demand elasticity</td>
 </tr>
 <tr class="odd">
 <td><span class="math inline">\(\alpha\)</span></td>
 <td>Parameter</td>
-<td>R&amp;D cost elasticity: <span class="math inline">\(\alpha = -\frac{dc(x)}{dx}\frac{x}{c}\)</span> (measures how effectively R&amp;D reduces cost)</td>
+<td>R&amp;D cost elasticity, <span class="math inline">\(\alpha=-\frac{dc(x)}{dx}\frac{x}{c}\)</span></td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="planner-benchmark" class="slide level2">
-<h2>Planner benchmark</h2>
-<p><strong>Question</strong>: Do more firms imply more innovation?</p>
-<p><strong>Primitives:</strong></p>
-<ul>
-<li><span class="math inline">\(U(Q)\)</span> = gross social benefit</li>
-<li><span class="math inline">\(c = c(x)\)</span> = constant marginal cost depending on R&amp;D expenditure <span class="math inline">\(x\)</span></li>
-<li>Assumption: <span class="math inline">\(c'(x) &lt; 0\)</span> (R&amp;D reduces cost)</li>
-</ul>
-</section>
-<section id="planner-benchmark-social-optimum" class="slide level2">
-<h2>Planner benchmark: Social optimum</h2>
+<section id="planner-benchmark-why-scale-matters" class="slide level2">
+<h2>Planner benchmark: why scale matters</h2>
+<p>Planner problem:</p>
 <p><span class="math display">\[
-\max_{x,Q} \ V(x,Q) = U(Q) - c(x)Q - x
+\max_{x,Q}\; V(x,Q)=U(Q)-c(x)Q-x
 \]</span></p>
-<p><strong>First-order condition in <span class="math inline">\(x\)</span>:</strong></p>
+<p>FOC for R&amp;D:</p>
 <p><span class="math display">\[
--c'(x)Q = 1
+-c&#39;(x)Q=1
 \]</span></p>
-<p>Optimal R&amp;D increases with scale <span class="math inline">\(Q\)</span>: a larger market makes cost reduction more valuable</p>
+<p>Interpretation: the marginal benefit of R&amp;D is proportional to output scale <span class="math inline">\(Q\)</span>, so larger markets justify more cost-reducing innovation.</p>
 </section>
-<section id="empirical-example-market-size-and-innovation" class="slide level2">
-<h2>Empirical example: market size and innovation</h2>
+<section id="empirical-anchor-market-size-and-innovation" class="slide level2">
+<h2>Empirical anchor: market size and innovation</h2>
 <div title="Pharmaceutical innovation responds to demand">
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class='callout-icon'></i>
 </div>
 <p><strong>Pharmaceutical innovation responds to demand</strong></p>
 </div>
 <div class="callout-content">
-<p><span class="citation" data-cites="acemogluMarketSizeInnovation2004">Acemoglu and Linn (<a href="#/references" role="doc-biblioref" onclick="">2004</a>)</span> show that larger potential markets lead to</p>
+<p><span class="citation" data-cites="acemogluMarketSizeInnovation2004">Acemoglu and Linn (<a href="#/ref-acemogluMarketSizeInnovation2004" role="doc-biblioref">2004</a>)</span> show that larger potential markets lead to:</p>
 <ul>
-<li>more pharmaceutical innovation (new drugs/new molecular entities)</li>
-<li><span class="math inline">\(\rightarrow\)</span> consistent with models where the return to innovation rises with <strong>scale</strong>.</li>
+<li>more pharmaceutical innovation (new drugs / new molecular entities)</li>
+<li>consistent evidence that innovation incentives rise with market scale</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="firms-problem" class="slide level2">
-<h2>Firm’s problem</h2>
-<p><strong>Assumptions:</strong> Firms engage in <strong>Cournot (quantity) competition</strong> with symmetric costs. Each firm chooses R&amp;D expenditure <span class="math inline">\(x_i\)</span> and output <span class="math inline">\(q_i\)</span> simultaneously.</p>
-<p><strong>Firm <span class="math inline">\(i\)</span>’s problem:</strong></p>
+<section id="industry-side-firms-choose-output-and-rd" class="slide level2">
+<h2>Industry side: firms choose output and R&amp;D</h2>
+<p>Assume symmetric Cournot competition. Firm <span class="math inline">\(i\)</span> solves:</p>
 <p><span class="math display">\[
-\max_{x_i, q_i} \ \pi(x_i, q_i) = [P(q_i + q_{-i}) - c(x_i)]q_i - x_i
+\max_{x_i,q_i}\; \pi_i=[P(Q)-c(x_i)]q_i-x_i,\qquad Q=q_i+q_{-i}
 \]</span></p>
-<p><strong>Symmetric equilibrium:</strong></p>
-<ul>
-<li><span class="math inline">\(q_1^* = \cdots = q_N^* = Q^*/N\)</span> and <span class="math inline">\(x_1^* = \cdots = x_N^* = x^*\)</span></li>
-</ul>
+<p>In symmetric equilibrium, <span class="math inline">\(q_i^*=Q^*/N^*\)</span> and <span class="math inline">\(x_i^*=x^*\)</span>.</p>
 </section>
-<section id="intuition-check-what-determines-n" class="slide level2">
-<h2>Intuition check: What determines <span class="math inline">\(N^*\)</span>?</h2>
-<p>What forces at work here?</p>
-<ul>
-<li><strong>Entry incentive:</strong> If industry profits are positive, more firms want to enter</li>
-<li><strong>R&amp;D cost:</strong> Each firm must spend <span class="math inline">\(x^*\)</span> to achieve low cost <span class="math inline">\(c(x^*)\)</span></li>
-<li><strong>Market power:</strong> More firms → lower mark-ups → lower operating profits</li>
-<li><strong>Zero-profit equilibrium:</strong> Entry stops when operating profits just cover R&amp;D outlays</li>
-</ul>
-<p><strong>Key insight:</strong> Equilibrium concentration (<span class="math inline">\(N^*\)</span>) balances these forces. We’ll derive the precise formula by combining the pricing and free-entry conditions.</p>
+<section id="two-equilibrium-conditions" class="slide level2">
+<h2>Two equilibrium conditions</h2>
+<p>From Cournot pricing (perceived elasticity <span class="math inline">\(N\varepsilon\)</span>):</p>
+<p><span class="math display">\[
+\frac{P-c}{P}=\frac{1}{N\varepsilon}
+\quad\Leftrightarrow\quad
+P-c=\frac{P}{N\varepsilon}
+\]</span></p>
+<p>From free entry (zero profit):</p>
+<p><span class="math display">\[
+(P-c)\frac{Q}{N}-x=0
+\quad\Leftrightarrow\quad
+P-c=\frac{Nx}{Q}
+\]</span></p>
+<p>Entry continues until operating margins exactly cover per-firm R&amp;D spending.</p>
 </section>
-<section id="reminder-cournot-perceived-elasticity" class="slide level2">
-<h2>Reminder: Cournot perceived elasticity</h2>
-<p><strong>From Lecture 1:</strong> Under Cournot competition, firm <span class="math inline">\(i\)</span> perceives the demand elasticity facing its own output as <span class="math inline">\(N\varepsilon\)</span>, where <span class="math inline">\(\varepsilon\)</span> is the market demand elasticity.</p>
-<p><strong>This gives the markup formula:</strong></p>
+<section id="deriving-concentration-in-one-step" class="slide level2">
+<h2>Deriving concentration in one step</h2>
+<p>Equate the two expressions for the margin:</p>
 <p><span class="math display">\[
-\frac{P - c}{P} = \frac{1}{N\varepsilon}
+\frac{P}{N\varepsilon}=\frac{Nx}{Q}
 \]</span></p>
-<p><strong>Rearranging:</strong></p>
+<p>Use the R&amp;D elasticity definition with the R&amp;D FOC (<span class="math inline">\(-c&#39;(x)q=1\)</span>), which implies:</p>
 <p><span class="math display">\[
-P\left(1 - \frac{1}{N\varepsilon}\right) = c
+\frac{x}{q}=\alpha c
+\quad\Rightarrow\quad
+\frac{Nx}{Q}=\alpha c
 \]</span></p>
-<p>We’ll use this to link pricing to R&amp;D in the Dasgupta–Stiglitz model.</p>
-</section>
-<section id="equilibrium-pricing" class="slide level2">
-<h2>Equilibrium pricing</h2>
-<p><strong>First-order condition in <span class="math inline">\(q_i\)</span>:</strong></p>
+<p>So:</p>
 <p><span class="math display">\[
-P(Q^*)\left(1 - \frac{1}{N\varepsilon}\right) = c(x^*)
+\frac{P}{N\varepsilon}=\alpha c
 \]</span></p>
-<p>where <span class="math inline">\(\varepsilon = -\frac{\partial Q}{\partial P}\frac{P}{Q}\)</span> is the demand elasticity.</p>
-<p><strong>Interpretation:</strong></p>
-<ul>
-<li>The term <span class="math inline">\(\left(1-\frac{1}{N\varepsilon}\right)\)</span> captures market power via the perceived demand elasticity under Cournot
-<ul>
-<li>More firms (<span class="math inline">\(N\uparrow\)</span>) → perceived demand becomes more elastic → mark-ups fall</li>
-</ul></li>
-</ul>
-</section>
-<section id="free-entry-condition" class="slide level2">
-<h2>Free entry condition</h2>
-<p><strong>Zero profit condition</strong> (free entry):</p>
+<p>Divide by <span class="math inline">\(P\)</span> and substitute <span class="math inline">\(c/P=1-\frac{1}{N\varepsilon}\)</span>:</p>
 <p><span class="math display">\[
-\pi = 0 \quad \Rightarrow \quad (P - c)\frac{Q^*}{N^*} - x^* = 0
-\]</span></p>
-<p><strong>Rearrange:</strong></p>
-<p><span class="math display">\[
-P - c = N^* \frac{x^*}{Q^*}
+\frac{1}{N\varepsilon}
+=
+\alpha\!\left(1-\frac{1}{N\varepsilon}\right)
+\quad\Rightarrow\quad
+\frac{1}{N^*}
+=
+\frac{1}{\varepsilon}\cdot\frac{\alpha}{1+\alpha}
 \]</span></p>
 </section>
-<section id="deriving-the-concentration-formula-i-setup" class="slide level2">
-<h2>Deriving the concentration formula (I): Setup</h2>
-<p><strong>Combine the two conditions:</strong></p>
-<ul>
-<li>From pricing FOC: <span class="math inline">\(P - c = \frac{P}{N\varepsilon}\)</span></li>
-<li>From free entry: <span class="math inline">\(P - c = \frac{Nx}{Q}\)</span></li>
-</ul>
-<p><strong>Equating the two expressions:</strong></p>
+<section id="core-result-equilibrium-concentration" class="slide level2">
+<h2>Core result: equilibrium concentration</h2>
 <p><span class="math display">\[
-\frac{P}{N\varepsilon} = \frac{Nx}{Q}
-\]</span></p>
-<p><em>(We solve for <span class="math inline">\(N\)</span> on the next slide.)</em></p>
-</section>
-<section id="deriving-the-concentration-formula-ii-solution" class="slide level2">
-<h2>Deriving the concentration formula (II): Solution</h2>
-<p><strong>Introduce the R&amp;D cost elasticity</strong> <span class="math inline">\(\alpha = -\frac{dc(x)}{dx}\frac{x}{c}\)</span> (from firm’s R&amp;D FOC).</p>
-<p><strong>This implies:</strong> <span class="math inline">\(\frac{x}{cq} = \alpha\)</span>, so <span class="math inline">\(\frac{Nx}{Q} = \frac{Nx}{Nq} = \frac{x}{q} = \alpha c\)</span></p>
-<p><strong>Substitute into our equation:</strong></p>
-<p><span class="math display">\[
-\underbrace{\frac{P}{N\varepsilon}}_{\text{markup}} = \underbrace{\alpha c}_{\text{R\&amp;D cost per unit}}
-\]</span></p>
-<p><strong>Divide by <span class="math inline">\(P\)</span></strong> and use <span class="math inline">\(c/P = 1 - 1/(N\varepsilon)\)</span> from the pricing FOC:</p>
-<p><span class="math display">\[
-\frac{1}{N\varepsilon} = \alpha\!\left(1 - \frac{1}{N\varepsilon}\right) \quad \Rightarrow \quad \frac{1}{N^*} = \frac{1}{\varepsilon}\cdot\frac{\alpha}{1+\alpha}
-\]</span></p>
-</section>
-<section id="equilibrium-concentration" class="slide level2">
-<h2>Equilibrium concentration</h2>
-<p><strong>Equilibrium concentration satisfies:</strong></p>
-<p><span class="math display">\[
-\frac{1}{N^*} = \frac{1}{\varepsilon} \cdot \frac{\alpha}{1+\alpha}
+\frac{1}{N^*}=\frac{1}{\varepsilon}\cdot\frac{\alpha}{1+\alpha}
 \]</span></p>
 <div title="Interpretation">
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class='callout-icon'></i>
 </div>
 <p><strong>Interpretation</strong></p>
 </div>
 <div class="callout-content">
-<p>Concentration and research intensity are jointly determined: entry expands <span class="math inline">\(N\)</span> until operating surplus covers R&amp;D outlays <span class="math inline">\(x^*\)</span>. Higher R&amp;D cost elasticity (<span class="math inline">\(\alpha\)</span>) supports higher concentration; more elastic demand lowers concentration.</p>
+<p>Concentration and innovation are jointly determined.<br />
+Higher R&amp;D effectiveness (<span class="math inline">\(\alpha\)</span>) supports higher concentration, while more elastic demand (<span class="math inline">\(\varepsilon\)</span>) supports lower concentration.</p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="numerical-illustration" class="slide level2">
-<h2>Numerical illustration</h2>
-<p><strong>Using the concentration formula</strong> with specific values:</p>
-<p><span class="math display">\[
-\frac{1}{N^*} = \frac{1}{\varepsilon} \cdot \frac{\alpha}{1+\alpha}
-\]</span></p>
+<section id="numerical-check" class="slide level2">
+<h2>Numerical check</h2>
+<p>Using $ = $:</p>
 <ul>
-<li>If <span class="math inline">\(\varepsilon = 2\)</span> and <span class="math inline">\(\alpha = 1\)</span>: <span class="math inline">\(\frac{1}{N^*} = \frac{1}{2} \cdot \frac{1}{2} = \frac{1}{4}\)</span>, so <span class="math inline">\(N^* = 4\)</span> firms</li>
-<li>If <span class="math inline">\(\varepsilon = 2\)</span> and <span class="math inline">\(\alpha = 3\)</span>: <span class="math inline">\(\frac{1}{N^*} = \frac{1}{2} \cdot \frac{3}{4} = \frac{3}{8}\)</span>, so <span class="math inline">\(N^* \approx 2.7\)</span> firms</li>
+<li>If <span class="math inline">\(\varepsilon=2\)</span> and <span class="math inline">\(\alpha=1\)</span>, then <span class="math inline">\(\frac{1}{N^*}=\frac{1}{4}\)</span> so <span class="math inline">\(N^*=4\)</span>.</li>
+<li>If <span class="math inline">\(\varepsilon=2\)</span> and <span class="math inline">\(\alpha=3\)</span>, then <span class="math inline">\(\frac{1}{N^*}=\frac{3}{8}\)</span> so <span class="math inline">\(N^*\approx2.7\)</span>.</li>
 </ul>
 <div title="Discussion question">
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class='callout-icon'></i>
 </div>
 <p><strong>Discussion question</strong></p>
 </div>
 <div class="callout-content">
-<p>If a government subsidy increases the R&amp;D cost elasticity (<span class="math inline">\(\alpha\)</span>, making R&amp;D more effective), what does the model predict for market structure? Is this welfare-improving?</p>
+<p>If policy raises R&amp;D effectiveness (<span class="math inline">\(\alpha\)</span>), the model predicts <strong>more concentration</strong> (lower <span class="math inline">\(N^*\)</span>).<br />
+When is that welfare-improving once we account for both dynamic gains and static mark-up losses?</p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="key-comparative-statics-i" class="slide level2">
-<h2>Key comparative statics (I)</h2>
-<p><strong>With <span class="math inline">\(P(Q) = \sigma Q^{-\varepsilon}\)</span> and <span class="math inline">\(c(x) = \beta x^{-\alpha}\)</span>:</strong></p>
-<p><strong>Dynamic vs static efficiency trade-off:</strong></p>
+<section id="comparative-statics-and-trade-offs" class="slide level2">
+<h2>Comparative statics and trade-offs</h2>
+<p>With <span class="math inline">\(P(Q)=\sigma Q^{-\varepsilon}\)</span> and <span class="math inline">\(c(x)=\beta x^{-\alpha}\)</span>:</p>
 <ul>
-<li><span class="math inline">\(x^*(N+1) &lt; x^*(N)\)</span> (more firms → less R&amp;D per firm)</li>
-<li><span class="math inline">\(Q^*(N+1) &gt; Q^*(N)\)</span> (more firms → higher output)</li>
+<li><span class="math inline">\(\frac{\partial(1/N^*)}{\partial\alpha}&gt;0\)</span>: more effective R&amp;D tends to increase concentration.</li>
+<li><span class="math inline">\(\frac{\partial(1/N^*)}{\partial\varepsilon}&lt;0\)</span>: more elastic demand tends to reduce concentration.</li>
+<li><span class="math inline">\(\frac{\partial x^*}{\partial \sigma}&gt;0\)</span>: larger markets raise R&amp;D effort.</li>
+<li>Typically, <span class="math inline">\(x^*(N+1)&lt;x^*(N)\)</span> but <span class="math inline">\(Q^*(N+1)&gt;Q^*(N)\)</span>: more firms improve static efficiency yet can weaken per-firm innovation incentives.</li>
 </ul>
-<p><strong>Research intensity:</strong></p>
-<ul>
-<li>Often maximized at moderate concentration (Scherer-style inverse-U)</li>
-</ul>
-<p><strong>Interpretation:</strong></p>
-<ul>
-<li>Market structure affects both static outcomes (<span class="math inline">\(Q\)</span>) and dynamic investment incentives (<span class="math inline">\(x\)</span>)</li>
-</ul>
-</section>
-<section id="key-comparative-statics-ii" class="slide level2">
-<h2>Key comparative statics (II)</h2>
-<p><strong>Greater R&amp;D effectiveness</strong> (higher <span class="math inline">\(\alpha\)</span>) associated with higher concentration:</p>
-<p><span class="math display">\[
-\frac{\partial (1/N^*)}{\partial \alpha} &gt; 0
-\]</span></p>
-<p><strong>Demand growth stimulates R&amp;D:</strong></p>
-<p><span class="math display">\[
-\frac{\partial x^*}{\partial \sigma} &gt; 0
-\]</span></p>
-<p><strong>Interpretation:</strong></p>
-<ul>
-<li>Larger markets (higher <span class="math inline">\(\sigma\)</span>) increase the return to cost reduction</li>
-<li>More effective R&amp;D (higher <span class="math inline">\(\alpha\)</span>) can support higher concentration in equilibrium</li>
-</ul>
+<p>This is the core dynamic-static tension in endogenous market-structure models.</p>
 </section>
 <section id="summary-and-next-week" class="slide level2">
 <h2>Summary and next week</h2>
@@ -1023,13 +993,13 @@ P - c = N^* \frac{x^*}{Q^*}
 </ul>
 <p><strong>Next week: patents and IPRs</strong></p>
 <ul>
-<li>Patents as incentives: monopoly rights vs.&nbsp;dynamic efficiency</li>
+<li>Patents as incentives: monopoly rights vs. dynamic efficiency</li>
 <li>Patent races and timing</li>
 <li>Disclosure, licensing, and welfare</li>
 <li>Horizontal and vertical innovation (brief)</li>
 </ul>
 </section>
-<section id="references" class="slide level2 smaller scrollable">
+<section id="references" class="slide level2">
 <h2>References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-acemogluMarketSizeInnovation2004" class="csl-entry" role="listitem">
@@ -1054,15 +1024,17 @@ Gilbert, Richard, and David M. Newbery. 1982. <span>‘Preemptive Patenting and 
 Trajtenberg, Manuel. 1989. <span>‘The Welfare Analysis of Product Innovations, with an Application to Computed Tomography Scanners’</span>. <em>Journal of Political Economy</em> 97 (2): 444–79. <a href="https://doi.org/10.1086/261611">https://doi.org/10.1086/261611</a>.
 </div>
 </div>
-
-
-</section></section>
-    </div>
-  <div class="quarto-auto-generated-content" style="display: none;">
+<div id="quarto-meta-markdown" class="hidden">
+<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW1ldGF0aXRsZQ==">Lecture 3 - Innovation – EC5230 Industrial Organisation</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLXR3aXR0ZXJjYXJkdGl0bGU=">Lecture 3 - Innovation – EC5230 Industrial Organisation</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW9nY2FyZHRpdGxl">Lecture 3 - Innovation – EC5230 Industrial Organisation</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW1ldGFzaXRlbmFtZQ==">EC5230 Industrial Organisation</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLXR3aXR0ZXJjYXJkZGVzYw==">MSc-level Industrial Organisation course at the University of St Andrews</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW9nY2FyZGRkZXNj">MSc-level Industrial Organisation course at the University of St Andrews</span></p>
+</div>
+<div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
 
 </div>
-</div></div>
+</div>
+</section></section>
+    </div>
+  </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
   <script src="../../site_libs/revealjs/dist/reveal.js"></script>
@@ -1085,18 +1057,7 @@ Trajtenberg, Manuel. 1989. <span>‘The Welfare Analysis of Product Innovations,
 
       // Full list of configuration options available at:
       // https://revealjs.com/config/
-      Reveal.initialize({
-'controlsAuto': true,
-'previewLinksAuto': true,
-'pdfSeparateFragments': false,
-'autoAnimateEasing': "ease",
-'autoAnimateDuration': 1,
-'autoAnimateUnmatched': true,
-'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'chalkboard': {"buttons":true},
-'smaller': false,
- 
+      Reveal.initialize({ 
         // Display controls in the bottom right corner
         controls: false,
 
@@ -1115,7 +1076,7 @@ Trajtenberg, Manuel. 1989. <span>‘The Welfare Analysis of Product Innovations,
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: 'c/t',
+        slideNumber: c/t,
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -1265,8 +1226,7 @@ Trajtenberg, Manuel. 1989. <span>‘The Welfare Analysis of Product Innovations,
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
-
+        plugins: [
           RevealMath,
           RevealNotes,
           RevealSearch,
@@ -1274,7 +1234,7 @@ Trajtenberg, Manuel. 1989. <span>‘The Welfare Analysis of Product Innovations,
         ]
       });
     </script>
-    <script id="quarto-html-after-body" type="application/javascript">
+    <script id = "quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
         tabsets.forEach(function(tabset) {
@@ -1442,6 +1402,5 @@ Trajtenberg, Manuel. 1989. <span>‘The Welfare Analysis of Product Innovations,
         }
       });
       </script>
-    
-
-</body></html>
+    </body>
+</html>
