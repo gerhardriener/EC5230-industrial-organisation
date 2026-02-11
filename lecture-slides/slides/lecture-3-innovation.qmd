@@ -142,35 +142,47 @@ $$
 
 **Why the non-drastic formula?** If the innovator sets $p=c_0$, quantity is $Q=A-c_0$, so profits are $(p-c_1)Q=(c_0-c_1)(A-c_0)$.
 
-## Drastic innovation condition
+## Drastic vs non-drastic innovation condition
 
 $$
+\text{Drastic: } \;
 P^m(c_1) < c_0
-\quad \Leftrightarrow \quad
+\;\Leftrightarrow\;
 \frac{A+c_1}{2} < c_0
-\quad \Leftrightarrow \quad
+\;\Leftrightarrow\;
 A + c_1 < 2c_0
 $$
 
+$$
+\text{Non-drastic: } \;
+P^m(c_1) \ge c_0
+\;\Leftrightarrow\;
+\frac{A+c_1}{2} \ge c_0
+\;\Leftrightarrow\;
+A + c_1 \ge 2c_0
+$$
+
+Boundary case: $P^m(c_1)=c_0$ (equivalently $A+c_1=2c_0$).
+
 ::: {.content-visible when-format="beamer"}
-\resizebox{0.85\textwidth}{!}{\includestandalone{../figs/source/fig-innovation-drastic-threshold}}
+\resizebox{0.95\textwidth}{!}{\includestandalone{../figs/source/fig-innovation-drastic-threshold}}
 :::
 
 ::: {.content-visible when-format="html"}
-![](../figs/fig-innovation-drastic-threshold.svg){fig-alt="Demand-cost diagram showing drastic vs non-drastic innovation threshold" fig-align="center" width="80%"}
+![](../figs/fig-innovation-drastic-threshold.svg){fig-alt="Two-panel demand-cost diagram comparing non-drastic and drastic innovation conditions" fig-align="center" width="92%"}
 :::
 
 ## Numeric check: drastic or non-drastic?
 
-Take $A=20$, $c_0=10$, and $c_1=6$.
+Use the same values as panel (a): $A=18$, $c_0=10$, and $c_1=6$.
 
-- **Drastic condition**: $A + c_1 = 26 > 2c_0 = 20$ → **non-drastic**
-- Innovator limit-prices at $p = c_0 = 10$, sells $Q = A - c_0 = 10$
-- Competitive innovator profit: $(c_0 - c_1)(A - c_0) = 4 \times 10 = 40$
-- Recall monopoly WTP: $\Delta\pi^m = \frac{(14)^2 - (10)^2}{4} = \frac{196 - 100}{4} = 24$
+- **Drastic condition**: $A + c_1 = 24 > 2c_0 = 20$ → **non-drastic**
+- Innovator limit-prices at $p = c_0 = 10$, sells $Q = A - c_0 = 8$
+- Competitive innovator profit: $(c_0 - c_1)(A - c_0) = 4 \times 8 = 32$
+- Recall monopoly WTP: $\Delta\pi^m = \frac{(12)^2 - (8)^2}{4} = \frac{144 - 64}{4} = 20$
 
 ::: {.callout-note title="Replacement effect preview"}
-The competitive innovator earns $40 > 24$ (the monopolist's WTP). The monopolist gains less because it already earns $\pi^m(c_0) = 25$ before innovating — it is partly **replacing** existing rents.
+The competitive innovator earns $32 > 20$ (the monopolist's WTP). The monopolist gains less because it already earns $\pi^m(c_0) = 16$ before innovating — it is partly **replacing** existing rents.
 :::
 
 ## Replacement effect: visual comparison
@@ -189,19 +201,14 @@ The competitive innovator earns $40 > 24$ (the monopolist's WTP). The monopolist
 
 ## Replacement effect [@arrowEconomicWelfareAllocation1972]
 
-- Under perfect competition, pre-innovation profits are approximately zero.
-- Under monopoly, pre-innovation profits are positive.
-- So the same innovation has a larger incremental private value in competitive settings.
+- The key object is the **incremental** value of innovation.
+- Competitive benchmark: pre-innovation profits are approximately zero, so $\Delta\pi^{pc} \approx \pi_{\text{after}}^{pc}$.
+- Monopoly benchmark: pre-innovation profits are positive, so $\Delta\pi^{m} = \pi_{\text{after}}^{m} - \pi^{m}(c_0)$.
+- This gap in incremental value is the **replacement effect**.
 
-## Appropriability and imitation
+## Drastic benchmark: one-line wedge
 
-* If the innovation cannot be protected (instant diffusion / perfect imitation), competition drives price to $c_1$ and the innovator's WTP is zero. 
-
-* Most IO policy questions start from the fact that appropriability is imperfect but positive (patents, secrecy, lead time).
-
-## Replacement effect: a one-line comparison (drastic case)
-
-If the innovation is drastic and grants exclusive rights:
+If innovation is drastic and grants exclusive rights:
 
 $$
 \Delta \pi^{pc} = \pi^m(c_1), \qquad \Delta \pi^m = \pi^m(c_1) - \pi^m(c_0)
@@ -220,6 +227,11 @@ $$
 ::: {.callout-important title="Takeaway"}
 Holding everything else fixed, an incumbent monopolist has **weaker** incentives to innovate than a competitive industry because it is "replacing" its own pre-innovation rents.
 :::
+
+## Appropriability and imitation
+
+- If the innovation cannot be protected (instant diffusion / perfect imitation), competition drives price to $c_1$ and the innovator's WTP is zero.
+- Most IO policy questions start from imperfect but positive appropriability (patents, secrecy, lead time).
 
 ## Empirical example: competition and innovation
 
@@ -305,83 +317,94 @@ In what sense is this "too little" innovation from a welfare perspective? What p
 
 # Innovation with Rivals and Entry {background-color="#00539b"}
 
-## Incentives to innovate in oligopoly
+## Incentives to innovate with rivals: intuition first
 
-**Takeaway**
+Innovation incentives are not monotone in "competition intensity."
 
-- Innovation incentives need not be monotone in "competition intensity"
-- They depend on:
-  - Number of firms ($n$)
-  - Product differentiation
-  - Mode of competition (price vs quantity)
-  - Whether innovation is **protectable** (patents/lead time) and whether there are **spillovers**
+- They depend on market structure ($n$, differentiation, price vs quantity competition).
+- They depend on technology and institutions (protectability, spillovers).
 
 ::: {.callout-note title="Rule of thumb"}
-More rivals reduces baseline profits (hurting incentives), but can increase the value of being the low-cost firm (helping incentives).
+More rivals reduce baseline profits (discouraging innovation), but can raise the value of becoming the low-cost firm (encouraging innovation).
 :::
 
-## Impact of number of firms (Cournot intuition)
+## Number of rivals: Cournot intuition
 
-**Linear Cournot with $n$ firms**: incentives can follow an **inverse-U** as $n$ increases.
+In linear Cournot, R&D incentives can follow an **inverse-U** as $n$ rises:
 
-**Two opposing effects as $n \uparrow$:**
+- **Competition effect:** more firms compress profits for everyone.
+- **Competitive advantage effect:** a cost lead is more valuable when many higher-cost rivals remain.
 
-- **Competition effect**: profits for all firms fall (discourages innovation)
-- **Competitive advantage effect**: cost advantage becomes more valuable when there are more inefficient rivals (encourages innovation)
+Which force dominates is an empirical question and can vary by industry.
 
-## Monopoly threatened by entry: setup
+## Entry threat framework: incumbent vs entrant
 
-**Incumbent monopoly faces potential entrant:**
+Consider an incumbent monopolist facing a potential entrant:
 
-- Both can acquire innovation reducing MC from $c_0$ to $c_1 < c_0$
-- Entrant can enter profitably **only if** it gets innovation
-- Let $\pi^d(c_i,c_j)$ denote firm $i$'s profit in the post-entry **duopoly** when own cost is $c_i$ and the rival's cost is $c_j$
+- Innovation lowers marginal cost from $c_0$ to $c_1<c_0$.
+- The entrant can profitably enter only if it obtains the innovation.
+- Let $\pi^d(c_i,c_j)$ be firm $i$'s duopoly profit when own cost is $c_i$ and rival cost is $c_j$.
 
-**Timing/game structure:**
+Timing:
 
-We compare the **willingness to pay** for innovation (e.g., in a patent auction or R&D race). The innovation is awarded to whichever firm values it more highly. Entry happens *after* the innovation is allocated.
+1. Firms compete for innovation (patent auction / R\&D race).
+2. Innovation is allocated to the higher-valuation firm.
+3. Entry decision and product-market competition occur after allocation.
 
-## Entry threat: payoff structure
+## Who values innovation more?
 
-**Payoffs:**
+Payoff logic by winner:
 
-- **If incumbent gets innovation**: entrant stays out
-  - Incumbent: $\pi^m(c_1)$; Entrant: $0$
-- **If entrant gets innovation**: entrant enters
-  - Incumbent: $\pi^d(c_0, c_1)$; Entrant: $\pi^d(c_1, c_0)$
+- If the **incumbent** wins: market stays monopoly, payoff $\pi^m(c_1)$.
+- If the **entrant** wins: entry occurs, payoffs become $\pi^d(c_0,c_1)$ for the incumbent and $\pi^d(c_1,c_0)$ for the entrant.
 
-::: {.callout-note title="Strategic value"}
-Innovation can change market structure (monopoly vs duopoly), so incentives are not only about production efficiency.
-:::
-
-## Entry threat: pre-emption incentives [@gilbertPreemptivePatentingPersistence1982]
-
-**Per-period value of innovation**
+So per-period valuations are:
 
 $$
-V_I = \pi^m(c_1) - \pi^d(c_0, c_1)
-$$
-
-$$
+V_I = \pi^m(c_1) - \pi^d(c_0, c_1), \qquad
 V_E = \pi^d(c_1, c_0)
 $$
 
-**Incumbent has stronger incentives if:**
+## Entry threat: pre-emption condition [@gilbertPreemptivePatentingPersistence1982]
+
+The incumbent has stronger innovation incentives when:
 
 $$
-V_I > V_E \quad \Leftrightarrow \quad \pi^m(c_1) > \pi^d(c_1, c_0) + \pi^d(c_0, c_1)
+V_I > V_E
+\quad \Leftrightarrow \quad
+\pi^m(c_1) > \pi^d(c_1, c_0) + \pi^d(c_0, c_1)
 $$
 
-This typically holds when products are close substitutes (entry is very harmful).
+This is more likely when products are close substitutes, so entry would sharply reduce incumbent profits.
 
 ::: {.callout-important title="Interpretation"}
-The incumbent may innovate **more** than an entrant because innovation does two things: it lowers cost *and* it keeps the market in the monopoly regime (entry deterrence / pre-emption).
+For incumbents, innovation has a **dual payoff**: efficiency gain (lower cost) plus market-structure protection (deterring entry). That is the pre-emption channel.
 :::
 
 ## Discussion: when does pre-emption fail?
 
 ::: {.callout-note title="Discussion question"}
 Under what market conditions might an entrant have stronger innovation incentives than the incumbent? What features would reverse the pre-emption result?
+:::
+
+## Answer: when entrant incentives dominate
+
+Entrant incentives are stronger when:
+
+$$
+V_E > V_I
+\quad \Leftrightarrow \quad
+\pi^d(c_1,c_0) + \pi^d(c_0,c_1) > \pi^m(c_1)
+$$
+
+- **Weak business-stealing effect**: products are more differentiated, so entry hurts the incumbent less.
+- **Low market-structure protection value**: moving from duopoly to monopoly is not worth much to the incumbent.
+- **High entrant upside from innovation**: entrant post-entry profits $\pi^d(c_1,c_0)$ are large (e.g., efficient entry, strong demand segment).
+- **Large incumbent replacement effect**: the incumbent already has substantial rents without innovating, so incremental gains are limited.
+- **Weaker appropriability for incumbents** (strong spillovers/imitation): innovation is less effective as an entry-deterrence tool.
+
+::: {.callout-important title="Bottom line"}
+Pre-emption fails when the incumbent's **entry-deterrence motive is weak** and the entrant's **duopoly gain from innovating is strong**.
 :::
 
 ## Empirical example: strategic incentives and market share

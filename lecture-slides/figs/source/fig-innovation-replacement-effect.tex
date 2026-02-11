@@ -21,14 +21,14 @@
   title style={at={(0.5,1.05)}, anchor=south},
 ]
 
-% Parameters: A=20, c0=10, c1=6
-\pgfmathsetmacro{\A}{20}
+% Parameters: A=18, c0=10, c1=6
+\pgfmathsetmacro{\A}{18}
 \pgfmathsetmacro{\cO}{10}
 \pgfmathsetmacro{\cI}{6}
-\pgfmathsetmacro{\QmO}{(\A-\cO)/2}  % 5
-\pgfmathsetmacro{\PmO}{(\A+\cO)/2}  % 15
-\pgfmathsetmacro{\QmI}{(\A-\cI)/2}  % 7
-\pgfmathsetmacro{\PmI}{(\A+\cI)/2}  % 13
+\pgfmathsetmacro{\QmO}{(\A-\cO)/2}  % 4
+\pgfmathsetmacro{\PmO}{(\A+\cO)/2}  % 14
+\pgfmathsetmacro{\QmI}{(\A-\cI)/2}  % 6
+\pgfmathsetmacro{\PmI}{(\A+\cI)/2}  % 12
 
 % Demand curve
 \addplot[thick, domain=0:15, samples=2] {\A - x};
@@ -53,8 +53,8 @@
 
 % Net gain = blue area minus red area
 % Shade only the INCREMENTAL gain (blue minus red overlap)
-% Top strip: P^m(c0) to P^m(c1) is GONE (P^m(c1) < P^m(c0) since c1<c0... wait
-% Actually P^m(c1) = 13, P^m(c0) = 15, so P^m(c1) < P^m(c0)
+% Top strip: P^m(c0) to P^m(c1) is GONE (P^m(c1) < P^m(c0) since c1<c0)
+% Here: P^m(c1) = 12, P^m(c0) = 14
 % The incremental gain is: new rectangle - old rectangle
 
 % Shade the gain region: parts of blue not in red
@@ -70,10 +70,10 @@
 % Pre-innovation profit label
 \node[font=\small, align=center, fill=white, fill opacity=0.85, text opacity=1, inner sep=2pt] at (axis cs:2.5,12.5) {$\pi^m(c_0)$\\(replaced)};
 % Lost profit label
-\node[font=\scriptsize, red!70!black, fill=white, fill opacity=0.85, text opacity=1, inner sep=2pt] at (axis cs:2.5,14) {lost: 10};
+\node[font=\scriptsize, red!70!black, fill=white, fill opacity=0.85, text opacity=1, inner sep=2pt] at (axis cs:2.5,13) {lost: 8};
 % Delta pi^m label with arrow to blue region
 \node[font=\small, align=center, blue!70!black] at (axis cs:7.5,3)
-  {$\Delta\pi^m = 24$};
+  {$\Delta\pi^m = 20$};
 \draw[->, blue!70!black, thick] (axis cs:7,3.5) -- (axis cs:6,7);
 
 % Dashed verticals with x-axis labels
@@ -106,10 +106,10 @@
 ]
 
 % Parameters
-\pgfmathsetmacro{\A}{20}
+\pgfmathsetmacro{\A}{18}
 \pgfmathsetmacro{\cO}{10}
 \pgfmathsetmacro{\cI}{6}
-\pgfmathsetmacro{\Qpc}{\A - \cO}  % 10 (non-drastic: limit price at c0)
+\pgfmathsetmacro{\Qpc}{\A - \cO}  % 8 (non-drastic: limit price at c0)
 
 % Demand curve
 \addplot[thick, domain=0:15, samples=2] {\A - x};
@@ -131,7 +131,7 @@
 
 % Label the profit
 \node[font=\small, align=center, fill=white, fill opacity=0.85, text opacity=1, inner sep=2pt] at (axis cs:5,8)
-  {$\Delta\pi^{pc} = 40$\\(all new rents)};
+  {$\Delta\pi^{pc} = 32$\\(all new rents)};
 
 % Dashed vertical at Q = A - c0
 \addplot[densely dashed, thin, gray] coordinates {(\Qpc,0) (\Qpc,\cO)};
