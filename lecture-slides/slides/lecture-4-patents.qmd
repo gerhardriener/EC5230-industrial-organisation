@@ -18,7 +18,25 @@ execute:
   cache: true
 ---
 
-# Patents and IPRs {background-color="#00539b"}
+# Patents and Intellectual Property Rights {background-color="#00539b"}
+
+## Where we left off: the innovation problem
+
+Last week we established three facts about **private incentives to innovate**:
+
+1. **Replacement effect** — an incumbent monopolist under-invests because innovation partly cannibalises its own rents ($\Delta\pi^m < \Delta\pi^{pc}$)
+2. **Appropriability gap** — without protection, imitation dissipates rents and the innovator's WTP falls to zero
+3. **Private vs social value** — the social planner values a cost reduction at $\Delta W > \Delta\pi$, so private incentives are generically too weak
+
+These problems share a common root: innovators cannot capture enough of the surplus they create.
+
+**Today's question:** can intellectual property rights close this gap — and at what cost?
+
+::: {.notes}
+Start by briefly recapping the three facts from Lecture 3 — students should recognise these immediately. Emphasise that the replacement effect, the appropriability gap, and the private-vs-social wedge all point in the same direction: without intervention, private R&D incentives are too weak.
+
+Pose the question on the slide as a genuine open problem: IPRs are one response, but they come with their own costs. This sets up the central trade-off that runs through the entire lecture.
+:::
 
 ## IPRs: economic problem
 
@@ -31,6 +49,12 @@ IPRs make a non-rival good partially excludable, creating private incentives for
 
 - **Policy objective:** provide incentives for invention while limiting static distortions in product markets
 
+::: {.notes}
+Stress the public-good nature of knowledge: non-rival means my use doesn't diminish yours; hard to exclude means patents are an artificial mechanism to restore excludability. Ask students: "Why can't we just rely on first-mover advantage?" — this motivates the need for legal protection when imitation is cheap (as in pharma, where reverse-engineering a molecule is far cheaper than discovering it).
+
+The policy objective on the slide is the thread that connects every model in this lecture.
+:::
+
 ## Learning objectives
 
 - Explain why non-rival ideas can lead to underinvestment without protection
@@ -42,6 +66,10 @@ IPRs make a non-rival good partially excludable, creating private incentives for
 1. Patents as incentives: the central trade-off
 2. Patent length in the ideas model (screening and welfare)
 3. Breadth, endogenous R\&D, and patent races
+:::
+
+::: {.notes}
+Read through the learning objectives quickly — these are the exam-relevant skills. The roadmap gives students a mental scaffold: we move from the conceptual trade-off, to a formal model (Scotchmer), to design instruments (breadth vs length), and finally to strategic interaction (patent races). Flag that the investment condition $\pi \nu T \ge F$ will reappear multiple times.
 :::
 
 ## IPRs: instruments
@@ -58,6 +86,12 @@ IPRs make a non-rival good partially excludable, creating private incentives for
   - **Geographical coverage**
   - **Transferability** (sale, licensing)
 
+::: {.notes}
+Give quick real-world anchors: patents last 20 years from filing (but effective life is shorter after regulatory approval in pharma); trademarks can last indefinitely if renewed; copyright is life + 70 years in most jurisdictions. Mention that we focus on patents because they are the main tool for incentivising R&D in technology-intensive industries.
+
+The four design dimensions listed will reappear when we formalise length and breadth in the Scotchmer model.
+:::
+
 ## IPRs: central trade-off
 
 - Patents create temporary market power $\Rightarrow$ static deadweight loss
@@ -70,11 +104,23 @@ IPRs make a non-rival good partially excludable, creating private incentives for
   - What is an optimal **length** and **breadth**?
   - How does competition in R\&D (patent races) affect efficiency?
 
+::: {.notes}
+This slide states the fundamental tension that students must internalise: patents create deadweight loss (static cost) but generate incentives for innovation (dynamic benefit). Emphasise that "stronger" protection is not unambiguously good — it depends on where we are on the trade-off.
+
+Pose the two questions as the organising questions for the rest of the lecture. We will answer the length question with Scotchmer and Shy, and the race question in the final section.
+:::
+
 ## Running application (throughout): pharmaceuticals
 
 - Fixed development cost $F$ is large (clinical trials), while marginal cost is low
 - Patent protection creates temporary market power, but expiry enables generic entry
 - Breadth maps to how close a substitute can be without infringing; races map to multiple labs pursuing the same target
+
+::: {.notes}
+Pharmaceuticals are the canonical example because (i) fixed costs are enormous (clinical trials can exceed $1bn), (ii) marginal costs are low (pill production), and (iii) patent expiry triggers immediate generic entry with large price drops. This makes every parameter in the models we study directly interpretable.
+
+We will return to this application throughout: $F$ = clinical trial cost, $\nu$ = health benefit flow, breadth = how different a molecule must be, races = multiple labs targeting the same disease.
+:::
 
 # Scotchmer: ideas model {background-color="#00539b"}
 
@@ -95,6 +141,12 @@ Following @scotchmerInnovationIncentives2006
 Map $(\nu,F)$ to an innovation with large fixed R\&D cost $F$ and a flow of benefits $\nu$ that is partially appropriable during patent protection.
 :::
 
+::: {.notes}
+Scotchmer's ideas model is deliberately simple — the pair $(\nu, F)$ is sufficient to characterise an idea's social value and development cost. Stress that $\nu$ is consumer surplus under competitive supply (i.e., post-patent), not profit. The firm cannot capture $\nu$ directly; it captures $\pi\nu$ per period during patent life.
+
+For the pharma application: $F$ is the total clinical development cost, $\nu$ is the per-period health benefit to patients measured as consumer surplus if the drug were priced at marginal cost.
+:::
+
 ## Ideas model (Scotchmer): social value under discounting
 
 Assume social value lasts forever and the product is competitively supplied.
@@ -111,6 +163,12 @@ $$
   - Discount rate $r$ reduces the present value of long-run benefits
   - Longer-lived benefits (lower $r$) raise the social value of an idea
 
+::: {.notes}
+Walk through the geometric series derivation step by step: $\sum_{t=1}^{\infty} \rho^t \nu = \nu \cdot \rho/(1-\rho) = \nu/r$ where $\rho = 1/(1+r)$. This is the infinite-horizon present value of a perpetual flow $\nu$.
+
+Key intuition: even though each period contributes $\nu$, the present value is finite because of discounting. Lower $r$ (more patient society) implies higher social value — which strengthens the case for investing in ideas.
+:::
+
 ## Ideas model (Scotchmer): private returns and deadweight loss
 
 - Firm’s per-period private profit under patent: $\pi \nu$ where $0<\pi<1$
@@ -126,6 +184,12 @@ $$
 - **Interpretation**
   - $\pi$ is a reduced-form “appropriability” parameter
   - $\lambda$ captures the static distortion created by protection
+
+::: {.notes}
+The two parameters $\pi$ and $\lambda$ are crucial reduced-form objects. Draw a standard monopoly diagram on the board if needed: $\pi\nu$ is the profit rectangle, $\lambda\nu$ is the Harberger triangle. Note that $\pi + \lambda < 1$ because consumer surplus under monopoly is positive.
+
+Ask: "What happens as demand becomes more elastic?" — $\pi$ falls and $\lambda$ rises, making patents more costly relative to the incentive they provide. This motivates the later discussion of breadth.
+:::
 
 ## Discounted patent length: $T$
 
@@ -145,6 +209,12 @@ $$
 - **Interpretation**
   - $T$ is increasing in $\tau$ but bounded as $\tau\to\infty$ when $r>0$
 
+::: {.notes}
+This slide introduces the discounted length $T$ which converts calendar duration $\tau$ into present-value terms. Derive: $T = \int_0^\tau e^{-rt}\,dt = [-e^{-rt}/r]_0^\tau = (1 - e^{-r\tau})/r$. As $\tau \to \infty$, $T \to 1/r$, so even infinite patent life has finite present value.
+
+This matters because it means the marginal benefit of extending patent duration diminishes — an extra year of protection is worth less the further into the future it falls. This is key for the optimal-length result.
+:::
+
 ## Optimal patent length: innovating firm
 
 - Patent gives discounted net profit:
@@ -159,6 +229,12 @@ $$
   - Higher $\nu$ or larger $\pi$ reduces the minimum protection needed for investment
   - Higher $F$ requires longer (or stronger) protection to break even
 
+::: {.notes}
+The break-even condition $\pi\nu T \ge F$ is the private investment threshold. Rearranging: $T \ge F/(\pi\nu)$. This gives the minimum discounted patent length needed to induce investment.
+
+Emphasise that this is a necessary condition only — it tells us when the firm is willing to invest, not whether investment is socially desirable. The planner's problem on the next slide adds the welfare side.
+:::
+
 ## Optimal patent length: social planner
 
 - Discounted net social value (invention made):
@@ -171,6 +247,12 @@ $$
   - Planner values the full flow benefit $\nu$, but counts DWL during protection
   - Optimal design trades off inducing investment against static costs
 
+::: {.notes}
+The planner's net social value if the idea is developed is $\nu/r - \lambda\nu T - F$. The first term is the perpetual benefit, the second is the DWL during patent life, and the third is the development cost. The planner wants to set $T$ just large enough to satisfy the firm's break-even condition, and no larger — every extra unit of $T$ costs $\lambda\nu$ in deadweight loss without additional benefit once investment is already induced.
+
+This is why the planner's optimal $T$ exactly solves $\pi\nu T = F$ for marginal ideas, i.e., $T^* = F/(\pi\nu)$.
+:::
+
 ## Optimal length: heterogeneity and screening (intuition)
 
 - If inventions differ in $(\nu,F)$, “one-size-fits-all” length is not generally optimal
@@ -178,6 +260,12 @@ $$
 - Comparative statics (holding other parameters fixed):
   - more elastic demand / stronger substitution $\Rightarrow$ higher DWL $\lambda$ $\Rightarrow$ shorter protection
   - higher development cost $F$ $\Rightarrow$ longer protection to ensure investment
+
+::: {.notes}
+With heterogeneous ideas, uniform patent length cannot be first-best: some ideas need long protection (high $F/\nu$) while others need little. A single $T$ either under-protects high-cost ideas or over-protects low-cost ones.
+
+This is the screening problem: the planner cannot observe $(\nu, F)$ directly and must use a single instrument. In practice, patent offices partially address this through examination standards and varying breadth across technology classes, but the fundamental tension remains.
+:::
 
 ## Example: ideas A and B
 
@@ -192,6 +280,16 @@ Let $T=20$, $\pi=\tfrac{1}{2}$, $\lambda=\tfrac{1}{4}$, $r=\tfrac{1}{3}$.
 
 - **Interpretation**
   - With these parameter values, private profitability need not coincide with positive net social value: patent protection can induce investment even when net welfare is negative
+
+::: {.notes}
+Work through the numbers on the board:
+
+**Idea A** ($\nu_A=5$, $F_A=10$): Private profit $= \pi\nu T = 0.5 \times 5 \times 20 = 50 \ge 10$ — privately profitable. Net social value $= \nu/r - \lambda\nu T - F = 5/0.333 - 0.25 \times 5 \times 20 - 10 = 15 - 25 - 10 = -20$ — socially negative.
+
+**Idea B** ($\nu_B=2$, $F_B=20$): Private profit $= 0.5 \times 2 \times 20 = 20 \ge 20$ — just profitable. Net social value $= 2/0.333 - 0.25 \times 2 \times 20 - 20 = 6 - 10 - 20 = -24$ — also socially negative.
+
+The punchline: both ideas are privately profitable but socially wasteful at these parameter values. This illustrates how patent protection can induce "too much" innovation from a welfare perspective when DWL is high.
+:::
 
 # Breadth: product space {background-color="#00539b"}
 
@@ -210,6 +308,12 @@ Let $T=20$, $\pi=\tfrac{1}{2}$, $\lambda=\tfrac{1}{4}$, $r=\tfrac{1}{3}$.
 In pharmaceuticals, breadth maps to whether a close substitute can launch during protection without infringing.
 :::
 
+::: {.notes}
+Breadth is harder to formalise than length because it operates in product space rather than time. The key reduced-form idea: broader patents exclude more potential substitutes, which makes the patent holder's residual demand less elastic and allows higher prices.
+
+In pharma: if a patent on molecule X is broad, then molecules X', X'' that are chemically similar cannot be sold. If narrow, "me-too" drugs can enter. The Hatch-Waxman Act in the US and supplementary protection certificates in the EU are real-world breadth instruments.
+:::
+
 ## Breadth and demand elasticity (intuition)
 
 - If close substitutes are allowed:
@@ -219,6 +323,12 @@ In pharmaceuticals, breadth maps to whether a close substitute can launch during
 - If substitutes are excluded (broader patent):
   - residual demand is **less elastic**
   - equilibrium price is higher (all else equal)
+
+::: {.notes}
+This is pure intuition — no formal model yet. The mechanism: more substitutes → more elastic residual demand → lower equilibrium price → lower per-period profit $\pi$. Conversely, excluding substitutes raises $\pi$ but also raises $\lambda$ (DWL) because the monopoly distortion is larger when demand is less elastic.
+
+Ask students: "If you were a patent holder, would you prefer broad-short or narrow-long protection?" This previews the next slide's trade-off.
+:::
 
 ## Breadth–length trade-off (given a target value)
 
@@ -244,6 +354,12 @@ $$
 - **Interpretation**
   - Broad protection can be paired with shorter duration to deliver the same incentive level
 
+::: {.notes}
+The key equation $\hat{T}(\hat{\pi}_1 + \hat{\pi}_2) = \tilde{T}\tilde{\pi}_1$ says that if we hold the firm's expected discounted profit constant, a broader patent (which yields higher per-period profit by including the infringing market) can achieve the same incentive with a shorter duration.
+
+The notation: $\hat{\pi}_1$ is profit from the patented good, $\hat{\pi}_2$ is profit from the infringing substitute (both captured under broad protection), and $\tilde{\pi}_1$ is profit from the patented good alone under narrow protection. Since $\hat{\pi}_1 + \hat{\pi}_2 > \tilde{\pi}_1$, we need $\hat{T} < \tilde{T}$.
+:::
+
 ## Which regime is better?
 
 - The best regime depends on substitution patterns:
@@ -253,6 +369,12 @@ $$
 - **Interpretation**
   - Broad–short: more sensitive to outside substitution (pricing alignment across many goods)
   - Narrow–long: more sensitive to within-category substitution
+
+::: {.notes}
+This is the punchline of the breadth section: there is no universal answer. If the patented good and its substitute are close substitutes for each other but poor substitutes for other goods (e.g., two statins), broad-short may generate less DWL. If they are good substitutes for outside goods, narrow-long may be preferable.
+
+The practical implication: optimal patent design is industry-specific. Pharma (where substitutes are close) may warrant different breadth-length combinations than software (where substitutes are more distant).
+:::
 
 # Optimal patent length with endogenous R&D (Shy) {background-color="#00539b"}
 
@@ -270,7 +392,13 @@ $$
   - Choice variables: $x$ (firm), $\tau$ (regulator)
   - Parameters: $a,c,r$
 
-## Shy model: firm’s choice of $x$ given $\tau$
+::: {.notes}
+The Shy model endogenises R&D effort $x$, unlike Scotchmer where the idea $(\nu, F)$ is exogenous. Here the firm chooses how much cost reduction to pursue, and the regulator sets patent duration $\tau$ anticipating this choice. This is a Stackelberg game with the regulator as leader.
+
+Linear demand $P = a - Q$ keeps the algebra tractable. The key modelling choice: process innovation reduces marginal cost, so the gain from R&D is a cost advantage. This connects back to the drastic/non-drastic innovation distinction from Lecture 3.
+:::
+
+## Shy model: firm's choice of $x$ given $\tau$
 
 Firm solves:
 
@@ -290,6 +418,12 @@ $$
 \sum_{t=1}^{\tau}\rho^{t-1}=\frac{1-\rho^\tau}{1-\rho}
 $$
 
+::: {.notes}
+Walk through the firm's problem: $\max_x \sum_{t=1}^{\tau} \rho^{t-1}(a-c)x - x^2/2$. The per-period profit $(a-c)x$ is linear in $x$ (simplified from the full monopoly profit for tractability). The R&D cost $x^2/2$ is convex, ensuring an interior solution.
+
+The geometric sum $\sum \rho^{t-1} = (1-\rho^\tau)/(1-\rho)$ converts the finite-horizon discounted sum into a single multiplier. This is the discrete-time analogue of the $T$ we defined earlier. FOC: $(1-\rho^\tau)/(1-\rho) \cdot (a-c) = x$, giving the next slide's result.
+:::
+
 ## Shy model: induced innovation level
 
 FOC implies:
@@ -306,7 +440,15 @@ $$
 - **Interpretation**
   - Longer protection raises the marginal benefit of R\&D because profits are earned for more discounted periods
 
-## Shy model: planner’s choice of patent duration (statement)
+::: {.notes}
+The induced innovation level $x^I(\tau) = [(1-\rho^\tau)/(1-\rho)](a-c)$ is the firm's best response to any given patent duration.
+
+Comparative statics to emphasise: (i) $\partial x^I/\partial \tau > 0$ because $\rho^\tau$ is decreasing in $\tau$; (ii) $\partial x^I/\partial a > 0$ because larger markets raise the return to cost reduction; (iii) $\partial x^I/\partial r < 0$ (equivalently $\partial x^I/\partial \rho > 0$) because more patient firms value future profits more.
+
+Note that $x^I$ is bounded above: as $\tau \to \infty$, $x^I \to (a-c)/(1-\rho)$. Infinite patent life still yields finite R&D effort.
+:::
+
+## Shy model: planner's choice of patent duration (statement)
 
 Planner chooses $\tau$ trading off:
 - higher induced innovation $x^I(\tau)$
@@ -316,6 +458,12 @@ Planner chooses $\tau$ trading off:
 
 - **Interpretation**
   - Marginal benefit of longer protection (higher induced $x^I(\tau)$) eventually falls below the marginal cost (additional monopoly distortion during protection)
+
+::: {.notes}
+The planner's problem: choose $\tau$ to maximise total welfare, which includes consumer surplus, firm profit, and the cost of monopoly distortion during the patent period. The result $T^* < \infty$ follows because the marginal benefit of extending $\tau$ (more R&D, hence lower cost) is diminishing (since $x^I$ is concave in $\tau$), while the marginal cost (one more period of monopoly DWL) is approximately constant.
+
+Connect to Scotchmer: the Shy model endogenises what Scotchmer took as given — the level of innovation — but reaches the same qualitative conclusion: finite, interior patent duration is optimal.
+:::
 
 # Patent races {background-color="#00539b"}
 
@@ -338,6 +486,14 @@ Planner chooses $\tau$ trading off:
 Think of multiple labs racing to develop the same drug/vaccine: each pays a fixed setup cost and succeeds with some probability.
 :::
 
+::: {.notes}
+We now shift from single-firm models to strategic interaction. The patent race setup is a simultaneous-move game: each firm decides whether to invest $f$ (enter the race) or not. The key feature is "winner takes all" — if only one firm succeeds, it gets $\pi^m$; if both succeed, they split the market ($\pi^d$ each).
+
+The welfare benchmarks $W^m$ and $W^d$ include consumer surplus, which is higher under duopoly ($CS^d > CS^m$). This creates a wedge between private and social incentives: firms care about profit, the planner cares about total welfare.
+
+Pharma application: multiple labs racing to develop a COVID vaccine, each investing billions with uncertain success.
+:::
+
 ## Patent race: Nash equilibrium condition
 
 ::: {.callout-warning title="Duplication incentive"}
@@ -354,6 +510,12 @@ $$
 - **Interpretation**
   - Private incentives include the probability of being the unique winner and the case where both succeed
 
+::: {.notes}
+Derive the condition: if the other firm invests, my expected payoff from investing is $p(1-p)\pi^m + p^2\pi^d - f$. The first term is the probability I succeed and the rival fails (I get monopoly profit); the second term is both succeed (duopoly profit). I invest if this exceeds zero, i.e., $f \le p(1-p)\pi^m + p^2\pi^d$.
+
+If the other firm does not invest, my expected payoff from investing is $p\pi^m - f$, so I invest if $f \le p\pi^m$. For $(I,I)$ to be a NE, the first condition must hold (neither wants to deviate from both investing).
+:::
+
 ## Patent race: social optimum condition
 
 - It is socially optimal to have one research division rather than two if:
@@ -365,6 +527,12 @@ $$
 - **Interpretation**
   - The planner compares expected welfare under one vs two research divisions, counting duplication cost $f$
 
+::: {.notes}
+The planner's condition: two divisions are socially optimal over one if the expected welfare gain from the second lab exceeds its cost. Expected welfare with two labs: $p^2 W^d + 2p(1-p)W^m + (1-p)^2 \cdot 0$. With one lab: $pW^m$. The net gain from the second lab must exceed $f$.
+
+After simplification, two divisions are socially preferred if $f \le p(1-2p)W^m + p^2 W^d \equiv f_2^{publ}$. Note: when $p > 1/2$, the term $p(1-2p)W^m$ is negative, reflecting that with high success probability, the second lab mostly duplicates what the first would have achieved.
+:::
+
 ## Socially excessive R&D (region)
 
 - Socially excessive duplication occurs when:
@@ -374,7 +542,13 @@ f^{publ}_2 < f < f^{priv}_2
 $$
 
 - Interpretation:
-  - Firms overinvest when the negative externality on rivals’ profits outweighs the consumer-surplus gain from having two innovators
+  - Firms overinvest when the negative externality on rivals' profits outweighs the consumer-surplus gain from having two innovators
+
+::: {.notes}
+The excessive duplication region $f_2^{publ} < f < f_2^{priv}$ exists whenever $f_2^{priv} > f_2^{publ}$. This happens because private firms count only their own profit (business stealing from the rival), while the planner counts total welfare (including consumer surplus that partially offsets the duplication cost).
+
+The intuition: each firm ignores two externalities — (i) the negative externality on the rival's profit (business stealing), and (ii) the positive externality on consumers (more competition). When (i) dominates (ii), private entry is excessive. This is the classic common-pool problem applied to R&D.
+:::
 
 ## Numerical check: duplication region
 
@@ -394,6 +568,18 @@ $$
 
 - If $f=3.2$, then $f^{publ}_2 < f < f^{priv}_2$: two research divisions are privately viable but socially excessive.
 
+::: {.notes}
+Walk through the arithmetic step by step:
+
+$f_2^{priv} = 0.8 \times 0.2 \times 10 + 0.64 \times 3 = 1.6 + 1.92 = 3.52$.
+
+$f_2^{publ} = 0.8 \times (-0.6) \times 15 + 0.64 \times 16 = -7.2 + 10.24 = 3.04$.
+
+So the duplication region is $f \in (3.04, 3.52)$. At $f = 3.2$: privately both firms want to invest (3.2 < 3.52), but the planner would prefer only one lab (3.2 > 3.04). The welfare loss is the wasted $f = 3.2$ from the redundant lab, net of the small probability-weighted gain from having a backup.
+
+Ask: "What happens to this region as $p$ increases?" — it widens, because high $p$ makes duplication more wasteful.
+:::
+
 ## Summary and next week
 
 **Summary**
@@ -408,6 +594,12 @@ $$
 - Commitment and first-mover advantage (Stackelberg)
 - Subgame perfect equilibrium and backward induction
 - Strategic delegation (Vickers)
+
+::: {.notes}
+Recap the four main results: (1) patents trade static DWL for dynamic incentives; (2) the ideas model gives a clean break-even condition $\pi\nu T \ge F$ and shows the planner sets $T$ to just satisfy it; (3) breadth and length are substitutes in delivering incentives; (4) patent races can produce excessive duplication.
+
+Preview next week: we move from innovation policy to strategic commitment. Stackelberg leadership and strategic delegation (Vickers) are about how firms use observable commitments to shift equilibrium outcomes — a different type of strategic interaction from the simultaneous-move games we've studied so far.
+:::
 
 ## References
 

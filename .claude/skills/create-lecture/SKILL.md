@@ -65,6 +65,17 @@ Create a beautiful, pedagogically excellent quarto reveal.js lecture deck.
 - Work in batches of 5-10 slides
 - Check notation, apply creation patterns
 - Quality checks during drafting
+- Add speaker notes to every slide with pedagogical cues, delivery hints, short mathematical derivations, and additional context:
+
+```markdown
+## Slide Title
+
+Slide content
+
+::: {.notes}
+Speaker notes go here.
+:::
+```
 
 ### Phase 4: Figures & Code
 
@@ -90,6 +101,7 @@ Create a beautiful, pedagogically excellent quarto reveal.js lecture deck.
 [ ] All citations resolve
 [ ] Every definition has motivation + worked example
 [ ] Max 2 colored boxes per slide
+[ ] Speaker notes on every slide
 [ ] 2-3 Socratic questions embedded
 [ ] Transition slides between sections
 [ ] At least 1 running application threaded throughout
