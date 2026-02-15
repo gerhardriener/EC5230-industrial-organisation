@@ -469,13 +469,20 @@ Connect to Scotchmer: the Shy model endogenises what Scotchmer took as given —
 
 # Patent races {background-color="#00539b"}
 
-## Symmetric patent race: setup
+## Symmetric patent race: Setup
 
 - Two symmetric firms may incur a fixed cost $f$ to establish a research division
 - Success probability: $p$ (per firm)
 - Payoffs:
   - monopoly profit if sole innovator: $\pi^m$
   - duopoly profit if both succeed: $\pi^d$
+
+
+::: {.callout-note title="Application: parallel R&D programs"}
+Think of multiple labs racing to develop the same drug/vaccine: each pays a fixed setup cost and succeeds with some probability.
+:::
+
+## Symmetric patent race: Welfare benchmarks
 
 - Welfare benchmarks (post-innovation welfare):
   - one research division: $W^m=\pi^m+CS^m$
@@ -484,9 +491,7 @@ Connect to Scotchmer: the Shy model endogenises what Scotchmer took as given —
 - Assumption (for the comparison):
   - $CS^d>CS^m$ (more competition in the product market raises consumer surplus)
 
-::: {.callout-note title="Application: parallel R&D programs"}
-Think of multiple labs racing to develop the same drug/vaccine: each pays a fixed setup cost and succeeds with some probability.
-:::
+
 
 ::: {.notes}
 We now shift from single-firm models to strategic interaction. The patent race setup is a simultaneous-move game: each firm decides whether to invest $f$ (enter the race) or not. The key feature is "winner takes all" — if only one firm succeeds, it gets $\pi^m$; if both succeed, they split the market ($\pi^d$ each).
