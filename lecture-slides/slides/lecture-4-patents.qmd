@@ -87,9 +87,7 @@ Read through the learning objectives quickly — these are the exam-relevant ski
   - **Transferability** (sale, licensing)
 
 ::: {.notes}
-Give quick real-world anchors: patents last 20 years from filing (but effective life is shorter after regulatory approval in pharma); trademarks can last indefinitely if renewed; copyright is life + 70 years in most jurisdictions. Mention that we focus on patents because they are the main tool for incentivising R&D in technology-intensive industries.
-
-The four design dimensions listed will reappear when we formalise length and breadth in the Scotchmer model.
+Give quick real-world anchors: patents last 20 years from filing (but effective life is shorter after regulatory approval in pharma); trademarks can last indefinitely if renewed; copyright is life + 70 y[No endpoint found]
 :::
 
 ## IPRs: central trade-off
