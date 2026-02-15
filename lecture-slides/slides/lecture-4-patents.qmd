@@ -120,9 +120,9 @@ Pharmaceuticals are the canonical example because (i) fixed costs are enormous (
 We will return to this application throughout: $F$ = clinical trial cost, $\nu$ = health benefit flow, breadth = how different a molecule must be, races = multiple labs targeting the same disease.
 :::
 
-# Scotchmer: ideas model {background-color="#00539b"}
+# @scotchmerInnovationIncentives2006: Ideas model {background-color="#00539b"}
 
-## Ideas model (Scotchmer): primitives
+## Ideas model: primitives
 
 Following @scotchmerInnovationIncentives2006
 
