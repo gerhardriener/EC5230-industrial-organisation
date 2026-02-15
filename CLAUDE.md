@@ -68,6 +68,7 @@ Clarity, consistency of notation, and tight alignment between assumptions, equil
 | **Lecture Slides**                          |                                                                                     |
 | `/compile-latex [file.tex]`                 | Compile Beamer `.tex` slides with XeLaTeX/BibTeX passes                             |
 | `/deploy [LectureN]`                        | Render Quarto slides and sync to GitHub Pages                                       |
+| `/create-tikz <description> [--lecture] [--slide]` | Create TikZ diagram from prompt; compile, review, and embed in slides           |
 | `/extract-tikz [LectureN]`                  | TikZ diagrams to PDF to SVG with 0-based indexing                                   |
 | `/slide-excellence [filename]`              | Canonical lecture release review: visual + pedagogy + proofreading + citation audit |
 | `/proofread [filename]`                     | Diagnostics-only proofreading report (avoid stacking with `/slide-excellence`)      |

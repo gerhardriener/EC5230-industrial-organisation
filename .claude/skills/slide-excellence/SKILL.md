@@ -28,7 +28,7 @@ argument-hint: "[QMD filename]"
 ## Review Stack (Run in Parallel)
 
 1. **slide-auditor** — layout, overflow, spacing, box fatigue
-2. **pedagogy-reviewer** — narrative, pacing, notation, patterns
+2. **pedagogy-reviewer** — narrative, pacing, notation, patterns, author notes
 3. **proofreader** — grammar, consistency, citations
 4. **tikz-reviewer** — only if TikZ present
 
@@ -55,6 +55,7 @@ Persist synthesized output to:
 - `quality_reports/[FILE_STEM]_slide_excellence_synthesis.md`
 
 Close workflow log:
+
 - `python scripts/workflow_log.py close --slug "slide-excellence-[FILE_STEM]" --summary "slide excellence review complete"`
 
 ```markdown
@@ -70,8 +71,11 @@ Close workflow log:
 | Citations     |          |        |     |
 
 ### Critical Issues
+
 ### Medium Issues
+
 ### Citation Key Findings
+
 ### Recommended Next Steps
 ```
 
@@ -79,9 +83,9 @@ Close workflow log:
 
 ## Quality Score Rubric
 
-| Score      | Critical | Medium | Meaning              |
-| ---------- | -------- | ------ | -------------------- |
-| Excellent  | 0-2      | 0-5    | Ready to present     |
-| Good       | 3-5      | 6-15   | Minor refinements    |
-| Needs Revision | 6-10  | 16-30  | Significant revision |
-| Poor       | 11+      | 31+    | Major restructuring  |
+| Score          | Critical | Medium | Meaning              |
+| -------------- | -------- | ------ | -------------------- |
+| Excellent      | 0-2      | 0-5    | Ready to present     |
+| Good           | 3-5      | 6-15   | Minor refinements    |
+| Needs Revision | 6-10     | 16-30  | Significant revision |
+| Poor           | 11+      | 31+    | Major restructuring  |

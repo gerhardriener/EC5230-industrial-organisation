@@ -49,6 +49,8 @@ IPRs make a non-rival good partially excludable, creating private incentives for
 
 - **Policy objective:** provide incentives for invention while limiting static distortions in product markets
 
+- **Discussion:** Why can't we just rely on first-mover advantage?
+
 ::: {.notes}
 Stress the public-good nature of knowledge: non-rival means my use doesn't diminish yours; hard to exclude means patents are an artificial mechanism to restore excludability. Ask students: "Why can't we just rely on first-mover advantage?" — this motivates the need for legal protection when imitation is cheap (as in pharma, where reverse-engineering a molecule is far cheaper than discovering it).
 
@@ -87,7 +89,7 @@ Read through the learning objectives quickly — these are the exam-relevant ski
   - **Transferability** (sale, licensing)
 
 ::: {.notes}
-Give quick real-world anchors: patents last 20 years from filing (but effective life is shorter after regulatory approval in pharma); trademarks can last indefinitely if renewed; copyright is life + 70 y[No endpoint found]
+Give quick real-world anchors: patents last 20 years from filing (but effective life is shorter after regulatory approval in pharma); trademarks can last indefinitely if renewed; copyright is life + 70 years in most jurisdictions; design rights vary. The key point is that patents are the main IPR instrument we study because their finite duration creates the central trade-off between incentives and deadweight loss.
 :::
 
 ## IPRs: central trade-off
@@ -321,6 +323,8 @@ In pharma: if a patent on molecule X is broad, then molecules X', X'' that are c
 - If substitutes are excluded (broader patent):
   - residual demand is **less elastic**
   - equilibrium price is higher (all else equal)
+
+- **Discussion:** If you were a patent holder, would you prefer broad–short or narrow–long protection?
 
 ::: {.notes}
 This is pure intuition — no formal model yet. The mechanism: more substitutes → more elastic residual demand → lower equilibrium price → lower per-period profit $\pi$. Conversely, excluding substitutes raises $\pi$ but also raises $\lambda$ (DWL) because the monopoly distortion is larger when demand is less elastic.
@@ -565,6 +569,8 @@ f^{publ}_2 = p(1-2p)W^m + p^2W^d = 0.8(-0.6)15 + 0.64(16) = 3.04
 $$
 
 - If $f=3.2$, then $f^{publ}_2 < f < f^{priv}_2$: two research divisions are privately viable but socially excessive.
+
+- **Discussion:** What happens to this region as $p$ increases?
 
 ::: {.notes}
 Walk through the arithmetic step by step:

@@ -1,0 +1,196 @@
+---
+title: "Exercise N: Industrial Economics — Innovation Incentives & Patent Race"
+format:
+  html:
+    toc: false
+    embed-resources: true
+    number-sections: false
+  pdf:
+    documentclass: article
+    fontsize: 11pt
+    geometry: margin=1in
+    number-sections: false
+solutions: false
+---
+
+::: {.content-hidden unless-meta="solutions"}
+# Solutions
+:::
+
+**Instructions**
+- Answer all questions.
+- Show intermediate steps.
+
+## Problem 1: Incentives to innovate
+
+Consider a market for vacuum cleaners in which the demand is given by
+$$
+p = 100 - 2q,
+$$
+
+where $q$ is the (total) quantity and $p$ is the price. Suppose that the initial marginal costs of firms are 40, and that there exists a process innovation called *Tech Z* which reduces the marginal cost of production to 28. Assume that this technology is exclusively used by the one single firm who acquires it.
+
+### (a)
+
+Compute and compare the maximum willingness to pay for Tech Z of a
+
+1. monopoly firm (not threatened by entry)
+2. Cournot duopolist
+
+### (b)
+
+Discuss how market structure affects the incentives to innovate (acquire an innovation) in this case.
+
+::: {.content-hidden unless-meta="solutions"}
+## Solution
+
+Denote $c_0 = 40$ as the initial marginal cost and $c_1 = 28$ as the marginal cost with Tech Z. We compute the change in profit (pre- and post-innovation) for a:
+
+### (a)
+
+#### (i) Monopoly firm (not threatened by entry)
+
+Solve the monopoly profit maximisation to obtain the following.
+
+**Pre-innovation:**
+$$
+Q_0^M = 15,\quad P_0^M = 70,\quad \Pi_0^M = 450.
+$$
+
+**Post-innovation:**
+$$
+Q_1^M = 18,\quad P_1^M = 64,\quad \Pi_1^M = 648.
+$$
+
+Maximum willingness to pay:
+$$
+\text{Max WTP} = \Pi_1^M - \Pi_0^M = 198.
+$$
+
+#### (ii) Cournot duopolist (without loss of generality firm 1 as the innovator)
+
+Solve the Cournot duopoly profit maximisation (see lecture exercises, problem sets, previous tutorial, or Intermediate Micro) to obtain the following.
+
+**Pre-innovation:** symmetric Cournot duopoly
+$$
+q_1 = q_2 = q^C = 10,\quad Q^C = 20,\quad P^C = 60,\quad \Pi^C = 200.
+$$
+
+**Post-innovation:** asymmetric Cournot duopoly
+$$
+q_1 = 14,\quad q_2 = 8,\quad Q = 22,\quad P = 56,\quad \Pi_1 = 392.
+$$
+
+Maximum willingness to pay:
+$$
+\text{Max WTP} = \Pi_1 - \Pi^C = 192.
+$$
+
+Hence, the monopoly firm has a higher maximum willingness to pay for Tech Z than a Cournot duopolist.
+
+### (b)
+
+Both types of firm start with a strictly positive profit and replace their old profit with a greater new one. However, Tech Z is a *minor innovation* (show this!) that does not give enough competitive cost advantage for a Cournot duopolist to exceed the profit incentive of a monopoly firm.
+
+With a higher reduction in marginal cost, the innovating duopolist can obtain a much bigger market share than its rival — the profit increase may then be large enough such that the duopolist’s maximum willingness to pay exceeds that of a monopoly firm.
+:::
+
+## Problem 2: Symmetric patent race
+
+Suppose that there are two firms that simultaneously decide whether to invest to find a new product, with both firms privately and separately owned.
+
+The value of a patent for such product is estimated to be
+$$
+V = 100.
+$$
+If only one firm discovers it, this firm will be able to extract the whole value. If both firms discover it, each firm is going to earn half of this total value.
+
+Each firm has a probability $p$ of discovering the new product provided that it invests an amount $F$ constructing a research lab. If a firm does not invest, the probability of discovery is 0.
+
+### (a)
+
+Draw the payoff matrix of the game. Find the conditions on $F$ and $p$ under which there will be 0, 1, or 2 firms investing in the equilibrium.
+
+### (b)
+
+Assume that the social planner maximises the sum of profits of the two firms. Find the conditions on $F$ and $p$ under which there should be 0, 1, or 2 firms investing, according to this social planner.
+
+::: {.content-hidden unless-meta="solutions"}
+## Solution
+
+### (a)
+
+Denote $E\pi(x,y)$ as the expected payoff of a firm when it chooses $x$ and its rival chooses $y$, with $x,y \in \{I, NI\}$.
+
+If a firm does not invest (choose $NI$), its payoff is zero regardless of whether the other firm invests:
+$$
+E\pi(NI, I) = 0,\qquad E\pi(NI, NI) = 0.
+$$
+
+The expected profit when a firm invests and its rival does not invest is
+$$
+E\pi(I, NI) = 100p - F.
+$$
+
+The expected profit when both firms invest is
+$$
+E\pi(I, I)
+= 100p(1-p) + 50p^2 - F
+= 100p\left(1 - \frac{p}{2}\right) - F
+< 100p - F.
+$$
+
+Based on the payoff matrix, the equilibrium conditions are:
+$$
+F
+\begin{cases}
+\ge 100p & \text{no firms invest in equilibrium}, \\[6pt]
+\in \left(100p\left(1-\frac{p}{2}\right),\,100p\right) & \text{1 firm invests in equilibrium}, \\[6pt]
+\le 100p\left(1-\frac{p}{2}\right) & \text{2 firms invest in equilibrium}.
+\end{cases}
+\tag{1}
+$$
+
+### (b)
+
+Social welfare is defined as
+$$
+W = E\pi_1 + E\pi_2.
+$$
+
+Let $W(n)$ denote social welfare when $n$ firms invest.
+$$
+W(0) = 0,
+$$
+$$
+W(1) = 100p - F,
+$$
+$$
+W(2)
+= 2\left[100p\left(1-\frac{p}{2}\right) - F\right]
+= 200p\left(1-\frac{p}{2}\right) - 2F.
+$$
+
+The social optimum is the number of firms $n^*$ such that
+$$
+W(n^*) > W(n), \quad n \in \{0,1,2\}, \; n \neq n^*.
+$$
+
+To summarise, according to the social planner:
+$$
+F
+\begin{cases}
+\ge 100p & \text{no firm investing is socially optimal}, \\[6pt]
+\in \left(100p(1-p),\,100p\right) & \text{1 firm investing is socially optimal}, \\[6pt]
+\le 100p(1-p) & \text{2 firms investing is socially optimal}.
+\end{cases}
+\tag{2}
+$$
+
+Combining (1) and (2), there is **socially excessive R\&D** if
+$$
+100p(1-p) < F < 100p\left(1-\frac{p}{2}\right).
+$$
+
+That is, when one firm investing is socially optimal but two firms invest in equilibrium.
+:::
