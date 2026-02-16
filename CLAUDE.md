@@ -63,28 +63,28 @@ Clarity, consistency of notation, and tight alignment between assumptions, equil
 
 ## Quick Reference: Skills & Agents
 
-| Command                                     | What It Does                                                                        |
-| ------------------------------------------- | ----------------------------------------------------------------------------------- |
-| **Lecture Slides**                          |                                                                                     |
-| `/compile-latex [file.tex]`                 | Compile Beamer `.tex` slides with XeLaTeX/BibTeX passes                             |
-| `/deploy [LectureN]`                        | Render Quarto slides and sync to GitHub Pages                                       |
-| `/create-tikz <description> [--lecture] [--slide]` | Create TikZ diagram from prompt; compile, review, and embed in slides           |
-| `/extract-tikz [LectureN]`                  | TikZ diagrams to PDF to SVG with 0-based indexing                                   |
-| `/slide-excellence [filename]`              | Canonical lecture release review: visual + pedagogy + proofreading + citation audit |
-| `/proofread [filename]`                     | Diagnostics-only proofreading report (avoid stacking with `/slide-excellence`)      |
-| `/visual-audit [filename]`                  | Diagnostics-only layout/overflow debug (avoid stacking with `/slide-excellence`)    |
-| `/pedagogy-review [filename]`               | Diagnostics-only narrative/pacing review (avoid stacking with `/slide-excellence`)  |
-| `/substance-review [filename]`              | IO domain correctness review (read-only)                                            |
-| `/review-r [file or LectureN]`              | R code review: quality, reproducibility, correctness                                |
-| `/qa-quarto [LectureN]`                     | Quarto vs Beamer parity QA (translation mode; uses canonical orchestrator loop)     |
-| `/translate-to-quarto [LectureN or file]`   | Beamer to Quarto translation workflow                                               |
-| `/create-lecture`                           | Full lecture creation workflow                                                      |
-| `/devils-advocate`                          | Optional adversarial challenge pass after baseline pedagogy review                  |
-| **Exercises**                               |                                                                                     |
-| `/review-exercise <file>`                   | Exercise review: timing, pedagogy, solutions, clarity                               |
-| `/create-exercise --type --lecture --topic` | Generate new exercise from specifications with quality checks                       |
-| **Bibliography**                            |                                                                                     |
-| `/validate-bib`                             | Cross-reference citations vs bibliography file                                      |
+| Command                                            | What It Does                                                                        |
+| -------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| **Lecture Slides**                                 |                                                                                     |
+| `/compile-latex [file.tex]`                        | Compile Beamer `.tex` slides with XeLaTeX/BibTeX passes                             |
+| `/deploy [LectureN]`                               | Render Quarto slides and sync to GitHub Pages                                       |
+| `/create-tikz <description> [--lecture] [--slide]` | Create TikZ diagram from prompt; compile, review, and embed in slides               |
+| `/extract-tikz [LectureN]`                         | TikZ diagrams to PDF to SVG with 0-based indexing                                   |
+| `/slide-excellence [filename]`                     | Canonical lecture release review: visual + pedagogy + proofreading + citation audit |
+| `/proofread [filename]`                            | Diagnostics-only proofreading report (avoid stacking with `/slide-excellence`)      |
+| `/visual-audit [filename]`                         | Diagnostics-only layout/overflow debug (avoid stacking with `/slide-excellence`)    |
+| `/pedagogy-review [filename]`                      | Diagnostics-only narrative/pacing review (avoid stacking with `/slide-excellence`)  |
+| `/substance-review [filename]`                     | IO domain correctness review (read-only)                                            |
+| `/review-r [file or LectureN]`                     | R code review: quality, reproducibility, correctness                                |
+| `/qa-quarto [LectureN]`                            | Quarto vs Beamer parity QA (translation mode; uses canonical orchestrator loop)     |
+| `/translate-to-quarto [LectureN or file]`          | Beamer to Quarto translation workflow                                               |
+| `/create-lecture`                                  | Full lecture creation workflow                                                      |
+| `/devils-advocate`                                 | Optional adversarial challenge pass after baseline pedagogy review                  |
+| **Exercises**                                      |                                                                                     |
+| `/review-exercise <file>`                          | Exercise review: timing, pedagogy, solutions, clarity                               |
+| `/create-exercise --type --lecture --topic`        | Generate new exercise from specifications with quality checks                       |
+| **Bibliography**                                   |                                                                                     |
+| `/validate-bib`                                    | Cross-reference citations vs bibliography file                                      |
 
 **Agents** (available for delegation):
 
@@ -136,7 +136,7 @@ EC5230-industrial-organisation/
 │   │   ├── lecture-2-product-differentiation.qmd
 │   │   ├── lecture-3-innovation.qmd
 │   │   ├── lecture-4-patents.qmd
-│   │   ├── lecture-5-repeated-games.qmd
+│   │   ├── lecture-5-multi-stage-games.qmd
 │   │   └── lecture-6-corporate-rand.qmd
 │   └── figs/
 │       ├── source/                   # TikZ source files (.tex)

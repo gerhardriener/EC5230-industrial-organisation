@@ -46,10 +46,13 @@ This module contributes to UN Sustainable Development Goals:
 Use the top navbar for section-level navigation and the sidebars on lecture/exercise pages for week-by-week links.
 :::
 
+Quick link: [Week 4 lecture (Patents and IPRs)](lecture-slides/slides/lecture-4-patents.qmd)
+
 | Material | What it includes | Link |
 |---|---|---|
 | Lecture Slides | Weekly lecture decks in interactive HTML and printable PDF formats | [Lecture Slides overview](lecture-slides/index.qmd) |
 | Exercises | Student and instructor variants for sheets and live tutorial exercises | [Exercises overview](exercises/index.qmd) |
+| Policy Recommendation | Instructions and marking matrix for the 1,000-word policy report | [Policy report brief](policy-report.qmd) |
 
 ### Interactive Apps
 
@@ -80,7 +83,7 @@ Journal articles are available through the online reading list and cited at the 
 | Final Examination | 75% | May |
 
 - **Class Test:** 50-minute in-person test covering Weeks 1–5, including a problem-solving question and a discussion-based question (Week 6, during lecture slot)
-- **Policy Recommendation:** Written report (max 1,000 words) analysing a real-world industrial organisation issue of your choice, submitted via MMS by **15 April 2026, 17:00**
+- **Policy Recommendation:** Written report (max 1,000 words) analysing a real-world industrial organisation issue of your choice, submitted via MMS by **15 April 2026, 17:00**. See the [policy report brief](policy-report.qmd).
 - **Final Examination:** Two-hour in-person exam covering all module content (Weeks 1–5, 7–9, 11–12)
 
 ## Prerequisites

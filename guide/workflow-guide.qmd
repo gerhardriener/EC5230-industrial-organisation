@@ -749,7 +749,7 @@ Use this instead of stacking `/proofread`, `/visual-audit`, and `/pedagogy-revie
 The canonical spec (agents + artifacts) lives in `.claude/skills/slide-excellence/SKILL.md`. At a high level:
 
 ```
-/slide-excellence lecture-5-repeated-games.qmd
+/slide-excellence lecture-5-multi-stage-games.qmd
   |
   +-- Agent 1: Visual Audit (slide-auditor)
   +-- Agent 2: Pedagogical Review (pedagogy-reviewer)

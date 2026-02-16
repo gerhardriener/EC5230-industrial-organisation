@@ -32,7 +32,7 @@ website:
           - text: "Week 4: Patents and IPRs"
             href: lecture-slides/slides/lecture-4-patents.qmd
           - text: "Week 5: Multi-stage Games"
-            href: lecture-slides/slides/lecture-5-repeated-games.qmd
+            href: lecture-slides/slides/lecture-5-multi-stage-games.qmd
           - text: "Week 7: Cooperative R&D"
             href: lecture-slides/slides/lecture-6-corporate-rand.qmd
       - text: "Exercises"
@@ -70,7 +70,7 @@ website:
             - lecture-slides/slides/lecture-4-patents.qmd
         - section: "Week 5"
           contents:
-            - lecture-slides/slides/lecture-5-repeated-games.qmd
+            - lecture-slides/slides/lecture-5-multi-stage-games.qmd
         - section: "Week 7"
           contents:
             - lecture-slides/slides/lecture-6-corporate-rand.qmd

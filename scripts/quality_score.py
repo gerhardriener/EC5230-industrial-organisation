@@ -8,8 +8,8 @@ Aligns scoring with canonical rules in:
 Usage examples:
     python scripts/quality_score.py lecture-slides/slides/lecture-3-innovation.qmd
     python scripts/quality_score.py exercises/sheets/exercises-1.qmd --summary
-    python scripts/quality_score.py lecture-slides/slides/lecture-5-repeated-games.qmd --json
-    python scripts/quality_score.py lecture-slides/slides/lecture-5-repeated-games.tex
+    python scripts/quality_score.py lecture-slides/slides/lecture-5-multi-stage-games.qmd --json
+    python scripts/quality_score.py lecture-slides/slides/lecture-5-multi-stage-games.tex
     python scripts/quality_score.py scripts/figures/my_script.R
 """
 
@@ -285,7 +285,9 @@ def _detect_undefined_citations(log_content: str) -> List[str]:
 
 
 class QualityScorer:
-    def __init__(self, filepath: Path, verbose: bool = False, skip_render: bool = False):
+    def __init__(
+        self, filepath: Path, verbose: bool = False, skip_render: bool = False
+    ):
         self.filepath = filepath.resolve()
         self.verbose = verbose
         self.skip_render = skip_render
@@ -297,7 +299,14 @@ class QualityScorer:
             "minor": [],
         }
 
-    def _add_issue(self, severity: str, issue_type: str, description: str, details: str, points: int) -> None:
+    def _add_issue(
+        self,
+        severity: str,
+        issue_type: str,
+        description: str,
+        details: str,
+        points: int,
+    ) -> None:
         self.issues[severity].append(
             {
                 "type": issue_type,
@@ -426,7 +435,9 @@ class QualityScorer:
                         POINTS["hardcoded_path"],
                     )
 
-        has_random = bool(re.search(r"\b(rnorm|runif|sample|rbinom|rpois|rnbinom)\s*\(", content))
+        has_random = bool(
+            re.search(r"\b(rnorm|runif|sample|rbinom|rpois|rnbinom)\s*\(", content)
+        )
         has_seed = bool(re.search(r"\bset\.seed\s*\(", content))
         if has_random and not has_seed:
             self._add_issue(
@@ -442,7 +453,9 @@ class QualityScorer:
     def score_tex(self) -> Dict[str, object]:
         content = _read_text(self.filepath)
 
-        compiled, reason, log_content = _check_tex_compile(self.filepath, self.skip_render)
+        compiled, reason, log_content = _check_tex_compile(
+            self.filepath, self.skip_render
+        )
         if not compiled:
             self._add_issue(
                 "critical",
@@ -588,7 +601,7 @@ def main() -> None:
 Examples:
   python scripts/quality_score.py lecture-slides/slides/lecture-3-innovation.qmd
   python scripts/quality_score.py lecture-slides/slides/lecture-*.qmd --summary
-  python scripts/quality_score.py lecture-slides/slides/lecture-5-repeated-games.tex
+  python scripts/quality_score.py lecture-slides/slides/lecture-5-multi-stage-games.tex
   python scripts/quality_score.py scripts/**/*.R
 
 Thresholds:
@@ -602,9 +615,15 @@ Exit codes:
   2 = Auto-fail (compilation/syntax failure)
         """,
     )
-    parser.add_argument("filepaths", nargs="+", help="File paths (supports glob patterns)")
-    parser.add_argument("--summary", action="store_true", help="Show summary output only")
-    parser.add_argument("--verbose", action="store_true", help="Include minor issue details")
+    parser.add_argument(
+        "filepaths", nargs="+", help="File paths (supports glob patterns)"
+    )
+    parser.add_argument(
+        "--summary", action="store_true", help="Show summary output only"
+    )
+    parser.add_argument(
+        "--verbose", action="store_true", help="Include minor issue details"
+    )
     parser.add_argument("--json", action="store_true", help="Output JSON")
     parser.add_argument(
         "--skip-render",
