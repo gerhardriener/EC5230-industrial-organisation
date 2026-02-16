@@ -45,7 +45,7 @@ IPRs make a non-rival good partially excludable, creating private incentives for
 :::
 
 - Knowledge is (partly) **non-rival** and often **hard to exclude**
-- Without protection, imitation can dissipate rents $\Rightarrow$ weak private incentive to incur fixed R\&D cost
+- Without protection, imitation can dissipate rents $\Rightarrow$ weak private incentive to incur fixed R&D cost
 
 - **Policy objective:** provide incentives for invention while limiting static distortions in product markets
 
@@ -67,7 +67,7 @@ The policy objective on the slide is the thread that connects every model in thi
 ::: {.callout-note title="Today: roadmap"}
 1. Patents as incentives: the central trade-off
 2. Patent length in the ideas model (screening and welfare)
-3. Breadth, endogenous R\&D, and patent races
+3. Breadth, endogenous R&D, and patent races
 :::
 
 ::: {.notes}
@@ -97,12 +97,12 @@ Give quick real-world anchors: patents last 20 years from filing (but effective 
 - Patents create temporary market power $\Rightarrow$ static deadweight loss
 
 - Stronger protection (longer/broader) typically:
-  - increases expected private returns to R\&D
+  - increases expected private returns to R&D
   - increases the static distortion during protection
 
 - Questions:
   - What is an optimal **length** and **breadth**?
-  - How does competition in R\&D (patent races) affect efficiency?
+  - How does competition in R&D (patent races) affect efficiency?
 
 ::: {.notes}
 This slide states the fundamental tension that students must internalise: patents create deadweight loss (static cost) but generate incentives for innovation (dynamic benefit). Emphasise that "stronger" protection is not unambiguously good — it depends on where we are on the trade-off.
@@ -131,14 +131,14 @@ Following @scotchmerInnovationIncentives2006
 - An “idea” is a pair $(\nu, F)$
 
 - $\nu$: per-period consumer surplus under competitive supply (value parameter)
-- $F$: fixed cost to develop the idea into an innovation (R\&D cost)
+- $F$: fixed cost to develop the idea into an innovation (R&D cost)
 
 - **Interpretation**
   - $\nu$ captures the size of social gains from making the idea usable
   - $F$ is the up-front resource cost required for development
 
 ::: {.callout-note title="Application: a new drug"}
-Map $(\nu,F)$ to an innovation with large fixed R\&D cost $F$ and a flow of benefits $\nu$ that is partially appropriable during patent protection.
+Map $(\nu,F)$ to an innovation with large fixed R&D cost $F$ and a flow of benefits $\nu$ that is partially appropriable during patent protection.
 :::
 
 ::: {.notes}
@@ -182,11 +182,19 @@ $$
 - Per-period deadweight loss: $\lambda \nu$ $\Rightarrow$ patent DWL: $\lambda \nu T$
 
 - **Interpretation**
-  - $\pi$ is a reduced-form “appropriability” parameter
+  - $\pi$ is a reduced-form "appropriability" parameter
   - $\lambda$ captures the static distortion created by protection
 
+::: {.content-visible when-format="beamer"}
+\resizebox{0.7\textwidth}{!}{\input{../figs/source/fig-patents-monopoly-dwl.tex}}
+:::
+
+::: {.content-visible when-format="revealjs"}
+![](../figs/fig-patents-monopoly-dwl.svg){fig-alt="Monopoly diagram showing profit rectangle (pi nu) and deadweight loss triangle (lambda nu)" fig-align="center" width="65%"}
+:::
+
 ::: {.notes}
-The two parameters $\pi$ and $\lambda$ are crucial reduced-form objects. Draw a standard monopoly diagram on the board if needed: $\pi\nu$ is the profit rectangle, $\lambda\nu$ is the Harberger triangle. Note that $\pi + \lambda < 1$ because consumer surplus under monopoly is positive.
+The two parameters $\pi$ and $\lambda$ are crucial reduced-form objects. The diagram shows the standard monopoly decomposition: $\pi\nu$ is the profit rectangle, $\lambda\nu$ is the Harberger triangle. Note that $\pi + \lambda < 1$ because consumer surplus under monopoly ($CS^m$) is positive.
 
 Ask: "What happens as demand becomes more elastic?" — $\pi$ falls and $\lambda$ rises, making patents more costly relative to the incentive they provide. This motivates the later discussion of breadth.
 :::
@@ -276,7 +284,7 @@ Let $T=20$, $\pi=\tfrac{1}{2}$, $\lambda=\tfrac{1}{4}$, $r=\tfrac{1}{3}$.
 
 - Tasks:
   - Which ideas are privately profitable ($\pi \nu T \ge F$)?
-  - Which ideas have positive discounted net social value $\left(\frac{\nu}{r}-\lambda \nu T - F \ge 0\right)$?
+  - Which ideas have positive discounted net social value $(\nu/r - \lambda \nu T - F \ge 0)$?
 
 - **Interpretation**
   - With these parameter values, private profitability need not coincide with positive net social value: patent protection can induce investment even when net welfare is negative
@@ -334,12 +342,11 @@ Ask students: "If you were a patent holder, would you prefer broad-short or narr
 
 ## Breadth–length trade-off (given a target value)
 
-Assume the “correct” expected private value of protection is fixed.
+Assume the "correct" expected private value of protection is fixed.
 
-::: {.callout-note title="Regimes (product space)"}
-- Broad–short: $(\hat{T}, \hat{\pi}_1+\hat{\pi}_2)$
-- Narrow–long: $(\tilde{T}, \tilde{\pi}_1)$
-:::
+- **Regimes** (product space):
+  - Broad–short: $(\hat{T}, \hat{\pi}_1+\hat{\pi}_2)$
+  - Narrow–long: $(\tilde{T}, \tilde{\pi}_1)$
 
 - Broad patent yields higher per-period profit (includes infringing market):
 
@@ -384,7 +391,7 @@ The practical implication: optimal patent design is industry-specific. Pharma (w
 
 - Demand: $P(Q)=a-Q$
 - Process innovation reduces marginal cost from $c$ to $c-x$
-- R\&D effort $x$ costs $R(x)$
+- R&D effort $x$ costs $R(x)$
 
 - Two-stage game:
   1. Regulator chooses patent duration $\tau$
@@ -405,8 +412,10 @@ Linear demand $P = a - Q$ keeps the algebra tractable. The key modelling choice:
 Firm solves:
 
 $$
-\max_x \ \Pi(x;\tau)=\sum_{t=1}^{\tau}\rho^{t-1}\pi(x)-R(x),
-\quad \rho=\frac{1}{1+r}
+\begin{aligned}
+\max_x \ \Pi(x;\tau) &= \sum_{t=1}^{\tau}\rho^{t-1}\pi(x)-R(x), \\
+\rho &= \frac{1}{1+r}
+\end{aligned}
 $$
 
 Assume:
@@ -440,7 +449,7 @@ $$
   - $x^I$ increases with $\rho$ (decreases with $r$)
 
 - **Interpretation**
-  - Longer protection raises the marginal benefit of R\&D because profits are earned for more discounted periods
+  - Longer protection raises the marginal benefit of R&D because profits are earned for more discounted periods
 
 ::: {.notes}
 The induced innovation level $x^I(\tau) = [(1-\rho^\tau)/(1-\rho)](a-c)$ is the firm's best response to any given patent duration.
@@ -501,13 +510,30 @@ The welfare benchmarks $W^m$ and $W^d$ include consumer surplus, which is higher
 Pharma application: multiple labs racing to develop a COVID vaccine, each investing billions with uncertain success.
 :::
 
-## Patent race: Nash equilibrium condition
+## Patent race: game structure
 
 ::: {.callout-warning title="Duplication incentive"}
-“Winner-takes-all” payoffs can create privately excessive entry into R\&D when firms ignore duplication costs.
+"Winner-takes-all" payoffs can create privately excessive entry into R&D when firms ignore duplication costs.
 :::
 
-- Firms choose $I$ or $NI$ simultaneously
+- Two firms simultaneously choose **Invest** ($I$) or **Not Invest** ($NI$)
+- Each firm succeeds independently with probability $p$
+- Payoffs depend on market structure:
+  - Unique success $\Rightarrow$ monopoly profit $\pi^m$
+  - Both succeed $\Rightarrow$ duopoly profit $\pi^d < \pi^m$
+
+::: {.notes}
+Set up the game carefully before jumping to the equilibrium condition. Emphasise that success is probabilistic and independent — this is what creates the duplication problem. If success were certain ($p=1$), the game reduces to a standard entry game. The interesting case is $p < 1$, where the second firm provides "insurance" against the first firm's failure but also wastes $f$ if both succeed.
+:::
+
+## Patent race: Nash equilibrium condition
+
+- If rival invests, my expected payoff from $I$:
+
+$$
+p(1-p)\pi^m + p^2\pi^d - f
+$$
+
 - $(I,I)$ is a Nash equilibrium if:
 
 $$
@@ -515,7 +541,8 @@ f \le p(1-p)\pi^m + p^2\pi^d \equiv f^{priv}_2
 $$
 
 - **Interpretation**
-  - Private incentives include the probability of being the unique winner and the case where both succeed
+  - First term: I succeed, rival fails $\Rightarrow$ monopoly
+  - Second term: both succeed $\Rightarrow$ duopoly
 
 ::: {.notes}
 Derive the condition: if the other firm invests, my expected payoff from investing is $p(1-p)\pi^m + p^2\pi^d - f$. The first term is the probability I succeed and the rival fails (I get monopoly profit); the second term is both succeed (duopoly profit). I invest if this exceeds zero, i.e., $f \le p(1-p)\pi^m + p^2\pi^d$.
@@ -564,13 +591,19 @@ Let $p=0.8$, $\pi^m=10$, $\pi^d=3$, $W^m=15$, $W^d=16$.
 - Private two-division threshold:
 
 $$
-f^{priv}_2 = p(1-p)\pi^m + p^2\pi^d = 0.8(0.2)10 + 0.64(3) = 3.52
+\begin{aligned}
+f^{priv}_2 &= p(1-p)\pi^m + p^2\pi^d \\
+            &= 0.8(0.2)(10) + 0.64(3) = 3.52
+\end{aligned}
 $$
 
 - Social two-division threshold:
 
 $$
-f^{publ}_2 = p(1-2p)W^m + p^2W^d = 0.8(-0.6)15 + 0.64(16) = 3.04
+\begin{aligned}
+f^{publ}_2 &= p(1-2p)W^m + p^2W^d \\
+            &= 0.8(-0.6)(15) + 0.64(16) = 3.04
+\end{aligned}
 $$
 
 - If $f=3.2$, then $f^{publ}_2 < f < f^{priv}_2$: two research divisions are privately viable but socially excessive.
@@ -594,11 +627,11 @@ Ask: "What happens to this region as $p$ increases?" — it widens, because high
 **Summary**
 
 - Patents trade off dynamic incentives against static distortions (deadweight loss during protection)
-- In the ideas model, investment requires $\pi \nu T \ge F$, while welfare accounts for $\frac{\nu}{r}$ and the DWL term $\lambda \nu T$
+- In the ideas model, investment requires $\pi \nu T \ge F$, while welfare accounts for $\nu/r$ and the DWL term $\lambda \nu T$
 - Breadth and length can be substitutes in delivering a given private incentive level (broad–short vs narrow–long)
 - Patent races can generate socially excessive duplication when private entry incentives exceed social benefits
 
-**Next week: multi-stage games**
+**Next week: Multi stage gamess**
 
 - Commitment and first-mover advantage (Stackelberg)
 - Subgame perfect equilibrium and backward induction

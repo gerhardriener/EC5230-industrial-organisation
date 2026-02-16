@@ -48,8 +48,8 @@
 
 % === Curves ===
 
-% Inverse demand
-\addplot[very thick, domain=0:\A, samples=2, color=black] {\A - x};
+% Inverse demand (stop before xmax to avoid clip=false overshoot)
+\addplot[very thick, domain=0:14.5, samples=2, color=black] {\A - x};
 
 % Marginal revenue
 \addplot[thick, densely dashed, domain=0:{\A/2}, samples=2, color=black!60] {\A - 2*x};
@@ -69,7 +69,7 @@
 \node[anchor=east, font=\small] at (axis cs:0,\MC) {$c$};
 
 % === Curve labels ===
-\node[anchor=north west, font=\small] at (axis cs:13,2.0) {$P=A-Q$};
+\node[anchor=north west, font=\small, fill=white, inner sep=2pt] at (axis cs:13,1.5) {$P=A-Q$};
 \node[anchor=north east, font=\small, color=black!60] at (axis cs:7,2.5) {$MR$};
 \node[anchor=south west, font=\small, color=black!70] at (axis cs:12.5,4.4) {$MC=c$};
 
@@ -85,14 +85,15 @@
       fill=white, fill opacity=0.85, text opacity=1, inner sep=3pt]
   at (axis cs:8,6) {$\lambda\nu$};
 
-% Consumer surplus label
-\node[align=center, font=\small, black!60]
+% Consumer surplus label (lighter to de-emphasise vs pi and lambda)
+\node[align=center, font=\small\bfseries, black!50,
+      fill=white, fill opacity=0.85, text opacity=1, inner sep=3pt]
   at (axis cs:2,12.5) {$CS^m$};
 
 % === Annotation: pi + lambda < 1 ===
 \node[anchor=north west, font=\small, align=left, text=black!70,
       draw=black!20, rounded corners=2pt, inner sep=4pt, fill=white]
-  at (axis cs:8.5,15.5) {$\nu = $ total competitive CS\\[2pt]$\pi + \lambda < 1$};
+  at (axis cs:8.5,15.5) {$\nu$ = total competitive CS\\[2pt]$\pi + \lambda < 1$};
 
 \end{axis}
 \end{tikzpicture}
