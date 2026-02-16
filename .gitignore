@@ -89,6 +89,7 @@ apps/
 exams/
 admin/
 apps/
+quality_reports/
 
 /.quarto/
 **/*.quarto_ipynb
