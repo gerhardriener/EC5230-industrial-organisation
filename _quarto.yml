@@ -84,6 +84,7 @@ website:
         - section: "Exercise Sheets"
           contents:
             - exercises/sheets/exercises-1.qmd
+            - exercises/sheets/exercises-2.qmd
         - section: "Live Exercises"
           contents:
             - exercises/live/live-exercise-1.qmd
