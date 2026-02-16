@@ -1066,34 +1066,34 @@
   {
     "objectID": "exercises/sheets/exercises-2.html",
     "href": "exercises/sheets/exercises-2.html",
-    "title": "Exercise N: Industrial Economics — Innovation Incentives & Patent Race",
+    "title": "Exercise 2: Innovation Incentives & Patent Race",
     "section": "",
     "text": "Instructions - Answer all questions. - Show intermediate steps.",
     "crumbs": [
       "Exercise Sheets",
-      "Exercise N: Industrial Economics — Innovation Incentives & Patent Race"
+      "Exercise 2: Innovation Incentives & Patent Race"
     ]
   },
   {
     "objectID": "exercises/sheets/exercises-2.html#problem-1-incentives-to-innovate",
     "href": "exercises/sheets/exercises-2.html#problem-1-incentives-to-innovate",
-    "title": "Exercise N: Industrial Economics — Innovation Incentives & Patent Race",
+    "title": "Exercise 2: Innovation Incentives & Patent Race",
     "section": "Problem 1: Incentives to innovate",
     "text": "Problem 1: Incentives to innovate\nConsider a market for vacuum cleaners in which the demand is given by \\[\np = 100 - 2q,\n\\]\nwhere \\(q\\) is the (total) quantity and \\(p\\) is the price. Suppose that the initial marginal costs of firms are 40, and that there exists a process innovation called Tech Z which reduces the marginal cost of production to 28. Assume that this technology is exclusively used by the one single firm who acquires it.\n\n(a)\nCompute and compare the maximum willingness to pay for Tech Z of a\n\nmonopoly firm (not threatened by entry)\nCournot duopolist\n\n\n\n(b)\nDiscuss how market structure affects the incentives to innovate (acquire an innovation) in this case.",
     "crumbs": [
       "Exercise Sheets",
-      "Exercise N: Industrial Economics — Innovation Incentives & Patent Race"
+      "Exercise 2: Innovation Incentives & Patent Race"
     ]
   },
   {
     "objectID": "exercises/sheets/exercises-2.html#problem-2-symmetric-patent-race",
     "href": "exercises/sheets/exercises-2.html#problem-2-symmetric-patent-race",
-    "title": "Exercise N: Industrial Economics — Innovation Incentives & Patent Race",
+    "title": "Exercise 2: Innovation Incentives & Patent Race",
     "section": "Problem 2: Symmetric patent race",
     "text": "Problem 2: Symmetric patent race\nSuppose that there are two firms that simultaneously decide whether to invest to find a new product, with both firms privately and separately owned.\nThe value of a patent for such product is estimated to be \\[\nV = 100.\n\\] If only one firm discovers it, this firm will be able to extract the whole value. If both firms discover it, each firm is going to earn half of this total value.\nEach firm has a probability \\(p\\) of discovering the new product provided that it invests an amount \\(F\\) constructing a research lab. If a firm does not invest, the probability of discovery is 0.\n\n(a)\nDraw the payoff matrix of the game. Find the conditions on \\(F\\) and \\(p\\) under which there will be 0, 1, or 2 firms investing in the equilibrium.\n\n\n(b)\nAssume that the social planner maximises the sum of profits of the two firms. Find the conditions on \\(F\\) and \\(p\\) under which there should be 0, 1, or 2 firms investing, according to this social planner.",
     "crumbs": [
       "Exercise Sheets",
-      "Exercise N: Industrial Economics — Innovation Incentives & Patent Race"
+      "Exercise 2: Innovation Incentives & Patent Race"
     ]
   },
   {
