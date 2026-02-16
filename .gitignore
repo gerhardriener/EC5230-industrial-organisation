@@ -90,6 +90,7 @@ exams/
 admin/
 apps/
 quality_reports/
+guide/
 
 /.quarto/
 **/*.quarto_ipynb

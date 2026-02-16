@@ -1,29 +1,5 @@
 ---
 title: "Lecture 4 - Patents and Intellectual Property Rights"
-format:
-  clean-revealjs:
-    slide-number: true
-    title-slide-attributes:
-      data-background-color: "#00539b"
-    chalkboard: true
-    preview-links: auto
-    transition: none
-    background-transition: fade
-  dtslides-revealjs:
-    slide-number: c/t
-    title-slide-attributes:
-      data-background-color: "#00539b"
-    chalkboard: true
-    preview-links: auto
-    transition: none
-    background-transition: fade
-  beamer: default
-
-execute:
-  echo: false
-  warning: false
-  message: false
-  cache: true
 ---
 
 # Patents and Intellectual Property Rights {background-color="#00539b"}

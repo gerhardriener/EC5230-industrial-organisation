@@ -52,7 +52,7 @@ Quick link: [Week 4 lecture (Patents and IPRs)](lecture-slides/slides/lecture-4-
 |---|---|---|
 | Lecture Slides | Weekly lecture decks in interactive HTML and printable PDF formats | [Lecture Slides overview](lecture-slides/index.qmd) |
 | Exercises | Student and instructor variants for sheets and live tutorial exercises | [Exercises overview](exercises/index.qmd) |
-| Policy Recommendation | Instructions and marking matrix for the 1,000-word policy report | [Policy report brief](policy-report.qmd) |
+
 
 ### Interactive Apps
 
