@@ -43,6 +43,8 @@ website:
             href: exercises/sheets/exercises-1.qmd
           - text: "Live Exercise 1: Hotelling (Quadratic Transport Costs)"
             href: exercises/live/live-exercise-1.qmd
+          - text: "Exercise 2: Innovaton incentives & Patents"
+            href: exercises/sheets/exercises-2.qmd
 
   sidebar:
     - id: lectures

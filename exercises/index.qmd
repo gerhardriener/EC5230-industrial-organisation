@@ -20,6 +20,7 @@ Use the navbar `Exercises` menu for direct links to each sheet.
 | Set | Source | Student (HTML) | Instructor (HTML) | Student (PDF) | Instructor (PDF) |
 |---|---|---|---|---|---|
 | Exercise 1: Oligopoly and Product Differentiation | [qmd](sheets/exercises-1.qmd) | [download](sheets/exercises-1.html) | [download](sheets/exercises-1-solutions.html) | [download](sheets/exercises-1.pdf) | [download](sheets/exercises-1-solutions.pdf) |
+| Exercise 2: Innovation incentives | [qmd](sheets/exercises-2.qmd) | [download](sheets/exercises-2.html) |  | [download](sheets/exercises-2.pdf) |  |
 
 ### Live Exercises
 
