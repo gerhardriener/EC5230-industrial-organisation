@@ -1,5 +1,5 @@
 ---
-title: "Exercise N: Industrial Economics — Innovation Incentives & Patent Race"
+title: "Exercise 2: Innovation Incentives & Patent Race"
 format:
   html:
     toc: false
