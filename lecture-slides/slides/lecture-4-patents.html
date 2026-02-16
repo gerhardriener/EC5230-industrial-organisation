@@ -6,8 +6,8 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-3f61aac59b63c3a2d0e87c59ee7d0662.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.19">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-3512cbed9e2527d986e9b0b56d261405.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.20">
 
   <meta name="author" content="Gerhard Riener">
   <title>EC5230 Industrial Organisation – Lecture 4 - Patents and Intellectual Property Rights</title>
@@ -164,12 +164,38 @@ Gerhard Riener
 
 </section>
 <section>
-<section id="patents-and-iprs" class="title-slide slide level1 center" data-background-color="#00539b">
-<h1>Patents and IPRs</h1>
+<section id="patents-and-intellectual-property-rights" class="title-slide slide level1 center" data-background-color="#00539b">
+<h1>Patents and Intellectual Property Rights</h1>
 
+</section>
+<section id="where-we-left-off-the-innovation-problem" class="slide level2">
+<h2>Where we left off: the innovation problem</h2>
+<p>Last week we established three facts about <strong>private incentives to innovate</strong>:</p>
+<ol type="1">
+<li><strong>Replacement effect</strong> — an incumbent monopolist under-invests because innovation partly cannibalises its own rents (<span class="math inline">\(\Delta\pi^m &lt; \Delta\pi^{pc}\)</span>)</li>
+<li><strong>Appropriability gap</strong> — without protection, imitation dissipates rents and the innovator’s WTP falls to zero</li>
+<li><strong>Private vs social value</strong> — the social planner values a cost reduction at <span class="math inline">\(\Delta W &gt; \Delta\pi\)</span>, so private incentives are generically too weak</li>
+</ol>
+<p>These problems share a common root: innovators cannot capture enough of the surplus they create.</p>
+<p><strong>Today’s question:</strong> can intellectual property rights close this gap — and at what cost?</p>
+<aside class="notes">
+<p>Start by briefly recapping the three facts from Lecture 3 — students should recognise these immediately. Emphasise that the replacement effect, the appropriability gap, and the private-vs-social wedge all point in the same direction: without intervention, private R&amp;D incentives are too weak.</p>
+<p>Pose the question on the slide as a genuine open problem: IPRs are one response, but they come with their own costs. This sets up the central trade-off that runs through the entire lecture.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="iprs-economic-problem" class="slide level2">
 <h2>IPRs: economic problem</h2>
+<div title="Object of analysis">
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -183,14 +209,68 @@ Gerhard Riener
 </div>
 </div>
 </div>
+</div>
 <ul>
 <li><p>Knowledge is (partly) <strong>non-rival</strong> and often <strong>hard to exclude</strong></p></li>
 <li><p>Without protection, imitation can dissipate rents <span class="math inline">\(\Rightarrow\)</span> weak private incentive to incur fixed R&amp;D cost</p></li>
-<li><p><strong>Policy objective</strong></p>
-<ul>
-<li>Provide incentives for invention while limiting static distortions in product markets</li>
-</ul></li>
+<li><p><strong>Policy objective:</strong> provide incentives for invention while limiting static distortions in product markets</p></li>
+<li><p><strong>Discussion:</strong> Why can’t we just rely on first-mover advantage?</p></li>
 </ul>
+<aside class="notes">
+<p>Stress the public-good nature of knowledge: non-rival means my use doesn’t diminish yours; hard to exclude means patents are an artificial mechanism to restore excludability. Ask students: “Why can’t we just rely on first-mover advantage?” — this motivates the need for legal protection when imitation is cheap (as in pharma, where reverse-engineering a molecule is far cheaper than discovering it).</p>
+<p>The policy objective on the slide is the thread that connects every model in this lecture.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="learning-objectives" class="slide level2">
+<h2>Learning objectives</h2>
+<ul>
+<li>Explain why non-rival ideas can lead to underinvestment without protection</li>
+<li>Use the ideas model to compare the private investment condition <span class="math inline">\(\pi \nu T \ge F\)</span> to the planner objective</li>
+<li>Understand how <strong>length</strong> and <strong>breadth</strong> jointly shape the incentive-distortion trade-off</li>
+<li>Explain why patent races can generate socially excessive duplication</li>
+</ul>
+<div title="Today: roadmap">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Today: roadmap</strong></p>
+</div>
+<div class="callout-content">
+<ol type="1">
+<li>Patents as incentives: the central trade-off</li>
+<li>Patent length in the ideas model (screening and welfare)</li>
+<li>Breadth, endogenous R&amp;D, and patent races</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>Read through the learning objectives quickly — these are the exam-relevant skills. The roadmap gives students a mental scaffold: we move from the conceptual trade-off, to a formal model (Scotchmer), to design instruments (breadth vs length), and finally to strategic interaction (patent races). Flag that the investment condition <span class="math inline">\(\pi \nu T \ge F\)</span> will reappear multiple times.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="iprs-instruments" class="slide level2">
 <h2>IPRs: instruments</h2>
@@ -210,6 +290,19 @@ Gerhard Riener
 <li><strong>Transferability</strong> (sale, licensing)</li>
 </ul></li>
 </ul>
+<aside class="notes">
+<p>Give quick real-world anchors: patents last 20 years from filing (but effective life is shorter after regulatory approval in pharma); trademarks can last indefinitely if renewed; copyright is life + 70 years in most jurisdictions; design rights vary. The key point is that patents are the main IPR instrument we study because their finite duration creates the central trade-off between incentives and deadweight loss.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="iprs-central-trade-off" class="slide level2">
 <h2>IPRs: central trade-off</h2>
@@ -226,14 +319,50 @@ Gerhard Riener
 <li>How does competition in R&amp;D (patent races) affect efficiency?</li>
 </ul></li>
 </ul>
+<aside class="notes">
+<p>This slide states the fundamental tension that students must internalise: patents create deadweight loss (static cost) but generate incentives for innovation (dynamic benefit). Emphasise that “stronger” protection is not unambiguously good — it depends on where we are on the trade-off.</p>
+<p>Pose the two questions as the organising questions for the rest of the lecture. We will answer the length question with Scotchmer and Shy, and the race question in the final section.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="application-pharmaceuticals" class="slide level2">
+<h2>Application: Pharmaceuticals</h2>
+<ul>
+<li>Fixed development cost <span class="math inline">\(F\)</span> is large (clinical trials), while marginal cost is low</li>
+<li>Patent protection creates temporary market power, but expiry enables generic entry</li>
+<li>Breadth maps to how close a substitute can be without infringing; races map to multiple labs pursuing the same target</li>
+</ul>
+<aside class="notes">
+<p>Pharmaceuticals are the canonical example because (i) fixed costs are enormous (clinical trials can exceed $1bn), (ii) marginal costs are low (pill production), and (iii) patent expiry triggers immediate generic entry with large price drops. This makes every parameter in the models we study directly interpretable.</p>
+<p>We will return to this application throughout: <span class="math inline">\(F\)</span> = clinical trial cost, <span class="math inline">\(\nu\)</span> = health benefit flow, breadth = how different a molecule must be, races = multiple labs targeting the same disease.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section></section>
 <section>
-<section id="scotchmer-ideas-model" class="title-slide slide level1 center" data-background-color="#00539b">
-<h1>Scotchmer: ideas model</h1>
+<section id="scotchmerinnovationincentives2006-ideas-model" class="title-slide slide level1 center" data-background-color="#00539b">
+<h1><span class="citation" data-cites="scotchmerInnovationIncentives2006">Scotchmer (<a href="#/references" role="doc-biblioref" onclick="">2006</a>)</span>: Ideas model</h1>
 
 </section>
-<section id="ideas-model-scotchmer-primitives" class="slide level2">
-<h2>Ideas model (Scotchmer): primitives</h2>
+<section id="ideas-model-primitives" class="slide level2">
+<h2>Ideas model: primitives</h2>
 <p>Following <span class="citation" data-cites="scotchmerInnovationIncentives2006">Scotchmer (<a href="#/references" role="doc-biblioref" onclick="">2006</a>)</span></p>
 <ul>
 <li><p>An “idea” is a pair <span class="math inline">\((\nu, F)\)</span></p></li>
@@ -245,6 +374,35 @@ Gerhard Riener
 <li><span class="math inline">\(F\)</span> is the up-front resource cost required for development</li>
 </ul></li>
 </ul>
+<div title="Application: a new drug">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Application: a new drug</strong></p>
+</div>
+<div class="callout-content">
+<p>Map <span class="math inline">\((\nu,F)\)</span> to an innovation with large fixed R&amp;D cost <span class="math inline">\(F\)</span> and a flow of benefits <span class="math inline">\(\nu\)</span> that is partially appropriable during patent protection.</p>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>Scotchmer’s ideas model is deliberately simple — the pair <span class="math inline">\((\nu, F)\)</span> is sufficient to characterise an idea’s social value and development cost. Stress that <span class="math inline">\(\nu\)</span> is consumer surplus under competitive supply (i.e., post-patent), not profit. The firm cannot capture <span class="math inline">\(\nu\)</span> directly; it captures <span class="math inline">\(\pi\nu\)</span> per period during patent life.</p>
+<p>For the pharma application: <span class="math inline">\(F\)</span> is the total clinical development cost, <span class="math inline">\(\nu\)</span> is the per-period health benefit to patients measured as consumer surplus if the drug were priced at marginal cost.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="ideas-model-scotchmer-social-value-under-discounting" class="slide level2">
 <h2>Ideas model (Scotchmer): social value under discounting</h2>
@@ -263,6 +421,20 @@ Gerhard Riener
 <li>Longer-lived benefits (lower <span class="math inline">\(r\)</span>) raise the social value of an idea</li>
 </ul></li>
 </ul>
+<aside class="notes">
+<p>Walk through the geometric series derivation step by step: <span class="math inline">\(\sum_{t=1}^{\infty} \rho^t \nu = \nu \cdot \rho/(1-\rho) = \nu/r\)</span> where <span class="math inline">\(\rho = 1/(1+r)\)</span>. This is the infinite-horizon present value of a perpetual flow <span class="math inline">\(\nu\)</span>.</p>
+<p>Key intuition: even though each period contributes <span class="math inline">\(\nu\)</span>, the present value is finite because of discounting. Lower <span class="math inline">\(r\)</span> (more patient society) implies higher social value — which strengthens the case for investing in ideas.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="ideas-model-scotchmer-private-returns-and-deadweight-loss" class="slide level2">
 <h2>Ideas model (Scotchmer): private returns and deadweight loss</h2>
@@ -274,13 +446,28 @@ Gerhard Riener
 \pi \nu T
 \]</span></p>
 <ul>
-<li><p>Per-period deadweight loss: <span class="math inline">\(\ell \nu\)</span> <span class="math inline">\(\Rightarrow\)</span> patent DWL: <span class="math inline">\(\ell \nu T\)</span></p></li>
+<li><p>Per-period deadweight loss: <span class="math inline">\(\lambda \nu\)</span> <span class="math inline">\(\Rightarrow\)</span> patent DWL: <span class="math inline">\(\lambda \nu T\)</span></p></li>
 <li><p><strong>Interpretation</strong></p>
 <ul>
 <li><span class="math inline">\(\pi\)</span> is a reduced-form “appropriability” parameter</li>
-<li><span class="math inline">\(\ell\)</span> captures the static distortion created by protection</li>
+<li><span class="math inline">\(\lambda\)</span> captures the static distortion created by protection</li>
 </ul></li>
 </ul>
+
+<img data-src="../figs/fig-patents-monopoly-dwl.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:65.0%" alt="Monopoly diagram showing profit rectangle (pi nu) and deadweight loss triangle (lambda nu)"><aside class="notes">
+<p>The two parameters <span class="math inline">\(\pi\)</span> and <span class="math inline">\(\lambda\)</span> are crucial reduced-form objects. The diagram shows the standard monopoly decomposition: <span class="math inline">\(\pi\nu\)</span> is the profit rectangle, <span class="math inline">\(\lambda\nu\)</span> is the Harberger triangle. Note that <span class="math inline">\(\pi + \lambda &lt; 1\)</span> because consumer surplus under monopoly (<span class="math inline">\(CS^m\)</span>) is positive.</p>
+<p>Ask: “What happens as demand becomes more elastic?” — <span class="math inline">\(\pi\)</span> falls and <span class="math inline">\(\lambda\)</span> rises, making patents more costly relative to the incentive they provide. This motivates the later discussion of breadth.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="discounted-patent-length-t" class="slide level2">
 <h2>Discounted patent length: <span class="math inline">\(T\)</span></h2>
@@ -303,6 +490,20 @@ T \approx \sum_{t=1}^{\tau}\frac{1}{(1+r)^t}
 <li><span class="math inline">\(T\)</span> is increasing in <span class="math inline">\(\tau\)</span> but bounded as <span class="math inline">\(\tau\to\infty\)</span> when <span class="math inline">\(r&gt;0\)</span></li>
 </ul></li>
 </ul>
+<aside class="notes">
+<p>This slide introduces the discounted length <span class="math inline">\(T\)</span> which converts calendar duration <span class="math inline">\(\tau\)</span> into present-value terms. Derive: <span class="math inline">\(T = \int_0^\tau e^{-rt}\,dt = [-e^{-rt}/r]_0^\tau = (1 - e^{-r\tau})/r\)</span>. As <span class="math inline">\(\tau \to \infty\)</span>, <span class="math inline">\(T \to 1/r\)</span>, so even infinite patent life has finite present value.</p>
+<p>This matters because it means the marginal benefit of extending patent duration diminishes — an extra year of protection is worth less the further into the future it falls. This is key for the optimal-length result.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="optimal-patent-length-innovating-firm" class="slide level2">
 <h2>Optimal patent length: innovating firm</h2>
@@ -320,6 +521,20 @@ T \approx \sum_{t=1}^{\tau}\frac{1}{(1+r)^t}
 <li>Higher <span class="math inline">\(F\)</span> requires longer (or stronger) protection to break even</li>
 </ul></li>
 </ul>
+<aside class="notes">
+<p>The break-even condition <span class="math inline">\(\pi\nu T \ge F\)</span> is the private investment threshold. Rearranging: <span class="math inline">\(T \ge F/(\pi\nu)\)</span>. This gives the minimum discounted patent length needed to induce investment.</p>
+<p>Emphasise that this is a necessary condition only — it tells us when the firm is willing to invest, not whether investment is socially desirable. The planner’s problem on the next slide adds the welfare side.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="optimal-patent-length-social-planner" class="slide level2">
 <h2>Optimal patent length: social planner</h2>
@@ -327,7 +542,7 @@ T \approx \sum_{t=1}^{\tau}\frac{1}{(1+r)^t}
 <li>Discounted net social value (invention made):</li>
 </ul>
 <p><span class="math display">\[
-\frac{\nu}{r} - \ell \nu T
+\frac{\nu}{r} - \lambda \nu T - F
 \]</span></p>
 <ul>
 <li><strong>Interpretation</strong>
@@ -336,6 +551,20 @@ T \approx \sum_{t=1}^{\tau}\frac{1}{(1+r)^t}
 <li>Optimal design trades off inducing investment against static costs</li>
 </ul></li>
 </ul>
+<aside class="notes">
+<p>The planner’s net social value if the idea is developed is <span class="math inline">\(\nu/r - \lambda\nu T - F\)</span>. The first term is the perpetual benefit, the second is the DWL during patent life, and the third is the development cost. The planner wants to set <span class="math inline">\(T\)</span> just large enough to satisfy the firm’s break-even condition, and no larger — every extra unit of <span class="math inline">\(T\)</span> costs <span class="math inline">\(\lambda\nu\)</span> in deadweight loss without additional benefit once investment is already induced.</p>
+<p>This is why the planner’s optimal <span class="math inline">\(T\)</span> exactly solves <span class="math inline">\(\pi\nu T = F\)</span> for marginal ideas, i.e., <span class="math inline">\(T^* = F/(\pi\nu)\)</span>.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="optimal-length-heterogeneity-and-screening-intuition" class="slide level2">
 <h2>Optimal length: heterogeneity and screening (intuition)</h2>
@@ -343,10 +572,24 @@ T \approx \sum_{t=1}^{\tau}\frac{1}{(1+r)^t}
 <li><p>If inventions differ in <span class="math inline">\((\nu,F)\)</span>, “one-size-fits-all” length is not generally optimal</p></li>
 <li><p>Comparative statics (holding other parameters fixed):</p>
 <ul>
-<li>more elastic demand / stronger substitution <span class="math inline">\(\Rightarrow\)</span> higher DWL <span class="math inline">\(\ell\)</span> <span class="math inline">\(\Rightarrow\)</span> shorter protection</li>
+<li>more elastic demand / stronger substitution <span class="math inline">\(\Rightarrow\)</span> higher DWL <span class="math inline">\(\lambda\)</span> <span class="math inline">\(\Rightarrow\)</span> shorter protection</li>
 <li>higher development cost <span class="math inline">\(F\)</span> <span class="math inline">\(\Rightarrow\)</span> longer protection to ensure investment</li>
 </ul></li>
 </ul>
+<aside class="notes">
+<p>With heterogeneous ideas, uniform patent length cannot be first-best: some ideas need long protection (high <span class="math inline">\(F/\nu\)</span>) while others need little. A single <span class="math inline">\(T\)</span> either under-protects high-cost ideas or over-protects low-cost ones.</p>
+<p>This is the screening problem: the planner cannot observe <span class="math inline">\((\nu, F)\)</span> directly and must use a single instrument. In practice, patent offices partially address this through examination standards and varying breadth across technology classes, but the fundamental tension remains.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="example-ideas-a-and-b" class="slide level2">
 <h2>Example: ideas A and B</h2>
@@ -354,18 +597,34 @@ T \approx \sum_{t=1}^{\tau}\frac{1}{(1+r)^t}
 <li>Idea A: <span class="math inline">\((\nu_A=5, F_A=10)\)</span></li>
 <li>Idea B: <span class="math inline">\((\nu_B=2, F_B=20)\)</span></li>
 </ul>
-<p>Let <span class="math inline">\(T=20\)</span>, <span class="math inline">\(\pi=\tfrac{1}{2}\)</span>, <span class="math inline">\(\ell=\tfrac{1}{4}\)</span>, <span class="math inline">\(r=\tfrac{1}{3}\)</span>.</p>
+<p>Let <span class="math inline">\(T=20\)</span>, <span class="math inline">\(\pi=\tfrac{1}{2}\)</span>, <span class="math inline">\(\lambda=\tfrac{1}{4}\)</span>, <span class="math inline">\(r=\tfrac{1}{3}\)</span>.</p>
 <ul>
 <li>Tasks:
 <ul>
 <li>Which ideas are privately profitable (<span class="math inline">\(\pi \nu T \ge F\)</span>)?</li>
-<li>Which ideas have positive discounted net social value <span class="math inline">\(\left(\frac{\nu}{r}-\ell \nu T - F \ge 0\right)\)</span>?</li>
+<li>Which ideas have positive discounted net social value <span class="math inline">\((\nu/r - \lambda \nu T - F \ge 0)\)</span>?</li>
 </ul></li>
 <li><strong>Interpretation</strong>
 <ul>
 <li>With these parameter values, private profitability need not coincide with positive net social value: patent protection can induce investment even when net welfare is negative</li>
 </ul></li>
 </ul>
+<aside class="notes">
+<p>Work through the numbers on the board:</p>
+<p><strong>Idea A</strong> (<span class="math inline">\(\nu_A=5\)</span>, <span class="math inline">\(F_A=10\)</span>): Private profit <span class="math inline">\(= \pi\nu T = 0.5 \times 5 \times 20 = 50 \ge 10\)</span> — privately profitable. Net social value <span class="math inline">\(= \nu/r - \lambda\nu T - F = 5/0.333 - 0.25 \times 5 \times 20 - 10 = 15 - 25 - 10 = -20\)</span> — socially negative.</p>
+<p><strong>Idea B</strong> (<span class="math inline">\(\nu_B=2\)</span>, <span class="math inline">\(F_B=20\)</span>): Private profit <span class="math inline">\(= 0.5 \times 2 \times 20 = 20 \ge 20\)</span> — just profitable. Net social value <span class="math inline">\(= 2/0.333 - 0.25 \times 2 \times 20 - 20 = 6 - 10 - 20 = -24\)</span> — also socially negative.</p>
+<p>The punchline: both ideas are privately profitable but socially wasteful at these parameter values. This illustrates how patent protection can induce “too much” innovation from a welfare perspective when DWL is high.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section></section>
 <section>
 <section id="breadth-product-space" class="title-slide slide level1 center" data-background-color="#00539b">
@@ -386,6 +645,35 @@ T \approx \sum_{t=1}^{\tau}\frac{1}{(1+r)^t}
 <li>Allowing close substitutes increases the elasticity of demand faced by the patent holder</li>
 </ul></li>
 </ul>
+<div title="Application: close substitutes">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Application: close substitutes</strong></p>
+</div>
+<div class="callout-content">
+<p>In pharmaceuticals, breadth maps to whether a close substitute can launch during protection without infringing.</p>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>Breadth is harder to formalise than length because it operates in product space rather than time. The key reduced-form idea: broader patents exclude more potential substitutes, which makes the patent holder’s residual demand less elastic and allows higher prices.</p>
+<p>In pharma: if a patent on molecule X is broad, then molecules X’, X’’ that are chemically similar cannot be sold. If narrow, “me-too” drugs can enter. The Hatch-Waxman Act in the US and supplementary protection certificates in the EU are real-world breadth instruments.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="breadth-and-demand-elasticity-intuition" class="slide level2">
 <h2>Breadth and demand elasticity (intuition)</h2>
@@ -400,33 +688,40 @@ T \approx \sum_{t=1}^{\tau}\frac{1}{(1+r)^t}
 <li>residual demand is <strong>less elastic</strong></li>
 <li>equilibrium price is higher (all else equal)</li>
 </ul></li>
+<li><strong>Discussion:</strong> If you were a patent holder, would you prefer broad–short or narrow–long protection?</li>
 </ul>
+<aside class="notes">
+<p>This is pure intuition — no formal model yet. The mechanism: more substitutes → more elastic residual demand → lower equilibrium price → lower per-period profit <span class="math inline">\(\pi\)</span>. Conversely, excluding substitutes raises <span class="math inline">\(\pi\)</span> but also raises <span class="math inline">\(\lambda\)</span> (DWL) because the monopoly distortion is larger when demand is less elastic.</p>
+<p>Ask students: “If you were a patent holder, would you prefer broad-short or narrow-long protection?” This previews the next slide’s trade-off.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="breadthlength-trade-off-given-a-target-value" class="slide level2">
 <h2>Breadth–length trade-off (given a target value)</h2>
 <p>Assume the “correct” expected private value of protection is fixed.</p>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Regimes (product space)</strong></p>
-</div>
-<div class="callout-content">
+<ul>
+<li><strong>Regimes</strong> (product space):
 <ul>
 <li>Broad–short: <span class="math inline">\((\hat{T}, \hat{\pi}_1+\hat{\pi}_2)\)</span></li>
 <li>Narrow–long: <span class="math inline">\((\tilde{T}, \tilde{\pi}_1)\)</span></li>
-</ul>
-</div>
-</div>
-</div>
-<ul>
+</ul></li>
 <li>Broad patent yields higher per-period profit (includes infringing market):</li>
 </ul>
 <p><span class="math display">\[
 \hat{T}(\hat{\pi}_1+\hat{\pi}_2)=\tilde{T}\tilde{\pi}_1
 \]</span></p>
+</section>
+<section id="breadthlength-trade-off-continued" class="slide level2">
+<h2>Breadth–length trade-off (continued)</h2>
 <ul>
 <li>Therefore:</li>
 </ul>
@@ -439,6 +734,20 @@ T \approx \sum_{t=1}^{\tau}\frac{1}{(1+r)^t}
 <li>Broad protection can be paired with shorter duration to deliver the same incentive level</li>
 </ul></li>
 </ul>
+<aside class="notes">
+<p>The key equation <span class="math inline">\(\hat{T}(\hat{\pi}_1 + \hat{\pi}_2) = \tilde{T}\tilde{\pi}_1\)</span> says that if we hold the firm’s expected discounted profit constant, a broader patent (which yields higher per-period profit by including the infringing market) can achieve the same incentive with a shorter duration.</p>
+<p>The notation: <span class="math inline">\(\hat{\pi}_1\)</span> is profit from the patented good, <span class="math inline">\(\hat{\pi}_2\)</span> is profit from the infringing substitute (both captured under broad protection), and <span class="math inline">\(\tilde{\pi}_1\)</span> is profit from the patented good alone under narrow protection. Since <span class="math inline">\(\hat{\pi}_1 + \hat{\pi}_2 &gt; \tilde{\pi}_1\)</span>, we need <span class="math inline">\(\hat{T} &lt; \tilde{T}\)</span>.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="which-regime-is-better" class="slide level2">
 <h2>Which regime is better?</h2>
@@ -454,6 +763,20 @@ T \approx \sum_{t=1}^{\tau}\frac{1}{(1+r)^t}
 <li>Narrow–long: more sensitive to within-category substitution</li>
 </ul></li>
 </ul>
+<aside class="notes">
+<p>This is the punchline of the breadth section: there is no universal answer. If the patented good and its substitute are close substitutes for each other but poor substitutes for other goods (e.g., two statins), broad-short may generate less DWL. If they are good substitutes for outside goods, narrow-long may be preferable.</p>
+<p>The practical implication: optimal patent design is industry-specific. Pharma (where substitutes are close) may warrant different breadth-length combinations than software (where substitutes are more distant).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section></section>
 <section>
 <section id="optimal-patent-length-with-endogenous-rd-shy" class="title-slide slide level1 center" data-background-color="#00539b">
@@ -477,13 +800,29 @@ T \approx \sum_{t=1}^{\tau}\frac{1}{(1+r)^t}
 <li>Parameters: <span class="math inline">\(a,c,r\)</span></li>
 </ul></li>
 </ul>
+<aside class="notes">
+<p>The Shy model endogenises R&amp;D effort <span class="math inline">\(x\)</span>, unlike Scotchmer where the idea <span class="math inline">\((\nu, F)\)</span> is exogenous. Here the firm chooses how much cost reduction to pursue, and the regulator sets patent duration <span class="math inline">\(\tau\)</span> anticipating this choice. This is a Stackelberg game with the regulator as leader.</p>
+<p>Linear demand <span class="math inline">\(P = a - Q\)</span> keeps the algebra tractable. The key modelling choice: process innovation reduces marginal cost, so the gain from R&amp;D is a cost advantage. This connects back to the drastic/non-drastic innovation distinction from Lecture 3.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="shy-model-firms-choice-of-x-given-tau" class="slide level2">
 <h2>Shy model: firm’s choice of <span class="math inline">\(x\)</span> given <span class="math inline">\(\tau\)</span></h2>
 <p>Firm solves:</p>
 <p><span class="math display">\[
-\max_x \ \Pi(x;\tau)=\sum_{t=1}^{\tau}\rho^{t-1}\pi(x)-R(x),
-\quad \rho=\frac{1}{1+r}
+\begin{aligned}
+\max_x \ \Pi(x;\tau) &amp;= \sum_{t=1}^{\tau}\rho^{t-1}\pi(x)-R(x), \\
+\rho &amp;= \frac{1}{1+r}
+\end{aligned}
 \]</span></p>
 <p>Assume:</p>
 <ul>
@@ -494,6 +833,20 @@ T \approx \sum_{t=1}^{\tau}\frac{1}{(1+r)^t}
 <p><span class="math display">\[
 \sum_{t=1}^{\tau}\rho^{t-1}=\frac{1-\rho^\tau}{1-\rho}
 \]</span></p>
+<aside class="notes">
+<p>Walk through the firm’s problem: <span class="math inline">\(\max_x \sum_{t=1}^{\tau} \rho^{t-1}(a-c)x - x^2/2\)</span>. The per-period profit <span class="math inline">\((a-c)x\)</span> is linear in <span class="math inline">\(x\)</span> (simplified from the full monopoly profit for tractability). The R&amp;D cost <span class="math inline">\(x^2/2\)</span> is convex, ensuring an interior solution.</p>
+<p>The geometric sum <span class="math inline">\(\sum \rho^{t-1} = (1-\rho^\tau)/(1-\rho)\)</span> converts the finite-horizon discounted sum into a single multiplier. This is the discrete-time analogue of the <span class="math inline">\(T\)</span> we defined earlier. FOC: <span class="math inline">\((1-\rho^\tau)/(1-\rho) \cdot (a-c) = x\)</span>, giving the next slide’s result.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="shy-model-induced-innovation-level" class="slide level2">
 <h2>Shy model: induced innovation level</h2>
@@ -513,6 +866,21 @@ x^I(\tau)=\frac{1-\rho^\tau}{1-\rho}(a-c)
 <li>Longer protection raises the marginal benefit of R&amp;D because profits are earned for more discounted periods</li>
 </ul></li>
 </ul>
+<aside class="notes">
+<p>The induced innovation level <span class="math inline">\(x^I(\tau) = [(1-\rho^\tau)/(1-\rho)](a-c)\)</span> is the firm’s best response to any given patent duration.</p>
+<p>Comparative statics to emphasise: (i) <span class="math inline">\(\partial x^I/\partial \tau &gt; 0\)</span> because <span class="math inline">\(\rho^\tau\)</span> is decreasing in <span class="math inline">\(\tau\)</span>; (ii) <span class="math inline">\(\partial x^I/\partial a &gt; 0\)</span> because larger markets raise the return to cost reduction; (iii) <span class="math inline">\(\partial x^I/\partial r &lt; 0\)</span> (equivalently <span class="math inline">\(\partial x^I/\partial \rho &gt; 0\)</span>) because more patient firms value future profits more.</p>
+<p>Note that <span class="math inline">\(x^I\)</span> is bounded above: as <span class="math inline">\(\tau \to \infty\)</span>, <span class="math inline">\(x^I \to (a-c)/(1-\rho)\)</span>. Infinite patent life still yields finite R&amp;D effort.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="shy-model-planners-choice-of-patent-duration-statement" class="slide level2">
 <h2>Shy model: planner’s choice of patent duration (statement)</h2>
@@ -524,6 +892,20 @@ x^I(\tau)=\frac{1-\rho^\tau}{1-\rho}(a-c)
 <li>Marginal benefit of longer protection (higher induced <span class="math inline">\(x^I(\tau)\)</span>) eventually falls below the marginal cost (additional monopoly distortion during protection)</li>
 </ul></li>
 </ul>
+<aside class="notes">
+<p>The planner’s problem: choose <span class="math inline">\(\tau\)</span> to maximise total welfare, which includes consumer surplus, firm profit, and the cost of monopoly distortion during the patent period. The result <span class="math inline">\(T^* &lt; \infty\)</span> follows because the marginal benefit of extending <span class="math inline">\(\tau\)</span> (more R&amp;D, hence lower cost) is diminishing (since <span class="math inline">\(x^I\)</span> is concave in <span class="math inline">\(\tau\)</span>), while the marginal cost (one more period of monopoly DWL) is approximately constant.</p>
+<p>Connect to Scotchmer: the Shy model endogenises what Scotchmer took as given — the level of innovation — but reaches the same qualitative conclusion: finite, interior patent duration is optimal.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section></section>
 <section>
 <section id="patent-races" class="title-slide slide level1 center" data-background-color="#00539b">
@@ -531,7 +913,7 @@ x^I(\tau)=\frac{1-\rho^\tau}{1-\rho}(a-c)
 
 </section>
 <section id="symmetric-patent-race-setup" class="slide level2">
-<h2>Symmetric patent race: setup</h2>
+<h2>Symmetric patent race: Setup</h2>
 <ul>
 <li>Two symmetric firms may incur a fixed cost <span class="math inline">\(f\)</span> to establish a research division</li>
 <li>Success probability: <span class="math inline">\(p\)</span> (per firm)</li>
@@ -540,6 +922,26 @@ x^I(\tau)=\frac{1-\rho^\tau}{1-\rho}(a-c)
 <li>monopoly profit if sole innovator: <span class="math inline">\(\pi^m\)</span></li>
 <li>duopoly profit if both succeed: <span class="math inline">\(\pi^d\)</span></li>
 </ul></li>
+</ul>
+<div title="Application: parallel R&amp;D programs">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Application: parallel R&amp;D programs</strong></p>
+</div>
+<div class="callout-content">
+<p>Think of multiple labs racing to develop the same drug/vaccine: each pays a fixed setup cost and succeeds with some probability.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="symmetric-patent-race-welfare-benchmarks" class="slide level2">
+<h2>Symmetric patent race: Welfare benchmarks</h2>
+<ul>
 <li>Welfare benchmarks (post-innovation welfare):
 <ul>
 <li>one research division: <span class="math inline">\(W^m=\pi^m+CS^m\)</span></li>
@@ -550,9 +952,25 @@ x^I(\tau)=\frac{1-\rho^\tau}{1-\rho}(a-c)
 <li><span class="math inline">\(CS^d&gt;CS^m\)</span> (more competition in the product market raises consumer surplus)</li>
 </ul></li>
 </ul>
+<aside class="notes">
+<p>We now shift from single-firm models to strategic interaction. The patent race setup is a simultaneous-move game: each firm decides whether to invest <span class="math inline">\(f\)</span> (enter the race) or not. The key feature is “winner takes all” — if only one firm succeeds, it gets <span class="math inline">\(\pi^m\)</span>; if both succeed, they split the market (<span class="math inline">\(\pi^d\)</span> each).</p>
+<p>The welfare benchmarks <span class="math inline">\(W^m\)</span> and <span class="math inline">\(W^d\)</span> include consumer surplus, which is higher under duopoly (<span class="math inline">\(CS^d &gt; CS^m\)</span>). This creates a wedge between private and social incentives: firms care about profit, the planner cares about total welfare.</p>
+<p>Pharma application: multiple labs racing to develop a COVID vaccine, each investing billions with uncertain success.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="patent-race-nash-equilibrium-condition" class="slide level2">
-<h2>Patent race: Nash equilibrium condition</h2>
+<section id="patent-race-game-structure" class="slide level2">
+<h2>Patent race: game structure</h2>
+<div title="Duplication incentive">
 <div class="callout callout-warning callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -566,8 +984,39 @@ x^I(\tau)=\frac{1-\rho^\tau}{1-\rho}(a-c)
 </div>
 </div>
 </div>
+</div>
 <ul>
-<li>Firms choose <span class="math inline">\(I\)</span> or <span class="math inline">\(NI\)</span> simultaneously</li>
+<li>Two firms simultaneously choose <strong>Invest</strong> (<span class="math inline">\(I\)</span>) or <strong>Not Invest</strong> (<span class="math inline">\(NI\)</span>)</li>
+<li>Each firm succeeds independently with probability <span class="math inline">\(p\)</span></li>
+<li>Payoffs depend on market structure:
+<ul>
+<li>Unique success <span class="math inline">\(\Rightarrow\)</span> monopoly profit <span class="math inline">\(\pi^m\)</span></li>
+<li>Both succeed <span class="math inline">\(\Rightarrow\)</span> duopoly profit <span class="math inline">\(\pi^d &lt; \pi^m\)</span></li>
+</ul></li>
+</ul>
+<aside class="notes">
+<p>Set up the game carefully before jumping to the equilibrium condition. Emphasise that success is probabilistic and independent — this is what creates the duplication problem. If success were certain (<span class="math inline">\(p=1\)</span>), the game reduces to a standard entry game. The interesting case is <span class="math inline">\(p &lt; 1\)</span>, where the second firm provides “insurance” against the first firm’s failure but also wastes <span class="math inline">\(f\)</span> if both succeed.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="patent-race-nash-equilibrium-condition" class="slide level2">
+<h2>Patent race: Nash equilibrium condition</h2>
+<ul>
+<li>If rival invests, my expected payoff from <span class="math inline">\(I\)</span>:</li>
+</ul>
+<p><span class="math display">\[
+p(1-p)\pi^m + p^2\pi^d - f
+\]</span></p>
+<ul>
 <li><span class="math inline">\((I,I)\)</span> is a Nash equilibrium if:</li>
 </ul>
 <p><span class="math display">\[
@@ -576,9 +1025,24 @@ f \le p(1-p)\pi^m + p^2\pi^d \equiv f^{priv}_2
 <ul>
 <li><strong>Interpretation</strong>
 <ul>
-<li>Private incentives include the probability of being the unique winner and the case where both succeed</li>
+<li>First term: I succeed, rival fails <span class="math inline">\(\Rightarrow\)</span> monopoly</li>
+<li>Second term: both succeed <span class="math inline">\(\Rightarrow\)</span> duopoly</li>
 </ul></li>
 </ul>
+<aside class="notes">
+<p>Derive the condition: if the other firm invests, my expected payoff from investing is <span class="math inline">\(p(1-p)\pi^m + p^2\pi^d - f\)</span>. The first term is the probability I succeed and the rival fails (I get monopoly profit); the second term is both succeed (duopoly profit). I invest if this exceeds zero, i.e., <span class="math inline">\(f \le p(1-p)\pi^m + p^2\pi^d\)</span>.</p>
+<p>If the other firm does not invest, my expected payoff from investing is <span class="math inline">\(p\pi^m - f\)</span>, so I invest if <span class="math inline">\(f \le p\pi^m\)</span>. For <span class="math inline">\((I,I)\)</span> to be a NE, the first condition must hold (neither wants to deviate from both investing).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="patent-race-social-optimum-condition" class="slide level2">
 <h2>Patent race: social optimum condition</h2>
@@ -594,6 +1058,20 @@ f \ge p(1-2p)W^m + p^2W^d \equiv f^{publ}_2
 <li>The planner compares expected welfare under one vs two research divisions, counting duplication cost <span class="math inline">\(f\)</span></li>
 </ul></li>
 </ul>
+<aside class="notes">
+<p>The planner’s condition: two divisions are socially optimal over one if the expected welfare gain from the second lab exceeds its cost. Expected welfare with two labs: <span class="math inline">\(p^2 W^d + 2p(1-p)W^m + (1-p)^2 \cdot 0\)</span>. With one lab: <span class="math inline">\(pW^m\)</span>. The net gain from the second lab must exceed <span class="math inline">\(f\)</span>.</p>
+<p>After simplification, two divisions are socially preferred if <span class="math inline">\(f \le p(1-2p)W^m + p^2 W^d \equiv f_2^{publ}\)</span>. Note: when <span class="math inline">\(p &gt; 1/2\)</span>, the term <span class="math inline">\(p(1-2p)W^m\)</span> is negative, reflecting that with high success probability, the second lab mostly duplicates what the first would have achieved.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="socially-excessive-rd-region" class="slide level2">
 <h2>Socially excessive R&amp;D (region)</h2>
@@ -609,27 +1087,96 @@ f^{publ}_2 &lt; f &lt; f^{priv}_2
 <li>Firms overinvest when the negative externality on rivals’ profits outweighs the consumer-surplus gain from having two innovators</li>
 </ul></li>
 </ul>
+<aside class="notes">
+<p>The excessive duplication region <span class="math inline">\(f_2^{publ} &lt; f &lt; f_2^{priv}\)</span> exists whenever <span class="math inline">\(f_2^{priv} &gt; f_2^{publ}\)</span>. This happens because private firms count only their own profit (business stealing from the rival), while the planner counts total welfare (including consumer surplus that partially offsets the duplication cost).</p>
+<p>The intuition: each firm ignores two externalities — (i) the negative externality on the rival’s profit (business stealing), and (ii) the positive externality on consumers (more competition). When (i) dominates (ii), private entry is excessive. This is the classic common-pool problem applied to R&amp;D.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="numerical-check-duplication-region" class="slide level2">
+<h2>Numerical check: duplication region</h2>
+<p>Let <span class="math inline">\(p=0.8\)</span>, <span class="math inline">\(\pi^m=10\)</span>, <span class="math inline">\(\pi^d=3\)</span>, <span class="math inline">\(W^m=15\)</span>, <span class="math inline">\(W^d=16\)</span>.</p>
+<ul>
+<li>Private two-division threshold:</li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned}
+f^{priv}_2 &amp;= p(1-p)\pi^m + p^2\pi^d \\
+            &amp;= 0.8(0.2)(10) + 0.64(3) = 3.52
+\end{aligned}
+\]</span></p>
+<ul>
+<li>Social two-division threshold:</li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned}
+f^{publ}_2 &amp;= p(1-2p)W^m + p^2W^d \\
+            &amp;= 0.8(-0.6)(15) + 0.64(16) = 3.04
+\end{aligned}
+\]</span></p>
+<ul>
+<li><p>If <span class="math inline">\(f=3.2\)</span>, then <span class="math inline">\(f^{publ}_2 &lt; f &lt; f^{priv}_2\)</span>: two research divisions are privately viable but socially excessive.</p></li>
+<li><p><strong>Discussion:</strong> What happens to this region as <span class="math inline">\(p\)</span> increases?</p></li>
+</ul>
+<aside class="notes">
+<p>Walk through the arithmetic step by step:</p>
+<p><span class="math inline">\(f_2^{priv} = 0.8 \times 0.2 \times 10 + 0.64 \times 3 = 1.6 + 1.92 = 3.52\)</span>.</p>
+<p><span class="math inline">\(f_2^{publ} = 0.8 \times (-0.6) \times 15 + 0.64 \times 16 = -7.2 + 10.24 = 3.04\)</span>.</p>
+<p>So the duplication region is <span class="math inline">\(f \in (3.04, 3.52)\)</span>. At <span class="math inline">\(f = 3.2\)</span>: privately both firms want to invest (3.2 &lt; 3.52), but the planner would prefer only one lab (3.2 &gt; 3.04). The welfare loss is the wasted <span class="math inline">\(f = 3.2\)</span> from the redundant lab, net of the small probability-weighted gain from having a backup.</p>
+<p>Ask: “What happens to this region as <span class="math inline">\(p\)</span> increases?” — it widens, because high <span class="math inline">\(p\)</span> makes duplication more wasteful.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="summary-and-next-week" class="slide level2">
 <h2>Summary and next week</h2>
 <p><strong>Summary</strong></p>
 <ul>
 <li>Patents trade off dynamic incentives against static distortions (deadweight loss during protection)</li>
-<li>In the ideas model, investment requires <span class="math inline">\(\pi \nu T \ge F\)</span>, while welfare accounts for <span class="math inline">\(\frac{\nu}{r}\)</span> and the DWL term <span class="math inline">\(\ell \nu T\)</span></li>
+<li>In the ideas model, investment requires <span class="math inline">\(\pi \nu T \ge F\)</span>, while welfare accounts for <span class="math inline">\(\nu/r\)</span> and the DWL term <span class="math inline">\(\lambda \nu T\)</span></li>
 <li>Breadth and length can be substitutes in delivering a given private incentive level (broad–short vs narrow–long)</li>
 <li>Patent races can generate socially excessive duplication when private entry incentives exceed social benefits</li>
 </ul>
-<p><strong>Next week: multi-stage games</strong></p>
+<p><strong>Next week: Multi stage gamess</strong></p>
 <ul>
 <li>Commitment and first-mover advantage (Stackelberg)</li>
 <li>Subgame perfect equilibrium and backward induction</li>
 <li>Strategic delegation (Vickers)</li>
 </ul>
+<aside class="notes">
+<p>Recap the four main results: (1) patents trade static DWL for dynamic incentives; (2) the ideas model gives a clean break-even condition <span class="math inline">\(\pi\nu T \ge F\)</span> and shows the planner sets <span class="math inline">\(T\)</span> to just satisfy it; (3) breadth and length are substitutes in delivering incentives; (4) patent races can produce excessive duplication.</p>
+<p>Preview next week: we move from innovation policy to strategic commitment. Stackelberg leadership and strategic delegation (Vickers) are about how firms use observable commitments to shift equilibrium outcomes — a different type of strategic interaction from the simultaneous-move games we’ve studied so far.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
-
-
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-scotchmerInnovationIncentives2006" class="csl-entry" role="listitem">
 Scotchmer, Suzanne. 2006. <em>Innovation and Incentives</em>. MIT Press.
@@ -638,6 +1185,8 @@ Scotchmer, Suzanne. 2006. <em>Innovation and Incentives</em>. MIT Press.
 Shy, Oz. 1995. <em>Industrial Organization: Theory and Applications</em>. MIT Press.
 </div>
 </div>
+
+
 </section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">

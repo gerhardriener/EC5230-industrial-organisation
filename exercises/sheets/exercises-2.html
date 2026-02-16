@@ -9,7 +9,7 @@
 <meta name="author" content="Gerhard Riener">
 <meta name="description" content="MSc-level Industrial Organisation course at the University of St Andrews">
 
-<title>Live Exercise 1: Hotelling with quadratic transportation costs – EC5230 Industrial Organisation</title>
+<title>Exercise N: Industrial Economics — Innovation Incentives &amp; Patent Race – EC5230 Industrial Organisation</title>
 <style>
 
 code{white-space: pre-wrap;}
@@ -4087,7 +4087,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../exercises/live/live-exercise-1.html">Live Exercises</a></li><li class="breadcrumb-item"><a href="../../exercises/live/live-exercise-1.html">Live Exercise 1: Hotelling with quadratic transportation costs</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../exercises/sheets/exercises-1.html">Exercise Sheets</a></li><li class="breadcrumb-item"><a href="../../exercises/sheets/exercises-2.html">Exercise N: Industrial Economics — Innovation Incentives &amp; Patent Race</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -4122,7 +4122,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../exercises/sheets/exercises-2.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/sheets/exercises-2.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Exercise N: Industrial Economics — Innovation Incentives &amp; Patent Race</span></a>
   </div>
 </li>
@@ -4139,7 +4139,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../exercises/live/live-exercise-1.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../exercises/live/live-exercise-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Live Exercise 1: Hotelling with quadratic transportation costs</span></a>
   </div>
 </li>
@@ -4151,13 +4151,13 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="live-exercise-1.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
+    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="exercises-2.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../exercises/live/live-exercise-1.html">Live Exercises</a></li><li class="breadcrumb-item"><a href="../../exercises/live/live-exercise-1.html">Live Exercise 1: Hotelling with quadratic transportation costs</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../exercises/sheets/exercises-1.html">Exercise Sheets</a></li><li class="breadcrumb-item"><a href="../../exercises/sheets/exercises-2.html">Exercise N: Industrial Economics — Innovation Incentives &amp; Patent Race</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Live Exercise 1: Hotelling with quadratic transportation costs</h1>
+<h1 class="title">Exercise N: Industrial Economics — Innovation Incentives &amp; Patent Race</h1>
 </div>
 
 <div>
@@ -4185,138 +4185,42 @@ window.Quarto = {
 </header>
 
 
-<section id="solutions" class="level1">
-<h1>Solutions</h1>
-<p><strong>Group exercise (≈20 minutes)</strong></p>
-<ul>
-<li>Work in groups of 2–3.</li>
-<li>Show your steps (the algebra is the point).</li>
-<li>Assume full market coverage throughout (everyone buys from one of the two firms).</li>
-</ul>
-<section id="problem-quadratic-transport-costs-and-cost-asymmetry" class="level2">
-<h2 class="anchored" data-anchor-id="problem-quadratic-transport-costs-and-cost-asymmetry">Problem: Quadratic transport costs and cost asymmetry</h2>
-<p>Consider a Hotelling line of length 1 with consumers uniformly distributed on <span class="math inline">\([0,1]\)</span>. Each consumer buys one unit from the firm that gives higher utility.</p>
-<p>There are two firms with <em>fixed locations</em>:</p>
-<ul>
-<li>Firm 1 at <span class="math inline">\(x_1=a\)</span></li>
-<li>Firm 2 at <span class="math inline">\(x_2=1-a\)</span></li>
-</ul>
-<p>where <span class="math inline">\(0 \le a &lt; \frac{1}{2}\)</span>. Define the distance between firms <span class="math inline">\(d \equiv x_2-x_1 = 1-2a\)</span>.</p>
-<p>Consumers have quasi-linear utility</p>
-<p><span class="math display">\[
-U_i(x) = \bar u - p_i - t(x-x_i)^2,
+<p><strong>Instructions</strong> - Answer all questions. - Show intermediate steps.</p>
+<section id="problem-1-incentives-to-innovate" class="level2">
+<h2 class="anchored" data-anchor-id="problem-1-incentives-to-innovate">Problem 1: Incentives to innovate</h2>
+<p>Consider a market for vacuum cleaners in which the demand is given by <span class="math display">\[
+p = 100 - 2q,
 \]</span></p>
-<p>where <span class="math inline">\(t&gt;0\)</span> and <span class="math inline">\(\bar u\)</span> is large enough that the outside option never binds. Firm <span class="math inline">\(i\)</span> has constant marginal cost <span class="math inline">\(c_i\)</span> and chooses price <span class="math inline">\(p_i\)</span> simultaneously.</p>
-<section id="a-marginal-consumer-and-demands" class="level3">
-<h3 class="anchored" data-anchor-id="a-marginal-consumer-and-demands">(a) Marginal consumer and demands</h3>
-<p>Let <span class="math inline">\(x^*\)</span> be the consumer indifferent between the two firms (assume <span class="math inline">\(x^* \in (a,1-a)\)</span>).</p>
-<ol type="1">
-<li>Write the indifference condition defining <span class="math inline">\(x^*\)</span>.</li>
-<li>Solve for <span class="math inline">\(x^*\)</span> as a function of <span class="math inline">\((p_1,p_2,t,a)\)</span>.</li>
-<li>Use your result to write demands <span class="math inline">\(q_1(p_1,p_2)\)</span> and <span class="math inline">\(q_2(p_1,p_2)\)</span>.</li>
-</ol>
-<p><em>Hint:</em> For <span class="math inline">\(x \in (a,1-a)\)</span>, squared distances are always positive; no absolute values are needed.</p>
-</section>
-<section id="b-best-responses-in-prices" class="level3">
-<h3 class="anchored" data-anchor-id="b-best-responses-in-prices">(b) Best responses in prices</h3>
-<p>Firm <span class="math inline">\(i\)</span>’s profit is</p>
-<p><span class="math display">\[
-\pi_i(p_i,p_j) = (p_i-c_i)\,q_i(p_i,p_j).
-\]</span></p>
-<ol type="1">
-<li>Take the first-order condition for Firm 1 and simplify it into a linear best response <span class="math inline">\(BR_1(p_2)\)</span>.</li>
-<li>Do the same for Firm 2.</li>
-</ol>
-</section>
-<section id="c-price-equilibrium-nash-in-prices" class="level3">
-<h3 class="anchored" data-anchor-id="c-price-equilibrium-nash-in-prices">(c) Price equilibrium (Nash in prices)</h3>
-<p>Solve the system of best responses to get equilibrium prices <span class="math inline">\((p_1^*,p_2^*)\)</span>. Then compute equilibrium market shares <span class="math inline">\((q_1^*,q_2^*)\)</span>.</p>
-<ol type="1">
-<li>Show that the <em>price gap</em> satisfies <span class="math inline">\(p_2^*-p_1^*=\frac{c_2-c_1}{3}\)</span>.</li>
-<li>How does <em>distance</em> <span class="math inline">\(d\)</span> affect the average markup? (Be explicit.)</li>
-</ol>
-</section>
-<section id="d-when-does-one-firm-capture-the-whole-market-optional-challenge" class="level3">
-<h3 class="anchored" data-anchor-id="d-when-does-one-firm-capture-the-whole-market-optional-challenge">(d) When does one firm capture the whole market? (optional challenge)</h3>
-<p>Your answer in (a)–(c) assumed an interior split (<span class="math inline">\(x^* \in (a, 1-a)\)</span>).</p>
-<ol type="1">
-<li>Derive the condition on the cost difference <span class="math inline">\(\Delta c \equiv c_2-c_1\)</span> (relative to <span class="math inline">\(t\)</span> and <span class="math inline">\(d\)</span>) under which the interior split is valid.</li>
-<li>Give a short economic interpretation: what happens if <span class="math inline">\(|\Delta c|\)</span> is “too large”?</li>
-</ol>
-</section>
-</section>
-<section id="suggested-solution-sketch" class="level2">
-<h2 class="anchored" data-anchor-id="suggested-solution-sketch">Suggested solution (sketch)</h2>
+<p>where <span class="math inline">\(q\)</span> is the (total) quantity and <span class="math inline">\(p\)</span> is the price. Suppose that the initial marginal costs of firms are 40, and that there exists a process innovation called <em>Tech Z</em> which reduces the marginal cost of production to 28. Assume that this technology is exclusively used by the one single firm who acquires it.</p>
 <section id="a" class="level3">
 <h3 class="anchored" data-anchor-id="a">(a)</h3>
-<p>Indifference:</p>
-<p><span class="math display">\[
-\bar u - p_1 - t(x-a)^2 = \bar u - p_2 - t(1-a-x)^2.
-\]</span></p>
-<p>Cancel <span class="math inline">\(\bar u\)</span> and rearrange:</p>
-<p><span class="math display">\[
-p_2-p_1 = t\big[(x-a)^2-(1-a-x)^2\big].
-\]</span></p>
-<p>Expanding (or using <span class="math inline">\((x-a)^2-(1-a-x)^2=(1-2a)(2x-1)=d(2x-1)\)</span>) gives</p>
-<p><span class="math display">\[
-x^*=\frac{1}{2}+\frac{p_2-p_1}{2td}.
-\]</span></p>
-<p>For an interior split, demands are</p>
-<p><span class="math display">\[
-q_1 = x^*,
-\qquad
-q_2 = 1-x^*.
-\]</span></p>
+<p>Compute and compare the maximum willingness to pay for Tech Z of a</p>
+<ol type="1">
+<li>monopoly firm (not threatened by entry)</li>
+<li>Cournot duopolist</li>
+</ol>
 </section>
 <section id="b" class="level3">
 <h3 class="anchored" data-anchor-id="b">(b)</h3>
-<p>Using <span class="math inline">\(q_1=\frac{1}{2}+\frac{p_2-p_1}{2td}\)</span>, we have <span class="math inline">\(\frac{\partial q_1}{\partial p_1}=-\frac{1}{2td}\)</span>. FOC for Firm 1:</p>
-<p><span class="math display">\[
-0=\frac{\partial \pi_1}{\partial p_1}
-= q_1 + (p_1-c_1)\frac{\partial q_1}{\partial p_1}
-= q_1 - \frac{p_1-c_1}{2td}.
-\]</span></p>
-<p>So <span class="math inline">\(p_1-c_1=2td\,q_1\)</span>, i.e.</p>
-<p><span class="math display">\[
-p_1-c_1 = 2td\left(\frac{1}{2}+\frac{p_2-p_1}{2td}\right)
-= td + p_2 - p_1
-\quad \Rightarrow \quad
-BR_1(p_2)=\frac{p_2+c_1+td}{2}.
-\]</span></p>
-<p>Similarly,</p>
-<p><span class="math display">\[
-BR_2(p_1)=\frac{p_1+c_2+td}{2}.
-\]</span></p>
+<p>Discuss how market structure affects the incentives to innovate (acquire an innovation) in this case.</p>
 </section>
-<section id="c" class="level3">
-<h3 class="anchored" data-anchor-id="c">(c)</h3>
-<p>Solve <span class="math inline">\(2p_1=p_2+c_1+td\)</span> and <span class="math inline">\(2p_2=p_1+c_2+td\)</span> to get</p>
-<p><span class="math display">\[
-p_1^* = td + \frac{2c_1+c_2}{3},
-\qquad
-p_2^* = td + \frac{c_1+2c_2}{3}.
-\]</span></p>
-<p>Price gap: <span class="math inline">\(p_2^*-p_1^*=\frac{c_2-c_1}{3}\)</span>.</p>
-<p>Market shares:</p>
-<p><span class="math display">\[
-q_1^*=\frac{1}{2}+\frac{c_2-c_1}{6td},
-\qquad
-q_2^*=\frac{1}{2}-\frac{c_2-c_1}{6td}.
-\]</span></p>
-<p>Distance <span class="math inline">\(d\)</span> raises the common “differentiation” term <span class="math inline">\(td\)</span> in prices, hence increases average markups and profits.</p>
 </section>
-<section id="d" class="level3">
-<h3 class="anchored" data-anchor-id="d">(d)</h3>
-<p>Interior split requires <span class="math inline">\(q_1^*,q_2^* \in (0,1)\)</span>, i.e.</p>
-<p><span class="math display">\[
-\left|\frac{c_2-c_1}{6td}\right| &lt; \frac{1}{2}
-\quad \Leftrightarrow \quad
-|c_2-c_1| &lt; 3td.
-\]</span></p>
-<p>If <span class="math inline">\(|c_2-c_1|\)</span> is too large relative to <span class="math inline">\(td\)</span>, the low-cost firm can profitably set a price that leaves the rival with (essentially) zero demand.</p>
+<section id="problem-2-symmetric-patent-race" class="level2">
+<h2 class="anchored" data-anchor-id="problem-2-symmetric-patent-race">Problem 2: Symmetric patent race</h2>
+<p>Suppose that there are two firms that simultaneously decide whether to invest to find a new product, with both firms privately and separately owned.</p>
+<p>The value of a patent for such product is estimated to be <span class="math display">\[
+V = 100.
+\]</span> If only one firm discovers it, this firm will be able to extract the whole value. If both firms discover it, each firm is going to earn half of this total value.</p>
+<p>Each firm has a probability <span class="math inline">\(p\)</span> of discovering the new product provided that it invests an amount <span class="math inline">\(F\)</span> constructing a research lab. If a firm does not invest, the probability of discovery is 0.</p>
+<section id="a-2" class="level3">
+<h3 class="anchored" data-anchor-id="a-2">(a)</h3>
+<p>Draw the payoff matrix of the game. Find the conditions on <span class="math inline">\(F\)</span> and <span class="math inline">\(p\)</span> under which there will be 0, 1, or 2 firms investing in the equilibrium.</p>
+</section>
+<section id="b-2" class="level3">
+<h3 class="anchored" data-anchor-id="b-2">(b)</h3>
+<p>Assume that the social planner maximises the sum of profits of the two firms. Find the conditions on <span class="math inline">\(F\)</span> and <span class="math inline">\(p\)</span> under which there should be 0, 1, or 2 firms investing, according to this social planner.</p>
 
 
-</section>
 </section>
 </section>
 

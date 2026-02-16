@@ -1,68 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/quality_reports/session_logs/2026-02-09_slide-excellence-lecture-3-innovation.html</loc>
-    <lastmod>2026-02-09T22:10:32.386Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/quality_reports/session_logs/2026-02-08_lecture-3-review-and-fixes.html</loc>
-    <lastmod>2026-02-09T00:45:34.073Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/quality_reports/plans/2026-02-09_slide-excellence-lecture-2-product-differentiation.html</loc>
-    <lastmod>2026-02-09T23:20:38.553Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/quality_reports/live-exercise-1_solution_verification.html</loc>
-    <lastmod>2026-02-09T09:51:55.318Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/quality_reports/live-exercise-1_scope_reduction_applied.html</loc>
-    <lastmod>2026-02-09T21:49:46.427Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/quality_reports/live-exercise-1_medium_fixes_applied.html</loc>
-    <lastmod>2026-02-09T21:55:35.437Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/quality_reports/live-exercise-1_exercise_review.html</loc>
-    <lastmod>2026-02-09T09:49:25.391Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/quality_reports/lecture-3-innovation_qmd_report.html</loc>
-    <lastmod>2026-02-07T19:34:59.127Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/quality_reports/lecture-3-innovation_medium_fixes_applied.html</loc>
-    <lastmod>2026-02-09T21:55:35.430Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/quality_reports/lecture-3-innovation_final_verification.html</loc>
-    <lastmod>2026-02-09T10:10:04.244Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/quality_reports/lecture-3-innovation_citation_audit.html</loc>
-    <lastmod>2026-02-09T19:05:05.791Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/quality_reports/lecture-2-product-differentiation_tikz_review.html</loc>
-    <lastmod>2026-02-09T23:19:58.350Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/quality_reports/lecture-2-product-differentiation_report.html</loc>
-    <lastmod>2026-02-09T23:19:50.216Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/quality_reports/lecture-2-product-differentiation_parity_report.html</loc>
-    <lastmod>2026-02-09T23:24:05.923Z</lastmod>
-  </url>
-  <url>
     <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/lecture-slides/slides/lecture-6-corporate-rand.html</loc>
     <lastmod>2026-02-09T21:53:36.888Z</lastmod>
   </url>
   <url>
     <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/lecture-slides/slides/lecture-4-patents.html</loc>
-    <lastmod>2026-02-09T21:52:52.193Z</lastmod>
+    <lastmod>2026-02-16T17:18:40.497Z</lastmod>
   </url>
   <url>
     <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/lecture-slides/slides/lecture-2-product-differentiation.html</loc>
@@ -74,27 +18,35 @@
   </url>
   <url>
     <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/index.html</loc>
-    <lastmod>2026-02-09T22:54:56.281Z</lastmod>
+    <lastmod>2026-02-16T14:25:50.369Z</lastmod>
   </url>
   <url>
-    <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/exercises/sheets/exercises-1.html</loc>
-    <lastmod>2026-02-10T13:59:34.529Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/exercises/index.html</loc>
-    <lastmod>2026-02-09T22:54:47.796Z</lastmod>
+    <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/exercises/sheets/exercises-2.html</loc>
+    <lastmod>2026-02-15T20:28:35.588Z</lastmod>
   </url>
   <url>
     <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/exercises/live/live-exercise-1.html</loc>
     <lastmod>2026-02-10T13:59:12.409Z</lastmod>
   </url>
   <url>
+    <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/exams/policy-report/policy-report-brief.html</loc>
+    <lastmod>2026-02-16T13:43:42.340Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/exercises/index.html</loc>
+    <lastmod>2026-02-09T22:54:47.796Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/exercises/sheets/exercises-1.html</loc>
+    <lastmod>2026-02-10T13:59:34.529Z</lastmod>
+  </url>
+  <url>
     <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/guide/workflow-guide.html</loc>
-    <lastmod>2026-02-09T21:52:07.591Z</lastmod>
+    <lastmod>2026-02-16T13:53:26.000Z</lastmod>
   </url>
   <url>
     <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/lecture-slides/index.html</loc>
-    <lastmod>2026-02-09T22:54:35.182Z</lastmod>
+    <lastmod>2026-02-16T13:54:01.489Z</lastmod>
   </url>
   <url>
     <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/lecture-slides/slides/lecture-1-oligopoly.html</loc>
@@ -105,63 +57,7 @@
     <lastmod>2026-02-11T08:53:31.211Z</lastmod>
   </url>
   <url>
-    <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/lecture-slides/slides/lecture-5-repeated-games.html</loc>
+    <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/lecture-slides/slides/lecture-5-multi-stage-games.html</loc>
     <lastmod>2026-02-09T21:53:22.559Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/quality_reports/lecture-1-oligopoly_qmd_report.html</loc>
-    <lastmod>2026-02-07T19:24:49.635Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/quality_reports/lecture-2-product-differentiation_pedagogy_report.html</loc>
-    <lastmod>2026-02-09T23:20:27.884Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/quality_reports/lecture-2-product-differentiation_slide_excellence_synthesis.html</loc>
-    <lastmod>2026-02-09T23:20:17.572Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/quality_reports/lecture-2-product-differentiation_visual_audit.html</loc>
-    <lastmod>2026-02-09T23:19:31.182Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/quality_reports/lecture-3-innovation_excellence_synthesis.html</loc>
-    <lastmod>2026-02-09T21:49:46.393Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/quality_reports/lecture-3-innovation_fixes_applied.html</loc>
-    <lastmod>2026-02-09T21:49:46.399Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/quality_reports/lecture-3-innovation_pedagogy_report.html</loc>
-    <lastmod>2026-02-07T19:42:31.860Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/quality_reports/lecture-3-innovation_verification_report.html</loc>
-    <lastmod>2026-02-09T07:32:23.438Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/quality_reports/live-exercise-1_exercise_synthesis.html</loc>
-    <lastmod>2026-02-09T21:49:46.409Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/quality_reports/live-exercise-1_report.html</loc>
-    <lastmod>2026-02-09T21:49:36.469Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/quality_reports/live-exercise-1_solution_check.html</loc>
-    <lastmod>2026-02-09T09:51:55.318Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/quality_reports/live-exercise-1_timing_analysis.html</loc>
-    <lastmod>2026-02-09T09:49:25.391Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/quality_reports/plans/2026-02-09_slide-excellence-lecture-3-innovation.html</loc>
-    <lastmod>2026-02-09T22:10:32.385Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gerhardriener.github.io/EC5230-industrial-organisation/quality_reports/session_logs/2026-02-09_slide-excellence-lecture-2-product-differentiation.html</loc>
-    <lastmod>2026-02-09T23:20:38.555Z</lastmod>
   </url>
 </urlset>

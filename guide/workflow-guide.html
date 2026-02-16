@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.19">
+<meta name="generator" content="quarto-1.9.20">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -773,6 +773,22 @@ window.document.addEventListener("DOMContentLoaded", function (_event) {
             },
 
             item({ item, createElement }) {
+              // process items to include text fragments as they are rendered
+              if (item.text && item.href && !item.href.includes(':~:text=')) {
+                // e.g. `item.text` for a search "def fiz": "bla bla bla<mark class='search-match'>def fiz</mark> bla bla"
+                const fullMatches = item.text.matchAll(/<mark class='search-match'>(.*?)<\/mark>/g)
+                // extract capture group with the search match
+                // result e.g. ["def fiz"]
+                const searchMatches = [...fullMatches].map(match => match[1])
+                if (searchMatches[0]) {
+                  if (item.href.includes('#')) {
+                    item.href += ':~:text=' + encodeURIComponent(searchMatches[0])
+                  } else {
+                    item.href += '#:~:text=' + encodeURIComponent(searchMatches[0])
+                  }
+                }
+              }
+              
               return renderItem(
                 item,
                 createElement,
@@ -4076,7 +4092,7 @@ window.Quarto = {
  <span class="dropdown-text">Week 4: Patents and IPRs</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lecture-slides/slides/lecture-5-repeated-games.html">
+    <a class="dropdown-item" href="../lecture-slides/slides/lecture-5-multi-stage-games.html">
  <span class="dropdown-text">Week 5: Multi-stage Games</span></a>
   </li>  
         <li>
@@ -5115,6 +5131,20 @@ APPROVED   NEEDS REVISION
 </tbody>
 </table>
 <p>Agents that are independent of each other run in parallel. The quarto-critic runs after other agents because it may need their context.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Hard Rule: Don’t Double-Run Full Review Stacks in Orchestrator Mode
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Once a plan is approved, you are in <strong>orchestrator mode</strong>: the orchestrator already runs the standard review agents (proofreader + slide-auditor + pedagogy-reviewer) as part of its verify–review–fix loop.</p>
+<p>Do <strong>not</strong> manually run a second full review stack (e.g., <code>/slide-excellence</code>, or stacking <code>/proofread</code> + <code>/visual-audit</code> + <code>/pedagogy-review</code>) on the same revision unless you are intentionally doing a <strong>milestone audit</strong> to capture an independent review snapshot.</p>
+</div>
+</div>
 </section>
 <section id="just-do-it-mode" class="level3" data-number="5.2.4">
 <h3 data-number="5.2.4" class="anchored" data-anchor-id="just-do-it-mode"><span class="header-section-number">5.2.4</span> “Just Do It” Mode</h3>
@@ -5158,10 +5188,10 @@ APPROVED   NEEDS REVISION
   +-- Phase 2: Design slide structure
   +-- Phase 3: Draft Beamer slides
   +-- Phase 4: Generate R figures
-  +-- Phase 5: Polish and verify
-  |     +-- /substance-review (domain correctness)
-  |     +-- /proofread (grammar/typos)
-  |     +-- /visual-audit (layout)
+  +-- Phase 5: Review, polish, and verify
+  |     +-- /slide-excellence (canonical release review)
+  |     +-- /substance-review (optional: domain correctness)
+  |     +-- /proofread OR /visual-audit OR /pedagogy-review (diagnostics-only, as needed)
   +-- Phase 6: Deploy
         +-- /translate-to-quarto (optional)
         +-- /deploy</code></pre>
@@ -5212,17 +5242,24 @@ Phase 4: Only then extend
 </section>
 <section id="pattern-6-multi-agent-review" class="level2" data-number="5.6">
 <h2 data-number="5.6" class="anchored" data-anchor-id="pattern-6-multi-agent-review"><span class="header-section-number">5.6</span> Pattern 6: Multi-Agent Review</h2>
-<p>The <code>/slide-excellence</code> skill runs up to 6 agents in parallel:</p>
-<pre><code>/slide-excellence Lecture5_Topic.tex
+<p>For lecture slide decks, the canonical release review is:</p>
+<p><code>/slide-excellence lecture-X-topic.qmd</code></p>
+<p>Use this instead of stacking <code>/proofread</code>, <code>/visual-audit</code>, and <code>/pedagogy-review</code>.</p>
+<p>The canonical spec (agents + artifacts) lives in <code>.claude/skills/slide-excellence/SKILL.md</code>. At a high level:</p>
+<pre><code>/slide-excellence lecture-5-multi-stage-games.qmd
   |
   +-- Agent 1: Visual Audit (slide-auditor)
   +-- Agent 2: Pedagogical Review (pedagogy-reviewer)
   +-- Agent 3: Proofreading (proofreader)
   +-- Agent 4: TikZ Review (tikz-reviewer, if applicable)
-  +-- Agent 5: Content Parity (if Quarto version exists)
-  +-- Agent 6: Substance Review (domain-reviewer)
+  +-- Inline checks: citation key audit + parity checks (if applicable)
   |
   +-- Synthesize: Combined quality score + prioritized fix list</code></pre>
+<p>Optional add-ons:</p>
+<ul>
+<li><code>/substance-review lecture-X-topic.qmd</code> for domain correctness (read-only)</li>
+<li><code>/qa-quarto LectureX</code> for Quarto vs Beamer parity (translation mode)</li>
+</ul>
 </section>
 <section id="pattern-7-self-improvement-loop" class="level2" data-number="5.7">
 <h2 data-number="5.7" class="anchored" data-anchor-id="pattern-7-self-improvement-loop"><span class="header-section-number">5.7</span> Pattern 7: Self-Improvement Loop</h2>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.19">
+<meta name="generator" content="quarto-1.9.20">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -737,6 +737,22 @@ window.document.addEventListener("DOMContentLoaded", function (_event) {
             },
 
             item({ item, createElement }) {
+              // process items to include text fragments as they are rendered
+              if (item.text && item.href && !item.href.includes(':~:text=')) {
+                // e.g. `item.text` for a search "def fiz": "bla bla bla<mark class='search-match'>def fiz</mark> bla bla"
+                const fullMatches = item.text.matchAll(/<mark class='search-match'>(.*?)<\/mark>/g)
+                // extract capture group with the search match
+                // result e.g. ["def fiz"]
+                const searchMatches = [...fullMatches].map(match => match[1])
+                if (searchMatches[0]) {
+                  if (item.href.includes('#')) {
+                    item.href += ':~:text=' + encodeURIComponent(searchMatches[0])
+                  } else {
+                    item.href += '#:~:text=' + encodeURIComponent(searchMatches[0])
+                  }
+                }
+              }
+              
               return renderItem(
                 item,
                 createElement,
@@ -4032,7 +4048,7 @@ window.Quarto = {
  <span class="dropdown-text">Week 4: Patents and IPRs</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../lecture-slides/slides/lecture-5-repeated-games.html">
+    <a class="dropdown-item" href="../../lecture-slides/slides/lecture-5-multi-stage-games.html">
  <span class="dropdown-text">Week 5: Multi-stage Games</span></a>
   </li>  
         <li>
@@ -4102,6 +4118,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../exercises/sheets/exercises-1.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Exercise 1: Oligopoly and Product Differentiation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../exercises/sheets/exercises-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercise N: Industrial Economics — Innovation Incentives &amp; Patent Race</span></a>
   </div>
 </li>
       </ul>
