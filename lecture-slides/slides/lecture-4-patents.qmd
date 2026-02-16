@@ -9,6 +9,14 @@ format:
     preview-links: auto
     transition: none
     background-transition: fade
+  dtslides-revealjs:
+    slide-number: c/t
+    title-slide-attributes:
+      data-background-color: "#00539b"
+    chalkboard: true
+    preview-links: auto
+    transition: none
+    background-transition: fade
   beamer: default
 
 execute:
@@ -110,7 +118,7 @@ This slide states the fundamental tension that students must internalise: patent
 Pose the two questions as the organising questions for the rest of the lecture. We will answer the length question with Scotchmer and Shy, and the race question in the final section.
 :::
 
-## Running application (throughout): pharmaceuticals
+## Application: Pharmaceuticals
 
 - Fixed development cost $F$ is large (clinical trials), while marginal cost is low
 - Patent protection creates temporary market power, but expiry enables generic entry
@@ -353,6 +361,9 @@ Assume the "correct" expected private value of protection is fixed.
 $$
 \hat{T}(\hat{\pi}_1+\hat{\pi}_2)=\tilde{T}\tilde{\pi}_1
 $$
+
+
+## Breadth–length trade-off (continued)
 
 - Therefore:
 
