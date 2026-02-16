@@ -248,7 +248,7 @@ Emphasise that this is a necessary condition only — it tells us when the firm 
 - Discounted net social value (invention made):
 
 $$
-\frac{\nu}{r} - \lambda \nu T
+\frac{\nu}{r} - \lambda \nu T - F
 $$
 
 - **Interpretation**
