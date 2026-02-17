@@ -631,6 +631,165 @@ Recap the four main results: (1) patents trade static DWL for dynamic incentives
 Preview next week: we move from innovation policy to strategic commitment. Stackelberg leadership and strategic delegation (Vickers) are about how firms use observable commitments to shift equilibrium outcomes — a different type of strategic interaction from the simultaneous-move games we've studied so far.
 :::
 
+# Case Study: COVID-19 vaccine patent race {background-color="#00539b"}
+
+## History: why “patent race” language fits (mRNA as a platform) (Storz 2022)
+
+- COVID-19 crystallised **platform IP**: mRNA vaccines look modular, but rely on *layers* of upstream patents  
+  (modified nucleosides, delivery/LNPs, manufacturing, formulations)
+
+- The “race” was not only **time-to-market**, but also **time-to-priority**:
+  - who files first on enabling technologies vs. product-specific claims
+  - how broad claims interact with follow-on entrants and variants
+
+- Post-success phase: fast diffusion of know-how → **ex post disputes** over who owns key enabling steps  
+  (licensing demands, litigation threats, bargaining over royalties)
+
+::: {.callout-note title="IO lens"}
+Treat the vaccine as an *innovation stack*: competition happens across layers (upstream enablement) and across products (downstream vaccines).
+:::
+
+::: {.notes}
+Use Storz (2022) as the narrative backbone: mRNA “speed” is enabled by prior platform advances, which is exactly why IP becomes contentious after the fact.
+Emphasise: in platform industries, “who invented the product” is not the same as “who owns the bottleneck patents.”
+:::
+
+
+## Complex problem 1: patent-race incentives interact with safety (Kim 2020)
+
+- Standard patent-race logic: **winner-takes-most rents** → strong incentives to accelerate R&D effort
+
+- With vaccines, firms choose **two margins**:
+  1) investment in *speed* (inventing first)  
+  2) investment in *safety* (reducing side-effect risk)
+
+- Liability regime matters:
+  - If the first inventor captures rents but also bears liability, **private incentives can tilt** toward *too much* investment in both speed and safety under strict liability (relative to the social optimum in the model)
+
+- Empirical complication:
+  - “Race outcomes” depend on *legal institutions* (liability, indemnification, compensation schemes), not only patent length/breadth
+
+::: {.callout-warning title="Identification challenge"}
+Observed “R&D intensity” bundles patent-race incentives with the liability/indemnity environment—hard to attribute outcomes to IP alone.
+:::
+
+::: {.notes}
+Anchor to Kim (2020): the distinctive feature is the joint choice of “invent” and “make safe,” and how liability rules re-rank incentives.
+Connect back to your race model: in vaccines, the prize is not just monopoly profit; it’s profit net of expected liability and reputational costs.
+:::
+
+
+## Complex problem 2 (and a policy lever): public funding → private appropriation (Florio 2022) + pooling (Billette de Villemeur et al. 2023)
+
+- mRNA COVID vaccines built on substantial **public-sector science + funding**, but patent ownership is largely private  
+  → distributional conflict: *who should capture returns?* (Florio 2022)
+
+- This creates an IO-relevant wedge:
+  - ex ante: strong incentives to race
+  - ex post: fragmented rights → bargaining, “hold-up” risk, and politically salient access constraints
+
+- Proposed “third way”: **patent pooling** to expand access while preserving incentives (Billette de Villemeur et al., SSRN 2023)
+  - pool aggregates relevant rights and offers standardized licences (reducing transaction costs)
+  - goal: **maximize access** subject to participation/incentive constraints
+  - positioned as an alternative to: (i) full waiver, (ii) fully fragmented bilateral licensing
+
+::: {.callout-note title="Design margin"}
+Pooling is a *market design* response: reduce IP fragmentation/frictions without eliminating IP rents entirely.
+:::
+
+::: {.notes}
+Use Florio (2022) to motivate why purely “private property” framing is politically unstable when taxpayers funded upstream knowledge.
+Then introduce pooling (Billette de Villemeur et al.) as an IO mechanism: coordination device that can mitigate anticommons/hold-up and accelerate diffusion.
+Tie back to your lecture: this is breadth/transferability in practice (licensing rules + governance).
+:::
+
+## Application: COVID-19 vaccine patents — from race to access {background-color="#00539b"}
+
+## Problem: fragmented IP after the innovation race
+
+- COVID-19 vaccines are not single inventions but **bundles of complementary technologies**:
+  - platform patents (e.g. mRNA chemistry, delivery systems)
+  - formulation and manufacturing patents
+  - downstream production know-how
+
+- Result: multiple entities hold indispensable rights  
+  $\Rightarrow$ downstream producers must negotiate **many licenses** to manufacture at scale. :contentReference[oaicite:0]{index=0}
+
+- IO interpretation:
+  - complements create **multiple marginalization**
+  - bargaining frictions and legal uncertainty raise effective marginal costs
+
+::: {.callout-warning title="Key tension"}
+The patent race may solve innovation speed ex ante, but can generate coordination failures ex post.
+:::
+
+::: {.notes}
+This slide bridges from the patent-race section. Stress that the race produced innovation quickly, but ownership is fragmented afterward.
+Use language students know: complements, vertical structure, multiple margins.
+This sets up why a market-design solution becomes relevant.
+:::
+
+
+## Proposed solution: a non-profit patent pool (“third way”)
+
+- The paper proposes a **non-profit patent pool** that bundles all required licenses into a single contract (a “one-stop shop”). :contentReference[oaicite:1]{index=1}
+
+- Pool objective:
+  - **maximize access / quantities**
+  - while ensuring patent holders are *not worse off* than under separate licensing (participation constraint). :contentReference[oaicite:2]{index=2}
+
+- Compared regimes in the model:
+  1. separate, non-cooperative licensing (multiple margins)
+  2. for-profit pool (joint profit maximization)
+  3. **non-profit pool** (access maximization) :contentReference[oaicite:3]{index=3}
+
+- Economic mechanism:
+  - internalizes complementarities
+  - lowers royalty stack
+  - reduces transaction costs and hold-up risk. :contentReference[oaicite:4]{index=4}
+
+::: {.callout-note title="IO insight"}
+Pooling converts many complementary monopolies into a single coordinated pricing problem.
+:::
+
+::: {.notes}
+Emphasise: this is not a patent waiver. It preserves incentives by maintaining patent-holder profits relative to decentralized licensing.
+Relate explicitly to Shapiro (patent thickets) and multiple marginalization from vertical IO.
+:::
+
+
+## How the solution fits — and what it does *not* solve
+
+### What it addresses well
+- **Fragmented ownership** → bundling reduces bargaining frictions
+- **Access problem** → lower final prices, higher quantities
+- Welfare gains increase with the number of patent holders. :contentReference[oaicite:5]{index=5}
+
+### What remains unresolved
+- Does **not** model the *ex ante patent race*:
+  - incentives for speed vs safety (Kim-type problem)
+  - duplication of R&D effort
+- Does not resolve manufacturing capacity or tacit know-how constraints by itself
+
+### Lecture takeaway
+
+- Patent races solve the **innovation problem**.
+- Patent pools address the **coordination problem after innovation**.
+- Policy design must separate:
+  - incentives to invent (dynamic efficiency)
+  - mechanisms for diffusion and global access (static + distributional efficiency).
+
+::: {.notes}
+This is the synthesis slide.
+Position pooling as a downstream governance mechanism rather than an innovation-incentive mechanism.
+This helps students see that different policy tools target different margins.
+End with a strong conceptual distinction: race vs diffusion.
+:::
+
+
+
+
+
 ## References
 
 ::: {#refs}
