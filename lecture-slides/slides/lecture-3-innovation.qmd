@@ -584,7 +584,7 @@ using four anchors:
 - @ChoiceWelfareStandards normative welfare economics + distribution separation
 - Neven & Röller : political economy of the welfare standard
 - Farrell & Katz: institutional/process critique of the "welfare standard debate"
-- @willi: the classic *efficiency–market power* trade-off formalization
+- @williamsonEconomiesAntitrustDefense1972: the classic *efficiency–market power* trade-off formalization
 
 ::: {.callout-note title="Key takeaway"}
 The "consumer surplus vs total surplus" are philosophical and political arguments: it changes
@@ -597,6 +597,7 @@ The "consumer surplus vs total surplus" are philosophical and political argument
 - **Total welfare (TW)**: CS + producer surplus (PS); standard Kaldor–Hicks social surplus.
 
 Kaplow’s two core issues:
+
 1. **Distribution**: does CS better protect poorer consumers?
 2. **Policy design**: if distribution matters, should it be handled by *competition law* or by *tax/transfer*?
 
@@ -609,6 +610,7 @@ The canonical welfare-econ logic in Kaplow:
 - Therefore, a switch from TW to CS *to pursue distributional goals* is typically a second-best instrument.
 
 Implication:
+
 - A TW standard is often normatively preferred **unless** taxes/transfers are unavailable or severely constrained.
 
 
@@ -622,9 +624,9 @@ For applied IO (mergers/abuse):
 This difference is *huge* in cost-reduction mergers, vertical restraints, and platform settings where
 PS can increase even when short-run prices rise.
 
-## @nevenConsumerSurplusVs2005 merger control as a **common-agency** 
+## @nevenConsumerSurplusVs2005 merger control 
 
-Political economy problem:
+Political economy problem: **common-agency** 
 
 - Merging firms and rivals can **lobby/influence** the agency.
 - Consumers are often **diffuse** and (in many designs) are modeled as *not lobbying*.
@@ -663,6 +665,7 @@ Argue the CS vs TW debate misses two big points:
 2. Enforcement is built on **administrability, presumptions, and error costs**, not full-information welfare maximization.
 
 They emphasize that legal rules must be operational under uncertainty:
+
 - burdens of proof,
 - evidentiary screens,
 - per se vs rule-of-reason structure,
@@ -677,8 +680,7 @@ Even if you pick CS or TW, what courts/agencies *do* is mediated by:
 - **Presumptions** (e.g., certain concentration thresholds)
 - **Type I vs Type II errors** (false positives vs false negatives)
 
-- The welfare standard debate is often a proxy for deeper disagreements about
-  how to manage uncertainty, litigation cost, and institutional competence. 
+- The welfare standard debate is often a proxy for deeper disagreements about  how to manage uncertainty, litigation cost, and institutional competence. 
 
 ## IO takeaway: welfare standard vs decision procedure
 
@@ -689,26 +691,19 @@ In IO terms:
 So the "real" question in many jurisdictions:
 - Which standard yields **better implementable rules** under information and political constraints?
 
-## Williamson (1968): the trade-off diagram, formalized
+## @williamsonEconomiesAntitrustDefense1968: the trade-off diagram, formalized
 
-Williamson’s core contribution:
-- A merger can create **cost savings** (efficiency rectangle) but also increase **market power**
-  causing **deadweight loss** and **transfers**.
+Core contribution:
+
+- A merger can create **cost savings** (efficiency rectangle) but also increase **market power** causing **deadweight loss** and **transfers**.
 
 In the simplest partial equilibrium picture:
+
 - Price rises from competition toward monopoly
 - Output falls
 - Consumers lose (transfer + DWL)
 - Producers gain (transfer)
 - Efficiencies may offset DWL and can even raise TW.
-
-## Why Williamson is foundational for welfare standards
-
-Williamson clarifies why CS vs TW differs:
-
-- Under **TW**, the transfer from consumers to producers is not itself a welfare loss;
-  only DWL and resource costs matter.
-- Under **CS**, transfers matter: a price increase is directly a harm even if TW rises.
 
 
 # Implementation in real policy {background-color="#00539b"}
@@ -717,8 +712,7 @@ Williamson clarifies why CS vs TW differs:
 
 In the EU Horizontal Merger Guidelines, the benchmark for efficiencies is explicitly consumer-facing:
 
-- The relevant benchmark is that **consumers will not be worse off** as a result of the merger
-  (efficiencies must benefit consumers in the relevant markets, in a timely and verifiable way).
+- The relevant benchmark is that **consumers will not be worse off** as a result of the merger (efficiencies must benefit consumers in the relevant markets, in a timely and verifiable way).
 
 This is the practical embodiment of a CS-style constraint.
 
@@ -729,12 +723,11 @@ This is the practical embodiment of a CS-style constraint.
 
 ## EU enforcement priorities: "most harmful to consumers"
 
-The Commission’s effects-based language in Article 102 enforcement priorities is framed in terms
-of conduct "most harmful to consumers," consistent with consumer-harm screens.
+The Commission’s effects-based language in Article 102 enforcement priorities is framed in terms of conduct "most harmful to consumers," consistent with consumer-harm screens.
 
 Interpretation for IO:
-- Evidence is organized around price/quality/choice/innovation harms to customers,
-  not around a fully aggregated surplus calculus.
+
+- Evidence is organized around price/quality/choice/innovation harms to customers, not around a fully aggregated surplus calculus.
 
 
 ## Canada: efficiencies "trade-off" logic (historical centerpiece)
