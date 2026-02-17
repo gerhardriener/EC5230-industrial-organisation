@@ -633,7 +633,7 @@ Preview next week: we move from innovation policy to strategic commitment. Stack
 
 # Case Study: COVID-19 vaccine patent race {background-color="#00539b"}
 
-## History: why “patent race” language fits (mRNA as a platform) (Storz 2022)
+## History: why “patent race” language fits (mRNA as a platform) [@storzIntellectualPropertyRaces2022]
 
 - COVID-19 crystallised **platform IP**: mRNA vaccines look modular, but rely on *layers* of upstream patents  
   (modified nucleosides, delivery/LNPs, manufacturing, formulations)
@@ -655,7 +655,7 @@ Emphasise: in platform industries, “who invented the product” is not the sam
 :::
 
 
-## Complex problem 1: patent-race incentives interact with safety (Kim 2020)
+## Problem 1: patent-race incentives interact with safety  [@kimOptimalPatentDesign2020]
 
 - Standard patent-race logic: **winner-takes-most rents** → strong incentives to accelerate R&D effort
 
