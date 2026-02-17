@@ -394,15 +394,19 @@ The Shy model endogenises R&D effort $x$, unlike Scotchmer where the idea $(\nu,
 Linear demand $P = a - Q$ keeps the algebra tractable. The key modelling choice: process innovation reduces marginal cost, so the gain from R&D is a cost advantage. This connects back to the drastic/non-drastic innovation distinction from Lecture 3.
 :::
 
-## Shy model: firm's choice of $x$ given $\tau$
+## Firm's choice of $x$ given $\tau$
 
 Firm solves:
 
 $$
 \begin{aligned}
 \max_x \ \Pi(x;\tau) &= \sum_{t=1}^{\tau}\rho^{t-1}\pi(x)-R(x), \\
-\rho &= \frac{1}{1+r}
+\text{where }\rho &= \frac{1}{1+r}
 \end{aligned}
+$$
+
+$$
+\sum_{t=1}^{\tau}\rho^{t-1}=\frac{1-\rho^\tau}{1-\rho} 
 $$
 
 Assume:
@@ -410,11 +414,6 @@ Assume:
 - per-period profit: $\pi(x)=(a-c)\,x$
 - cost: $R(x)=\frac{x^2}{2}$
 
-- Lemma:
-
-$$
-\sum_{t=1}^{\tau}\rho^{t-1}=\frac{1-\rho^\tau}{1-\rho}
-$$
 
 ::: {.notes}
 Walk through the firm's problem: $\max_x \sum_{t=1}^{\tau} \rho^{t-1}(a-c)x - x^2/2$. The per-period profit $(a-c)x$ is linear in $x$ (simplified from the full monopoly profit for tractability). The R&D cost $x^2/2$ is convex, ensuring an interior solution.
@@ -422,7 +421,7 @@ Walk through the firm's problem: $\max_x \sum_{t=1}^{\tau} \rho^{t-1}(a-c)x - x^
 The geometric sum $\sum \rho^{t-1} = (1-\rho^\tau)/(1-\rho)$ converts the finite-horizon discounted sum into a single multiplier. This is the discrete-time analogue of the $T$ we defined earlier. FOC: $(1-\rho^\tau)/(1-\rho) \cdot (a-c) = x$, giving the next slide's result.
 :::
 
-## Shy model: induced innovation level
+## Induced innovation level
 
 FOC implies:
 
@@ -478,6 +477,14 @@ Connect to Scotchmer: the Shy model endogenises what Scotchmer took as given —
 Think of multiple labs racing to develop the same drug/vaccine: each pays a fixed setup cost and succeeds with some probability.
 :::
 
+::: {.notes}
+We now shift from single-firm models to strategic interaction. The patent race setup is a simultaneous-move game: each firm decides whether to invest $f$ (enter the race) or not. The key feature is "winner takes all" — if only one firm succeeds, it gets $\pi^m$; if both succeed, they split the market ($\pi^d$ each).
+
+The welfare benchmarks $W^m$ and $W^d$ include consumer surplus, which is higher under duopoly ($CS^d > CS^m$). This creates a wedge between private and social incentives: firms care about profit, the planner cares about total welfare.
+
+Pharma application: multiple labs racing to develop a COVID vaccine, each investing billions with uncertain success.
+:::
+
 ## Symmetric patent race: Welfare benchmarks
 
 - Welfare benchmarks (post-innovation welfare):
@@ -489,13 +496,7 @@ Think of multiple labs racing to develop the same drug/vaccine: each pays a fixe
 
 
 
-::: {.notes}
-We now shift from single-firm models to strategic interaction. The patent race setup is a simultaneous-move game: each firm decides whether to invest $f$ (enter the race) or not. The key feature is "winner takes all" — if only one firm succeeds, it gets $\pi^m$; if both succeed, they split the market ($\pi^d$ each).
 
-The welfare benchmarks $W^m$ and $W^d$ include consumer surplus, which is higher under duopoly ($CS^d > CS^m$). This creates a wedge between private and social incentives: firms care about profit, the planner cares about total welfare.
-
-Pharma application: multiple labs racing to develop a COVID vaccine, each investing billions with uncertain success.
-:::
 
 ## Patent race: game structure
 
