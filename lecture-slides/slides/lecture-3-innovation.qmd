@@ -240,7 +240,7 @@ Holding everything else fixed, an incumbent monopolist has **weaker** incentives
 - Very high competition: post-innovation rents are compressed, reducing innovation incentives.
 
 ::: {.callout-note title="Inverted-U evidence (QJE)"}
-@aghionCompetitionInnovationInvertedU2005 document an **inverted-U** relationship between product-market competition and innovation (patents/citations) in UK firms, consistent with "escape competition" incentives for neck-and-neck firms and a **replacement effect** for laggards.
+@aghionCompetitionInnovationInvertedU2005  document an **inverted-U** relationship between product-market competition and innovation (patents/citations) in UK firms, consistent with "escape competition" incentives for neck-and-neck firms and a **replacement effect** for laggards.
 :::
 
 ::: {.content-visible when-format="beamer"}
