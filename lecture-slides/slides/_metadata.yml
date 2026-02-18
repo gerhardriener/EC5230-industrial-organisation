@@ -1,4 +1,7 @@
 format:
+  clean-typst:
+    bibliographystyle: "chicago-author-date"
+    commands: [small-cite]
   clean-revealjs:
     slide-number: true
     title-slide-attributes:
@@ -8,12 +11,12 @@ format:
     transition: none
     background-transition: fade
 
-  beamer:
-    keep-tex: false
-    header-includes: |
-      \usepackage{standalone}
-      \usepackage{tikz}
-      \usepackage{pgfplots}
-      \usetikzlibrary{decorations.pathreplacing}
-      \usetikzlibrary{arrows.meta}
-      \pgfplotsset{compat=1.18}
+  # beamer:
+  #   keep-tex: false
+  #   header-includes: |
+  #     \usepackage{standalone}
+  #     \usepackage{tikz}
+  #     \usepackage{pgfplots}
+  #     \usetikzlibrary{decorations.pathreplacing}
+  #     \usetikzlibrary{arrows.meta}
+  #     \pgfplotsset{compat=1.18}

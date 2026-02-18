@@ -590,17 +590,17 @@ The "consumer surplus vs total surplus" are philosophical and political argument
 (i) which efficiencies matter, (ii) how evidence is organized, and (iii) which cases are brought.
 :::
 
-## Kaplow’s choosing a welfare standard
+## Kaplow's choosing a welfare standard
 
 - **Consumer welfare / consumer surplus (CS)**: weight consumers; producer gains may not offset consumer losses.
 - **Total welfare (TW)**: CS + producer surplus (PS); standard Kaldor–Hicks social surplus.
 
-Kaplow’s two core issues:
+Kaplow's two core issues:
 
 1. **Distribution**: does CS better protect poorer consumers?
 2. **Policy design**: if distribution matters, should it be handled by *competition law* or by *tax/transfer*?
 
-## Kaplow’s central claim
+## Kaplow's central claim
 
 The canonical welfare-econ logic in Kaplow:
 
@@ -641,7 +641,7 @@ A CS standard can be *strategically robust* in some political environments becau
 - If firms/rivals are the effective political actors, a CS standard can act as a **commitment device**
   against rent-seeking that masquerades as "efficiency".
 
-Bottom line: *even if TW is normatively attractive*, CS may dominate when institutions are captured or non-transparent.
+Conclusion: *even if TW is normatively attractive*, CS may dominate when institutions are captured or non-transparent.
 
 ::: {.notes}
 This is the bridge from "welfare economics" to "agency design":
@@ -670,12 +670,11 @@ They emphasize that legal rules must be operational under uncertainty:
 - per se vs rule-of-reason structure,
 - predictability and deterrence.
 
-## "Error costs" and why standards matter less than rules
+## "Error costs"
 
 Even if you pick CS or TW, what courts/agencies *do* is mediated by:
 
 - **Screens** (market definition, market power, foreclosure shares)
-- **Safe harbors**
 - **Presumptions** (e.g., certain concentration thresholds)
 - **Type I vs Type II errors** (false positives vs false negatives)
 
@@ -722,7 +721,7 @@ This is the practical embodiment of a CS-style constraint.
 
 ## EU enforcement priorities: "most harmful to consumers"
 
-The Commission’s effects-based language in Article 102 enforcement priorities is framed in terms of conduct "most harmful to consumers," consistent with consumer-harm screens.
+The Commission's effects-based language in Article 102 enforcement priorities is framed in terms of conduct "most harmful to consumers," consistent with consumer-harm screens.
 
 Interpretation for IO:
 
@@ -734,7 +733,7 @@ Interpretation for IO:
 Canada is the canonical example where merger review historically embedded a stronger **total welfare**
 logic via an efficiencies trade-off approach in agency guidance:
 
-- The Bureau’s Merger Enforcement Guidelines (2011) discuss efficiencies and their role in assessment. 
+- The Bureau's Merger Enforcement Guidelines (2011) discuss efficiencies and their role in assessment. 
 
 **Operational implication:**
 - parties invest heavily in measuring cost savings and productive efficiencies,
@@ -744,7 +743,7 @@ logic via an efficiencies trade-off approach in agency guidance:
 
 ## Australia: "public benefit" / society-wide welfare language
 
-Australia’s merger guidelines and authorization practice explicitly frame the objective in broad welfare terms
+Australia's merger guidelines and authorization practice explicitly frame the objective in broad welfare terms
 ("welfare of Australians", "society as a whole", best use of resources):
 
 - This is naturally aligned with **total welfare / net public benefit** balancing.

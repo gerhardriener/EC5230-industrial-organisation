@@ -1,0 +1,79 @@
+meta:
+  name: University of St Andrews
+  link: https://www.st-andrews.ac.uk
+
+logo:
+  images:
+    standard-horizontal-black:
+      path: resources/USA-logos/03-standard-horizontal/01-standard-black-text.png
+      alt: University of St Andrews standard horizontal logo.
+    standard-horizontal-white:
+      path: resources/USA-logos/03-standard-horizontal/02-standard-white-text.png
+      alt: University of St Andrews standard horizontal logo (reversed).
+    standard-vertical-black:
+      path: resources/USA-logos/04-standard-vertical/01-standard-vertical-black-text.png
+      alt: University of St Andrews standard vertical logo.
+    standard-vertical-white:
+      path: resources/USA-logos/04-standard-vertical/02-standard-vertical-white-text.png
+      alt: University of St Andrews standard vertical logo (reversed).
+    foundation-horizontal-black:
+      path: resources/USA-logos/01-foundation-horizontal/01-foundation-black-text.png
+      alt: University of St Andrews foundation horizontal logo with Founded 1413.
+    foundation-horizontal-white:
+      path: resources/USA-logos/01-foundation-horizontal/02-foundation-white-text.png
+      alt: University of St Andrews foundation horizontal logo (reversed) with Founded 1413.
+    foundation-vertical-black:
+      path: resources/USA-logos/02-foundation-vertical/01-foundation-vertical-black-text.png
+      alt: University of St Andrews foundation vertical logo with Founded 1413.
+    foundation-vertical-white:
+      path: resources/USA-logos/02-foundation-vertical/02-foundation-vertical-white-text.png
+      alt: University of St Andrews foundation vertical logo (reversed) with Founded 1413.
+  small:
+    light: standard-horizontal-black
+    dark: standard-horizontal-white
+  medium:
+    light: standard-horizontal-black
+    dark: standard-horizontal-white
+  large:
+    light: foundation-vertical-black
+    dark: foundation-vertical-white
+
+color:
+  palette:
+    sta-blue: "#00539B"
+    sta-red: "#EE312A"
+    sta-yellow: "#FFDF00"
+    sta-black: "#231F20"
+    sta-light-blue: "#00AEEF"
+    sta-mid-blue: "#007DC5"
+    sta-burgundy: "#C60C46"
+    sta-purple: "#7B439A"
+    sta-orange: "#F5842B"
+    sta-green: "#54B948"
+    sta-mid-green: "#00853F"
+    sta-dark-green: "#005953"
+    white: "#FFFFFF"
+  foreground: sta-black
+  background: white
+  primary: sta-blue
+  secondary: sta-burgundy
+  tertiary: sta-light-blue
+  success: sta-green
+  info: sta-mid-blue
+  warning: sta-orange
+  danger: sta-red
+  light: white
+  dark: sta-black
+  link: sta-blue
+
+typography:
+  fonts:
+    - family: PT Sans
+      source: google
+    - family: PT Serif
+      source: google
+    - family: Consolas
+      source: system
+  base: PT Sans
+  headings: PT Sans
+  monospace: Consolas
