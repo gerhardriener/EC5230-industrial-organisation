@@ -570,16 +570,15 @@ This is the core dynamic-static tension in endogenous market-structure models.
 
 # Addendum: Welfare Standards in Competition Policy (Consumer vs Total Surplus) {background-color="#00539b"}
 
-## Why IO students should care
+## Competition policy as applied IO
 
-Competition policy is applied IO: every merger/abuse case implicitly answers:
+ every merger/abuse case implicitly answers:
 
 - **What counts as harm?** (prices? quality? innovation? rivals?)
 - **Whose welfare counts?** consumers only, or consumers + producers?
 - **How are trade-offs treated?** (efficiency vs market power; static vs dynamic)
 
-This lecture: the *welfare standard* choice and what it implies for enforcement design,
-using four anchors:
+*Welfare standard* choice and what it implies for enforcement design:
 
 - @ChoiceWelfareStandards normative welfare economics + distribution separation
 - Neven & Röller : political economy of the welfare standard
@@ -621,7 +620,7 @@ For applied IO (mergers/abuse):
 - Under **TW**, an efficiency gain can offset a price increase if the *net surplus* rises.
 - Under **CS**, you often need **pass-through**: efficiencies must prevent consumers from being harmed.
 
-This difference is *huge* in cost-reduction mergers, vertical restraints, and platform settings where
+This difference is large in cost-reduction mergers, vertical restraints, and platform settings where
 PS can increase even when short-run prices rise.
 
 ## @nevenConsumerSurplusVs2005 merger control 
