@@ -446,12 +446,14 @@ Gerhard Riener
 \pi \nu T
 \]</span></p>
 <ul>
-<li><p>Per-period deadweight loss: <span class="math inline">\(\lambda \nu\)</span> <span class="math inline">\(\Rightarrow\)</span> patent DWL: <span class="math inline">\(\lambda \nu T\)</span></p></li>
-<li><p><strong>Interpretation</strong></p>
+<li>Per-period deadweight loss: <span class="math inline">\(\lambda \nu\)</span> <span class="math inline">\(\Rightarrow\)</span> patent DWL: <span class="math inline">\(\lambda \nu T\)</span></li>
+</ul>
+</section>
+<section id="interpretation-of-pi-and-lambda" class="slide level2">
+<h2>Interpretation of <span class="math inline">\(\pi\)</span> and <span class="math inline">\(\lambda\)</span></h2>
 <ul>
 <li><span class="math inline">\(\pi\)</span> is a reduced-form “appropriability” parameter</li>
 <li><span class="math inline">\(\lambda\)</span> captures the static distortion created by protection</li>
-</ul></li>
 </ul>
 
 <img data-src="../figs/fig-patents-monopoly-dwl.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:65.0%" alt="Monopoly diagram showing profit rectangle (pi nu) and deadweight loss triangle (lambda nu)"><aside class="notes">
@@ -815,24 +817,23 @@ T \approx \sum_{t=1}^{\tau}\frac{1}{(1+r)^t}
           display:block!important;
       }</style></aside>
 </section>
-<section id="shy-model-firms-choice-of-x-given-tau" class="slide level2">
-<h2>Shy model: firm’s choice of <span class="math inline">\(x\)</span> given <span class="math inline">\(\tau\)</span></h2>
+<section id="firms-choice-of-x-given-tau" class="slide level2">
+<h2>Firm’s choice of <span class="math inline">\(x\)</span> given <span class="math inline">\(\tau\)</span></h2>
 <p>Firm solves:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \max_x \ \Pi(x;\tau) &amp;= \sum_{t=1}^{\tau}\rho^{t-1}\pi(x)-R(x), \\
-\rho &amp;= \frac{1}{1+r}
+\text{where }\rho &amp;= \frac{1}{1+r}
 \end{aligned}
 \]</span></p>
-<p>Assume:</p>
-<ul>
-<li><p>per-period profit: <span class="math inline">\(\pi(x)=(a-c)\,x\)</span></p></li>
-<li><p>cost: <span class="math inline">\(R(x)=\frac{x^2}{2}\)</span></p></li>
-<li><p>Lemma:</p></li>
-</ul>
 <p><span class="math display">\[
 \sum_{t=1}^{\tau}\rho^{t-1}=\frac{1-\rho^\tau}{1-\rho}
 \]</span></p>
+<p>Assume:</p>
+<ul>
+<li>per-period profit: <span class="math inline">\(\pi(x)=(a-c)\,x\)</span></li>
+<li>cost: <span class="math inline">\(R(x)=\frac{x^2}{2}\)</span></li>
+</ul>
 <aside class="notes">
 <p>Walk through the firm’s problem: <span class="math inline">\(\max_x \sum_{t=1}^{\tau} \rho^{t-1}(a-c)x - x^2/2\)</span>. The per-period profit <span class="math inline">\((a-c)x\)</span> is linear in <span class="math inline">\(x\)</span> (simplified from the full monopoly profit for tractability). The R&amp;D cost <span class="math inline">\(x^2/2\)</span> is convex, ensuring an interior solution.</p>
 <p>The geometric sum <span class="math inline">\(\sum \rho^{t-1} = (1-\rho^\tau)/(1-\rho)\)</span> converts the finite-horizon discounted sum into a single multiplier. This is the discrete-time analogue of the <span class="math inline">\(T\)</span> we defined earlier. FOC: <span class="math inline">\((1-\rho^\tau)/(1-\rho) \cdot (a-c) = x\)</span>, giving the next slide’s result.</p>
@@ -848,8 +849,8 @@ T \approx \sum_{t=1}^{\tau}\frac{1}{(1+r)^t}
           display:block!important;
       }</style></aside>
 </section>
-<section id="shy-model-induced-innovation-level" class="slide level2">
-<h2>Shy model: induced innovation level</h2>
+<section id="induced-innovation-level" class="slide level2">
+<h2>Induced innovation level</h2>
 <p>FOC implies:</p>
 <p><span class="math display">\[
 x^I(\tau)=\frac{1-\rho^\tau}{1-\rho}(a-c)
@@ -938,20 +939,6 @@ x^I(\tau)=\frac{1-\rho^\tau}{1-\rho}(a-c)
 </div>
 </div>
 </div>
-</section>
-<section id="symmetric-patent-race-welfare-benchmarks" class="slide level2">
-<h2>Symmetric patent race: Welfare benchmarks</h2>
-<ul>
-<li>Welfare benchmarks (post-innovation welfare):
-<ul>
-<li>one research division: <span class="math inline">\(W^m=\pi^m+CS^m\)</span></li>
-<li>two research divisions: <span class="math inline">\(W^d=2\pi^d+CS^d\)</span></li>
-</ul></li>
-<li>Assumption (for the comparison):
-<ul>
-<li><span class="math inline">\(CS^d&gt;CS^m\)</span> (more competition in the product market raises consumer surplus)</li>
-</ul></li>
-</ul>
 <aside class="notes">
 <p>We now shift from single-firm models to strategic interaction. The patent race setup is a simultaneous-move game: each firm decides whether to invest <span class="math inline">\(f\)</span> (enter the race) or not. The key feature is “winner takes all” — if only one firm succeeds, it gets <span class="math inline">\(\pi^m\)</span>; if both succeed, they split the market (<span class="math inline">\(\pi^d\)</span> each).</p>
 <p>The welfare benchmarks <span class="math inline">\(W^m\)</span> and <span class="math inline">\(W^d\)</span> include consumer surplus, which is higher under duopoly (<span class="math inline">\(CS^d &gt; CS^m\)</span>). This creates a wedge between private and social incentives: firms care about profit, the planner cares about total welfare.</p>
@@ -967,6 +954,20 @@ x^I(\tau)=\frac{1-\rho^\tau}{1-\rho}(a-c)
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+</section>
+<section id="symmetric-patent-race-welfare-benchmarks" class="slide level2">
+<h2>Symmetric patent race: Welfare benchmarks</h2>
+<ul>
+<li>Welfare benchmarks (post-innovation welfare):
+<ul>
+<li>one research division: <span class="math inline">\(W^m=\pi^m+CS^m\)</span></li>
+<li>two research divisions: <span class="math inline">\(W^d=2\pi^d+CS^d\)</span></li>
+</ul></li>
+<li>Assumption (for the comparison):
+<ul>
+<li><span class="math inline">\(CS^d&gt;CS^m\)</span> (more competition in the product market raises consumer surplus)</li>
+</ul></li>
+</ul>
 </section>
 <section id="patent-race-game-structure" class="slide level2">
 <h2>Patent race: game structure</h2>
@@ -1163,6 +1164,285 @@ f^{publ}_2 &amp;= p(1-2p)W^m + p^2W^d \\
 <aside class="notes">
 <p>Recap the four main results: (1) patents trade static DWL for dynamic incentives; (2) the ideas model gives a clean break-even condition <span class="math inline">\(\pi\nu T \ge F\)</span> and shows the planner sets <span class="math inline">\(T\)</span> to just satisfy it; (3) breadth and length are substitutes in delivering incentives; (4) patent races can produce excessive duplication.</p>
 <p>Preview next week: we move from innovation policy to strategic commitment. Stackelberg leadership and strategic delegation (Vickers) are about how firms use observable commitments to shift equilibrium outcomes — a different type of strategic interaction from the simultaneous-move games we’ve studied so far.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="case-study-covid-19-vaccine-patent-race" class="title-slide slide level1 center" data-background-color="#00539b">
+<h1>Case Study: COVID-19 vaccine patent race</h1>
+
+</section>
+<section id="history-mrna-as-a-platform-storzintellectualpropertyraces2022" class="slide level2">
+<h2>History: mRNA as a platform <span class="citation" data-cites="storzIntellectualPropertyRaces2022">(<a href="#/references" role="doc-biblioref" onclick=""><strong>storzIntellectualPropertyRaces2022?</strong></a>)</span></h2>
+<ul>
+<li><p>mRNA vaccines look modular, but rely on <em>layers</em> of upstream patents<br>
+(modified nucleosides, delivery/LNPs, manufacturing, formulations)</p></li>
+<li><p>Race was not only <strong>time-to-market</strong>, but also <strong>time-to-priority</strong>:</p>
+<ul>
+<li>who files first on enabling technologies vs.&nbsp;product-specific</li>
+<li>how broad claims interact with follow-on entrants and variants</li>
+</ul></li>
+<li><p>Post-success phase: fast diffusion of know-how → <strong>ex post disputes</strong> over who owns key enabling steps<br>
+(licensing demands, litigation threats, bargaining over royalties)</p></li>
+</ul>
+<div title="IO lens">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>IO lens</strong></p>
+</div>
+<div class="callout-content">
+<p>Treat the vaccine as an <em>innovation stack</em>: competition happens across layers (upstream enablement) and across products (downstream vaccines).</p>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>Use Storz (2022) as the narrative backbone: mRNA “speed” is enabled by prior platform advances, which is exactly why IP becomes contentious after the fact. Emphasise: in platform industries, “who invented the product” is not the same as “who owns the bottleneck patents.”</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="problem-1-patent-race-incentives-interact-with-safety-kimoptimalpatentdesign2020" class="slide level2">
+<h2>Problem 1: patent-race incentives interact with safety <span class="citation" data-cites="kimOptimalPatentDesign2020">(<a href="#/references" role="doc-biblioref" onclick=""><strong>kimOptimalPatentDesign2020?</strong></a>)</span></h2>
+<ul>
+<li><p>Standard patent-race logic: <strong>winner-takes-most rents</strong> → strong incentives to accelerate R&amp;D effort</p></li>
+<li><p>With vaccines, firms choose <strong>two margins</strong>:</p>
+<ol type="1">
+<li>investment in <em>speed</em> (inventing first)<br>
+</li>
+<li>investment in <em>safety</em> (reducing side-effect risk)</li>
+</ol></li>
+<li><p>Liability regime matters:</p>
+<ul>
+<li>If the first inventor captures rents but also bears liability, <strong>private incentives can tilt</strong> toward <em>too much</em> investment in both speed and safety under strict liability (relative to the social optimum in the model)</li>
+</ul></li>
+<li><p>Empirical complication:</p>
+<ul>
+<li>“Race outcomes” depend on <em>legal institutions</em> (liability, indemnification, compensation schemes), not only patent length/breadth</li>
+</ul></li>
+</ul>
+<div title="Identification challenge">
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Identification challenge</strong></p>
+</div>
+<div class="callout-content">
+<p>Observed “R&amp;D intensity” bundles patent-race incentives with the liability/indemnity environment—hard to attribute outcomes to IP alone.</p>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>Anchor to Kim (2020): the distinctive feature is the joint choice of “invent” and “make safe,” and how liability rules re-rank incentives. Connect back to your race model: in vaccines, the prize is not just monopoly profit; it’s profit net of expected liability and reputational costs.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="problem-2-public-funding-private-appropriation-florio-2022-pooling-billette-de-villemeur-et-al.-2023" class="slide level2">
+<h2>Problem 2 public funding → private appropriation (Florio 2022) + pooling (Billette de Villemeur et al.&nbsp;2023)</h2>
+<ul>
+<li><p>mRNA COVID vaccines built on substantial <strong>public-sector science + funding</strong>, but patent ownership is largely private<br>
+→ distributional conflict: <em>who should capture returns?</em> (Florio 2022)</p></li>
+<li><p>This creates at wedge:</p>
+<ul>
+<li>ex ante: strong incentives to race</li>
+<li>ex post: fragmented rights → bargaining, “hold-up” risk, and politically salient access constraints</li>
+</ul></li>
+<li><p>Proposed “third way”: <strong>patent pooling</strong> to expand access while preserving incentives (Billette de Villemeur et al., SSRN 2023)</p>
+<ul>
+<li>pool aggregates relevant rights and offers standardized licences (reducing transaction costs)</li>
+<li>goal: <strong>maximize access</strong> subject to participation/incentive constraints</li>
+<li>positioned as an alternative to: (i) full waiver, (ii) fully fragmented bilateral licensing</li>
+</ul></li>
+</ul>
+<div title="Design margin">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Design margin</strong></p>
+</div>
+<div class="callout-content">
+<p>Pooling is a <em>market design</em> response: reduce IP fragmentation/frictions without eliminating IP rents entirely.</p>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>Use Florio (2022) to motivate why purely “private property” framing is politically unstable when taxpayers funded upstream knowledge. Then introduce pooling (Billette de Villemeur et al.) as an IO mechanism: coordination device that can mitigate anticommons/hold-up and accelerate diffusion. Tie back to your lecture: this is breadth/transferability in practice (licensing rules + governance).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="problem-fragmented-ip-after-the-innovation-race" class="slide level2">
+<h2>Problem: fragmented IP after the innovation race</h2>
+<ul>
+<li><p>COVID-19 vaccines are not single inventions but <strong>bundles of complementary technologies</strong>:</p>
+<ul>
+<li>platform patents (e.g.&nbsp;mRNA chemistry, delivery systems)</li>
+<li>formulation and manufacturing patents</li>
+<li>downstream production know-how</li>
+</ul></li>
+<li><p>Result: multiple entities hold indispensable rights<br>
+<span class="math inline">\(\Rightarrow\)</span> downstream producers must negotiate <strong>many licenses</strong> to manufacture at scale.</p></li>
+<li><p>IO interpretation:</p>
+<ul>
+<li>complements create <strong>multiple marginalization</strong></li>
+<li>bargaining frictions and legal uncertainty raise effective marginal costs</li>
+</ul></li>
+</ul>
+<div title="Key tension">
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Key tension</strong></p>
+</div>
+<div class="callout-content">
+<p>The patent race may solve innovation speed ex ante, but can generate coordination failures ex post.</p>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>This slide bridges from the patent-race section. Stress that the race produced innovation quickly, but ownership is fragmented afterward. Use language students know: complements, vertical structure, multiple margins. This sets up why a market-design solution becomes relevant.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="proposed-solution-a-non-profit-patent-pool-third-way" class="slide level2">
+<h2>Proposed solution: a non-profit patent pool (“third way”)</h2>
+<ul>
+<li><p>The paper proposes a <strong>non-profit patent pool</strong> that bundles all required licenses into a single contract (a “one-stop shop”).</p></li>
+<li><p>Pool objective:</p>
+<ul>
+<li><strong>maximize access / quantities</strong></li>
+<li>while ensuring patent holders are <em>not worse off</em> than under separate licensing (participation constraint).</li>
+</ul></li>
+<li><p>Compared regimes in the model:</p>
+<ol type="1">
+<li>separate, non-cooperative licensing (multiple margins)</li>
+<li>for-profit pool (joint profit maximization)</li>
+<li><strong>non-profit pool</strong> (access maximization)</li>
+</ol></li>
+<li><p>Economic mechanism:</p>
+<ul>
+<li>internalizes complementarities</li>
+<li>lowers royalty stack</li>
+<li>reduces transaction costs and hold-up risk.</li>
+</ul></li>
+</ul>
+<div title="IO insight">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>IO insight</strong></p>
+</div>
+<div class="callout-content">
+<p>Pooling converts many complementary monopolies into a single coordinated pricing problem.</p>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>Emphasise: this is not a patent waiver. It preserves incentives by maintaining patent-holder profits relative to decentralized licensing. Relate explicitly to Shapiro (patent thickets) and multiple marginalization from vertical IO.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="how-the-solution-fits-and-what-it-does-not-solve" class="slide level2">
+<h2>How the solution fits — and what it does <em>not</em> solve</h2>
+<h3 id="what-it-addresses-well">What it addresses well</h3>
+<ul>
+<li><strong>Fragmented ownership</strong> → bundling reduces bargaining frictions</li>
+<li><strong>Access problem</strong> → lower final prices, higher quantities</li>
+<li>Welfare gains increase with the number of patent holders.</li>
+</ul>
+<h3 id="what-remains-unresolved">What remains unresolved</h3>
+<ul>
+<li>Does <strong>not</strong> model the <em>ex ante patent race</em>:
+<ul>
+<li>incentives for speed vs safety</li>
+<li>duplication of R&amp;D effort</li>
+</ul></li>
+<li>Does not resolve manufacturing capacity or tacit know-how constraints by itself</li>
+</ul>
+<h3 id="lecture-takeaway">Lecture takeaway</h3>
+<ul>
+<li>Patent races solve the <strong>innovation problem</strong>.</li>
+<li>Patent pools address the <strong>coordination problem after innovation</strong>.</li>
+<li>Policy design must separate:
+<ul>
+<li>incentives to invent (dynamic efficiency)</li>
+<li>mechanisms for diffusion and global access (static + distributional efficiency).</li>
+</ul></li>
+</ul>
+<aside class="notes">
+<p>This is the synthesis slide. Position pooling as a downstream governance mechanism rather than an innovation-incentive mechanism. This helps students see that different policy tools target different margins. End with a strong conceptual distinction: race vs diffusion.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
