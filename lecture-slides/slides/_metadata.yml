@@ -2,6 +2,12 @@ format:
   clean-typst:
     bibliographystyle: "chicago-author-date"
     commands: [small-cite]
+    logo:
+      location: right-top
+      width: 5cm
+      padding-right: 1in
+      padding-top: 0.25in
+      alt: University of St Andrews
   clean-revealjs:
     slide-number: true
     title-slide-attributes:

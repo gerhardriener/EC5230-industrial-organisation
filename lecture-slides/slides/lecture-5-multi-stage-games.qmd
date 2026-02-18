@@ -36,6 +36,15 @@ How commitment in earlier stages changes equilibrium behaviour in later stages.
   - Stackelberg quantity leadership
   - Strategic delegation [@vickersDelegationTheoryFirm1985]
 
+## Learning objectives
+
+By the end of this lecture you should be able to:
+
+1. Define subgame perfect Nash equilibrium and apply backward induction in finite games
+2. Derive and interpret the Stackelberg equilibrium under quantity leadership
+3. Set up and solve a two-stage delegation game (contract stage + product-market subgame)
+4. Compare equilibrium outcomes and welfare across Cournot, Stackelberg, and delegation
+
 ## Solution concept: subgame perfect equilibrium
 
 - A strategy profile is a **subgame perfect Nash equilibrium (SPNE)** if it induces a Nash equilibrium in every subgame
@@ -46,7 +55,13 @@ How commitment in earlier stages changes equilibrium behaviour in later stages.
 ::: {.callout-important}
 ## Commitment logic
 
-A first-stage action changes the feasible set faced by later movers (via best responses), not the payoff function.
+A credible first-stage choice is observed by later movers and shifts their best responses. The payoff function is unchanged — only equilibrium strategies change.
+:::
+
+::: {.callout-note}
+## Discussion question
+
+Why does commitment require the first-stage action to be **observable**? What happens to the Stackelberg outcome if the follower cannot verify $q_1$ before choosing $q_2$?
 :::
 
 # Stackelberg competition {background-color="#00539b"}
@@ -82,7 +97,7 @@ $$
 Quantities are strategic substitutes: when the rival increases output, my best-response output decreases (downward-sloping best response).
 :::
 
-# Stackelberg model: leader choice
+## Stackelberg model: leader choice
 
 - Substitute follower response into leader profit:
 
@@ -100,6 +115,22 @@ $$
 The leader commits to a higher $q_1$, anticipating that the follower reduces $q_2$.
 :::
 
+::: {.notes}
+**Full FOC derivation (leader):**
+
+Substitute $BR_2(q_1)=\frac{A-c-q_1}{2}$ into leader profit:
+
+$$\pi_1(q_1)=\left(A-q_1-\frac{A-c-q_1}{2}-c\right)q_1=\left(\frac{A-c}{2}-\frac{q_1}{2}\right)q_1=\frac{A-c}{2}q_1-\frac{1}{2}q_1^2$$
+
+First-order condition:
+
+$$\frac{\partial\pi_1}{\partial q_1}=\frac{A-c}{2}-q_1=0\quad\Rightarrow\quad q_1^S=\frac{A-c}{2}$$
+
+Then follower output:
+
+$$q_2^S=BR_2(q_1^S)=\frac{A-c-\frac{A-c}{2}}{2}=\frac{A-c}{4}$$
+:::
+
 ## Stackelberg v Cournot: equilibrium outcomes
 
 - Identical marginal costs ($c$) imply:
@@ -112,6 +143,12 @@ The leader commits to a higher $q_1$, anticipating that the follower reduces $q_
 | Price | $p^S=\frac{A+3c}{4}$ | $p^C=\frac{A+2c}{3}$ |
 | Firm 1 profit | $\pi_1^S=\frac{(A-c)^2}{8}$ | $\pi_1^C=\frac{(A-c)^2}{9}$ |
 | Firm 2 profit | $\pi_2^S=\frac{(A-c)^2}{16}$ | $\pi_2^C=\frac{(A-c)^2}{9}$ |
+
+::: {.callout-note}
+## Discussion question
+
+The leader earns more than in Cournot and the follower earns less. Is this because the leader is more *capable*, or because the *structure* of sequential moves creates an advantage? Could the follower also benefit from moving first?
+:::
 
 ## Stackelberg model: remarks
 
@@ -150,7 +187,7 @@ With $A=10$, $c=1$: $\pi_1^S=10.125 > \pi_1^C=9$ (first-mover advantage).
   - profits can rise for the leader and fall for the follower relative to Cournot
 
 ::: {.callout-note}
-## Exam-useful statement
+## Exam-useful 
 
 Stackelberg leadership typically increases output relative to Cournot, so it is (weakly) better for consumers.
 :::
@@ -176,16 +213,12 @@ $$
 
 where $\pi_i=p(Q)q_i-cq_i$ and $Q=\sum_i q_i$
 
-::: {.callout-note}
-## Equivalent formulation
+- Equivalently: $M_i = p(Q)q_i - (c-\theta_i)q_i$ — so $\theta_i$ acts like a reduction in the manager's effective marginal cost
 
-$M_i = p(Q)q_i - (c-\theta_i)q_i$ so $\theta_i$ shifts the manager’s objective like a reduction in marginal cost.
-:::
-
-::: {.callout-note}
+::: {.callout-warning}
 ## Commitment assumption
 
-For delegation to affect rivals’ behaviour, contracts must be:
+For delegation to affect rivals' behaviour, contracts must be:
 
 - observable (rivals see $\theta_i$)
 - binding (owners cannot override managers after $\theta_i$ is set)
@@ -250,6 +283,26 @@ $$
 - Solving the three FOCs gives a best-response system in $(\theta_1,\theta_2,\theta_3)$
 - In symmetry, $\theta_i=\hat{\theta}$ for all $i$, implying $\hat{\theta}=\frac{1}{5}(A-c)$
 
+::: {.notes}
+**Full FOC derivation (owner, triopoly):**
+
+Let $\Theta_{-i}=\theta_j+\theta_k$. From the equilibrium expressions:
+
+$$\pi_i^*=\frac{(A-c-\theta_i-\Theta_{-i})(A-c+3\theta_i-\Theta_{-i})}{16}$$
+
+Differentiate with respect to $\theta_i$:
+
+$$\frac{\partial\pi_i^*}{\partial\theta_i}=\frac{1}{16}\Big[-(A-c+3\theta_i-\Theta_{-i})+3(A-c-\theta_i-\Theta_{-i})\Big]=0$$
+
+Expand and collect:
+
+$$2(A-c)-6\theta_i-2\Theta_{-i}=0\quad\Rightarrow\quad\theta_i=\frac{A-c}{3}-\frac{\Theta_{-i}}{3}=\frac{A-c}{3}-\frac{2}{3}\bar{\theta}_{-i}$$
+
+This is the best-response function shown on the next slide. Imposing symmetry $\theta_i=\bar{\theta}_{-i}=\hat{\theta}$:
+
+$$\hat{\theta}=\frac{A-c}{3}-\frac{2}{3}\hat{\theta}\quad\Rightarrow\quad\frac{5}{3}\hat{\theta}=\frac{A-c}{3}\quad\Rightarrow\quad\hat{\theta}=\frac{A-c}{5}$$
+:::
+
 ## Delegation: best response in incentives (triopoly)
 
 Define the rivals’ average incentive:
@@ -285,18 +338,24 @@ This is the standard “best-response fixed point” method: compute $BR(\cdot)$
 
 ## Delegation: strategic logic
 
-::: {.callout-warning}
-## Prisoners’ dilemma
-
-- **Unilateral incentive**: if rivals set $\theta=0$, I benefit from choosing $\theta_i>0$
-  - Positive $\theta_i$ commits my manager to higher output
+- **Unilateral incentive**: if rivals set $\theta=0$, choosing $\theta_i>0$ is strictly profitable
+  - Positive $\theta_i$ commits the manager to higher output
   - Rivals reduce output (quantities are strategic substitutes)
 
 - **Equilibrium outcome**: all firms choose $\hat{\theta}>0$
   - The strategic advantage disappears when everyone delegates
   - Profits fall: $\hat{\pi}<\pi^C$ (overproduction lowers price for all)
 
-Each owner chooses $\theta_i$ optimally given rivals’ choices, but the collective outcome is worse than $\theta=0$.
+::: {.callout-important}
+## Prisoners' dilemma
+
+Each owner's dominant strategy leads to a collectively worse outcome: all firms delegate, output rises, and equilibrium profits fall below the Cournot benchmark.
+:::
+
+::: {.callout-note}
+## Discussion question
+
+If delegation always lowers industry profits in equilibrium, why would any firm ever choose to delegate? What commitment or regulatory change would allow firms to avoid this outcome?
 :::
 
 ## Delegation: comparison table (triopoly)

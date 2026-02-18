@@ -3,3 +3,17 @@ author: Kazuharu Yanagimoto
 version: 0.4.5
 quarto-required: '>=1.8.0'
 source: kazuyanagimoto/quarto-clean-typst@v0.4.5
+contributes:
+  shortcodes:
+    - shortcodes.lua
+  formats:
+    revealjs:
+      filters:
+        - revealjs.lua
+    typst:
+      template-partials:
+        - typst-show.typ
+        - typst-template.typ
+      filters:
+        - typst-environment.lua
+        - revealjs.lua

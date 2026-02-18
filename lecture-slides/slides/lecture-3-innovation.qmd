@@ -51,7 +51,7 @@ Before the Industrial Revolution (~1760–1840), global GDP per capita was rough
 - Should we expect monopolies or competitive markets to innovate more? (We'll answer this formally in a moment.)
 :::
 
-## Market structure and innovation: a two-way relationship
+## Market structure and innovation
 
 **Market structure → innovation**
 
@@ -116,7 +116,9 @@ $$
 $\Delta \pi^m$ is the monopolist's value of *exclusive* access to the lower cost $c_1$ (it is incremental because the firm already earns rents at $c_0$).
 :::
 
-## Perfect competition benchmark (innovation creates rents)
+## Perfect competition benchmark 
+
+Observation **Innovation creates rents**
 
 **Before innovation (all firms at MC $c_0$):**
 
@@ -240,7 +242,7 @@ Holding everything else fixed, an incumbent monopolist has **weaker** incentives
 - Very high competition: post-innovation rents are compressed, reducing innovation incentives.
 
 ::: {.callout-note title="Inverted-U evidence (QJE)"}
-@aghionCompetitionInnovationInvertedU2005  document an **inverted-U** relationship between product-market competition and innovation (patents/citations) in UK firms, consistent with "escape competition" incentives for neck-and-neck firms and a **replacement effect** for laggards.
+@aghionCompetitionInnovationInvertedU2005 document an **inverted-U** relationship between product-market competition and innovation (patents/citations) in UK firms, consistent with "escape competition" incentives for neck-and-neck firms and a **replacement effect** for laggards.
 :::
 
 ::: {.content-visible when-format="beamer"}
@@ -303,7 +305,7 @@ Private incentives and social value need not align: **$\Delta W$ can exceed $\De
 - This gap motivates policy tools that raise private appropriability.
 
 ::: {.callout-note title="Welfare gains from product innovation (JPE)"}
-@trajtenbergWelfareAnalysisProduct1989 estimates consumer and producer surplus gains from quality improvements in computed tomography (CT) scanners, illustrating that the **social value** of innovation can greatly exceed the innovator's private returns.
+@trajtenbergWelfareAnalysisProduct1989  estimates consumer and producer surplus gains from quality improvements in computed tomography (CT) scanners, illustrating that the **social value** of innovation can greatly exceed the innovator's private returns.
 :::
 
 ## Quick numeric check (optional)
@@ -580,10 +582,10 @@ This is the core dynamic-static tension in endogenous market-structure models.
 
 *Welfare standard* choice and what it implies for enforcement design:
 
-- @ChoiceWelfareStandards normative welfare economics + distribution separation
+- Normative welfare economics + distribution separation
 - Neven & Röller : political economy of the welfare standard
 - Farrell & Katz: institutional/process critique of the "welfare standard debate"
-- @williamsonEconomiesAntitrustDefense1972: the classic *efficiency–market power* trade-off formalization
+- @williamsonEconomiesAntitrustDefense1968: the classic *efficiency–market power* trade-off formalization
 
 ::: {.callout-note title="Key takeaway"}
 The "consumer surplus vs total surplus" are philosophical and political arguments: it changes
@@ -656,7 +658,7 @@ This is the bridge from "welfare economics" to "agency design":
 Use this to interpret why legal systems embed "consumer not worse off" constraints.
 :::
 
-## @farrellEconomicsWelfareStandards "antitrust is not straightforwardly welfarist"
+## @farrellEconomicsWelfareStandards2006 "antitrust is not straightforwardly welfarist"
 
 Argue the CS vs TW debate misses two big points:
 
@@ -689,7 +691,7 @@ In IO terms:
 So the "real" question in many jurisdictions:
 - Which standard yields **better implementable rules** under information and political constraints?
 
-## @williamsonEconomiesAntitrustDefense1968: the trade-off diagram, formalized
+## @williamsonEconomiesAntitrustDefense1968 the trade-off diagram, formalized
 
 Core contribution:
 
