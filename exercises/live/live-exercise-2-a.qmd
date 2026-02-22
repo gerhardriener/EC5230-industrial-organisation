@@ -1,0 +1,149 @@
+---
+title: "Live Exercise 2: Replacement Effect and Social Value of Innovation"
+
+format:
+  html:
+    toc: false
+    embed-resources: true
+    number-sections: false
+  pdf:
+    documentclass: article
+    fontsize: 11pt
+    geometry: margin=1in
+    colorlinks: true
+    linkcolor: blue
+    urlcolor: blue
+    number-sections: false
+solutions: false
+---
+
+::: {.content-hidden unless-meta="solutions"}
+
+# Solutions
+
+:::
+
+**Group exercise (≈20 minutes)**
+
+- Work in groups of 2–3.
+- Show all intermediate steps — the algebra matters.
+- Full market coverage assumed throughout.
+
+---
+
+## Problem: Replacement effect and social value
+
+A pharmaceutical company has discovered a new manufacturing process (*Tech P*) that reduces the marginal cost of producing a drug from $c_0 = 60$ to $c_1 = 30$.
+Market demand for the drug is
+
+$$
+P(Q) = 100 - Q.
+$$
+
+Assume Tech P is available exclusively to the one firm that acquires it (patent protection is perfect).
+
+### (a) Is the innovation drastic?
+
+Use the monopoly pricing formula to determine whether Tech P is **drastic** or **non-drastic**. State the condition and evaluate it numerically.
+
+*Recall: a process innovation is drastic if $P^m(c_1) < c_0$, where $P^m(c) = \tfrac{A+c}{2}$ under linear demand $P = A - Q$.*
+
+### (b) Monopoly and competitive WTP
+
+Compute the **maximum willingness to pay** (WTP) for Tech P of:
+
+1. a **monopolist** (not threatened by entry)
+2. a **competitive innovator** — a firm that operates in a competitive market before acquiring the patent, then gains exclusive rights to Tech P
+
+*Hint for (2): use your result from (a) to determine whether the competitive innovator limit-prices at $p = c_0$ after acquiring the patent.*
+
+### (c) Social planner's value
+
+For linear demand $P = A - Q$ with efficient production (price equals marginal cost), total surplus is $W(c) = \tfrac{(A-c)^2}{2}$.
+
+1. Compute the social planner's value of the innovation, $\Delta W = W(c_1) - W(c_0)$.
+2. Arrange the three values — $\Delta\pi^m$, competitive WTP, $\Delta W$ — in increasing order.
+3. State Arrow's replacement effect in one sentence. Using the numbers from (b), explain what drives the gap between $\Delta\pi^m$ and the competitive WTP. Why is $\Delta W$ larger than both?
+
+---
+
+::: {.content-hidden unless-meta="solutions"}
+
+## Solution
+
+### (a) Drastic or non-drastic?
+
+With $P(Q) = 100 - Q$ and $c_1 = 30$, the post-innovation monopoly price is
+
+$$
+P^m(c_1) = \frac{A + c_1}{2} = \frac{100 + 30}{2} = 65.
+$$
+
+Since $P^m(c_1) = 65 > c_0 = 60$, the innovation is **non-drastic**.
+
+Intuitively, even with the lower cost, the monopolist would price above the competitive benchmark — so the innovation does not completely destroy the competitive fringe.
+
+### (b) Monopoly and competitive WTP
+
+#### Monopoly WTP
+
+**Pre-innovation** ($c_0 = 60$):
+
+$$
+\max_Q (100 - Q - 60)Q = \max_Q (40 - Q)Q.
+$$
+
+FOC: $40 - 2Q = 0 \Rightarrow Q_0^m = 20$, $P_0^m = 80$,
+
+$$
+\pi_0^m = (80 - 60)\times 20 = 400.
+$$
+
+**Post-innovation** ($c_1 = 30$):
+
+$$
+\max_Q (70 - Q)Q. \quad \text{FOC: } 70 - 2Q = 0 \Rightarrow Q_1^m = 35,\; P_1^m = 65.
+$$
+
+$$
+\pi_1^m = (65 - 30)\times 35 = 1{,}225.
+$$
+
+**Monopoly WTP:**
+
+$$
+\Delta\pi^m = \pi_1^m - \pi_0^m = 1{,}225 - 400 = \mathbf{825}.
+$$
+
+#### Competitive WTP
+
+Since the innovation is non-drastic, the competitive innovator limit-prices at $p = c_0 = 60$ after acquiring the patent:
+
+$$
+Q = 100 - 60 = 40, \qquad \text{profit} = (c_0 - c_1)\times Q = 30\times 40 = \mathbf{1{,}200}.
+$$
+
+### (c) Social planner's value and the replacement effect
+
+$$
+W(c_0) = \frac{(100 - 60)^2}{2} = \frac{1{,}600}{2} = 800, \qquad
+W(c_1) = \frac{(100 - 30)^2}{2} = \frac{4{,}900}{2} = 2{,}450.
+$$
+
+$$
+\Delta W = 2{,}450 - 800 = \mathbf{1{,}650}.
+$$
+
+**Increasing order:**
+
+$$
+\underbrace{825}_{\Delta\pi^m} \;<\; \underbrace{1{,}200}_{\text{competitive WTP}} \;<\; \underbrace{1{,}650}_{\Delta W}.
+$$
+
+*(Check: with linear demand, $\Delta W = 2\,\Delta\pi^m$ always holds — the planner values the output expansion that the monopolist ignores.)*
+
+**Replacement effect:** The monopolist already earns $\pi_0^m = 400$ before innovating; innovation only adds 825 to its profit rather than yielding the full post-innovation profit of 1,225. The competitive innovator earns zero before the patent, so its incremental gain (1,200) is larger. This is Arrow's replacement effect: pre-innovation rents reduce the incumbent's marginal gain from innovation.
+
+**Why $\Delta W > $ competitive WTP:** The social planner also values the consumer surplus gains from the output expansion ($Q$ rises from 40 to 70 under efficient pricing at $c_1$), which no private firm captures. Neither private incentive approaches the social value of the innovation.
+
+:::

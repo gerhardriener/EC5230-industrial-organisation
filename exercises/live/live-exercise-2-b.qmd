@@ -1,0 +1,153 @@
+---
+title: "Live Exercise 3: Optimal Patent Length — the Ideas Model"
+
+format:
+  html:
+    toc: false
+    embed-resources: true
+    number-sections: false
+  pdf:
+    documentclass: article
+    fontsize: 11pt
+    geometry: margin=1in
+    colorlinks: true
+    linkcolor: blue
+    urlcolor: blue
+    number-sections: false
+solutions: false
+---
+
+::: {.content-hidden unless-meta="solutions"}
+
+# Solutions
+
+:::
+
+**Group exercise (≈20 minutes)**
+
+- Work in groups of 2–3.
+- Show all intermediate steps.
+- Parts (a)–(c) are computational; part (d) is a short discussion.
+
+---
+
+## Problem: Patent length and the ideas model
+
+A patent regulator is evaluating two candidate drugs under the Scotchmer ideas model.
+Each drug is characterised by a pair $(\nu, F)$, where $\nu$ is the per-period consumer surplus under competitive supply and $F$ is the fixed development cost.
+
+The regulatory parameters are:
+
+$$
+\pi = \tfrac{1}{2}, \qquad \lambda = \tfrac{1}{4}, \qquad r = \tfrac{1}{4},
+$$
+
+where $\pi$ is the share of per-period consumer surplus appropriated by the patent holder as profit, $\lambda$ is the per-period deadweight loss as a share of $\nu$, and $r$ is the discount rate. The current (discounted) patent length is $T = 20$.
+
+| Drug | $\nu$ | $F$ |
+|------|------:|----:|
+| Alpha | 10 | 60 |
+| Beta  |  5  | 10 |
+
+### (a) Private investment condition
+
+For each drug, determine whether a firm will voluntarily invest given $T = 20$.
+
+The investment condition is: $\pi \nu T \ge F$.
+
+### (b) Net social value
+
+For each drug, compute the net discounted social value of development:
+
+$$
+\text{Social value} = \frac{\nu}{r} - \lambda \nu T - F.
+$$
+
+*(Note: with $r = \tfrac{1}{4}$, the perpetual benefit per unit of $\nu$ is $\tfrac{1}{r} = 4$.)*
+
+Does either drug yield a positive net social surplus at $T = 20$?
+
+### (c) Socially optimal patent length for Drug Beta
+
+Find the **minimum patent length** $T^*$ that just induces private investment in Drug Beta.
+At $T = T^*$, compute the net social value and state your conclusion.
+
+### (d) Discussion (5 minutes)
+
+At $T = 20$, both drugs are privately profitable yet socially wasteful. Drug Beta becomes socially efficient at a much shorter patent length.
+
+1. What does this imply for the design of a **uniform** patent length (the same $T$ for all drugs)?
+2. Why is it difficult in practice to implement **drug-specific** patent lengths, even if they would be welfare-improving?
+
+---
+
+::: {.content-hidden unless-meta="solutions"}
+
+## Solution
+
+**Parameters:** $\pi = \tfrac{1}{2}$, $\lambda = \tfrac{1}{4}$, $r = \tfrac{1}{4}$ (so $\tfrac{1}{r} = 4$), $T = 20$.
+
+### (a) Private investment condition
+
+**Drug Alpha** ($\nu = 10$, $F = 60$):
+
+$$
+\pi\nu T = \tfrac{1}{2}\times 10\times 20 = 100 \ge 60. \qquad \checkmark \quad \text{Invests.}
+$$
+
+**Drug Beta** ($\nu = 5$, $F = 10$):
+
+$$
+\pi\nu T = \tfrac{1}{2}\times 5\times 20 = 50 \ge 10. \qquad \checkmark \quad \text{Invests.}
+$$
+
+Both drugs are privately profitable at $T = 20$.
+
+### (b) Net social value
+
+$$
+\text{Social value} = \frac{\nu}{r} - \lambda\nu T - F.
+$$
+
+**Drug Alpha:**
+
+$$
+\frac{10}{0.25} - \frac{1}{4}\times 10\times 20 - 60 = 40 - 50 - 60 = -70 < 0.
+\qquad \text{Socially wasteful.}
+$$
+
+**Drug Beta:**
+
+$$
+\frac{5}{0.25} - \frac{1}{4}\times 5\times 20 - 10 = 20 - 25 - 10 = -15 < 0.
+\qquad \text{Socially wasteful.}
+$$
+
+Neither drug yields positive net social surplus at $T = 20$. The discounted deadweight loss during the long patent period ($\lambda\nu T$) exceeds the present value of social benefit ($\nu/r$), net of development cost.
+
+*Intuition:* With $r = 1/4$, the present value of the perpetual benefit stream is only $\nu/r = 4\nu$ — the high discount rate makes future competitive benefits worth little today. Meanwhile, 20 periods of monopoly pricing generate a large deadweight loss.
+
+### (c) Socially optimal patent length for Drug Beta
+
+Set the investment condition to equality and solve for $T^*$:
+
+$$
+\pi\nu T^* = F \;\Rightarrow\; \tfrac{1}{2}\times 5\times T^* = 10 \;\Rightarrow\; T^* = 4.
+$$
+
+**Social value at $T^* = 4$:**
+
+$$
+\frac{5}{\,1/4\,} - \frac{1}{4}\times 5\times 4 - 10 = 20 - 5 - 10 = 5 > 0. \qquad \checkmark
+$$
+
+A patent of length $T^* = 4$ is sufficient to induce investment in Drug Beta **and** generates a positive net social surplus of 5.
+The current 20-period patent is five times longer than necessary: the excess deadweight loss from periods 5–20 is a pure social waste — Drug Beta would have been developed anyway.
+
+### (d) Discussion
+
+**Uniform patent length:** A single $T$ must simultaneously incentivise high-cost drugs (large $F$, need long protection) and avoid over-rewarding low-cost drugs (small $F$, short protection suffices). With heterogeneous $(\nu, F)$ pairs, no uniform $T$ can be first-best: it will either leave high-$F$ drugs underdeveloped or generate excessive deadweight loss for low-$F$ drugs.
+
+**Drug-specific patent lengths:** A regulator would need to observe each drug's $(\nu, F)$, which are private information held by the firm. Firms have strong incentives to overstate $F$ to obtain longer protection. Solving this requires screening mechanisms or revelation procedures that are administratively complex and litigation-prone. In practice, partial adjustments are made through supplementary protection certificates, compulsory licensing provisions, and tiered examination standards — but a clean drug-by-drug $T^*$ remains infeasible.
+
+:::
