@@ -35,6 +35,10 @@ $U_1(\ell)=\bar u - p_1 - c|\ell-a|$, $U_2(\ell)=\bar u - p_2 - c|\ell-(L-b)|$, 
 ```
 :::
 
+::: {.content-visible when-format="typst"}
+![](../figs/fig-hotelling-fixed-location-cetz.svg){fig-alt="Hotelling line with fixed locations" fig-align="center" width="80%"}
+:::
+
 ::: {.content-visible when-format="revealjs"}
 ![](../figs/fig-hotelling-fixed-location.svg){fig-alt="Hotelling line with fixed locations" fig-align="center" width="70%"}
 :::
@@ -87,6 +91,10 @@ Co-location removes captive consumers; any $p>0$ can be profitably undercut.
 ```{=latex}
 \resizebox{0.6\textwidth}{!}{\includestandalone{../figs/source/fig-hotelling-movement-location}}
 ```
+:::
+
+::: {.content-visible when-format="typst"}
+![](../figs/fig-hotelling-movement-location-cetz.svg){fig-align="center" width="60%"}
 :::
 
 ::: {.content-visible when-format="revealjs"}
@@ -155,6 +163,10 @@ $$
 ```
 :::
 
+::: {.content-visible when-format="typst"}
+![](../figs/fig-hotelling-profit-function-cetz.svg){fig-alt="Hotelling price subgame: payoff regions" fig-align="center" width="90%"}
+:::
+
 ::: {.content-visible when-format="revealjs"}
 ![](../figs/fig-hotelling-profit-function.svg){fig-alt="Hotelling price subgame: payoff regions" fig-align="center" width="80%"}
 :::
@@ -173,6 +185,10 @@ $$
 ```{=latex}
 \resizebox{0.5\textwidth}{!}{\includestandalone{../figs/source/fig-salop-cycle}}
 ```
+:::
+
+::: {.content-visible when-format="typst"}
+![](../figs/fig-salop-cycle-cetz.svg){fig-align="center" width="50%"}
 :::
 
 ::: {.content-visible when-format="revealjs"}
@@ -237,6 +253,10 @@ Competitive-region inverse demand is steeper than monopoly-region inverse demand
 ```{=latex}
 \resizebox{0.7\textwidth}{!}{\includestandalone{../figs/source/fig-salop-demand-comp-mon}}
 ```
+:::
+
+::: {.content-visible when-format="typst"}
+![](../figs/fig-salop-demand-comp-mon-cetz.svg){fig-alt="Salop demand: monopoly vs competitive regimes" fig-align="center" width="70%"}
 :::
 
 ::: {.content-visible when-format="revealjs"}

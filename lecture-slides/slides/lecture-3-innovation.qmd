@@ -170,6 +170,10 @@ Boundary case: $P^m(c_1)=c_0$ (equivalently $A+c_1=2c_0$).
 \resizebox{0.95\textwidth}{!}{\includestandalone{../figs/source/fig-innovation-drastic-threshold}}
 :::
 
+::: {.content-visible when-format="typst"}
+![](../figs/fig-innovation-drastic-threshold-cetz.svg){fig-alt="Two-panel demand-cost diagram comparing non-drastic and drastic innovation conditions" fig-align="center" width="92%"}
+:::
+
 ::: {.content-visible when-format="html"}
 ![](../figs/fig-innovation-drastic-threshold.svg){fig-alt="Two-panel demand-cost diagram comparing non-drastic and drastic innovation conditions" fig-align="center" width="92%"}
 :::
@@ -195,6 +199,10 @@ The competitive innovator earns $32 > 20$ (the monopolist's WTP). The monopolist
 
 ::: {.content-visible when-format="beamer"}
 \resizebox{0.95\textwidth}{!}{\includestandalone{../figs/source/fig-innovation-replacement-effect}}
+:::
+
+::: {.content-visible when-format="typst"}
+![](../figs/fig-innovation-replacement-effect-cetz.svg){fig-alt="Two-panel surplus diagram: monopoly replaces existing rents while competitive innovator creates new rents" fig-align="center" width="95%"}
 :::
 
 ::: {.content-visible when-format="html"}
@@ -247,6 +255,10 @@ Holding everything else fixed, an incumbent monopolist has **weaker** incentives
 
 ::: {.content-visible when-format="beamer"}
 \resizebox{0.8\textwidth}{!}{\includestandalone{../figs/source/fig-innovation-inverted-u}}
+:::
+
+::: {.content-visible when-format="typst"}
+![](../figs/fig-innovation-inverted-u-cetz.svg){fig-alt="Inverted-U relationship between competition and innovation, after Aghion et al. (2005)" fig-align="center" width="75%"}
 :::
 
 ::: {.content-visible when-format="html"}
