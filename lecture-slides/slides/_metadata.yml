@@ -1,3 +1,4 @@
+title: "EC5230 – Industrial Organisation"
 format:
   clean-typst:
     bibliographystyle: "chicago-author-date"
@@ -16,6 +17,11 @@ format:
     preview-links: auto
     transition: none
     background-transition: fade
+execute:
+  echo: false
+  warning: false
+  message: false
+  cache: true
 
   # beamer:
   #   keep-tex: false

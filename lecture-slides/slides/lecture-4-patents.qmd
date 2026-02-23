@@ -1,5 +1,5 @@
 ---
-title: "Lecture 4 - Patents and Intellectual Property Rights"
+subtitle: "Lecture 4 - Patents and Intellectual Property Rights"
 ---
 
 # Patents and Intellectual Property Rights {background-color="#00539b"}

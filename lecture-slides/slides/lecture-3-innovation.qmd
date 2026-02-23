@@ -1,5 +1,5 @@
 ---
-title: "Lecture 3 - Innovation"
+subtitle: "Lecture 3 - Innovation"
 ---
 
 # Innovation and Market Structure {background-color="#00539b"}

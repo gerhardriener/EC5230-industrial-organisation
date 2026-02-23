@@ -1,20 +1,5 @@
 ---
-title: "Lecture 1 - Oligopoly"
-format:
-  clean-revealjs:
-    slide-number: true
-    title-slide-attributes:
-      data-background-color: "#00539b"
-    chalkboard: true
-    preview-links: auto
-    transition: none
-    background-transition: fade
-  beamer: default
-execute:
-  echo: false
-  warning: false
-  message: false
-  cache: true
+subtitle: "Lecture 1 - Oligopoly"
 ---
 
 # Market Structures {background-color="#00539b"}
