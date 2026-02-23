@@ -1,19 +1,5 @@
 ---
 title: "Live Exercise 1: Hotelling with quadratic transportation costs"
-
-format:
-  html:
-    toc: false
-    embed-resources: true
-    number-sections: false
-  pdf:
-    documentclass: article
-    fontsize: 11pt
-    geometry: margin=1in
-    colorlinks: true
-    linkcolor: blue
-    urlcolor: blue
-    number-sections: false
 solutions: true
 ---
 
