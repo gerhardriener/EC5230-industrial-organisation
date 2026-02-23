@@ -1,18 +1,5 @@
 ---
 title: "Exercise 1: Oligopoly and Product Differentiation"
-format:
-  html:
-    toc: false
-    embed-resources: true
-    number-sections: false
-  pdf:
-    documentclass: article
-    fontsize: 11pt
-    geometry: margin=1in
-    colorlinks: true
-    linkcolor: blue
-    urlcolor: blue
-    number-sections: false
 solutions: true
 ---
 

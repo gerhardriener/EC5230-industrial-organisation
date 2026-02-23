@@ -1,5 +1,5 @@
 ---
-subtitle: "Lecture 5 – Multi-stage Games"
+subtitle: "Lecture 5 - Multi-stage Games"
 ---
 
 # Multi-stage Games {background-color="#00539b"}

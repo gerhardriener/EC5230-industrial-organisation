@@ -1,15 +1,5 @@
 ---
 title: "Exercise 2: Innovation Incentives & Patent Race"
-format:
-  html:
-    toc: false
-    embed-resources: true
-    number-sections: false
-  pdf:
-    documentclass: article
-    fontsize: 11pt
-    geometry: margin=1in
-    number-sections: false
 solutions: false
 ---
 

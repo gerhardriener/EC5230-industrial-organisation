@@ -1,5 +1,5 @@
 ---
-subtitle: "Lecture 0 – Introduction"
+subtitle: "Lecture 0 - Introduction"
 ---
 
 ## Course Overview
