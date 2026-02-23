@@ -1,6 +1,6 @@
 ---
 title: "Exercise 2: Innovation Incentives & Patent Race"
-solutions: false
+solutions: true
 ---
 
 ::: {.content-hidden unless-meta="solutions"}
