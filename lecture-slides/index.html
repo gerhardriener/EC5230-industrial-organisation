@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.20">
+<meta name="generator" content="quarto-1.9.22">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,6 +35,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../resources/USA-logos/03-standard-horizontal/01-standard-black-text.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -42,10 +43,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-3512cbed9e2527d986e9b0b56d261405.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-4142a5fef5316da3b1008a6867143929.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-ae595805d2268b1443de76f89153f5ea.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-4142a5fef5316da3b1008a6867143929.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-28d27a42a56729422b407e3a5d101f61.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-b58387634e8da4d99d600f52fbbd18cd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-b58387634e8da4d99d600f52fbbd18cd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-b58387634e8da4d99d600f52fbbd18cd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -77,13 +82,179 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar docked nav-fixed quarto-light">
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../resources\USA-logos\03-standard-horizontal\01-standard-black-text.png" alt="University of St Andrews standard horizontal logo." class="navbar-logo light-content">
+    <img src="../resources\USA-logos\03-standard-horizontal\02-standard-white-text.png" alt="University of St Andrews standard horizontal logo (reversed)." class="navbar-logo dark-content">
+    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">EC5230 Industrial Organisation</span>
     </a>
@@ -108,31 +279,31 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">All Lecture Slides</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lecture-slides/slides/lecture-0-intro.html">
+    <a class="dropdown-item" href="../lecture-slides/slides/lecture-0-intro.pdf">
  <span class="dropdown-text">Week 0: Introduction</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lecture-slides/slides/lecture-1-oligopoly.html">
+    <a class="dropdown-item" href="../lecture-slides/slides/lecture-1-oligopoly.pdf">
  <span class="dropdown-text">Week 1: Oligopoly</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lecture-slides/slides/lecture-2-product-differentiation.html">
+    <a class="dropdown-item" href="../lecture-slides/slides/lecture-2-product-differentiation.pdf">
  <span class="dropdown-text">Week 2: Product Differentiation</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lecture-slides/slides/lecture-3-innovation.html">
+    <a class="dropdown-item" href="../lecture-slides/slides/lecture-3-innovation.pdf">
  <span class="dropdown-text">Week 3: Innovation</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lecture-slides/slides/lecture-4-patents.html">
+    <a class="dropdown-item" href="../lecture-slides/slides/lecture-4-patents.pdf">
  <span class="dropdown-text">Week 4: Patents and IPRs</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lecture-slides/slides/lecture-5-multi-stage-games.html">
+    <a class="dropdown-item" href="../lecture-slides/slides/lecture-5-multi-stage-games.pdf">
  <span class="dropdown-text">Week 5: Multi-stage Games</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lecture-slides/slides/lecture-6-corporate-rand.html">
+    <a class="dropdown-item" href="../lecture-slides/slides/lecture-6-corporate-rand.pdf">
  <span class="dropdown-text">Week 7: Cooperative R&amp;D</span></a>
   </li>  
     </ul>
@@ -163,6 +334,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -181,6 +353,12 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../resources\USA-logos\03-standard-horizontal\01-standard-black-text.png" alt="University of St Andrews standard horizontal logo." class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../resources\USA-logos\03-standard-horizontal\02-standard-white-text.png" alt="University of St Andrews standard horizontal logo (reversed)." class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      </a>
+      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -200,8 +378,8 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lecture-slides/slides/lecture-0-intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">EC5230 – Industrial Organisation</span></a>
+  <a href="../lecture-slides/slides/lecture-0-intro.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">EC5230 - Industrial Organisation</span></a>
   </div>
 </li>
       </ul>
@@ -217,8 +395,8 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lecture-slides/slides/lecture-1-oligopoly.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 1 - Oligopoly</span></a>
+  <a href="../lecture-slides/slides/lecture-1-oligopoly.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">EC5230 - Industrial Organisation</span></a>
   </div>
 </li>
       </ul>
@@ -234,8 +412,8 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lecture-slides/slides/lecture-2-product-differentiation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 2 – Product Differentiation</span></a>
+  <a href="../lecture-slides/slides/lecture-2-product-differentiation.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">EC5230 - Industrial Organisation</span></a>
   </div>
 </li>
       </ul>
@@ -251,8 +429,8 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lecture-slides/slides/lecture-3-innovation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 3 - Innovation</span></a>
+  <a href="../lecture-slides/slides/lecture-3-innovation.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">EC5230 - Industrial Organisation</span></a>
   </div>
 </li>
       </ul>
@@ -268,8 +446,8 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lecture-slides/slides/lecture-4-patents.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 4 - Patents and Intellectual Property Rights</span></a>
+  <a href="../lecture-slides/slides/lecture-4-patents.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">EC5230 - Industrial Organisation</span></a>
   </div>
 </li>
       </ul>
@@ -285,8 +463,8 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lecture-slides/slides/lecture-5-multi-stage-games.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 5 – Multi-stage Games</span></a>
+  <a href="../lecture-slides/slides/lecture-5-multi-stage-games.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">EC5230 - Industrial Organisation</span></a>
   </div>
 </li>
       </ul>
@@ -302,8 +480,8 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lecture-slides/slides/lecture-6-corporate-rand.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 6 – Cooperative R&amp;D</span></a>
+  <a href="../lecture-slides/slides/lecture-6-corporate-rand.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">EC5230 - Industrial Organisation</span></a>
   </div>
 </li>
       </ul>
@@ -324,6 +502,7 @@ ul.task-list li input[type="checkbox"] {
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
+
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -385,49 +564,49 @@ Note
 <tr class="odd">
 <td>Week 0</td>
 <td>Lecture 0: EC5230 - Industrial Organisation</td>
-<td><a href="../lecture-slides/slides/lecture-0-intro.html">qmd</a></td>
+<td><a href="../lecture-slides/slides/lecture-0-intro.pdf">qmd</a></td>
 <td><a href="slides/lecture-0-intro.html" target="_blank">slides</a></td>
 <td><a href="slides/lecture-0-intro.pdf" target="_blank">slides</a></td>
 </tr>
 <tr class="even">
 <td>Week 1</td>
 <td>Lecture 1: Oligopoly</td>
-<td><a href="../lecture-slides/slides/lecture-1-oligopoly.html">qmd</a></td>
+<td><a href="../lecture-slides/slides/lecture-1-oligopoly.pdf">qmd</a></td>
 <td><a href="slides/lecture-1-oligopoly.html" target="_blank">slides</a></td>
 <td><a href="slides/lecture-1-oligopoly.pdf" target="_blank">slides</a></td>
 </tr>
 <tr class="odd">
 <td>Week 2</td>
 <td>Lecture 2: Product Differentiation</td>
-<td><a href="../lecture-slides/slides/lecture-2-product-differentiation.html">qmd</a></td>
+<td><a href="../lecture-slides/slides/lecture-2-product-differentiation.pdf">qmd</a></td>
 <td><a href="slides/lecture-2-product-differentiation.html" target="_blank">slides</a></td>
 <td><a href="slides/lecture-2-product-differentiation.pdf" target="_blank">slides</a></td>
 </tr>
 <tr class="even">
 <td>Week 3</td>
 <td>Lecture 3: Innovation</td>
-<td><a href="../lecture-slides/slides/lecture-3-innovation.html">qmd</a></td>
+<td><a href="../lecture-slides/slides/lecture-3-innovation.pdf">qmd</a></td>
 <td><a href="slides/lecture-3-innovation.html" target="_blank">slides</a></td>
 <td><a href="slides/lecture-3-innovation.pdf" target="_blank">slides</a></td>
 </tr>
 <tr class="odd">
 <td>Week 4</td>
 <td>Lecture 4: Patents and Intellectual Property Rights</td>
-<td><a href="../lecture-slides/slides/lecture-4-patents.html">qmd</a></td>
+<td><a href="../lecture-slides/slides/lecture-4-patents.pdf">qmd</a></td>
 <td><a href="slides/lecture-4-patents.html" target="_blank">slides</a></td>
 <td><a href="slides/lecture-4-patents.pdf" target="_blank">slides</a></td>
 </tr>
 <tr class="even">
 <td>Week 5</td>
 <td>Lecture 5: Multi-stage Games</td>
-<td><a href="../lecture-slides/slides/lecture-5-multi-stage-games.html">qmd</a></td>
+<td><a href="../lecture-slides/slides/lecture-5-multi-stage-games.pdf">qmd</a></td>
 <td><a href="slides/lecture-5-multi-stage-games.html" target="_blank">slides</a></td>
 <td><a href="slides/lecture-5-multi-stage-games.pdf" target="_blank">slides</a></td>
 </tr>
 <tr class="odd">
 <td>Week 7</td>
 <td>Lecture 6: Cooperative R&amp;D</td>
-<td><a href="../lecture-slides/slides/lecture-6-corporate-rand.html">qmd</a></td>
+<td><a href="../lecture-slides/slides/lecture-6-corporate-rand.pdf">qmd</a></td>
 <td><a href="slides/lecture-6-corporate-rand.html" target="_blank">slides</a></td>
 <td><a href="slides/lecture-6-corporate-rand.pdf" target="_blank">slides</a></td>
 </tr>
@@ -440,6 +619,19 @@ Note
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {

@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en-GB"><head>
+<link href="../../resources/USA-logos/03-standard-horizontal/01-standard-black-text.png" rel="icon" type="image/png">
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-html/tabby.min.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-3512cbed9e2527d986e9b0b56d261405.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.20">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e7fd89eb10c6ed14e7244b08785b4b10.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.22">
 
   <meta name="author" content="Gerhard Riener">
-  <title>EC5230 Industrial Organisation – Lecture 5 – Multi-stage Games</title>
+  <title>EC5230 Industrial Organisation – EC5230 - Industrial Organisation</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -51,7 +52,7 @@
     div.csl-indent {
       margin-left: 2em;
     }  </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-b2736e9fcda83c748fd63b6e579550ef.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-5ae4655b4c89e97b7356c69b47bde5d6.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -147,12 +148,12 @@
   </style>
 </head>
 <body class="quarto-light">
-<script src="mathjax-config.js"></script>
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" data-background-color="#00539b" class="quarto-title-block center">
-  <h1 class="title">Lecture 5 – Multi-stage Games</h1>
+  <h1 class="title">EC5230 - Industrial Organisation</h1>
+  <p class="subtitle">Lecture 5 - Multi-stage Games</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -196,6 +197,16 @@ Gerhard Riener
 </ul></li>
 </ul>
 </section>
+<section id="learning-objectives" class="slide level2">
+<h2>Learning objectives</h2>
+<p>By the end of this lecture you should be able to:</p>
+<ol type="1">
+<li>Define subgame perfect Nash equilibrium and apply backward induction in finite games</li>
+<li>Derive and interpret the Stackelberg equilibrium under quantity leadership</li>
+<li>Set up and solve a two-stage delegation game (contract stage + product-market subgame)</li>
+<li>Compare equilibrium outcomes and welfare across Cournot, Stackelberg, and delegation</li>
+</ol>
+</section>
 <section id="solution-concept-subgame-perfect-equilibrium" class="slide level2">
 <h2>Solution concept: subgame perfect equilibrium</h2>
 <ul>
@@ -214,7 +225,20 @@ Gerhard Riener
 <p><strong>Commitment logic</strong></p>
 </div>
 <div class="callout-content">
-<p>A first-stage action changes the feasible set faced by later movers (via best responses), not the payoff function.</p>
+<p>A credible first-stage choice is observed by later movers and shifts their best responses. The payoff function is unchanged — only equilibrium strategies change.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Discussion question</strong></p>
+</div>
+<div class="callout-content">
+<p>Why does commitment require the first-stage action to be <strong>observable</strong>? What happens to the Stackelberg outcome if the follower cannot verify <span class="math inline">\(q_1\)</span> before choosing <span class="math inline">\(q_2\)</span>?</p>
 </div>
 </div>
 </div>
@@ -266,10 +290,9 @@ BR_2(q_1)=\frac{A-c-q_1}{2}
 </div>
 </div>
 </div>
-</section></section>
-<section>
-<section id="stackelberg-model-leader-choice" class="title-slide slide level1 center">
-<h1>Stackelberg model: leader choice</h1>
+</section>
+<section id="stackelberg-model-leader-choice" class="slide level2">
+<h2>Stackelberg model: leader choice</h2>
 <ul>
 <li>Substitute follower response into leader profit:</li>
 </ul>
@@ -296,6 +319,25 @@ BR_2(q_1)=\frac{A-c-q_1}{2}
 </div>
 </div>
 </div>
+<aside class="notes">
+<p><strong>Full FOC derivation (leader):</strong></p>
+<p>Substitute <span class="math inline">\(BR_2(q_1)=\frac{A-c-q_1}{2}\)</span> into leader profit:</p>
+<p><span class="math display">\[\pi_1(q_1)=\left(A-q_1-\frac{A-c-q_1}{2}-c\right)q_1=\left(\frac{A-c}{2}-\frac{q_1}{2}\right)q_1=\frac{A-c}{2}q_1-\frac{1}{2}q_1^2\]</span></p>
+<p>First-order condition:</p>
+<p><span class="math display">\[\frac{\partial\pi_1}{\partial q_1}=\frac{A-c}{2}-q_1=0\quad\Rightarrow\quad q_1^S=\frac{A-c}{2}\]</span></p>
+<p>Then follower output:</p>
+<p><span class="math display">\[q_2^S=BR_2(q_1^S)=\frac{A-c-\frac{A-c}{2}}{2}=\frac{A-c}{4}\]</span></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="stackelberg-v-cournot-equilibrium-outcomes" class="slide level2">
 <h2>Stackelberg v Cournot: equilibrium outcomes</h2>
@@ -348,6 +390,19 @@ BR_2(q_1)=\frac{A-c-q_1}{2}
 </tr>
 </tbody>
 </table>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Discussion question</strong></p>
+</div>
+<div class="callout-content">
+<p>The leader earns more than in Cournot and the follower earns less. Is this because the leader is more <em>capable</em>, or because the <em>structure</em> of sequential moves creates an advantage? Could the follower also benefit from moving first?</p>
+</div>
+</div>
+</div>
 </section>
 <section id="stackelberg-model-remarks" class="slide level2">
 <h2>Stackelberg model: remarks</h2>
@@ -408,7 +463,7 @@ BR_2(q_1)=\frac{A-c-q_1}{2}
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Exam-useful statement</strong></p>
+<p><strong>Exam-useful</strong></p>
 </div>
 <div class="callout-content">
 <p>Stackelberg leadership typically increases output relative to Cournot, so it is (weakly) better for consumers.</p>
@@ -441,20 +496,10 @@ BR_2(q_1)=\frac{A-c-q_1}{2}
 M_i=\pi_i+\theta_i q_i
 \]</span></p>
 <p>where <span class="math inline">\(\pi_i=p(Q)q_i-cq_i\)</span> and <span class="math inline">\(Q=\sum_i q_i\)</span></p>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Equivalent formulation</strong></p>
-</div>
-<div class="callout-content">
-<p><span class="math inline">\(M_i = p(Q)q_i - (c-\theta_i)q_i\)</span> so <span class="math inline">\(\theta_i\)</span> shifts the manager’s objective like a reduction in marginal cost.</p>
-</div>
-</div>
-</div>
-<div class="callout callout-note callout-titled callout-style-default">
+<ul>
+<li>Equivalently: <span class="math inline">\(M_i = p(Q)q_i - (c-\theta_i)q_i\)</span> — so <span class="math inline">\(\theta_i\)</span> acts like a reduction in the manager’s effective marginal cost</li>
+</ul>
+<div class="callout callout-warning callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
@@ -542,6 +587,27 @@ p^*=\frac{1}{4}\left(A+3c-\sum_i \theta_i\right)
 <li>Solving the three FOCs gives a best-response system in <span class="math inline">\((\theta_1,\theta_2,\theta_3)\)</span></li>
 <li>In symmetry, <span class="math inline">\(\theta_i=\hat{\theta}\)</span> for all <span class="math inline">\(i\)</span>, implying <span class="math inline">\(\hat{\theta}=\frac{1}{5}(A-c)\)</span></li>
 </ul>
+<aside class="notes">
+<p><strong>Full FOC derivation (owner, triopoly):</strong></p>
+<p>Let <span class="math inline">\(\Theta_{-i}=\theta_j+\theta_k\)</span>. From the equilibrium expressions:</p>
+<p><span class="math display">\[\pi_i^*=\frac{(A-c-\theta_i-\Theta_{-i})(A-c+3\theta_i-\Theta_{-i})}{16}\]</span></p>
+<p>Differentiate with respect to <span class="math inline">\(\theta_i\)</span>:</p>
+<p><span class="math display">\[\frac{\partial\pi_i^*}{\partial\theta_i}=\frac{1}{16}\Big[-(A-c+3\theta_i-\Theta_{-i})+3(A-c-\theta_i-\Theta_{-i})\Big]=0\]</span></p>
+<p>Expand and collect:</p>
+<p><span class="math display">\[2(A-c)-6\theta_i-2\Theta_{-i}=0\quad\Rightarrow\quad\theta_i=\frac{A-c}{3}-\frac{\Theta_{-i}}{3}=\frac{A-c}{3}-\frac{2}{3}\bar{\theta}_{-i}\]</span></p>
+<p>This is the best-response function shown on the next slide. Imposing symmetry <span class="math inline">\(\theta_i=\bar{\theta}_{-i}=\hat{\theta}\)</span>:</p>
+<p><span class="math display">\[\hat{\theta}=\frac{A-c}{3}-\frac{2}{3}\hat{\theta}\quad\Rightarrow\quad\frac{5}{3}\hat{\theta}=\frac{A-c}{3}\quad\Rightarrow\quad\hat{\theta}=\frac{A-c}{5}\]</span></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="delegation-best-response-in-incentives-triopoly" class="slide level2">
 <h2>Delegation: best response in incentives (triopoly)</h2>
@@ -584,19 +650,10 @@ p^*=\frac{1}{4}\left(A+3c-\sum_i \theta_i\right)
 </section>
 <section id="delegation-strategic-logic" class="slide level2">
 <h2>Delegation: strategic logic</h2>
-<div class="callout callout-warning callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Prisoners’ dilemma</strong></p>
-</div>
-<div class="callout-content">
 <ul>
-<li><strong>Unilateral incentive</strong>: if rivals set <span class="math inline">\(\theta=0\)</span>, I benefit from choosing <span class="math inline">\(\theta_i&gt;0\)</span>
+<li><strong>Unilateral incentive</strong>: if rivals set <span class="math inline">\(\theta=0\)</span>, choosing <span class="math inline">\(\theta_i&gt;0\)</span> is strictly profitable
 <ul>
-<li>Positive <span class="math inline">\(\theta_i\)</span> commits my manager to higher output</li>
+<li>Positive <span class="math inline">\(\theta_i\)</span> commits the manager to higher output</li>
 <li>Rivals reduce output (quantities are strategic substitutes)</li>
 </ul></li>
 <li><strong>Equilibrium outcome</strong>: all firms choose <span class="math inline">\(\hat{\theta}&gt;0\)</span>
@@ -605,7 +662,29 @@ p^*=\frac{1}{4}\left(A+3c-\sum_i \theta_i\right)
 <li>Profits fall: <span class="math inline">\(\hat{\pi}&lt;\pi^C\)</span> (overproduction lowers price for all)</li>
 </ul></li>
 </ul>
-<p>Each owner chooses <span class="math inline">\(\theta_i\)</span> optimally given rivals’ choices, but the collective outcome is worse than <span class="math inline">\(\theta=0\)</span>.</p>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Prisoners’ dilemma</strong></p>
+</div>
+<div class="callout-content">
+<p>Each owner’s dominant strategy leads to a collectively worse outcome: all firms delegate, output rises, and equilibrium profits fall below the Cournot benchmark.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Discussion question</strong></p>
+</div>
+<div class="callout-content">
+<p>If delegation always lowers industry profits in equilibrium, why would any firm ever choose to delegate? What commitment or regulatory change would allow firms to avoid this outcome?</p>
 </div>
 </div>
 </div>
@@ -748,6 +827,7 @@ Vickers, John. 1985. <span>‘Delegation and the Theory of the Firm’</span>. <
 </section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="../../resources\USA-logos\03-standard-horizontal\01-standard-black-text.png" alt="University of St Andrews standard horizontal logo." class="slide-logo"></p>
 <div class="footer footer-default">
 
 </div>
@@ -937,7 +1017,7 @@ Vickers, John. 1985. <span>‘Delegation and the Theory of the Firm’</span>. <
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
