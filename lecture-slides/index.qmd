@@ -2,13 +2,23 @@
 title: "Lecture Slides"
 ---
 
-## All Lectures
+## Lecture Slides Hub
 
-Choose your preferred format: **HTML** (interactive) or **PDF** (printable).
+Use this page when you want a format-based overview (HTML vs PDF). For week-by-week navigation, use the sidebar or the `Lectures` navbar menu.
 
 ::: {.callout-note}
-Use the navbar `Lectures` menu for direct week-by-week access.
+HTML is best for interactive viewing; PDF is best for printing/annotation.
 :::
+
+## Quick Access
+
+| Need | Link |
+|---|---|
+| Latest topic example | [Week 4: Patents and IPRs (HTML)](slides/lecture-4-patents.html){target="_blank"} |
+| All lecture sources (`.qmd`) | See table below |
+| Week-by-week navigation | Use sidebar / navbar |
+
+## All Lectures
 
 | Week | Lecture | Source | HTML | PDF |
 |---|---|---|---|---|
@@ -19,3 +29,8 @@ Use the navbar `Lectures` menu for direct week-by-week access.
 | Week 4 | Lecture 4: Patents and Intellectual Property Rights | [qmd](slides/lecture-4-patents.qmd) | [slides](slides/lecture-4-patents.html){target="_blank"} | [slides](slides/lecture-4-patents.pdf){target="_blank"} |
 | Week 5 | Lecture 5: Multi-stage Games | [qmd](slides/lecture-5-multi-stage-games.qmd) | [slides](slides/lecture-5-multi-stage-games.html){target="_blank"} | [slides](slides/lecture-5-multi-stage-games.pdf){target="_blank"} |
 | Week 7 | Lecture 6: Cooperative R&D | [qmd](slides/lecture-6-corporate-rand.qmd) | [slides](slides/lecture-6-corporate-rand.html){target="_blank"} | [slides](slides/lecture-6-corporate-rand.pdf){target="_blank"} |
+
+## Notes
+
+- Weeks without entries are break/assessment/independent-study weeks or content handled elsewhere.
+- File links are included for maintenance and instructor reuse; most students should use the HTML/PDF columns.

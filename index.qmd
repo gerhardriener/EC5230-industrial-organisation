@@ -2,119 +2,92 @@
 
 This is the course website for **EC5230 Industrial Organisation** at the University of St Andrews.
 
-Industrial Organisation studies the structure of firms and markets, strategic interactions between firms, and the effects of market power on economic outcomes. This course covers both theoretical foundations and practical applications, examining how firms behave in imperfectly competitive markets.
-
-## Course Overview
-
-**Module Credits:** 15 (Semester 2, Optional)
-
-### Topics Covered
-
-This module explores key concepts in industrial economics across twelve weeks:
-
-- **Competition and Oligopoly Coordination** (Week 1)
-- **Product Differentiation** (Week 2)
-- **Economics of Innovation** (Week 3)
-- **Economics of Patents and IPRs** (Week 4)
-- **Multi-stage Games** (Week 5)
-- **Cooperative R&D** (Week 7)
-- **Bundling** (Week 8)
-- **Advertising** (Week 9)
-- **Mergers** (Week 11)
-- **Sustainable Industrialisation** (Week 12)
-
-### Intended Learning Outcomes
-
-By the end of the module, you will be able to:
-
-- Understand how Industrial Organisation deepens the analysis of firm behaviour in imperfectly competitive markets
-- Select and apply appropriate models to analyse various issues in industrial economics
-- Develop skills in analysing economic behaviour through game theory
-- Identify and critically evaluate relevant research papers and real-world examples
-
-### Sustainability in the Curriculum
-
-This module contributes to UN Sustainable Development Goals:
-
-- **Goal 9: Industry, Innovation, and Infrastructure** — Examining how patents and IPRs impact innovation disclosure and cooperative R&D
-
-- **Goal 12: Responsible Consumption and Production** — Analysing network effects in technology adoption and sustainable industrialisation
-
-## Course Materials
-
 ::: {.callout-note}
 Use the top navbar for section-level navigation and the sidebars on lecture/exercise pages for week-by-week links.
 :::
 
-Quick link: [Week 4 lecture (Patents and IPRs)](lecture-slides/slides/lecture-4-patents.qmd)
+## Start Here
 
-| Material | What it includes | Link |
-|---|---|---|
-| Lecture Slides | Weekly lecture decks in interactive HTML and printable PDF formats | [Lecture Slides overview](lecture-slides/index.qmd) |
-| Exercises | Student and instructor variants for sheets and live tutorial exercises | [Exercises overview](exercises/index.qmd) |
+| What you need | Go to |
+|---|---|
+| Lecture slides (all weeks) | [Lecture Slides overview](lecture-slides/index.qmd) |
+| Exercise sheets and live exercises | [Exercises overview](exercises/index.qmd) |
+| Assessment brief for the policy report | [Policy report brief](policy-report.qmd) |
+| Current example lecture | [Week 4 lecture (Patents and IPRs)](lecture-slides/slides/lecture-4-patents.qmd) |
 
+## Course At a Glance
 
-### Interactive Apps
+- **Module:** EC5230 Industrial Organisation
+- **Credits:** 15 (Semester 2, Optional)
+- **Focus:** Firm behaviour, market power, strategic interaction, innovation, and applied industrial economics
+- **Format:** Lectures, tutorials, exercises, and assessment-based applied analysis
 
-TBD. Interactive visualisations to explore key economic models:
+## Topics (By Week)
 
-- Cournot duopoly best responses
-- Monopolist profit maximisation
-- Profit possibility frontiers
-- Salop circular city model
-
-## Textbooks and Readings
-
-There is no single prescribed textbook. The course draws on chapters from:
-
-- **@belleflammeIndustrialOrganizationMarkets2015** *Industrial Organisation: Markets and Strategies* (2nd ed.). Cambridge University Press.
-- **@shyIndustrialOrganizationTheory1995** *Industrial Organisation: Theory and Applications*. MIT Press.
-- **@scotchmerInnovationIncentives2006** *Innovation and Incentives*. Princeton University Press.
-- **@churchIndustrialOrganizationStrategic2000** *Industrial Organization: A Strategic Approach*. Irwin McGraw-Hill.
-
-Journal articles are available through the online reading list and cited at the end of each lecture.
+- Week 1: Competition and Oligopoly Coordination
+- Week 2: Product Differentiation
+- Week 3: Economics of Innovation
+- Week 4: Economics of Patents and IPRs
+- Week 5: Multi-stage Games
+- Week 7: Cooperative R&D
+- Week 8: Bundling
+- Week 9: Advertising
+- Week 11: Mergers
+- Week 12: Sustainable Industrialisation
 
 ## Assessment
 
 | Component | Weight | Timing |
-|-----------|--------|--------|
+|---|---:|---|
 | Class Test | 20% | Week 6 |
 | Policy Recommendation | 5% | Week 11 |
 | Final Examination | 75% | May |
 
-- **Class Test:** 50-minute in-person test covering Weeks 1–5, including a problem-solving question and a discussion-based question (Week 6, during lecture slot)
-- **Policy Recommendation:** Written report (max 1,000 words) analysing a real-world industrial organisation issue of your choice, submitted via MMS by **15 April 2026, 17:00**. See the [policy report brief](policy-report.qmd).
-- **Final Examination:** Two-hour in-person exam covering all module content (Weeks 1–5, 7–9, 11–12)
+- **Class Test:** 50-minute in-person test covering Weeks 1-5 (Week 6, during lecture slot)
+- **Policy Recommendation:** Written report (max 1,000 words), submitted via MMS by **15 April 2026, 17:00**
+- **Final Examination:** Two-hour in-person exam covering all module content (Weeks 1-5, 7-9, 11-12)
+
+## Schedule Snapshot
+
+### Lectures
+
+- **Regular slot:** Wednesdays, 09:00-11:00 (with later timetable changes in Weeks 11-12)
+- **Week 1:** Wednesday 28 January 2026, 09:00-11:00
+- **Week 2:** Wednesday 04 February 2026, 09:00-11:00
+- **Week 3:** Wednesday 11 February 2026, 09:00-11:00
+- **Week 4:** Wednesday 18 February 2026, 09:00-11:00
+- **Week 5:** Wednesday 25 February 2026, 09:00-11:00
+- **Spring Break:** 02-08 March 2026
+- **Week 6:** Class Test (Wednesday 11 March 2026, 09:00-10:30)
+- **Week 7:** Wednesday 18 March 2026, 09:00-11:00
+- **Week 10:** Independent Learning Week (06-12 April 2026)
+- **Week 11:** Wednesday 15 April 2026, 08:00-10:00
+- **Week 12:** Wednesday 22 April 2026, 08:00-10:00
+
+### Tutorials
+
+- **Week 3:** Monday 09 February 2026, 14:00-15:00
+- **Week 5:** Monday 23 February 2026, 14:00-15:00
+- **Week 7:** Monday 16 March 2026, 14:00-15:00
+- **Week 11:** Monday 13 April 2026, 13:00-14:00
+- **Week 12:** Monday 20 April 2026, 13:00-14:00
+
+## Readings and Textbooks
+
+There is no single prescribed textbook. Core readings are provided in lecture materials and the online reading list.
+
+Suggested background texts include:
+
+- Belleflamme and Peitz, *Industrial Organization: Markets and Strategies* (2nd ed.)
+- Shy, *Industrial Organization: Theory and Applications*
+- Scotchmer, *Innovation and Incentives*
+- Church and Ware, *Industrial Organization: A Strategic Approach*
 
 ## Prerequisites
 
-- Good understanding of intermediate microeconomics (market structures, competition, welfare analysis, game theory)
+- Intermediate microeconomics (market structures, competition, welfare, game theory)
 - Basic algebra and calculus (optimisation)
-- No econometric or statistical knowledge required
-
-## Course Structure
-
-- **Lectures:** 10 × 2 hours (Weeks 1–5, 7–9, 11–12; no lecture during Spring Break Week 6 or Reading Week 10)
-  - **Week 1:** Wednesday 28 January 2026, 09:00–11:00
-  - **Week 2:** Wednesday 04 February 2026, 09:00–11:00
-  - **Week 3:** Wednesday 11 February 2026, 09:00–11:00
-  - **Week 4:** Wednesday 18 February 2026, 09:00–11:00
-  - **Week 5:** Wednesday 25 February 2026, 09:00–11:00
-  - **Spring Break:** 02–08 March 2026
-  - **Week 6:** Class Test (Wednesday 11 March 2026, 09:00–10:30)
-  - **Week 7:** Wednesday 18 March 2026, 09:00–11:00
-  - **Week 8:** no lecture scheduled
-  - **Week 9:** no lecture scheduled
-  - **Week 10:** Independent Learning Week (06–12 April 2026)
-  - **Week 11:** Wednesday 15 April 2026, 08:00–10:00
-  - **Week 12:** Wednesday 22 April 2026, 08:00–10:00
-
-- **Tutorials:** 5 × 1 hour (Weeks 3, 5, 7, 11, 12)
-  - **Week 3:** Monday 09 February 2026, 14:00–15:00
-  - **Week 5:** Monday 23 February 2026, 14:00–15:00
-  - **Week 7:** Monday 16 March 2026, 14:00–15:00
-  - **Week 11:** Monday 13 April 2026, 13:00–14:00
-  - **Week 12:** Monday 20 April 2026, 13:00–14:00
+- No econometrics/statistics required
 
 ## Contact
 
@@ -122,9 +95,8 @@ Journal articles are available through the online reading list and cited at the 
 
 - **Email:** gr97@st-andrews.ac.uk
 - **Office:** G4C Castlecliffe
-- **Office Hours:** Wednesday 12–1pm, 2–3pm in lecture weeks
-
-For questions about the course, please feel free to reach out via email or visit during office hours. Book here up to 12 hours before: [Book](https://outlook.office.com/bookwithme/user/0f38b6e3379248f0a4f92f3e56bf9a51@st-andrews.ac.uk/meetingtype/EcyHhzFPYEGq-SsSBEwTiw2?anonymous&ep=mlink)
+- **Office Hours:** Wednesday 12-1pm, 2-3pm in lecture weeks
+- **Booking link:** [Book office hours](https://outlook.office.com/bookwithme/user/0f38b6e3379248f0a4f92f3e56bf9a51@st-andrews.ac.uk/meetingtype/EcyHhzFPYEGq-SsSBEwTiw2?anonymous&ep=mlink)
 
 ---
 

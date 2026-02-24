@@ -2,27 +2,31 @@
 title: "Exercises"
 ---
 
-## Problem Sets
+## Exercises Hub
 
-Practice exercises for EC5230 Industrial Organisation.
-
-Each exercise is published in two explicit variants:
-
-- **Student** version (`solutions: false`)
-- **Instructor** version (`solutions: true`)
+Practice materials are grouped into exercise sheets and live exercises. Use this page for download links; use the sidebar/navbar for week-based navigation.
 
 ::: {.callout-note}
-Use the navbar `Exercises` menu for direct links to each sheet.
+Most students should use the **Student** versions. Instructor versions include solutions.
 :::
 
-### Exercise Sheets
+## Quick Access
+
+| Need | Link |
+|---|---|
+| All exercise sheets | [Jump to Exercise Sheets](#exercise-sheets) |
+| All live exercises | [Jump to Live Exercises](#live-exercises) |
+| Week-based navigation | Use sidebar / navbar |
+| Current sheet example | [Exercise 2 (student HTML)](sheets/exercises-2.html) |
+
+## Exercise Sheets
 
 | Set | Source | Student (HTML) | Instructor (HTML) | Student (PDF) | Instructor (PDF) |
 |---|---|---|---|---|---|
 | Exercise 1: Oligopoly and Product Differentiation | [qmd](sheets/exercises-1.qmd) | [download](sheets/exercises-1.html) | [download](sheets/exercises-1-solutions.html) | [download](sheets/exercises-1.pdf) | [download](sheets/exercises-1-solutions.pdf) |
 | Exercise 2: Innovation incentives | [qmd](sheets/exercises-2.qmd) | [download](sheets/exercises-2.html) |  | [download](sheets/exercises-2.pdf) |  |
 
-### Live Exercises
+## Live Exercises
 
 | Set | Source | Student (HTML) | Instructor (HTML) | Student (PDF) | Instructor (PDF) |
 |---|---|---|---|---|---|
@@ -33,10 +37,9 @@ Use the navbar `Exercises` menu for direct links to each sheet.
 Try to complete the problems on your own before going to class. Active problem-solving is essential for mastering industrial organisation concepts.
 :::
 
-### How to Use These Exercises
+## How to Use These Exercises
 
 1. **Review the relevant lecture material** before attempting each problem set
 2. **Attempt all problems** without looking at solutions
 3. **Check your answers** against the solutions
 4. **Identify gaps** in your understanding and revisit lecture notes
-
