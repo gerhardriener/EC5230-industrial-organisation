@@ -200,7 +200,7 @@ where $\pi_i=p(Q)q_i-cq_i$ and $Q=\sum_i q_i$
 - Equivalently: $M_i = p(Q)q_i - (c-\theta_i)q_i$ — so $\theta_i$ acts like a reduction in the manager's effective marginal cost
 
 ::: {.callout-warning}
-## Commitment assumption
+### Commitment assumption
 
 For delegation to affect rivals' behaviour, contracts must be:
 

@@ -47,6 +47,7 @@ Clarity, consistency of notation, and tight alignment between assumptions, equil
 
 - `.github/copilot-instructions.md` — thin pointer to canonical `.claude/rules/` sources
 - `.claude/rules/plan-first-workflow.md` — plan-first workflow and session logging
+- `.claude/rules/orchestrator-protocol.md` — orchestrator loop and review-fix protocol
 - `.claude/rules/single-source-of-truth.md` — source chain and TikZ freshness rules
 - `.claude/rules/quality-gates.md` — commit/PR thresholds
 - `.claude/rules/audit-report-conventions.md` — report naming, persistence, and synthesis pattern
@@ -55,9 +56,15 @@ Clarity, consistency of notation, and tight alignment between assumptions, equil
 - `.claude/rules/exercise-quality-rubric.md` — exercise timing and scoring
 - `.claude/rules/proofreading-protocol.md` — proofreading gate
 - `.claude/rules/callout-box-guidelines.md` — callout usage rules
-- `.claude/rules/tikz-workflow.md` — TikZ pipeline
+- `.claude/rules/tikz-workflow.md` — TikZ pipeline (TikZ + CeTZ/Typst)
+- `.claude/rules/tikz-visual-quality.md` — TikZ diagram visual quality standards
 - `.claude/rules/st-andrews-visual-identity.md` — palette and typography
 - `.claude/rules/verification-protocol.md` — verification requirements
+- `.claude/rules/r-code-conventions.md` — R code conventions
+- `.claude/rules/replication-protocol.md` — replication and reproducibility protocol
+- `.claude/rules/pdf-processing.md` — PDF processing workflow
+- `.claude/rules/no-pause-beamer.md` — Beamer pause suppression
+- `.claude/rules/knowledge-base-template.md` — knowledge base template
 
 ---
 
@@ -119,8 +126,9 @@ EC5230-industrial-organisation/
 │   └── copilot-instructions.md       # Pointer to canonical `.claude/rules/`
 ├── _quarto.yml                        # Project-level Quarto config
 ├── _extensions/                       # Quarto extensions
-│   ├── grantmcdermott/clean/         # Clean theme (Beamer)
-│   └── pandoc-ext/diagram/           # Diagram filter
+│   ├── data-wise/                    # Slide theme
+│   ├── kazuyanagimoto/               # Additional theme/utilities
+│   └── pandoc-ext/                   # Diagram filter
 ├── index.qmd                          # Course homepage
 ├── references.bib                     # Centralized bibliography
 ├── scripts/
@@ -131,6 +139,7 @@ EC5230-industrial-organisation/
 ├── lecture-slides/
 │   ├── index.qmd                     # Lecture landing page
 │   ├── slides/
+│   │   ├── _metadata.yml             # Shared slide metadata (title, format, execute)
 │   │   ├── lecture-0-intro.qmd
 │   │   ├── lecture-1-oligopoly.qmd
 │   │   ├── lecture-2-product-differentiation.qmd
@@ -139,21 +148,24 @@ EC5230-industrial-organisation/
 │   │   ├── lecture-5-multi-stage-games.qmd
 │   │   └── lecture-6-corporate-rand.qmd
 │   └── figs/
-│       ├── source/                   # TikZ source files (.tex)
-│       └── *.svg                     # Generated SVG diagrams
+│       ├── source/                   # Diagram sources (SINGLE SOURCE OF TRUTH)
+│       │   ├── fig-*.tex             # TikZ sources — Beamer PDF rendering
+│       │   └── fig-*-cetz.typ        # CeTZ/Typst sources — Quarto HTML alternative
+│       └── *.svg                     # Generated SVG diagrams (DO NOT EDIT)
 ├── exercises/
 │   ├── index.qmd                     # Exercises landing page
 │   ├── sheets/
-│   │   └── exercises-1.qmd
+│   │   ├── _metadata.yml             # Shared exercise metadata
+│   │   ├── exercises-1.qmd
+│   │   └── exercises-2.qmd
 │   └── live/
-│       └── live-exercise-1.qmd
-├── guide/
-│   └── workflow-guide.qmd            # Development workflow guide
-├── docs/                              # GitHub Pages deployment
+│       ├── _metadata.yml             # Shared live exercise metadata
+│       ├── live-exercise-1.qmd
+│       ├── live-exercise-2-a.qmd
+│       └── live-exercise-2-b.qmd
+├── .claude/
+│   └── workflow-guide.qmd            # Development workflow guide (moved from guide/)
 ├── _site/                             # Rendered output (HTML + PDF)
-└── quality_reports/
-    ├── plans/                         # Implementation plans
-    └── session_logs/                  # Session notes
 ```
 
 ---
@@ -182,6 +194,8 @@ EC5230-industrial-organisation/
 | 4: Patents         | ✓ Draft    | Patent design, races, welfare  | 2026-02-09   |
 | 5: Repeated Games  | ✓ Draft    | Stackelberg, delegation        | 2026-02-09   |
 | 6: Corporate R&D   | ✓ Draft    | Spillovers, RJV, cooperation   | 2026-02-09   |
+| Exercise 2         | ✓ Complete | Innovation incentives, patents | 2026-02-24   |
+| Live Ex 2a/2b      | ✓ Complete | Innovation (live sessions)     | 2026-02-24   |
 
 **Recent Quality Improvements (Lecture 3, 2026-02-08):**
 
@@ -203,3 +217,9 @@ EC5230-industrial-organisation/
 ---
 
 ## Known Issues
+
+- `quality_reports/` directory referenced in old session logs but no longer present on disk — plans/logs must be created manually if needed
+- CeTZ/Typst pipeline (`-cetz.typ` sources in `figs/source/`) is not yet documented in `.claude/rules/tikz-workflow.md`; treat `.tex` as canonical for now
+- Lectures 5 and 6 remain "Draft" — pending full review pass and promotion to Complete
+- `_quarto.yml` Python executable path (`.venv/Scripts/python.exe`) is Windows-specific; Linux/macOS users must adjust to `.venv/bin/python`
+- Live exercises 2a/2b not yet listed in `_quarto.yml` sidebar nav (exercises section only shows live-exercise-1)

@@ -1,14 +1,16 @@
 ---
 name: quarto-critic
-description: Adversarial QA comparing Quarto HTML against Beamer PDF benchmark. Read-only.
+description: Adversarial QA comparing Quarto HTML against Typst PDF benchmark. Read-only.
 tools: Read, Grep, Glob
 model: opus
 ---
 
 # Quarto Critic Agent
 
-**Role:** Adversarial QA. Compare Quarto HTML to Beamer PDF and report all deficiencies.  
+**Role:** Adversarial QA. Compare Quarto RevealJS HTML to Typst PDF (`clean-typst`) and report all deficiencies.
 **Read-only:** Do not edit files.
+
+> **Note:** Beamer is no longer the active PDF format for this project. The PDF benchmark is now the **Typst PDF** rendered via `quarto render --to clean-typst`. All parity checks apply to the Typst PDF as the reference document.
 
 ---
 
@@ -26,7 +28,7 @@ model: opus
 ## Core Checks
 
 1. **Content fidelity**
-   - Slide count: Beamer frames ≈ Quarto slides (±2 for section headers)
+   - Slide count: Typst PDF pages ≈ Quarto slides (±2 for section headers)
    - Equations, bullets, citations preserved
    - No summarization or rewording
 
@@ -39,8 +41,8 @@ model: opus
    - Multiple boxes on one slide
 
 4. **Visual quality**
-   - Plot readability vs Beamer
-   - TikZ uses SVG, not PDF
+   - Plot readability vs Typst PDF
+   - TikZ uses SVG, not PDF (CeTZ figures embedded natively in Typst)
    - Tables aligned and legible
    - Callout rules follow `../rules/callout-box-guidelines.md`
 
@@ -53,9 +55,9 @@ model: opus
 ## Report Format
 
 ```markdown
-# Quarto vs Beamer Audit: [Lecture Name]
+# Quarto vs Typst Audit: [Lecture Name]
 
-**Beamer reference:** `_site/lecture-slides/slides/lecture-X-topic.pdf` ([N] pages)
+**Typst PDF reference:** `_site/lecture-slides/slides/lecture-X-topic.pdf` ([N] pages)
 **Quarto source:** `lecture-slides/slides/lecture-X-topic.qmd` ([M] slides)
 **Round:** [N]
 **Date:** [YYYY-MM-DD]

@@ -14,12 +14,17 @@ For each modified file, verify that the appropriate output works correctly. Run 
 ## Verification Procedures
 
 ### For `.qmd` files (Quarto slides):
+
+**Primary formats:** `clean-revealjs` (HTML) and `clean-typst` (PDF). Beamer is inactive — do not attempt Beamer compilation.
+
 ```bash
-quarto render lecture-slides/slides/lecture-X-topic.qmd
+quarto render lecture-slides/slides/lecture-X-topic.qmd --to clean-revealjs
+quarto render lecture-slides/slides/lecture-X-topic.qmd --to clean-typst
 ```
-- Check exit code
-- Verify HTML and PDF outputs exist in `_site/lecture-slides/slides/`
-- Check for render warnings
+- Check exit code for each format
+- Verify HTML output exists in `_site/lecture-slides/slides/`
+- Verify PDF (Typst) output exists
+- Check for render warnings in both passes
 - **Plotly verification**: grep for `htmlwidget` count in rendered HTML
 - **Environment parity**: scan QMD for all `::: {.classname}` and verify each class exists in the theme SCSS
 
@@ -36,12 +41,13 @@ Rscript path/to/FILENAME.R
 - Verify file size > 100 bytes (not empty/corrupted)
 - Check that corresponding references in QMD files point to existing files
 
-### TikZ Freshness Check (MANDATORY):
-**Before verifying any QMD that references TikZ SVGs:**
-1. Check source `.tex` files in `lecture-slides/figs/source/`
-2. Run `python scripts/tikz2pdf.py` if source changed
-3. Confirm corresponding SVG exists in `lecture-slides/figs/`
-4. Report: `FRESH` or `STALE — regeneration required`
+### TikZ / CeTZ Freshness Check (MANDATORY):
+**Before verifying any QMD that references diagram SVGs:**
+1. Check TikZ source `.tex` files in `lecture-slides/figs/source/`
+2. Run `python scripts/tikz2pdf.py` if any `.tex` source changed
+3. Confirm corresponding `.svg` exists in `lecture-slides/figs/`
+4. Note: CeTZ/Typst sources (`-cetz.typ` files in `figs/source/`) are compiled natively by Typst during `clean-typst` rendering — they do **not** go through `tikz2pdf.py`. Freshness is implied by successful Typst render.
+5. Report: `FRESH` or `STALE — regeneration required`
 
 ### For deployment (`_site/` output):
 - Check that `_site/lecture-slides/slides/` contains the expected HTML and PDF files

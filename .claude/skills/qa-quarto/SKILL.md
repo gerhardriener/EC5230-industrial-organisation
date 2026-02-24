@@ -1,17 +1,17 @@
 ---
 name: qa-quarto
-description: Adversarial QA profile for Quarto vs Beamer parity using the canonical orchestrator loop.
+description: Adversarial QA profile for Quarto RevealJS vs Typst PDF parity using the canonical orchestrator loop.
 disable-model-invocation: true
 argument-hint: "[LectureN, e.g., Lecture1]"
 ---
 
-# Adversarial Quarto vs Beamer QA Workflow
+# Adversarial Quarto vs Typst QA Workflow
 
-Compare Quarto HTML slides against their Beamer PDF benchmark using the canonical orchestrator loop.
+Compare Quarto RevealJS HTML slides against their **Typst PDF** (`clean-typst`) benchmark using the canonical orchestrator loop.
 Use `.claude/rules/audit-report-conventions.md` for naming/persistence conventions.
 Loop ownership: `.claude/rules/orchestrator-protocol.md`.
 
-**Philosophy (translation parity mode):** The Beamer PDF is the parity benchmark during Beamer -> Quarto translation QA. This scope does not override Quarto-first maintenance authority after parity approval (see `.claude/rules/single-source-of-truth.md`).
+**Philosophy (parity mode):** The **Typst PDF** (`clean-typst`) is the parity benchmark. Beamer is no longer an active format — do not reference Beamer `.tex` files. This scope does not override Quarto-first maintenance authority after parity approval (see `.claude/rules/single-source-of-truth.md`).
 
 ---
 
@@ -36,19 +36,19 @@ Initialize workflow logging before Phase 0:
 | **Overflow** | NO content cut off |
 | **Plot Quality** | Interactive charts >= static plots |
 | **Content Parity** | No missing slides/equations/text |
-| **Visual Regression** | Quarto >= Beamer in all dimensions |
+| **Visual Regression** | Quarto >= Typst PDF in all dimensions |
 | **Slide Centering** | Content centered, no jumping |
-| **Notation Fidelity** | All math verbatim from Beamer |
+| **Notation Fidelity** | All math verbatim from Typst PDF |
 
 ## Phase 0: Pre-flight
 
-1. Locate Beamer (.tex/.pdf) and Quarto (.qmd/.html) files
+1. Locate Typst PDF (render via `quarto render --to clean-typst`) and Quarto `.qmd`/`.html` files
 2. Run `verifier` pre-flight checks (freshness, renderability, SVG validity)
-3. Verify TikZ SVGs if applicable
+3. Verify TikZ SVGs and CeTZ/Typst sources if applicable
 
 ## Phase 1: Initial Audit
 
-Launch the `quarto-critic` agent to compare Beamer vs Quarto comprehensively, then persist the returned report to:
+Launch the `quarto-critic` agent to compare Typst PDF vs Quarto comprehensively, then persist the returned report to:
 
 - `quality_reports/[LECTURE_ID]_qa_critic_round[ROUND].md` (use `ROUND=1` for the first audit)
 

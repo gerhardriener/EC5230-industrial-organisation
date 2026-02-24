@@ -7,9 +7,11 @@ argument-hint: "[path/to/beamer.tex or LectureN]"
 
 # Translate Beamer to Quarto
 
+> **⚠️ Legacy use.** All lectures in this project are already in `.qmd` format. This skill is only relevant if a historical Beamer `.tex` file must be migrated. The project no longer maintains active Beamer sources, and the primary PDF format is now `clean-typst` (not Beamer). After translation, the QA benchmark is the **Typst PDF**, not a Beamer PDF.
+
 ## Purpose
 
-Convert a Beamer lecture into `lecture-slides/slides/*.qmd` while preserving notation and pedagogical flow.
+Convert a historical Beamer `.tex` lecture into `lecture-slides/slides/*.qmd` while preserving notation and pedagogical flow.
 
 ## Steps
 

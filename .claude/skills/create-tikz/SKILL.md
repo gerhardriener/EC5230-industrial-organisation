@@ -154,17 +154,31 @@ Delegate to the `tikz-reviewer` agent:
 
 ### Step 5: Embed in QMD (if `--lecture` provided)
 
-Insert dual-format conditional rendering blocks at the target slide:
+Insert format-conditional rendering blocks at the target slide. The project uses **two active formats**: `clean-revealjs` (HTML) and `clean-typst` (PDF). Use SVG for RevealJS and CeTZ (if available) or a static image for Typst:
 
 ```markdown
-::: {.content-visible when-format="beamer"}
-\resizebox{0.8\textwidth}{!}{\includestandalone{../figs/source/<fig-name>}}
-:::
-
 ::: {.content-visible when-format="revealjs"}
 ![](../figs/<fig-name>.svg){fig-alt="<description>" fig-align="center" width="70%"}
 :::
 ```
+
+If a CeTZ/Typst version of the figure exists (`fig-name-cetz.typ`):
+
+```markdown
+::: {.content-visible when-format="typst"}
+#figure(image("../figs/source/<fig-name>-cetz.typ"), caption: [<description>])
+:::
+```
+
+If no CeTZ version exists, the SVG can also be used as a fallback for Typst:
+
+```markdown
+::: {.content-visible when-format="typst"}
+#figure(image("../figs/<fig-name>.svg"), caption: [<description>])
+:::
+```
+
+> **Note:** Do not use `when-format="beamer"` blocks — Beamer is no longer an active format.
 
 **Placement rules:**
 

@@ -7,7 +7,9 @@ argument-hint: "[path/to/file.tex]"
 
 # Compile LaTeX (Beamer)
 
-Use this skill when a `.tex` lecture must be compiled and checked.
+> **⚠️ Legacy skill.** The primary PDF format for this project is now **`clean-typst`**, compiled automatically by `quarto render --to clean-typst`. Use this skill only for compiling standalone Beamer `.tex` documents or historical files. For lecture slides, use `/deploy` or run `quarto render` directly.
+
+Use this skill when a standalone `.tex` Beamer file must be compiled and checked.
 
 ## Steps
 
