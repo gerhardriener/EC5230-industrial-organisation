@@ -1,6 +1,7 @@
 ---
 paths:
-  - "master_supporting_docs/**"
+  - "lecture-slides/**/*.qmd"
+  - "exercises/**/*.qmd"
 ---
 
 # Robust PDF Processing Best Practices

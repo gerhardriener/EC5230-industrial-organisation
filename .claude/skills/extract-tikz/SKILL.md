@@ -7,7 +7,9 @@ argument-hint: "[optional: specific figure name]"
 
 # Generate TikZ Diagrams to SVG
 
-Generate SVG diagrams from TikZ source files for use in Quarto RevealJS slides.
+Generate SVG diagrams from TikZ source files for use in Quarto RevealJS (`clean-revealjs`) slides.
+
+> **Scope:** This skill handles the **TikZ pipeline only** — `.tex` sources compiled to SVG via `tikz2pdf.py`. CeTZ/Typst sources (`-cetz.typ` files in `figs/source/`) are compiled natively by Typst during `quarto render --to clean-typst` and do **not** go through this script. Do not try to process `.typ` files with `tikz2pdf.py`.
 
 ## Current TikZ Pipeline
 
@@ -15,8 +17,9 @@ Generate SVG diagrams from TikZ source files for use in Quarto RevealJS slides.
 
 ### Quick Summary
 
-- **Source files:** `lecture-slides/figs/source/*.tex` (standalone `.tex` files, one per diagram)
-- **Generated SVGs:** `lecture-slides/figs/*.svg`
+- **TikZ source files:** `lecture-slides/figs/source/*.tex` (standalone `.tex` files, one per diagram)
+- **CeTZ/Typst sources (separate pipeline):** `lecture-slides/figs/source/*-cetz.typ` — compiled by Typst, not this script
+- **Generated SVGs (TikZ only):** `lecture-slides/figs/*.svg` — used by `when-format="revealjs"` blocks
 - **Conversion script:** `scripts/tikz2pdf.py`
 - **Pipeline:** `.tex` → PDF (pdflatex) → SVG (pdftocairo)
 
@@ -110,9 +113,10 @@ Open the HTML output and verify diagrams display correctly.
 
 **CRITICAL:** TikZ diagrams have a SINGLE source of truth: `lecture-slides/figs/source/*.tex`
 
-- To modify a diagram: edit the `.tex` source file, then re-run `tikz2pdf.py`
+- To modify a TikZ diagram: edit the `.tex` source file, then re-run `tikz2pdf.py`
 - NEVER edit the generated SVG files directly — changes will be overwritten
-- For dual-format rendering (Beamer PDF + Quarto HTML), see `../../rules/tikz-workflow.md`
+- For dual-format rendering (Typst PDF + Quarto RevealJS HTML), see `../../rules/tikz-workflow.md`
+- For CeTZ/Typst diagrams (`-cetz.typ`): edit the `.typ` source; Typst renders them automatically during `quarto render --to clean-typst` — no separate extraction step needed
 
 ---
 

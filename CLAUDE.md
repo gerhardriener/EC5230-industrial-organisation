@@ -90,6 +90,8 @@ Clarity, consistency of notation, and tight alignment between assumptions, equil
 | **Exercises**                                      |                                                                                     |
 | `/review-exercise <file>`                          | Exercise review: timing, pedagogy, solutions, clarity                               |
 | `/create-exercise --type --lecture --topic`        | Generate new exercise from specifications with quality checks                       |
+| **Exams**                                          |                                                                                     |
+| `/create-exam`                                     | Full exam creation workflow: interview, QMD generation, solutions, ILO mapping, Word output |
 | **Bibliography**                                   |                                                                                     |
 | `/validate-bib`                                    | Cross-reference citations vs bibliography file                                      |
 
@@ -134,8 +136,13 @@ EC5230-industrial-organisation/
 ├── scripts/
 │   ├── tikz2pdf.py                   # TikZ -> PDF -> SVG pipeline
 │   ├── quality_score.py              # Slide quality scoring
+│   ├── workflow_log.py               # Plan/session log management (init/append/close)
+│   ├── render_exercises.sh           # Render and export exercise PDFs (Bash)
+│   ├── render_exercises.ps1          # Render and export exercise PDFs (PowerShell)
 │   ├── sync_to_docs.sh               # Render and publish to gh-pages branch (Bash)
-│   └── sync_to_docs.ps1              # Render and publish to gh-pages branch (PowerShell)
+│   ├── sync_to_docs.ps1              # Render and publish to gh-pages branch (PowerShell)
+│   ├── sync_lecture_registry.py      # Sync lecture registry
+│   └── lint_workflow_invariants.py   # Lint workflow invariant checks
 ├── lecture-slides/
 │   ├── index.qmd                     # Lecture landing page
 │   ├── slides/
