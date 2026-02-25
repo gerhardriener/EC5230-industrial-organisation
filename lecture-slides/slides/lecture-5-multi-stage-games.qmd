@@ -117,13 +117,7 @@ A (pure) strategy is a **complete contingent plan**: it specifies an action at e
 
 ## Example: strategies induced by a game tree
 
-- Consider:
-
-```text
-Player 1 chooses L or R
-If L: Player 2 chooses l or r -> (a1,a2) or (b1,b2)
-If R: Player 2 chooses l or r -> (c1,c2) or (d1,d2)
-```
+- Consider the example from above
 
 - Player 1 has one decision node:
   - $s_1^1=(L)$
