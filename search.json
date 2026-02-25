@@ -11,7 +11,7 @@
     "href": "lecture-slides/slides/lecture-5-multi-stage-games.html#multi-stage-games-overview",
     "title": "EC5230 - Industrial Organisation",
     "section": "Multi-stage games: overview",
-    "text": "Multi-stage games: overview\n\n\n\n\n\n\nObject of analysis\n\n\nHow commitment in earlier stages changes equilibrium behaviour in later stages.\n\n\n\n\nSo far:\n\nMostly simultaneous-move games\nBriefly: two-stage game (Shy (1995) model in Lecture 4)\n\nToday:\n\nStackelberg quantity leadership\nStrategic delegation (Vickers 1985)"
+    "text": "Multi-stage games: overview\n\n\n\n\n\n\nNote\n\n\nHow commitment in earlier stages changes equilibrium behaviour in later stages.\n\n\n\n\nSo far:\n\nMostly simultaneous-move games\nBriefly: two-stage game (Shy (1995) model in Lecture 4)\n\nToday:\n\nStackelberg quantity leadership\nStrategic delegation (Vickers 1985)"
   },
   {
     "objectID": "lecture-slides/slides/lecture-5-multi-stage-games.html#learning-objectives",
@@ -21,25 +21,109 @@
     "text": "Learning objectives\nBy the end of this lecture you should be able to:\n\nDefine subgame perfect Nash equilibrium and apply backward induction in finite games\nDerive and interpret the Stackelberg equilibrium under quantity leadership\nSet up and solve a two-stage delegation game (contract stage + product-market subgame)\nCompare equilibrium outcomes and welfare across Cournot, Stackelberg, and delegation"
   },
   {
+    "objectID": "lecture-slides/slides/lecture-5-multi-stage-games.html#example-ultimatum-game",
+    "href": "lecture-slides/slides/lecture-5-multi-stage-games.html#example-ultimatum-game",
+    "title": "EC5230 - Industrial Organisation",
+    "section": "Example: Ultimatum game",
+    "text": "Example: Ultimatum game\n\nSetup\n\nStage 1: Player 1 proposes a share \\(x\\) for Player 2 in splitting $10 (with \\(0 \\leq x \\leq 10\\))\nStage 2: Player 2 observes \\(x\\) and accepts the proposal (A) or rejects it (R)\nPlayers’ payoffs: \\[\nu_1(x,A)=10-x \\qquad u_2(x,A)=x \\qquad u_1(x,R)=u_2(x,R)=0\n\\]"
+  },
+  {
+    "objectID": "lecture-slides/slides/lecture-5-multi-stage-games.html#ultimatum-game-solution",
+    "href": "lecture-slides/slides/lecture-5-multi-stage-games.html#ultimatum-game-solution",
+    "title": "EC5230 - Industrial Organisation",
+    "section": "Ultimatum game: Solution",
+    "text": "Ultimatum game: Solution\n\nSolution by backward induction\n\nPlayer 2 accepts any offer \\(x &gt; 0\\); for \\(x = 0\\), they are indifferent between accepting and rejecting\nPlayer 1 offers Player 2 as little as possible and keeps the largest possible remainder\nBackward-induction outcome: \\((0, A)\\)"
+  },
+  {
     "objectID": "lecture-slides/slides/lecture-5-multi-stage-games.html#solution-concept-subgame-perfect-equilibrium",
     "href": "lecture-slides/slides/lecture-5-multi-stage-games.html#solution-concept-subgame-perfect-equilibrium",
     "title": "EC5230 - Industrial Organisation",
     "section": "Solution concept: subgame perfect equilibrium",
-    "text": "Solution concept: subgame perfect equilibrium\n\nA strategy profile is a subgame perfect Nash equilibrium (SPNE) if it induces a Nash equilibrium in every subgame\nOperationally (finite horizon):\n\nSolve from the last stage backward (backward induction)\n\n\n\n\n\n\n\n\nCommitment logic\n\n\nA credible first-stage choice is observed by later movers and shifts their best responses. The payoff function is unchanged — only equilibrium strategies change.\n\n\n\n\n\n\n\n\n\nDiscussion question\n\n\nWhy does commitment require the first-stage action to be observable? What happens to the Stackelberg outcome if the follower cannot verify \\(q_1\\) before choosing \\(q_2\\)?"
+    "text": "Solution concept: subgame perfect equilibrium\n\nA strategy profile is a subgame perfect Nash equilibrium (SPNE) if it induces a Nash equilibrium in every subgame\nOperationally (finite horizon):\n\nSolve from the last stage backward (backward induction)\n\n\n\n\n\n\n\n\nCommitment logic\n\n\nA credible first-stage choice is observed by later movers and shifts their best responses. The payoff function is unchanged — only equilibrium strategies change."
+  },
+  {
+    "objectID": "lecture-slides/slides/lecture-5-multi-stage-games.html#games-with-complete-and-perfect-information-extensive-form",
+    "href": "lecture-slides/slides/lecture-5-multi-stage-games.html#games-with-complete-and-perfect-information-extensive-form",
+    "title": "EC5230 - Industrial Organisation",
+    "section": "Games with complete and perfect information: extensive form",
+    "text": "Games with complete and perfect information: extensive form\n\nDynamic games can be represented in extensive form\n\n\n\n\n\n\n\nExtensive form (definition)\n\n\nAn extensive-form game specifies:\n\nwhich player moves at each decision point (and when)\neach player’s payoff for every possible terminal history (outcome)\nthe available actions at each decision node\nwhat the acting player knows about previous moves when choosing"
+  },
+  {
+    "objectID": "lecture-slides/slides/lecture-5-multi-stage-games.html#game-tree-basic-components",
+    "href": "lecture-slides/slides/lecture-5-multi-stage-games.html#game-tree-basic-components",
+    "title": "EC5230 - Industrial Organisation",
+    "section": "Game tree: basic components",
+    "text": "Game tree: basic components\n\nSimple dynamic games can be illustrated with a game tree\nComponents:\n\nDecision nodes: points where a player chooses\nBranches: feasible actions\nTerminal nodes: outcomes/payoffs\n\nExample structure (generic two-stage game):\n\nPlayer 1\n|- L -&gt; Player 2: l -&gt; (a1,a2), r -&gt; (b1,b2)\n`- R -&gt; Player 2: l -&gt; (c1,c2), r -&gt; (d1,d2)"
+  },
+  {
+    "objectID": "lecture-slides/slides/lecture-5-multi-stage-games.html#game-tree-validity-conditions",
+    "href": "lecture-slides/slides/lecture-5-multi-stage-games.html#game-tree-validity-conditions",
+    "title": "EC5230 - Industrial Organisation",
+    "section": "Game tree: validity conditions",
+    "text": "Game tree: validity conditions\n\nA valid game tree has:\n\na unique starting point (root)\na unique predecessor for each non-root node\nno cycles\n\n\n\n\n\n\n\n\nWhy this matters\n\n\nIf there are cycles or nodes with multiple predecessors, the object is not a tree and standard backward-induction logic is not directly applicable."
+  },
+  {
+    "objectID": "lecture-slides/slides/lecture-5-multi-stage-games.html#strategy-in-a-dynamic-game-pure-strategy",
+    "href": "lecture-slides/slides/lecture-5-multi-stage-games.html#strategy-in-a-dynamic-game-pure-strategy",
+    "title": "EC5230 - Industrial Organisation",
+    "section": "Strategy in a dynamic game (pure strategy)",
+    "text": "Strategy in a dynamic game (pure strategy)\n\n\n\n\n\n\nDefinition (pure strategy)\n\n\nA (pure) strategy is a complete contingent plan: it specifies an action at every decision node (or, with imperfect information, at every information set) where the player may move.\n\n\n\n\nKey implication:\n\nA strategy must specify actions even at nodes that may not be reached on the equilibrium path"
+  },
+  {
+    "objectID": "lecture-slides/slides/lecture-5-multi-stage-games.html#example-strategies-induced-by-a-game-tree",
+    "href": "lecture-slides/slides/lecture-5-multi-stage-games.html#example-strategies-induced-by-a-game-tree",
+    "title": "EC5230 - Industrial Organisation",
+    "section": "Example: strategies induced by a game tree",
+    "text": "Example: strategies induced by a game tree\n\nConsider:\n\nPlayer 1 chooses L or R\nIf L: Player 2 chooses l or r -&gt; (a1,a2) or (b1,b2)\nIf R: Player 2 chooses l or r -&gt; (c1,c2) or (d1,d2)\n\nPlayer 1 has one decision node:\n\n\\(s_1^1=(L)\\)\n\\(s_1^2=(R)\\)\n\nPlayer 2 has two decision nodes, so 4 pure strategies:\n\n\\(s_2^1=(l|L,\\ l|R)\\)\n\\(s_2^2=(l|L,\\ r|R)\\)\n\\(s_2^3=(r|L,\\ l|R)\\)\n\\(s_2^4=(r|L,\\ r|R)\\)"
+  },
+  {
+    "objectID": "lecture-slides/slides/lecture-5-multi-stage-games.html#extensive-form-to-normal-form-example",
+    "href": "lecture-slides/slides/lecture-5-multi-stage-games.html#extensive-form-to-normal-form-example",
+    "title": "EC5230 - Industrial Organisation",
+    "section": "Extensive form to normal form (example)",
+    "text": "Extensive form to normal form (example)\n\n\n\n\n\n\n\n\n\n\n\n\\(s_2^1=(l|L,l|R)\\)\n\\(s_2^2=(l|L,r|R)\\)\n\\(s_2^3=(r|L,l|R)\\)\n\\(s_2^4=(r|L,r|R)\\)\n\n\n\n\n\\(s_1^1=(L)\\)\n\\((a_1,a_2)\\)\n\\((a_1,a_2)\\)\n\\((b_1,b_2)\\)\n\\((b_1,b_2)\\)\n\n\n\\(s_1^2=(R)\\)\n\\((c_1,c_2)\\)\n\\((d_1,d_2)\\)\n\\((c_1,c_2)\\)\n\\((d_1,d_2)\\)\n\n\n\n\n\n\n\n\n\nExam tip\n\n\nWhen converting a game tree to normal form, count strategies by counting complete plans, not just actions on the equilibrium path."
+  },
+  {
+    "objectID": "lecture-slides/slides/lecture-5-multi-stage-games.html#entry-game-extensive-form",
+    "href": "lecture-slides/slides/lecture-5-multi-stage-games.html#entry-game-extensive-form",
+    "title": "EC5230 - Industrial Organisation",
+    "section": "Entry game: extensive form",
+    "text": "Entry game: extensive form\n\nStage 1: entrant chooses Enter or Stay out\nStage 2 (if entry): incumbent chooses Fight or Accommodate\nPayoffs (as in the original example):\n\nStay out \\(\\rightarrow (0,2)\\)\nEnter + Fight \\(\\rightarrow (-3,-1)\\)\nEnter + Accommodate \\(\\rightarrow (2,1)\\)\n\nStrategies:\n\nEntrant: \\((\\text{Stay out})\\), \\((\\text{Enter})\\)\nIncumbent: \\((\\text{Fight if entry})\\), \\((\\text{Accommodate if entry})\\)"
+  },
+  {
+    "objectID": "lecture-slides/slides/lecture-5-multi-stage-games.html#entry-game-nash-equilibria-in-normal-form",
+    "href": "lecture-slides/slides/lecture-5-multi-stage-games.html#entry-game-nash-equilibria-in-normal-form",
+    "title": "EC5230 - Industrial Organisation",
+    "section": "Entry game: Nash equilibria in normal form",
+    "text": "Entry game: Nash equilibria in normal form\n\n\n\nEntrant / Incumbent\nFight (if entry)\nAccommodate (if entry)\n\n\n\n\nStay out\n\\((0,2)\\)\n\\((0,2)\\)\n\n\nEnter\n\\((-3,-1)\\)\n\\((2,1)\\)\n\n\n\n\nPure-strategy Nash equilibria:\n\n\\((\\text{Stay out},\\ \\text{Fight if entry})\\)\n\\((\\text{Enter},\\ \\text{Accommodate if entry})\\)\n\nQuestion:\n\nAre both equilibria equally plausible in a dynamic setting?"
+  },
+  {
+    "objectID": "lecture-slides/slides/lecture-5-multi-stage-games.html#backward-induction-credibility-and-equilibrium-selection",
+    "href": "lecture-slides/slides/lecture-5-multi-stage-games.html#backward-induction-credibility-and-equilibrium-selection",
+    "title": "EC5230 - Industrial Organisation",
+    "section": "Backward induction: credibility and equilibrium selection",
+    "text": "Backward induction: credibility and equilibrium selection\n\nThe equilibrium \\((\\text{Stay out},\\ \\text{Fight if entry})\\) relies on a non-credible threat\nBackward induction logic:\n\nIf entry occurs, the incumbent prefers Accommodate to Fight (\\(1&gt;-1\\))\nAnticipating this, the entrant chooses Enter (\\(2&gt;0\\))\n\n\n\n\n\n\n\n\nBackward-induction outcome (entry game)\n\n\n\\((\\text{Enter},\\ \\text{Accommodate if entry})\\)\n\n\n\n\nBackward induction is applicable to finite dynamic games with perfect information"
+  },
+  {
+    "objectID": "lecture-slides/slides/lecture-5-multi-stage-games.html#backward-induction-generic-procedure-two-stage-game",
+    "href": "lecture-slides/slides/lecture-5-multi-stage-games.html#backward-induction-generic-procedure-two-stage-game",
+    "title": "EC5230 - Industrial Organisation",
+    "section": "Backward induction: generic procedure (two-stage game)",
+    "text": "Backward induction: generic procedure (two-stage game)\n\nStage 1: Player 1 chooses \\(a_1 \\in A_1\\)\nStage 2: Player 2 observes \\(a_1\\) and chooses \\(a_2 \\in A_2\\)\nPayoffs: \\(u_1(a_1,a_2)\\) and \\(u_2(a_1,a_2)\\)\nProcedure:\n\nSolve Player 2’s problem for each history \\(a_1\\):\n\nchoose \\(a_2\\) to maximise \\(u_2(a_1,a_2)\\)\ndefine the reaction function \\(R_2(a_1)\\) (if unique)\n\nSubstitute into Player 1’s payoff and solve:\n\nchoose \\(a_1\\) to maximise \\(u_1(a_1,R_2(a_1))\\)\n\nThe equilibrium path is \\(\\big(a_1^\\ast, R_2(a_1^\\ast)\\big)\\)\n\n\n\n\n\n\n\n\nBridge to Stackelberg\n\n\nThe Stackelberg model is exactly this two-stage structure: the follower’s best response is solved first, then the leader optimises anticipating that response."
   },
   {
     "objectID": "lecture-slides/slides/lecture-5-multi-stage-games.html#stackelberg-model-structure",
     "href": "lecture-slides/slides/lecture-5-multi-stage-games.html#stackelberg-model-structure",
     "title": "EC5230 - Industrial Organisation",
-    "section": "Stackelberg model: structure",
-    "text": "Stackelberg model: structure\n\nTwo stages, two firms:\n\nLeader chooses \\(q_1\\)\nFollower observes \\(q_1\\) and chooses \\(q_2\\)\n\nDemand and costs:\n\nInverse demand: \\(p(Q)=A-Q\\) with \\(Q=q_1+q_2\\)\nMarginal cost: \\(c\\) (parameter)"
+    "section": "Stackelberg model: Structure",
+    "text": "Stackelberg model: Structure\n\nTwo stages, two firms:\n\nLeader chooses \\(q_1\\)\nFollower observes \\(q_1\\) and chooses \\(q_2\\)\n\nDemand and costs:\n\nInverse demand: \\(p(Q)=A-Q\\) with \\(Q=q_1+q_2\\)\nMarginal cost: \\(c\\) (parameter)"
   },
   {
-    "objectID": "lecture-slides/slides/lecture-5-multi-stage-games.html#stackelberg-model-follower-best-response",
-    "href": "lecture-slides/slides/lecture-5-multi-stage-games.html#stackelberg-model-follower-best-response",
+    "objectID": "lecture-slides/slides/lecture-5-multi-stage-games.html#follower-best-response",
+    "href": "lecture-slides/slides/lecture-5-multi-stage-games.html#follower-best-response",
     "title": "EC5230 - Industrial Organisation",
-    "section": "Stackelberg model: follower best response",
-    "text": "Stackelberg model: follower best response\n\nFollower profit given \\(q_1\\):\n\n\\[\n\\pi_2(q_2;q_1) = (A-q_1-q_2-c)q_2\n\\]\n\nBest response:\n\n\\[\nBR_2(q_1)=\\frac{A-c-q_1}{2}\n\\]\n\n\n\n\n\n\nStrategic substitutes (quantities)\n\n\nQuantities are strategic substitutes: when the rival increases output, my best-response output decreases (downward-sloping best response)."
+    "section": "Follower best response",
+    "text": "Follower best response\n\nFollower profit given \\(q_1\\):\n\n\\[\n\\pi_2(q_2;q_1) = (A-q_1-q_2-c)q_2\n\\]\n\nBest response:\n\n\\[\nBR_2(q_1)=\\frac{A-c-q_1}{2}\n\\]\n\n\n\n\n\n\nStrategic substitutes (quantities)\n\n\nQuantities are strategic substitutes: when the rival increases output, my best-response output decreases (downward-sloping best response)."
   },
   {
     "objectID": "lecture-slides/slides/lecture-5-multi-stage-games.html#stackelberg-model-leader-choice",
@@ -53,7 +137,7 @@
     "href": "lecture-slides/slides/lecture-5-multi-stage-games.html#stackelberg-v-cournot-equilibrium-outcomes",
     "title": "EC5230 - Industrial Organisation",
     "section": "Stackelberg v Cournot: equilibrium outcomes",
-    "text": "Stackelberg v Cournot: equilibrium outcomes\n\nIdentical marginal costs (\\(c\\)) imply:\n\n\n\n\n\n\n\n\n\nOutcome\nStackelberg\nCournot\n\n\n\n\nFirm 1 output\n\\(q_1^S=\\frac{A-c}{2}\\)\n\\(q_1^C=\\frac{A-c}{3}\\)\n\n\nFirm 2 output\n\\(q_2^S=\\frac{A-c}{4}\\)\n\\(q_2^C=\\frac{A-c}{3}\\)\n\n\nAggregate output\n\\(Q^S=\\frac{3(A-c)}{4}\\)\n\\(Q^C=\\frac{2(A-c)}{3}\\)\n\n\nPrice\n\\(p^S=\\frac{A+3c}{4}\\)\n\\(p^C=\\frac{A+2c}{3}\\)\n\n\nFirm 1 profit\n\\(\\pi_1^S=\\frac{(A-c)^2}{8}\\)\n\\(\\pi_1^C=\\frac{(A-c)^2}{9}\\)\n\n\nFirm 2 profit\n\\(\\pi_2^S=\\frac{(A-c)^2}{16}\\)\n\\(\\pi_2^C=\\frac{(A-c)^2}{9}\\)\n\n\n\n\n\n\n\n\n\nDiscussion question\n\n\nThe leader earns more than in Cournot and the follower earns less. Is this because the leader is more capable, or because the structure of sequential moves creates an advantage? Could the follower also benefit from moving first?"
+    "text": "Stackelberg v Cournot: equilibrium outcomes\n\n\n\n\n\n\n\n\nOutcome\nStackelberg\nCournot\n\n\n\n\nFirm 1 output\n\\(q_1^S=\\frac{A-c}{2}\\)\n\\(q_1^C=\\frac{A-c}{3}\\)\n\n\nFirm 2 output\n\\(q_2^S=\\frac{A-c}{4}\\)\n\\(q_2^C=\\frac{A-c}{3}\\)\n\n\nAggregate output\n\\(Q^S=\\frac{3(A-c)}{4}\\)\n\\(Q^C=\\frac{2(A-c)}{3}\\)\n\n\nPrice\n\\(p^S=\\frac{A+3c}{4}\\)\n\\(p^C=\\frac{A+2c}{3}\\)\n\n\nFirm 1 profit\n\\(\\pi_1^S=\\frac{(A-c)^2}{8}\\)\n\\(\\pi_1^C=\\frac{(A-c)^2}{9}\\)\n\n\nFirm 2 profit\n\\(\\pi_2^S=\\frac{(A-c)^2}{16}\\)\n\\(\\pi_2^C=\\frac{(A-c)^2}{9}\\)"
   },
   {
     "objectID": "lecture-slides/slides/lecture-5-multi-stage-games.html#stackelberg-model-remarks",
@@ -63,39 +147,46 @@
     "text": "Stackelberg model: remarks\n\nComparative statics questions:\n\nWhat changes when marginal costs are asymmetric?\nWhat changes if the timing is endogenous (announcement/commitment issues)?"
   },
   {
-    "objectID": "lecture-slides/slides/lecture-5-multi-stage-games.html#stackelberg-numerical-example-a10-c1",
-    "href": "lecture-slides/slides/lecture-5-multi-stage-games.html#stackelberg-numerical-example-a10-c1",
+    "objectID": "lecture-slides/slides/lecture-5-multi-stage-games.html#numerical-example-a10-c1",
+    "href": "lecture-slides/slides/lecture-5-multi-stage-games.html#numerical-example-a10-c1",
     "title": "EC5230 - Industrial Organisation",
-    "section": "Stackelberg: numerical example (\\(A=10\\), \\(c=1\\))",
-    "text": "Stackelberg: numerical example (\\(A=10\\), \\(c=1\\))\n\nParameters: \\(A=10\\) (demand intercept), \\(c=1\\) (marginal cost)\nStackelberg outcomes:\n\n\\(q_1^S=\\frac{A-c}{2}=4.5\\); \\(q_2^S=\\frac{A-c}{4}=2.25\\)\n\\(Q^S=6.75\\); \\(p^S=A-Q^S=3.25\\)\n\\(\\pi_1^S=(p^S-c)q_1^S=10.125\\)\n\nCournot benchmark:\n\n\\(\\pi_1^C=\\frac{(A-c)^2}{9}=9\\)\n\n\n\n\n\n\n\n\nConcrete comparison\n\n\nWith \\(A=10\\), \\(c=1\\): \\(\\pi_1^S=10.125 &gt; \\pi_1^C=9\\) (first-mover advantage)."
+    "section": "Numerical example (\\(A=10\\), \\(c=1\\))",
+    "text": "Numerical example (\\(A=10\\), \\(c=1\\))\n\nParameters: \\(A=10\\) (demand intercept), \\(c=1\\) (marginal cost)\nStackelberg outcomes:\n\n\\(q_1^S=\\frac{A-c}{2}=4.5\\); \\(q_2^S=\\frac{A-c}{4}=2.25\\)\n\\(Q^S=6.75\\); \\(p^S=A-Q^S=3.25\\)\n\\(\\pi_1^S=(p^S-c)q_1^S=10.125\\)\n\nCournot benchmark:\n\n\\(\\pi_1^C=\\frac{(A-c)^2}{9}=9\\)\n\n\n\n\n\n\n\n\nConcrete comparison\n\n\nWith \\(A=10\\), \\(c=1\\): \\(\\pi_1^S=10.125 &gt; \\pi_1^C=9\\) (first-mover advantage)."
   },
   {
-    "objectID": "lecture-slides/slides/lecture-5-multi-stage-games.html#stackelberg-welfare-comparison-to-cournot",
-    "href": "lecture-slides/slides/lecture-5-multi-stage-games.html#stackelberg-welfare-comparison-to-cournot",
+    "objectID": "lecture-slides/slides/lecture-5-multi-stage-games.html#welfare-comparison-to-cournot",
+    "href": "lecture-slides/slides/lecture-5-multi-stage-games.html#welfare-comparison-to-cournot",
     "title": "EC5230 - Industrial Organisation",
-    "section": "Stackelberg: welfare comparison (to Cournot)",
-    "text": "Stackelberg: welfare comparison (to Cournot)\n\nWith linear demand \\(p=A-Q\\) and constant marginal cost \\(c\\):\n\nHigher total output implies lower price \\(\\Rightarrow\\) higher consumer surplus (CS)\nStackelberg yields \\(Q^S&gt;\\,Q^C\\) (hence \\(CS^S&gt;CS^C\\))\n\nTotal surplus changes because:\n\nCS rises with \\(Q\\)\nprofits can rise for the leader and fall for the follower relative to Cournot\n\n\n\n\n\n\n\n\nExam-useful\n\n\nStackelberg leadership typically increases output relative to Cournot, so it is (weakly) better for consumers."
+    "section": "Welfare comparison (to Cournot)",
+    "text": "Welfare comparison (to Cournot)\n\nWith linear demand \\(p=A-Q\\) and constant marginal cost \\(c\\):\n\nHigher total output implies lower price \\(\\Rightarrow\\) higher consumer surplus (CS)\nStackelberg yields \\(Q^S&gt;\\,Q^C\\) (hence \\(CS^S&gt;CS^C\\))\n\nTotal surplus changes because:\n\nCS rises with \\(Q\\)\nprofits can rise for the leader and fall for the follower relative to Cournot"
   },
   {
     "objectID": "lecture-slides/slides/lecture-5-multi-stage-games.html#delegation-economic-idea",
     "href": "lecture-slides/slides/lecture-5-multi-stage-games.html#delegation-economic-idea",
     "title": "EC5230 - Industrial Organisation",
-    "section": "Delegation: economic idea",
-    "text": "Delegation: economic idea\n\nFirms may delegate output choice to managers with objectives that differ from pure profit maximisation\nDelegation instrument:\n\nan incentive parameter \\(\\theta_i\\) written into the manager’s contract"
+    "section": "Delegation: Economic idea",
+    "text": "Delegation: Economic idea\n\nFirms may delegate output choice to managers with objectives that differ from pure profit maximisation\nDelegation instrument:\n\nan incentive parameter \\(\\theta_i\\) written into the manager’s contract"
   },
   {
     "objectID": "lecture-slides/slides/lecture-5-multi-stage-games.html#delegation-vickers-model",
     "href": "lecture-slides/slides/lecture-5-multi-stage-games.html#delegation-vickers-model",
     "title": "EC5230 - Industrial Organisation",
     "section": "Delegation (Vickers): model",
-    "text": "Delegation (Vickers): model\n\nCournot oligopoly with \\(n\\) firms: \\(i=1,\\dots,n\\)\nManager of firm \\(i\\) maximises:\n\n\\[\nM_i=\\pi_i+\\theta_i q_i\n\\]\nwhere \\(\\pi_i=p(Q)q_i-cq_i\\) and \\(Q=\\sum_i q_i\\)\n\nEquivalently: \\(M_i = p(Q)q_i - (c-\\theta_i)q_i\\) — so \\(\\theta_i\\) acts like a reduction in the manager’s effective marginal cost\n\n\n\n\n\n\n\nCommitment assumption\n\n\nFor delegation to affect rivals’ behaviour, contracts must be:\n\nobservable (rivals see \\(\\theta_i\\))\nbinding (owners cannot override managers after \\(\\theta_i\\) is set)"
+    "text": "Delegation (Vickers): model\n\nCournot oligopoly with \\(n\\) firms: \\(i=1,\\dots,n\\)\nManager of firm \\(i\\) maximises:\n\n\\[\nM_i=\\pi_i+\\theta_i q_i\n\\]\nwhere \\(\\pi_i=p(Q)q_i-cq_i\\) and \\(Q=\\sum_i q_i\\)\n\nEquivalently: \\(M_i = p(Q)q_i - (c-\\theta_i)q_i\\) — so \\(\\theta_i\\) acts like a reduction in the manager’s effective marginal cost"
+  },
+  {
+    "objectID": "lecture-slides/slides/lecture-5-multi-stage-games.html#commitment-assumption",
+    "href": "lecture-slides/slides/lecture-5-multi-stage-games.html#commitment-assumption",
+    "title": "EC5230 - Industrial Organisation",
+    "section": "Commitment assumption",
+    "text": "Commitment assumption\nFor delegation to affect rivals’ behaviour, contracts must be:\n\nobservable (rivals see \\(\\theta_i\\))\nbinding (owners cannot override managers after \\(\\theta_i\\) is set)"
   },
   {
     "objectID": "lecture-slides/slides/lecture-5-multi-stage-games.html#delegation-triopoly-exercise-setup",
     "href": "lecture-slides/slides/lecture-5-multi-stage-games.html#delegation-triopoly-exercise-setup",
     "title": "EC5230 - Industrial Organisation",
-    "section": "Delegation: triopoly exercise (setup)",
-    "text": "Delegation: triopoly exercise (setup)\n\nCournot triopoly: \\(i=1,2,3\\)\nDemand: \\(p(Q)=A-Q\\)\nIdentical marginal costs: \\(c\\)\nManagers: \\(\\theta_i \\ge 0\\)\nTask:\n\nSolve the \\(\\theta\\)-setting game given the induced Cournot equilibrium in \\((q_1,q_2,q_3)\\)"
+    "section": "Delegation: Triopoly exercise (setup)",
+    "text": "Delegation: Triopoly exercise (setup)\n\nCournot triopoly: \\(i=1,2,3\\)\nDemand: \\(p(Q)=A-Q\\)\nIdentical marginal costs: \\(c\\)\nManagers: \\(\\theta_i \\ge 0\\)\nTask:\n\nSolve the \\(\\theta\\)-setting game given the induced Cournot equilibrium in \\((q_1,q_2,q_3)\\)"
   },
   {
     "objectID": "lecture-slides/slides/lecture-5-multi-stage-games.html#delegation-triopoly-solution-steps",
@@ -105,11 +196,11 @@
     "text": "Delegation: triopoly solution steps\n\nStep 1 (product-market subgame): given \\((\\theta_1,\\theta_2,\\theta_3)\\), managers play Cournot and determine \\(q_i^*(\\theta)\\)\nStep 2 (contract stage): each owner chooses \\(\\theta_i\\) to maximise own profit \\(\\pi_i(\\theta_i;\\theta_{-i})\\)\nStep 3 (equilibrium incentives): solve the system of best responses in \\(\\theta\\)\n\nin symmetry: \\(\\theta_1=\\theta_2=\\theta_3=\\hat{\\theta}\\)\n\n\n\n\n\n\n\n\nExam template\n\n\nTwo-stage delegation problems are solved exactly like Stackelberg: solve the quantity subgame first, then solve the incentive-setting stage."
   },
   {
-    "objectID": "lecture-slides/slides/lecture-5-multi-stage-games.html#delegation-triopoly-equilibrium-given",
-    "href": "lecture-slides/slides/lecture-5-multi-stage-games.html#delegation-triopoly-equilibrium-given",
+    "objectID": "lecture-slides/slides/lecture-5-multi-stage-games.html#triopoly-equilibrium-given",
+    "href": "lecture-slides/slides/lecture-5-multi-stage-games.html#triopoly-equilibrium-given",
     "title": "EC5230 - Industrial Organisation",
-    "section": "Delegation: triopoly equilibrium (given)",
-    "text": "Delegation: triopoly equilibrium (given)\nCournot–Nash equilibrium outcomes (given incentives \\(\\theta_i\\)):\n\\[\nq_i^*=\\frac{1}{4}\\left(A-c+3\\theta_i-\\sum_{j\\ne i}\\theta_j\\right)\n\\]\n\\[\np^*=\\frac{1}{4}\\left(A+3c-\\sum_i \\theta_i\\right)\n\\]\n\nInterpretation:\n\nIncreasing \\(\\theta_i\\) shifts \\(q_i^*\\) up; rivals’ incentives are strategic substitutes in outputs through \\(Q\\)"
+    "section": "Triopoly equilibrium (given)",
+    "text": "Triopoly equilibrium (given)\nCournot–Nash equilibrium outcomes (given incentives \\(\\theta_i\\)):\n\\[\nq_i^*=\\frac{1}{4}\\left(A-c+3\\theta_i-\\sum_{j\\ne i}\\theta_j\\right)\n\\]\n\\[\np^*=\\frac{1}{4}\\left(A+3c-\\sum_i \\theta_i\\right)\n\\]\n\nInterpretation:\n\nIncreasing \\(\\theta_i\\) shifts \\(q_i^*\\) up; rivals’ incentives are strategic substitutes in outputs through \\(Q\\)"
   },
   {
     "objectID": "lecture-slides/slides/lecture-5-multi-stage-games.html#delegation-solving-for-equilibrium-incentives",
@@ -140,18 +231,18 @@
     "text": "Delegation: strategic logic\n\nUnilateral incentive: if rivals set \\(\\theta=0\\), choosing \\(\\theta_i&gt;0\\) is strictly profitable\n\nPositive \\(\\theta_i\\) commits the manager to higher output\nRivals reduce output (quantities are strategic substitutes)\n\nEquilibrium outcome: all firms choose \\(\\hat{\\theta}&gt;0\\)\n\nThe strategic advantage disappears when everyone delegates\nProfits fall: \\(\\hat{\\pi}&lt;\\pi^C\\) (overproduction lowers price for all)\n\n\n\n\n\n\n\n\nPrisoners’ dilemma\n\n\nEach owner’s dominant strategy leads to a collectively worse outcome: all firms delegate, output rises, and equilibrium profits fall below the Cournot benchmark.\n\n\n\n\n\n\n\n\n\nDiscussion question\n\n\nIf delegation always lowers industry profits in equilibrium, why would any firm ever choose to delegate? What commitment or regulatory change would allow firms to avoid this outcome?"
   },
   {
-    "objectID": "lecture-slides/slides/lecture-5-multi-stage-games.html#delegation-comparison-table-triopoly",
-    "href": "lecture-slides/slides/lecture-5-multi-stage-games.html#delegation-comparison-table-triopoly",
+    "objectID": "lecture-slides/slides/lecture-5-multi-stage-games.html#comparison-table-triopoly",
+    "href": "lecture-slides/slides/lecture-5-multi-stage-games.html#comparison-table-triopoly",
     "title": "EC5230 - Industrial Organisation",
-    "section": "Delegation: comparison table (triopoly)",
-    "text": "Delegation: comparison table (triopoly)\n\n\n\n\n\n\n\n\n\nScenario\nIncentives\nPer-firm output\nPer-firm profit\n\n\n\n\nAll delegate\n\\(\\hat{\\theta}=\\frac{A-c}{5}\\)\n\\(\\hat{q}=\\frac{3(A-c)}{10}\\)\n\\(\\hat{\\pi}=\\frac{3(A-c)^2}{100}\\)\n\n\nNone delegate\n\\(\\theta=0\\)\n\\(q^C=\\frac{A-c}{4}\\)\n\\(\\pi^C=\\frac{(A-c)^2}{16}\\)\n\n\n\nWith \\(A=10\\), \\(c=1\\):\n\n\\(\\hat{\\pi}=2.43\\)\n\\(\\pi^C=5.0625\\)\n\n\n\n\n\n\n\nTakeaway\n\n\nDelegation is individually rational in the incentive-setting game but reduces profits in equilibrium."
+    "section": "Comparison table (triopoly)",
+    "text": "Comparison table (triopoly)\n\n\n\n\n\n\n\n\n\nScenario\nIncentives\nPer-firm output\nPer-firm profit\n\n\n\n\nAll delegate\n\\(\\hat{\\theta}=\\frac{A-c}{5}\\)\n\\(\\hat{q}=\\frac{3(A-c)}{10}\\)\n\\(\\hat{\\pi}=\\frac{3(A-c)^2}{100}\\)\n\n\nNone delegate\n\\(\\theta=0\\)\n\\(q^C=\\frac{A-c}{4}\\)\n\\(\\pi^C=\\frac{(A-c)^2}{16}\\)\n\n\n\nWith \\(A=10\\), \\(c=1\\):\n\n\\(\\hat{\\pi}=2.43\\)\n\\(\\pi^C=5.0625\\)\n\n\n\n\n\n\n\nTakeaway\n\n\nDelegation is individually rational in the incentive-setting game but reduces profits in equilibrium."
   },
   {
-    "objectID": "lecture-slides/slides/lecture-5-multi-stage-games.html#delegation-numerical-example-a10-c1",
-    "href": "lecture-slides/slides/lecture-5-multi-stage-games.html#delegation-numerical-example-a10-c1",
+    "objectID": "lecture-slides/slides/lecture-5-multi-stage-games.html#numerical-example-a10-c1-1",
+    "href": "lecture-slides/slides/lecture-5-multi-stage-games.html#numerical-example-a10-c1-1",
     "title": "EC5230 - Industrial Organisation",
-    "section": "Delegation: numerical example (\\(A=10\\), \\(c=1\\))",
-    "text": "Delegation: numerical example (\\(A=10\\), \\(c=1\\))\n\nParameters: \\(A=10\\), \\(c=1\\)\nDelegation equilibrium:\n\n\\(\\hat{\\theta}=\\frac{A-c}{5}=1.8\\)\nPer-firm profit: \\(\\hat{\\pi}=\\frac{3(A-c)^2}{100}=2.43\\)\n\nCournot triopoly benchmark (\\(\\theta_i=0\\)):\n\nPer-firm profit: \\(\\pi^C=\\frac{(A-c)^2}{16}=5.0625\\)\n\n\n\n\n\n\n\n\nConcrete comparison\n\n\nWith \\(A=10\\), \\(c=1\\): \\(\\hat{\\pi}=2.43 &lt; \\pi^C=5.0625\\) (delegation intensifies competition and lowers profits)."
+    "section": "Numerical example (\\(A=10\\), \\(c=1\\))",
+    "text": "Numerical example (\\(A=10\\), \\(c=1\\))\n\nParameters: \\(A=10\\), \\(c=1\\)\nDelegation equilibrium:\n\n\\(\\hat{\\theta}=\\frac{A-c}{5}=1.8\\)\nPer-firm profit: \\(\\hat{\\pi}=\\frac{3(A-c)^2}{100}=2.43\\)\n\nCournot triopoly benchmark (\\(\\theta_i=0\\)):\n\nPer-firm profit: \\(\\pi^C=\\frac{(A-c)^2}{16}=5.0625\\)\n\n\n\n\n\n\n\n\nConcrete comparison\n\n\nWith \\(A=10\\), \\(c=1\\): \\(\\hat{\\pi}=2.43 &lt; \\pi^C=5.0625\\) (delegation intensifies competition and lowers profits)."
   },
   {
     "objectID": "lecture-slides/slides/lecture-5-multi-stage-games.html#delegation-welfare-comparison-to-cournot-triopoly",

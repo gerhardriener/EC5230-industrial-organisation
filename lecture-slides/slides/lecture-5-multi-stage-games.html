@@ -32,6 +32,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     /* CSS for citations */
     div.csl-bib-body { }
     div.csl-entry {
@@ -177,7 +243,7 @@ Gerhard Riener
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Object of analysis</strong></p>
+<p><strong>Note</strong></p>
 </div>
 <div class="callout-content">
 <p>How commitment in earlier stages changes equilibrium behaviour in later stages.</p>
@@ -207,6 +273,30 @@ Gerhard Riener
 <li>Compare equilibrium outcomes and welfare across Cournot, Stackelberg, and delegation</li>
 </ol>
 </section>
+<section id="example-ultimatum-game" class="slide level2">
+<h2>Example: Ultimatum game</h2>
+<ul>
+<li>Setup
+<ul>
+<li>Stage 1: Player 1 proposes a share <span class="math inline">\(x\)</span> for Player 2 in splitting $10 (with <span class="math inline">\(0 \leq x \leq 10\)</span>)</li>
+<li>Stage 2: Player 2 observes <span class="math inline">\(x\)</span> and accepts the proposal (<code>A</code>) or rejects it (<code>R</code>)</li>
+<li>Players’ payoffs: <span class="math display">\[
+u_1(x,A)=10-x \qquad u_2(x,A)=x \qquad u_1(x,R)=u_2(x,R)=0
+\]</span></li>
+</ul></li>
+</ul>
+</section>
+<section id="ultimatum-game-solution" class="slide level2">
+<h2>Ultimatum game: Solution</h2>
+<ul>
+<li>Solution by backward induction
+<ul>
+<li>Player 2 accepts any offer <span class="math inline">\(x &gt; 0\)</span>; for <span class="math inline">\(x = 0\)</span>, they are indifferent between accepting and rejecting</li>
+<li>Player 1 offers Player 2 as little as possible and keeps the largest possible remainder</li>
+<li>Backward-induction outcome: <span class="math inline">\((0, A)\)</span></li>
+</ul></li>
+</ul>
+</section>
 <section id="solution-concept-subgame-perfect-equilibrium" class="slide level2">
 <h2>Solution concept: subgame perfect equilibrium</h2>
 <ul>
@@ -229,16 +319,282 @@ Gerhard Riener
 </div>
 </div>
 </div>
+</section></section>
+<section>
+<section id="extensive-form-foundations" class="title-slide slide level1 center" data-background-color="#00539b">
+<h1>Extensive-form foundations</h1>
+
+</section>
+<section id="games-with-complete-and-perfect-information-extensive-form" class="slide level2">
+<h2>Games with complete and perfect information: extensive form</h2>
+<ul>
+<li>Dynamic games can be represented in <strong>extensive form</strong></li>
+</ul>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Discussion question</strong></p>
+<p><strong>Extensive form (definition)</strong></p>
 </div>
 <div class="callout-content">
-<p>Why does commitment require the first-stage action to be <strong>observable</strong>? What happens to the Stackelberg outcome if the follower cannot verify <span class="math inline">\(q_1\)</span> before choosing <span class="math inline">\(q_2\)</span>?</p>
+<p>An extensive-form game specifies:</p>
+<ol type="1">
+<li>which player moves at each decision point (and when)</li>
+<li>each player’s payoff for every possible terminal history (outcome)</li>
+<li>the available actions at each decision node</li>
+<li>what the acting player knows about previous moves when choosing</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="game-tree-basic-components" class="slide level2">
+<h2>Game tree: basic components</h2>
+<ul>
+<li><p>Simple dynamic games can be illustrated with a <strong>game tree</strong></p></li>
+<li><p>Components:</p>
+<ul>
+<li><strong>Decision nodes</strong>: points where a player chooses</li>
+<li><strong>Branches</strong>: feasible actions</li>
+<li><strong>Terminal nodes</strong>: outcomes/payoffs</li>
+</ul></li>
+<li><p>Example structure (generic two-stage game):</p></li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a></a>Player 1</span>
+<span id="cb1-2"><a></a>|- L -&gt; Player 2: l -&gt; (a1,a2), r -&gt; (b1,b2)</span>
+<span id="cb1-3"><a></a>`- R -&gt; Player 2: l -&gt; (c1,c2), r -&gt; (d1,d2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="game-tree-validity-conditions" class="slide level2">
+<h2>Game tree: validity conditions</h2>
+<ul>
+<li>A valid game tree has:
+<ul>
+<li>a unique starting point (<strong>root</strong>)</li>
+<li>a unique predecessor for each non-root node</li>
+<li>no cycles</li>
+</ul></li>
+</ul>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Why this matters</strong></p>
+</div>
+<div class="callout-content">
+<p>If there are cycles or nodes with multiple predecessors, the object is not a tree and standard backward-induction logic is not directly applicable.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="strategy-in-a-dynamic-game-pure-strategy" class="slide level2">
+<h2>Strategy in a dynamic game (pure strategy)</h2>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Definition (pure strategy)</strong></p>
+</div>
+<div class="callout-content">
+<p>A (pure) strategy is a <strong>complete contingent plan</strong>: it specifies an action at every decision node (or, with imperfect information, at every information set) where the player may move.</p>
+</div>
+</div>
+</div>
+<ul>
+<li>Key implication:
+<ul>
+<li>A strategy must specify actions even at nodes that may not be reached on the equilibrium path</li>
+</ul></li>
+</ul>
+</section>
+<section id="example-strategies-induced-by-a-game-tree" class="slide level2">
+<h2>Example: strategies induced by a game tree</h2>
+<ul>
+<li>Consider:</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a></a>Player 1 chooses L or R</span>
+<span id="cb2-2"><a></a>If L: Player 2 chooses l or r -&gt; (a1,a2) or (b1,b2)</span>
+<span id="cb2-3"><a></a>If R: Player 2 chooses l or r -&gt; (c1,c2) or (d1,d2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>Player 1 has one decision node:
+<ul>
+<li><span class="math inline">\(s_1^1=(L)\)</span></li>
+<li><span class="math inline">\(s_1^2=(R)\)</span></li>
+</ul></li>
+<li>Player 2 has two decision nodes, so 4 pure strategies:
+<ul>
+<li><span class="math inline">\(s_2^1=(l|L,\ l|R)\)</span></li>
+<li><span class="math inline">\(s_2^2=(l|L,\ r|R)\)</span></li>
+<li><span class="math inline">\(s_2^3=(r|L,\ l|R)\)</span></li>
+<li><span class="math inline">\(s_2^4=(r|L,\ r|R)\)</span></li>
+</ul></li>
+</ul>
+</section>
+<section id="extensive-form-to-normal-form-example" class="slide level2">
+<h2>Extensive form to normal form (example)</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><span class="math inline">\(s_2^1=(l|L,l|R)\)</span></th>
+<th><span class="math inline">\(s_2^2=(l|L,r|R)\)</span></th>
+<th><span class="math inline">\(s_2^3=(r|L,l|R)\)</span></th>
+<th><span class="math inline">\(s_2^4=(r|L,r|R)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(s_1^1=(L)\)</span></td>
+<td><span class="math inline">\((a_1,a_2)\)</span></td>
+<td><span class="math inline">\((a_1,a_2)\)</span></td>
+<td><span class="math inline">\((b_1,b_2)\)</span></td>
+<td><span class="math inline">\((b_1,b_2)\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(s_1^2=(R)\)</span></td>
+<td><span class="math inline">\((c_1,c_2)\)</span></td>
+<td><span class="math inline">\((d_1,d_2)\)</span></td>
+<td><span class="math inline">\((c_1,c_2)\)</span></td>
+<td><span class="math inline">\((d_1,d_2)\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Exam tip</strong></p>
+</div>
+<div class="callout-content">
+<p>When converting a game tree to normal form, count strategies by counting <strong>complete plans</strong>, not just actions on the equilibrium path.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="entry-game-extensive-form" class="slide level2">
+<h2>Entry game: extensive form</h2>
+<ul>
+<li><p>Stage 1: entrant chooses <strong>Enter</strong> or <strong>Stay out</strong></p></li>
+<li><p>Stage 2 (if entry): incumbent chooses <strong>Fight</strong> or <strong>Accommodate</strong></p></li>
+<li><p>Payoffs (as in the original example):</p>
+<ul>
+<li>Stay out <span class="math inline">\(\rightarrow (0,2)\)</span></li>
+<li>Enter + Fight <span class="math inline">\(\rightarrow (-3,-1)\)</span></li>
+<li>Enter + Accommodate <span class="math inline">\(\rightarrow (2,1)\)</span></li>
+</ul></li>
+<li><p>Strategies:</p>
+<ul>
+<li>Entrant: <span class="math inline">\((\text{Stay out})\)</span>, <span class="math inline">\((\text{Enter})\)</span></li>
+<li>Incumbent: <span class="math inline">\((\text{Fight if entry})\)</span>, <span class="math inline">\((\text{Accommodate if entry})\)</span></li>
+</ul></li>
+</ul>
+</section>
+<section id="entry-game-nash-equilibria-in-normal-form" class="slide level2">
+<h2>Entry game: Nash equilibria in normal form</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Entrant / Incumbent</th>
+<th style="text-align: right;">Fight (if entry)</th>
+<th style="text-align: right;">Accommodate (if entry)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Stay out</td>
+<td style="text-align: right;"><span class="math inline">\((0,2)\)</span></td>
+<td style="text-align: right;"><span class="math inline">\((0,2)\)</span></td>
+</tr>
+<tr class="even">
+<td>Enter</td>
+<td style="text-align: right;"><span class="math inline">\((-3,-1)\)</span></td>
+<td style="text-align: right;"><span class="math inline">\((2,1)\)</span></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Pure-strategy Nash equilibria:
+<ol type="1">
+<li><span class="math inline">\((\text{Stay out},\ \text{Fight if entry})\)</span></li>
+<li><span class="math inline">\((\text{Enter},\ \text{Accommodate if entry})\)</span></li>
+</ol></li>
+<li>Question:
+<ul>
+<li>Are both equilibria equally plausible in a dynamic setting?</li>
+</ul></li>
+</ul>
+</section>
+<section id="backward-induction-credibility-and-equilibrium-selection" class="slide level2">
+<h2>Backward induction: credibility and equilibrium selection</h2>
+<ul>
+<li><p>The equilibrium <span class="math inline">\((\text{Stay out},\ \text{Fight if entry})\)</span> relies on a <strong>non-credible threat</strong></p></li>
+<li><p>Backward induction logic:</p>
+<ul>
+<li>If entry occurs, the incumbent prefers <strong>Accommodate</strong> to <strong>Fight</strong> (<span class="math inline">\(1&gt;-1\)</span>)</li>
+<li>Anticipating this, the entrant chooses <strong>Enter</strong> (<span class="math inline">\(2&gt;0\)</span>)</li>
+</ul></li>
+</ul>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Backward-induction outcome (entry game)</strong></p>
+</div>
+<div class="callout-content">
+<p><span class="math inline">\((\text{Enter},\ \text{Accommodate if entry})\)</span></p>
+</div>
+</div>
+</div>
+<ul>
+<li>Backward induction is applicable to finite dynamic games with perfect information</li>
+</ul>
+</section>
+<section id="backward-induction-generic-procedure-two-stage-game" class="slide level2">
+<h2>Backward induction: generic procedure (two-stage game)</h2>
+<ul>
+<li><p>Stage 1: Player 1 chooses <span class="math inline">\(a_1 \in A_1\)</span></p></li>
+<li><p>Stage 2: Player 2 observes <span class="math inline">\(a_1\)</span> and chooses <span class="math inline">\(a_2 \in A_2\)</span></p></li>
+<li><p>Payoffs: <span class="math inline">\(u_1(a_1,a_2)\)</span> and <span class="math inline">\(u_2(a_1,a_2)\)</span></p></li>
+<li><p>Procedure:</p>
+<ol type="1">
+<li>Solve Player 2’s problem for each history <span class="math inline">\(a_1\)</span>:
+<ul>
+<li>choose <span class="math inline">\(a_2\)</span> to maximise <span class="math inline">\(u_2(a_1,a_2)\)</span></li>
+<li>define the reaction function <span class="math inline">\(R_2(a_1)\)</span> (if unique)</li>
+</ul></li>
+<li>Substitute into Player 1’s payoff and solve:
+<ul>
+<li>choose <span class="math inline">\(a_1\)</span> to maximise <span class="math inline">\(u_1(a_1,R_2(a_1))\)</span></li>
+</ul></li>
+<li>The equilibrium path is <span class="math inline">\(\big(a_1^\ast, R_2(a_1^\ast)\big)\)</span></li>
+</ol></li>
+</ul>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Bridge to Stackelberg</strong></p>
+</div>
+<div class="callout-content">
+<p>The Stackelberg model is exactly this two-stage structure: the follower’s best response is solved first, then the leader optimises anticipating that response.</p>
 </div>
 </div>
 </div>
@@ -249,7 +605,7 @@ Gerhard Riener
 
 </section>
 <section id="stackelberg-model-structure" class="slide level2">
-<h2>Stackelberg model: structure</h2>
+<h2>Stackelberg model: Structure</h2>
 <ul>
 <li><p>Two stages, two firms:</p>
 <ol type="1">
@@ -263,8 +619,8 @@ Gerhard Riener
 </ul></li>
 </ul>
 </section>
-<section id="stackelberg-model-follower-best-response" class="slide level2">
-<h2>Stackelberg model: follower best response</h2>
+<section id="follower-best-response" class="slide level2">
+<h2>Follower best response</h2>
 <ul>
 <li>Follower profit given <span class="math inline">\(q_1\)</span>:</li>
 </ul>
@@ -341,9 +697,6 @@ BR_2(q_1)=\frac{A-c-q_1}{2}
 </section>
 <section id="stackelberg-v-cournot-equilibrium-outcomes" class="slide level2">
 <h2>Stackelberg v Cournot: equilibrium outcomes</h2>
-<ul>
-<li>Identical marginal costs (<span class="math inline">\(c\)</span>) imply:</li>
-</ul>
 <table class="caption-top">
 <colgroup>
 <col style="width: 27%">
@@ -390,32 +743,19 @@ BR_2(q_1)=\frac{A-c-q_1}{2}
 </tr>
 </tbody>
 </table>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Discussion question</strong></p>
-</div>
-<div class="callout-content">
-<p>The leader earns more than in Cournot and the follower earns less. Is this because the leader is more <em>capable</em>, or because the <em>structure</em> of sequential moves creates an advantage? Could the follower also benefit from moving first?</p>
-</div>
-</div>
-</div>
 </section>
 <section id="stackelberg-model-remarks" class="slide level2">
 <h2>Stackelberg model: remarks</h2>
 <ul>
 <li><p>Comparative statics questions:</p>
 <ul>
-<li>What changes when marginal costs are asymmetric?</li>
-<li>What changes if the timing is endogenous (announcement/commitment issues)?</li>
+<li><p>What changes when marginal costs are asymmetric?</p></li>
+<li><p>What changes if the timing is endogenous (announcement/commitment issues)?</p></li>
 </ul></li>
 </ul>
 </section>
-<section id="stackelberg-numerical-example-a10-c1" class="slide level2">
-<h2>Stackelberg: numerical example (<span class="math inline">\(A=10\)</span>, <span class="math inline">\(c=1\)</span>)</h2>
+<section id="numerical-example-a10-c1" class="slide level2">
+<h2>Numerical example (<span class="math inline">\(A=10\)</span>, <span class="math inline">\(c=1\)</span>)</h2>
 <ul>
 <li><p>Parameters: <span class="math inline">\(A=10\)</span> (demand intercept), <span class="math inline">\(c=1\)</span> (marginal cost)</p></li>
 <li><p>Stackelberg outcomes:</p>
@@ -443,8 +783,8 @@ BR_2(q_1)=\frac{A-c-q_1}{2}
 </div>
 </div>
 </section>
-<section id="stackelberg-welfare-comparison-to-cournot" class="slide level2">
-<h2>Stackelberg: welfare comparison (to Cournot)</h2>
+<section id="welfare-comparison-to-cournot" class="slide level2">
+<h2>Welfare comparison (to Cournot)</h2>
 <ul>
 <li><p>With linear demand <span class="math inline">\(p=A-Q\)</span> and constant marginal cost <span class="math inline">\(c\)</span>:</p>
 <ul>
@@ -457,27 +797,14 @@ BR_2(q_1)=\frac{A-c-q_1}{2}
 <li>profits can rise for the leader and fall for the follower relative to Cournot</li>
 </ul></li>
 </ul>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Exam-useful</strong></p>
-</div>
-<div class="callout-content">
-<p>Stackelberg leadership typically increases output relative to Cournot, so it is (weakly) better for consumers.</p>
-</div>
-</div>
-</div>
 </section></section>
 <section>
-<section id="strategic-delegation-vickers" class="title-slide slide level1 center" data-background-color="#00539b">
-<h1>Strategic delegation (Vickers)</h1>
+<section id="vickersdelegationtheoryfirm1985-strategic-delegation" class="title-slide slide level1 center" data-background-color="#00539b">
+<h1><span class="citation" data-cites="vickersDelegationTheoryFirm1985">Vickers (<a href="#/references" role="doc-biblioref" onclick="">1985</a>)</span> : Strategic delegation</h1>
 
 </section>
 <section id="delegation-economic-idea" class="slide level2">
-<h2>Delegation: economic idea</h2>
+<h2>Delegation: Economic idea</h2>
 <ul>
 <li><p>Firms may delegate output choice to managers with objectives that differ from pure profit maximisation</p></li>
 <li><p>Delegation instrument:</p>
@@ -499,26 +826,17 @@ M_i=\pi_i+\theta_i q_i
 <ul>
 <li>Equivalently: <span class="math inline">\(M_i = p(Q)q_i - (c-\theta_i)q_i\)</span> — so <span class="math inline">\(\theta_i\)</span> acts like a reduction in the manager’s effective marginal cost</li>
 </ul>
-<div class="callout callout-warning callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Commitment assumption</strong></p>
-</div>
-<div class="callout-content">
+</section>
+<section id="commitment-assumption" class="slide level2">
+<h2>Commitment assumption</h2>
 <p>For delegation to affect rivals’ behaviour, contracts must be:</p>
 <ul>
-<li>observable (rivals see <span class="math inline">\(\theta_i\)</span>)</li>
-<li>binding (owners cannot override managers after <span class="math inline">\(\theta_i\)</span> is set)</li>
+<li><p>observable (rivals see <span class="math inline">\(\theta_i\)</span>)</p></li>
+<li><p>binding (owners cannot override managers after <span class="math inline">\(\theta_i\)</span> is set)</p></li>
 </ul>
-</div>
-</div>
-</div>
 </section>
 <section id="delegation-triopoly-exercise-setup" class="slide level2">
-<h2>Delegation: triopoly exercise (setup)</h2>
+<h2>Delegation: Triopoly exercise (setup)</h2>
 <ul>
 <li><p>Cournot triopoly: <span class="math inline">\(i=1,2,3\)</span></p></li>
 <li><p>Demand: <span class="math inline">\(p(Q)=A-Q\)</span></p></li>
@@ -554,8 +872,8 @@ M_i=\pi_i+\theta_i q_i
 </div>
 </div>
 </section>
-<section id="delegation-triopoly-equilibrium-given" class="slide level2">
-<h2>Delegation: triopoly equilibrium (given)</h2>
+<section id="triopoly-equilibrium-given" class="slide level2">
+<h2>Triopoly equilibrium (given)</h2>
 <p>Cournot–Nash equilibrium outcomes (given incentives <span class="math inline">\(\theta_i\)</span>):</p>
 <p><span class="math display">\[
 q_i^*=\frac{1}{4}\left(A-c+3\theta_i-\sum_{j\ne i}\theta_j\right)
@@ -689,8 +1007,8 @@ p^*=\frac{1}{4}\left(A+3c-\sum_i \theta_i\right)
 </div>
 </div>
 </section>
-<section id="delegation-comparison-table-triopoly" class="slide level2">
-<h2>Delegation: comparison table (triopoly)</h2>
+<section id="comparison-table-triopoly" class="slide level2">
+<h2>Comparison table (triopoly)</h2>
 <table class="caption-top">
 <colgroup>
 <col style="width: 20%">
@@ -740,8 +1058,8 @@ p^*=\frac{1}{4}\left(A+3c-\sum_i \theta_i\right)
 </div>
 </div>
 </section>
-<section id="delegation-numerical-example-a10-c1" class="slide level2">
-<h2>Delegation: numerical example (<span class="math inline">\(A=10\)</span>, <span class="math inline">\(c=1\)</span>)</h2>
+<section id="numerical-example-a10-c1-1" class="slide level2">
+<h2>Numerical example (<span class="math inline">\(A=10\)</span>, <span class="math inline">\(c=1\)</span>)</h2>
 <ul>
 <li><p>Parameters: <span class="math inline">\(A=10\)</span>, <span class="math inline">\(c=1\)</span></p></li>
 <li><p>Delegation equilibrium:</p>
