@@ -32,72 +32,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     /* CSS for citations */
     div.csl-bib-body { }
     div.csl-entry {
@@ -362,10 +296,8 @@ u_1(x,A)=10-x \qquad u_2(x,A)=x \qquad u_1(x,R)=u_2(x,R)=0
 </ul></li>
 <li><p>Example structure (generic two-stage game):</p></li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a></a>Player 1</span>
-<span id="cb1-2"><a></a>|- L -&gt; Player 2: l -&gt; (a1,a2), r -&gt; (b1,b2)</span>
-<span id="cb1-3"><a></a>`- R -&gt; Player 2: l -&gt; (c1,c2), r -&gt; (d1,d2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
+
+<img data-src="../figs/fig-gametree-1-cetz.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%" alt="Generic two-stage extensive-form game tree: Player 1 chooses L or R, then Player 2 responds with l or r, yielding payoffs (a1,a2), (b1,b2), (c1,c2), (d1,d2)"></section>
 <section id="game-tree-validity-conditions" class="slide level2">
 <h2>Game tree: validity conditions</h2>
 <ul>
@@ -415,18 +347,13 @@ u_1(x,A)=10-x \qquad u_2(x,A)=x \qquad u_1(x,R)=u_2(x,R)=0
 <section id="example-strategies-induced-by-a-game-tree" class="slide level2">
 <h2>Example: strategies induced by a game tree</h2>
 <ul>
-<li>Consider:</li>
-</ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a></a>Player 1 chooses L or R</span>
-<span id="cb2-2"><a></a>If L: Player 2 chooses l or r -&gt; (a1,a2) or (b1,b2)</span>
-<span id="cb2-3"><a></a>If R: Player 2 chooses l or r -&gt; (c1,c2) or (d1,d2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li>Player 1 has one decision node:
+<li><p>Consider the example from above</p></li>
+<li><p>Player 1 has one decision node:</p>
 <ul>
 <li><span class="math inline">\(s_1^1=(L)\)</span></li>
 <li><span class="math inline">\(s_1^2=(R)\)</span></li>
 </ul></li>
-<li>Player 2 has two decision nodes, so 4 pure strategies:
+<li><p>Player 2 has two decision nodes, so 4 pure strategies:</p>
 <ul>
 <li><span class="math inline">\(s_2^1=(l|L,\ l|R)\)</span></li>
 <li><span class="math inline">\(s_2^2=(l|L,\ r|R)\)</span></li>

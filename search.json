@@ -53,7 +53,7 @@
     "href": "lecture-slides/slides/lecture-5-multi-stage-games.html#game-tree-basic-components",
     "title": "EC5230 - Industrial Organisation",
     "section": "Game tree: basic components",
-    "text": "Game tree: basic components\n\nSimple dynamic games can be illustrated with a game tree\nComponents:\n\nDecision nodes: points where a player chooses\nBranches: feasible actions\nTerminal nodes: outcomes/payoffs\n\nExample structure (generic two-stage game):\n\nPlayer 1\n|- L -&gt; Player 2: l -&gt; (a1,a2), r -&gt; (b1,b2)\n`- R -&gt; Player 2: l -&gt; (c1,c2), r -&gt; (d1,d2)"
+    "text": "Game tree: basic components\n\nSimple dynamic games can be illustrated with a game tree\nComponents:\n\nDecision nodes: points where a player chooses\nBranches: feasible actions\nTerminal nodes: outcomes/payoffs\n\nExample structure (generic two-stage game):"
   },
   {
     "objectID": "lecture-slides/slides/lecture-5-multi-stage-games.html#game-tree-validity-conditions",
@@ -74,7 +74,7 @@
     "href": "lecture-slides/slides/lecture-5-multi-stage-games.html#example-strategies-induced-by-a-game-tree",
     "title": "EC5230 - Industrial Organisation",
     "section": "Example: strategies induced by a game tree",
-    "text": "Example: strategies induced by a game tree\n\nConsider:\n\nPlayer 1 chooses L or R\nIf L: Player 2 chooses l or r -&gt; (a1,a2) or (b1,b2)\nIf R: Player 2 chooses l or r -&gt; (c1,c2) or (d1,d2)\n\nPlayer 1 has one decision node:\n\n\\(s_1^1=(L)\\)\n\\(s_1^2=(R)\\)\n\nPlayer 2 has two decision nodes, so 4 pure strategies:\n\n\\(s_2^1=(l|L,\\ l|R)\\)\n\\(s_2^2=(l|L,\\ r|R)\\)\n\\(s_2^3=(r|L,\\ l|R)\\)\n\\(s_2^4=(r|L,\\ r|R)\\)"
+    "text": "Example: strategies induced by a game tree\n\nConsider the example from above\nPlayer 1 has one decision node:\n\n\\(s_1^1=(L)\\)\n\\(s_1^2=(R)\\)\n\nPlayer 2 has two decision nodes, so 4 pure strategies:\n\n\\(s_2^1=(l|L,\\ l|R)\\)\n\\(s_2^2=(l|L,\\ r|R)\\)\n\\(s_2^3=(r|L,\\ l|R)\\)\n\\(s_2^4=(r|L,\\ r|R)\\)"
   },
   {
     "objectID": "lecture-slides/slides/lecture-5-multi-stage-games.html#extensive-form-to-normal-form-example",
