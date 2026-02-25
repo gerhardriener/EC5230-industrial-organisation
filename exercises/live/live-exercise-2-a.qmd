@@ -1,6 +1,6 @@
 ---
 title: "Live Exercise 2: Replacement Effect and Social Value of Innovation"
-solutions: false
+solutions: true
 ---
 
 ::: {.content-hidden unless-meta="solutions"}

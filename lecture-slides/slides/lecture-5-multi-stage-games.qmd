@@ -7,9 +7,9 @@ subtitle: "Lecture 5 - Multi-stage Games"
 ## Multi-stage games: overview
 
 ::: {.callout-note}
-## Object of analysis
 
 How commitment in earlier stages changes equilibrium behaviour in later stages.
+
 :::
 
 - So far:
@@ -29,6 +29,24 @@ By the end of this lecture you should be able to:
 3. Set up and solve a two-stage delegation game (contract stage + product-market subgame)
 4. Compare equilibrium outcomes and welfare across Cournot, Stackelberg, and delegation
 
+## Example: Ultimatum game
+
+- Setup
+  - Stage 1: Player 1 proposes a share $x$ for Player 2 in splitting \$10 (with $0 \leq x \leq 10$)
+  - Stage 2: Player 2 observes $x$ and accepts the proposal (`A`) or rejects it (`R`)
+  - Players' payoffs:
+    $$
+    u_1(x,A)=10-x \qquad u_2(x,A)=x \qquad u_1(x,R)=u_2(x,R)=0
+    $$
+
+
+## Ultimatum game: Solution
+
+- Solution by backward induction
+  - Player 2 accepts any offer $x > 0$; for $x = 0$, they are indifferent between accepting and rejecting
+  - Player 1 offers Player 2 as little as possible and keeps the largest possible remainder
+  - Backward-induction outcome: $(0, A)$
+
 ## Solution concept: subgame perfect equilibrium
 
 - A strategy profile is a **subgame perfect Nash equilibrium (SPNE)** if it induces a Nash equilibrium in every subgame
@@ -42,15 +60,166 @@ By the end of this lecture you should be able to:
 A credible first-stage choice is observed by later movers and shifts their best responses. The payoff function is unchanged — only equilibrium strategies change.
 :::
 
-::: {.callout-note}
-## Discussion question
 
-Why does commitment require the first-stage action to be **observable**? What happens to the Stackelberg outcome if the follower cannot verify $q_1$ before choosing $q_2$?
+# Extensive-form foundations {background-color="#00539b"}
+
+## Games with complete and perfect information: extensive form
+
+- Dynamic games can be represented in **extensive form**
+
+::: {.callout-note}
+## Extensive form (definition)
+
+An extensive-form game specifies:
+
+1. which player moves at each decision point (and when)
+2. each player's payoff for every possible terminal history (outcome)
+3. the available actions at each decision node
+4. what the acting player knows about previous moves when choosing
 :::
+
+## Game tree: basic components
+
+- Simple dynamic games can be illustrated with a **game tree**
+
+- Components:
+  - **Decision nodes**: points where a player chooses
+  - **Branches**: feasible actions
+  - **Terminal nodes**: outcomes/payoffs
+
+- Example structure (generic two-stage game):
+
+```text
+Player 1
+|- L -> Player 2: l -> (a1,a2), r -> (b1,b2)
+`- R -> Player 2: l -> (c1,c2), r -> (d1,d2)
+```
+
+## Game tree: validity conditions
+
+- A valid game tree has:
+  - a unique starting point (**root**)
+  - a unique predecessor for each non-root node
+  - no cycles
+
+::: {.callout-warning}
+## Why this matters
+
+If there are cycles or nodes with multiple predecessors, the object is not a tree and standard backward-induction logic is not directly applicable.
+:::
+
+## Strategy in a dynamic game (pure strategy)
+
+::: {.callout-note}
+## Definition (pure strategy)
+
+A (pure) strategy is a **complete contingent plan**: it specifies an action at every decision node (or, with imperfect information, at every information set) where the player may move.
+:::
+
+- Key implication:
+  - A strategy must specify actions even at nodes that may not be reached on the equilibrium path
+
+## Example: strategies induced by a game tree
+
+- Consider:
+
+```text
+Player 1 chooses L or R
+If L: Player 2 chooses l or r -> (a1,a2) or (b1,b2)
+If R: Player 2 chooses l or r -> (c1,c2) or (d1,d2)
+```
+
+- Player 1 has one decision node:
+  - $s_1^1=(L)$
+  - $s_1^2=(R)$
+
+- Player 2 has two decision nodes, so 4 pure strategies:
+  - $s_2^1=(l|L,\ l|R)$
+  - $s_2^2=(l|L,\ r|R)$
+  - $s_2^3=(r|L,\ l|R)$
+  - $s_2^4=(r|L,\ r|R)$
+
+## Extensive form to normal form (example)
+
+|  | $s_2^1=(l|L,l|R)$ | $s_2^2=(l|L,r|R)$ | $s_2^3=(r|L,l|R)$ | $s_2^4=(r|L,r|R)$ |
+|---|---|---|---|---|
+| $s_1^1=(L)$ | $(a_1,a_2)$ | $(a_1,a_2)$ | $(b_1,b_2)$ | $(b_1,b_2)$ |
+| $s_1^2=(R)$ | $(c_1,c_2)$ | $(d_1,d_2)$ | $(c_1,c_2)$ | $(d_1,d_2)$ |
+
+::: {.callout-important}
+## Exam tip
+
+When converting a game tree to normal form, count strategies by counting **complete plans**, not just actions on the equilibrium path.
+:::
+
+## Entry game: extensive form
+
+- Stage 1: entrant chooses **Enter** or **Stay out**
+- Stage 2 (if entry): incumbent chooses **Fight** or **Accommodate**
+
+- Payoffs (as in the original example):
+  - Stay out $\rightarrow (0,2)$
+  - Enter + Fight $\rightarrow (-3,-1)$
+  - Enter + Accommodate $\rightarrow (2,1)$
+
+- Strategies:
+  - Entrant: $(\text{Stay out})$, $(\text{Enter})$
+  - Incumbent: $(\text{Fight if entry})$, $(\text{Accommodate if entry})$
+
+## Entry game: Nash equilibria in normal form
+
+| Entrant / Incumbent | Fight (if entry) | Accommodate (if entry) |
+|---|---:|---:|
+| Stay out | $(0,2)$ | $(0,2)$ |
+| Enter | $(-3,-1)$ | $(2,1)$ |
+
+- Pure-strategy Nash equilibria:
+  1. $(\text{Stay out},\ \text{Fight if entry})$
+  2. $(\text{Enter},\ \text{Accommodate if entry})$
+
+- Question:
+  - Are both equilibria equally plausible in a dynamic setting?
+
+## Backward induction: credibility and equilibrium selection
+
+- The equilibrium $(\text{Stay out},\ \text{Fight if entry})$ relies on a **non-credible threat**
+
+- Backward induction logic:
+  - If entry occurs, the incumbent prefers **Accommodate** to **Fight** ($1>-1$)
+  - Anticipating this, the entrant chooses **Enter** ($2>0$)
+
+::: {.callout-important}
+## Backward-induction outcome (entry game)
+
+$(\text{Enter},\ \text{Accommodate if entry})$
+:::
+
+- Backward induction is applicable to finite dynamic games with perfect information
+
+## Backward induction: generic procedure (two-stage game)
+
+- Stage 1: Player 1 chooses $a_1 \in A_1$
+- Stage 2: Player 2 observes $a_1$ and chooses $a_2 \in A_2$
+- Payoffs: $u_1(a_1,a_2)$ and $u_2(a_1,a_2)$
+
+- Procedure:
+  1. Solve Player 2's problem for each history $a_1$:
+     - choose $a_2$ to maximise $u_2(a_1,a_2)$
+     - define the reaction function $R_2(a_1)$ (if unique)
+  2. Substitute into Player 1's payoff and solve:
+     - choose $a_1$ to maximise $u_1(a_1,R_2(a_1))$
+  3. The equilibrium path is $\big(a_1^\ast, R_2(a_1^\ast)\big)$
+
+::: {.callout-note}
+## Bridge to Stackelberg
+
+The Stackelberg model is exactly this two-stage structure: the follower's best response is solved first, then the leader optimises anticipating that response.
+:::
+
 
 # Stackelberg competition {background-color="#00539b"}
 
-## Stackelberg model: structure
+## Stackelberg model: Structure
 
 - Two stages, two firms:
 
@@ -61,7 +230,7 @@ Why does commitment require the first-stage action to be **observable**? What ha
   - Inverse demand: $p(Q)=A-Q$ with $Q=q_1+q_2$
   - Marginal cost: $c$ (parameter)
 
-## Stackelberg model: follower best response
+## Follower best response
 
 - Follower profit given $q_1$:
 
@@ -117,8 +286,6 @@ $$q_2^S=BR_2(q_1^S)=\frac{A-c-\frac{A-c}{2}}{2}=\frac{A-c}{4}$$
 
 ## Stackelberg v Cournot: equilibrium outcomes
 
-- Identical marginal costs ($c$) imply:
-
 | Outcome | Stackelberg | Cournot |
 |---|---:|---:|
 | Firm 1 output | $q_1^S=\frac{A-c}{2}$ | $q_1^C=\frac{A-c}{3}$ |
@@ -128,20 +295,16 @@ $$q_2^S=BR_2(q_1^S)=\frac{A-c-\frac{A-c}{2}}{2}=\frac{A-c}{4}$$
 | Firm 1 profit | $\pi_1^S=\frac{(A-c)^2}{8}$ | $\pi_1^C=\frac{(A-c)^2}{9}$ |
 | Firm 2 profit | $\pi_2^S=\frac{(A-c)^2}{16}$ | $\pi_2^C=\frac{(A-c)^2}{9}$ |
 
-::: {.callout-note}
-## Discussion question
-
-The leader earns more than in Cournot and the follower earns less. Is this because the leader is more *capable*, or because the *structure* of sequential moves creates an advantage? Could the follower also benefit from moving first?
-:::
 
 ## Stackelberg model: remarks
 
 - Comparative statics questions:
 
   - What changes when marginal costs are asymmetric?
+
   - What changes if the timing is endogenous (announcement/commitment issues)?
 
-## Stackelberg: numerical example ($A=10$, $c=1$)
+## Numerical example ($A=10$, $c=1$)
 
 - Parameters: $A=10$ (demand intercept), $c=1$ (marginal cost)
 
@@ -159,7 +322,7 @@ The leader earns more than in Cournot and the follower earns less. Is this becau
 With $A=10$, $c=1$: $\pi_1^S=10.125 > \pi_1^C=9$ (first-mover advantage).
 :::
 
-## Stackelberg: welfare comparison (to Cournot)
+## Welfare comparison (to Cournot)
 
 - With linear demand $p=A-Q$ and constant marginal cost $c$:
 
@@ -170,15 +333,10 @@ With $A=10$, $c=1$: $\pi_1^S=10.125 > \pi_1^C=9$ (first-mover advantage).
   - CS rises with $Q$
   - profits can rise for the leader and fall for the follower relative to Cournot
 
-::: {.callout-note}
-## Exam-useful 
 
-Stackelberg leadership typically increases output relative to Cournot, so it is (weakly) better for consumers.
-:::
+#  @vickersDelegationTheoryFirm1985 : Strategic delegation  {background-color="#00539b"}
 
-# Strategic delegation (Vickers) {background-color="#00539b"}
-
-## Delegation: economic idea
+## Delegation: Economic idea
 
 - Firms may delegate output choice to managers with objectives that differ from pure profit maximisation
 
@@ -199,16 +357,17 @@ where $\pi_i=p(Q)q_i-cq_i$ and $Q=\sum_i q_i$
 
 - Equivalently: $M_i = p(Q)q_i - (c-\theta_i)q_i$ — so $\theta_i$ acts like a reduction in the manager's effective marginal cost
 
-::: {.callout-warning}
-### Commitment assumption
+
+## Commitment assumption
 
 For delegation to affect rivals' behaviour, contracts must be:
 
 - observable (rivals see $\theta_i$)
-- binding (owners cannot override managers after $\theta_i$ is set)
-:::
 
-## Delegation: triopoly exercise (setup)
+- binding (owners cannot override managers after $\theta_i$ is set)
+
+
+## Delegation: Triopoly exercise (setup)
 
 - Cournot triopoly: $i=1,2,3$
 - Demand: $p(Q)=A-Q$
@@ -233,7 +392,7 @@ For delegation to affect rivals' behaviour, contracts must be:
 Two-stage delegation problems are solved exactly like Stackelberg: solve the quantity subgame first, then solve the incentive-setting stage.
 :::
 
-## Delegation: triopoly equilibrium (given)
+## Triopoly equilibrium (given)
 
 Cournot–Nash equilibrium outcomes (given incentives $\theta_i$):
 
@@ -342,7 +501,7 @@ Each owner's dominant strategy leads to a collectively worse outcome: all firms 
 If delegation always lowers industry profits in equilibrium, why would any firm ever choose to delegate? What commitment or regulatory change would allow firms to avoid this outcome?
 :::
 
-## Delegation: comparison table (triopoly)
+## Comparison table (triopoly)
 
 | Scenario | Incentives | Per-firm output | Per-firm profit |
 |---|---:|---:|---:|
@@ -360,7 +519,7 @@ With $A=10$, $c=1$:
 Delegation is individually rational in the incentive-setting game but reduces profits in equilibrium.
 :::
 
-## Delegation: numerical example ($A=10$, $c=1$)
+## Numerical example ($A=10$, $c=1$)
 
 - Parameters: $A=10$, $c=1$
 
@@ -409,5 +568,3 @@ Delegation can be privately attractive ex ante (as a commitment device) but can 
 - Welfare and policy implications under different cooperation regimes
 
 ## References
-
-

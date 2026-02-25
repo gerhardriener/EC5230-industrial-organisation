@@ -45,6 +45,10 @@ website:
             href: exercises/live/live-exercise-1.qmd
           - text: "Exercise 2: Innovaton incentives & Patents"
             href: exercises/sheets/exercises-2.qmd
+          - text: "Live Exercise 2a"
+            href: exercises/live/live-exercise-2a.qmd
+          - text: "Live Exercise 2b"
+            href: exercises/live/live-exercise-2b.qmd
 
   sidebar:
     - id: lectures

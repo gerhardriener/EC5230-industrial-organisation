@@ -1,6 +1,6 @@
 ---
 title: "Live Exercise 3: Optimal Patent Length — the Ideas Model"
-solutions: false
+solutions: true
 ---
 
 ::: {.content-hidden unless-meta="solutions"}
