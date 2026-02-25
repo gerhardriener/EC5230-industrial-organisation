@@ -89,11 +89,7 @@ An extensive-form game specifies:
 
 - Example structure (generic two-stage game):
 
-```text
-Player 1
-|- L -> Player 2: l -> (a1,a2), r -> (b1,b2)
-`- R -> Player 2: l -> (c1,c2), r -> (d1,d2)
-```
+![](../figs/fig-gametree-1-cetz.svg){fig-alt="Generic two-stage extensive-form game tree: Player 1 chooses L or R, then Player 2 responds with l or r, yielding payoffs (a1,a2), (b1,b2), (c1,c2), (d1,d2)" fig-align="center" width="80%"}
 
 ## Game tree: validity conditions
 
