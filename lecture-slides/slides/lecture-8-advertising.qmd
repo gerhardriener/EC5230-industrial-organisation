@@ -1,0 +1,101 @@
+---
+subtitle: "Lecture 8 - Advertising"
+---
+
+## Advertising: overview
+- So far
+  - R&D expenditure  
+    - process innovation: improve production efficiency  
+    - demand function unaffected  
+  - Bundling decision/strategy  
+    - extract consumer surplus  
+    - may be used as product differentiation  
+  - Hotelling model, two-stage games  
+- Trade-off
+  - Gain advantage in intense competition  
+    - alter demand function  
+    - amplify product differentiation  
+  - Costly - affects pricing  
+
+## Advertising: overview
+- Today:
+  - Advertising under monopoly  
+    - persuasive and informative  
+    - welfare analysis: too little advertising  
+  - Advertising and competition  
+    - informative and persuasive  
+    - Hotelling model, two-stage game  
+    - welfare analysis: socially excessive advertising  
+
+## Advertising: views / types
+Consider three views on advertising:
+
+- Persuasive
+  - changes consumers’ tastes  
+  - amplifies product differentiation and brand loyalty  
+
+- Informative
+  - informs products’ existence, price, characteristics  
+  - advertising expenditure signals high quality  
+
+- Complementary
+  - changes consumers’ utility function  
+  - complements products and conveys certain images  
+
+## Advertising under monopoly
+
+## Advertising under monopoly: Dorfman-Steiner model
+- Monopoly chooses price-advertising decision $(p, A) \ge 0$.
+- Demand is $Q(p,A)$ with $\partial Q/\partial p < 0$ and $\partial Q/\partial A > 0$.
+- Cost: $C(Q(p,A))$ with marginal cost $C' > 0$.
+
+$$
+\max_{p,A} \Pi(p,A) = pQ(p,A) - C(Q(p,A)) - A
+$$
+
+$$
+\frac{p - C'}{p} = \frac{1}{\eta_{Q,p}}
+$$
+
+$$
+\frac{A}{pQ} = \frac{\eta_{Q,A}}{\eta_{Q,p}}
+$$
+
+## Advertising under monopoly: persuasive
+
+$$
+Q(p,A) = 1 - \frac{p}{g(A)}
+$$
+
+with $g(A)=1+\sqrt{A}$.
+
+## Advertising under monopoly: welfare analysis example
+
+$$
+A^M = \left(\frac{1}{8}\right)^2, \quad
+p^M = \frac{9}{16}, \quad
+Q^M = \frac{1}{2}
+$$
+
+$$
+A^* = \left(\frac{3}{16}\right)^2
+$$
+
+## Advertising and competition
+
+Hotelling model:
+
+$$
+\hat{x} = \frac{1}{2} - \frac{1}{2t}(p_1 - p_2)
+$$
+
+## References & Next Lecture
+Belleflamme & Peitz (2015), Chapter 6.  
+Shy (1996), Chapter 11.  
+
+Next Lecture: Mergers.
+
+## Contact
+EC5223 - Industrial Economics  
+Lois Simanjuntak  
+Email: lms40@st-andrews.ac.uk  

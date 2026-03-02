@@ -1,32 +1,5 @@
 ---
-title: "Lecture 7: Bundling and Tying"
-subtitle: "EC5230 Industrial Organisation"
-author: "Gerhard Riener"
-date: 2026-03-02
-date-format: "D MMMM YYYY"
-format:
-  revealjs:
-    theme: 
-      - default
-      - ../../_extensions/data-wise/custom.scss
-    slide-number: c/t
-    show-slide-number: all
-    transition: fade
-    background-transition: fade
-    embed-resources: false
-    html-math-method: mathjax
-    css: ../../_extensions/data-wise/custom.css
-  beamer:
-    aspectratio: 169
-    navigation: horizontal
-    theme: Madrid
-    colortheme: default
-    urlcolor: standrewsblue
-execute:
-  echo: false
-  warning: false
-  message: false
-bibliography: ../../references.bib
+subtitle: "Lecture 7 - Bundling and Tying"
 ---
 
 # Introduction {.section-divider background-color="#00539B"}
@@ -133,20 +106,20 @@ $$\Theta = \theta_A + \theta_B$$
 
 ## Bundling under monopoly: demand under separate selling
 
-![Demand regions under separate selling: Consumer buys A if $\theta_A \geq p_A$, buys B if $\theta_B \geq p_B$.](../figs/fig-bundling-separate-demand.svg){fig-align="center" width="70%"}
+<!-- ![Demand regions under separate selling: Consumer buys A if $\theta_A \geq p_A$, buys B if $\theta_B \geq p_B$.](../figs/fig-bundling-separate-demand.svg){fig-align="center" width="70%"} -->
 
 ::: {.callout-note}
-**Source:** Belleflamme & Peitz (2015), Figure 11.2
+**Source:** @belleflammeIndustrialOrganizationMarkets2015 , Figure 11.2
 :::
 
 ---
 
 ## Bundling under monopoly: demand under mixed bundling
-
+<!-- 
 ![Demand regions under mixed bundling with $p_A = p_B = p$: Center region buys bundle, left arm buys A only, bottom arm buys B only.](../figs/fig-bundling-mixed-demand.svg){fig-align="center" width="70%"}
-
+ -->
 ::: {.callout-note}
-**Source:** Belleflamme & Peitz (2015), Figure 11.4
+**Source:** @belleflammeIndustrialOrganizationMarkets2015, Figure 11.4
 :::
 
 ---
@@ -203,11 +176,11 @@ $$\text{Optimal: } p^{\text{mix}} \approx 0.67, \quad p_{AB}^{\text{mix}} \appro
 ---
 
 ## Bundling under monopoly: welfare analysis
-
+<!-- 
 ![Total welfare comparison: Pure bundling maximizes welfare by serving more consumers at cost of higher prices.](../figs/fig-bundling-welfare.svg){fig-align="center" width="75%"}
-
+ -->
 ::: {.callout-note}
-**Source:** Belleflamme & Peitz (2015), Figure 11.5
+**Source:** @belleflammeIndustrialOrganizationMarkets2015, Figure 11.5
 :::
 
 ---
@@ -423,7 +396,7 @@ Firm 2 enters if $0.25 - F > 0$, i.e., $F < 0.25$.
 
 ---
 
-## Bundling as product differentiation: Shy (1996) model setup
+## Bundling as product differentiation:  @shyIndustrialOrganizationTheory1995 model setup
 
 **Competitors:**
 
@@ -613,24 +586,6 @@ Competitive bundling still distorts service allocation, but may be welfare-impro
 
 **Principle:** Analyze case-by-case. Effect depends on market power, cost structure, and intent.
 
----
 
-## References & Next Lecture
 
-**Core readings:**
-
-- @BelleflammePeitz2015 [Chapters 11.2–11.4]
-- @Shy1996
-
-. . .
-
-**Next lecture:** Advertising and information provision
-
----
-
-## Contact
-
-EC5230 – Industrial Organisation  
-Gerhard Riener  
-Email: gr97@st-andrews.ac.uk  
-Office hours: [To be announced]
+## References 
