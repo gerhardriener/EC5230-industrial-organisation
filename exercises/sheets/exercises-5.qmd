@@ -1,0 +1,216 @@
+---
+title: "Exercise: Advertising under Duopoly & Cournot Mergers"
+solutions: true
+---
+
+::: {.content-hidden unless-meta="solutions"}
+# Solutions
+:::
+
+**Instructions**
+- Answer all questions.
+- Show intermediate steps.
+
+## Problem 1: Advertising under duopoly – continuous advertising decision
+
+In St Andrews there are two consultants: consultant α and consultant β. Each consultant charges a fixed fee of 10 pounds for one visit. For $i = \alpha, \beta$, denote $A_i \ge 0$ as consultant $i$’s advertising expenditure and $n_i$ as the number of St Andrews residents visiting consultant $i$. Assume that $n_i$ depends only on the advertising expenditures of both consultants, given by
+
+$$
+n_\alpha \equiv 6 - 3 \left( \frac{A_\beta}{A_\alpha} \right),
+\qquad
+n_\beta \equiv 6 - 3 \left( \frac{A_\alpha}{A_\beta} \right),
+$$
+
+and that the consultants do not incur any other costs apart from the advertising expenditure. Suppose that each consultant has to decide only one variable, which is the advertising expenditure (in pounds).
+
+### (a)
+
+Write the profit maximisation problem of consultant $i$.
+
+### (b)
+
+Compare the number of visitors and the profit of each consultant when
+
+(i) $A_\alpha = A_\beta = 2$ pounds  
+(ii) $A_\alpha = A_\beta = 3$ pounds  
+
+### (c)
+
+Derive the best response function of each consultant and identify the Nash equilibrium.
+
+### (d)
+
+In view of the answer to (b), is the Nash equilibrium in (c) optimal for the consultants?
+
+::: {.content-hidden unless-meta="solutions"}
+## Solution
+
+### (a)
+
+Consultant $i$ solves
+
+$$
+\max_{A_i} \; \pi_i(A_\alpha, A_\beta)
+= 10 \cdot n_i - A_i
+= 10 \left[ 6 - 3 \left( \frac{A_j}{A_i} \right) \right] - A_i.
+$$
+
+### (b)
+
+Substituting the given values for $A_\alpha$ and $A_\beta$ into $n_i$ and $\pi_i$, if
+
+(i) $A_\alpha = A_\beta = 2$ then
+$$
+n_\alpha = n_\beta = 3
+$$
+and
+$$
+\pi_\alpha = \pi_\beta = 10 \cdot 3 - 2 = 28.
+$$
+
+(ii) $A_\alpha = A_\beta = 3$ then
+$$
+n_\alpha = n_\beta = 3
+$$
+and
+$$
+\pi_\alpha = \pi_\beta = 10 \cdot 3 - 3 = 27.
+$$
+
+### (c)
+
+The first-order condition gives
+
+$$
+10 \cdot (-3A_j) \left( - \frac{1}{A_i^2} \right) - 1 = 0
+\quad \Longleftrightarrow \quad
+A_i = \sqrt{30 \cdot A_j}.
+$$
+
+Solving the system
+
+$$
+\begin{cases}
+A_\alpha^* = \sqrt{30 \cdot A_\beta^*} \\
+A_\beta^* = \sqrt{30 \cdot A_\alpha^*}
+\end{cases}
+$$
+
+leads to two solutions, which are the Nash equilibria:
+
+$$
+(A_\alpha^* = 0, A_\beta^* = 0)
+$$
+
+and
+
+$$
+(A_\alpha^* = 30, A_\beta^* = 30).
+$$
+
+### (d)
+
+Due to wasteful (costly) advertising, $(A_\alpha^* = 0, A_\beta^* = 0)$ is optimal for the consultants but not $(A_\alpha^* = 30, A_\beta^* = 30)$.
+:::
+
+## Problem 2: Cournot mergers and synergies
+
+Consider a homogeneous-product Cournot oligopoly with 4 firms. Suppose that the inverse demand function is
+
+$$
+P(Q) = 64 - Q.
+$$
+
+### (a)
+
+Suppose that firms incur a constant marginal cost $c = 4$. Derive the (pre-merger) Nash equilibrium of the game, in which all firms simultaneously choose quantity.
+
+### (b)
+
+Suppose that firms 1 and 2 consider merging and that there are synergies leading to the merged entity’s marginal costs being $c_m < c$. Derive the post-merger Nash equilibrium.
+
+### (c)
+
+Find the value of $c_m$ such that firms 1 and 2 are indifferent between merging and not merging.
+
+::: {.content-hidden unless-meta="solutions"}
+## Solution
+
+### (a)
+
+Solve the standard Cournot maximisation problem and the system of FOCs:
+
+$$
+q_i^* = \frac{64 - 4}{5} = 12,
+\quad i \in \{1,2,3,4\}.
+$$
+
+Therefore,
+
+$$
+Q^* = 48, \quad P^* = 16, \quad \pi_i^* = 144.
+$$
+
+### (b)
+
+Merged entity solves
+
+$$
+\max_{q_m} \; \pi_m
+= [64 - q_m - q_3 - q_4 - c_m] q_m.
+$$
+
+FOC:
+
+$$
+2q_m + q_3 + q_4 = 64 - c_m.
+$$
+
+FOCs of firms 3 and 4 remain unchanged.
+
+Solving the system gives
+
+$$
+\tilde{q}_m = 18 - \frac{3c_m}{4},
+$$
+
+$$
+\tilde{q}_3 = \tilde{q}_4 = 14 + \frac{c_m}{4}.
+$$
+
+Therefore,
+
+$$
+\tilde{Q} = 46 - \frac{c_m}{4},
+$$
+
+$$
+\tilde{P} = 18 + \frac{c_m}{4}.
+$$
+
+Profits:
+
+$$
+\tilde{\pi}_m = \left( 18 - \frac{3c_m}{4} \right)^2,
+$$
+
+$$
+\tilde{\pi}_3 = \tilde{\pi}_4 = \left( 14 + \frac{c_m}{4} \right)^2.
+$$
+
+### (c)
+
+Merging firms are indifferent iff
+
+$$
+\tilde{\pi}_m = 2 \cdot \pi_i^*
+\quad \Longleftrightarrow \quad
+\left( 18 - \frac{3c_m}{4} \right)^2 = 2 \cdot 144.
+$$
+
+Solving gives
+
+$$
+c_m = 8(3 - 2\sqrt{2}) \approx 1.37.
+$$
+:::

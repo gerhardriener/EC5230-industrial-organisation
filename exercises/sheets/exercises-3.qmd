@@ -1,0 +1,110 @@
+---
+title: "Exercise: Market Structure and Incentives to Acquire Innovation"
+solutions: true
+---
+
+::: {.content-hidden unless-meta="solutions"}
+# Solutions
+:::
+
+**Instructions**
+- Answer all questions.
+- Show intermediate steps.
+
+## Problem 1: Market structure and incentives to acquire innovation
+
+Firms A and B have a constant marginal cost of production, $c_A = 3$ and $c_B = 4$ respectively. They compete in quantities (Cournot competition), produce a homogeneous product, and face a linear demand curve
+$$
+P = 5 - Q.
+$$
+
+A patent becomes available for a technology that yields a marginal cost of production equal to
+$$
+\tilde{c} = 3.5.
+$$
+
+Which firm will acquire the patent and how much will it pay for it?
+
+::: {.content-hidden unless-meta="solutions"}
+## Solution
+
+### Before any firm acquires the patent
+
+The system of FOCs of the firms’ profit maximisations is given by:
+$$
+\begin{cases}
+4q_A + 2q_B = 4 \\
+q_A + 2q_B = 1
+\end{cases}
+$$
+
+which gives us the equilibrium quantities
+$$
+q_A^* = 1 \quad \text{and} \quad q_B^* = 0.
+$$
+
+That is, Firm A is a monopoly in the market.
+
+Total quantity is
+$$
+Q^* = 1
+$$
+and price is
+$$
+P^* = 4,
+$$
+so the profits are
+$$
+\Pi_A^* = 1 \quad \text{and} \quad \Pi_B^* = 0.
+$$
+
+### If Firm B acquires the patent
+
+The system of FOCs becomes:
+$$
+\begin{cases}
+4q_A + 2q_B = 4 \\
+q_A + 2q_B = 1.5
+\end{cases}
+$$
+
+which gives us quantities
+$$
+\tilde{q}_A = \frac{5}{6}, \quad \tilde{q}_B = \frac{1}{3}.
+$$
+
+Total quantity is
+$$
+\tilde{Q} = \frac{7}{6}
+$$
+and price is
+$$
+\tilde{P} = \frac{23}{6},
+$$
+so the profits are
+$$
+\tilde{\Pi}_A = \frac{25}{36}, \quad \tilde{\Pi}_B = \frac{1}{9}.
+$$
+
+Firm B’s maximum willingness to pay is
+$$
+\tilde{\Pi}_B - \Pi_B^* = \frac{1}{9}.
+$$
+
+### If Firm A acquires the patent
+
+Firm A will not use the technology for its production but only to prevent Firm B from being able to produce, i.e., enter the market.
+
+Firm A’s maximum willingness to pay is
+$$
+\Pi_A^* - \tilde{\Pi}_A = \frac{11}{36}.
+$$
+
+Therefore, Firm A can bid slightly above Firm B’s maximum willingness to pay and acquire the patent.
+
+Assuming Firm A pays the winning bid, it will pay
+$$
+\frac{1}{9} + \varepsilon
+$$
+with $\varepsilon > 0$.
+:::
