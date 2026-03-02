@@ -41,7 +41,7 @@ subtitle: "Lecture 7 - Bundling and Tying"
 
 ## Why Bundling Matters: The Surplus Extraction Mechanism
 
-**Core insight:** Bundling exploits *negative correlation* in consumer valuations
+**Core insight:** Bundling raises profits even under *independent* valuations; gains are largest when valuations are *negatively correlated*.
 
 
 Suppose Consumer 1 values A highly but B little, and Consumer 2 is the opposite.
@@ -177,7 +177,7 @@ Mixed bundling yields highest profit; pure bundling dominates separate selling.
 
 **Consumer surplus:** Pure bundling highest (though prices rise, more consumers are served)
 
-**Total welfare:**
+**Total welfare** [@belleflammeIndustrialOrganizationMarkets2015, Ch. 11]:
 $$W^{\text{pure}} > W^{\text{mix}} > W^{\text{sep}}$$
 
 
@@ -279,9 +279,9 @@ Mixed bundling extracts all consumer surplus and yields highest profit.
 
 **Without bundling (separate pricing):**
 
-$$\pi_1^{\text{sep}} = \frac{13}{36} \approx 0.361, \quad \pi_2^{\text{sep}} = \frac{1}{9} \approx 0.111$$
+$$\pi_1^{\text{sep}} = \underbrace{\tfrac{1}{4}}_{\text{A monopoly}} + \underbrace{\tfrac{1}{9}}_{\text{B Cournot}} = \frac{13}{36} \approx 0.361, \quad \pi_2^{\text{sep}} = \frac{1}{9} \approx 0.111$$
 
-**With bundling:**
+**With bundling** [@belleflammeIndustrialOrganizationMarkets2015, Ch. 11]:
 
 $$\pi_1^{\text{bun}} = \frac{18}{49} \approx 0.367, \quad \pi_2^{\text{bun}} = \frac{4}{49} \approx 0.082$$
 
@@ -376,7 +376,9 @@ Numerical results from @belleflammeIndustrialOrganizationMarkets2015, Chapter 11
 
 
 
-## Bundling as product differentiation:  @shyIndustrialOrganizationTheory1995 model setup
+## Bundling as product differentiation: the Shy (1995) model
+
+**Source:** @shyIndustrialOrganizationTheory1995, Ch. 5
 
 **Competitors:**
 
@@ -394,7 +396,9 @@ Numerical results from @belleflammeIndustrialOrganizationMarkets2015, Chapter 11
 
 $$U_S = B - p_S + s, \quad U_N = B - p_N$$
 
-where $s \sim U[0,1]$ is idiosyncratic service valuation, $B$ is base product value (high)
+where $s \sim U[0,1]$ is idiosyncratic service valuation, $B > 0$ is the common base product value.
+
+**Assume:** $B$ sufficiently large that all consumers purchase in equilibrium (full market coverage).
 
 
 
@@ -432,7 +436,7 @@ $$BR_2: \quad p_N = \frac{1}{2}(m + p_S)$$
 
 ## Bundling as product differentiation: equilibrium prices and profits
 
-**Solving the system:**
+**Solving the system** (overbars denote Nash equilibrium values throughout):
 
 $$\bar{p}_S = \frac{2}{3}(1 + w) + m, \quad \bar{p}_N = \frac{1}{3}(1 + w) + m$$
 
@@ -456,11 +460,11 @@ $$\frac{\partial \bar{p}_S}{\partial w} = \frac{2}{3} > 0, \quad \frac{\partial 
 Both firms raise prices as service becomes more costly
 
 
-**Service penetration:**
+**Service penetration** (equilibrium threshold $\bar{s} \equiv \hat{s}^*$):
 
 $$\bar{s} = \bar{p}_S - \bar{p}_N = \frac{1 + w}{3}$$
 
-Fewer consumers buy bundled service as $w$ rises (less margin to compete)
+As $w$ rises, $\bar{p}_S$ increases by $\frac{2}{3}$ per unit vs. $\frac{1}{3}$ for $\bar{p}_N$: the price gap widens, raising $\bar{s}$ and shrinking bundle demand.
 
 
 
