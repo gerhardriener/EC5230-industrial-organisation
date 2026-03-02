@@ -4,7 +4,7 @@ subtitle: "Lecture 7 - Bundling and Tying"
 
 # Introduction {.section-divider background-color="#00539B"}
 
-## This Lecture
+## This lecture
 
 **Core question:** When and why do firms bundle products together?
 
@@ -20,7 +20,7 @@ subtitle: "Lecture 7 - Bundling and Tying"
 **Key tools:** Price discrimination, consumer valuations, strategic interaction
 
 
-## What Is Bundling?
+## What is bundling?
 
 **Definition:** Selling two or more products/services in a single package
 
@@ -98,9 +98,7 @@ $$\Theta = \theta_A + \theta_B$$
 
 <!-- ![Demand regions under separate selling: Consumer buys A if $\theta_A \geq p_A$, buys B if $\theta_B \geq p_B$.](../figs/fig-bundling-separate-demand.svg){fig-align="center" width="70%"} -->
 
-::: {.callout-note}
-**Source:** @belleflammeIndustrialOrganizationMarkets2015 , Figure 11.2
-:::
+*Source: @belleflammeIndustrialOrganizationMarkets2015, Figure 11.2*
 
 
 
@@ -108,9 +106,7 @@ $$\Theta = \theta_A + \theta_B$$
 <!-- 
 ![Demand regions under mixed bundling with $p_A = p_B = p$: Center region buys bundle, left arm buys A only, bottom arm buys B only.](../figs/fig-bundling-mixed-demand.svg){fig-align="center" width="70%"}
  -->
-::: {.callout-note}
-**Source:** @belleflammeIndustrialOrganizationMarkets2015, Figure 11.4
-:::
+*Source: @belleflammeIndustrialOrganizationMarkets2015, Figure 11.4*
 
 
 
@@ -165,9 +161,7 @@ Mixed bundling yields highest profit; pure bundling dominates separate selling.
 <!-- 
 ![Total welfare comparison: Pure bundling maximizes welfare by serving more consumers at cost of higher prices.](../figs/fig-bundling-welfare.svg){fig-align="center" width="75%"}
  -->
-::: {.callout-note}
-**Source:** @belleflammeIndustrialOrganizationMarkets2015, Figure 11.5
-:::
+*Source: @belleflammeIndustrialOrganizationMarkets2015, Figure 11.5*
 
 
 
@@ -181,7 +175,7 @@ Mixed bundling yields highest profit; pure bundling dominates separate selling.
 $$W^{\text{pure}} > W^{\text{mix}} > W^{\text{sep}}$$
 
 
-::: {.callout-tip}
+::: {.callout-note}
 **Intuition:** Pure bundling reduces effective price discrimination distortion by serving broader demand.
 :::
 
@@ -209,7 +203,7 @@ Set $p_A = p_B = 7.5$:
 - **Consumer 2:** Buys both (surplus: $15 - 15 = 0$)
 - **Consumer 3:** Buys B (surplus: $10 - 7.5 = 2.5$)
 
-$$\pi^{\text{sep}} = 2 \times 7.5 + 2 \times 7.5 = 30$$
+$$\pi^{\text{sep}} = \underbrace{2 \times 7.5}_{\text{good A}} + \underbrace{2 \times 7.5}_{\text{good B}} = 30$$
 
 
 
@@ -347,9 +341,12 @@ Numerical results from @belleflammeIndustrialOrganizationMarkets2015, Chapter 11
 
 **Consumer perspective:**
 
-✗ Bundling monopolizes market B → higher prices  
-✗ Loss of competition reduces consumer choice  
-✓ But avoids duplication of entry costs (efficiency benefit)
+- Bundling monopolizes market B → higher prices
+- Loss of competition reduces consumer choice
+
+**Efficiency defence:**
+
+- Avoids duplication of entry costs
 
 
 **Antitrust concern:**
@@ -487,7 +484,7 @@ $$\bar{s} = \frac{1 + w}{3}$$
 
 
 ::: {.callout-note}
-Competitive bundling still distorts service allocation, but may be welfare-improving vs. Bertrand monopoly.
+Competitive bundling still distorts service allocation, but may be welfare-improving relative to the Bertrand equilibrium without bundling.
 :::
 
 
@@ -501,16 +498,19 @@ Competitive bundling still distorts service allocation, but may be welfare-impro
 3. **First-best:** Allocatively and productively efficient
 
 
-**Trade-offs:**
+**Benefits:**
 
-✓ Bundling prevents Bertrand profit collapse  
-✓ Creates product variety (service-enhanced vs. basic)  
-✗ Service provision misaligned with social cost  
-✗ Higher prices may reduce consumer surplus
+- Bundling prevents Bertrand profit collapse
+- Creates product variety (service-enhanced vs. basic)
+
+**Costs:**
+
+- Service provision misaligned with social cost
+- Higher prices may reduce consumer surplus
 
 # Summary and Policy Implications {.section-divider background-color="#00539B"}
 
-## Key takeaways
+## Key takeaways (1)
 
 **Bundling serves three distinct strategic purposes:**
 
@@ -523,6 +523,9 @@ Competitive bundling still distorts service allocation, but may be welfare-impro
    - Leverages existing market power into adjacent markets
    - Reduces entrant's residual profit below fixed costs
    - Exclusionary but may avoid cost duplication
+
+
+## Key takeaways (2)
 
 3. **Product differentiation (competition)**
    - Softens Bertrand competition
