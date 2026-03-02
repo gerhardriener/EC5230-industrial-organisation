@@ -1,5 +1,5 @@
 ---
-title: "Exercise: Bundling with Asymmetric Positive Marginal Costs"
+title: "Exercise 4: Bundling with Asymmetric Positive Marginal Costs"
 solutions: true
 ---
 
@@ -17,11 +17,12 @@ Suppose that the media company Sky offers two subscription channels: Sky Cinema 
 
 Sky’s market research has identified four groups of potential customers along with their valuations, as follows:
 
-Subscriber Type | Valuation for Sky Cinema | Valuation for Sky Sports  
-A | £10 | £85  
-B | £45 | £55  
-C | £60 | £40  
-D | £85 | £10  
+| Subscriber Type | Valuation for Sky Cinema | Valuation for Sky Sports |
+|:----------------|:------------------------:|:------------------------:|
+| A | £10 | £85 |
+| B | £45 | £55 |
+| C | £60 | £40 |
+| D | £85 | £10 |
 
 ### (c)
 
@@ -30,39 +31,42 @@ How would the table change if both channels have the same marginal cost of £20?
 ::: {.content-hidden unless-meta="solutions"}
 ## Solution
 
+### (c)
+
 If both marginal costs are £20, the table would change into the following (all figures in £).
 
-### Separate selling
+#### Separate selling
 
-- Price of Sky Cinema: 60  
-- Price of Sky Sports: 55  
-- Profit from Sky Cinema: 80  
-- Profit from Sky Sports: 70  
-- Producer surplus: 150  
-- Consumer surplus: 55  
-- Total welfare: 205  
+- Price of Sky Cinema: 60
+- Price of Sky Sports: 55
+- Profit from Sky Cinema: 80
+- Profit from Sky Sports: 70
+- Producer surplus: 150
+- Consumer surplus: 55
+- Total welfare: 205
 
-### Pure bundling
+#### Pure bundling
 
-- Price of Sky Cinema: 85  
-- Price of Sky Sports: 85  
-- Bundle price: 95  
-- Profit from Sky Cinema: 65  
-- Profit from Sky Sports: 65  
-- Bundle profit: 220  
-- Producer surplus: 220  
-- Consumer surplus: 10  
-- Total welfare: 230  
+- Price of Sky Cinema: 85
+- Price of Sky Sports: 85
+- Bundle price: 95
+- Profit from Sky Cinema: 65
+- Profit from Sky Sports: 65
+- Bundle profit: 220
+- Producer surplus: 220
+- Consumer surplus: 10
+- Total welfare: 230
 
-### Mixed bundling
+#### Mixed bundling
 
-- Bundle price: 100  
-- Bundle profit: 120  
-- Producer surplus: 250  
-- Consumer surplus: 0  
-- Total welfare: 250  
+- Bundle price: 100
+- Bundle profit: 120
+- Producer surplus: 250
+- Consumer surplus: 0
+- Total welfare: 250
 
 Mixed bundling remains the profit-maximising strategy for Sky.
 
 The reduction in marginal cost increases the profit from £220 to £250, hence Sky is willing to pay a maximum of £30 for it.
+
 :::
