@@ -100,3 +100,5 @@ guide/
 
 # Local scratch files
 _tmp_test*.txt
+
+/.luarc.json

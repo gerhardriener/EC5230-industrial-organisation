@@ -8,7 +8,6 @@ subtitle: "Lecture 7 - Bundling and Tying"
 
 **Core question:** When and why do firms bundle products together?
 
-. . .
 
 **Learning objectives:**
 
@@ -17,21 +16,17 @@ subtitle: "Lecture 7 - Bundling and Tying"
 3. Evaluate bundling as product differentiation tool
 4. Apply welfare analysis to bundling decisions
 
-. . .
 
 **Key tools:** Price discrimination, consumer valuations, strategic interaction
 
----
 
 ## What Is Bundling?
 
 **Definition:** Selling two or more products/services in a single package
 
-. . .
 
 **Tying:** A special case—often used for complementary goods
 
-. . .
 
 **Why study bundling?**
 
@@ -39,27 +34,23 @@ subtitle: "Lecture 7 - Bundling and Tying"
 - Alters competitive dynamics (entry deterrence)
 - Creates product differentiation in homogeneous markets
 
-. . .
 
 **Key mechanism:** Exploiting heterogeneity in consumer valuations (reservation prices)
 
----
+
 
 ## Why Bundling Matters: The Surplus Extraction Mechanism
 
 **Core insight:** Bundling exploits *negative correlation* in consumer valuations
 
-. . .
 
 Suppose Consumer 1 values A highly but B little, and Consumer 2 is the opposite.
 
-. . .
 
 **Without bundling:** Must set uniform prices; some consumers buy nothing
 
 **With bundling:** Package the goods; consumers with diverse preferences both buy
 
-. . .
 
 **Result:** Monopolist extracts surplus from more consumers at higher average price
 
@@ -83,7 +74,7 @@ Assume a monopoly produces two goods in the market: A and B.
   - A and B sold both individually and in a bundle
   - Three prices set: $p_A$, $p_B$, and $p_{AB}$
 
----
+
 
 ## Bundling under monopoly: consumer valuations
 
@@ -93,16 +84,15 @@ $$\theta_A \sim U[0,1], \quad \theta_B \sim U[0,1]$$
 Combined valuation:
 $$\Theta = \theta_A + \theta_B$$
 
-. . .
 
 **Consumer purchases:**
 
-- **A only** if $\theta_A \geq p_A$ and $\theta_A > \Theta - p_{AB}$
-- **B only** if $\theta_B \geq p_B$ and $\theta_B > \Theta - p_{AB}$
+- **A only** if $\theta_A \geq p_A$ and $\theta_B < p_{AB} - p_A$
+- **B only** if $\theta_B \geq p_B$ and $\theta_A < p_{AB} - p_B$
 - **Bundle AB** if $\Theta \geq p_{AB}$
 - **Nothing** if none of the above
 
----
+
 
 ## Bundling under monopoly: demand under separate selling
 
@@ -112,7 +102,7 @@ $$\Theta = \theta_A + \theta_B$$
 **Source:** @belleflammeIndustrialOrganizationMarkets2015 , Figure 11.2
 :::
 
----
+
 
 ## Bundling under monopoly: demand under mixed bundling
 <!-- 
@@ -122,13 +112,12 @@ $$\Theta = \theta_A + \theta_B$$
 **Source:** @belleflammeIndustrialOrganizationMarkets2015, Figure 11.4
 :::
 
----
+
 
 ## Bundling under monopoly: optimal prices and profits
 
 **Assume:** Marginal costs = 0, symmetric prices $p_A = p_B = p$ where applicable
 
-. . .
 
 **Separate selling**
 
@@ -138,7 +127,7 @@ $$\text{Profit: } \pi^{\text{sep}} = 2p(1-p)$$
 
 $$\text{Optimal: } p^{\text{sep}} = \frac{1}{2} \quad \Rightarrow \quad \pi^{\text{sep}} = \frac{1}{2}$$
 
----
+
 
 ## Bundling under monopoly: pure vs. mixed bundling
 
@@ -149,7 +138,6 @@ $$D_{AB}^{\text{pure}} = 1 - \frac{1}{2}p_{AB}^2$$
 
 $$\text{Optimal: } p_{AB}^{\text{pure}} = \sqrt{\frac{2}{3}} \approx 0.82 \quad \Rightarrow \quad \pi^{\text{pure}} \approx 0.544$$
 
-. . .
 
 **Mixed bundling** (with $p_A = p_B = p$)
 
@@ -157,23 +145,21 @@ Firm maximizes over both $p$ and $p_{AB}$:
 
 $$\text{Optimal: } p^{\text{mix}} \approx 0.67, \quad p_{AB}^{\text{mix}} \approx 0.86 \quad \Rightarrow \quad \pi^{\text{mix}} \approx 0.549$$
 
----
+
 
 ## Bundling under monopoly: profit ranking
 
-::: {.callout-important appearance="minimal"}
-
 | Strategy | Individual price | Bundle price | Profit |
-|----------|------------------|--------------|--------|
+|-------|------------------|--------------|--------|
 | Separate | $0.50$ | — | $0.500$ |
 | Pure bundle | — | $0.82$ | $0.544$ |
 | Mixed | $0.67$ | $0.86$ | $0.549$ |
 
-**Key finding:** Mixed bundling yields highest profit; pure bundling dominates separate selling.
-
+::: {.callout-important}
+Mixed bundling yields highest profit; pure bundling dominates separate selling.
 :::
 
----
+
 
 ## Bundling under monopoly: welfare analysis
 <!-- 
@@ -183,7 +169,7 @@ $$\text{Optimal: } p^{\text{mix}} \approx 0.67, \quad p_{AB}^{\text{mix}} \appro
 **Source:** @belleflammeIndustrialOrganizationMarkets2015, Figure 11.5
 :::
 
----
+
 
 ## Bundling under monopoly: welfare ranking
 
@@ -194,13 +180,12 @@ $$\text{Optimal: } p^{\text{mix}} \approx 0.67, \quad p_{AB}^{\text{mix}} \appro
 **Total welfare:**
 $$W^{\text{pure}} > W^{\text{mix}} > W^{\text{sep}}$$
 
-. . .
 
 ::: {.callout-tip}
 **Intuition:** Pure bundling reduces effective price discrimination distortion by serving broader demand.
 :::
 
----
+
 
 ## Bundling under monopoly: worked example
 
@@ -214,7 +199,7 @@ $$W^{\text{pure}} > W^{\text{mix}} > W^{\text{sep}}$$
 
 Assume $MC = 0$.
 
----
+
 
 ## Bundling under monopoly: worked example — separate selling
 
@@ -226,7 +211,7 @@ Set $p_A = p_B = 7.5$:
 
 $$\pi^{\text{sep}} = 2 \times 7.5 + 2 \times 7.5 = 30$$
 
----
+
 
 ## Bundling under monopoly: worked example — pure bundling
 
@@ -236,7 +221,7 @@ Set $p_{AB} = 10$:
 
 $$\pi^{\text{pure}} = 3 \times 10 = 30$$
 
----
+
 
 ## Bundling under monopoly: worked example — mixed bundling
 
@@ -248,13 +233,12 @@ Set $p_A = p_B = 10$, $p_{AB} = 15$:
 
 $$\pi^{\text{mix}} = 10 + 10 + 15 = 35$$
 
-. . .
 
 ::: {.callout-important}
 Mixed bundling extracts all consumer surplus and yields highest profit.
 :::
 
----
+
 
 ## Bundling under monopoly: exercise
 
@@ -270,7 +254,6 @@ Mixed bundling extracts all consumer surplus and yields highest profit.
 
 **Setting:** Incumbent monopolist (Firm 1) in market A seeks to deter entry in market B
 
-. . .
 
 **Mechanism:**
 
@@ -279,11 +262,10 @@ Mixed bundling extracts all consumer surplus and yields highest profit.
 3. Bundling reduces Firm 2's residual demand in B
 4. If bundling drives Firm 2's profit below entry cost $F$, entry is deterred
 
-. . .
 
 **Key trade-off:** Firm 1 sacrifices profit in B (short term) to monopolize it (long term)
 
----
+
 
 ## Bundling as entry deterrence: Cournot competition
 
@@ -294,7 +276,6 @@ Mixed bundling extracts all consumer surplus and yields highest profit.
 - Firm 1 can bundle; Firm 2 enters market B or stays out
 - $MC_1 = MC_2 = 0$, entry cost $F$
 
-. . .
 
 **Without bundling (separate pricing):**
 
@@ -304,7 +285,7 @@ $$\pi_1^{\text{sep}} = \frac{13}{36} \approx 0.361, \quad \pi_2^{\text{sep}} = \
 
 $$\pi_1^{\text{bun}} = \frac{18}{49} \approx 0.367, \quad \pi_2^{\text{bun}} = \frac{4}{49} \approx 0.082$$
 
----
+
 
 ## Bundling as entry deterrence: entry deterrence condition
 
@@ -315,7 +296,6 @@ If $F \in \left(\frac{4}{49}, \frac{1}{9}\right)$ or approximately $F \in (0.082
 - **Without bundling:** Firm 2 enters (earns $\pi_2^{\text{sep}} - F > 0$)
 - **With bundling:** Firm 2 stays out (earns $\pi_2^{\text{bun}} - F < 0$)
 
-. . .
 
 **Firm 1's calculation:**
 
@@ -324,41 +304,44 @@ If $F \in \left(\frac{4}{49}, \frac{1}{9}\right)$ or approximately $F \in (0.082
 
 Since $0.367 > 0.361$, bundling is a profitable deterrence strategy.
 
----
+
 
 ## Bundling as entry deterrence: Bertrand competition
 
 **Setup:**
 
-- Markets A and B are monopolies (Firm 1 in A, Firm 2 in B) *without* interaction
+- Firm 1 monopolist in A; Firm 2 is potential entrant in B
 - Consumers have unit demand for one bundle (A + B required for utility)
 - Valuations: $\theta_A, \theta_B \sim U[0,1]$ independent
 - Entry cost: $F$
 
-. . .
-
-**Without bundling:**
+**Benchmark (no Firm 1 entry in B):**
 $$p_A = p_B = 0.5, \quad \pi_1 = \pi_2 = 0.25$$
-Firm 2 enters if $0.25 - F > 0$, i.e., $F < 0.25$.
 
----
+**With Firm 1 also competing in B via separate prices (no bundling):**
+$$\pi_2^{\text{sep}} \approx 0.12$$
+Firm 2 enters if $F < 0.12$.
+
+
 
 ## Bundling as entry deterrence: Bertrand — bundling strategy
 
 **With bundling:** Firm 1 offers bundle at aggressive price
 
-- **Firm 2's residual profit:** $\pi_2^{\text{bun}} = 0.067 - F$
-- **Firm 1's bundling profit:** $\pi_1^{\text{bun}} = 0.37 - F$
-
-. . .
+- **Firm 2's residual profit:** $\pi_2^{\text{bun}} \approx 0.067$
+- **Firm 1's bundling profit:** $\pi_1^{\text{bun}} \approx 0.37$
 
 **Entry deterrence window:** $F \in (0.067, 0.12)$
 
-- Without bundling: Firm 2 enters (earns $0.12$ if competing)
-- With bundling: Firm 2 stays out (earns $0.067 < F$)
-- Firm 1 gains $0.37 - F$ monopoly profit vs. $0.25$ duopoly profit
+- Without bundling (Firm 1 competes in B at separate prices): Firm 2 enters (earns $\approx 0.12 > F$)
+- With bundling: Firm 2 stays out (earns $\approx 0.067 < F$)
+- Firm 1 prefers bundling: earns $\approx 0.37$ vs. $\approx 0.25$ (A-only benchmark)
 
----
+::: {.callout-note}
+Numerical results from @belleflammeIndustrialOrganizationMarkets2015, Chapter 11.
+:::
+
+
 
 ## Bundling as entry deterrence: welfare implications
 
@@ -368,7 +351,6 @@ Firm 2 enters if $0.25 - F > 0$, i.e., $F < 0.25$.
 ✗ Loss of competition reduces consumer choice  
 ✓ But avoids duplication of entry costs (efficiency benefit)
 
-. . .
 
 **Antitrust concern:**
 
@@ -382,7 +364,6 @@ Firm 2 enters if $0.25 - F > 0$, i.e., $F < 0.25$.
 
 **Problem:** Bertrand duopoly with homogeneous goods yields $\pi = 0$
 
-. . .
 
 **Solution via bundling:** Tie product to complementary service
 
@@ -390,11 +371,10 @@ Firm 2 enters if $0.25 - F > 0$, i.e., $F < 0.25$.
 - Softens price competition
 - Allows positive equilibrium profits
 
-. . .
 
 **Example:** Computer + tech support, airline ticket + lounge access, software + cloud storage
 
----
+
 
 ## Bundling as product differentiation:  @shyIndustrialOrganizationTheory1995 model setup
 
@@ -403,14 +383,12 @@ Firm 2 enters if $0.25 - F > 0$, i.e., $F < 0.25$.
 - **Firm 1:** Sells product bundled with service at price $p_S$
 - **Firm 2:** Sells product only at price $p_N$
 
-. . .
 
 **Cost structure:**
 
 - Product production: $MC_p = m > 0$ (same for both)
 - Service provision: $MC_s = w \in (0, 2)$ (Firm 1 only)
 
-. . .
 
 **Consumer valuations:**
 
@@ -418,7 +396,7 @@ $$U_S = B - p_S + s, \quad U_N = B - p_N$$
 
 where $s \sim U[0,1]$ is idiosyncratic service valuation, $B$ is base product value (high)
 
----
+
 
 ## Bundling as product differentiation: equilibrium indifference
 
@@ -427,14 +405,13 @@ where $s \sim U[0,1]$ is idiosyncratic service valuation, $B$ is base product va
 Consumer buys bundle if $s > \hat{s}$, where:
 $$B - p_S + \hat{s} = B - p_N \quad \Rightarrow \quad \hat{s} = p_S - p_N$$
 
-. . .
 
 **Demands:**
 
 $$D_S = 1 - \hat{s} = 1 - (p_S - p_N)$$
 $$D_N = \hat{s} = p_S - p_N$$
 
----
+
 
 ## Bundling as product differentiation: best response functions
 
@@ -444,7 +421,6 @@ $$\max_{p_S} (p_S - m - w)(1 - p_S + p_N)$$
 
 $$BR_1: \quad p_S = \frac{1}{2}(1 + m + w + p_N)$$
 
-. . .
 
 **Firm 2 (unbundled):**
 
@@ -452,7 +428,7 @@ $$\max_{p_N} (p_N - m)(p_S - p_N)$$
 
 $$BR_2: \quad p_N = \frac{1}{2}(m + p_S)$$
 
----
+
 
 ## Bundling as product differentiation: equilibrium prices and profits
 
@@ -460,36 +436,25 @@ $$BR_2: \quad p_N = \frac{1}{2}(m + p_S)$$
 
 $$\bar{p}_S = \frac{2}{3}(1 + w) + m, \quad \bar{p}_N = \frac{1}{3}(1 + w) + m$$
 
-. . .
 
 **Equilibrium profits:**
 
-$$\bar{\pi}_S = \frac{1}{9}(1 + w)^2, \quad \bar{\pi}_N = \frac{1}{9}(1 + w)^2$$
+$$\bar{\pi}_S = \frac{(2 - w)^2}{9}, \quad \bar{\pi}_N = \frac{(1 + w)^2}{9}$$
 
-. . .
+Both are positive for all $w \in (0, 2)$ — bundling overcomes the Bertrand paradox.
 
-Wait, let me recalculate. Firm 1's profit:
-$$\bar{\pi}_S = \frac{1}{9}(2 - w)^2$$
 
-Firm 2's profit:
-$$\bar{\pi}_N = \frac{1}{9}(1 + w)^2$$
-
-Both are positive—bundling overcomes Bertrand paradox!
-
----
 
 ## Bundling as product differentiation: comparative statics
 
 **How does service cost $w$ affect equilibrium?**
 
-. . .
 
 **Prices:**
 $$\frac{\partial \bar{p}_S}{\partial w} = \frac{2}{3} > 0, \quad \frac{\partial \bar{p}_N}{\partial w} = \frac{1}{3} > 0$$
 
 Both firms raise prices as service becomes more costly
 
-. . .
 
 **Service penetration:**
 
@@ -497,7 +462,7 @@ $$\bar{s} = \bar{p}_S - \bar{p}_N = \frac{1 + w}{3}$$
 
 Fewer consumers buy bundled service as $w$ rises (less margin to compete)
 
----
+
 
 ## Bundling as product differentiation: social optimum
 
@@ -505,26 +470,23 @@ Fewer consumers buy bundled service as $w$ rises (less margin to compete)
 
 $$s^* = w$$
 
-. . .
 
 **Market equilibrium:**
 
 $$\bar{s} = \frac{1 + w}{3}$$
 
-. . .
 
 **Provision distortion:**
 
-- If $w < \frac{1}{2}$: $\bar{s} < s^*$ → too *few* consumers served
-- If $w > \frac{1}{2}$: $\bar{s} > s^*$ → too *many* consumers served
+- If $w < \frac{1}{2}$: $\bar{s} > s^*$ → too *few* consumers buy the bundle (market threshold too high)
+- If $w > \frac{1}{2}$: $\bar{s} < s^*$ → too *many* consumers buy the bundle (market threshold too low)
 
-. . .
 
 ::: {.callout-note}
 Competitive bundling still distorts service allocation, but may be welfare-improving vs. Bertrand monopoly.
 :::
 
----
+
 
 ## Bundling as product differentiation: welfare comparison
 
@@ -534,7 +496,6 @@ Competitive bundling still distorts service allocation, but may be welfare-impro
 2. **Bundling (partial differentiation):** $\pi_i > 0$, service allocation distorted
 3. **First-best:** Allocatively and productively efficient
 
-. . .
 
 **Trade-offs:**
 
@@ -564,7 +525,7 @@ Competitive bundling still distorts service allocation, but may be welfare-impro
    - Creates vertical differentiation via complementary services
    - Enables positive equilibrium profits
 
----
+
 
 ## Antitrust implications
 
@@ -574,7 +535,6 @@ Competitive bundling still distorts service allocation, but may be welfare-impro
 - May reduce consumer choice and competition
 - Entry deterrence is anticompetitive when exclusionary
 
-. . .
 
 **Defenses:**
 
@@ -582,10 +542,27 @@ Competitive bundling still distorts service allocation, but may be welfare-impro
 - Consumer benefits: discounted bundle prices, simplified purchasing
 - Procompetitive: differentiation, overcomes Bertrand paradox
 
-. . .
 
 **Principle:** Analyze case-by-case. Effect depends on market power, cost structure, and intent.
 
 
 
-## References 
+## Summary and next week
+
+**Summary:**
+
+- Bundling exploits consumer heterogeneity: mixed bundling dominates, $\pi^{\text{mix}} > \pi^{\text{pure}} > \pi^{\text{sep}}$
+- Pure bundling serves broader demand, yielding higher total welfare than separate selling
+- Bundling deters entry by reducing the entrant's residual profit below fixed cost $F$
+- Tying to a complementary service differentiates products and overcomes the Bertrand paradox
+- Welfare effects are ambiguous: efficiency gains may offset anticompetitive exclusion
+
+**Next lecture:** Lecture 8 — Advertising
+
+- When and why do firms advertise?
+- Advertising as a signal of product quality
+- Strategic use of advertising in oligopoly
+
+
+
+## References
