@@ -94,6 +94,10 @@ website:
         - section: "Live Exercises"
           contents:
             - exercises/live/live-exercise-1.qmd
+        - section: "Mock Class Test"
+          contents:
+            - exercises/mock-class-test/class-test-mock.qmd
+            - exercises/mock-class-test/class-test-mock-solutions.qmd
 
 format:
   html:

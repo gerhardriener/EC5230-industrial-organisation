@@ -37,6 +37,13 @@ Most students should use the **Student** versions. Instructor versions include s
 Try to complete the problems on your own before going to class. Active problem-solving is essential for mastering industrial organisation concepts.
 :::
 
+## Mock Class Test
+
+| Item | Source | HTML | PDF |
+|---|---|---|---|
+| Mock Class Test (Lectures 1–5) | [qmd](mock-class-test/class-test-mock.qmd) | [download](mock-class-test/class-test-mock.html) | [download](mock-class-test/class-test-mock.pdf) |
+| Mock Class Test — Solutions | [qmd](mock-class-test/class-test-mock-solutions.qmd) | [download](mock-class-test/class-test-mock-solutions.html) | [download](mock-class-test/class-test-mock-solutions.pdf) |
+
 ## How to Use These Exercises
 
 1. **Review the relevant lecture material** before attempting each problem set

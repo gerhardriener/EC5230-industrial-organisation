@@ -1,0 +1,12 @@
+format:
+  html:
+    toc: false
+    embed-resources: true
+    number-sections: false
+  typst:
+    logo:
+      location: right-top
+      width: 5cm
+      padding-right: 1in
+      padding-top: 0.25in
+      alt: University of St Andrews
