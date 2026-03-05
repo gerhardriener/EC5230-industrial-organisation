@@ -1,0 +1,357 @@
+---
+title: " "
+subtitle: "Solutions"
+author: " "
+---
+
+**Time:** 50 minutes.
+
+These are guideline solutions. Equivalent correct methods receive full credit.
+Fractions or decimals are both acceptable.
+
+\newpage
+
+## Section A (10 marks)
+
+### Question 1: Differentiated Bertrand duopoly (4 marks)
+
+Given
+$$
+Q_1 = 10 - 2p_1 + p_2, \qquad Q_2 = 10 + p_1 - 2p_2, \qquad c = 2.
+$$
+
+Firm 1 profit:
+$$
+\pi_1 = (p_1 - c)\,Q_1 = (p_1 - 2)(10 - 2p_1 + p_2).
+$$
+FOC:
+$$
+\frac{\partial \pi_1}{\partial p_1} = (10 - 2p_1 + p_2) + (p_1 - 2)(-2) = 14 - 4p_1 + p_2 = 0.
+$$
+$$
+BR_1(p_2) = \frac{14 + p_2}{4}.
+$$
+
+By symmetry:
+$$
+BR_2(p_1) = \frac{14 + p_1}{4}.
+$$
+
+*[Award 1 mark for correct best-response functions.]*
+
+Imposing symmetry $p_1^* = p_2^* = p^*$:
+$$
+p^* = \frac{14 + p^*}{4} \;\Rightarrow\; 3p^* = 14 \;\Rightarrow\; p^* = \frac{14}{3}.
+$$
+
+Quantities:
+$$
+Q^* = 10 - 2\cdot\frac{14}{3} + \frac{14}{3} = 10 - \frac{14}{3} = \frac{16}{3}.
+$$
+
+Profits:
+$$
+\pi^* = \left(\frac{14}{3} - 2\right)\frac{16}{3} = \frac{8}{3}\cdot\frac{16}{3} = \frac{128}{9} \approx 14.22.
+$$
+
+*[Award 1 mark for correct equilibrium prices, 1 mark for correct quantities and profits.]*
+
+With **homogeneous** Bertrand ($c_1 = c_2 = 2$, identical products): the unique Nash equilibrium is $p_1^* = p_2^* = c = 2$ and $\pi_1^* = \pi_2^* = 0$.
+
+Product differentiation softens price competition: when products are not perfect substitutes, undercutting the rival's price captures only a fraction of the market (not all of it), so firms can sustain positive markups in equilibrium.
+
+*[Award 1 mark for stating homogeneous Bertrand outcome and explaining why differentiation raises prices/profits.]*
+
+---
+
+### Question 2: Salop circular city (3 marks)
+
+Circle circumference 1, $n$ symmetric firms, $c = 16$, $F = 1$, $m = 2$.
+
+In the symmetric competitive region, each firm serves $1/n$ consumers. The indifferent consumer between two adjacent firms is at distance $1/(2n)$ from each.
+
+With symmetric pricing ($\tilde{p} = p$), each firm's demand is $q = 1/n$ and the competitive inverse demand gives the equilibrium pricing condition (MR = MC):
+$$
+p^C = m + \frac{c}{n} = 2 + \frac{16}{n}.
+$$
+
+*[Award 1 mark for correct pricing equilibrium.]*
+
+Zero-profit free-entry condition: revenue per firm equals cost per firm.
+$$
+(p^C - m)\cdot\frac{1}{n} = F \;\Rightarrow\; \frac{c}{n^2} = F \;\Rightarrow\; n^2 = \frac{c}{F} = 16.
+$$
+
+Hence
+$$
+n^C = 4, \qquad p^C = 2 + \frac{16}{4} = 6.
+$$
+
+*[Award 1 mark for correct free-entry equilibrium.]*
+
+Social optimum: the planner minimises total cost (transport cost + fixed costs).
+Per-consumer welfare:
+$$
+W(n) = v - \frac{c}{4n} - nF.
+$$
+FOC:
+$$
+\frac{c}{4n^2} = F \;\Rightarrow\; n^S = \frac{1}{2}\sqrt{\frac{c}{F}} = \frac{1}{2}\sqrt{16} = 2.
+$$
+
+Since $n^C = 4 = 2\,n^S$, there is **excess entry** by a factor of 2.
+
+The source of inefficiency is the **business-stealing externality**: an entrant captures demand from incumbents but does not internalise the profit loss it inflicts on them. Each firm considers only its own profit when deciding to enter, not the reduction in other firms' profits, leading to too many firms relative to the social optimum.
+
+*[Award 1 mark for correct $n^S$ and explanation of business-stealing externality.]*
+
+---
+
+### Question 3: Pre-emption (3 marks)
+
+Demand: $P = 12 - Q$, $A = 12$, $c_0 = 3$, $c_1 = 0$.
+
+**Incumbent's valuation:**
+
+If the incumbent acquires the innovation, it remains a monopolist at cost $c_1 = 0$:
+$$
+\pi^m(c_1) = \frac{(A - c_1)^2}{4} = \frac{144}{4} = 36.
+$$
+
+If the entrant acquires the innovation instead, the incumbent faces Cournot competition at cost $c_0 = 3$ against an entrant at cost $c_1 = 0$:
+$$
+\pi^d(c_0, c_1) = \frac{(A - 2c_0 + c_1)^2}{9} = \frac{(12 - 6 + 0)^2}{9} = \frac{36}{9} = 4.
+$$
+
+Hence
+$$
+V_I = \pi^m(c_1) - \pi^d(c_0, c_1) = 36 - 4 = 32.
+$$
+
+*[Award 1 mark for correct $V_I$.]*
+
+**Entrant's valuation:**
+
+The entrant starts with zero profit (not yet in the market). If it acquires the innovation, it enters as a Cournot duopolist at cost $c_1 = 0$ against the incumbent at $c_0 = 3$:
+$$
+V_E = \pi^d(c_1, c_0) = \frac{(A - 2c_1 + c_0)^2}{9} = \frac{(12 - 0 + 3)^2}{9} = \frac{225}{9} = 25.
+$$
+
+*[Award 1 mark for correct $V_E$.]*
+
+**Comparison:**
+
+$V_I = 32 > V_E = 25$, so the **incumbent has a stronger incentive** to acquire the innovation.
+
+This is the **pre-emption** or **efficiency effect** (Gilbert and Newbery, 1982). The incumbent's gain from innovating includes both:
+
+- the increase in profit from becoming a more efficient monopolist, and
+- the avoidance of profit destruction that would occur if the entrant innovated and entered.
+
+The incumbent "saves" $\pi^m(c_1) - \pi^d(c_0, c_1)$, whereas the entrant only "gains" $\pi^d(c_1, c_0)$. Since monopoly profit exceeds total duopoly profit ($\pi^m(c_1) = 36 > \pi^d(c_1, c_0) + \pi^d(c_0, c_1) = 25 + 4 = 29$), the incumbent always values the innovation more. This can lead to persistent monopoly through pre-emptive patenting.
+
+*[Award 1 mark for correct comparison and economic explanation.]*
+
+\newpage
+
+## Section B (7 marks)
+
+### Question 4: Patent race and R&D duplication (7 marks)
+
+Parameters: $p = 4/5$, $\pi^m = 10$, $\pi^d = 3$.
+
+---
+
+#### 1) Expected payoffs and payoff matrix
+
+**$(I,I)$:** Both invest. Firm $i$'s expected gross profit:
+
+- Both succeed (prob $p^2 = 16/25$): firm $i$ earns $\pi^d = 3$
+- Only $i$ succeeds (prob $p(1-p) = 4/25$): firm $i$ earns $\pi^m = 10$
+- Only $j$ succeeds (prob $(1-p)p = 4/25$): firm $i$ earns $0$
+- Neither succeeds (prob $(1-p)^2 = 1/25$): firm $i$ earns $0$
+
+$$
+E\pi_i(I,I) = \frac{16}{25}\cdot 3 + \frac{4}{25}\cdot 10 - f = \frac{48 + 40}{25} - f = \frac{88}{25} - f.
+$$
+
+**$(I,N)$:** Only firm $i$ invests.
+$$
+E\pi_i(I,N) = p\,\pi^m - f = \frac{4}{5}\cdot 10 - f = 8 - f, \qquad E\pi_j(I,N) = 0.
+$$
+
+**$(N,I)$:** Only firm $j$ invests.
+$$
+E\pi_i(N,I) = 0, \qquad E\pi_j(N,I) = 8 - f.
+$$
+
+**$(N,N)$:** Neither invests. Both earn $0$.
+
+Payoff matrix (firm $i$ is the row player):
+$$
+\begin{array}{c|cc}
+ & I & N \\ \hline
+I & \left(\dfrac{88}{25}-f,\;\dfrac{88}{25}-f\right) & (8-f,\;0) \\[6pt]
+N & (0,\;8-f) & (0,\;0)
+\end{array}
+$$
+
+*[Award 1 mark for correct expected payoff computation, 1 mark for correct matrix.]*
+
+---
+
+#### 2) Pure-strategy Nash equilibria
+
+**$(I,I)$ is a NE** iff no firm wants to deviate to $N$:
+$$
+\frac{88}{25} - f \geq 0 \;\Leftrightarrow\; f \leq \frac{88}{25} = 3.52.
+$$
+
+**$(I,N)$ is a NE** iff:
+
+- Firm $i$ (playing $I$): $8 - f \geq 0$, i.e., $f \leq 8$. ✓
+- Firm $j$ (playing $N$): $0 \geq \frac{88}{25} - f$, i.e., $f \geq \frac{88}{25}$.
+
+So $(I,N)$ (and by symmetry $(N,I)$) is a NE iff $\frac{88}{25} \leq f \leq 8$.
+
+**$(N,N)$ is a NE** iff:
+$$
+0 \geq 8 - f \;\Leftrightarrow\; f \geq 8.
+$$
+
+**Summary:**
+
+| Range of $f$ | Pure-strategy NE |
+|:---|:---|
+| $f < \frac{88}{25}$ | $(I,I)$ only |
+| $\frac{88}{25} \leq f < 8$ | $(I,N)$ and $(N,I)$ |
+| $f \geq 8$ | $(N,N)$ only |
+
+*[Award 1 mark for correct NE conditions, 1 mark for complete characterisation across all ranges.]*
+
+---
+
+#### 3) Social welfare and planner's preference
+
+$W^m = \pi^m + CS^m = 10 + 5 = 15$, $\quad W^d = 2\pi^d + CS^d = 6 + 10 = 16$.
+
+**Expected welfare under two-firm investment:**
+$$
+EW_2 = p^2\,W^d + 2p(1-p)\,W^m - 2f = \frac{16}{25}\cdot 16 + \frac{8}{25}\cdot 15 - 2f = \frac{256 + 120}{25} - 2f = \frac{376}{25} - 2f.
+$$
+
+**Expected welfare under one-firm investment:**
+$$
+EW_1 = p\,W^m - f = \frac{4}{5}\cdot 15 - f = 12 - f.
+$$
+
+Planner prefers two firms iff $EW_2 > EW_1$:
+$$
+\frac{376}{25} - 2f > 12 - f \;\Rightarrow\; \frac{376 - 300}{25} > f \;\Rightarrow\; f < \frac{76}{25} = 3.04.
+$$
+
+*[Award 1 mark for correct welfare expressions, 1 mark for correct threshold.]*
+
+---
+
+#### 4) Excessive duplication
+
+$(I,I)$ is a NE for $f \leq \frac{88}{25} = 3.52$.
+
+The planner prefers two firms only for $f < \frac{76}{25} = 3.04$.
+
+So for $f \in \left(\frac{76}{25},\;\frac{88}{25}\right) = (3.04,\;3.52)$, both firms investing is a Nash equilibrium but the planner would prefer only one firm to invest. This is **socially excessive duplication** of R&D.
+
+**Intuition:** Each firm considers only its own expected profit when deciding to invest, ignoring two externalities: (i) the **business-stealing effect** — when both succeed, competition reduces each firm's profit relative to monopoly; and (ii) the **duplication of fixed costs** — two investment outlays are incurred but the marginal social benefit of the second investor is small (it only matters when the first fails or when competition improves consumer surplus). Private incentives overweight the chance of being the sole innovator relative to the social cost of duplication.
+
+*[Award 1 mark for correct range and intuition.]*
+
+\newpage
+
+## Section C (3 marks, advanced)
+
+### Question 5: Strategic delegation (3 marks)
+
+$P = 10 - Q$, $c = 1$, $A - c = 9$.
+
+Product-market equilibrium:
+$$
+q_i^* = \frac{A - c + 2\theta_i - \theta_j}{3}, \qquad P^* = \frac{A + 2c - \theta_i - \theta_j}{3}.
+$$
+
+---
+
+#### 1) Owner's best-response function
+
+True profit:
+$$
+\pi_i = (P^* - c)\,q_i^* = \frac{A - c - \theta_i - \theta_j}{3}\cdot\frac{A - c + 2\theta_i - \theta_j}{3}.
+$$
+
+Let $D = A - c = 9$. Then
+$$
+\pi_i = \frac{(D - \theta_i - \theta_j)(D + 2\theta_i - \theta_j)}{9}.
+$$
+
+FOC with respect to $\theta_i$:
+$$
+\frac{\partial\pi_i}{\partial\theta_i} = \frac{1}{9}\Big[(-1)(D + 2\theta_i - \theta_j) + (D - \theta_i - \theta_j)(2)\Big] = 0.
+$$
+$$
+-(D + 2\theta_i - \theta_j) + 2(D - \theta_i - \theta_j) = 0
+$$
+$$
+D - 4\theta_i - \theta_j = 0 \;\Rightarrow\; \theta_i^* = \frac{D - \theta_j}{4} = \frac{A - c - \theta_j}{4}. \qquad\square
+$$
+
+*[Award 1 mark for correct derivation.]*
+
+---
+
+#### 2) Symmetric equilibrium
+
+Imposing $\hat{\theta} = \theta_i = \theta_j$:
+$$
+\hat{\theta} = \frac{D - \hat{\theta}}{4} \;\Rightarrow\; 5\hat{\theta} = D \;\Rightarrow\; \hat{\theta} = \frac{9}{5}.
+$$
+
+Equilibrium output per firm:
+$$
+\hat{q} = \frac{D + 2\hat{\theta} - \hat{\theta}}{3} = \frac{D + \hat{\theta}}{3} = \frac{9 + 9/5}{3} = \frac{54/5}{3} = \frac{18}{5}.
+$$
+
+Price:
+$$
+\hat{P} = 10 - 2\hat{q} = 10 - \frac{36}{5} = \frac{14}{5}.
+$$
+
+Profit:
+$$
+\hat{\pi} = (\hat{P} - c)\,\hat{q} = \left(\frac{14}{5} - 1\right)\frac{18}{5} = \frac{9}{5}\cdot\frac{18}{5} = \frac{162}{25} = 6.48.
+$$
+
+*[Award 1 mark for correct $\hat{\theta}$, equilibrium quantities, price, and profit.]*
+
+---
+
+#### 3) Comparison with Cournot and prisoners' dilemma
+
+Standard Cournot ($\theta_i = \theta_j = 0$):
+$$
+q^C = \frac{D}{3} = 3, \qquad P^C = 10 - 6 = 4, \qquad \pi^C = (4 - 1)\cdot 3 = 9.
+$$
+
+Delegation equilibrium profit $\hat{\pi} = 162/25 = 6.48 < 9 = \pi^C$.
+
+**Delegation is individually rational:** given the rival delegates ($\theta_j = 9/5$), deviating to $\theta_i = 0$ yields
+$$
+q_i(0, 9/5) = \frac{9 + 0 - 9/5}{3} = \frac{36/5}{3} = \frac{12}{5}, \qquad P(0, 9/5) = \frac{10 + 2 - 0 - 9/5}{3} = \frac{51/5}{3} = \frac{17}{5},
+$$
+$$
+\pi_i(0, 9/5) = \left(\frac{17}{5} - 1\right)\frac{12}{5} = \frac{12}{5}\cdot\frac{12}{5} = \frac{144}{25} = 5.76 < 6.48 = \hat{\pi}.
+$$
+So not delegating when the rival delegates yields even lower profit.
+
+**But collectively harmful:** if both owners could commit to $\theta_i = 0$ (no delegation), each would earn $\pi^C = 9 > 6.48$. This is a **prisoners' dilemma**: each firm individually benefits from aggressive delegation (committing its manager to expand output), but when both do so, the resulting competition drives prices and profits below the Cournot level. Delegation works as a commitment to higher output; rivals reduce their output in response (strategic substitutability), but this advantage is eroded when both sides delegate symmetrically.
+
+*[Award 1 mark for correct comparison and clear explanation of the prisoners' dilemma structure.]*
