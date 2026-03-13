@@ -25,6 +25,7 @@ Most students should use the **Student** versions. Instructor versions include s
 |---|---|---|---|---|---|
 | Exercise 1: Oligopoly and Product Differentiation | [qmd](sheets/exercises-1.qmd) | [download](sheets/exercises-1.html) | [download](sheets/exercises-1-solutions.html) | [download](sheets/exercises-1.pdf) | [download](sheets/exercises-1-solutions.pdf) |
 | Exercise 2: Innovation incentives | [qmd](sheets/exercises-2.qmd) | [download](sheets/exercises-2.html) |  | [download](sheets/exercises-2.pdf) |  |
+| Exercise 3: Market Structure and Innovation Incentives | [qmd](sheets/exercises-3.qmd) | [download](sheets/exercises-3.html) |  | [download](sheets/exercises-3.pdf) |  |
 
 ## Live Exercises
 

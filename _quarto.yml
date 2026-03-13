@@ -49,6 +49,8 @@ website:
             href: exercises/live/live-exercise-2-a.qmd
           - text: "Live Exercise 2b"
             href: exercises/live/live-exercise-2-b.qmd
+          - text: "Exercise 3: Market Structure and Innovation"
+            href: exercises/sheets/exercises-3.qmd
 
   sidebar:
     - id: lectures
@@ -91,6 +93,7 @@ website:
           contents:
             - exercises/sheets/exercises-1.qmd
             - exercises/sheets/exercises-2.qmd
+            - exercises/sheets/exercises-3.qmd
         - section: "Live Exercises"
           contents:
             - exercises/live/live-exercise-1.qmd

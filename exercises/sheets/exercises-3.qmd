@@ -1,6 +1,6 @@
 ---
 title: "Exercise: Market Structure and Incentives to Acquire Innovation"
-solutions: true
+solutions: false
 ---
 
 ::: {.content-hidden unless-meta="solutions"}
